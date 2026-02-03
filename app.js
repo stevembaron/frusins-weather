@@ -386,16 +386,34 @@ function renderHourlyDetails(primary) {
     const weatherCode = valueAt(h.weather_code, i);
     const weather = CODE_LABELS[weatherCode] || "Weather";
     const icon = iconForCode(weatherCode);
+    const temp = round(valueAt(h.temperature_2m, i));
+    const feels = round(valueAt(h.apparent_temperature, i));
+    const precipChance = round(valueAt(h.precipitation_probability, i));
+    const rainAmount = fixed(valueAt(h.precipitation, i), 2);
+    const windDir = compass(valueAt(h.wind_direction_10m, i));
+    const windSpeed = round(valueAt(h.wind_speed_10m, i));
+    const windGust = round(valueAt(h.wind_gusts_10m, i));
+    const humidity = round(valueAt(h.relative_humidity_2m, i));
+    const uv = fixed(valueAt(h.uv_index, i), 1);
     return `
       <article class="hourly-card">
-        <h4>${timeLabel}</h4>
+        <div class="hourly-top">
+          <h4>${timeLabel}</h4>
+          <span class="precip-chip">${precipChance}%</span>
+        </div>
         <div class="hourly-icon-row">
           <span class="hourly-icon">${icon}</span>
           <span>${weather}</span>
         </div>
-        <p><strong>${round(valueAt(h.temperature_2m, i))}F</strong> • feels ${round(valueAt(h.apparent_temperature, i))}F</p>
-        <p>💧 ${round(valueAt(h.precipitation_probability, i))}% (${fixed(valueAt(h.precipitation, i), 2)} in)</p>
-        <p>🌬️ ${compass(valueAt(h.wind_direction_10m, i))} ${round(valueAt(h.wind_speed_10m, i))} mph • gust ${round(valueAt(h.wind_gusts_10m, i))} mph</p>
+        <p class="hourly-temp">${temp}F</p>
+        <div class="hourly-chip-grid">
+          <span class="hourly-chip">Feels ${feels}F</span>
+          <span class="hourly-chip">Wind ${windDir} ${windSpeed}</span>
+          <span class="hourly-chip">Gust ${windGust} mph</span>
+          <span class="hourly-chip">Humidity ${humidity}%</span>
+          <span class="hourly-chip">UV ${uv}</span>
+          <span class="hourly-chip">Rain ${rainAmount} in</span>
+        </div>
       </article>
     `;
   });

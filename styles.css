@@ -234,6 +234,12 @@ select {
   padding: 10px;
   background: var(--surface-soft);
   text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(16, 46, 95, 0.08);
 }
 
 .forecast-day strong {
@@ -256,6 +262,12 @@ select {
   background: #fff;
   border-radius: 12px;
   padding: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(16, 46, 95, 0.08);
 }
 
 .stat-card span {
@@ -386,6 +398,12 @@ select {
   border-radius: 12px;
   background: #fff;
   padding: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.daily-day-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(16, 46, 95, 0.08);
 }
 
 .daily-day-card h4 {
@@ -430,6 +448,12 @@ select {
   border-radius: 12px;
   background: #fff;
   padding: 10px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.hourly-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(16, 46, 95, 0.08);
 }
 
 .hourly-card h4 {
@@ -453,6 +477,46 @@ select {
   gap: 8px;
   margin-bottom: 6px;
   font-size: 0.84rem;
+}
+
+.hourly-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hourly-temp {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.hourly-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.hourly-chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 0.68rem;
+  color: var(--muted);
+  background: #f8fbff;
+  text-align: center;
+}
+
+.precip-chip {
+  border-radius: 999px;
+  background: #e5f0ff;
+  color: var(--primary);
+  font-weight: 700;
+  padding: 3px 8px;
+  font-size: 0.7rem;
 }
 
 .hourly-icon {
@@ -480,9 +544,16 @@ select {
 .compare-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 4px solid #dbe8ff;
   border-radius: 18px;
   padding: 16px;
   box-shadow: 0 14px 28px rgba(16, 46, 95, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.compare-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(16, 46, 95, 0.1);
 }
 
 .compare-top {
