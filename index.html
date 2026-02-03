@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Four City Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-shape shape-a" aria-hidden="true"></div>
+    <div class="background-shape shape-b" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow">Open-Meteo • Live Forecast</p>
+          <h1>Weather at Your Four Locations</h1>
+        </div>
+        <button id="refreshBtn" class="ghost-btn" type="button">Refresh</button>
+      </header>
+
+      <section class="controls card">
+        <label for="locationSelect">Primary Location</label>
+        <div class="controls-row">
+          <select id="locationSelect"></select>
+          <button id="saveDefaultBtn" class="primary-btn" type="button">Set As Default</button>
+        </div>
+        <p id="defaultNote" class="muted"></p>
+      </section>
+
+      <section class="hero card" id="heroPanel" aria-live="polite"></section>
+
+      <section class="card charts">
+        <div class="section-title-row">
+          <h2>Next 24 Hours</h2>
+          <p class="muted">Temperature comparison + precipitation timeline</p>
+        </div>
+        <div id="chartLegend" class="chart-legend"></div>
+        <div id="hourlyChart" class="hourly-chart"></div>
+        <div class="timeline-wrap">
+          <h3>Primary Location Precipitation</h3>
+          <div id="precipTimeline" class="precip-timeline"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title-row">
+          <h2>Compare All Locations</h2>
+          <p class="muted" id="updatedAt"></p>
+        </div>
+        <div id="comparisonGrid" class="comparison-grid"></div>
+      </section>
+    </main>
+
+    <template id="compareCardTemplate">
+      <article class="compare-card">
+        <div class="compare-top">
+          <h3 class="compare-name"></h3>
+          <span class="code-pill"></span>
+        </div>
+        <p class="compare-address"></p>
+        <div class="temp-row">
+          <span class="weather-icon"></span>
+          <span class="temp-main"></span>
+          <span class="temp-delta"></span>
+        </div>
+        <div class="meta-grid">
+          <div><span>Feels like</span><strong class="feels"></strong></div>
+          <div><span>Humidity</span><strong class="humidity"></strong></div>
+          <div><span>Wind</span><strong class="wind"></strong></div>
+          <div><span>Precip chance</span><strong class="precip"></strong></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

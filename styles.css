@@ -1,0 +1,430 @@
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --surface-soft: #f2f6ff;
+  --text: #14213d;
+  --muted: #576078;
+  --primary: #0f6df2;
+  --primary-soft: #dbe9ff;
+  --success: #1e9d73;
+  --border: #dfe6f6;
+  --shadow: 0 18px 40px rgba(16, 46, 95, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", system-ui, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% -10%, #dbe8ff, transparent 40%),
+    radial-gradient(circle at 80% -5%, #ffe8d9, transparent 35%), var(--bg);
+  min-height: 100vh;
+}
+
+.background-shape {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.shape-a {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: -140px;
+  background: linear-gradient(120deg, #ffe4c7, #ffd3e0);
+  opacity: 0.45;
+}
+
+.shape-b {
+  width: 280px;
+  height: 280px;
+  left: -90px;
+  top: 45%;
+  background: linear-gradient(120deg, #d5e2ff, #cef8f8);
+  opacity: 0.4;
+}
+
+.app-shell {
+  width: min(1100px, 92vw);
+  margin: 36px auto 56px;
+  display: grid;
+  gap: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Outfit", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 2.4vw, 2.7rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 1.7vw, 1.6rem);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.card {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.controls {
+  padding: 18px;
+}
+
+.controls label {
+  font-weight: 700;
+}
+
+.controls-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+select,
+button {
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+select {
+  min-width: 280px;
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--text);
+  padding: 12px 14px;
+}
+
+.primary-btn,
+.ghost-btn {
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primary-btn:hover,
+.ghost-btn:hover {
+  transform: translateY(-1px);
+}
+
+.ghost-btn {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+
+.hero {
+  padding: 24px;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.hero-address {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.hero-weather {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-temp {
+  font-family: "Space Grotesk", "Outfit", sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hero-code {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.weather-icon {
+  font-size: 1.8rem;
+}
+
+.hero-forecast {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.forecast-day {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+  background: var(--surface-soft);
+  text-align: center;
+}
+
+.forecast-day strong {
+  display: block;
+  margin-top: 6px;
+}
+
+.charts {
+  padding: 20px;
+}
+
+.charts h3 {
+  font-size: 1rem;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #fff;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.hourly-chart {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fff, #f8fbff);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.hourly-chart svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.timeline-wrap {
+  margin-top: 14px;
+}
+
+.precip-timeline {
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+  background: #fff;
+}
+
+.precip-bars {
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  gap: 4px;
+  align-items: end;
+  height: 120px;
+}
+
+.precip-hour {
+  display: grid;
+  justify-items: center;
+  align-content: end;
+  gap: 6px;
+}
+
+.precip-hour .bar {
+  width: 100%;
+  border-radius: 6px 6px 3px 3px;
+  min-height: 4px;
+  background: linear-gradient(180deg, #7fb3ff, #0f6df2);
+}
+
+.hour-label {
+  font-size: 0.66rem;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.timeline-meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.section-title-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.comparison-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 14px 28px rgba(16, 46, 95, 0.06);
+}
+
+.compare-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.compare-name {
+  font-size: 1.1rem;
+}
+
+.code-pill {
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  padding: 4px 9px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.compare-address {
+  margin: 8px 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  min-height: 2.5em;
+}
+
+.temp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.temp-main {
+  font-family: "Space Grotesk", "Outfit", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.temp-delta {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.temp-delta.positive {
+  color: #d83a30;
+}
+
+.temp-delta.negative {
+  color: var(--success);
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.meta-grid span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.8rem;
+}
+
+.meta-grid strong {
+  font-size: 0.96rem;
+}
+
+.loading {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+}
+
+.error {
+  border: 1px solid #f5c5c2;
+  background: #ffeceb;
+  color: #9e2d2d;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .app-shell {
+    width: min(1080px, 94vw);
+    margin: 22px auto 40px;
+  }
+
+  .hero-forecast {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .precip-bars {
+    gap: 2px;
+  }
+}
