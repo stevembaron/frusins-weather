@@ -1,6 +1,10 @@
 # Frusins Weather
 
+![GitHub Pages Deploy](https://github.com/stevembaron/frusins-weather/actions/workflows/deploy-pages.yml/badge.svg)
+
 A modern, light-themed weather dashboard for four saved locations, powered by Open-Meteo (no API key required).
+
+Live site: [https://stevembaron.github.io/frusins-weather/](https://stevembaron.github.io/frusins-weather/)
 
 ## Features
 
@@ -27,4 +31,3 @@ Then visit `http://localhost:8080`.
 ## Deploy
 
 This repo includes a GitHub Actions workflow that deploys the site to GitHub Pages on every push to `main`.
-
