@@ -250,12 +250,12 @@ function renderAll() {
   const selectedLocationId = elements.locationSelect.value || getDefaultLocationId();
   const primary = weatherByLocation[selectedLocationId] || weatherByLocation[getDefaultLocationId()];
 
-  renderHero(primary);
-  renderCurrentStats(primary);
-  renderHourlyCharts(primary);
-  renderDailyDetails(primary);
-  renderHourlyDetails(primary);
-  renderComparison(primary);
+  tryRender(() => renderHero(primary), elements.heroPanel);
+  tryRender(() => renderCurrentStats(primary), elements.currentStats);
+  tryRender(() => renderHourlyCharts(primary), elements.hourlyChart);
+  tryRender(() => renderDailyDetails(primary), elements.dailyDetails);
+  tryRender(() => renderHourlyDetails(primary), elements.hourlyDetails);
+  tryRender(() => renderComparison(primary), elements.comparisonGrid);
 
   const currentTime = new Date().toLocaleString([], {
     hour: "numeric",
@@ -341,33 +341,34 @@ function renderCurrentStats(primary) {
 
 function renderDailyDetails(primary) {
   const d = primary.daily;
+  if (!d || !Array.isArray(d.time) || d.time.length === 0) {
+    elements.dailyDetails.innerHTML = '<div class="muted">Daily forecast data is unavailable.</div>';
+    return;
+  }
   const rows = d.time
     .slice(0, 10)
     .map((date, i) => {
-      const dateLabel = new Date(`${date}T12:00:00`).toLocaleDateString([], {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-      });
-      const sunrise = new Date(d.sunrise[i]).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-      const sunset = new Date(d.sunset[i]).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+      const dateLabel = formatDate(`${date}T12:00:00`, { weekday: "short", month: "short", day: "numeric" });
+      const sunrise = formatTime(valueAt(d.sunrise, i), { hour: "numeric", minute: "2-digit" });
+      const sunset = formatTime(valueAt(d.sunset, i), { hour: "numeric", minute: "2-digit" });
+      const code = valueAt(d.weather_code, i);
       return `
         <tr>
           <td>${dateLabel}</td>
-          <td>${iconForCode(d.weather_code[i])} ${CODE_LABELS[d.weather_code[i]] || "Weather"}</td>
-          <td>${round(d.temperature_2m_max[i])}F / ${round(d.temperature_2m_min[i])}F</td>
-          <td>${round(d.apparent_temperature_max[i])}F / ${round(d.apparent_temperature_min[i])}F</td>
-          <td>${round(d.precipitation_probability_max[i])}%</td>
-          <td>${fixed(d.precipitation_sum[i], 2)} in</td>
-          <td>${fixed(d.rain_sum[i], 2)} in</td>
-          <td>${fixed(d.showers_sum[i], 2)} in</td>
-          <td>${fixed(d.snowfall_sum[i], 2)} in</td>
-          <td>${fixed(d.precipitation_hours[i], 1)} h</td>
-          <td>${fixed(d.wind_speed_10m_max[i], 1)} / ${fixed(d.wind_gusts_10m_max[i], 1)} mph</td>
-          <td>${round(d.wind_direction_10m_dominant[i])} deg (${compass(d.wind_direction_10m_dominant[i])})</td>
-          <td>${fixed(d.uv_index_max[i], 1)} / ${fixed(d.uv_index_clear_sky_max[i], 1)}</td>
+          <td>${iconForCode(code)} ${CODE_LABELS[code] || "Weather"}</td>
+          <td>${round(valueAt(d.temperature_2m_max, i))}F / ${round(valueAt(d.temperature_2m_min, i))}F</td>
+          <td>${round(valueAt(d.apparent_temperature_max, i))}F / ${round(valueAt(d.apparent_temperature_min, i))}F</td>
+          <td>${round(valueAt(d.precipitation_probability_max, i))}%</td>
+          <td>${fixed(valueAt(d.precipitation_sum, i), 2)} in</td>
+          <td>${fixed(valueAt(d.rain_sum, i), 2)} in</td>
+          <td>${fixed(valueAt(d.showers_sum, i), 2)} in</td>
+          <td>${fixed(valueAt(d.snowfall_sum, i), 2)} in</td>
+          <td>${fixed(valueAt(d.precipitation_hours, i), 1)} h</td>
+          <td>${fixed(valueAt(d.wind_speed_10m_max, i), 1)} / ${fixed(valueAt(d.wind_gusts_10m_max, i), 1)} mph</td>
+          <td>${round(valueAt(d.wind_direction_10m_dominant, i))} deg (${compass(valueAt(d.wind_direction_10m_dominant, i))})</td>
+          <td>${fixed(valueAt(d.uv_index_max, i), 1)} / ${fixed(valueAt(d.uv_index_clear_sky_max, i), 1)}</td>
           <td>${sunrise} - ${sunset}</td>
-          <td>${durationH(d.daylight_duration[i])} / ${durationH(d.sunshine_duration[i])}</td>
+          <td>${durationH(valueAt(d.daylight_duration, i))} / ${durationH(valueAt(d.sunshine_duration, i))}</td>
         </tr>
       `;
     })
@@ -401,18 +402,22 @@ function renderDailyDetails(primary) {
 
 function renderHourlyDetails(primary) {
   const h = primary.hourly;
+  if (!h || !Array.isArray(h.time) || h.time.length === 0) {
+    elements.hourlyDetails.innerHTML = '<div class="muted">Hourly detail data is unavailable.</div>';
+    return;
+  }
   const items = h.time.slice(0, 24).map((timestamp, i) => {
-    const timeLabel = new Date(timestamp).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
-    const weather = CODE_LABELS[h.weather_code[i]] || "Weather";
+    const timeLabel = formatTime(timestamp, { hour: "numeric", minute: "2-digit" });
+    const weather = CODE_LABELS[valueAt(h.weather_code, i)] || "Weather";
     return `
       <article class="hourly-card">
         <h4>${timeLabel} - ${weather}</h4>
-        <p>Temp: ${round(h.temperature_2m[i])}F (Feels ${round(h.apparent_temperature[i])}F)</p>
-        <p>Humidity: ${round(h.relative_humidity_2m[i])}% | Dew point: ${round(h.dew_point_2m[i])}F</p>
-        <p>Precip: ${round(h.precipitation_probability[i])}% (${fixed(h.precipitation[i], 2)} in)</p>
-        <p>Rain/Showers/Snow: ${fixed(h.rain[i], 2)} / ${fixed(h.showers[i], 2)} / ${fixed(h.snowfall[i], 2)} in</p>
-        <p>Wind: ${fixed(h.wind_speed_10m[i], 1)} mph, gust ${fixed(h.wind_gusts_10m[i], 1)} mph (${compass(h.wind_direction_10m[i])})</p>
-        <p>Cloud: ${round(h.cloud_cover[i])}% | UV: ${fixed(h.uv_index[i], 1)} | Pressure: ${fixed(h.pressure_msl[i], 1)} hPa</p>
+        <p>Temp: ${round(valueAt(h.temperature_2m, i))}F (Feels ${round(valueAt(h.apparent_temperature, i))}F)</p>
+        <p>Humidity: ${round(valueAt(h.relative_humidity_2m, i))}% | Dew point: ${round(valueAt(h.dew_point_2m, i))}F</p>
+        <p>Precip: ${round(valueAt(h.precipitation_probability, i))}% (${fixed(valueAt(h.precipitation, i), 2)} in)</p>
+        <p>Rain/Showers/Snow: ${fixed(valueAt(h.rain, i), 2)} / ${fixed(valueAt(h.showers, i), 2)} / ${fixed(valueAt(h.snowfall, i), 2)} in</p>
+        <p>Wind: ${fixed(valueAt(h.wind_speed_10m, i), 1)} mph, gust ${fixed(valueAt(h.wind_gusts_10m, i), 1)} mph (${compass(valueAt(h.wind_direction_10m, i))})</p>
+        <p>Cloud: ${round(valueAt(h.cloud_cover, i))}% | UV: ${fixed(valueAt(h.uv_index, i), 1)} | Pressure: ${fixed(valueAt(h.pressure_msl, i), 1)} hPa</p>
       </article>
     `;
   });
@@ -427,6 +432,11 @@ function renderHourlyCharts(primary) {
 
 function renderHourlyTemperatureChart() {
   const firstData = weatherByLocation[LOCATIONS[0].id];
+  if (!firstData?.hourly?.time || firstData.hourly.time.length < 24) {
+    elements.hourlyChart.innerHTML = '<div class="muted">Hourly chart data is unavailable.</div>';
+    elements.chartLegend.innerHTML = "";
+    return;
+  }
   const hourLabels = firstData.hourly.time.slice(0, 24).map((stamp) =>
     new Date(stamp).toLocaleTimeString([], { hour: "numeric" }),
   );
@@ -504,6 +514,10 @@ function renderHourlyTemperatureChart() {
 }
 
 function renderPrecipTimeline(primary) {
+  if (!primary?.hourly?.precipitation_probability || primary.hourly.precipitation_probability.length < 24) {
+    elements.precipTimeline.innerHTML = '<div class="muted">Precipitation timeline data is unavailable.</div>';
+    return;
+  }
   const next24 = primary.hourly.precipitation_probability.slice(0, 24);
   const bars = next24
     .map((value, idx) => {
@@ -599,6 +613,33 @@ function compass(degrees) {
   if (!Number.isFinite(degrees)) return "--";
   const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
   return dirs[Math.round((degrees % 360) / 45) % 8];
+}
+
+function valueAt(values, index) {
+  return Array.isArray(values) ? values[index] : undefined;
+}
+
+function formatDate(value, options) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return "--";
+  return parsed.toLocaleDateString([], options);
+}
+
+function formatTime(value, options) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return "--";
+  return parsed.toLocaleTimeString([], options);
+}
+
+function tryRender(renderFn, fallbackElement) {
+  try {
+    renderFn();
+  } catch (error) {
+    console.error(error);
+    if (fallbackElement) {
+      fallbackElement.innerHTML = '<div class="error">Data for this section is temporarily unavailable.</div>';
+    }
+  }
 }
 
 init();
