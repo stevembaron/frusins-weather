@@ -22,6 +22,7 @@ body {
   background: radial-gradient(circle at 20% -10%, #dbe8ff, transparent 40%),
     radial-gradient(circle at 80% -5%, #ffe8d9, transparent 35%), var(--bg);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .background-shape {
@@ -365,8 +366,11 @@ select {
 
 .hourly-details {
   display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(170px, 1fr);
   gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  overflow-x: auto;
+  padding-bottom: 4px;
 }
 
 .hourly-card {
@@ -378,13 +382,30 @@ select {
 
 .hourly-card h4 {
   margin: 0 0 8px;
-  font-size: 0.94rem;
+  font-size: 0.9rem;
 }
 
 .hourly-card p {
   margin: 4px 0;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
+}
+
+.hourly-card strong {
+  color: var(--text);
+}
+
+.hourly-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.84rem;
+}
+
+.hourly-icon {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .section-title-row {
@@ -392,6 +413,7 @@ select {
   justify-content: space-between;
   gap: 10px;
   align-items: baseline;
+  flex-wrap: wrap;
   margin-bottom: 12px;
 }
 
@@ -518,11 +540,27 @@ select {
     margin: 22px auto 40px;
   }
 
+  .top-bar {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .details,
+  .charts,
+  .hero,
+  .controls {
+    padding: 14px;
+  }
+
   .hero-forecast {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .precip-bars {
     gap: 2px;
+  }
+
+  .hourly-details {
+    grid-auto-columns: minmax(150px, 1fr);
   }
 }

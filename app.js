@@ -37,13 +37,13 @@ const STORAGE_KEY = "weather-default-location-id";
 const LINE_COLORS = ["#0f6df2", "#2aa889", "#f18f01", "#e94f37"];
 
 const ICONS = {
-  clear: "SUN",
-  partly: "PARTLY",
-  cloudy: "CLOUDY",
-  fog: "FOG",
-  rain: "RAIN",
-  snow: "SNOW",
-  storm: "STORM",
+  clear: "☀️",
+  partly: "🌤️",
+  cloudy: "☁️",
+  fog: "🌫️",
+  rain: "🌧️",
+  snow: "❄️",
+  storm: "⛈️",
 };
 
 const CODE_LABELS = {
@@ -319,11 +319,11 @@ function renderCurrentStats(primary) {
     ["Rain", `${fixed(c.rain, 2)} in`],
     ["Showers", `${fixed(c.showers, 2)} in`],
     ["Snowfall", `${fixed(c.snowfall, 2)} in`],
-    ["Wind", `${fixed(c.wind_speed_10m, 1)} mph`],
-    ["Wind Gust", `${fixed(c.wind_gusts_10m, 1)} mph`],
-    ["Wind Direction", `${round(c.wind_direction_10m)} deg (${compass(c.wind_direction_10m)})`],
-    ["Pressure MSL", `${fixed(c.pressure_msl, 1)} hPa`],
-    ["Surface Pressure", `${fixed(c.surface_pressure, 1)} hPa`],
+    ["Wind", `${round(c.wind_speed_10m)} mph`],
+    ["Wind Gust", `${round(c.wind_gusts_10m)} mph`],
+    ["Wind Direction", `${compass(c.wind_direction_10m)}`],
+    ["Pressure MSL", `${fixed(hPaToInHg(c.pressure_msl), 2)} inHg`],
+    ["Surface Pressure", `${fixed(hPaToInHg(c.surface_pressure), 2)} inHg`],
     ["Day/Night", c.is_day === 1 ? "Day" : "Night"],
   ];
 
@@ -364,8 +364,8 @@ function renderDailyDetails(primary) {
           <td>${fixed(valueAt(d.showers_sum, i), 2)} in</td>
           <td>${fixed(valueAt(d.snowfall_sum, i), 2)} in</td>
           <td>${fixed(valueAt(d.precipitation_hours, i), 1)} h</td>
-          <td>${fixed(valueAt(d.wind_speed_10m_max, i), 1)} / ${fixed(valueAt(d.wind_gusts_10m_max, i), 1)} mph</td>
-          <td>${round(valueAt(d.wind_direction_10m_dominant, i))} deg (${compass(valueAt(d.wind_direction_10m_dominant, i))})</td>
+          <td>${round(valueAt(d.wind_speed_10m_max, i))} / ${round(valueAt(d.wind_gusts_10m_max, i))} mph</td>
+          <td>${compass(valueAt(d.wind_direction_10m_dominant, i))}</td>
           <td>${fixed(valueAt(d.uv_index_max, i), 1)} / ${fixed(valueAt(d.uv_index_clear_sky_max, i), 1)}</td>
           <td>${sunrise} - ${sunset}</td>
           <td>${durationH(valueAt(d.daylight_duration, i))} / ${durationH(valueAt(d.sunshine_duration, i))}</td>
@@ -408,16 +408,19 @@ function renderHourlyDetails(primary) {
   }
   const items = h.time.slice(0, 24).map((timestamp, i) => {
     const timeLabel = formatTime(timestamp, { hour: "numeric", minute: "2-digit" });
-    const weather = CODE_LABELS[valueAt(h.weather_code, i)] || "Weather";
+    const weatherCode = valueAt(h.weather_code, i);
+    const weather = CODE_LABELS[weatherCode] || "Weather";
+    const icon = iconForCode(weatherCode);
     return `
       <article class="hourly-card">
-        <h4>${timeLabel} - ${weather}</h4>
-        <p>Temp: ${round(valueAt(h.temperature_2m, i))}F (Feels ${round(valueAt(h.apparent_temperature, i))}F)</p>
-        <p>Humidity: ${round(valueAt(h.relative_humidity_2m, i))}% | Dew point: ${round(valueAt(h.dew_point_2m, i))}F</p>
-        <p>Precip: ${round(valueAt(h.precipitation_probability, i))}% (${fixed(valueAt(h.precipitation, i), 2)} in)</p>
-        <p>Rain/Showers/Snow: ${fixed(valueAt(h.rain, i), 2)} / ${fixed(valueAt(h.showers, i), 2)} / ${fixed(valueAt(h.snowfall, i), 2)} in</p>
-        <p>Wind: ${fixed(valueAt(h.wind_speed_10m, i), 1)} mph, gust ${fixed(valueAt(h.wind_gusts_10m, i), 1)} mph (${compass(valueAt(h.wind_direction_10m, i))})</p>
-        <p>Cloud: ${round(valueAt(h.cloud_cover, i))}% | UV: ${fixed(valueAt(h.uv_index, i), 1)} | Pressure: ${fixed(valueAt(h.pressure_msl, i), 1)} hPa</p>
+        <h4>${timeLabel}</h4>
+        <div class="hourly-icon-row">
+          <span class="hourly-icon">${icon}</span>
+          <span>${weather}</span>
+        </div>
+        <p><strong>${round(valueAt(h.temperature_2m, i))}F</strong> • feels ${round(valueAt(h.apparent_temperature, i))}F</p>
+        <p>💧 ${round(valueAt(h.precipitation_probability, i))}% (${fixed(valueAt(h.precipitation, i), 2)} in)</p>
+        <p>🌬️ ${compass(valueAt(h.wind_direction_10m, i))} ${round(valueAt(h.wind_speed_10m, i))} mph • gust ${round(valueAt(h.wind_gusts_10m, i))} mph</p>
       </article>
     `;
   });
@@ -567,7 +570,7 @@ function renderComparison(primary) {
 
     card.querySelector(".feels").textContent = `${round(data.current.apparent_temperature)}F`;
     card.querySelector(".humidity").textContent = `${round(data.current.relative_humidity_2m)}%`;
-    card.querySelector(".wind").textContent = `${fixed(data.current.wind_speed_10m, 1)} mph`;
+    card.querySelector(".wind").textContent = `${round(data.current.wind_speed_10m)} mph`;
     card.querySelector(".precip").textContent = `${round(data.daily.precipitation_probability_max[0])}%`;
 
     const makePrimaryBtn = card.querySelector(".make-primary-btn");
@@ -593,7 +596,7 @@ function iconForCode(code) {
   if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return ICONS.rain;
   if ([71, 73, 75, 77, 85, 86].includes(code)) return ICONS.snow;
   if ([95, 96, 99].includes(code)) return ICONS.storm;
-  return "WEATHER";
+  return "🌡️";
 }
 
 function fixed(value, digits = 1) {
@@ -613,6 +616,11 @@ function compass(degrees) {
   if (!Number.isFinite(degrees)) return "--";
   const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
   return dirs[Math.round((degrees % 360) / 45) % 8];
+}
+
+function hPaToInHg(value) {
+  if (!Number.isFinite(value)) return undefined;
+  return value * 0.0295299831;
 }
 
 function valueAt(values, index) {
