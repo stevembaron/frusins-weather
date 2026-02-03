@@ -117,13 +117,17 @@ button {
 }
 
 select {
-  min-width: 280px;
+  min-width: 0;
   flex: 1;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: #fff;
   color: var(--text);
   padding: 12px 14px;
+}
+
+.controls-row > * {
+  min-width: 0;
 }
 
 .primary-btn,
@@ -338,30 +342,42 @@ select {
 }
 
 .daily-details {
-  overflow-x: auto;
+  overflow: hidden;
 }
 
-.daily-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 900px;
-  background: #fff;
+.daily-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.daily-day-card {
+  border: 1px solid var(--border);
   border-radius: 12px;
+  background: #fff;
+  padding: 10px;
 }
 
-.daily-table th,
-.daily-table td {
-  border-bottom: 1px solid var(--border);
-  padding: 9px 10px;
-  text-align: left;
-  font-size: 0.86rem;
-  vertical-align: top;
-  white-space: nowrap;
+.daily-day-card h4 {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-.daily-table th {
+.daily-day-card p {
+  margin: 4px 0;
+  font-size: 0.79rem;
   color: var(--muted);
-  font-weight: 700;
+}
+
+.daily-day-card strong {
+  color: var(--text);
+}
+
+.daily-day-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .hourly-details {
@@ -554,6 +570,14 @@ select {
 
   .hero-forecast {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .controls-row {
+    flex-direction: column;
+  }
+
+  .controls-row .primary-btn {
+    width: 100%;
   }
 
   .precip-bars {

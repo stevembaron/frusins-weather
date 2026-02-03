@@ -345,7 +345,7 @@ function renderDailyDetails(primary) {
     elements.dailyDetails.innerHTML = '<div class="muted">Daily forecast data is unavailable.</div>';
     return;
   }
-  const rows = d.time
+  const cards = d.time
     .slice(0, 10)
     .map((date, i) => {
       const dateLabel = formatDate(`${date}T12:00:00`, { weekday: "short", month: "short", day: "numeric" });
@@ -353,51 +353,26 @@ function renderDailyDetails(primary) {
       const sunset = formatTime(valueAt(d.sunset, i), { hour: "numeric", minute: "2-digit" });
       const code = valueAt(d.weather_code, i);
       return `
-        <tr>
-          <td>${dateLabel}</td>
-          <td>${iconForCode(code)} ${CODE_LABELS[code] || "Weather"}</td>
-          <td>${round(valueAt(d.temperature_2m_max, i))}F / ${round(valueAt(d.temperature_2m_min, i))}F</td>
-          <td>${round(valueAt(d.apparent_temperature_max, i))}F / ${round(valueAt(d.apparent_temperature_min, i))}F</td>
-          <td>${round(valueAt(d.precipitation_probability_max, i))}%</td>
-          <td>${fixed(valueAt(d.precipitation_sum, i), 2)} in</td>
-          <td>${fixed(valueAt(d.rain_sum, i), 2)} in</td>
-          <td>${fixed(valueAt(d.showers_sum, i), 2)} in</td>
-          <td>${fixed(valueAt(d.snowfall_sum, i), 2)} in</td>
-          <td>${fixed(valueAt(d.precipitation_hours, i), 1)} h</td>
-          <td>${round(valueAt(d.wind_speed_10m_max, i))} / ${round(valueAt(d.wind_gusts_10m_max, i))} mph</td>
-          <td>${compass(valueAt(d.wind_direction_10m_dominant, i))}</td>
-          <td>${fixed(valueAt(d.uv_index_max, i), 1)} / ${fixed(valueAt(d.uv_index_clear_sky_max, i), 1)}</td>
-          <td>${sunrise} - ${sunset}</td>
-          <td>${durationH(valueAt(d.daylight_duration, i))} / ${durationH(valueAt(d.sunshine_duration, i))}</td>
-        </tr>
+        <article class="daily-day-card">
+          <div class="daily-day-head">
+            <h4>${dateLabel}</h4>
+            <span class="weather-icon">${iconForCode(code)}</span>
+          </div>
+          <p class="muted">${CODE_LABELS[code] || "Weather"}</p>
+          <p><strong>${round(valueAt(d.temperature_2m_max, i))}F / ${round(valueAt(d.temperature_2m_min, i))}F</strong> temp</p>
+          <p>Feels: ${round(valueAt(d.apparent_temperature_max, i))}F / ${round(valueAt(d.apparent_temperature_min, i))}F</p>
+          <p>Precip: ${round(valueAt(d.precipitation_probability_max, i))}% • ${fixed(valueAt(d.precipitation_sum, i), 2)} in</p>
+          <p>Rain/Showers/Snow: ${fixed(valueAt(d.rain_sum, i), 2)} / ${fixed(valueAt(d.showers_sum, i), 2)} / ${fixed(valueAt(d.snowfall_sum, i), 2)} in</p>
+          <p>Wind: ${compass(valueAt(d.wind_direction_10m_dominant, i))} ${round(valueAt(d.wind_speed_10m_max, i))} mph • gust ${round(valueAt(d.wind_gusts_10m_max, i))} mph</p>
+          <p>UV: ${fixed(valueAt(d.uv_index_max, i), 1)} (clear ${fixed(valueAt(d.uv_index_clear_sky_max, i), 1)})</p>
+          <p>Sun: ${sunrise} - ${sunset}</p>
+          <p>Daylight: ${durationH(valueAt(d.daylight_duration, i))} • Sunshine: ${durationH(valueAt(d.sunshine_duration, i))}</p>
+        </article>
       `;
     })
     .join("");
 
-  elements.dailyDetails.innerHTML = `
-    <table class="daily-table">
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>Condition</th>
-          <th>Temp (High/Low)</th>
-          <th>Feels (High/Low)</th>
-          <th>Precip %</th>
-          <th>Precip</th>
-          <th>Rain</th>
-          <th>Showers</th>
-          <th>Snow</th>
-          <th>Wet Hours</th>
-          <th>Wind / Gust</th>
-          <th>Wind Dir</th>
-          <th>UV Max / Clear</th>
-          <th>Sunrise / Sunset</th>
-          <th>Daylight / Sunshine</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>
-  `;
+  elements.dailyDetails.innerHTML = `<div class="daily-cards">${cards}</div>`;
 }
 
 function renderHourlyDetails(primary) {
