@@ -198,7 +198,7 @@ select {
 .hero-forecast {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
   gap: 10px;
 }
 
@@ -213,6 +213,35 @@ select {
 .forecast-day strong {
   display: block;
   margin-top: 6px;
+}
+
+.details {
+  padding: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 1rem;
 }
 
 .charts {
@@ -307,6 +336,57 @@ select {
   font-size: 0.85rem;
 }
 
+.daily-details {
+  overflow-x: auto;
+}
+
+.daily-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.daily-table th,
+.daily-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 9px 10px;
+  text-align: left;
+  font-size: 0.86rem;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.daily-table th {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.hourly-details {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.hourly-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  padding: 10px;
+}
+
+.hourly-card h4 {
+  margin: 0 0 8px;
+  font-size: 0.94rem;
+}
+
+.hourly-card p {
+  margin: 4px 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 .section-title-row {
   display: flex;
   justify-content: space-between;
@@ -397,6 +477,24 @@ select {
 
 .meta-grid strong {
   font-size: 0.96rem;
+}
+
+.make-primary-btn {
+  margin-top: 12px;
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.make-primary-btn:disabled {
+  cursor: default;
+  background: var(--surface-soft);
+  color: var(--muted);
 }
 
 .loading {

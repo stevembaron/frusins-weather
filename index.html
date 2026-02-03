@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Four City Weather</title>
+    <title>Frusins Weather</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,8 +19,7 @@
     <main class="app-shell">
       <header class="top-bar">
         <div>
-          <p class="eyebrow">Open-Meteo • Live Forecast</p>
-          <h1>Weather at Your Four Locations</h1>
+          <h1>Frusins Weather</h1>
         </div>
         <button id="refreshBtn" class="ghost-btn" type="button">Refresh</button>
       </header>
@@ -36,6 +35,13 @@
 
       <section class="hero card" id="heroPanel" aria-live="polite"></section>
 
+      <section class="card details">
+        <div class="section-title-row">
+          <h2>Primary Location Snapshot</h2>
+        </div>
+        <div id="currentStats" class="stats-grid"></div>
+      </section>
+
       <section class="card charts">
         <div class="section-title-row">
           <h2>Next 24 Hours</h2>
@@ -47,6 +53,20 @@
           <h3>Primary Location Precipitation</h3>
           <div id="precipTimeline" class="precip-timeline"></div>
         </div>
+      </section>
+
+      <section class="card details">
+        <div class="section-title-row">
+          <h2>10-Day Forecast Details</h2>
+        </div>
+        <div id="dailyDetails" class="daily-details"></div>
+      </section>
+
+      <section class="card details">
+        <div class="section-title-row">
+          <h2>Next 24 Hours (Primary)</h2>
+        </div>
+        <div id="hourlyDetails" class="hourly-details"></div>
       </section>
 
       <section>
@@ -76,6 +96,7 @@
           <div><span>Wind</span><strong class="wind"></strong></div>
           <div><span>Precip chance</span><strong class="precip"></strong></div>
         </div>
+        <button class="make-primary-btn" type="button">Set Primary</button>
       </article>
     </template>
 

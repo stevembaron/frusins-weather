@@ -1,32 +1,32 @@
 const LOCATIONS = [
   {
     id: "cleveland-belgrave",
-    label: "Belgrave Rd • Cleveland, OH",
-    shortName: "Cleveland",
+    label: "Saks - Cleveland, OH",
+    shortName: "Saks",
     address: "2797 Belgrave Rd, Cleveland, OH 44124",
     latitude: 41.515,
     longitude: -81.485,
   },
   {
     id: "slc-perrys-hollow",
-    label: "Perrys Hollow • Salt Lake City, UT",
-    shortName: "Perrys Hollow",
+    label: "Barons - Salt Lake City, UT",
+    shortName: "Barons",
     address: "1380 E Perrys Hollow Road, Salt Lake City, UT 84103",
     latitude: 40.779,
     longitude: -111.848,
   },
   {
     id: "slc-eastwood",
-    label: "Eastwood Dr • Salt Lake City, UT",
-    shortName: "Eastwood",
+    label: "Tabaks - Salt Lake City, UT",
+    shortName: "Tabaks",
     address: "3675 Eastwood Dr, Salt Lake City, UT 84109",
     latitude: 40.706,
     longitude: -111.813,
   },
   {
     id: "slc-2300e",
-    label: "S 2300 E • Salt Lake City, UT",
-    shortName: "S 2300 E",
+    label: "Sterns - Salt Lake City, UT",
+    shortName: "Sterns",
     address: "859 S 2300 E, Salt Lake City, UT 84108",
     latitude: 40.751,
     longitude: -111.821,
@@ -34,15 +34,16 @@ const LOCATIONS = [
 ];
 
 const STORAGE_KEY = "weather-default-location-id";
+const LINE_COLORS = ["#0f6df2", "#2aa889", "#f18f01", "#e94f37"];
 
 const ICONS = {
-  clear: "☀️",
-  partly: "🌤️",
-  cloudy: "☁️",
-  fog: "🌫️",
-  rain: "🌧️",
-  snow: "❄️",
-  storm: "⛈️",
+  clear: "SUN",
+  partly: "PARTLY",
+  cloudy: "CLOUDY",
+  fog: "FOG",
+  rain: "RAIN",
+  snow: "SNOW",
+  storm: "STORM",
 };
 
 const CODE_LABELS = {
@@ -82,16 +83,18 @@ const elements = {
   defaultNote: document.getElementById("defaultNote"),
   refreshBtn: document.getElementById("refreshBtn"),
   heroPanel: document.getElementById("heroPanel"),
+  currentStats: document.getElementById("currentStats"),
   chartLegend: document.getElementById("chartLegend"),
   hourlyChart: document.getElementById("hourlyChart"),
   precipTimeline: document.getElementById("precipTimeline"),
+  dailyDetails: document.getElementById("dailyDetails"),
+  hourlyDetails: document.getElementById("hourlyDetails"),
   comparisonGrid: document.getElementById("comparisonGrid"),
   updatedAt: document.getElementById("updatedAt"),
   compareCardTemplate: document.getElementById("compareCardTemplate"),
 };
 
 let weatherByLocation = {};
-const LINE_COLORS = ["#0f6df2", "#2aa889", "#f18f01", "#e94f37"];
 
 function init() {
   LOCATIONS.forEach((location) => {
@@ -105,7 +108,7 @@ function init() {
   elements.locationSelect.value = defaultId;
   updateDefaultNote(defaultId);
 
-  elements.locationSelect.addEventListener("change", () => renderAll());
+  elements.locationSelect.addEventListener("change", renderAll);
   elements.saveDefaultBtn.addEventListener("click", () => {
     const selectedId = elements.locationSelect.value;
     localStorage.setItem(STORAGE_KEY, selectedId);
@@ -132,9 +135,12 @@ function updateDefaultNote(defaultId, showSaved = false) {
 
 async function loadWeather() {
   elements.heroPanel.innerHTML = '<div class="loading">Loading current weather...</div>';
+  elements.currentStats.innerHTML = "";
   elements.hourlyChart.innerHTML = "";
   elements.chartLegend.innerHTML = "";
   elements.precipTimeline.innerHTML = "";
+  elements.dailyDetails.innerHTML = "";
+  elements.hourlyDetails.innerHTML = "";
   elements.comparisonGrid.innerHTML = "";
 
   try {
@@ -145,11 +151,8 @@ async function loadWeather() {
     }, {});
     renderAll();
   } catch (error) {
-    elements.heroPanel.innerHTML = `<div class="error">Couldn't load weather right now. Try refresh in a moment.</div>`;
-    elements.hourlyChart.innerHTML = `<div class="error">Couldn't load chart data.</div>`;
-    elements.chartLegend.innerHTML = "";
-    elements.precipTimeline.innerHTML = "";
-    elements.comparisonGrid.innerHTML = "";
+    elements.heroPanel.innerHTML = '<div class="error">Could not load weather right now. Try refresh in a moment.</div>';
+    elements.hourlyChart.innerHTML = '<div class="error">Could not load chart data.</div>';
     elements.updatedAt.textContent = "";
     console.error(error);
   }
@@ -163,19 +166,65 @@ async function fetchWeather(location) {
       "temperature_2m",
       "apparent_temperature",
       "relative_humidity_2m",
+      "is_day",
+      "precipitation",
+      "rain",
+      "showers",
+      "snowfall",
       "weather_code",
+      "cloud_cover",
+      "pressure_msl",
+      "surface_pressure",
       "wind_speed_10m",
+      "wind_direction_10m",
+      "wind_gusts_10m",
+    ].join(","),
+    hourly: [
+      "temperature_2m",
+      "relative_humidity_2m",
+      "apparent_temperature",
+      "precipitation_probability",
+      "precipitation",
+      "rain",
+      "showers",
+      "snowfall",
+      "weather_code",
+      "cloud_cover",
+      "pressure_msl",
+      "surface_pressure",
+      "wind_speed_10m",
+      "wind_direction_10m",
+      "wind_gusts_10m",
+      "dew_point_2m",
+      "uv_index",
+      "is_day",
     ].join(","),
     daily: [
       "weather_code",
       "temperature_2m_max",
       "temperature_2m_min",
+      "apparent_temperature_max",
+      "apparent_temperature_min",
+      "sunrise",
+      "sunset",
+      "daylight_duration",
+      "sunshine_duration",
+      "uv_index_max",
+      "uv_index_clear_sky_max",
+      "precipitation_sum",
+      "rain_sum",
+      "showers_sum",
+      "snowfall_sum",
+      "precipitation_hours",
       "precipitation_probability_max",
+      "wind_speed_10m_max",
+      "wind_gusts_10m_max",
+      "wind_direction_10m_dominant",
     ].join(","),
-    hourly: ["temperature_2m", "precipitation_probability"].join(","),
-    forecast_days: "5",
+    forecast_days: "10",
     temperature_unit: "fahrenheit",
     wind_speed_unit: "mph",
+    precipitation_unit: "inch",
     timezone: "auto",
   });
 
@@ -190,18 +239,22 @@ async function fetchWeather(location) {
     location,
     timezone: payload.timezone,
     current: payload.current,
-    daily: payload.daily,
     hourly: payload.hourly,
+    daily: payload.daily,
   };
 }
 
 function renderAll() {
   if (!Object.keys(weatherByLocation).length) return;
+
   const selectedLocationId = elements.locationSelect.value || getDefaultLocationId();
   const primary = weatherByLocation[selectedLocationId] || weatherByLocation[getDefaultLocationId()];
 
   renderHero(primary);
+  renderCurrentStats(primary);
   renderHourlyCharts(primary);
+  renderDailyDetails(primary);
+  renderHourlyDetails(primary);
   renderComparison(primary);
 
   const currentTime = new Date().toLocaleString([], {
@@ -211,6 +264,160 @@ function renderAll() {
     day: "numeric",
   });
   elements.updatedAt.textContent = `Updated ${currentTime}`;
+}
+
+function renderHero(data) {
+  const weatherCode = data.current.weather_code;
+  const icon = iconForCode(weatherCode);
+  const label = CODE_LABELS[weatherCode] || "Weather";
+
+  const dayMarkup = data.daily.time
+    .slice(0, 10)
+    .map((date, index) => {
+      const day = new Date(`${date}T12:00:00`).toLocaleDateString([], { weekday: "short" });
+      const code = data.daily.weather_code[index];
+      const max = round(data.daily.temperature_2m_max[index]);
+      const min = round(data.daily.temperature_2m_min[index]);
+      const p = round(data.daily.precipitation_probability_max[index]);
+      return `
+        <div class="forecast-day">
+          <div>${day}</div>
+          <div class="weather-icon">${iconForCode(code)}</div>
+          <strong>${max}F / ${min}F</strong>
+          <div class="muted">${p}% precip</div>
+        </div>
+      `;
+    })
+    .join("");
+
+  elements.heroPanel.innerHTML = `
+    <div class="hero-top">
+      <div>
+        <h2>${data.location.shortName}</h2>
+        <p class="hero-address">${data.location.address}</p>
+        <p class="muted">Timezone: ${data.timezone}</p>
+      </div>
+      <div class="hero-weather">
+        <span class="weather-icon">${icon}</span>
+        <div>
+          <div class="hero-temp">${round(data.current.temperature_2m)}F</div>
+          <div class="hero-code">${label}</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-forecast">${dayMarkup}</div>
+  `;
+}
+
+function renderCurrentStats(primary) {
+  const c = primary.current;
+  const stats = [
+    ["Feels Like", `${round(c.apparent_temperature)}F`],
+    ["Humidity", `${round(c.relative_humidity_2m)}%`],
+    ["Cloud Cover", `${round(c.cloud_cover)}%`],
+    ["Precipitation", `${fixed(c.precipitation, 2)} in`],
+    ["Rain", `${fixed(c.rain, 2)} in`],
+    ["Showers", `${fixed(c.showers, 2)} in`],
+    ["Snowfall", `${fixed(c.snowfall, 2)} in`],
+    ["Wind", `${fixed(c.wind_speed_10m, 1)} mph`],
+    ["Wind Gust", `${fixed(c.wind_gusts_10m, 1)} mph`],
+    ["Wind Direction", `${round(c.wind_direction_10m)} deg (${compass(c.wind_direction_10m)})`],
+    ["Pressure MSL", `${fixed(c.pressure_msl, 1)} hPa`],
+    ["Surface Pressure", `${fixed(c.surface_pressure, 1)} hPa`],
+    ["Day/Night", c.is_day === 1 ? "Day" : "Night"],
+  ];
+
+  elements.currentStats.innerHTML = stats
+    .map(
+      ([label, value]) => `
+      <div class="stat-card">
+        <span>${label}</span>
+        <strong>${value}</strong>
+      </div>
+    `,
+    )
+    .join("");
+}
+
+function renderDailyDetails(primary) {
+  const d = primary.daily;
+  const rows = d.time
+    .slice(0, 10)
+    .map((date, i) => {
+      const dateLabel = new Date(`${date}T12:00:00`).toLocaleDateString([], {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+      });
+      const sunrise = new Date(d.sunrise[i]).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+      const sunset = new Date(d.sunset[i]).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+      return `
+        <tr>
+          <td>${dateLabel}</td>
+          <td>${iconForCode(d.weather_code[i])} ${CODE_LABELS[d.weather_code[i]] || "Weather"}</td>
+          <td>${round(d.temperature_2m_max[i])}F / ${round(d.temperature_2m_min[i])}F</td>
+          <td>${round(d.apparent_temperature_max[i])}F / ${round(d.apparent_temperature_min[i])}F</td>
+          <td>${round(d.precipitation_probability_max[i])}%</td>
+          <td>${fixed(d.precipitation_sum[i], 2)} in</td>
+          <td>${fixed(d.rain_sum[i], 2)} in</td>
+          <td>${fixed(d.showers_sum[i], 2)} in</td>
+          <td>${fixed(d.snowfall_sum[i], 2)} in</td>
+          <td>${fixed(d.precipitation_hours[i], 1)} h</td>
+          <td>${fixed(d.wind_speed_10m_max[i], 1)} / ${fixed(d.wind_gusts_10m_max[i], 1)} mph</td>
+          <td>${round(d.wind_direction_10m_dominant[i])} deg (${compass(d.wind_direction_10m_dominant[i])})</td>
+          <td>${fixed(d.uv_index_max[i], 1)} / ${fixed(d.uv_index_clear_sky_max[i], 1)}</td>
+          <td>${sunrise} - ${sunset}</td>
+          <td>${durationH(d.daylight_duration[i])} / ${durationH(d.sunshine_duration[i])}</td>
+        </tr>
+      `;
+    })
+    .join("");
+
+  elements.dailyDetails.innerHTML = `
+    <table class="daily-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Condition</th>
+          <th>Temp (High/Low)</th>
+          <th>Feels (High/Low)</th>
+          <th>Precip %</th>
+          <th>Precip</th>
+          <th>Rain</th>
+          <th>Showers</th>
+          <th>Snow</th>
+          <th>Wet Hours</th>
+          <th>Wind / Gust</th>
+          <th>Wind Dir</th>
+          <th>UV Max / Clear</th>
+          <th>Sunrise / Sunset</th>
+          <th>Daylight / Sunshine</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  `;
+}
+
+function renderHourlyDetails(primary) {
+  const h = primary.hourly;
+  const items = h.time.slice(0, 24).map((timestamp, i) => {
+    const timeLabel = new Date(timestamp).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    const weather = CODE_LABELS[h.weather_code[i]] || "Weather";
+    return `
+      <article class="hourly-card">
+        <h4>${timeLabel} - ${weather}</h4>
+        <p>Temp: ${round(h.temperature_2m[i])}F (Feels ${round(h.apparent_temperature[i])}F)</p>
+        <p>Humidity: ${round(h.relative_humidity_2m[i])}% | Dew point: ${round(h.dew_point_2m[i])}F</p>
+        <p>Precip: ${round(h.precipitation_probability[i])}% (${fixed(h.precipitation[i], 2)} in)</p>
+        <p>Rain/Showers/Snow: ${fixed(h.rain[i], 2)} / ${fixed(h.showers[i], 2)} / ${fixed(h.snowfall[i], 2)} in</p>
+        <p>Wind: ${fixed(h.wind_speed_10m[i], 1)} mph, gust ${fixed(h.wind_gusts_10m[i], 1)} mph (${compass(h.wind_direction_10m[i])})</p>
+        <p>Cloud: ${round(h.cloud_cover[i])}% | UV: ${fixed(h.uv_index[i], 1)} | Pressure: ${fixed(h.pressure_msl[i], 1)} hPa</p>
+      </article>
+    `;
+  });
+
+  elements.hourlyDetails.innerHTML = items.join("");
 }
 
 function renderHourlyCharts(primary) {
@@ -223,6 +430,7 @@ function renderHourlyTemperatureChart() {
   const hourLabels = firstData.hourly.time.slice(0, 24).map((stamp) =>
     new Date(stamp).toLocaleTimeString([], { hour: "numeric" }),
   );
+
   const series = LOCATIONS.map((location, index) => ({
     name: location.shortName,
     color: LINE_COLORS[index],
@@ -232,6 +440,7 @@ function renderHourlyTemperatureChart() {
   const allTemps = series.flatMap((line) => line.temps);
   const minTemp = Math.floor(Math.min(...allTemps) - 2);
   const maxTemp = Math.ceil(Math.max(...allTemps) + 2);
+
   const width = 1000;
   const height = 320;
   const topPad = 24;
@@ -244,10 +453,12 @@ function renderHourlyTemperatureChart() {
   const xForIndex = (idx) => leftPad + (idx / 23) * plotWidth;
   const yForTemp = (temp) => topPad + ((maxTemp - temp) / (maxTemp - minTemp || 1)) * plotHeight;
 
-  const horizontalGuides = [0, 0.25, 0.5, 0.75, 1].map((fraction) => {
-    const y = topPad + fraction * plotHeight;
-    return `<line x1="${leftPad}" y1="${y}" x2="${leftPad + plotWidth}" y2="${y}" stroke="#e3ebfa" stroke-width="1" />`;
-  });
+  const horizontalGuides = [0, 0.25, 0.5, 0.75, 1]
+    .map((fraction) => {
+      const y = topPad + fraction * plotHeight;
+      return `<line x1="${leftPad}" y1="${y}" x2="${leftPad + plotWidth}" y2="${y}" stroke="#e3ebfa" stroke-width="1" />`;
+    })
+    .join("");
 
   const lines = series
     .map((line) => {
@@ -267,13 +478,13 @@ function renderHourlyTemperatureChart() {
     .map((temp) => {
       const rounded = Math.round(temp);
       const y = yForTemp(rounded);
-      return `<text x="6" y="${y + 4}" fill="#576078" font-size="12">${rounded}°F</text>`;
+      return `<text x="6" y="${y + 4}" fill="#576078" font-size="12">${rounded}F</text>`;
     })
     .join("");
 
   elements.hourlyChart.innerHTML = `
     <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="24-hour temperature chart for all four locations">
-      ${horizontalGuides.join("")}
+      ${horizontalGuides}
       ${lines}
       ${axisLabels}
       ${tempLabels}
@@ -283,11 +494,11 @@ function renderHourlyTemperatureChart() {
   elements.chartLegend.innerHTML = series
     .map(
       (line) => `
-        <span class="legend-pill">
-          <span class="legend-dot" style="background:${line.color}"></span>
-          ${line.name}
-        </span>
-      `,
+      <span class="legend-pill">
+        <span class="legend-dot" style="background:${line.color}"></span>
+        ${line.name}
+      </span>
+    `,
     )
     .join("");
 }
@@ -315,45 +526,6 @@ function renderPrecipTimeline(primary) {
   `;
 }
 
-function renderHero(data) {
-  const weatherCode = data.current.weather_code;
-  const icon = iconForCode(weatherCode);
-  const label = CODE_LABELS[weatherCode] || "Weather";
-
-  const dayMarkup = data.daily.time
-    .map((date, index) => {
-      const day = new Date(`${date}T12:00:00`).toLocaleDateString([], { weekday: "short" });
-      const code = data.daily.weather_code[index];
-      const max = Math.round(data.daily.temperature_2m_max[index]);
-      const min = Math.round(data.daily.temperature_2m_min[index]);
-      return `
-        <div class="forecast-day">
-          <div>${day}</div>
-          <div class="weather-icon">${iconForCode(code)}</div>
-          <strong>${max}° / ${min}°</strong>
-        </div>
-      `;
-    })
-    .join("");
-
-  elements.heroPanel.innerHTML = `
-    <div class="hero-top">
-      <div>
-        <h2>${data.location.shortName}</h2>
-        <p class="hero-address">${data.location.address}</p>
-      </div>
-      <div class="hero-weather">
-        <span class="weather-icon">${icon}</span>
-        <div>
-          <div class="hero-temp">${Math.round(data.current.temperature_2m)}°F</div>
-          <div class="hero-code">${label}</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-forecast">${dayMarkup}</div>
-  `;
-}
-
 function renderComparison(primary) {
   const primaryTemp = primary.current.temperature_2m;
   elements.comparisonGrid.innerHTML = "";
@@ -367,7 +539,7 @@ function renderComparison(primary) {
     card.querySelector(".code-pill").textContent = CODE_LABELS[data.current.weather_code] || "Weather";
     card.querySelector(".compare-address").textContent = location.address;
     card.querySelector(".weather-icon").textContent = iconForCode(data.current.weather_code);
-    card.querySelector(".temp-main").textContent = `${Math.round(data.current.temperature_2m)}°F`;
+    card.querySelector(".temp-main").textContent = `${round(data.current.temperature_2m)}F`;
 
     const delta = data.current.temperature_2m - primaryTemp;
     const deltaNode = card.querySelector(".temp-delta");
@@ -375,14 +547,25 @@ function renderComparison(primary) {
       deltaNode.textContent = "Primary";
     } else {
       const sign = delta > 0 ? "+" : "";
-      deltaNode.textContent = `${sign}${Math.round(delta)}° vs primary`;
+      deltaNode.textContent = `${sign}${Math.round(delta)}F vs primary`;
       deltaNode.classList.add(delta > 0 ? "positive" : "negative");
     }
 
-    card.querySelector(".feels").textContent = `${Math.round(data.current.apparent_temperature)}°F`;
-    card.querySelector(".humidity").textContent = `${data.current.relative_humidity_2m}%`;
-    card.querySelector(".wind").textContent = `${Math.round(data.current.wind_speed_10m)} mph`;
-    card.querySelector(".precip").textContent = `${data.daily.precipitation_probability_max[0]}%`;
+    card.querySelector(".feels").textContent = `${round(data.current.apparent_temperature)}F`;
+    card.querySelector(".humidity").textContent = `${round(data.current.relative_humidity_2m)}%`;
+    card.querySelector(".wind").textContent = `${fixed(data.current.wind_speed_10m, 1)} mph`;
+    card.querySelector(".precip").textContent = `${round(data.daily.precipitation_probability_max[0])}%`;
+
+    const makePrimaryBtn = card.querySelector(".make-primary-btn");
+    if (location.id === primary.locationId) {
+      makePrimaryBtn.textContent = "Current Primary";
+      makePrimaryBtn.disabled = true;
+    } else {
+      makePrimaryBtn.addEventListener("click", () => {
+        elements.locationSelect.value = location.id;
+        renderAll();
+      });
+    }
 
     elements.comparisonGrid.append(card);
   });
@@ -396,7 +579,26 @@ function iconForCode(code) {
   if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) return ICONS.rain;
   if ([71, 73, 75, 77, 85, 86].includes(code)) return ICONS.snow;
   if ([95, 96, 99].includes(code)) return ICONS.storm;
-  return "🌡️";
+  return "WEATHER";
+}
+
+function fixed(value, digits = 1) {
+  return Number.isFinite(value) ? Number(value).toFixed(digits) : "--";
+}
+
+function round(value) {
+  return Number.isFinite(value) ? Math.round(value) : "--";
+}
+
+function durationH(seconds) {
+  if (!Number.isFinite(seconds)) return "--";
+  return `${(seconds / 3600).toFixed(1)}h`;
+}
+
+function compass(degrees) {
+  if (!Number.isFinite(degrees)) return "--";
+  const dirs = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
+  return dirs[Math.round((degrees % 360) / 45) % 8];
 }
 
 init();
