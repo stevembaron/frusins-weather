@@ -52,6 +52,10 @@ MARKDOWN_IMAGE_LINK_RE = re.compile(
     r"\[\!\[Image\s+\d+:?\s*(?P<title>[^\]]*)\]\((?P<img>[^)]+)\)(?P<tail>[^\]]*?)\]\((?P<url>https?://[^)]+)\)",
     re.DOTALL,
 )
+EMBEDDED_PROMO_IMAGE_RE = re.compile(
+    r"!\[[^\]]*\]\(https?://static\.evo\.com/[^)]+\)",
+    re.IGNORECASE,
+)
 JSON_LD_RE = re.compile(
     r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
     re.IGNORECASE | re.DOTALL,
@@ -367,6 +371,11 @@ def link_candidates(markup: str, base_url: str, source_name: str, found_at: str)
 def markdown_candidates(markdown: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
     if "Markdown Content:" in markdown:
         markdown = markdown.split("Markdown Content:", 1)[1]
+
+    # Evo's reader view sometimes injects a second promo image inside a
+    # product card. Remove those embedded badges so the outer product link
+    # still parses as a single markdown image link.
+    markdown = EMBEDDED_PROMO_IMAGE_RE.sub(" ", markdown)
 
     deals = markdown_image_candidates(markdown, source_name, found_at)
     deals.extend(markdown_evo_line_candidates(markdown, source_name, found_at))

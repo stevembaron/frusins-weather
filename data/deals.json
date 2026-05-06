@@ -1,40 +1,29 @@
 {
-  "generated_at": "2026-05-06T07:02:35-06:00",
-  "deal_count": 70,
+  "generated_at": "2026-05-06T08:31:06-06:00",
+  "deal_count": 79,
   "sources_checked": 5,
   "deals": [
     {
-      "title": "Zag Skis Adret 78 Alpine Touring Skis",
-      "url": "https://www.sierra.com/zag-skis-adret-78-alpine-touring-skis~p~8tnux/?filterString=s~skis%2Factivities~d~14342%2Fsports-and-games~d~14656%2Fsnow-sports~d~14343%2Fskis~d~9694%2F",
-      "source": "Sierra skis",
-      "current_price": 199.0,
-      "original_price": 900.0,
-      "discount_percent": 77.9,
-      "savings": 701.0,
-      "score": 128.92,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "title": "Dynastar M-Pro 99 W Skis - Women's Outlet: Final",
+      "url": "https://www.evo.com/outlet/skis/dynastar-m-pro-99-w-womens",
+      "source": "Evo skis price ascending",
+      "current_price": 119.99,
+      "original_price": 699.95,
+      "discount_percent": 82.9,
+      "savings": 579.96,
+      "score": 135.5,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
-      "title": "Zag Skis Adret 85 Alpine Touring Skis For Women",
-      "url": "https://www.sierra.com/zag-skis-adret-85-alpine-touring-skis-for-women~p~8tnuv/?filterString=s~skis%2Factivities~d~14342%2Fsports-and-games~d~14656%2Fsnow-sports~d~14343%2Fskis~d~9694%2F",
-      "source": "Sierra skis",
-      "current_price": 199.0,
-      "original_price": 900.0,
-      "discount_percent": 77.9,
-      "savings": 701.0,
-      "score": 128.92,
-      "found_at": "2026-05-06T13:02:12+00:00"
-    },
-    {
-      "title": "Zag Skis Ubac 89 Alpine Touring Skis For Women",
-      "url": "https://www.sierra.com/zag-skis-ubac-89-alpine-touring-skis-for-women~p~8tnuk/?filterString=s~skis%2Factivities~d~14342%2Fsports-and-games~d~14656%2Fsnow-sports~d~14343%2Fskis~d~9694%2F",
-      "source": "Sierra skis",
-      "current_price": 199.0,
-      "original_price": 800.0,
-      "discount_percent": 75.1,
-      "savings": 601.0,
-      "score": 126.12,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "title": "Rossignol Rallybird 104 Ti Skis - Women's Outlet: Final",
+      "url": "https://www.evo.com/outlet/skis/rossignol-rallybird-104-ti-womens",
+      "source": "Evo skis price ascending",
+      "current_price": 199.99,
+      "original_price": 849.95,
+      "discount_percent": 76.5,
+      "savings": 649.96,
+      "score": 127.5,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Weston Skyline Ski x Haa Aani Alliance (1) List: ( 69%) Blazin' Deal",
@@ -45,7 +34,7 @@
       "discount_percent": 69.4,
       "savings": 485.11,
       "score": 120.12,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "2 models G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal",
@@ -56,7 +45,7 @@
       "discount_percent": 64.1,
       "savings": 424.4,
       "score": 114.35,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "K2 Mindbender 115 C Alliance Skis \u200b+ Marker Squire 11 Demo Bindings - Used Outlet: Clearance",
@@ -67,7 +56,7 @@
       "discount_percent": 63.5,
       "savings": 539.98,
       "score": 112.3,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada Reliance 92 Ti Skis \u200b+ Armada Strive 11 Demo Bindings - Used Outlet: Clearance",
@@ -78,7 +67,7 @@
       "discount_percent": 63.3,
       "savings": 567.99,
       "score": 111.7,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal",
@@ -89,7 +78,18 @@
       "discount_percent": 64.0,
       "savings": 666.6,
       "score": 111.51,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Peak Skis Peak 98 By Dav Skis 2025 Clearance",
+      "url": "https://www.evo.com/skis/peak-98-by-dav",
+      "source": "Evo skis price ascending",
+      "current_price": 349.97,
+      "original_price": 899.0,
+      "discount_percent": 61.1,
+      "savings": 549.03,
+      "score": 109.1,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Women's - 154cm",
@@ -100,7 +100,7 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Women's - 160cm",
@@ -111,7 +111,7 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Women's - 168cm",
@@ -122,7 +122,18 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Season Nexus Skis - Used Outlet: Clearance",
+      "url": "https://www.evo.com/outlet/used/skis/season-nexus",
+      "source": "Evo skis price ascending",
+      "current_price": 299.98,
+      "original_price": 749.95,
+      "discount_percent": 60.0,
+      "savings": 449.97,
+      "score": 109.0,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Unisex - 184cm",
@@ -133,7 +144,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Unisex - 177cm",
@@ -144,7 +155,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott SuperGuide 88 - Unisex - 178cm",
@@ -155,7 +166,7 @@
       "discount_percent": 53.5,
       "savings": 401.0,
       "score": 101.52,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Scott SuperGuide 88 - Unisex - 184cm",
@@ -166,7 +177,7 @@
       "discount_percent": 53.5,
       "savings": 401.0,
       "score": 101.52,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 2 Skis - Used Outlet:",
@@ -177,7 +188,7 @@
       "discount_percent": 51.0,
       "savings": 330.99,
       "score": 99.64,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Lib Tech Libstick 88 Skis - Women's - Used Outlet:",
@@ -188,7 +199,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Weston Skyline Carbon Ski (2) List: ( 52%) Blazin' Deal",
@@ -199,7 +210,18 @@
       "discount_percent": 52.0,
       "savings": 467.54,
       "score": 98.37,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Sender Free 92 Skis \u200b+ Xpress 11 Bindings 2026",
+      "url": "https://www.evo.com/ski-binding-packages/rossignol-sender-free-92-skis-xpress-11-bindings",
+      "source": "Evo skis price ascending",
+      "current_price": 349.98,
+      "original_price": 699.95,
+      "discount_percent": 50.0,
+      "savings": 349.97,
+      "score": 98.0,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Black Diamond Impulse TI 104 Ski - Women's - 165cm",
@@ -210,7 +232,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Black Diamond Impulse TI 104 Ski - Women's - 172cm",
@@ -221,7 +243,29 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Experience 78 Skis \u200b+ Xpress 10 Bindings 2026",
+      "url": "https://www.evo.com/ski-binding-packages/rossignol-experience-78-skis-xpress-10-bindings",
+      "source": "Evo skis price ascending",
+      "current_price": 249.97,
+      "original_price": 449.95,
+      "discount_percent": 44.4,
+      "savings": 199.98,
+      "score": 94.4,
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Salomon QST Lux 92 Skis - Women's - Used Outlet:",
+      "url": "https://www.evo.com/outlet/used/skis/salomon-qst-lux-92-womens",
+      "source": "Evo skis price ascending",
+      "current_price": 307.97,
+      "original_price": 549.95,
+      "discount_percent": 44.0,
+      "savings": 241.98,
+      "score": 92.84,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 2 - 165cm",
@@ -232,7 +276,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 2 - 171cm",
@@ -243,7 +287,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 2 - 177cm",
@@ -254,7 +298,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 2 - 183cm",
@@ -265,7 +309,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada Tantrum 100 POW - 148cm",
@@ -276,7 +320,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada Tantrum 100 POW - 164cm",
@@ -287,7 +331,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 3 Capsule - 164cm",
@@ -298,7 +342,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 3 - 172cm",
@@ -309,7 +353,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 3 - 178cm",
@@ -320,7 +364,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Prodigy 3 - 184cm",
@@ -331,7 +375,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Studio 2 - 166cm",
@@ -342,7 +386,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Studio 2 - 183cm",
@@ -353,7 +397,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction La Machine 1 - 156cm",
@@ -364,7 +408,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction La Machine 1 - 163cm",
@@ -375,7 +419,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction La Machine 1 - 182cm",
@@ -386,7 +430,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 2, Blue - 155cm",
@@ -397,7 +441,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 2, Blue - 163cm",
@@ -408,7 +452,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 2, Blue - 177cm",
@@ -419,7 +463,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 2, Purple - 163cm",
@@ -430,7 +474,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 2, Purple - 171cm",
@@ -441,7 +485,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Head Oblivion 79 Skis 2026",
@@ -452,7 +496,7 @@
       "discount_percent": 40.1,
       "savings": 180.0,
       "score": 89.72,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Faction Dancer 3, Turquoise - 164cm",
@@ -463,7 +507,18 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Rallybird Soul Pro Skis \u200b+ XP 10 Bindings 2026",
+      "url": "https://www.evo.com/ski-packages/rossignol-rallybird-soul-pro-skis-xpress-10-bindings",
+      "source": "Evo skis price ascending",
+      "current_price": 269.97,
+      "original_price": 449.95,
+      "discount_percent": 40.0,
+      "savings": 179.98,
+      "score": 89.6,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Head Easy Joy Skis \u200b+ Joy 9 GW Bindings - Women's 2026",
@@ -474,7 +529,7 @@
       "discount_percent": 40.1,
       "savings": 200.0,
       "score": 89.12,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Head Oblivion 84 Skis 2026",
@@ -485,7 +540,7 @@
       "discount_percent": 40.1,
       "savings": 220.0,
       "score": 88.52,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "MASTERBLASTER \"ADAPT\" BLEMISH - 160cm",
@@ -496,7 +551,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "MASTERBLASTER \"FULL HOUSE\" BLEMISH - 160cm",
@@ -507,7 +562,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "MASTERBLASTER \"FULL HOUSE\" BLEMISH - 167cm",
@@ -518,7 +573,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Season Primer Skis - Blem 2026",
@@ -529,7 +584,29 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Sprayer Pro Skis \u200b+ Xpress 10 Bindings 2026",
+      "url": "https://www.evo.com/ski-binding-packages/rossignol-sprayer-pro-skis-xpress-10-bindings",
+      "source": "Evo skis price ascending",
+      "current_price": 259.97,
+      "original_price": 399.95,
+      "discount_percent": 35.0,
+      "savings": 139.98,
+      "score": 84.8,
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Sender Soul Pro Skis \u200b+ Xpress 10 Bindings 2026",
+      "url": "https://www.evo.com/ski-packages/rossignol-sender-soul-pro-skis-xpress-10-bindings",
+      "source": "Evo skis price ascending",
+      "current_price": 292.47,
+      "original_price": 449.95,
+      "discount_percent": 35.0,
+      "savings": 157.48,
+      "score": 84.15,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Dynastar M-Menace 90 Skis \u200b+ XP 11 Bindings 2026",
@@ -540,7 +617,18 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Rossignol Arcade 78 W Skis \u200b+ Xpress 10 Bindings - Women's 2027",
+      "url": "https://www.evo.com/ski-binding-packages/rossignol-arcade-78-w-skis-xpress-10-bindings-womens",
+      "source": "Evo skis price ascending",
+      "current_price": 324.97,
+      "original_price": 499.95,
+      "discount_percent": 35.0,
+      "savings": 174.98,
+      "score": 83.5,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Rossignol Sender Soul 92 Skis 2026",
@@ -551,7 +639,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Dynastar M-Free 90 Skis 2026",
@@ -562,7 +650,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Atomic Maven 84 Skis \u200b+ M10 GW Bindings - Women's 2026",
@@ -573,7 +661,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Atomic Maverick 84 Skis \u200b+ M10 GW Bindings 2026",
@@ -584,7 +672,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada ARW 88 Skis - Women's 2026",
@@ -595,7 +683,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada ARV 88 Skis 2026",
@@ -606,7 +694,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "V\u00f6lkl Revolt 86 Skis 2026",
@@ -617,7 +705,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Line Skis Pandora 85 Skis 2026",
@@ -628,7 +716,7 @@
       "discount_percent": 30.0,
       "savings": 149.99,
       "score": 78.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Line Skis Honey Badger Skis 2026",
@@ -639,7 +727,18 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
+    },
+    {
+      "title": "Season Primer Skis 2026",
+      "url": "https://www.evo.com/skis/season-primer",
+      "source": "Evo skis price ascending",
+      "current_price": 314.96,
+      "original_price": 449.95,
+      "discount_percent": 30.0,
+      "savings": 134.99,
+      "score": 77.45,
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada ARW 84 Skis - Women's 2026",
@@ -650,7 +749,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "Armada ARV 84 Skis 2026",
@@ -661,7 +760,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "K2 Fatty Skis 2026",
@@ -672,7 +771,7 @@
       "discount_percent": 30.0,
       "savings": 119.99,
       "score": 74.4,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "5 models Black Diamond Helio Carbon 88 Skis As Low As ( Up to 74%) Blazin' Deal",
@@ -683,7 +782,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 15.69,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "8 models Black Diamond Impulse 98 Ti Skis - Women's As Low As ( Up to 72%) Blazin' Deal",
@@ -694,7 +793,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 14.93,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "3 models Black Diamond Impulse 104 Ti Skis - Women's As Low As ( Up to 66%) Blazin' Deal",
@@ -705,7 +804,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 14.19,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 56%) Blazin' Deal",
@@ -716,7 +815,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.55,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "3 models Black Diamond Impulse 104 Ti Skis As Low As ( Up to 39%) Blazin' Deal",
@@ -727,7 +826,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 9.61,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "4 models Black Diamond Impulse 98 Ti Skis As Low As ( Up to 17%) Blazin' Deal",
@@ -738,7 +837,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 6.77,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "2 models Black Diamond Impulse 112 Ti Skis",
@@ -749,7 +848,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "4 models Black Diamond Helio Carbon 102 Skis",
@@ -760,7 +859,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     },
     {
       "title": "4 models Black Diamond Helio Carbon 108 Skis Free 2 Day Shipping",
@@ -771,7 +870,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 1.0,
-      "found_at": "2026-05-06T13:02:12+00:00"
+      "found_at": "2026-05-06T14:30:49+00:00"
     }
   ],
   "errors": []
