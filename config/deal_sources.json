@@ -82,6 +82,14 @@
       ]
     },
     {
+      "name": "ERIK'S downhill skis price ascending",
+      "url": "https://www.eriksbikeshop.com/collections/downhill-skis?sort_by=Price%2C+low+to+high&sort_order=ascending",
+      "enabled": true,
+      "reader_fallback": true,
+      "ignore_sold_out": true,
+      "shopify_products_json": "https://www.eriksbikeshop.com/collections/downhill-skis/products.json?limit=250"
+    },
+    {
       "name": "The Gear Room skis price ascending",
       "url": "https://thegearroom.com/collections/skis?sort_by=price-ascending&filter.v.price.gte=&filter.v.price.lte=",
       "enabled": true,

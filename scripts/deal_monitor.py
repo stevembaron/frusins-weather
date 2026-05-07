@@ -93,6 +93,7 @@ class Deal:
     savings: float | None
     score: float
     found_at: str
+    sizes: list[str] | None = None
 
 
 @dataclass
@@ -529,6 +530,7 @@ def make_deal(
     current: float,
     original: float | None,
     found_at: str,
+    sizes: list[str] | None = None,
 ) -> Deal:
     discount = None
     savings = None
@@ -547,6 +549,7 @@ def make_deal(
         savings=savings,
         score=score,
         found_at=found_at,
+        sizes=sizes,
     )
 
 
@@ -555,6 +558,46 @@ def current_score(current: float, discount: float | None, savings: float | None)
     savings_score = min((savings or 0) / 4, 35)
     price_score = max(0, 20 - min(current / 50, 20))
     return round(discount_score + savings_score + price_score, 2)
+
+
+SIZE_SUFFIX_RE = re.compile(r"(?i)^(?:(?:[^/]+?)\s*/\s*)?(?:\d{3}|\d{2,3}\.\d)\s*cm$")
+
+
+def split_size_variant(title: str) -> tuple[str, str | None]:
+    if " - " not in title:
+        return title, None
+    base, suffix = title.rsplit(" - ", 1)
+    suffix = clean_text(suffix)
+    if not SIZE_SUFFIX_RE.match(suffix):
+        return title, None
+    return clean_text(base), suffix
+
+
+def consolidate_size_variants(deals: list[Deal]) -> list[Deal]:
+    grouped: dict[tuple[str, str, str], list[tuple[Deal, str]]] = {}
+    passthrough: list[Deal] = []
+
+    for deal in deals:
+        base_title, size = split_size_variant(deal.title)
+        if not size:
+            passthrough.append(deal)
+            continue
+        grouped.setdefault((deal.source, deal.url, base_title), []).append((deal, size))
+
+    consolidated = list(passthrough)
+    for (source, url, base_title), variants in grouped.items():
+        if len(variants) == 1:
+            consolidated.append(variants[0][0])
+            continue
+
+        best_current = min(deal.current_price for deal, _ in variants)
+        originals = [deal.original_price for deal, _ in variants if deal.original_price is not None]
+        best_original = max(originals) if originals else None
+        latest_found_at = max(deal.found_at for deal, _ in variants)
+        sizes = sorted({size for _, size in variants})
+        consolidated.append(make_deal(base_title, url, source, best_current, best_original, latest_found_at, sizes=sizes))
+
+    return consolidated
 
 
 def dedupe(deals: list[Deal]) -> list[Deal]:
@@ -573,7 +616,7 @@ def filter_and_sort(deals: list[Deal], config: dict[str, Any]) -> list[Deal]:
     min_discount = float(config.get("min_discount_percent", 0) or 0)
 
     filtered = []
-    for deal in dedupe(deals):
+    for deal in consolidate_size_variants(dedupe(deals)):
         if not keyword_allowed(deal.title, keywords, excludes):
             continue
         if deal.discount_percent is not None and deal.discount_percent < min_discount:
@@ -604,6 +647,21 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
             markup = fetch(url)
             blocked = block_reason(markup)
             if blocked:
+                candidates = []
+                if source.get("shopify_products_json"):
+                    candidates.extend(
+                        shopify_products_json_candidates(
+                            fetch(source["shopify_products_json"], timeout=30),
+                            url,
+                            source_name,
+                            found_at,
+                            bool(source.get("ignore_sold_out", True)),
+                        )
+                    )
+                if candidates:
+                    all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
+                    time.sleep(float(source.get("delay_seconds", 1.2)))
+                    continue
                 if not source.get("reader_fallback"):
                     errors.append(SourceError(source_name, url, blocked))
                     continue
@@ -721,6 +779,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
                 [
                     f"{index}. [{deal['title']}]({deal['url']})",
                     f"   ${deal['current_price']:.2f}{original}{discount} - {deal['source']}",
+                    f"   Sizes: {', '.join(deal['sizes'])}" if deal.get("sizes") else "",
                     "",
                 ]
             )
@@ -740,6 +799,7 @@ def render_html(payload: dict[str, Any]) -> str:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
         discount = f"<span>{deal['discount_percent']}% off</span>" if deal["discount_percent"] else "<span>Price found</span>"
         savings = f"<span>Save ${deal['savings']:.2f}</span>" if deal["savings"] else ""
+        sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
         cards.append(
             f"""
             <article class="deal">
@@ -751,7 +811,7 @@ def render_html(payload: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{discount}{savings}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{discount}{savings}{sizes}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
