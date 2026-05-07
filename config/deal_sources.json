@@ -58,6 +58,7 @@
       "name": "Evo skis price ascending",
       "url": "https://www.evo.com/shop/ski/skis/mens/unisex/womens/online/store_salt-lake-city/s_price-asc",
       "enabled": true,
+      "prefer_reader_fallback": true,
       "reader_fallback": true,
       "max_results_per_source": 80
     },

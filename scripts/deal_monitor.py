@@ -644,8 +644,15 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
         per_source_limit = int(source_filter_config.get("max_results_per_source", 30) or 30)
 
         try:
-            markup = fetch(url)
-            blocked = block_reason(markup)
+            if source.get("prefer_reader_fallback") and source.get("reader_fallback"):
+                markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
+                blocked = block_reason(markup)
+                if blocked:
+                    errors.append(SourceError(source_name, url, blocked))
+                    continue
+            else:
+                markup = fetch(url)
+                blocked = block_reason(markup)
             if blocked:
                 candidates = []
                 if source.get("shopify_products_json"):
