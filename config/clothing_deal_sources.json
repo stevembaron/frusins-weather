@@ -1,0 +1,43 @@
+{
+  "report_title": "Men's Clothing Deals",
+  "empty_message": "No matching clothing deals found. Add or enable more sources in this config.",
+  "json_output": "data/clothing_deals.json",
+  "html_output": "data/clothing_deals.html",
+  "markdown_output": "data/clothing_deal_report.md",
+  "web_output": "clothing-deals/index.html",
+  "keywords": [
+    "shirt",
+    "jacket",
+    "vest",
+    "fleece",
+    "crew",
+    "zip",
+    "hoodie",
+    "sweater",
+    "pant",
+    "short",
+    "shell",
+    "baselayer",
+    "insulated",
+    "down"
+  ],
+  "exclude_keywords": [
+    "women",
+    "women's",
+    "womens",
+    "kid",
+    "kids",
+    "youth",
+    "article",
+    "page"
+  ],
+  "min_discount_percent": 20,
+  "max_results_per_source": 50,
+  "sources": [
+    {
+      "name": "Geartrade Stio men's clothing",
+      "url": "https://geartrade.com/search?q=stio&type=article%2Cpage%2Cproduct&options%5Bprefix%5D=last&sort_by=relevance&filter.v.option.size=S&filter.v.option.size=M&filter.p.m.global.Gender=Mens&filter.v.m.global.Condition=Excellent",
+      "enabled": true
+    }
+  ]
+}

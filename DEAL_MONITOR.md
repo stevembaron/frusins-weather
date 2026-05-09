@@ -1,28 +1,28 @@
-# Ski Gear Deal Monitor
+# Deal Monitor
 
-This project now includes a local deal monitor that can check retailer URLs for ski gear prices without API access.
+This project includes a local deal monitor that can check retailer URLs for deal pages without API access.
 
 ## How It Works
 
-- Add retailer category, sale, search, or product URLs to `config/deal_sources.json`.
-- Run `python3 scripts/deal_monitor.py`.
-- Open `data/deals.html` for a readable report.
-- Open `ski-deals/index.html` for the web-published version.
-- Check `data/deal_report.md` for a compact daily summary.
-- Check `data/deals.json` if you want raw structured output later.
+- Add retailer category, sale, search, or product URLs to a config file in `config/`.
+- Run `python3 scripts/deal_monitor.py` for skis or `python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json` for clothing.
+- Open `data/deals.html` or `data/clothing_deals.html` for a readable report.
+- Open `ski-deals/index.html` or `clothing-deals/index.html` for the web-published version.
+- Check `data/deal_report.md` or `data/clothing_deal_report.md` for a compact summary.
+- Check the matching `*.json` output if you want raw structured output later.
 
-The monitor looks for product metadata and linked text with prices, filters for ski gear keywords, ranks the best-looking deals, and writes a daily report.
+The monitor looks for product metadata and linked text with prices, filters by the configured keywords, ranks the best-looking deals, and writes a daily report.
 
 Sierra and evo block plain automated requests, so their configured sources use a reader fallback. The script still tries the retailer URL first, then falls back to a readable copy of the page and parses product links/prices from that.
 
 ## Add URLs
 
-Edit `config/deal_sources.json` and add sources like this:
+Edit a config such as `config/deal_sources.json` or `config/clothing_deal_sources.json` and add sources like this:
 
 ```json
 {
-  "name": "Retailer ski sale",
-  "url": "https://retailer.example/ski/sale",
+  "name": "Retailer deal page",
+  "url": "https://retailer.example/deals",
   "enabled": true
 }
 ```
@@ -44,30 +44,35 @@ From Terminal, run either:
 
 ```bash
 make deals
+make clothing-deals
 ```
 
 or:
 
 ```bash
 python3 scripts/deal_monitor.py
+python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
 ```
 
-For the easiest Mac workflow, double-click `Run Ski Deals.command`. It runs the monitor and opens the HTML report.
+For the easiest Mac workflow, double-click `Run Ski Deals.command` or `Run Clothing Deals.command`. Each runs the monitor and opens the matching HTML report.
 
 The HTML report is sorted from lowest price to highest price:
 
 ```text
 data/deals.html
+data/clothing_deals.html
 ```
 
-The same page is also written to the static web app path:
+The same pages are also written to the static web app paths:
 
 ```text
 ski-deals/index.html
+clothing-deals/index.html
 ```
 
-After committing and pushing to the GitHub Pages branch, it will be available at:
+After committing and pushing to `main`, they will be available at:
 
 ```text
 https://stevembaron.github.io/projects/ski-deals/
+https://stevembaron.github.io/projects/clothing-deals/
 ```

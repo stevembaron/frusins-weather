@@ -61,6 +61,17 @@ JSON_LD_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 REMIX_CONTEXT_RE = re.compile(r"window\.__remixContext\s*=\s*(\{.*?\});__remixContext\.p", re.DOTALL)
+GEARTRADE_CARD_RE = re.compile(r"<product-card\b.*?</product-card>", re.IGNORECASE | re.DOTALL)
+GEARTRADE_TITLE_RE = re.compile(
+    r'<a(?=[^>]*\bcard-link\b)(?=[^>]*href="(?P<href>[^"]+)")[^>]*>(?P<title>.*?)</a>',
+    re.IGNORECASE | re.DOTALL,
+)
+GEARTRADE_PRICE_RE = re.compile(
+    r'<strong[^>]+class="[^"]*\bprice__current\b[^"]*"[^>]*>\$(?P<dollars>[0-9,]+)<sup>(?P<cents>[0-9]{2})',
+    re.IGNORECASE | re.DOTALL,
+)
+GEARTRADE_DISCOUNT_RE = re.compile(r"(?P<discount>[0-9]{1,3})%\s*Off", re.IGNORECASE)
+GEARTRADE_SIZE_RE = re.compile(r'<span[^>]+class="[^"]*\bplp_size\b[^"]*"[^>]*>.*?<b>\s*Size:\s*</b>\s*&nbsp;\s*(?P<size>[^<]+)', re.IGNORECASE | re.DOTALL)
 BLOCK_PATTERNS = [
     "before we continue",
     "human challenge",
@@ -379,8 +390,45 @@ def markdown_candidates(markdown: str, base_url: str, source_name: str, found_at
     markdown = EMBEDDED_PROMO_IMAGE_RE.sub(" ", markdown)
 
     deals = markdown_image_candidates(markdown, source_name, found_at)
-    deals.extend(markdown_evo_line_candidates(markdown, source_name, found_at))
     deals.extend(markdown_sierra_sequence_candidates(markdown, source_name, found_at))
+    return deals
+
+
+def geartrade_search_candidates(markup: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
+    deals: list[Deal] = []
+    for card in GEARTRADE_CARD_RE.findall(markup):
+        title_match = GEARTRADE_TITLE_RE.search(card)
+        price_match = GEARTRADE_PRICE_RE.search(card)
+        if not title_match or not price_match:
+            continue
+
+        title = clean_text(re.sub(r"<[^>]+>", " ", title_match.group("title")))
+        if len(title) < 4:
+            continue
+
+        current = money(f"{price_match.group('dollars')}.{price_match.group('cents')}")
+        if current is None:
+            continue
+
+        discount_match = GEARTRADE_DISCOUNT_RE.search(card)
+        discount = float(discount_match.group("discount")) if discount_match else None
+        original = None
+        if discount and 0 < discount < 100:
+            original = round(current / (1 - (discount / 100)), 2)
+
+        size_match = GEARTRADE_SIZE_RE.search(card)
+        sizes = [clean_text(size_match.group("size"))] if size_match else None
+        deals.append(
+            make_deal(
+                title,
+                urljoin(base_url, html.unescape(title_match.group("href"))),
+                source_name,
+                current,
+                original,
+                found_at,
+                sizes=sizes,
+            )
+        )
     return deals
 
 
@@ -408,31 +456,6 @@ def markdown_image_candidates(markdown: str, source_name: str, found_at: str) ->
         current, original = choose_prices(prices)
         if compare_at:
             original = money(compare_at.group(1))
-        deals.append(make_deal(title, url, source_name, current, original, found_at))
-    return deals
-
-
-def markdown_evo_line_candidates(markdown: str, source_name: str, found_at: str) -> list[Deal]:
-    deals: list[Deal] = []
-    for line in markdown.splitlines():
-        if "https://www.evo.com/" not in line or "$" not in line:
-            continue
-
-        match = re.search(r"\]\((https?://www\.evo\.com/[^)\s]+)\)\s*$", line)
-        if not match:
-            continue
-
-        url = match.group(1)
-        if not is_product_url(url):
-            continue
-
-        content = line[1 : match.start()] if line.startswith("[") else line[: match.start()]
-        title = clean_markdown_title(content)
-        prices = extract_prices(content)
-        if not title or len(title) < 8 or not prices:
-            continue
-
-        current, original = choose_prices(prices)
         deals.append(make_deal(title, url, source_name, current, original, found_at))
     return deals
 
@@ -482,7 +505,6 @@ def choose_prices(prices: list[float]) -> tuple[float, float | None]:
 def clean_markdown_title(value: str) -> str:
     value = re.sub(r"!\[[^\]]*\]\([^)]+\)", " ", value)
     value = re.sub(r"\b(Image|Sale|Compare|View Selections)\b", " ", value, flags=re.I)
-    value = re.sub(r"\b(Outlet|Final|Sale|Orig)\b:?", " ", value, flags=re.I)
     value = PRICE_RE.sub(" ", value)
     value = re.sub(r"\b(Sale\s*-\s*)\b", " ", value, flags=re.I)
     return collapse_repeated_title(clean_text(value))
@@ -691,10 +713,12 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                 )
             candidates.extend(link_candidates(markup, url, source_name, found_at))
             candidates.extend(markdown_candidates(markup, url, source_name, found_at))
+            candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
             if not candidates and source.get("reader_fallback"):
                 markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
                 candidates = markdown_candidates(markup, url, source_name, found_at)
                 candidates.extend(link_candidates(markup, url, source_name, found_at))
+                candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
             all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
             time.sleep(float(source.get("delay_seconds", 1.2)))
         except (HTTPError, URLError, TimeoutError, OSError) as error:
@@ -722,6 +746,7 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                         continue
                     candidates = markdown_candidates(markup, url, source_name, found_at)
                     candidates.extend(link_candidates(markup, url, source_name, found_at))
+                    candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
                     all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
                     time.sleep(float(source.get("delay_seconds", 1.2)))
                     continue
@@ -749,8 +774,15 @@ def rank_deals(deals: list[Deal]) -> list[Deal]:
 
 
 def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str, Any]) -> None:
-    DATA_DIR.mkdir(exist_ok=True)
-    WEB_DIR.mkdir(exist_ok=True)
+    json_output = resolve_output_path(config.get("json_output"), JSON_OUTPUT)
+    markdown_output = resolve_output_path(config.get("markdown_output"), MD_OUTPUT)
+    html_output_path = resolve_output_path(config.get("html_output"), HTML_OUTPUT)
+    web_output = resolve_output_path(config.get("web_output"), WEB_OUTPUT)
+
+    json_output.parent.mkdir(parents=True, exist_ok=True)
+    markdown_output.parent.mkdir(parents=True, exist_ok=True)
+    html_output_path.parent.mkdir(parents=True, exist_ok=True)
+    web_output.parent.mkdir(parents=True, exist_ok=True)
     generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
     payload = {
         "generated_at": generated_at,
@@ -760,16 +792,34 @@ def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str
         "errors": [asdict(error) for error in errors],
     }
 
-    JSON_OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    MD_OUTPUT.write_text(render_markdown(payload), encoding="utf-8")
-    html_output = render_html(payload)
-    HTML_OUTPUT.write_text(html_output, encoding="utf-8")
-    WEB_OUTPUT.write_text(html_output, encoding="utf-8")
+    json_output.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    markdown_output.write_text(render_markdown(payload, config), encoding="utf-8")
+    html_output = render_html(payload, config)
+    html_output_path.write_text(html_output, encoding="utf-8")
+    web_output.write_text(html_output, encoding="utf-8")
 
 
-def render_markdown(payload: dict[str, Any]) -> str:
+def resolve_output_path(value: str | None, default: Path) -> Path:
+    if not value:
+        return default
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    return path
+
+
+def report_title(config: dict[str, Any]) -> str:
+    return str(config.get("report_title") or "Ski Gear Deals")
+
+
+def empty_message(config: dict[str, Any]) -> str:
+    fallback = "No matching deals found. Add or enable more sources in the config."
+    return str(config.get("empty_message") or fallback)
+
+
+def render_markdown(payload: dict[str, Any], config: dict[str, Any]) -> str:
     lines = [
-        "# Ski Gear Deals",
+        f"# {report_title(config)}",
         "",
         f"Generated: {payload['generated_at']}",
         f"Deals found: {payload['deal_count']}",
@@ -777,7 +827,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
     ]
 
     if not payload["deals"]:
-        lines.append("No matching deals found. Add or enable more sources in `config/deal_sources.json`.")
+        lines.append(empty_message(config))
     else:
         for index, deal in enumerate(payload["deals"][:25], start=1):
             discount = f" ({deal['discount_percent']}% off)" if deal["discount_percent"] else ""
@@ -799,7 +849,7 @@ def render_markdown(payload: dict[str, Any]) -> str:
     return "\n".join(lines).strip() + "\n"
 
 
-def render_html(payload: dict[str, Any]) -> str:
+def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     cards = []
     html_deals = sorted(payload["deals"], key=lambda deal: (deal["current_price"], -(deal["discount_percent"] or 0)))
     for deal in html_deals:
@@ -826,14 +876,15 @@ def render_html(payload: dict[str, Any]) -> str:
     errors = "".join(
         f"<li>{html.escape(error['source'])}: {html.escape(error['error'])}</li>" for error in payload["errors"]
     )
-    empty = "<p class='empty'>No matching deals found. Add or enable sources in config/deal_sources.json.</p>"
+    empty = f"<p class='empty'>{html.escape(empty_message(config))}</p>"
+    title = html.escape(report_title(config))
 
     return f"""<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ski Gear Deals</title>
+    <title>{title}</title>
     <style>
       :root {{ color-scheme: light; --ink:#16201c; --muted:#52645c; --line:#d8e0dc; --accent:#0d7c66; --hot:#b42318; --bg:#f7f8f5; }}
       * {{ box-sizing: border-box; }}
@@ -860,7 +911,7 @@ def render_html(payload: dict[str, Any]) -> str:
     <main>
       <header>
         <div>
-          <h1>Ski Gear Deals</h1>
+          <h1>{title}</h1>
           <p class="meta">Generated {html.escape(payload['generated_at'])}</p>
         </div>
         <p class="meta">{payload['deal_count']} deals from {payload['sources_checked']} enabled sources</p>
@@ -882,12 +933,17 @@ def main() -> int:
     deals, errors = scan(config)
     write_outputs(deals, errors, config)
 
+    json_output = resolve_output_path(config.get("json_output"), JSON_OUTPUT)
+    html_output = resolve_output_path(config.get("html_output"), HTML_OUTPUT)
+    web_output = resolve_output_path(config.get("web_output"), WEB_OUTPUT)
+    markdown_output = resolve_output_path(config.get("markdown_output"), MD_OUTPUT)
+
     print(f"Checked {len([s for s in config.get('sources', []) if s.get('enabled', True)])} sources.")
     print(f"Found {len(deals)} matching deals.")
-    print(f"Wrote {JSON_OUTPUT}")
-    print(f"Wrote {HTML_OUTPUT}")
-    print(f"Wrote {WEB_OUTPUT}")
-    print(f"Wrote {MD_OUTPUT}")
+    print(f"Wrote {json_output}")
+    print(f"Wrote {html_output}")
+    print(f"Wrote {web_output}")
+    print(f"Wrote {markdown_output}")
     if errors:
         print(f"{len(errors)} source(s) had errors.", file=sys.stderr)
     return 0 if deals or not errors else 1
