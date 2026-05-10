@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-09T07:02:22-06:00",
-  "deal_count": 103,
+  "generated_at": "2026-05-10T07:02:51-06:00",
+  "deal_count": 104,
   "sources_checked": 6,
   "deals": [
     {
@@ -12,7 +12,7 @@
       "discount_percent": 82.9,
       "savings": 579.96,
       "score": 135.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -24,7 +24,7 @@
       "discount_percent": 76.5,
       "savings": 649.96,
       "score": 127.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -36,7 +36,7 @@
       "discount_percent": 71.9,
       "savings": 574.96,
       "score": 122.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -48,7 +48,7 @@
       "discount_percent": 69.4,
       "savings": 485.11,
       "score": 120.12,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -60,7 +60,7 @@
       "discount_percent": 64.1,
       "savings": 424.4,
       "score": 114.35,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -72,7 +72,7 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "168cm",
         "174cm"
@@ -87,7 +87,7 @@
       "discount_percent": 63.5,
       "savings": 539.98,
       "score": 112.3,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -99,7 +99,7 @@
       "discount_percent": 64.0,
       "savings": 666.6,
       "score": 111.51,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -111,7 +111,7 @@
       "discount_percent": 61.1,
       "savings": 549.03,
       "score": 109.1,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -123,7 +123,7 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "154cm",
         "160cm",
@@ -139,7 +139,7 @@
       "discount_percent": 60.0,
       "savings": 449.97,
       "score": 109.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -151,7 +151,7 @@
       "discount_percent": 58.0,
       "savings": 289.97,
       "score": 108.8,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -163,7 +163,7 @@
       "discount_percent": 57.5,
       "savings": 345.0,
       "score": 107.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -175,7 +175,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "177cm",
         "184cm"
@@ -190,7 +190,7 @@
       "discount_percent": 53.5,
       "savings": 401.0,
       "score": 101.52,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "178cm",
         "184cm"
@@ -205,7 +205,7 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
@@ -222,7 +222,7 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -239,7 +239,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -258,7 +258,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "168cm",
         "178cm"
@@ -273,7 +273,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -289,7 +289,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "152cm",
         "162cm",
@@ -305,7 +305,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -322,7 +322,7 @@
       "discount_percent": 51.0,
       "savings": 330.99,
       "score": 99.64,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -334,7 +334,7 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "144cm",
         "151cm",
@@ -351,7 +351,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -366,7 +366,7 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "166cm",
         "178cm"
@@ -381,7 +381,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -393,7 +393,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -409,7 +409,7 @@
       "discount_percent": 50.0,
       "savings": 324.99,
       "score": 98.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -421,7 +421,7 @@
       "discount_percent": 52.0,
       "savings": 467.54,
       "score": 98.37,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -433,7 +433,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -450,7 +450,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -462,7 +462,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "155cm",
         "162cm"
@@ -477,7 +477,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -492,7 +492,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -504,9 +504,8 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
-        "156cm",
         "163cm",
         "170cm"
       ]
@@ -520,7 +519,7 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -532,7 +531,7 @@
       "discount_percent": 50.0,
       "savings": 374.99,
       "score": 97.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -544,7 +543,7 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "156cm",
         "170cm"
@@ -559,7 +558,7 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -574,7 +573,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "165cm",
         "172cm"
@@ -589,7 +588,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "163cm",
         "177cm"
@@ -604,7 +603,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -616,7 +615,7 @@
       "discount_percent": 44.4,
       "savings": 199.98,
       "score": 94.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -628,7 +627,7 @@
       "discount_percent": 44.0,
       "savings": 241.98,
       "score": 92.84,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -640,7 +639,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -657,7 +656,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -672,7 +671,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -684,7 +683,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -700,7 +699,7 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -712,7 +711,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -727,7 +726,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -743,7 +742,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -759,7 +758,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -774,7 +773,7 @@
       "discount_percent": 40.1,
       "savings": 180.0,
       "score": 89.72,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -786,7 +785,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -801,7 +800,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -813,7 +812,7 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -825,7 +824,7 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -837,7 +836,7 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -849,7 +848,7 @@
       "discount_percent": 40.1,
       "savings": 200.0,
       "score": 89.12,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -861,7 +860,7 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -873,7 +872,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
@@ -889,7 +888,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -907,7 +906,7 @@
       "discount_percent": 40.1,
       "savings": 220.0,
       "score": 88.52,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -919,7 +918,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Sage / 153cm",
         "Sage / 186cm"
@@ -934,7 +933,7 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -946,7 +945,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -961,7 +960,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -973,7 +972,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "160cm",
         "167cm"
@@ -988,7 +987,7 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "Iceberg Green / 169cm",
         "Iceberg Green / 177cm",
@@ -1004,7 +1003,7 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1016,7 +1015,7 @@
       "discount_percent": 35.0,
       "savings": 139.98,
       "score": 84.8,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1028,7 +1027,7 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1040,7 +1039,7 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1052,7 +1051,7 @@
       "discount_percent": 40.2,
       "savings": 381.98,
       "score": 83.84,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -1069,7 +1068,7 @@
       "discount_percent": 35.0,
       "savings": 174.98,
       "score": 83.5,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1081,7 +1080,19 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
+      "sizes": null
+    },
+    {
+      "title": "Dynastar M-Free 90 Skis 2026",
+      "url": "https://www.evo.com/skis/dynastar-m-free-90",
+      "source": "Evo skis price ascending",
+      "current_price": 357.47,
+      "original_price": 549.95,
+      "discount_percent": 35.0,
+      "savings": 192.48,
+      "score": 82.85,
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1093,7 +1104,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1105,7 +1116,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1117,7 +1128,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1129,7 +1140,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1141,7 +1152,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1153,7 +1164,7 @@
       "discount_percent": 30.0,
       "savings": 149.99,
       "score": 78.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1165,7 +1176,7 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1177,7 +1188,7 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1189,7 +1200,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1201,7 +1212,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1213,7 +1224,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 16.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1225,7 +1236,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 15.69,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1237,7 +1248,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 14.93,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1249,7 +1260,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 14.19,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1261,7 +1272,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1273,7 +1284,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.01,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1285,7 +1296,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1297,7 +1308,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1309,7 +1320,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1321,7 +1332,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1333,7 +1344,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 9.61,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1345,7 +1356,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 6.77,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1357,7 +1368,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1369,7 +1380,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     },
     {
@@ -1381,7 +1392,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 1.0,
-      "found_at": "2026-05-09T13:02:05+00:00",
+      "found_at": "2026-05-10T13:02:10+00:00",
       "sizes": null
     }
   ],
