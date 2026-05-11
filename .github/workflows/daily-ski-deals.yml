@@ -3,6 +3,8 @@ name: Update Daily Ski Deals
 on:
   schedule:
     - cron: "17 12 * * *"
+    - cron: "47 12 * * *"
+    - cron: "17 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -30,10 +32,26 @@ jobs:
       - name: Make publish helper executable
         run: chmod +x scripts/publish_generated_report.sh
 
+      - name: Check if today's report is already published
+        id: freshness
+        run: |
+          should_run=true
+          if [ "${{ github.event_name }}" = "schedule" ] && [ -f data/deals.json ]; then
+            report_date="$(python3 -c 'import json; print(json.load(open("data/deals.json")).get("generated_at", "")[:10])')"
+            today="$(date -u +%F)"
+            if [ "$report_date" = "$today" ]; then
+              should_run=false
+              echo "Today's ski deal report is already published."
+            fi
+          fi
+          echo "should_run=$should_run" >> "$GITHUB_OUTPUT"
+
       - name: Run ski deal monitor
+        if: steps.freshness.outputs.should_run == 'true'
         run: python3 scripts/deal_monitor.py
 
       - name: Publish updated report
+        if: steps.freshness.outputs.should_run == 'true'
         run: >
           scripts/publish_generated_report.sh
           "Update daily ski deals"
