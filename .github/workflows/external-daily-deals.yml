@@ -1,0 +1,51 @@
+name: External Daily Deal Refresh
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types:
+      - daily-deals
+
+permissions:
+  contents: write
+
+concurrency:
+  group: external-daily-deals
+  cancel-in-progress: false
+
+jobs:
+  update-reports:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Make publish helper executable
+        run: chmod +x scripts/publish_generated_report.sh
+
+      - name: Run ski deal monitor
+        run: python3 scripts/deal_monitor.py
+
+      - name: Run clothing deal monitor
+        run: python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
+
+      - name: Publish updated reports
+        run: >
+          scripts/publish_generated_report.sh
+          "Update daily deal reports"
+          data/deal_report.md
+          data/deals.html
+          data/deals.json
+          ski-deals/index.html
+          data/clothing_deal_report.md
+          data/clothing_deals.html
+          data/clothing_deals.json
+          clothing-deals/index.html

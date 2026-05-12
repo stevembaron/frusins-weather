@@ -1,0 +1,11 @@
+name = "daily-deals-dispatcher"
+main = "cloudflare-worker.js"
+compatibility_date = "2026-05-12"
+
+[vars]
+GITHUB_OWNER = "stevembaron"
+GITHUB_REPO = "projects"
+GITHUB_EVENT_TYPE = "daily-deals"
+
+[triggers]
+crons = ["5 12 * * *"]
