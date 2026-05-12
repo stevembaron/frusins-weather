@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-11T07:01:03-06:00
+Generated: 2026-05-12T08:12:44-06:00
 Deals found: 104
 
 1. [Dynastar M-Pro 99 W Skis - Women's Outlet: Final](https://www.evo.com/outlet/skis/dynastar-m-pro-99-w-womens)
@@ -11,44 +11,44 @@ Deals found: 104
    $199.99 was $849.95 (76.5% off) - Evo skis price ascending
 
 
-3. [Blizzard Zero G LT 80 W Skis - Women's 2025 Final](https://www.evo.com/skis/blizzard-zero-g-lt-80-w-womens)
+3. [Zag Skis Ubac 89 Alpine Touring Skis For Women](https://www.sierra.com/zag-skis-ubac-89-alpine-touring-skis-for-women~p~8tnuk/?filterString=s~skis%2Factivities~d~14342%2Fsports-and-games~d~14656%2Fsnow-sports~d~14343%2Fskis~d~9694%2F)
+   $199.00 was $800.00 (75.1% off) - Sierra skis
+
+
+4. [Blizzard Zero G LT 80 W Skis - Women's 2025 Final](https://www.evo.com/skis/blizzard-zero-g-lt-80-w-womens)
    $224.99 was $799.95 (71.9% off) - Evo skis price ascending
 
 
-4. [Weston Skyline Ski x Haa Aani Alliance (1) List: ( 69%) Blazin' Deal](https://www.campsaver.com/weston-skyline-ski-x-haa-aani-alliance.html)
+5. [Weston Skyline Ski x Haa Aani Alliance (1) List: ( 69%) Blazin' Deal](https://www.campsaver.com/weston-skyline-ski-x-haa-aani-alliance.html)
    $213.89 was $699.00 (69.4% off) - CampSaver backcountry skis
 
 
-5. [2 models G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal](https://www.campsaver.com/g3-findr-flx-r3-94-skis.html)
+6. [Armada Declivity 92 Ti Skis 2025 Clearance](https://www.evo.com/skis/armada-declivity-92-ti-2025)
+   $254.99 was $799.95 (68.1% off) - Evo skis price ascending
+
+
+7. [2 models G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal](https://www.campsaver.com/g3-findr-flx-r3-94-skis.html)
    $237.60 was $662.00 (64.1% off) - CampSaver backcountry skis
 
 
-6. [Salomon Stance 88 Womens Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
+8. [Salomon Stance 88 Womens Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
    $249.99 was $699.95 (64.3% off) - ERIK'S downhill skis price ascending
    Sizes: 168cm, 174cm
 
-7. [K2 Mindbender 115 C Alliance Skis ​+ Marker Squire 11 Demo Bindings - Used Outlet: Clearance](https://www.evo.com/outlet/used/ski-binding-packages/k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings)
+9. [K2 Mindbender 115 C Alliance Skis ​+ Marker Squire 11 Demo Bindings - Used Outlet: Clearance](https://www.evo.com/outlet/used/ski-binding-packages/k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings)
    $309.97 was $849.95 (63.5% off) - Evo skis price ascending
 
 
-8. [2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal](https://www.campsaver.com/g3-seekr-r3-100-skis.html)
+10. [2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal](https://www.campsaver.com/g3-seekr-r3-100-skis.html)
    $374.40 was $1041.00 (64.0% off) - CampSaver backcountry skis
 
 
-9. [Peak Skis Peak 98 By Dav Skis 2025 Clearance](https://www.evo.com/skis/peak-98-by-dav)
+11. [Peak Skis Peak 98 By Dav Skis 2025 Clearance](https://www.evo.com/skis/peak-98-by-dav)
    $349.97 was $899.00 (61.1% off) - Evo skis price ascending
 
 
-10. [Season Nexus Skis - Used Outlet: Clearance](https://www.evo.com/outlet/used/skis/season-nexus)
+12. [Season Nexus Skis - Used Outlet: Clearance](https://www.evo.com/outlet/used/skis/season-nexus)
    $299.98 was $749.95 (60.0% off) - Evo skis price ascending
-
-
-11. [Atomic Cloud C7 Black Skis ​+ M 10 GW Ski Bindings - Women's - Used Outlet:](https://www.evo.com/outlet/used/ski-packages/atomic-cloud-c7-black-skis-m-10-gw-bindings-womens)
-   $209.98 was $499.95 (58.0% off) - Evo skis price ascending
-
-
-12. [Völkl Blaze 86 Skis 2025](https://www.evo.com/skis/volkl-blaze-86)
-   $254.99 was $599.99 (57.5% off) - Evo skis price ascending
 
 
 13. [Scott Pure Free 90 Ti - Unisex](https://thegearroom.com/products/scott-pure-90-2025-unisex)
@@ -77,7 +77,7 @@ Deals found: 104
 
 19. [Fischer Ranger Womens Skis](https://www.eriksbikeshop.com/products/fischer-ranger-womens-skis-2026-pr5a23299)
    $250.00 was $499.99 (50.0% off) - ERIK'S downhill skis price ascending
-   Sizes: 152cm, 162cm, 172cm
+   Sizes: 152cm, 172cm
 
 20. [Salomon S/Max 6XT Skis with M10 Bindings](https://www.eriksbikeshop.com/products/salomon-smax-6xt-skis-with-m10-bindings-2026-pr5a25483)
    $286.99 was $579.95 (50.5% off) - ERIK'S downhill skis price ascending
