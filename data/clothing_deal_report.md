@@ -1,7 +1,7 @@
 # Men's Clothing Deals
 
-Generated: 2026-05-13T15:12:27+00:00
-Deals found: 10
+Generated: 2026-05-14T14:37:55+00:00
+Deals found: 11
 
 1. [Stio Hagen Trail Shirt - Men's](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)
    $30.86 was $128.58 (76.0% off) - Geartrade Stio men's clothing
@@ -23,22 +23,26 @@ Deals found: 10
    $37.31 was $128.66 (71.0% off) - Geartrade Stio men's clothing
    Sizes: S
 
-6. [Stio Turnpin Fleece Half Zip](https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430)
+6. [Stio Shifter Shirt SS - Men's](https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183)
+   $25.69 was $98.81 (74.0% off) - Geartrade Stio men's clothing
+   Sizes: M
+
+7. [Stio Turnpin Fleece Half Zip](https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430)
    $28.61 was $98.66 (71.0% off) - Geartrade Stio men's clothing
    Sizes: M
 
-7. [Stio Eddy Shirt LS Shirt - Men's](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)
+8. [Stio Eddy Shirt LS Shirt - Men's](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)
    $48.92 was $128.74 (62.0% off) - Geartrade Stio men's clothing
    Sizes: S
 
-8. [Stio Basis Seamless Tech Crew Long Sleeve - Men's](https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080)
+9. [Stio Basis Seamless Tech Crew Long Sleeve - Men's](https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080)
    $20.14 was $50.35 (60.0% off) - Geartrade Stio men's clothing
    Sizes: M
 
-9. [Stio Hylas Long Sleeve Crew - Men's](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
+10. [Stio Hylas Long Sleeve Crew - Men's](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
    $31.05 was $69.00 (55.0% off) - Geartrade Stio men's clothing
    Sizes: M
 
-10. [Stio Divide Half Zip - Men’s](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)
+11. [Stio Divide Half Zip - Men’s](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)
    $42.67 was $88.90 (52.0% off) - Geartrade Stio men's clothing
    Sizes: S
