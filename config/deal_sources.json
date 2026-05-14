@@ -56,7 +56,7 @@
     },
     {
       "name": "Evo skis price ascending",
-      "url": "https://www.evo.com/shop/ski/skis/mens/unisex/womens/online/store_salt-lake-city/s_price-asc",
+      "url": "https://www.evo.com/collections/skis?sortBy=price&sortOrder=ascending&filters%5Bsize%5D=150+cm&filters%5Bsize%5D=160+cm&filters%5Bsize%5D=170+cm&filters%5Bgender%5D=+adult-any&filters%5Bgender%5D=+adult-female&filters%5Bgender%5D=+adult-male&filters%5Bwaist_width%5D=80mm&filters%5Bwaist_width%5D=90mm&filters%5Bwaist_width%5D=100mm&filters%5Bwaist_width%5D=110mm&filters%5Bwaist_width%5D=121mm",
       "enabled": true,
       "prefer_reader_fallback": true,
       "reader_fallback": true,
