@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-14T14:50:59-06:00",
-  "deal_count": 116,
+  "generated_at": "2026-05-14T21:06:33+00:00",
+  "deal_count": 103,
   "sources_checked": 6,
   "deals": [
     {
@@ -12,7 +12,7 @@
       "discount_percent": 80.0,
       "savings": 520.0,
       "score": 132.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "148 cm"
       ]
@@ -26,7 +26,7 @@
       "discount_percent": 70.9,
       "savings": 389.96,
       "score": 122.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "147 cm"
       ]
@@ -40,7 +40,7 @@
       "discount_percent": 69.1,
       "savings": 379.96,
       "score": 120.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "152 cm"
       ]
@@ -54,22 +54,10 @@
       "discount_percent": 69.2,
       "savings": 449.96,
       "score": 120.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "152 cm"
       ]
-    },
-    {
-      "title": "Weston Skyline Ski x Haa Aani Alliance (1) List: ( 69%) Blazin' Deal",
-      "url": "https://www.campsaver.com/weston-skyline-ski-x-haa-aani-alliance.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 213.89,
-      "original_price": 699.0,
-      "discount_percent": 69.4,
-      "savings": 485.11,
-      "score": 120.12,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
     },
     {
       "title": "Blizzard Hustle 9 Skis 2024",
@@ -80,7 +68,7 @@
       "discount_percent": 69.3,
       "savings": 519.96,
       "score": 119.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -94,7 +82,7 @@
       "discount_percent": 67.0,
       "savings": 335.0,
       "score": 118.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -108,7 +96,7 @@
       "discount_percent": 66.9,
       "savings": 434.96,
       "score": 117.6,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "145 cm"
       ]
@@ -122,7 +110,7 @@
       "discount_percent": 66.7,
       "savings": 499.96,
       "score": 116.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -136,7 +124,7 @@
       "discount_percent": 66.1,
       "savings": 429.01,
       "score": 116.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "158 cm"
       ]
@@ -150,7 +138,7 @@
       "discount_percent": 65.5,
       "savings": 359.96,
       "score": 116.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "148 cm"
       ]
@@ -164,7 +152,7 @@
       "discount_percent": 66.2,
       "savings": 529.96,
       "score": 115.8,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156 cm"
       ]
@@ -178,7 +166,7 @@
       "discount_percent": 65.0,
       "savings": 389.96,
       "score": 115.8,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "149 cm"
       ]
@@ -192,7 +180,7 @@
       "discount_percent": 62.9,
       "savings": 219.96,
       "score": 115.3,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "149 cm"
       ]
@@ -206,7 +194,7 @@
       "discount_percent": 62.9,
       "savings": 219.96,
       "score": 115.3,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "149 cm"
       ]
@@ -220,7 +208,7 @@
       "discount_percent": 65.9,
       "savings": 559.96,
       "score": 115.1,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164 cm"
       ]
@@ -234,7 +222,7 @@
       "discount_percent": 63.6,
       "savings": 349.96,
       "score": 114.6,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "160 cm"
       ]
@@ -248,7 +236,7 @@
       "discount_percent": 63.6,
       "savings": 349.01,
       "score": 114.6,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Capsule / 158 cm"
       ]
@@ -262,22 +250,10 @@
       "discount_percent": 62.5,
       "savings": 249.96,
       "score": 114.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "144 cm"
       ]
-    },
-    {
-      "title": "G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal",
-      "url": "https://www.campsaver.com/g3-findr-flx-r3-94-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 237.6,
-      "original_price": 662.0,
-      "discount_percent": 64.1,
-      "savings": 424.4,
-      "score": 114.35,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
     },
     {
       "title": "Salomon Stance 88 Womens Skis",
@@ -288,7 +264,7 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "168cm",
         "174cm"
@@ -303,7 +279,7 @@
       "discount_percent": 62.2,
       "savings": 279.96,
       "score": 113.8,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "147 cm"
       ]
@@ -317,7 +293,7 @@
       "discount_percent": 63.6,
       "savings": 444.96,
       "score": 113.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "152 cm"
       ]
@@ -331,22 +307,10 @@
       "discount_percent": 61.0,
       "savings": 274.01,
       "score": 112.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "150 cm"
       ]
-    },
-    {
-      "title": "2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal",
-      "url": "https://www.campsaver.com/g3-seekr-r3-100-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 374.4,
-      "original_price": 1041.0,
-      "discount_percent": 64.0,
-      "savings": 666.6,
-      "score": 111.51,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
     },
     {
       "title": "Rossignol Sender 94 Ti Skis 2024",
@@ -357,7 +321,7 @@
       "discount_percent": 60.0,
       "savings": 419.96,
       "score": 109.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156 cm"
       ]
@@ -371,7 +335,7 @@
       "discount_percent": 60.0,
       "savings": 449.96,
       "score": 109.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164 cm"
       ]
@@ -385,7 +349,7 @@
       "discount_percent": 58.5,
       "savings": 379.96,
       "score": 108.1,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "100 cm"
       ]
@@ -399,7 +363,7 @@
       "discount_percent": 56.4,
       "savings": 309.96,
       "score": 106.6,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156 cm"
       ]
@@ -413,7 +377,7 @@
       "discount_percent": 56.0,
       "savings": 279.96,
       "score": 106.6,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -427,7 +391,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "177cm",
         "184cm"
@@ -442,7 +406,7 @@
       "discount_percent": 55.7,
       "savings": 389.96,
       "score": 104.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "147 cm"
       ]
@@ -456,7 +420,7 @@
       "discount_percent": 55.3,
       "savings": 359.01,
       "score": 104.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Capsule / 159 cm"
       ]
@@ -470,7 +434,7 @@
       "discount_percent": 56.5,
       "savings": 480.0,
       "score": 104.1,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "163 cm"
       ]
@@ -484,7 +448,7 @@
       "discount_percent": 54.2,
       "savings": 324.96,
       "score": 103.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156 cm"
       ]
@@ -498,7 +462,7 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
@@ -515,7 +479,7 @@
       "discount_percent": 52.9,
       "savings": 369.96,
       "score": 101.3,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "169 cm"
       ]
@@ -529,7 +493,7 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -546,7 +510,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -565,7 +529,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "168cm",
         "178cm"
@@ -580,7 +544,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -596,7 +560,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "152cm",
         "172cm"
@@ -611,7 +575,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -628,7 +592,7 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "144cm",
         "151cm",
@@ -645,7 +609,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -660,7 +624,7 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "166cm",
         "178cm"
@@ -675,7 +639,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "153cm",
         "160cm"
@@ -690,19 +654,7 @@
       "discount_percent": 50.0,
       "savings": 324.99,
       "score": 98.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "Weston Skyline Carbon Ski (2) List: ( 52%) Blazin' Deal",
-      "url": "https://www.campsaver.com/weston-skyline-carbon-ski.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 431.46,
-      "original_price": 899.0,
-      "discount_percent": 52.0,
-      "savings": 467.54,
-      "score": 98.37,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -714,7 +666,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -731,7 +683,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -743,7 +695,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "155cm",
         "162cm"
@@ -758,7 +710,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -773,7 +725,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "163cm",
         "170cm"
@@ -788,7 +740,7 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -800,7 +752,7 @@
       "discount_percent": 50.0,
       "savings": 374.99,
       "score": 97.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -812,7 +764,7 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156cm",
         "170cm"
@@ -827,7 +779,7 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -842,7 +794,7 @@
       "discount_percent": 51.1,
       "savings": 484.96,
       "score": 96.8,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "172 cm"
       ]
@@ -856,7 +808,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "165cm",
         "172cm"
@@ -871,7 +823,7 @@
       "discount_percent": 47.3,
       "savings": 259.96,
       "score": 96.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "160 cm"
       ]
@@ -885,7 +837,7 @@
       "discount_percent": 46.4,
       "savings": 254.96,
       "score": 95.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -899,7 +851,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "163cm",
         "177cm"
@@ -914,7 +866,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -926,7 +878,7 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "150cm",
         "157cm"
@@ -941,7 +893,7 @@
       "discount_percent": 46.2,
       "savings": 299.96,
       "score": 94.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164 cm"
       ]
@@ -955,7 +907,7 @@
       "discount_percent": 46.2,
       "savings": 299.96,
       "score": 94.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "163 cm"
       ]
@@ -969,7 +921,7 @@
       "discount_percent": 45.4,
       "savings": 294.96,
       "score": 93.3,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "165 cm"
       ]
@@ -983,7 +935,7 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164cm",
         "178cm",
@@ -999,7 +951,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -1016,7 +968,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -1031,7 +983,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1043,7 +995,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -1059,7 +1011,7 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1071,7 +1023,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -1086,7 +1038,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -1102,7 +1054,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -1118,7 +1070,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -1133,7 +1085,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -1148,7 +1100,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1160,7 +1112,7 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1172,7 +1124,7 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1184,7 +1136,7 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1196,7 +1148,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
@@ -1212,7 +1164,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -1230,7 +1182,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -1244,7 +1196,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1256,7 +1208,7 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1268,7 +1220,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -1283,7 +1235,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1295,7 +1247,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1307,7 +1259,7 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "157 cm"
       ]
@@ -1321,7 +1273,7 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Iceberg Green / 177cm",
         "Iceberg Green / 185cm"
@@ -1336,7 +1288,7 @@
       "discount_percent": 40.0,
       "savings": 299.96,
       "score": 86.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "164 cm"
       ]
@@ -1350,7 +1302,7 @@
       "discount_percent": 36.4,
       "savings": 199.96,
       "score": 84.4,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "152 cm"
       ]
@@ -1364,7 +1316,7 @@
       "discount_percent": 40.2,
       "savings": 381.98,
       "score": 83.84,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -1381,7 +1333,7 @@
       "discount_percent": 34.7,
       "savings": 259.99,
       "score": 79.9,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Black/Iceberg / 156 cm"
       ]
@@ -1395,7 +1347,7 @@
       "discount_percent": 34.7,
       "savings": 259.99,
       "score": 79.9,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "Lilac/Black / 156 cm"
       ]
@@ -1409,7 +1361,7 @@
       "discount_percent": 32.3,
       "savings": 209.96,
       "score": 78.5,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "169 cm"
       ]
@@ -1423,7 +1375,7 @@
       "discount_percent": 25.3,
       "savings": 190.0,
       "score": 69.1,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "146 cm"
       ]
@@ -1437,7 +1389,7 @@
       "discount_percent": 20.0,
       "savings": 129.96,
       "score": 62.09,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": [
         "158 cm"
       ]
@@ -1451,43 +1403,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 16.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "5 models Black Diamond Helio Carbon 88 Skis As Low As ( Up to 74%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-helio-carbon-88-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 215.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 15.69,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "8 models Black Diamond Impulse 98 Ti Skis - Women's As Low As ( Up to 72%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-impulse-98-ti-skis-women-s.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 253.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 14.93,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "3 models Black Diamond Impulse 104 Ti Skis - Women's As Low As ( Up to 66%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-impulse-104-ti-skis-women-s.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 290.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 14.19,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1499,19 +1415,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 59%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 349.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 13.01,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1523,7 +1427,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1535,7 +1439,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1547,7 +1451,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     },
     {
@@ -1559,67 +1463,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "3 models Black Diamond Impulse 104 Ti Skis As Low As ( Up to 39%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-impulse-104-ti-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 519.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 9.61,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "4 models Black Diamond Impulse 98 Ti Skis As Low As ( Up to 17%) Blazin' Deal",
-      "url": "https://www.campsaver.com/black-diamond-impulse-98-ti-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 661.49,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 6.77,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "2 models Black Diamond Impulse 112 Ti Skis",
-      "url": "https://www.campsaver.com/black-diamond-impulse-112-ti-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 899.95,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 2.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "4 models Black Diamond Helio Carbon 102 Skis",
-      "url": "https://www.campsaver.com/black-diamond-helio-carbon-102-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 899.95,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 2.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
-      "sizes": null
-    },
-    {
-      "title": "4 models Black Diamond Helio Carbon 108 Skis Free 2 Day Shipping",
-      "url": "https://www.campsaver.com/black-diamond-helio-carbon-108-skis.html",
-      "source": "CampSaver backcountry skis",
-      "current_price": 949.95,
-      "original_price": null,
-      "discount_percent": null,
-      "savings": null,
-      "score": 1.0,
-      "found_at": "2026-05-14T20:50:50+00:00",
+      "found_at": "2026-05-14T21:06:22+00:00",
       "sizes": null
     }
   ],
@@ -1628,6 +1472,11 @@
       "source": "Sierra skis",
       "url": "https://www.sierra.com/s~skis/activities~d~14342/sports-and-games~d~14656/snow-sports~d~14343/skis~d~9694/",
       "error": "HTTP Error 403: Forbidden; reader fallback failed: Blocked by retailer anti-bot page: something went wrong"
+    },
+    {
+      "source": "CampSaver backcountry skis",
+      "url": "https://www.campsaver.com/backcountry-skis.html?_iv_sort=lowest-price",
+      "error": "Blocked by retailer anti-bot page: before we continue"
     }
   ]
 }
