@@ -49,7 +49,7 @@ PRICE_RE = re.compile(r"\$\s?([0-9]{1,4}(?:,[0-9]{3})?(?:\.[0-9]{2})?)")
 SPACE_RE = re.compile(r"\s+")
 MARKDOWN_LINK_RE = re.compile(r"\[(?P<label>[^\]]+)\]\((?P<url>https?://[^)]+)\)")
 MARKDOWN_IMAGE_LINK_RE = re.compile(
-    r"\[\!\[Image\s+\d+:?\s*(?P<title>[^\]]*)\]\((?P<img>[^)]+)\)(?P<tail>[^\]]*?)\]\((?P<url>https?://[^)]+)\)",
+    r"\[(?P<prefix>[^\]]*?)!\[(?P<alt>[^\]]*)\]\((?P<img>[^)]+)\)(?P<tail>[^\]]*?)\]\((?P<url>https?://[^)]+)\)",
     re.DOTALL,
 )
 EMBEDDED_PROMO_IMAGE_RE = re.compile(
@@ -72,6 +72,11 @@ GEARTRADE_PRICE_RE = re.compile(
 )
 GEARTRADE_DISCOUNT_RE = re.compile(r"(?P<discount>[0-9]{1,3})%\s*Off", re.IGNORECASE)
 GEARTRADE_SIZE_RE = re.compile(r'<span[^>]+class="[^"]*\bplp_size\b[^"]*"[^>]*>.*?<b>\s*Size:\s*</b>\s*&nbsp;\s*(?P<size>[^<]+)', re.IGNORECASE | re.DOTALL)
+EVO_COLLECTION_ITEM_RE = re.compile(
+    r'\{id:"[^"]+",name:"(?P<name>(?:[^"\\]|\\.)+)",.*?variant:"(?P<variant>(?:[^"\\]|\\.)*)",'
+    r'\s*price:\s*"(?P<price>[^"]+)",.*?handle:"(?P<handle>[^"]+)",\s*compareAtPrice:\s*"(?P<compare>[^"]+)"',
+    re.DOTALL,
+)
 BLOCK_PATTERNS = [
     "before we continue",
     "human challenge",
@@ -202,6 +207,9 @@ def fetch_reader_target(url: str, timeout: int = 45) -> str:
 
 
 def block_reason(markup: str) -> str | None:
+    if "collectionView:{" in markup and "handle:" in markup and "compareAtPrice:" in markup:
+        return None
+
     sample = clean_text(markup[:15000]).lower()
     for pattern in BLOCK_PATTERNS:
         if pattern in sample:
@@ -431,7 +439,32 @@ def geartrade_search_candidates(markup: str, base_url: str, source_name: str, fo
         )
     return deals
 
+def evo_collection_candidates(markup: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
+    if "evo.com" not in base_url:
+        return []
 
+    deals: list[Deal] = []
+    for match in EVO_COLLECTION_ITEM_RE.finditer(markup):
+        title = clean_text(match.group("name").replace("\\/", "/"))
+        handle = clean_text(match.group("handle").replace("\\/", "/"))
+        current = money(match.group("price"))
+        original = money(match.group("compare"))
+        variant = clean_text(match.group("variant").replace("\\/", "/"))
+        if not title or not handle or current is None:
+            continue
+
+        deals.append(
+            make_deal(
+                title,
+                urljoin(base_url, f"/products/{handle}"),
+                source_name,
+                current,
+                original,
+                found_at,
+                sizes=[variant] if variant else None,
+            )
+        )
+    return deals
 def markdown_image_candidates(markdown: str, source_name: str, found_at: str) -> list[Deal]:
     deals: list[Deal] = []
     matches = list(MARKDOWN_IMAGE_LINK_RE.finditer(markdown))
@@ -440,7 +473,11 @@ def markdown_image_candidates(markdown: str, source_name: str, found_at: str) ->
         if not is_product_url(url):
             continue
 
-        title = clean_markdown_title(f"{match.group('title')} {match.group('tail')}")
+        title = clean_markdown_image_title(match.group("alt"))
+        if len(title) < 8:
+            title = clean_markdown_title(
+                f"{match.group('prefix')} {match.group('alt')} {match.group('tail')}"
+            )
         if not title:
             title = title_from_sierra_image(match.group("img"))
         if not title or len(title) < 8:
@@ -458,6 +495,12 @@ def markdown_image_candidates(markdown: str, source_name: str, found_at: str) ->
             original = money(compare_at.group(1))
         deals.append(make_deal(title, url, source_name, current, original, found_at))
     return deals
+
+
+def clean_markdown_image_title(value: str) -> str:
+    value = clean_markdown_title(value)
+    value = re.sub(r"^(?:image\s+)?\d+\s*:?\s*", "", value, flags=re.I)
+    return value
 
 
 def markdown_sierra_sequence_candidates(markdown: str, source_name: str, found_at: str) -> list[Deal]:
@@ -701,6 +744,7 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     continue
             candidates = json_ld_candidates(markup, url, source_name, found_at)
             candidates.extend(remix_candidates(markup, url, source_name, found_at))
+            candidates.extend(evo_collection_candidates(markup, url, source_name, found_at))
             if source.get("shopify_products_json"):
                 candidates.extend(
                     shopify_products_json_candidates(
