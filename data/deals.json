@@ -1,74 +1,8 @@
 {
-  "generated_at": "2026-05-15T08:10:18-06:00",
-  "deal_count": 116,
+  "generated_at": "2026-05-15T08:14:54-06:00",
+  "deal_count": 73,
   "sources_checked": 6,
   "deals": [
-    {
-      "title": "Salomon MTN 86 Pro Skis - Women's 2024",
-      "url": "https://www.evo.com/products/219280-salomon-mtn-86-pro-skis-women-s-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 129.99,
-      "original_price": 649.99,
-      "discount_percent": 80.0,
-      "savings": 520.0,
-      "score": 132.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "Line Skis Pandora 92 Skis 2025",
-      "url": "https://www.evo.com/products/251667-line-skis-pandora-92-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 159.99,
-      "original_price": 549.95,
-      "discount_percent": 70.9,
-      "savings": 389.96,
-      "score": 122.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "154 cm",
-        "161 cm",
-        "168 cm",
-        "175 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST Lux 92 Skis - Women's 2025",
-      "url": "https://www.evo.com/products/238126-salomon-qst-lux-92-skis-women-s-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 169.99,
-      "original_price": 549.95,
-      "discount_percent": 69.1,
-      "savings": 379.96,
-      "score": 120.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "152 cm",
-        "160 cm",
-        "168 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST Lumen 98 Skis - Women's 2024",
-      "url": "https://www.evo.com/products/238124-salomon-qst-lumen-98-skis-women-s-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 199.99,
-      "original_price": 649.95,
-      "discount_percent": 69.2,
-      "savings": 449.96,
-      "score": 120.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "152 cm",
-        "160 cm",
-        "168 cm",
-        "176 cm"
-      ]
-    },
     {
       "title": "Weston Skyline Ski x Haa Aani Alliance (1) List: ( 69%) Blazin' Deal",
       "url": "https://www.campsaver.com/weston-skyline-ski-x-haa-aani-alliance.html",
@@ -78,232 +12,8 @@
       "discount_percent": 69.4,
       "savings": 485.11,
       "score": 120.12,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
-    },
-    {
-      "title": "Blizzard Hustle 9 Skis 2024",
-      "url": "https://www.evo.com/products/223105-blizzard-hustle-9-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 229.99,
-      "original_price": 749.95,
-      "discount_percent": 69.3,
-      "savings": 519.96,
-      "score": 119.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm",
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "V\u00f6lkl Revolt 96 Skis 2025",
-      "url": "https://www.evo.com/products/254892-volkl-revolt-96-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 164.99,
-      "original_price": 499.99,
-      "discount_percent": 67.0,
-      "savings": 335.0,
-      "score": 118.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm"
-      ]
-    },
-    {
-      "title": "Blizzard Black Pearl 82 Skis - Women's 2024",
-      "url": "https://www.evo.com/products/223094-blizzard-black-pearl-82-skis-women-s-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 214.99,
-      "original_price": 649.95,
-      "discount_percent": 66.9,
-      "savings": 434.96,
-      "score": 117.6,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "152 cm",
-        "159 cm",
-        "166 cm",
-        "173 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST 106 Skis 2025",
-      "url": "https://www.evo.com/products/253508-salomon-qst-106-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 249.99,
-      "original_price": 749.95,
-      "discount_percent": 66.7,
-      "savings": 499.96,
-      "score": 116.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm",
-        "165 cm",
-        "173 cm"
-      ]
-    },
-    {
-      "title": "Season Nexus Skis 2025",
-      "url": "https://www.evo.com/products/225262-season-nexus-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 219.99,
-      "original_price": 649.0,
-      "discount_percent": 66.1,
-      "savings": 429.01,
-      "score": 116.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "158 cm",
-        "167 cm",
-        "177 cm"
-      ]
-    },
-    {
-      "title": "K2 Mindbender 90 C W Skis - Women's 2025",
-      "url": "https://www.evo.com/products/252238-k2-mindbender-90-c-w-skis-women-s-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 189.99,
-      "original_price": 549.95,
-      "discount_percent": 65.5,
-      "savings": 359.96,
-      "score": 116.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "160 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "Blizzard Hustle 10 Skis 2024",
-      "url": "https://www.evo.com/products/223102-blizzard-hustle-10-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 269.99,
-      "original_price": 799.95,
-      "discount_percent": 66.2,
-      "savings": 529.96,
-      "score": 115.8,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "Line Skis Pandora 99 Skis 2025",
-      "url": "https://www.evo.com/products/251664-line-skis-pandora-99-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 209.99,
-      "original_price": 599.95,
-      "discount_percent": 65.0,
-      "savings": 389.96,
-      "score": 115.8,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "163 cm",
-        "170 cm",
-        "177 cm"
-      ]
-    },
-    {
-      "title": "K2 Reckoner 92 Skis 2024",
-      "url": "https://www.evo.com/products/241712-k2-reckoner-92-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 129.99,
-      "original_price": 349.95,
-      "discount_percent": 62.9,
-      "savings": 219.96,
-      "score": 115.3,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "159 cm",
-        "169 cm",
-        "179 cm"
-      ]
-    },
-    {
-      "title": "K2 Reckoner 92 W Skis - Women's 2024",
-      "url": "https://www.evo.com/products/241723-k2-reckoner-92-w-skis-women-s-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 129.99,
-      "original_price": 349.95,
-      "discount_percent": 62.9,
-      "savings": 219.96,
-      "score": 115.3,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "159 cm",
-        "169 cm"
-      ]
-    },
-    {
-      "title": "Blizzard Hustle 11 Skis 2024",
-      "url": "https://www.evo.com/products/223103-blizzard-hustle-11-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 289.99,
-      "original_price": 849.95,
-      "discount_percent": 65.9,
-      "savings": 559.96,
-      "score": 115.1,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "K2 Mindbender 90 C Skis 2025",
-      "url": "https://www.evo.com/products/252189-k2-mindbender-90-c-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 199.99,
-      "original_price": 549.95,
-      "discount_percent": 63.6,
-      "savings": 349.96,
-      "score": 114.6,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "160 cm",
-        "166 cm",
-        "172 cm",
-        "178 cm"
-      ]
-    },
-    {
-      "title": "Faction Prodigy 1 Skis 2025",
-      "url": "https://www.evo.com/products/251931-faction-prodigy-1-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 199.99,
-      "original_price": 549.0,
-      "discount_percent": 63.6,
-      "savings": 349.01,
-      "score": 114.6,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "PR1 / 158 cm",
-        "PR1 / 164 cm",
-        "PR1 / 171 cm",
-        "PR1 / 178 cm"
-      ]
-    },
-    {
-      "title": "Line Skis Honey Badger TBL Skis 2024",
-      "url": "https://www.evo.com/products/241943-line-skis-honey-badger-tbl-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 149.99,
-      "original_price": 399.95,
-      "discount_percent": 62.5,
-      "savings": 249.96,
-      "score": 114.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "155 cm",
-        "166 cm",
-        "172 cm",
-        "177 cm"
-      ]
     },
     {
       "title": "G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal",
@@ -314,7 +24,7 @@
       "discount_percent": 64.1,
       "savings": 424.4,
       "score": 114.35,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -326,55 +36,10 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "168cm",
         "174cm"
-      ]
-    },
-    {
-      "title": "Line Skis Pandora 85 Skis 2025",
-      "url": "https://www.evo.com/products/251669-line-skis-pandora-85-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 169.99,
-      "original_price": 449.95,
-      "discount_percent": 62.2,
-      "savings": 279.96,
-      "score": 113.8,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "154 cm",
-        "161 cm",
-        "168 cm",
-        "175 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST Lumen 98 Skis - Women's 2025",
-      "url": "https://www.evo.com/products/253510-salomon-qst-lumen-98-skis-women-s-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 254.99,
-      "original_price": 699.95,
-      "discount_percent": 63.6,
-      "savings": 444.96,
-      "score": 113.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "176 cm"
-      ]
-    },
-    {
-      "title": "Faction Prodigy 0 Skis 2025",
-      "url": "https://www.evo.com/products/251930-faction-prodigy-0-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 174.99,
-      "original_price": 449.0,
-      "discount_percent": 61.0,
-      "savings": 274.01,
-      "score": 112.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm"
       ]
     },
     {
@@ -386,88 +51,8 @@
       "discount_percent": 64.0,
       "savings": 666.6,
       "score": 111.51,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
-    },
-    {
-      "title": "Rossignol Sender 94 Ti Skis 2024",
-      "url": "https://www.evo.com/products/216288-rossignol-sender-94-ti-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 279.99,
-      "original_price": 699.95,
-      "discount_percent": 60.0,
-      "savings": 419.96,
-      "score": 109.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "164 cm",
-        "172 cm",
-        "178 cm"
-      ]
-    },
-    {
-      "title": "Atomic Bent 110 Skis 2024",
-      "url": "https://www.evo.com/products/238213-atomic-bent-110-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 299.99,
-      "original_price": 749.95,
-      "discount_percent": 60.0,
-      "savings": 449.96,
-      "score": 109.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "K2 Mindbender 96 C Skis 2024",
-      "url": "https://www.evo.com/products/241695-k2-mindbender-96-c-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 269.99,
-      "original_price": 649.95,
-      "discount_percent": 58.5,
-      "savings": 379.96,
-      "score": 108.1,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "166 cm",
-        "172 cm",
-        "178 cm"
-      ]
-    },
-    {
-      "title": "Armada ARV 88 Skis 2024",
-      "url": "https://www.evo.com/products/237412-armada-arv-88-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 239.99,
-      "original_price": 549.95,
-      "discount_percent": 56.4,
-      "savings": 309.96,
-      "score": 106.6,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "161 cm",
-        "166 cm",
-        "171 cm",
-        "176 cm"
-      ]
-    },
-    {
-      "title": "Line Skis Tom Wallisch Pro Skis 2025",
-      "url": "https://www.evo.com/products/251678-line-skis-tom-wallisch-pro-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 219.99,
-      "original_price": 499.95,
-      "discount_percent": 56.0,
-      "savings": 279.96,
-      "score": 106.6,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm"
-      ]
     },
     {
       "title": "Scott Pure Free 90 Ti - Unisex",
@@ -478,76 +63,10 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "177cm",
         "184cm"
-      ]
-    },
-    {
-      "title": "Blizzard Black Pearl 88 Skis - Women's 2024",
-      "url": "https://www.evo.com/products/223097-blizzard-black-pearl-88-skis-women-s-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 309.99,
-      "original_price": 699.95,
-      "discount_percent": 55.7,
-      "savings": 389.96,
-      "score": 104.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "153 cm",
-        "159 cm",
-        "165 cm",
-        "171 cm",
-        "177 cm"
-      ]
-    },
-    {
-      "title": "Faction Prodigy 2 Skis 2025",
-      "url": "https://www.evo.com/products/251932-faction-prodigy-2-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 289.99,
-      "original_price": 649.0,
-      "discount_percent": 55.3,
-      "savings": 359.01,
-      "score": 104.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "PR2 / 165 cm"
-      ]
-    },
-    {
-      "title": "V\u00f6lkl M7 Mantra Skis 2025",
-      "url": "https://www.evo.com/products/254883-volkl-m7-mantra-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 369.99,
-      "original_price": 849.99,
-      "discount_percent": 56.5,
-      "savings": 480.0,
-      "score": 104.1,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "163 cm",
-        "170 cm",
-        "177 cm"
-      ]
-    },
-    {
-      "title": "Armada ARV 88 Skis 2025",
-      "url": "https://www.evo.com/products/253305-armada-arv-88-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 274.99,
-      "original_price": 599.95,
-      "discount_percent": 54.2,
-      "savings": 324.96,
-      "score": 103.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "156 cm",
-        "161 cm",
-        "166 cm",
-        "171 cm",
-        "176 cm"
       ]
     },
     {
@@ -559,27 +78,12 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
         "Blissful Blue / 154cm",
         "Blissful Blue / 170cm"
-      ]
-    },
-    {
-      "title": "Salomon QST 98 Skis 2025",
-      "url": "https://www.evo.com/products/253509-salomon-qst-98-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 329.99,
-      "original_price": 699.95,
-      "discount_percent": 52.9,
-      "savings": 369.96,
-      "score": 101.3,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "169 cm",
-        "176 cm"
       ]
     },
     {
@@ -591,7 +95,7 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -608,7 +112,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -627,7 +131,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "168cm",
         "178cm"
@@ -642,7 +146,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -658,7 +162,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "152cm",
         "172cm"
@@ -673,7 +177,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -690,7 +194,7 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "144cm",
         "151cm",
@@ -707,7 +211,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -722,7 +226,7 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "166cm",
         "178cm"
@@ -737,7 +241,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "153cm",
         "160cm"
@@ -752,7 +256,7 @@
       "discount_percent": 50.0,
       "savings": 324.99,
       "score": 98.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -764,7 +268,7 @@
       "discount_percent": 52.0,
       "savings": 467.54,
       "score": 98.37,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -776,7 +280,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -793,7 +297,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -805,7 +309,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "155cm",
         "162cm"
@@ -820,7 +324,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -835,7 +339,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "163cm",
         "170cm"
@@ -850,7 +354,7 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -862,7 +366,7 @@
       "discount_percent": 50.0,
       "savings": 374.99,
       "score": 97.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -874,7 +378,7 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "156cm",
         "170cm"
@@ -889,25 +393,10 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "171cm",
         "178cm"
-      ]
-    },
-    {
-      "title": "Black Crows Atris Skis 2024",
-      "url": "https://www.evo.com/products/241139-black-crows-atris-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 464.99,
-      "original_price": 949.95,
-      "discount_percent": 51.1,
-      "savings": 484.96,
-      "score": 96.8,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "172 cm",
-        "178 cm"
       ]
     },
     {
@@ -919,43 +408,10 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "165cm",
         "172cm"
-      ]
-    },
-    {
-      "title": "K2 Mindbender 90 C Skis 2024",
-      "url": "https://www.evo.com/products/241703-k2-mindbender-90-c-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 289.99,
-      "original_price": 549.95,
-      "discount_percent": 47.3,
-      "savings": 259.96,
-      "score": 96.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "160 cm",
-        "166 cm",
-        "172 cm",
-        "178 cm"
-      ]
-    },
-    {
-      "title": "Atomic Bent 90 Skis 2024",
-      "url": "https://www.evo.com/products/238215-atomic-bent-90-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 294.99,
-      "original_price": 549.95,
-      "discount_percent": 46.4,
-      "savings": 254.96,
-      "score": 95.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm",
-        "166 cm",
-        "175 cm"
       ]
     },
     {
@@ -967,7 +423,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "163cm",
         "177cm"
@@ -982,7 +438,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -994,57 +450,10 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "150cm",
         "157cm"
-      ]
-    },
-    {
-      "title": "Atomic Bent 100 Skis 2024",
-      "url": "https://www.evo.com/products/238214-atomic-bent-100-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 349.99,
-      "original_price": 649.95,
-      "discount_percent": 46.2,
-      "savings": 299.96,
-      "score": 94.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "K2 Reckoner 102 Skis 2024",
-      "url": "https://www.evo.com/products/241711-k2-reckoner-102-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 349.99,
-      "original_price": 649.95,
-      "discount_percent": 46.2,
-      "savings": 299.96,
-      "score": 94.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "163 cm",
-        "170 cm",
-        "177 cm"
-      ]
-    },
-    {
-      "title": "Line Skis Chronic 101 Skis 2025",
-      "url": "https://www.evo.com/products/251675-line-skis-chronic-101-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 354.99,
-      "original_price": 649.95,
-      "discount_percent": 45.4,
-      "savings": 294.96,
-      "score": 93.3,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "165 cm",
-        "172 cm",
-        "179 cm"
       ]
     },
     {
@@ -1056,7 +465,7 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "164cm",
         "178cm",
@@ -1072,7 +481,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -1089,7 +498,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -1104,7 +513,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1116,7 +525,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -1132,7 +541,7 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1144,7 +553,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -1159,7 +568,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -1175,7 +584,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -1191,7 +600,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -1206,7 +615,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -1221,7 +630,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1233,7 +642,7 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1245,7 +654,7 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1257,7 +666,7 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1269,7 +678,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
@@ -1285,29 +694,13 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "165cm",
         "172cm",
         "175cm",
         "178cm",
         "184cm"
-      ]
-    },
-    {
-      "title": "Atomic Bent 90 Skis 2025",
-      "url": "https://www.evo.com/products/254122-atomic-bent-90-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 329.97,
-      "original_price": 549.95,
-      "discount_percent": 40.0,
-      "savings": 219.98,
-      "score": 88.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm",
-        "166 cm",
-        "175 cm"
       ]
     },
     {
@@ -1319,7 +712,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1331,7 +724,7 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1343,7 +736,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -1358,7 +751,7 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1370,25 +763,8 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
-    },
-    {
-      "title": "Armada ARV 94 Skis 2025",
-      "url": "https://www.evo.com/products/253304-armada-arv-94-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 389.97,
-      "original_price": 649.95,
-      "discount_percent": 40.0,
-      "savings": 259.98,
-      "score": 87.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "157 cm",
-        "164 cm",
-        "171 cm",
-        "178 cm"
-      ]
     },
     {
       "title": "Salomon Stance Pro 82 Skis",
@@ -1399,42 +775,10 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Iceberg Green / 177cm",
         "Iceberg Green / 185cm"
-      ]
-    },
-    {
-      "title": "Atomic Bent 110 Skis 2025",
-      "url": "https://www.evo.com/products/254120-atomic-bent-110-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 449.99,
-      "original_price": 749.95,
-      "discount_percent": 40.0,
-      "savings": 299.96,
-      "score": 86.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "164 cm",
-        "172 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST 92 Skis 2025",
-      "url": "https://www.evo.com/products/238121-salomon-qst-92-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 349.99,
-      "original_price": 549.95,
-      "discount_percent": 36.4,
-      "savings": 199.96,
-      "score": 84.4,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "152 cm",
-        "160 cm",
-        "168 cm",
-        "176 cm"
       ]
     },
     {
@@ -1446,7 +790,7 @@
       "discount_percent": 40.2,
       "savings": 381.98,
       "score": 83.84,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -1463,26 +807,11 @@
       "discount_percent": 34.7,
       "savings": 259.99,
       "score": 79.9,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Iceberg Green / 156 cm",
         "Iceberg Green / 164 cm",
         "Iceberg Green / 172 cm"
-      ]
-    },
-    {
-      "title": "Salomon QST 98 Skis 2024",
-      "url": "https://www.evo.com/products/238117-salomon-qst-98-skis-2024",
-      "source": "Evo skis price ascending",
-      "current_price": 439.99,
-      "original_price": 649.95,
-      "discount_percent": 32.3,
-      "savings": 209.96,
-      "score": 78.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "169 cm",
-        "176 cm"
       ]
     },
     {
@@ -1494,7 +823,7 @@
       "discount_percent": 30.0,
       "savings": 209.99,
       "score": 75.2,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "Iced Aqua / 156 cm",
         "Iced Aqua / 164 cm",
@@ -1510,10 +839,9 @@
       "discount_percent": 25.3,
       "savings": 190.0,
       "score": 69.1,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": [
         "152 cm",
-        "158 cm",
         "164 cm",
         "170 cm",
         "176 cm"
@@ -1528,7 +856,7 @@
       "discount_percent": 25.0,
       "savings": 206.24,
       "score": 67.63,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1540,7 +868,7 @@
       "discount_percent": 25.0,
       "savings": 212.49,
       "score": 67.25,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1552,7 +880,7 @@
       "discount_percent": 25.0,
       "savings": 224.99,
       "score": 66.5,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1564,25 +892,8 @@
       "discount_percent": 25.0,
       "savings": 237.49,
       "score": 65.75,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
-    },
-    {
-      "title": "Atomic Bent 100 Skis 2025",
-      "url": "https://www.evo.com/products/254121-atomic-bent-100-skis-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 519.99,
-      "original_price": 649.95,
-      "discount_percent": 20.0,
-      "savings": 129.96,
-      "score": 62.09,
-      "found_at": "2026-05-15T14:10:07+00:00",
-      "sizes": [
-        "158 cm",
-        "165 cm",
-        "172 cm",
-        "179 cm"
-      ]
     },
     {
       "title": "Salomon MTN 86 Flat Ski's, 2025 - Unisex (164cm) - 164cm",
@@ -1593,7 +904,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 16.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1605,7 +916,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1617,7 +928,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.43,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1629,7 +940,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1641,7 +952,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1653,7 +964,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1665,7 +976,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1677,7 +988,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1689,7 +1000,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1701,7 +1012,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     },
     {
@@ -1713,7 +1024,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-15T14:10:07+00:00",
+      "found_at": "2026-05-15T14:14:31+00:00",
       "sizes": null
     }
   ],

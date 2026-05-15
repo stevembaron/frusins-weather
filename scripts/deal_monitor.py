@@ -450,6 +450,7 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
         return []
 
     meta_products = evo_meta_products(markup)
+    availability_cache: dict[str, dict[str, Any] | None] = {}
     deals: list[Deal] = []
     for match in EVO_COLLECTION_ITEM_RE.finditer(markup):
         handle = clean_text(match.group("handle").replace("\\/", "/"))
@@ -461,14 +462,12 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
 
         sizes = evo_collection_sizes_for_price(
             meta_products.get(handle),
+            evo_product_availability(availability_cache, base_url, handle),
             current,
             size_prefixes,
         )
         if not sizes:
-            fallback_variant = clean_text(match.group("variant").replace("\\/", "/"))
-            if not evo_variant_matches_size_filter(fallback_variant, size_prefixes):
-                continue
-            sizes = [fallback_variant]
+            continue
 
         deals.append(
             make_deal(
@@ -503,25 +502,65 @@ def evo_meta_products(markup: str) -> dict[str, dict[str, Any]]:
     }
 
 
+def evo_product_availability(
+    cache: dict[str, dict[str, Any] | None],
+    base_url: str,
+    handle: str,
+) -> dict[str, Any] | None:
+    if handle in cache:
+        return cache[handle]
+
+    product_url = urljoin(base_url, f"/products/{handle}.js")
+    try:
+        payload = json.loads(fetch(product_url, timeout=30))
+    except (json.JSONDecodeError, HTTPError, URLError, TimeoutError, OSError):
+        payload = None
+
+    cache[handle] = payload if isinstance(payload, dict) else None
+    return cache[handle]
+
+
 def evo_collection_sizes_for_price(
     product: dict[str, Any] | None,
+    availability_payload: dict[str, Any] | None,
     current_price: float,
     size_prefixes: set[str],
 ) -> list[str]:
     if not isinstance(product, dict):
         return []
 
+    available_variant_ids = evo_available_variant_ids(availability_payload)
+    if not available_variant_ids:
+        return []
+
     sizes: list[str] = []
     for variant in product.get("variants", []):
         if not isinstance(variant, dict):
             continue
+        variant_id = str(variant.get("id") or "")
         variant_price = evo_meta_variant_price(variant.get("price"))
         variant_title = clean_text(str(variant.get("public_title") or ""))
-        if variant_price != current_price or not evo_variant_matches_size_filter(variant_title, size_prefixes):
+        if (
+            not variant_id
+            or variant_id not in available_variant_ids
+            or variant_price != current_price
+            or not evo_variant_matches_size_filter(variant_title, size_prefixes)
+        ):
             continue
         sizes.append(variant_title)
 
     return sorted(set(sizes))
+
+
+def evo_available_variant_ids(payload: dict[str, Any] | None) -> set[str]:
+    if not isinstance(payload, dict) or not payload.get("available", False):
+        return set()
+
+    return {
+        str(variant.get("id"))
+        for variant in payload.get("variants", [])
+        if isinstance(variant, dict) and variant.get("available", False) and variant.get("id") is not None
+    }
 
 
 def evo_meta_variant_price(value: Any) -> float | None:
