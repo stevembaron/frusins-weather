@@ -78,6 +78,7 @@ EVO_COLLECTION_ITEM_RE = re.compile(
     re.DOTALL,
 )
 EVO_META_RE = re.compile(r"var meta = (?P<payload>\{\"products\":.*?\"page\":\{.*?\}\});", re.DOTALL)
+EVO_CONSTRUCTOR_KEY_RE = re.compile(r'window\.eHS\.constructor_index_key\s*=\s*"(?P<key>[^"]+)"')
 BLOCK_PATTERNS = [
     "before we continue",
     "human challenge",
@@ -111,6 +112,7 @@ class Deal:
     score: float
     found_at: str
     sizes: list[str] | None = None
+    stock_status: str | None = None
 
 
 @dataclass
@@ -460,7 +462,7 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
         if not title or not handle or current is None:
             continue
 
-        sizes = evo_collection_sizes_for_price(
+        sizes, stock_status = evo_collection_stock_details(
             meta_products.get(handle),
             evo_product_availability(availability_cache, base_url, handle),
             current,
@@ -478,10 +480,123 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
                 original,
                 found_at,
                 sizes=sizes,
+                stock_status=stock_status,
             )
         )
 
     return deals
+
+
+def evo_hydrated_collection_candidates(
+    markup: str,
+    base_url: str,
+    source_name: str,
+    found_at: str,
+    max_results: int,
+) -> list[Deal]:
+    if "evo.com" not in base_url:
+        return []
+
+    api_key = evo_constructor_api_key(markup)
+    if not api_key:
+        return []
+
+    parsed = urlparse(base_url)
+    base_query = parse_qs(parsed.query, keep_blank_values=True)
+    page = 1
+    per_page = min(max_results, 100)
+    deals: list[Deal] = []
+
+    while len(deals) < max_results:
+        url = evo_constructor_api_url(api_key, base_query, page, per_page)
+        try:
+            with urlopen(Request(url, headers=REQUEST_HEADERS), timeout=30) as response:
+                payload = json.load(response)
+        except (json.JSONDecodeError, HTTPError, URLError, TimeoutError, OSError):
+            break
+
+        page_results = payload.get("response", {}).get("results", [])
+        if not isinstance(page_results, list) or not page_results:
+            break
+
+        for item in page_results:
+            deal = evo_constructor_result_deal(item, source_name, found_at)
+            if deal:
+                deals.append(deal)
+            if len(deals) >= max_results:
+                break
+
+        total = payload.get("response", {}).get("total_num_results")
+        if not isinstance(total, int) or page * per_page >= total:
+            break
+        page += 1
+
+    return deals[:max_results]
+
+
+def evo_constructor_api_key(markup: str) -> str | None:
+    match = EVO_CONSTRUCTOR_KEY_RE.search(markup)
+    return match.group("key") if match else None
+
+
+def evo_constructor_api_url(api_key: str, query: dict[str, list[str]], page: int, per_page: int) -> str:
+    params: list[tuple[str, str]] = [
+        ("key", api_key),
+        ("sort_by", (query.get("sortBy") or ["relevance"])[0]),
+        ("sort_order", (query.get("sortOrder") or ["descending"])[0]),
+        ("num_results_per_page", str(per_page)),
+        ("page", str(page)),
+    ]
+    for key, values in query.items():
+        if key in {"sortBy", "sortOrder", "page"}:
+            continue
+        if key.startswith("filters["):
+            for value in values:
+                params.append((key, value))
+    return "https://ac.cnstrc.com/browse/group_id/skis?" + "&".join(
+        f"{quote(key, safe='')}={quote(value, safe='')}" for key, value in params
+    )
+
+
+def evo_constructor_result_deal(item: Any, source_name: str, found_at: str) -> Deal | None:
+    if not isinstance(item, dict):
+        return None
+    data = item.get("data")
+    title = clean_text(str(item.get("value", "")))
+    if not isinstance(data, dict) or not title:
+        return None
+
+    url = clean_text(str(data.get("url") or ""))
+    current = money(data.get("price"))
+    original = money(data.get("compare_at_price"))
+    size = clean_text(str(data.get("size") or ""))
+    if not url or current is None:
+        return None
+
+    stock_status = "in_stock" if data.get("availability", False) else "sold_out"
+    sizes = [size] if evo_size_text(size) else None
+    return make_deal(
+        title,
+        url,
+        source_name,
+        current,
+        original,
+        found_at,
+        sizes=sizes,
+        stock_status=stock_status,
+    )
+
+
+def evo_stock_status_from_payload(payload: dict[str, Any] | None) -> str | None:
+    if payload is None:
+        return "availability_unknown"
+    if payload.get("available", False):
+        return "in_stock"
+    return "sold_out"
+
+
+def evo_size_text(value: str) -> bool:
+    return bool(re.search(r"\b\d{2,3}\s*cm\b", value, re.I))
 
 
 def evo_meta_products(markup: str) -> dict[str, dict[str, Any]]:
@@ -520,20 +635,18 @@ def evo_product_availability(
     return cache[handle]
 
 
-def evo_collection_sizes_for_price(
+def evo_collection_stock_details(
     product: dict[str, Any] | None,
     availability_payload: dict[str, Any] | None,
     current_price: float,
     size_prefixes: set[str],
-) -> list[str]:
+) -> tuple[list[str], str | None]:
     if not isinstance(product, dict):
-        return []
+        return [], None
 
     available_variant_ids = evo_available_variant_ids(availability_payload)
-    if not available_variant_ids:
-        return []
-
-    sizes: list[str] = []
+    matching_sizes: list[str] = []
+    available_sizes: list[str] = []
     for variant in product.get("variants", []):
         if not isinstance(variant, dict):
             continue
@@ -542,14 +655,21 @@ def evo_collection_sizes_for_price(
         variant_title = clean_text(str(variant.get("public_title") or ""))
         if (
             not variant_id
-            or variant_id not in available_variant_ids
             or variant_price != current_price
             or not evo_variant_matches_size_filter(variant_title, size_prefixes)
         ):
             continue
-        sizes.append(variant_title)
+        matching_sizes.append(variant_title)
+        if variant_id in available_variant_ids:
+            available_sizes.append(variant_title)
 
-    return sorted(set(sizes))
+    if available_sizes:
+        return sorted(set(available_sizes)), "in_stock"
+    if matching_sizes:
+        if availability_payload is None:
+            return sorted(set(matching_sizes)), "availability_unknown"
+        return sorted(set(matching_sizes)), "sold_out"
+    return [], None
 
 
 def evo_available_variant_ids(payload: dict[str, Any] | None) -> set[str]:
@@ -717,6 +837,7 @@ def make_deal(
     original: float | None,
     found_at: str,
     sizes: list[str] | None = None,
+    stock_status: str | None = None,
 ) -> Deal:
     discount = None
     savings = None
@@ -736,6 +857,7 @@ def make_deal(
         score=score,
         found_at=found_at,
         sizes=sizes,
+        stock_status=stock_status,
     )
 
 
@@ -809,7 +931,15 @@ def filter_and_sort(deals: list[Deal], config: dict[str, Any]) -> list[Deal]:
             continue
         filtered.append(deal)
 
-    return sorted(filtered, key=lambda item: (item.score, item.discount_percent or 0, item.savings or 0), reverse=True)
+    return sorted(
+        filtered,
+        key=lambda item: (
+            stock_sort_key(item.stock_status),
+            -(item.score),
+            -(item.discount_percent or 0),
+            -(item.savings or 0),
+        ),
+    )
 
 
 def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
@@ -865,7 +995,19 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     continue
             candidates = json_ld_candidates(markup, url, source_name, found_at)
             candidates.extend(remix_candidates(markup, url, source_name, found_at))
-            candidates.extend(evo_collection_candidates(markup, url, source_name, found_at))
+            evo_hydrated_candidates: list[Deal] = []
+            if "evo.com" in url:
+                evo_hydrated_candidates = evo_hydrated_collection_candidates(
+                    markup,
+                    url,
+                    source_name,
+                    found_at,
+                    per_source_limit,
+                )
+            if evo_hydrated_candidates:
+                candidates.extend(evo_hydrated_candidates)
+            else:
+                candidates.extend(evo_collection_candidates(markup, url, source_name, found_at))
             if source.get("shopify_products_json"):
                 candidates.extend(
                     shopify_products_json_candidates(
@@ -935,7 +1077,33 @@ def merged_filter_config(config: dict[str, Any], source: dict[str, Any]) -> dict
 
 
 def rank_deals(deals: list[Deal]) -> list[Deal]:
-    return sorted(deals, key=lambda item: (item.score, item.discount_percent or 0, item.savings or 0), reverse=True)
+    return sorted(
+        deals,
+        key=lambda item: (
+            stock_sort_key(item.stock_status),
+            -(item.score),
+            -(item.discount_percent or 0),
+            -(item.savings or 0),
+        ),
+    )
+
+
+def stock_sort_key(status: str | None) -> int:
+    if status == "sold_out":
+        return 2
+    if status == "availability_unknown":
+        return 1
+    return 0
+
+
+def stock_label(status: str | None) -> str | None:
+    if status == "in_stock":
+        return "In stock"
+    if status == "sold_out":
+        return "Sold out"
+    if status == "availability_unknown":
+        return "Availability unknown"
+    return None
 
 
 def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str, Any]) -> None:
@@ -997,11 +1165,13 @@ def render_markdown(payload: dict[str, Any], config: dict[str, Any]) -> str:
         for index, deal in enumerate(payload["deals"][:25], start=1):
             discount = f" ({deal['discount_percent']}% off)" if deal["discount_percent"] else ""
             original = f" was ${deal['original_price']:.2f}" if deal["original_price"] else ""
+            status = stock_label(deal.get("stock_status"))
             lines.extend(
                 [
                     f"{index}. [{deal['title']}]({deal['url']})",
                     f"   ${deal['current_price']:.2f}{original}{discount} - {deal['source']}",
                     f"   Sizes: {', '.join(deal['sizes'])}" if deal.get("sizes") else "",
+                    f"   Stock: {status}" if status else "",
                     "",
                 ]
             )
@@ -1016,12 +1186,21 @@ def render_markdown(payload: dict[str, Any], config: dict[str, Any]) -> str:
 
 def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     cards = []
-    html_deals = sorted(payload["deals"], key=lambda deal: (deal["current_price"], -(deal["discount_percent"] or 0)))
+    html_deals = sorted(
+        payload["deals"],
+        key=lambda deal: (
+            stock_sort_key(deal.get("stock_status")),
+            deal["current_price"],
+            -(deal["discount_percent"] or 0),
+        ),
+    )
     for deal in html_deals:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
         discount = f"<span>{deal['discount_percent']}% off</span>" if deal["discount_percent"] else "<span>Price found</span>"
         savings = f"<span>Save ${deal['savings']:.2f}</span>" if deal["savings"] else ""
         sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
+        status = stock_label(deal.get("stock_status"))
+        stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
         cards.append(
             f"""
             <article class="deal">
@@ -1033,7 +1212,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{discount}{savings}{sizes}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{discount}{savings}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1067,6 +1246,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .was {{ display: block; text-decoration: line-through; }}
       .badges {{ grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }}
       .badges span {{ border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }}
+      .stock-in_stock {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
+      .stock-sold_out {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
       @media (max-width: 620px) {{ header, .deal {{ display: block; }} .price {{ text-align: left; margin-top: 12px; }} }}
