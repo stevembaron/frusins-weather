@@ -1,6 +1,6 @@
 # Men's Clothing Deals
 
-Generated: 2026-05-14T14:37:55+00:00
+Generated: 2026-05-15T14:31:57+00:00
 Deals found: 11
 
 1. [Stio Hagen Trail Shirt - Men's](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)
@@ -11,12 +11,12 @@ Deals found: 11
    $96.10 was $282.65 (66.0% off) - Geartrade Stio men's clothing
    Sizes: S
 
-3. [Stio Eddy Slope Long Sleeve Shirt - Men's](https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864)
-   $52.29 was $168.68 (69.0% off) - Geartrade Stio men's clothing
+3. [Stio Azura Insulated Jacket - Men's](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
+   $83.33 was $231.47 (64.0% off) - Geartrade Stio men's clothing
    Sizes: S
 
-4. [Stio Azura Insulated Jacket - Men's](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
-   $87.78 was $231.00 (62.0% off) - Geartrade Stio men's clothing
+4. [Stio Eddy Slope Long Sleeve Shirt - Men's](https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864)
+   $52.29 was $168.68 (69.0% off) - Geartrade Stio men's clothing
    Sizes: S
 
 5. [Stio Ashton Chambray Shirt - Men's](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)
