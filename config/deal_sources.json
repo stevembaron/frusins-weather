@@ -58,8 +58,8 @@
       "name": "Evo skis price ascending",
       "url": "https://www.evo.com/collections/skis?sortBy=price&sortOrder=ascending&filters%5Bsize%5D=150+cm&filters%5Bsize%5D=160+cm&filters%5Bsize%5D=170+cm&filters%5Bgender%5D=+adult-any&filters%5Bgender%5D=+adult-female&filters%5Bgender%5D=+adult-male&filters%5Bwaist_width%5D=80mm&filters%5Bwaist_width%5D=90mm&filters%5Bwaist_width%5D=100mm&filters%5Bwaist_width%5D=110mm&filters%5Bwaist_width%5D=121mm",
       "enabled": true,
-      "reader_fallback": true,
-      "max_results_per_source": 80
+      "max_results_per_source": 80,
+      "reader_fallback": false
     },
     {
       "name": "CampSaver backcountry skis",

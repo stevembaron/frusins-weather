@@ -20,7 +20,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urljoin, urlparse, urlunparse
+from urllib.parse import parse_qs, quote, urljoin, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 
@@ -74,9 +74,10 @@ GEARTRADE_DISCOUNT_RE = re.compile(r"(?P<discount>[0-9]{1,3})%\s*Off", re.IGNORE
 GEARTRADE_SIZE_RE = re.compile(r'<span[^>]+class="[^"]*\bplp_size\b[^"]*"[^>]*>.*?<b>\s*Size:\s*</b>\s*&nbsp;\s*(?P<size>[^<]+)', re.IGNORECASE | re.DOTALL)
 EVO_COLLECTION_ITEM_RE = re.compile(
     r'\{id:"[^"]+",name:"(?P<name>(?:[^"\\]|\\.)+)",.*?variant:"(?P<variant>(?:[^"\\]|\\.)*)",'
-    r'\s*price:\s*"(?P<price>[^"]+)",.*?handle:"(?P<handle>[^"]+)",\s*compareAtPrice:\s*"(?P<compare>[^"]+)"',
+    r'\s*price:\s*"(?P<price>[^"]+)",.*?variantId:\s*"(?P<variant_id>\d+)",.*?handle:"(?P<handle>[^"]+)",\s*compareAtPrice:\s*"(?P<compare>[^"]+)"',
     re.DOTALL,
 )
+EVO_META_RE = re.compile(r"var meta = (?P<payload>\{\"products\":.*?\"page\":\{.*?\}\});", re.DOTALL)
 BLOCK_PATTERNS = [
     "before we continue",
     "human challenge",
@@ -439,19 +440,35 @@ def geartrade_search_candidates(markup: str, base_url: str, source_name: str, fo
         )
     return deals
 
+
 def evo_collection_candidates(markup: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
     if "evo.com" not in base_url:
         return []
 
+    size_prefixes = evo_size_prefixes(base_url)
+    if not size_prefixes:
+        return []
+
+    meta_products = evo_meta_products(markup)
     deals: list[Deal] = []
     for match in EVO_COLLECTION_ITEM_RE.finditer(markup):
-        title = clean_text(match.group("name").replace("\\/", "/"))
         handle = clean_text(match.group("handle").replace("\\/", "/"))
+        title = clean_text(match.group("name").replace("\\/", "/"))
         current = money(match.group("price"))
         original = money(match.group("compare"))
-        variant = clean_text(match.group("variant").replace("\\/", "/"))
         if not title or not handle or current is None:
             continue
+
+        sizes = evo_collection_sizes_for_price(
+            meta_products.get(handle),
+            current,
+            size_prefixes,
+        )
+        if not sizes:
+            fallback_variant = clean_text(match.group("variant").replace("\\/", "/"))
+            if not evo_variant_matches_size_filter(fallback_variant, size_prefixes):
+                continue
+            sizes = [fallback_variant]
 
         deals.append(
             make_deal(
@@ -461,10 +478,75 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
                 current,
                 original,
                 found_at,
-                sizes=[variant] if variant else None,
+                sizes=sizes,
             )
         )
+
     return deals
+
+
+def evo_meta_products(markup: str) -> dict[str, dict[str, Any]]:
+    match = EVO_META_RE.search(markup)
+    if not match:
+        return {}
+
+    try:
+        payload = json.loads(match.group("payload"))
+    except json.JSONDecodeError:
+        return {}
+
+    products = payload.get("products", [])
+    return {
+        clean_text(str(product.get("handle", ""))): product
+        for product in products
+        if isinstance(product, dict) and product.get("handle")
+    }
+
+
+def evo_collection_sizes_for_price(
+    product: dict[str, Any] | None,
+    current_price: float,
+    size_prefixes: set[str],
+) -> list[str]:
+    if not isinstance(product, dict):
+        return []
+
+    sizes: list[str] = []
+    for variant in product.get("variants", []):
+        if not isinstance(variant, dict):
+            continue
+        variant_price = evo_meta_variant_price(variant.get("price"))
+        variant_title = clean_text(str(variant.get("public_title") or ""))
+        if variant_price != current_price or not evo_variant_matches_size_filter(variant_title, size_prefixes):
+            continue
+        sizes.append(variant_title)
+
+    return sorted(set(sizes))
+
+
+def evo_meta_variant_price(value: Any) -> float | None:
+    if isinstance(value, int):
+        return round(value / 100, 2)
+    if isinstance(value, str) and value.isdigit():
+        return round(int(value) / 100, 2)
+    return money(value)
+
+
+def evo_size_prefixes(base_url: str) -> set[str]:
+    query = parse_qs(urlparse(base_url).query)
+    prefixes: set[str] = set()
+    for value in query.get("filters[size]", []):
+        match = re.search(r"\b([0-9]{2})[0-9]\s*cm\b", value, re.I)
+        if match:
+            prefixes.add(match.group(1))
+    return prefixes
+
+
+def evo_variant_matches_size_filter(variant_title: str, size_prefixes: set[str]) -> bool:
+    match = re.search(r"\b([0-9]{2})[0-9]\s*cm\b", variant_title, re.I)
+    return bool(match and match.group(1) in size_prefixes)
+
+
 def markdown_image_candidates(markdown: str, source_name: str, found_at: str) -> list[Deal]:
     deals: list[Deal] = []
     matches = list(MARKDOWN_IMAGE_LINK_RE.finditer(markdown))
