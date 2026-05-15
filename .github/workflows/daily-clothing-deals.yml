@@ -3,12 +3,12 @@ name: Update Daily Clothing Deals
 on:
   schedule:
     - cron: "15 12 * * *"
-    - cron: "45 12 * * *"
-    - cron: "15 13 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: daily-clothing-deals
@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   update-report:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,26 +35,10 @@ jobs:
       - name: Make publish helper executable
         run: chmod +x scripts/publish_generated_report.sh
 
-      - name: Check if today's report is already published
-        id: freshness
-        run: |
-          should_run=true
-          if [ "${{ github.event_name }}" = "schedule" ] && [ -f data/clothing_deals.json ]; then
-            report_date="$(python3 -c 'import json; print(json.load(open("data/clothing_deals.json")).get("generated_at", "")[:10])')"
-            today="$(date -u +%F)"
-            if [ "$report_date" = "$today" ]; then
-              should_run=false
-              echo "Today's clothing deal report is already published."
-            fi
-          fi
-          echo "should_run=$should_run" >> "$GITHUB_OUTPUT"
-
       - name: Run clothing deal monitor
-        if: steps.freshness.outputs.should_run == 'true'
         run: python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
 
       - name: Publish updated report
-        if: steps.freshness.outputs.should_run == 'true'
         run: >
           scripts/publish_generated_report.sh
           "Update daily clothing deals"
@@ -59,3 +46,17 @@ jobs:
           data/clothing_deals.html
           data/clothing_deals.json
           clothing-deals/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
