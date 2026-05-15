@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-15T15:07:42+00:00
+Generated: 2026-05-15T20:19:43+00:00
 Deals found: 132
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -131,4 +131,5 @@ Deals found: 132
 
 ## Source Errors
 
+- Sierra skis: HTTP Error 403: Forbidden; reader fallback failed: Blocked by retailer anti-bot page: something went wrong
 - CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue
