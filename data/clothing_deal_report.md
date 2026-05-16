@@ -1,6 +1,6 @@
 # Men's Clothing Deals
 
-Generated: 2026-05-16T13:03:29+00:00
+Generated: 2026-05-16T13:56:36+00:00
 Deals found: 11
 
 1. [Stio Hagen Trail Shirt - Men's](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)
