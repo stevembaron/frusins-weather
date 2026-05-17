@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-16T13:25:48+00:00
+Generated: 2026-05-17T13:24:08+00:00
 Deals found: 131
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -8,24 +8,24 @@ Deals found: 131
    Sizes: 154 cm
    Stock: In stock
 
-2. [Dynastar E-Pro 90 Skis - Women's 2024](https://www.evo.com/products/228455-dynastar-e-pro-90-skis-women-s-2024)
-   $139.99 was $699.95 (80.0% off) - Evo skis price ascending
-   Sizes: 162 cm
-   Stock: In stock
-
-3. [Rossignol Rallybird 104 Ti Skis - Women's 2024](https://www.evo.com/products/216289-rossignol-rallybird-104-ti-skis-women-s-2024)
+2. [Rossignol Rallybird 104 Ti Skis - Women's 2024](https://www.evo.com/products/216289-rossignol-rallybird-104-ti-skis-women-s-2024)
    $199.99 was $849.95 (76.5% off) - Evo skis price ascending
    Sizes: 163 cm
    Stock: In stock
 
-4. [Rossignol Soul 7 HD Skis + Marker Squire 11 Bindings 2020 - Used](https://www.evo.com/products/261466-rossignol-soul-7-hd-skis-marker-squire-11-bindings-2020-used)
+3. [Rossignol Soul 7 HD Skis + Marker Squire 11 Bindings 2020 - Used](https://www.evo.com/products/261466-rossignol-soul-7-hd-skis-marker-squire-11-bindings-2020-used)
    $237.49 was $949.95 (75.0% off) - Evo skis price ascending
    Sizes: 156 cm
    Stock: In stock
 
-5. [Blizzard Zero G LT 80 W Skis - Women's 2025](https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025)
+4. [Blizzard Zero G LT 80 W Skis - Women's 2025](https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025)
    $224.99 was $799.95 (71.9% off) - Evo skis price ascending
    Sizes: 157 cm
+   Stock: In stock
+
+5. [Völkl Secret 102 Skis - Women's 2025](https://www.evo.com/products/254885-volkl-secret-102-skis-women-s-2025)
+   $289.99 was $849.99 (65.9% off) - Evo skis price ascending
+   Sizes: 177 cm
    Stock: In stock
 
 6. [Salomon Stance 88 Womens Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
@@ -131,5 +131,4 @@ Deals found: 131
 
 ## Source Errors
 
-- Sierra skis: HTTP Error 403: Forbidden; reader fallback failed: Blocked by retailer anti-bot page: something went wrong
 - CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue
