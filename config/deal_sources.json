@@ -49,12 +49,6 @@
   "max_results_per_source": 30,
   "sources": [
     {
-      "name": "Sierra skis",
-      "url": "https://www.sierra.com/s~skis/activities~d~14342/sports-and-games~d~14656/snow-sports~d~14343/skis~d~9694/",
-      "enabled": true,
-      "reader_fallback": true
-    },
-    {
       "name": "Evo skis price ascending",
       "url": "https://www.evo.com/collections/skis?sortBy=price&sortOrder=ascending&filters%5Bsize%5D=150+cm&filters%5Bsize%5D=160+cm&filters%5Bsize%5D=170+cm&filters%5Bgender%5D=+adult-any&filters%5Bgender%5D=+adult-female&filters%5Bgender%5D=+adult-male&filters%5Bwaist_width%5D=80mm&filters%5Bwaist_width%5D=90mm&filters%5Bwaist_width%5D=100mm&filters%5Bwaist_width%5D=110mm&filters%5Bwaist_width%5D=121mm",
       "enabled": true,
@@ -97,6 +91,16 @@
       "ignore_sold_out": true,
       "keywords": [],
       "shopify_products_json": "https://thegearroom.com/collections/skis/products.json"
+    },
+    {
+      "name": "Utah Skis demo skis sale",
+      "url": "https://utahskis.com/collections/sale#/filter:tags_category:Demo$2520Skis/sort:ss_price:asc",
+      "enabled": true,
+      "max_results_per_source": 80,
+      "keywords": [
+        "demo skis"
+      ],
+      "searchspring_json": "https://api.searchspring.net/api/search/search.json?siteId=0j0kr5&resultsFormat=native&resultsPerPage=80&page=1&filter.tags_category=Demo%20Skis&sort.ss_price=asc"
     }
   ]
 }

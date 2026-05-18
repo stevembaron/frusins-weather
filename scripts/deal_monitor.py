@@ -227,9 +227,19 @@ def load_config(path: Path) -> dict[str, Any]:
 
 def keyword_allowed(title: str, keywords: list[str], excludes: list[str]) -> bool:
     lowered = title.lower()
-    if any(excluded.lower() in lowered for excluded in excludes):
+    if any(exclude_keyword_matches(lowered, excluded) for excluded in excludes):
         return False
     return not keywords or any(keyword.lower() in lowered for keyword in keywords)
+
+
+def exclude_keyword_matches(value: str, keyword: str) -> bool:
+    normalized = keyword.lower().strip()
+    if not normalized:
+        return False
+    if normalized in {"kid", "kids", "kid's", "kids'"}:
+        return bool(re.search(r"(?<![a-z0-9])kids?'?s?(?![a-z0-9])", value))
+    pattern = re.escape(normalized).replace(r"\ ", r"[-\s]+")
+    return bool(re.search(rf"(?<![a-z0-9]){pattern}(?![a-z0-9])", value))
 
 
 def flatten_json_ld(item: Any) -> list[dict[str, Any]]:
@@ -338,11 +348,77 @@ def shopify_products_json_candidates(
                 continue
 
             original = money(variant.get("compare_at_price"))
-            variant_title = clean_text(str(variant.get("title") or ""))
+            variant_title = normalize_shopify_variant_title(variant.get("title"))
             deal_title = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
             deals.append(make_deal(deal_title, product_url, source_name, current, original, found_at))
 
     return deals
+
+
+def searchspring_candidates(
+    payload_text: str,
+    base_url: str,
+    source_name: str,
+    found_at: str,
+) -> list[Deal]:
+    try:
+        payload = json.loads(payload_text)
+    except json.JSONDecodeError:
+        return []
+
+    deals: list[Deal] = []
+    for item in payload.get("results", []):
+        if not isinstance(item, dict):
+            continue
+
+        title = clean_text(str(item.get("name") or item.get("title") or ""))
+        current = money(item.get("price") or item.get("ss_price"))
+        original = money(item.get("msrp") or item.get("compare_at_price"))
+        if not title or current is None:
+            continue
+
+        handle = clean_text(str(item.get("handle") or ""))
+        item_url = clean_text(str(item.get("url") or ""))
+        if handle:
+            item_url = urljoin(base_url, f"/products/{handle}")
+        elif item_url:
+            item_url = item_url.replace("https://utahskis.myshopify.com", "https://utahskis.com")
+        else:
+            item_url = base_url
+
+        deals.append(
+            make_deal(
+                title,
+                item_url,
+                source_name,
+                current,
+                original,
+                found_at,
+                sizes=searchspring_sizes(item),
+                stock_status="in_stock" if str(item.get("ss_sold_out", "0")) != "1" else "sold_out",
+            )
+        )
+
+    return deals
+
+
+def searchspring_sizes(item: dict[str, Any]) -> list[str] | None:
+    sizes: set[str] = set()
+    for value in item.get("ss_variants_in_stock") or []:
+        text = clean_text(str(value))
+        for pattern in (
+            r"\boption1=([^,}]+)",
+            r"\bdisplay_name=[^-]+-\s*([^,}]+)",
+            r"\btitle=([^,}]+)",
+        ):
+            match = re.search(pattern, text)
+            if not match:
+                continue
+            size = normalize_shopify_variant_title(match.group(1))
+            if size and re.search(r"\d", size):
+                sizes.add(size)
+                break
+    return sorted(sizes) or None
 
 
 def product_variant_deals(product: dict[str, Any], base_url: str, source_name: str, found_at: str) -> list[Deal]:
@@ -363,10 +439,17 @@ def product_variant_deals(product: dict[str, Any], base_url: str, source_name: s
             continue
 
         original = money((variant.get("compareAtPrice") or {}).get("amount"))
-        variant_title = clean_text(str(variant.get("title") or ""))
+        variant_title = normalize_shopify_variant_title(variant.get("title"))
         deal_title = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
         deals.append(make_deal(deal_title, product_url, source_name, current, original, found_at))
     return deals
+
+
+def normalize_shopify_variant_title(value: Any) -> str:
+    title = clean_text(str(value or ""))
+    if not title:
+        return ""
+    return clean_text(re.sub(r"(?i)\s*/\s*n/?a\s*$", "", title))
 
 
 def link_candidates(markup: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
@@ -868,7 +951,7 @@ def current_score(current: float, discount: float | None, savings: float | None)
     return round(discount_score + savings_score + price_score, 2)
 
 
-SIZE_SUFFIX_RE = re.compile(r"(?i)^(?:(?:[^/]+?)\s*/\s*)?(?:\d{3}|\d{2,3}\.\d)\s*cm$")
+SIZE_SUFFIX_RE = re.compile(r"(?i)^(?:(?:[^/]+?)\s*/\s*)?(?:\d{3}|\d{2,3}\.\d)(?:\s*cm)?$")
 
 
 def split_size_variant(title: str) -> tuple[str, str | None]:
@@ -960,6 +1043,17 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
         per_source_limit = int(source_filter_config.get("max_results_per_source", 30) or 30)
 
         try:
+            if source.get("searchspring_json"):
+                candidates = searchspring_candidates(
+                    fetch(source["searchspring_json"], timeout=30),
+                    url,
+                    source_name,
+                    found_at,
+                )
+                all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
+                time.sleep(float(source.get("delay_seconds", 1.2)))
+                continue
+
             if source.get("prefer_reader_fallback") and source.get("reader_fallback"):
                 markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
                 blocked = block_reason(markup)
@@ -1194,6 +1288,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             -(deal["discount_percent"] or 0),
         ),
     )
+    source_counts: dict[str, int] = {}
+    for deal in html_deals:
+        source_counts[str(deal["source"])] = source_counts.get(str(deal["source"]), 0) + 1
+
     for deal in html_deals:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
         discount = f"<span>{deal['discount_percent']}% off</span>" if deal["discount_percent"] else "<span>Price found</span>"
@@ -1203,7 +1301,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
         cards.append(
             f"""
-            <article class="deal">
+            <article class="deal" data-source="{html.escape(deal['source'])}">
               <div>
                 <p class="source">{html.escape(deal['source'])}</p>
                 <h2><a href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">{html.escape(deal['title'])}</a></h2>
@@ -1222,6 +1320,33 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     )
     empty = f"<p class='empty'>{html.escape(empty_message(config))}</p>"
     title = html.escape(report_title(config))
+    source_controls = "".join(
+        f"""
+        <label class="source-toggle">
+          <input type="checkbox" value="{html.escape(source)}" checked />
+          <span>{html.escape(source)}</span>
+          <b>{count}</b>
+        </label>
+        """
+        for source, count in sorted(source_counts.items())
+    )
+    source_filter = (
+        f"""
+        <section class="filters" aria-label="Store filters">
+          <div class="filter-head">
+            <h2>Stores</h2>
+            <div class="filter-actions">
+              <button type="button" data-filter-action="all">All</button>
+              <button type="button" data-filter-action="none">None</button>
+            </div>
+          </div>
+          <div class="source-toggles">{source_controls}</div>
+          <p class="meta visible-count"><span id="visibleDealCount">{len(html_deals)}</span> shown</p>
+        </section>
+        """
+        if source_controls
+        else ""
+    )
 
     return f"""<!doctype html>
 <html lang="en">
@@ -1237,9 +1362,21 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       header {{ display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 18px; }}
       h1 {{ margin: 0; font-size: 2rem; }}
       h2 {{ margin: 0; font-size: 1.05rem; line-height: 1.35; }}
+      button {{ border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--ink); padding: 7px 10px; font: inherit; cursor: pointer; }}
+      button:hover {{ border-color: var(--accent); color: var(--accent); }}
       a {{ color: inherit; }}
       .meta, .source, .was {{ color: var(--muted); }}
+      .filters {{ margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: #ffffff; border-radius: 8px; }}
+      .filter-head {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }}
+      .filter-head h2 {{ font-size: 1rem; }}
+      .filter-actions {{ display: flex; gap: 8px; }}
+      .source-toggles {{ display: flex; flex-wrap: wrap; gap: 8px; }}
+      .source-toggle {{ display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); font-size: .88rem; cursor: pointer; }}
+      .source-toggle input {{ accent-color: var(--accent); }}
+      .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
+      .visible-count {{ margin: 12px 0 0; }}
       .deal {{ display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }}
+      .deal[hidden] {{ display: none; }}
       .source {{ margin: 0 0 5px; font-size: .86rem; }}
       .price {{ text-align: right; min-width: 120px; }}
       .price strong {{ display: block; font-size: 1.45rem; color: var(--hot); }}
@@ -1251,7 +1388,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 620px) {{ header, .deal {{ display: block; }} .price {{ text-align: left; margin-top: 12px; }} }}
+      @media (max-width: 620px) {{ header, .deal, .filter-head {{ display: block; }} .filter-actions {{ margin-top: 10px; }} .price {{ text-align: left; margin-top: 12px; }} }}
     </style>
   </head>
   <body>
@@ -1263,9 +1400,40 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         </div>
         <p class="meta">{payload['deal_count']} deals from {payload['sources_checked']} enabled sources</p>
       </header>
-      {''.join(cards) if cards else empty}
+      {source_filter}
+      <section class="deals-list">
+        {''.join(cards) if cards else empty}
+      </section>
       {"<section class='errors'><h2>Source errors</h2><ul>" + errors + "</ul></section>" if errors else ""}
     </main>
+    <script>
+      const checkboxes = [...document.querySelectorAll('.source-toggle input')];
+      const deals = [...document.querySelectorAll('.deal')];
+      const visibleDealCount = document.querySelector('#visibleDealCount');
+
+      function applyStoreFilters() {{
+        const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        let visible = 0;
+        for (const deal of deals) {{
+          const show = enabled.has(deal.dataset.source);
+          deal.hidden = !show;
+          if (show) visible += 1;
+        }}
+        if (visibleDealCount) visibleDealCount.textContent = visible;
+      }}
+
+      for (const box of checkboxes) {{
+        box.addEventListener('change', applyStoreFilters);
+      }}
+      for (const button of document.querySelectorAll('[data-filter-action]')) {{
+        button.addEventListener('click', () => {{
+          const checked = button.dataset.filterAction === 'all';
+          for (const box of checkboxes) box.checked = checked;
+          applyStoreFilters();
+        }});
+      }}
+      applyStoreFilters();
+    </script>
   </body>
 </html>
 """
