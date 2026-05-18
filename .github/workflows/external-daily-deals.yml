@@ -1,6 +1,8 @@
 name: External Daily Deal Refresh
 
 on:
+  schedule:
+    - cron: "30 12 * * *"
   workflow_dispatch:
   repository_dispatch:
     types:
