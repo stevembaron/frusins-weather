@@ -1474,7 +1474,7 @@ def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str
 
     json_output.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     markdown_output.write_text(render_markdown(payload, config), encoding="utf-8")
-    html_output = render_html(payload, config)
+    html_output = trim_trailing_whitespace(render_html(payload, config))
     html_output_path.write_text(html_output, encoding="utf-8")
     web_output.write_text(html_output, encoding="utf-8")
 
@@ -1486,6 +1486,10 @@ def resolve_output_path(value: str | None, default: Path) -> Path:
     if not path.is_absolute():
         path = ROOT / path
     return path
+
+
+def trim_trailing_whitespace(value: str) -> str:
+    return "\n".join(line.rstrip() for line in value.splitlines()) + "\n"
 
 
 def report_title(config: dict[str, Any]) -> str:
@@ -1546,6 +1550,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     source_counts: dict[str, int] = {}
     for deal in html_deals:
         source_counts[str(deal["source"])] = source_counts.get(str(deal["source"]), 0) + 1
+    image_count = sum(1 for deal in html_deals if deal.get("image_url"))
+    price_drop_count = sum(1 for deal in html_deals if deal.get("price_trend") == "down")
+    best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
+    lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
 
     for deal in html_deals:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
@@ -1566,9 +1574,19 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         )
         cards.append(
             f"""
-            <article class="deal" data-source="{html.escape(deal['source'])}">
+            <article
+              class="deal"
+              data-source="{html.escape(deal['source'])}"
+              data-title="{html.escape(str(deal['title']).lower())}"
+              data-price="{deal['current_price']:.2f}"
+              data-discount="{deal['discount_percent'] or 0:.1f}"
+              data-savings="{deal['savings'] or 0:.2f}"
+              data-score="{deal['score']:.2f}"
+              data-trend="{html.escape(str(deal.get('price_trend') or ''))}"
+              data-has-image="{'true' if deal.get('image_url') else 'false'}"
+            >
               {thumbnail}
-              <div>
+              <div class="deal-main">
                 <p class="source">{html.escape(deal['source'])}</p>
                 <h2><a href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">{html.escape(deal['title'])}</a></h2>
               </div>
@@ -1598,16 +1616,43 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     )
     source_filter = (
         f"""
-        <section class="filters" aria-label="Store filters">
-          <div class="filter-head">
-            <h2>Stores</h2>
-            <div class="filter-actions">
-              <button type="button" data-filter-action="all">All</button>
-              <button type="button" data-filter-action="none">None</button>
+        <section class="controls" aria-label="Deal controls">
+          <div class="tool-grid">
+            <label class="field search-field">
+              <span>Search</span>
+              <input id="dealSearch" type="search" placeholder="brand, model, store..." autocomplete="off" />
+            </label>
+            <label class="field">
+              <span>Sort</span>
+              <select id="dealSort">
+                <option value="price-asc">Lowest price</option>
+                <option value="discount-desc">Biggest discount</option>
+                <option value="savings-desc">Most saved</option>
+                <option value="score-desc">Best score</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Max price</span>
+              <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
+            </label>
+            <div class="quick-filters" aria-label="Quick filters">
+              <label><input id="photoOnly" type="checkbox" /> Photos only</label>
+              <label><input id="dropOnly" type="checkbox" /> Price drops</label>
+              <button type="button" id="resetFilters">Reset</button>
             </div>
           </div>
-          <div class="source-toggles">{source_controls}</div>
-          <p class="meta visible-count"><span id="visibleDealCount">{len(html_deals)}</span> shown</p>
+          <details class="store-panel" open>
+            <summary>
+              <span>Stores</span>
+              <span class="meta">{len(source_counts)} active</span>
+            </summary>
+            <div class="filter-actions">
+              <button type="button" data-filter-action="all">All stores</button>
+              <button type="button" data-filter-action="none">No stores</button>
+            </div>
+            <div class="source-toggles">{source_controls}</div>
+          </details>
+          <p class="meta visible-count"><strong id="visibleDealCount">{len(html_deals)}</strong> shown</p>
         </section>
         """
         if source_controls
@@ -1621,37 +1666,54 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <style>
-      :root {{ color-scheme: light; --ink:#16201c; --muted:#52645c; --line:#d8e0dc; --accent:#0d7c66; --hot:#b42318; --bg:#f7f8f5; }}
+      :root {{ color-scheme: light; --ink:#17211d; --muted:#586a62; --line:#d9e1dc; --accent:#0d7c66; --accent-soft:#e7f3ef; --hot:#b42318; --gold:#8a5b00; --bg:#f4f2ea; --card:#fffef9; }}
       * {{ box-sizing: border-box; }}
-      body {{ margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }}
-      main {{ width: min(1060px, 100%); margin: 0 auto; padding: 32px 14px 56px; }}
-      header {{ display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 18px; }}
-      h1 {{ margin: 0; font-size: 2rem; }}
+      body {{ margin: 0; font-family: Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 0%, #ffffff 0, #f4f2ea 34%, #edf3ef 100%); color: var(--ink); }}
+      main {{ width: min(1120px, 100%); margin: 0 auto; padding: 28px 14px 56px; }}
+      header {{ display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding: 24px; margin-bottom: 18px; border: 1px solid rgba(13,124,102,.16); border-radius: 22px; background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(232,244,239,.86)); box-shadow: 0 18px 45px rgba(39,61,51,.08); }}
+      h1 {{ margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -0.055em; line-height: .95; }}
       h2 {{ margin: 0; font-size: 1.05rem; line-height: 1.35; }}
-      button {{ border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--ink); padding: 7px 10px; font: inherit; cursor: pointer; }}
+      button, input, select {{ font: inherit; }}
+      button {{ border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 8px 12px; cursor: pointer; }}
       button:hover {{ border-color: var(--accent); color: var(--accent); }}
+      input, select {{ width: 100%; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--ink); padding: 11px 12px; }}
+      input:focus, select:focus {{ outline: 3px solid rgba(13,124,102,.18); border-color: var(--accent); }}
       a {{ color: inherit; }}
       .meta, .source, .was {{ color: var(--muted); }}
-      .filters {{ margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: #ffffff; border-radius: 8px; }}
-      .filter-head {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }}
-      .filter-head h2 {{ font-size: 1rem; }}
+      .stats {{ display: grid; grid-template-columns: repeat(4, minmax(86px, 1fr)); gap: 10px; min-width: min(440px, 100%); }}
+      .stat {{ padding: 12px; border: 1px solid rgba(13,124,102,.16); border-radius: 16px; background: rgba(255,255,255,.72); }}
+      .stat strong {{ display: block; font-size: 1.35rem; letter-spacing: -0.04em; }}
+      .stat span {{ color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
+      .controls {{ position: sticky; top: 0; z-index: 10; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 18px; box-shadow: 0 14px 32px rgba(39,61,51,.08); backdrop-filter: blur(12px); }}
+      .tool-grid {{ display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }}
+      .field span {{ display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
+      .quick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }}
+      .quick-filters label {{ display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }}
+      .quick-filters input {{ width: auto; accent-color: var(--accent); }}
+      .store-panel {{ margin-top: 12px; }}
+      .store-panel summary {{ display: flex; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 700; }}
       .filter-actions {{ display: flex; gap: 8px; }}
+      .store-panel .filter-actions {{ margin: 10px 0; }}
       .source-toggles {{ display: flex; flex-wrap: wrap; gap: 8px; }}
       .source-toggle {{ display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); font-size: .88rem; cursor: pointer; }}
       .source-toggle input {{ accent-color: var(--accent); }}
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
-      .deal {{ display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }}
+      .deals-list {{ display: grid; gap: 12px; }}
+      .deal {{ display: grid; grid-template-columns: 104px 1fr auto; gap: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 26px rgba(39,61,51,.06); align-items: start; }}
+      .deal:hover {{ border-color: rgba(13,124,102,.45); transform: translateY(-1px); transition: transform .16s ease, border-color .16s ease; }}
       .deal[hidden] {{ display: none; }}
-      .thumb {{ display: block; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }}
+      .thumb {{ display: block; width: 104px; height: 104px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: white; }}
       .thumb img {{ width: 100%; height: 100%; object-fit: contain; display: block; }}
       .thumb-empty {{ background: linear-gradient(135deg, #ffffff, #eef2ed); }}
       .source {{ margin: 0 0 5px; font-size: .86rem; }}
+      .deal-main {{ min-width: 0; }}
+      .deal-main h2 a {{ text-decoration-thickness: 1px; text-underline-offset: 3px; }}
       .price {{ text-align: right; min-width: 120px; }}
-      .price strong {{ display: block; font-size: 1.45rem; color: var(--hot); }}
+      .price strong {{ display: block; font-size: 1.6rem; color: var(--hot); letter-spacing: -0.04em; }}
       .was {{ display: block; text-decoration: line-through; }}
       .badges {{ grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; }}
-      .badges span {{ border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }}
+      .badges span {{ border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; background: white; font-size: .86rem; }}
       .trend-down {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
@@ -1661,7 +1723,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 620px) {{ header, .filter-head {{ display: block; }} .deal {{ grid-template-columns: 76px 1fr; }} .thumb {{ width: 76px; height: 76px; }} .filter-actions {{ margin-top: 10px; }} .price {{ grid-column: 2; text-align: left; margin-top: 4px; }} .badges {{ grid-column: 1 / -1; }} }}
+      @media (max-width: 850px) {{ header, .tool-grid {{ grid-template-columns: 1fr; }} .stats {{ min-width: 0; }} .controls {{ position: static; }} }}
+      @media (max-width: 620px) {{ main {{ padding-inline: 10px; }} header {{ padding: 18px; }} .stats {{ grid-template-columns: repeat(2, 1fr); }} .deal {{ grid-template-columns: 82px 1fr; gap: 12px; }} .thumb {{ width: 82px; height: 82px; }} .price {{ grid-column: 2; text-align: left; margin-top: 2px; }} .badges {{ grid-column: 1 / -1; }} }}
     </style>
   </head>
   <body>
@@ -1671,7 +1734,12 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           <h1>{title}</h1>
           <p class="meta">Generated {html.escape(payload['generated_at'])}</p>
         </div>
-        <p class="meta">{payload['deal_count']} deals from {payload['sources_checked']} enabled sources</p>
+        <div class="stats" aria-label="Report summary">
+          <div class="stat"><strong>{payload['deal_count']}</strong><span>Deals</span></div>
+          <div class="stat"><strong>${lowest_price:.0f}</strong><span>Lowest</span></div>
+          <div class="stat"><strong>{best_discount:.0f}%</strong><span>Best off</span></div>
+          <div class="stat"><strong>{image_count}</strong><span>Photos</span></div>
+        </div>
       </header>
       {source_filter}
       <section class="deals-list">
@@ -1682,30 +1750,79 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
       const deals = [...document.querySelectorAll('.deal')];
+      const dealsList = document.querySelector('.deals-list');
       const visibleDealCount = document.querySelector('#visibleDealCount');
+      const searchInput = document.querySelector('#dealSearch');
+      const sortSelect = document.querySelector('#dealSort');
+      const maxPriceInput = document.querySelector('#maxPrice');
+      const photoOnly = document.querySelector('#photoOnly');
+      const dropOnly = document.querySelector('#dropOnly');
+      const resetFilters = document.querySelector('#resetFilters');
 
-      function applyStoreFilters() {{
+      function numericValue(deal, key) {{
+        return Number.parseFloat(deal.dataset[key] || '0') || 0;
+      }}
+
+      function sortDeals() {{
+        const sorted = [...deals].sort((a, b) => {{
+          const mode = sortSelect?.value || 'price-asc';
+          if (mode === 'discount-desc') return numericValue(b, 'discount') - numericValue(a, 'discount');
+          if (mode === 'savings-desc') return numericValue(b, 'savings') - numericValue(a, 'savings');
+          if (mode === 'score-desc') return numericValue(b, 'score') - numericValue(a, 'score');
+          return numericValue(a, 'price') - numericValue(b, 'price');
+        }});
+        for (const deal of sorted) dealsList?.appendChild(deal);
+      }}
+
+      function applyFilters() {{
         const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        const query = (searchInput?.value || '').trim().toLowerCase();
+        const maxPrice = Number.parseFloat(maxPriceInput?.value || '');
+        const requirePhoto = Boolean(photoOnly?.checked);
+        const requireDrop = Boolean(dropOnly?.checked);
         let visible = 0;
         for (const deal of deals) {{
-          const show = enabled.has(deal.dataset.source);
+          const matchesStore = enabled.has(deal.dataset.source);
+          const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
+          const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
+          const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
+          const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
+          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop;
           deal.hidden = !show;
           if (show) visible += 1;
         }}
         if (visibleDealCount) visibleDealCount.textContent = visible;
       }}
 
+      function updateView() {{
+        sortDeals();
+        applyFilters();
+      }}
+
       for (const box of checkboxes) {{
-        box.addEventListener('change', applyStoreFilters);
+        box.addEventListener('change', updateView);
       }}
       for (const button of document.querySelectorAll('[data-filter-action]')) {{
         button.addEventListener('click', () => {{
           const checked = button.dataset.filterAction === 'all';
           for (const box of checkboxes) box.checked = checked;
-          applyStoreFilters();
+          updateView();
         }});
       }}
-      applyStoreFilters();
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly]) {{
+        control?.addEventListener('input', updateView);
+        control?.addEventListener('change', updateView);
+      }}
+      resetFilters?.addEventListener('click', () => {{
+        if (searchInput) searchInput.value = '';
+        if (sortSelect) sortSelect.value = 'price-asc';
+        if (maxPriceInput) maxPriceInput.value = '';
+        if (photoOnly) photoOnly.checked = false;
+        if (dropOnly) dropOnly.checked = false;
+        for (const box of checkboxes) box.checked = true;
+        updateView();
+      }});
+      updateView();
     </script>
   </body>
 </html>
