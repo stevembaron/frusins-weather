@@ -24,13 +24,20 @@
       .stat strong { display: block; font-size: 1.35rem; letter-spacing: -0.04em; }
       .stat span { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
       .controls { position: sticky; top: 0; z-index: 10; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 18px; box-shadow: 0 14px 32px rgba(39,61,51,.08); backdrop-filter: blur(12px); }
+      .controls-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 800; list-style: none; }
+      .controls-summary::-webkit-details-marker { display: none; }
+      .controls-summary::before { content: "Hide"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 5px 9px; font-size: .78rem; font-weight: 700; order: 3; }
+      .controls:not([open]) .controls-summary::before { content: "Show"; }
+      .summary-count { color: var(--muted); font-weight: 500; margin-left: auto; }
+      .summary-count strong { color: var(--ink); }
+      .controls-body { margin-top: 12px; }
       .tool-grid { display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }
       .field span { display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
       .quick-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }
       .quick-filters label { display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }
       .quick-filters input { width: auto; accent-color: var(--accent); }
       .store-panel { margin-top: 12px; }
-      .store-panel summary { display: flex; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 700; }
+      .store-head { display: flex; justify-content: space-between; gap: 12px; }
       .filter-actions { display: flex; gap: 8px; }
       .store-panel .filter-actions { margin: 10px 0; }
       .source-toggles { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -71,7 +78,7 @@
       <header>
         <div>
           <h1>Ski Gear Deals</h1>
-          <p class="meta">Generated 2026-05-18T18:40:31+00:00</p>
+          <p class="meta">Generated 2026-05-18T12:56:28-06:00</p>
         </div>
         <div class="stats" aria-label="Report summary">
           <div class="stat"><strong>187</strong><span>Deals</span></div>
@@ -81,41 +88,46 @@
         </div>
       </header>
 
-        <section class="controls" aria-label="Deal controls">
-          <div class="tool-grid">
-            <label class="field search-field">
-              <span>Search</span>
-              <input id="dealSearch" type="search" placeholder="brand, model, store..." autocomplete="off" />
-            </label>
-            <label class="field">
-              <span>Sort</span>
-              <select id="dealSort">
-                <option value="price-asc">Lowest price</option>
-                <option value="discount-desc">Biggest discount</option>
-                <option value="savings-desc">Most saved</option>
-                <option value="score-desc">Best score</option>
-              </select>
-            </label>
-            <label class="field">
-              <span>Max price</span>
-              <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
-            </label>
-            <div class="quick-filters" aria-label="Quick filters">
-              <label><input id="photoOnly" type="checkbox" /> Photos only</label>
-              <label><input id="dropOnly" type="checkbox" /> Price drops</label>
-              <button type="button" id="resetFilters">Reset</button>
+        <details class="controls" aria-label="Deal controls" open>
+          <summary class="controls-summary">
+            <span>Search and stores</span>
+            <span class="summary-count"><strong id="visibleDealCount">187</strong> shown</span>
+          </summary>
+          <div class="controls-body">
+            <div class="tool-grid">
+              <label class="field search-field">
+                <span>Search</span>
+                <input id="dealSearch" type="search" placeholder="brand, model, store..." autocomplete="off" />
+              </label>
+              <label class="field">
+                <span>Sort</span>
+                <select id="dealSort">
+                  <option value="price-asc">Lowest price</option>
+                  <option value="discount-desc">Biggest discount</option>
+                  <option value="savings-desc">Most saved</option>
+                  <option value="score-desc">Best score</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Max price</span>
+                <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
+              </label>
+              <div class="quick-filters" aria-label="Quick filters">
+                <label><input id="photoOnly" type="checkbox" /> Photos only</label>
+                <label><input id="dropOnly" type="checkbox" /> Price drops</label>
+                <button type="button" id="resetFilters">Reset</button>
+              </div>
             </div>
-          </div>
-          <details class="store-panel" open>
-            <summary>
-              <span>Stores</span>
-              <span class="meta">6 active</span>
-            </summary>
-            <div class="filter-actions">
-              <button type="button" data-filter-action="all">All stores</button>
-              <button type="button" data-filter-action="none">No stores</button>
-            </div>
-            <div class="source-toggles">
+            <div class="store-panel">
+              <div class="store-head">
+                <strong>Stores</strong>
+                <span class="meta">6 active</span>
+              </div>
+              <div class="filter-actions">
+                <button type="button" data-filter-action="all">All stores</button>
+                <button type="button" data-filter-action="none">No stores</button>
+              </div>
+              <div class="source-toggles">
         <label class="source-toggle">
           <input type="checkbox" value="CampSaver backcountry skis" checked />
           <span>CampSaver backcountry skis</span>
@@ -152,9 +164,9 @@
           <b>38</b>
         </label>
         </div>
-          </details>
-          <p class="meta visible-count"><strong id="visibleDealCount">187</strong> shown</p>
-        </section>
+            </div>
+          </div>
+        </details>
 
       <section class="deals-list">
 
