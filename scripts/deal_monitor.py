@@ -1646,6 +1646,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <button type="button" id="resetFilters">Reset</button>
               </div>
             </div>
+            <p class="filter-note" id="filterNote" hidden></p>
             <div class="store-panel">
               <div class="store-head">
                 <strong>Stores</strong>
@@ -1702,6 +1703,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .quick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }}
       .quick-filters label {{ display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }}
       .quick-filters input {{ width: auto; accent-color: var(--accent); }}
+      .filter-note {{ margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }}
+      .filter-note[hidden] {{ display: none; }}
       .store-panel {{ margin-top: 12px; }}
       .store-head {{ display: flex; justify-content: space-between; gap: 12px; }}
       .filter-actions {{ display: flex; gap: 8px; }}
@@ -1770,6 +1773,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const photoOnly = document.querySelector('#photoOnly');
       const dropOnly = document.querySelector('#dropOnly');
       const resetFilters = document.querySelector('#resetFilters');
+      const filterNote = document.querySelector('#filterNote');
 
       function numericValue(deal, key) {{
         return Number.parseFloat(deal.dataset[key] || '0') || 0;
@@ -1793,6 +1797,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requirePhoto = Boolean(photoOnly?.checked);
         const requireDrop = Boolean(dropOnly?.checked);
         let visible = 0;
+        const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
           const matchesStore = enabled.has(deal.dataset.source);
           const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
@@ -1802,8 +1807,20 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop;
           deal.hidden = !show;
           if (show) visible += 1;
+          if (requirePhoto && matchesStore && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
+            hiddenNoPhotoSources.add(deal.dataset.source);
+          }}
         }}
         if (visibleDealCount) visibleDealCount.textContent = visible;
+        if (filterNote) {{
+          if (hiddenNoPhotoSources.size) {{
+            filterNote.hidden = false;
+            filterNote.textContent = `Photos only is hiding image-less stores: ${{[...hiddenNoPhotoSources].sort().join(', ')}}. Hit Reset or uncheck Photos only to show them.`;
+          }} else {{
+            filterNote.hidden = true;
+            filterNote.textContent = '';
+          }}
+        }}
       }}
 
       function updateView() {{
