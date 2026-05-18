@@ -30,6 +30,7 @@ DATA_DIR = ROOT / "data"
 JSON_OUTPUT = DATA_DIR / "deals.json"
 HTML_OUTPUT = DATA_DIR / "deals.html"
 MD_OUTPUT = DATA_DIR / "deal_report.md"
+PRICE_HISTORY_OUTPUT = DATA_DIR / "price_history.json"
 WEB_DIR = ROOT / "ski-deals"
 WEB_OUTPUT = WEB_DIR / "index.html"
 
@@ -113,6 +114,11 @@ class Deal:
     found_at: str
     sizes: list[str] | None = None
     stock_status: str | None = None
+    previous_price: float | None = None
+    price_change: float | None = None
+    price_change_percent: float | None = None
+    price_trend: str | None = None
+    first_seen_at: str | None = None
 
 
 @dataclass
@@ -1200,21 +1206,142 @@ def stock_label(status: str | None) -> str | None:
     return None
 
 
+def price_history_key(deal: Deal | dict[str, Any]) -> str:
+    source = str(deal["source"] if isinstance(deal, dict) else deal.source)
+    title = str(deal["title"] if isinstance(deal, dict) else deal.title)
+    url = str(deal["url"] if isinstance(deal, dict) else deal.url)
+    parsed = urlparse(url)
+    normalized_url = urlunparse(parsed._replace(query="", fragment="")).rstrip("/")
+    if normalized_url:
+        return f"{source}|{normalized_url}".lower()
+    normalized_title = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    return f"{source}|{normalized_title}".lower()
+
+
+def load_price_history(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {"items": {}}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {"items": {}}
+    if not isinstance(payload, dict) or not isinstance(payload.get("items"), dict):
+        return {"items": {}}
+    return payload
+
+
+def latest_prior_observation(item: dict[str, Any], today: str) -> dict[str, Any] | None:
+    observations = item.get("observations")
+    if not isinstance(observations, list):
+        return None
+    prior = [
+        observation
+        for observation in observations
+        if isinstance(observation, dict) and str(observation.get("date", "")) < today
+    ]
+    return max(prior, key=lambda observation: str(observation.get("date", ""))) if prior else None
+
+
+def annotate_and_update_price_history(deals: list[Deal], history_path: Path, generated_at: str) -> dict[str, Any]:
+    history = load_price_history(history_path)
+    items = history.setdefault("items", {})
+    today = generated_at[:10]
+
+    for deal in deals:
+        key = price_history_key(deal)
+        existing = items.get(key) if isinstance(items.get(key), dict) else {}
+        previous = latest_prior_observation(existing, today)
+        if previous:
+            previous_price = money(previous.get("price"))
+            if previous_price is not None:
+                deal.previous_price = previous_price
+                deal.price_change = round(deal.current_price - previous_price, 2)
+                if previous_price:
+                    deal.price_change_percent = round((deal.price_change / previous_price) * 100, 1)
+                if deal.price_change < 0:
+                    deal.price_trend = "down"
+                elif deal.price_change > 0:
+                    deal.price_trend = "up"
+                else:
+                    deal.price_trend = "flat"
+        else:
+            deal.price_trend = "new"
+
+        observations = existing.get("observations")
+        if not isinstance(observations, list):
+            observations = []
+        observations = [
+            observation
+            for observation in observations
+            if isinstance(observation, dict) and str(observation.get("date", "")) != today
+        ]
+        observations.append({"date": today, "price": deal.current_price, "seen_at": generated_at})
+        observations = sorted(observations, key=lambda observation: str(observation.get("date", "")))[-90:]
+
+        first_seen_at = str(existing.get("first_seen_at") or generated_at)
+        deal.first_seen_at = first_seen_at
+        lowest = min([deal.current_price] + [price for price in [money(obs.get("price")) for obs in observations] if price is not None])
+        highest = max([deal.current_price] + [price for price in [money(obs.get("price")) for obs in observations] if price is not None])
+        items[key] = {
+            "title": deal.title,
+            "url": deal.url,
+            "source": deal.source,
+            "first_seen_at": first_seen_at,
+            "last_seen_at": generated_at,
+            "current_price": deal.current_price,
+            "lowest_price": round(lowest, 2),
+            "highest_price": round(highest, 2),
+            "observations": observations,
+        }
+
+    history["generated_at"] = generated_at
+    history["tracked_count"] = len(items)
+    history_path.parent.mkdir(parents=True, exist_ok=True)
+    history_path.write_text(json.dumps(history, indent=2), encoding="utf-8")
+    return history
+
+
+def price_trend_label(deal: dict[str, Any]) -> str | None:
+    trend = deal.get("price_trend")
+    change = deal.get("price_change")
+    percent = deal.get("price_change_percent")
+    previous = deal.get("previous_price")
+    percent_label = f" ({abs(percent):.1f}%)" if isinstance(percent, (int, float)) else ""
+    if trend == "down" and change is not None:
+        return f"Down ${abs(change):.2f}{percent_label} since prior day"
+    if trend == "up" and change is not None:
+        return f"Up ${abs(change):.2f}{percent_label} since prior day"
+    if trend == "flat" and previous is not None:
+        return "Same as prior day"
+    if trend == "new":
+        return "Newly tracked"
+    return None
+
+
 def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str, Any]) -> None:
     json_output = resolve_output_path(config.get("json_output"), JSON_OUTPUT)
     markdown_output = resolve_output_path(config.get("markdown_output"), MD_OUTPUT)
     html_output_path = resolve_output_path(config.get("html_output"), HTML_OUTPUT)
     web_output = resolve_output_path(config.get("web_output"), WEB_OUTPUT)
+    history_output = resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT)
 
     json_output.parent.mkdir(parents=True, exist_ok=True)
     markdown_output.parent.mkdir(parents=True, exist_ok=True)
     html_output_path.parent.mkdir(parents=True, exist_ok=True)
     web_output.parent.mkdir(parents=True, exist_ok=True)
     generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
+    history = annotate_and_update_price_history(deals, history_output, generated_at)
+    changed_deals = [
+        deal
+        for deal in deals
+        if deal.price_trend in {"up", "down"} and deal.price_change is not None
+    ]
     payload = {
         "generated_at": generated_at,
         "deal_count": len(deals),
         "sources_checked": len([source for source in config.get("sources", []) if source.get("enabled", True)]),
+        "price_history_count": int(history.get("tracked_count") or 0),
+        "price_change_count": len(changed_deals),
         "deals": [asdict(deal) for deal in deals],
         "errors": [asdict(error) for error in errors],
     }
@@ -1259,11 +1386,13 @@ def render_markdown(payload: dict[str, Any], config: dict[str, Any]) -> str:
         for index, deal in enumerate(payload["deals"][:25], start=1):
             discount = f" ({deal['discount_percent']}% off)" if deal["discount_percent"] else ""
             original = f" was ${deal['original_price']:.2f}" if deal["original_price"] else ""
+            trend = price_trend_label(deal)
             status = stock_label(deal.get("stock_status"))
             lines.extend(
                 [
                     f"{index}. [{deal['title']}]({deal['url']})",
                     f"   ${deal['current_price']:.2f}{original}{discount} - {deal['source']}",
+                    f"   Price trend: {trend}" if trend else "",
                     f"   Sizes: {', '.join(deal['sizes'])}" if deal.get("sizes") else "",
                     f"   Stock: {status}" if status else "",
                     "",
@@ -1296,6 +1425,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
         discount = f"<span>{deal['discount_percent']}% off</span>" if deal["discount_percent"] else "<span>Price found</span>"
         savings = f"<span>Save ${deal['savings']:.2f}</span>" if deal["savings"] else ""
+        trend_label = price_trend_label(deal)
+        trend_class = f" trend-{html.escape(str(deal.get('price_trend') or 'unknown'))}"
+        trend_badge = f"<span class='trend{trend_class}'>{html.escape(trend_label)}</span>" if trend_label else ""
         sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
         status = stock_label(deal.get("stock_status"))
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
@@ -1310,7 +1442,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{discount}{savings}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{discount}{savings}{trend_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1383,6 +1515,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .was {{ display: block; text-decoration: line-through; }}
       .badges {{ grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }}
       .badges span {{ border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }}
+      .trend-down {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
+      .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
+      .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
       .stock-in_stock {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .stock-sold_out {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
@@ -1452,6 +1588,7 @@ def main() -> int:
     html_output = resolve_output_path(config.get("html_output"), HTML_OUTPUT)
     web_output = resolve_output_path(config.get("web_output"), WEB_OUTPUT)
     markdown_output = resolve_output_path(config.get("markdown_output"), MD_OUTPUT)
+    history_output = resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT)
 
     print(f"Checked {len([s for s in config.get('sources', []) if s.get('enabled', True)])} sources.")
     print(f"Found {len(deals)} matching deals.")
@@ -1459,6 +1596,7 @@ def main() -> int:
     print(f"Wrote {html_output}")
     print(f"Wrote {web_output}")
     print(f"Wrote {markdown_output}")
+    print(f"Wrote {history_output}")
     if errors:
         print(f"{len(errors)} source(s) had errors.", file=sys.stderr)
     return 0 if deals or not errors else 1

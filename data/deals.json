@@ -1,7 +1,9 @@
 {
-  "generated_at": "2026-05-18T15:08:51+00:00",
-  "deal_count": 175,
+  "generated_at": "2026-05-18T09:15:31-06:00",
+  "deal_count": 187,
   "sources_checked": 6,
+  "price_history_count": 187,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Dynastar M-Pro 99 W Skis - Women's 2022",
@@ -12,11 +14,16 @@
       "discount_percent": 82.9,
       "savings": 579.96,
       "score": 135.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Dynastar E-Pro 90 Skis - Women's 2024",
@@ -27,11 +34,16 @@
       "discount_percent": 80.0,
       "savings": 559.96,
       "score": 132.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "162 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird 104 Ti Skis - Women's 2024",
@@ -42,11 +54,16 @@
       "discount_percent": 76.5,
       "savings": 649.96,
       "score": 127.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Soul 7 HD Skis + Marker Squire 11 Bindings 2020 - Used",
@@ -57,11 +74,16 @@
       "discount_percent": 75.0,
       "savings": 712.46,
       "score": 125.25,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Blizzard Zero G LT 80 W Skis - Women's 2025",
@@ -72,11 +94,34 @@
       "discount_percent": 71.9,
       "savings": 574.96,
       "score": 122.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal",
+      "url": "https://www.campsaver.com/g3-findr-flx-r3-94-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 237.6,
+      "original_price": 662.0,
+      "discount_percent": 64.1,
+      "savings": 424.4,
+      "score": 114.35,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Stance 88 Womens Skis",
@@ -87,12 +132,17 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168cm",
         "174cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Playmaker 101 Mens Demo Skis 2026",
@@ -103,11 +153,16 @@
       "discount_percent": 63.9,
       "savings": 575.0,
       "score": 112.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "180"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used",
@@ -118,11 +173,34 @@
       "discount_percent": 63.5,
       "savings": 539.98,
       "score": 112.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal",
+      "url": "https://www.campsaver.com/g3-seekr-r3-100-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 374.4,
+      "original_price": 1041.0,
+      "discount_percent": 64.0,
+      "savings": 666.6,
+      "score": 111.51,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Peak Skis Peak 98 By Dav Skis 2025",
@@ -133,11 +211,16 @@
       "discount_percent": 61.1,
       "savings": 549.03,
       "score": 109.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Playmaker 87 Mens Demo Skis 2026",
@@ -148,11 +231,16 @@
       "discount_percent": 59.6,
       "savings": 405.0,
       "score": 109.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Season Nexus Skis 2026 - Used",
@@ -163,11 +251,16 @@
       "discount_percent": 60.0,
       "savings": 449.97,
       "score": 109.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "158 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Santa Ana 102 Skis - Women's 2025",
@@ -178,11 +271,16 @@
       "discount_percent": 60.0,
       "savings": 510.0,
       "score": 108.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "173 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 87 Ti Womens Demo Skis 2026",
@@ -193,13 +291,18 @@
       "discount_percent": 60.0,
       "savings": 525.01,
       "score": 108.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "149",
         "156",
         "163"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Wingman 80 Ti Mens Demo Skis 2026",
@@ -210,11 +313,16 @@
       "discount_percent": 57.7,
       "savings": 375.0,
       "score": 107.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird Soul 92 Xp11 Womens Demo Skis 2026",
@@ -225,27 +333,17 @@
       "discount_percent": 60.0,
       "savings": 600.01,
       "score": 107.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156",
         "166"
       ],
-      "stock_status": "in_stock"
-    },
-    {
-      "title": "Elan Playmaker 111 Demo Skis 2026",
-      "url": "https://utahskis.com/products/elan-playmaker-111-demo-skis-2026",
-      "source": "Utah Skis demo skis sale",
-      "current_price": 399.99,
-      "original_price": 999.99,
-      "discount_percent": 60.0,
-      "savings": 600.0,
-      "score": 107.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
-      "sizes": [
-        "188"
-      ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026",
@@ -256,14 +354,39 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156",
         "166",
         "176",
         "184"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "Elan Playmaker 111 Demo Skis 2026",
+      "url": "https://utahskis.com/products/elan-playmaker-111-demo-skis-2026",
+      "source": "Utah Skis demo skis sale",
+      "current_price": 399.99,
+      "original_price": 999.99,
+      "discount_percent": 60.0,
+      "savings": 600.0,
+      "score": 107.0,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": [
+        "188"
+      ],
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Arv 100 Mens Demo Skis 2026",
@@ -274,12 +397,17 @@
       "discount_percent": 59.5,
       "savings": 550.01,
       "score": 107.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172",
         "179"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Unleashed 90 Skis 2025",
@@ -290,11 +418,16 @@
       "discount_percent": 55.6,
       "savings": 250.02,
       "score": 106.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Scott Pure Free 90 Ti - Unisex",
@@ -305,12 +438,17 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "177cm",
         "184cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Arv 106 Demo Skis 2026",
@@ -321,12 +459,17 @@
       "discount_percent": 59.0,
       "savings": 575.01,
       "score": 106.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172",
         "180"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Santa Ana 92 Womens Demo Skis 2026",
@@ -337,13 +480,18 @@
       "discount_percent": 58.3,
       "savings": 525.0,
       "score": 105.8,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150",
         "155",
         "161"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Ripstick 94 Womens Demo Skis 2026",
@@ -354,12 +502,17 @@
       "discount_percent": 58.3,
       "savings": 524.01,
       "score": 105.8,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154",
         "161"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Santa Ana 104 Free Skis - Women's 2024",
@@ -370,11 +523,16 @@
       "discount_percent": 57.6,
       "savings": 490.0,
       "score": 105.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Black Crows Captis Birdie Womens Demo Skis 2026",
@@ -385,12 +543,17 @@
       "discount_percent": 56.6,
       "savings": 424.01,
       "score": 105.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154.4 CM",
         "160.1 CM"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Ripstick 96 Demo Skis 2026",
@@ -401,7 +564,7 @@
       "discount_percent": 57.9,
       "savings": 550.0,
       "score": 104.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "161",
         "168",
@@ -409,7 +572,12 @@
         "182",
         "189"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Arcade 84 + Spx 12 Demo Skis 2026",
@@ -420,14 +588,19 @@
       "discount_percent": 58.7,
       "savings": 675.01,
       "score": 104.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152",
         "160",
         "168",
         "176"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Forza 70 Ti + Spx14 Mens Demo Skis 2026",
@@ -438,13 +611,18 @@
       "discount_percent": 59.6,
       "savings": 775.01,
       "score": 104.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163",
         "173",
         "181"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Mindbndr 90C W + Quick Clik Womens Demo Skis 2026",
@@ -455,13 +633,18 @@
       "discount_percent": 55.9,
       "savings": 474.96,
       "score": 103.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "148",
         "154",
         "160"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Soul 102 + KNX12 Mens Demo Skis 2026",
@@ -472,7 +655,7 @@
       "discount_percent": 58.3,
       "savings": 700.01,
       "score": 103.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156",
         "164",
@@ -480,7 +663,12 @@
         "180",
         "188"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Enforcer 89 Mens Demo Skis 2026",
@@ -491,14 +679,19 @@
       "discount_percent": 55.6,
       "savings": 500.0,
       "score": 102.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "167",
         "173",
         "179",
         "185"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maven 86 W+R M10 Gw Womens Demo Skis 2026",
@@ -509,14 +702,19 @@
       "discount_percent": 53.6,
       "savings": 374.96,
       "score": 102.1,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "147",
         "153",
         "159",
         "165"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Mindbender 99Ti Mens Demo Skis 2026",
@@ -527,14 +725,19 @@
       "discount_percent": 55.3,
       "savings": 524.96,
       "score": 101.8,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166",
         "172",
         "178",
         "184"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Stance 76 Skis with M10 GW Bindings",
@@ -545,14 +748,19 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
         "Blissful Blue / 154cm",
         "Blissful Blue / 170cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Ripstick 102 Mens Demo Skis 2026",
@@ -563,13 +771,18 @@
       "discount_percent": 55.0,
       "savings": 550.04,
       "score": 101.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168",
         "175",
         "182"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Mantra 88 Womens Demo Skis 2026",
@@ -580,13 +793,18 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "149",
         "156",
         "163"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Enforcer 99 Mens Demo Skis 2026",
@@ -597,14 +815,19 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "167",
         "173",
         "179",
         "185"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Element Sport Skis With EL 9.0 Bindings",
@@ -615,14 +838,19 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "146cm",
         "152cm",
         "160cm",
         "168cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Reckoner 102 Mens Demo Skis 2026",
@@ -633,14 +861,19 @@
       "discount_percent": 53.1,
       "savings": 424.96,
       "score": 100.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163",
         "170",
         "177",
         "184"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Unleashed 90 Tree Skis 2024",
@@ -651,11 +884,16 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer Pulse Pro Skis with RS 9 Bindings",
@@ -666,7 +904,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -675,7 +913,12 @@
         "165cm",
         "170cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Revolt 81 Skis",
@@ -686,12 +929,17 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168cm",
         "178cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 100 Ti Mens Demo Skis 2026",
@@ -702,7 +950,7 @@
       "discount_percent": 54.8,
       "savings": 575.01,
       "score": 100.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156",
         "163",
@@ -710,7 +958,12 @@
         "177",
         "184"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer RC Comp Mens Skis with RS 10 GW Powerrail Bindings",
@@ -721,13 +974,18 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "153cm",
         "160cm",
         "167cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer Ranger Womens Skis",
@@ -738,12 +996,17 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152cm",
         "172cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Elan Ripstick 88 Womens Demo Skis 2026",
@@ -754,13 +1017,18 @@
       "discount_percent": 52.9,
       "savings": 450.0,
       "score": 99.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "147",
         "154",
         "161"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Qst 94 Mens Demo Skis 2026",
@@ -771,12 +1039,17 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156",
         "164"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Qst 100 Mens Demo Skis 2026",
@@ -787,11 +1060,16 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "GRAY / 148"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon S/Max 6XT Skis with M10 Bindings",
@@ -802,14 +1080,19 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
         "Silver / 167cm",
         "Silver / 175cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 2 Skis 2025 - Used",
@@ -820,11 +1103,16 @@
       "discount_percent": 51.0,
       "savings": 330.99,
       "score": 99.64,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "165 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Mindbender 106 C W Skis - Women's 2024",
@@ -835,11 +1123,16 @@
       "discount_percent": 51.4,
       "savings": 359.96,
       "score": 99.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "162 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Shine 72 Womens Skis with VMotion 10 Bindings",
@@ -850,14 +1143,19 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "144cm",
         "151cm",
         "158cm",
         "165cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Unleashed 90 Skis 2025",
@@ -868,11 +1166,16 @@
       "discount_percent": 48.9,
       "savings": 220.0,
       "score": 99.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon S/MAX N6 XT Womens Skis with M10 GW Bindings",
@@ -883,12 +1186,17 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Backwards Mens Skis",
@@ -899,12 +1207,17 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166cm",
         "178cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Blizzard Black Pearl 94 Womens Demo Skis 2026",
@@ -915,13 +1228,18 @@
       "discount_percent": 52.8,
       "savings": 502.0,
       "score": 98.84,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152",
         "158",
         "164"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Libstick 88 Skis - Women's 2026 - Used",
@@ -932,11 +1250,16 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "153 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Libstick 88 Womens Skis",
@@ -947,12 +1270,17 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "153cm",
         "160cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Blizzard Anomaly 94 Mens Demo Skis 2026",
@@ -963,7 +1291,7 @@
       "discount_percent": 52.6,
       "savings": 500.0,
       "score": 98.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164",
         "170",
@@ -971,7 +1299,12 @@
         "182",
         "188"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Black Crows Camox Mens Demo Skis 2026",
@@ -982,13 +1315,18 @@
       "discount_percent": 52.6,
       "savings": 499.01,
       "score": 98.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "169.1 CM",
         "175.2 CM",
         "182.1 CM"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Blaze 82 Skis with V10 Bindings - Grey / 173cm",
@@ -999,9 +1337,32 @@
       "discount_percent": 50.0,
       "savings": 324.99,
       "score": 98.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "Weston Skyline Carbon Ski (2) List: ( 52%) Blazin' Deal",
+      "url": "https://www.campsaver.com/weston-skyline-carbon-ski.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 431.46,
+      "original_price": 899.0,
+      "discount_percent": 52.0,
+      "savings": 467.54,
+      "score": 98.37,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird Soul 92 Skis + Xpress 11 W GW Bindings - Women's 2025",
@@ -1012,11 +1373,16 @@
       "discount_percent": 50.3,
       "savings": 354.03,
       "score": 98.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Peregrine XT Skis with VMotion 10 Bindings",
@@ -1027,14 +1393,19 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154cm",
         "161cm",
         "168cm",
         "175cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Shine 76 Womens Skis with VMotion 10 Bindings - 161cm",
@@ -1045,9 +1416,14 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Libstick 98 Womens Skis",
@@ -1058,12 +1434,17 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "155cm",
         "162cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech UFO 95 Skis - 171cm",
@@ -1074,9 +1455,14 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Free 92 Skis + Xpress 11 Bindings 2026",
@@ -1087,11 +1473,16 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon S/MAX N10 XT Womens Skis with M10 GW Bindings",
@@ -1102,12 +1493,17 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163cm",
         "170cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Hemi 102 Mens Skis - 171cm",
@@ -1118,9 +1514,14 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Mantra 84 Womens Skis - 170cm",
@@ -1131,9 +1532,14 @@
       "discount_percent": 50.0,
       "savings": 374.99,
       "score": 97.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Blur 79 Mens Skis with QuikClik Bindings - 156cm",
@@ -1144,9 +1550,14 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Enforcer 104 Mens Demo Skis 2026",
@@ -1157,13 +1568,18 @@
       "discount_percent": 52.4,
       "savings": 550.0,
       "score": 97.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "173",
         "179",
         "185"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Hemi 112 Mens Skis",
@@ -1174,12 +1590,17 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "171cm",
         "178cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Bent Chetler 100 Demo Skis 2026",
@@ -1190,7 +1611,7 @@
       "discount_percent": 50.0,
       "savings": 399.96,
       "score": 97.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "158",
         "165",
@@ -1198,7 +1619,12 @@
         "179",
         "186"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Black Diamond Impulse TI 104 Ski - Women's",
@@ -1209,12 +1635,17 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "165cm",
         "172cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Blizzard Black Pearl 88 Womens Demo Skis 2026",
@@ -1225,14 +1656,19 @@
       "discount_percent": 50.2,
       "savings": 452.0,
       "score": 96.24,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "146",
         "152",
         "158",
         "164"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl M7 Mantra Mens Demo Skis 2026",
@@ -1243,13 +1679,18 @@
       "discount_percent": 51.4,
       "savings": 555.0,
       "score": 95.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163",
         "170",
         "177"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Mantra 88 Demo Skis 2026",
@@ -1260,11 +1701,16 @@
       "discount_percent": 50.0,
       "savings": 500.0,
       "score": 95.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Peregrine 78 Skis with LR 11 TCX Bindings",
@@ -1275,12 +1721,17 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163cm",
         "177cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Volkl Shine 78 Womens Skis with LR 11 TCX Bindings - 163cm",
@@ -1291,9 +1742,14 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 0",
@@ -1304,12 +1760,17 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150cm",
         "157cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Black Crows Mirus Cor Mens Demo Skis 2026",
@@ -1320,11 +1781,16 @@
       "discount_percent": 50.0,
       "savings": 574.01,
       "score": 93.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "160.1 CM"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon QST Lux 92 Skis - Women's 2025 - Used",
@@ -1335,11 +1801,16 @@
       "discount_percent": 44.0,
       "savings": 241.98,
       "score": 92.84,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "152 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Bent 110 Mens Demo Skis 2026",
@@ -1350,13 +1821,18 @@
       "discount_percent": 47.2,
       "savings": 424.96,
       "score": 92.7,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172",
         "180",
         "188"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 1",
@@ -1367,13 +1843,18 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164cm",
         "178cm",
         "184cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 2",
@@ -1384,14 +1865,19 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "165cm",
         "171cm",
         "177cm",
         "183cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Tantrum 100 POW",
@@ -1402,12 +1888,17 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "148cm",
         "164cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 3 Capsule - 164cm",
@@ -1418,9 +1909,14 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 3",
@@ -1431,13 +1927,18 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172cm",
         "178cm",
         "184cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer RC Fire Mens Skis with RS9 GW Bindings - 155cm",
@@ -1448,9 +1949,14 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Studio 2",
@@ -1461,12 +1967,17 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166cm",
         "183cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction La Machine 1",
@@ -1477,13 +1988,18 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156cm",
         "163cm",
         "182cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Dancer 2, Blue",
@@ -1494,13 +2010,18 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "155cm",
         "163cm",
         "177cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Dancer 2, Purple",
@@ -1511,12 +2032,17 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163cm",
         "171cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Dancer 3, Turquoise",
@@ -1527,12 +2053,17 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164cm",
         "172cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Dancer 3, Orange - 183cm",
@@ -1543,9 +2074,14 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird Soul Pro Skis + XP 10 Bindings 2026",
@@ -1556,11 +2092,16 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "160 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 4 - 185cm",
@@ -1571,9 +2112,14 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Stranger 100 - 172cm",
@@ -1584,9 +2130,14 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore X 90 Skis 2026",
@@ -1597,11 +2148,16 @@
       "discount_percent": 41.6,
       "savings": 270.0,
       "score": 89.02,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer RC Lite Womens Skis with RS9 GW Bindings - 160cm",
@@ -1612,9 +2168,14 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maverick 84R Skis with M10 GW Bindings",
@@ -1625,13 +2186,18 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
         "Sand / 171cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Studio 3",
@@ -1642,7 +2208,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -1650,7 +2216,12 @@
         "178cm",
         "184cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Oblivion 84 Skis 2026",
@@ -1661,11 +2232,16 @@
       "discount_percent": 40.1,
       "savings": 220.0,
       "score": 88.52,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "171 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maverick 86 Skis with M10 GW Bindings - Sage / 186cm",
@@ -1676,9 +2252,14 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Stance 80 Skis with M11 Bindings - Kelp / 161cm",
@@ -1689,9 +2270,14 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada 116 JJ UL",
@@ -1702,12 +2288,17 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "175cm",
         "185cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "MASTERBLASTER \"ADAPT\" BLEMISH",
@@ -1718,9 +2309,14 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "MASTERBLASTER \"FULL HOUSE\" BLEMISH",
@@ -1731,9 +2327,14 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 87 Ti W Skis - Women's 2026",
@@ -1744,11 +2345,16 @@
       "discount_percent": 40.1,
       "savings": 260.0,
       "score": 87.32,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon Stance Pro 82 Skis - Iceberg Green / 185cm",
@@ -1759,9 +2365,14 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maverick 88 CTI Skis 2026 - Used",
@@ -1772,11 +2383,16 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "165 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Season Primer Skis - Blem 2026",
@@ -1787,9 +2403,14 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 94 Ti Skis 2026",
@@ -1800,11 +2421,16 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 99 Ti W Skis - Women's 2026",
@@ -1815,11 +2441,16 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "177 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Liberty Scope 104 Skis 2026",
@@ -1830,11 +2461,16 @@
       "discount_percent": 40.0,
       "savings": 300.0,
       "score": 86.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Kore 93 Ti W Skis - Women's 2026",
@@ -1845,11 +2481,16 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "170 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Head Oblivion 102 Skis 2026",
@@ -1860,11 +2501,16 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "173 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sprayer Pro Skis + Xpress 10 Bindings 2026",
@@ -1875,11 +2521,16 @@
       "discount_percent": 35.0,
       "savings": 139.98,
       "score": 84.8,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "178 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Soul Pro Skis + Xpress 10 Bindings 2026",
@@ -1890,11 +2541,16 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "170 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Black Diamond Helio Carbon 104 Skis",
@@ -1905,14 +2561,19 @@
       "discount_percent": 40.2,
       "savings": 381.98,
       "score": 83.84,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "160cm",
         "166cm",
         "172cm",
         "184cm"
       ],
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Soul 92 Skis 2026",
@@ -1923,11 +2584,16 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Dynastar M-Free 90 Skis 2026",
@@ -1938,11 +2604,16 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "167 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird Soul 92 Skis - Women's 2026",
@@ -1953,11 +2624,16 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Sender Free 100 Skis 2026",
@@ -1968,11 +2644,16 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "178 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Rallybird Soul 102 Skis - Women's 2026",
@@ -1983,11 +2664,16 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARV 88 Skis 2026",
@@ -1998,11 +2684,16 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "161 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maven 84 Skis + M10 GW Bindings - Women's 2026",
@@ -2013,11 +2704,16 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "171 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Maverick 84 Skis + M10 GW Bindings 2026",
@@ -2028,11 +2724,16 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "153 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARW 88 Skis - Women's 2026",
@@ -2043,11 +2744,16 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "161 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "V\u00f6lkl Revolt 86 Skis 2026",
@@ -2058,11 +2764,16 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Pandora 85 Skis 2026",
@@ -2073,11 +2784,16 @@
       "discount_percent": 30.0,
       "savings": 149.99,
       "score": 78.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Season Primer Skis 2026",
@@ -2088,9 +2804,14 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Honey Badger Skis 2026",
@@ -2101,11 +2822,16 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Bent 90 Skis 2026",
@@ -2116,11 +2842,16 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Bent 85 Skis + M10 GW Bindings 2026",
@@ -2131,11 +2862,16 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Tom Wallisch Pro Skis 2026",
@@ -2146,11 +2882,16 @@
       "discount_percent": 30.0,
       "savings": 164.99,
       "score": 77.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "178 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARV 94 Skis 2026",
@@ -2161,11 +2902,16 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "178 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARW 94 Skis - Women's 2026",
@@ -2176,11 +2922,16 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Reliance 82 C Skis - Women's 2026",
@@ -2191,11 +2942,16 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Backwards Skis 2026",
@@ -2206,11 +2962,16 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "166 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Backwards Skis 2025",
@@ -2221,11 +2982,16 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "172 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Season Kin Skis 2026",
@@ -2236,11 +3002,16 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "163 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Mindbender 90 C W Skis - Women's 2026",
@@ -2251,11 +3022,16 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Pandora 92 Skis 2026",
@@ -2266,11 +3042,16 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "154 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Chronic 94 Skis 2026",
@@ -2281,11 +3062,16 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 1 Skis 2026",
@@ -2296,11 +3082,16 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 1 Capsule Skis 2026",
@@ -2311,11 +3102,16 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "158 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Lib Tech Libstick 88 Skis - Women's 2026",
@@ -2326,11 +3122,16 @@
       "discount_percent": 30.0,
       "savings": 189.0,
       "score": 76.18,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "153 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Studio 0 Gu Skis - Women's 2026",
@@ -2341,11 +3142,16 @@
       "discount_percent": 30.0,
       "savings": 194.7,
       "score": 75.91,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Nordica Unleashed 98 CA Skis 2026",
@@ -2356,11 +3162,16 @@
       "discount_percent": 30.0,
       "savings": 195.02,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "156 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Atomic Bent 100 Skis 2026",
@@ -2371,11 +3182,16 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "158 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Edollo 91 Skis 2026",
@@ -2386,11 +3202,16 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "162 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada BDOG 94 Skis 2026",
@@ -2401,11 +3222,16 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "164 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Declivity 88 C Skis 2026",
@@ -2416,11 +3242,16 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "160 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada Reliance 88 C Skis - Women's 2026",
@@ -2431,11 +3262,16 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Line Skis Pandora 99 Skis 2026",
@@ -2446,11 +3282,16 @@
       "discount_percent": 30.0,
       "savings": 194.99,
       "score": 75.9,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "177 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARW 84 Skis - Women's 2026",
@@ -2461,11 +3302,16 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARV 84 Skis 2026",
@@ -2476,11 +3322,88 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "4 models Black Diamond Helio Carbon 88 Skis List: ( 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-helio-carbon-88-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 618.71,
+      "original_price": 824.95,
+      "discount_percent": 25.0,
+      "savings": 206.24,
+      "score": 67.63,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "3 models Black Diamond Impulse 104 Ti Skis List: ( 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-impulse-104-ti-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 637.46,
+      "original_price": 849.95,
+      "discount_percent": 25.0,
+      "savings": 212.49,
+      "score": 67.25,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "4 models Black Diamond Helio Carbon 102 Skis List: ( 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-helio-carbon-102-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 674.96,
+      "original_price": 899.95,
+      "discount_percent": 25.0,
+      "savings": 224.99,
+      "score": 66.5,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "4 models Black Diamond Helio Carbon 108 Skis List: ( 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-helio-carbon-108-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 712.46,
+      "original_price": 949.95,
+      "discount_percent": 25.0,
+      "savings": 237.49,
+      "score": 65.75,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Omen 90 Skis 2026",
@@ -2491,11 +3414,16 @@
       "discount_percent": 20.0,
       "savings": 109.99,
       "score": 58.7,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "159 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Reckoner 92 Skis 2026",
@@ -2506,11 +3434,16 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "159 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Reckoner 92 W Skis - Women's 2026",
@@ -2521,11 +3454,16 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "159 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Omen 85 Skis 2026",
@@ -2536,11 +3474,16 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "159 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Omen 85 W Skis - Women's 2026",
@@ -2551,11 +3494,16 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "159 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Salomon MTN 86 Flat Ski's, 2025 - Unisex (164cm) - 164cm",
@@ -2566,9 +3514,14 @@
       "discount_percent": null,
       "savings": null,
       "score": 16.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "K2 Thrilavut 85 - 170cm",
@@ -2579,9 +3532,32 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 61%) Blazin' Deal",
+      "url": "https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 328.49,
+      "original_price": null,
+      "discount_percent": null,
+      "savings": null,
+      "score": 13.43,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Rossignol Scratch Pro Skis + Xpress 10 GW Bindings 2027",
@@ -2592,11 +3568,16 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "168 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Scott Pure Free 90 Skis, 2025 + Tyrolia AM 12 GW Bindings - Women's (168cm) - 168cm",
@@ -2607,9 +3588,14 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Blizzard Hustle 10 (188cm) - 188cm",
@@ -2620,9 +3606,14 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARV 84 Skis 2027",
@@ -2633,11 +3624,16 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARV 84 Madsteez Skis 2027",
@@ -2648,11 +3644,16 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Armada ARW 84 Skis - Women's 2027",
@@ -2663,11 +3664,16 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "150 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Faction Prodigy 0 Skis 2026",
@@ -2678,11 +3684,16 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.42,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": [
         "157 cm"
       ],
-      "stock_status": "in_stock"
+      "stock_status": "in_stock",
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Fischer Transalp 86 CTI Pro w/Skins - 169cm",
@@ -2693,9 +3704,14 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
       "title": "Dynastar M-Tour 90 Skis - (178cm) - 177cm",
@@ -2706,16 +3722,87 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-18T15:08:41+00:00",
+      "found_at": "2026-05-18T15:15:17+00:00",
       "sizes": null,
-      "stock_status": null
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "8 models Black Diamond Impulse 98 Ti Skis - Women's As Low As ( 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-impulse-98-ti-skis-women-s.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 599.96,
+      "original_price": null,
+      "discount_percent": null,
+      "savings": null,
+      "score": 8.0,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "4 models Black Diamond Impulse 98 Ti Skis As Low As ( Up to 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-impulse-98-ti-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 599.96,
+      "original_price": null,
+      "discount_percent": null,
+      "savings": null,
+      "score": 8.0,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "3 models Black Diamond Impulse 104 Ti Skis - Women's As Low As ( Up to 25%) On",
+      "url": "https://www.campsaver.com/black-diamond-impulse-104-ti-skis-women-s.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 637.46,
+      "original_price": null,
+      "discount_percent": null,
+      "savings": null,
+      "score": 7.25,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "2 models Black Diamond Impulse 112 Ti Skis",
+      "url": "https://www.campsaver.com/black-diamond-impulse-112-ti-skis.html",
+      "source": "CampSaver backcountry skis",
+      "current_price": 899.95,
+      "original_price": null,
+      "discount_percent": null,
+      "savings": null,
+      "score": 2.0,
+      "found_at": "2026-05-18T15:15:17+00:00",
+      "sizes": null,
+      "stock_status": null,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
     }
   ],
-  "errors": [
-    {
-      "source": "CampSaver backcountry skis",
-      "url": "https://www.campsaver.com/backcountry-skis.html?_iv_sort=lowest-price",
-      "error": "Blocked by retailer anti-bot page: before we continue"
-    }
-  ]
+  "errors": []
 }
