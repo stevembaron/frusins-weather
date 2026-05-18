@@ -116,6 +116,7 @@ class Deal:
     sizes: list[str] | None = None
     stock_status: str | None = None
     image_url: str | None = None
+    is_cached: bool = False
     previous_price: float | None = None
     price_change: float | None = None
     price_change_percent: float | None = None
@@ -1035,6 +1036,7 @@ def make_deal(
     sizes: list[str] | None = None,
     stock_status: str | None = None,
     image_url: str | None = None,
+    is_cached: bool = False,
 ) -> Deal:
     discount = None
     savings = None
@@ -1056,6 +1058,7 @@ def make_deal(
         sizes=sizes,
         stock_status=stock_status,
         image_url=image_url,
+        is_cached=is_cached,
     )
 
 
@@ -1158,6 +1161,7 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
     found_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     all_deals: list[Deal] = []
     errors: list[SourceError] = []
+    history = load_price_history(resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT))
     for source in config.get("sources", []):
         if not source.get("enabled", True):
             continue
@@ -1187,6 +1191,7 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                 markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
                 blocked = block_reason(markup)
                 if blocked:
+                    all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                     errors.append(SourceError(source_name, url, blocked))
                     continue
             else:
@@ -1209,11 +1214,13 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     time.sleep(float(source.get("delay_seconds", 1.2)))
                     continue
                 if not source.get("reader_fallback"):
+                    all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                     errors.append(SourceError(source_name, url, blocked))
                     continue
                 markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
                 blocked = block_reason(markup)
                 if blocked:
+                    all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                     errors.append(SourceError(source_name, url, blocked))
                     continue
             candidates = json_ld_candidates(markup, url, source_name, found_at)
@@ -1272,6 +1279,7 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
                     blocked = block_reason(markup)
                     if blocked:
+                        all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                         errors.append(SourceError(source_name, url, blocked))
                         continue
                     candidates = markdown_candidates(markup, url, source_name, found_at)
@@ -1281,11 +1289,43 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     time.sleep(float(source.get("delay_seconds", 1.2)))
                     continue
                 except (HTTPError, URLError, TimeoutError, OSError) as fallback_error:
+                    all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                     errors.append(SourceError(source_name, url, f"{error}; reader fallback failed: {fallback_error}"))
                     continue
+            all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
             errors.append(SourceError(source_name, url, str(error)))
 
     return rank_deals(dedupe(all_deals)), errors
+
+
+def cached_source_deals(history: dict[str, Any], source_name: str, found_at: str, limit: int) -> list[Deal]:
+    items = history.get("items", {})
+    if not isinstance(items, dict):
+        return []
+
+    cached: list[Deal] = []
+    for item in items.values():
+        if not isinstance(item, dict) or item.get("source") != source_name:
+            continue
+        title = clean_text(str(item.get("title") or ""))
+        url = clean_text(str(item.get("url") or ""))
+        current = money(item.get("current_price"))
+        if not title or not url or current is None:
+            continue
+        cached.append(
+            make_deal(
+                title,
+                url,
+                source_name,
+                current,
+                money(item.get("highest_price")),
+                found_at,
+                image_url=image_url(item.get("image_url")),
+                is_cached=True,
+            )
+        )
+
+    return rank_deals(cached)[:limit]
 
 
 def merged_filter_config(config: dict[str, Any], source: dict[str, Any]) -> dict[str, Any]:
@@ -1565,6 +1605,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
         status = stock_label(deal.get("stock_status"))
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
+        cached_badge = "<span class='cached'>Cached last seen price</span>" if deal.get("is_cached") else ""
         thumbnail = (
             f"""<a class="thumb" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer" aria-label="{html.escape(deal['title'])}">
                 <img src="{html.escape(deal['image_url'])}" alt="" loading="lazy" decoding="async" />
@@ -1594,7 +1635,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{discount}{savings}{trend_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1733,6 +1774,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
+      .cached {{ border-color: #d8d1b1; background: #fff8df; color: var(--gold); }}
       .stock-in_stock {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .stock-sold_out {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
