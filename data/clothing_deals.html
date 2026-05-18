@@ -12,21 +12,40 @@
       header { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 18px; }
       h1 { margin: 0; font-size: 2rem; }
       h2 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
+      button { border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--ink); padding: 7px 10px; font: inherit; cursor: pointer; }
+      button:hover { border-color: var(--accent); color: var(--accent); }
       a { color: inherit; }
       .meta, .source, .was { color: var(--muted); }
-      .deal { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+      .filters { margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: #ffffff; border-radius: 8px; }
+      .filter-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+      .filter-head h2 { font-size: 1rem; }
+      .filter-actions { display: flex; gap: 8px; }
+      .source-toggles { display: flex; flex-wrap: wrap; gap: 8px; }
+      .source-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); font-size: .88rem; cursor: pointer; }
+      .source-toggle input { accent-color: var(--accent); }
+      .source-toggle b { color: var(--muted); font-size: .78rem; }
+      .visible-count { margin: 12px 0 0; }
+      .deal { display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
+      .deal[hidden] { display: none; }
+      .thumb { display: block; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }
+      .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .thumb-empty { background: linear-gradient(135deg, #ffffff, #eef2ed); }
       .source { margin: 0 0 5px; font-size: .86rem; }
       .price { text-align: right; min-width: 120px; }
       .price strong { display: block; font-size: 1.45rem; color: var(--hot); }
       .was { display: block; text-decoration: line-through; }
-      .badges { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+      .badges { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
       .badges span { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }
+      .trend-down { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
+      .trend-up { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
+      .trend-flat { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
+      .trend-new { border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }
       .stock-in_stock { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .stock-sold_out { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
       .stock-availability_unknown { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .empty { padding: 24px 0; color: var(--muted); }
       .errors { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
-      @media (max-width: 620px) { header, .deal { display: block; } .price { text-align: left; margin-top: 12px; } }
+      @media (max-width: 620px) { header, .filter-head { display: block; } .deal { grid-template-columns: 76px 1fr; } .thumb { width: 76px; height: 76px; } .filter-actions { margin-top: 10px; } .price { grid-column: 2; text-align: left; margin-top: 4px; } .badges { grid-column: 1 / -1; } }
     </style>
   </head>
   <body>
@@ -34,12 +53,35 @@
       <header>
         <div>
           <h1>Men&#x27;s Clothing Deals</h1>
-          <p class="meta">Generated 2026-05-18T13:02:19+00:00</p>
+          <p class="meta">Generated 2026-05-18T15:54:56+00:00</p>
         </div>
         <p class="meta">11 deals from 1 enabled sources</p>
       </header>
       
-            <article class="deal">
+        <section class="filters" aria-label="Store filters">
+          <div class="filter-head">
+            <h2>Stores</h2>
+            <div class="filter-actions">
+              <button type="button" data-filter-action="all">All</button>
+              <button type="button" data-filter-action="none">None</button>
+            </div>
+          </div>
+          <div class="source-toggles">
+        <label class="source-toggle">
+          <input type="checkbox" value="Geartrade Stio men&#x27;s clothing" checked />
+          <span>Geartrade Stio men&#x27;s clothing</span>
+          <b>11</b>
+        </label>
+        </div>
+          <p class="meta visible-count"><span id="visibleDealCount">11</span> shown</p>
+        </section>
+        
+      <section class="deals-list">
+        
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080" target="_blank" rel="noreferrer" aria-label="Stio Basis Seamless Tech Crew Long Sleeve - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/f32798cf-ed7a-4c71-a97c-2db2d63d309a.webp?v=1778925055&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080" target="_blank" rel="noreferrer">Stio Basis Seamless Tech Crew Long Sleeve - Men&#x27;s</a></h2>
@@ -48,10 +90,13 @@
                 <strong>$19.17</strong>
                 <span class='was'>Was $50.45</span>
               </div>
-              <div class="badges"><span>62.0% off</span><span>Save $31.28</span><span>Sizes M</span><span>Score 89</span></div>
+              <div class="badges"><span>62.0% off</span><span>Save $31.28</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 89</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183" target="_blank" rel="noreferrer" aria-label="Stio Shifter Shirt SS - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/e1ebdf3e-8a73-47d2-a127-0c8e3365eeba.webp?v=1778768663&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183" target="_blank" rel="noreferrer">Stio Shifter Shirt SS - Men&#x27;s</a></h2>
@@ -60,10 +105,13 @@
                 <strong>$25.69</strong>
                 <span class='was'>Was $98.81</span>
               </div>
-              <div class="badges"><span>74.0% off</span><span>Save $73.12</span><span>Sizes M</span><span>Score 112</span></div>
+              <div class="badges"><span>74.0% off</span><span>Save $73.12</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 112</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430" target="_blank" rel="noreferrer" aria-label="Stio Turnpin Fleece Half Zip">
+                <img src="https://geartrade.com/cdn/shop/files/56d19601-afd1-4d87-b5c5-605f071ebadc.webp?v=1777194589&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430" target="_blank" rel="noreferrer">Stio Turnpin Fleece Half Zip</a></h2>
@@ -72,10 +120,13 @@
                 <strong>$28.61</strong>
                 <span class='was'>Was $98.66</span>
               </div>
-              <div class="badges"><span>71.0% off</span><span>Save $70.05</span><span>Sizes M</span><span>Score 108</span></div>
+              <div class="badges"><span>71.0% off</span><span>Save $70.05</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 108</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850" target="_blank" rel="noreferrer" aria-label="Stio Hagen Trail Shirt - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/22d4b186-85d6-4d36-b8ad-8cc4dbd8c98d.webp?v=1777208737&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850" target="_blank" rel="noreferrer">Stio Hagen Trail Shirt - Men&#x27;s</a></h2>
@@ -84,10 +135,13 @@
                 <strong>$30.86</strong>
                 <span class='was'>Was $128.58</span>
               </div>
-              <div class="badges"><span>76.0% off</span><span>Save $97.72</span><span>Sizes S</span><span>Score 120</span></div>
+              <div class="badges"><span>76.0% off</span><span>Save $97.72</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 120</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256" target="_blank" rel="noreferrer" aria-label="Stio Hylas Long Sleeve Crew - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1778146292&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256" target="_blank" rel="noreferrer">Stio Hylas Long Sleeve Crew - Men&#x27;s</a></h2>
@@ -96,10 +150,13 @@
                 <strong>$31.05</strong>
                 <span class='was'>Was $69.00</span>
               </div>
-              <div class="badges"><span>55.0% off</span><span>Save $37.95</span><span>Sizes M</span><span>Score 84</span></div>
+              <div class="badges"><span>55.0% off</span><span>Save $37.95</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 84</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918" target="_blank" rel="noreferrer" aria-label="Stio Ashton Chambray Shirt - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/0f9dfff9-1e56-4991-bf0b-71a54ef99e69.webp?v=1777355079&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918" target="_blank" rel="noreferrer">Stio Ashton Chambray Shirt - Men&#x27;s</a></h2>
@@ -108,10 +165,13 @@
                 <strong>$37.31</strong>
                 <span class='was'>Was $128.66</span>
               </div>
-              <div class="badges"><span>71.0% off</span><span>Save $91.35</span><span>Sizes S</span><span>Score 113</span></div>
+              <div class="badges"><span>71.0% off</span><span>Save $91.35</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 113</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-divide-half-zip-mens-1660860" target="_blank" rel="noreferrer" aria-label="Stio Divide Half Zip - Men’s">
+                <img src="https://geartrade.com/cdn/shop/files/dd076504-7cb9-4f14-9562-59c4e30ab950.webp?v=1777237524&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-divide-half-zip-mens-1660860" target="_blank" rel="noreferrer">Stio Divide Half Zip - Men’s</a></h2>
@@ -120,10 +180,13 @@
                 <strong>$42.67</strong>
                 <span class='was'>Was $88.90</span>
               </div>
-              <div class="badges"><span>52.0% off</span><span>Save $46.23</span><span>Sizes S</span><span>Score 83</span></div>
+              <div class="badges"><span>52.0% off</span><span>Save $46.23</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 83</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203" target="_blank" rel="noreferrer" aria-label="Stio Eddy Shirt LS Shirt - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/541d2a7b-a579-4a06-b719-928cac7c64e0.webp?v=1777239562&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203" target="_blank" rel="noreferrer">Stio Eddy Shirt LS Shirt - Men&#x27;s</a></h2>
@@ -132,10 +195,13 @@
                 <strong>$48.92</strong>
                 <span class='was'>Was $128.74</span>
               </div>
-              <div class="badges"><span>62.0% off</span><span>Save $79.82</span><span>Sizes S</span><span>Score 101</span></div>
+              <div class="badges"><span>62.0% off</span><span>Save $79.82</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 101</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864" target="_blank" rel="noreferrer" aria-label="Stio Eddy Slope Long Sleeve Shirt - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/10622373-4e07-4287-9f97-89e9d5b15b88.webp?v=1777221170&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864" target="_blank" rel="noreferrer">Stio Eddy Slope Long Sleeve Shirt - Men&#x27;s</a></h2>
@@ -144,10 +210,13 @@
                 <strong>$52.29</strong>
                 <span class='was'>Was $168.68</span>
               </div>
-              <div class="badges"><span>69.0% off</span><span>Save $116.39</span><span>Sizes S</span><span>Score 117</span></div>
+              <div class="badges"><span>69.0% off</span><span>Save $116.39</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 117</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087" target="_blank" rel="noreferrer" aria-label="Stio Azura Insulated Jacket - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1778842391&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087" target="_blank" rel="noreferrer">Stio Azura Insulated Jacket - Men&#x27;s</a></h2>
@@ -156,10 +225,13 @@
                 <strong>$83.33</strong>
                 <span class='was'>Was $231.47</span>
               </div>
-              <div class="badges"><span>64.0% off</span><span>Save $148.14</span><span>Sizes S</span><span>Score 117</span></div>
+              <div class="badges"><span>64.0% off</span><span>Save $148.14</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 117</span></div>
             </article>
             
-            <article class="deal">
+            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+              <a class="thumb" href="https://geartrade.com/products/stio-hometown-down-hooded-vest-mens-1649078" target="_blank" rel="noreferrer" aria-label="Stio Hometown Down Hooded Vest - Men&#x27;s">
+                <img src="https://geartrade.com/cdn/shop/files/84fb83cb-2707-4e03-a95a-fc563c9ea796.webp?v=1778493313&amp;width=460" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hometown-down-hooded-vest-mens-1649078" target="_blank" rel="noreferrer">Stio Hometown Down Hooded Vest - Men&#x27;s</a></h2>
@@ -168,10 +240,39 @@
                 <strong>$96.10</strong>
                 <span class='was'>Was $282.65</span>
               </div>
-              <div class="badges"><span>66.0% off</span><span>Save $186.55</span><span>Sizes S</span><span>Score 119</span></div>
+              <div class="badges"><span>66.0% off</span><span>Save $186.55</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 119</span></div>
             </article>
             
+      </section>
       
     </main>
+    <script>
+      const checkboxes = [...document.querySelectorAll('.source-toggle input')];
+      const deals = [...document.querySelectorAll('.deal')];
+      const visibleDealCount = document.querySelector('#visibleDealCount');
+
+      function applyStoreFilters() {
+        const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        let visible = 0;
+        for (const deal of deals) {
+          const show = enabled.has(deal.dataset.source);
+          deal.hidden = !show;
+          if (show) visible += 1;
+        }
+        if (visibleDealCount) visibleDealCount.textContent = visible;
+      }
+
+      for (const box of checkboxes) {
+        box.addEventListener('change', applyStoreFilters);
+      }
+      for (const button of document.querySelectorAll('[data-filter-action]')) {
+        button.addEventListener('click', () => {
+          const checked = button.dataset.filterAction === 'all';
+          for (const box of checkboxes) box.checked = checked;
+          applyStoreFilters();
+        });
+      }
+      applyStoreFilters();
+    </script>
   </body>
 </html>
