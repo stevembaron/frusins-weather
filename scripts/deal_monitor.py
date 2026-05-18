@@ -73,6 +73,7 @@ GEARTRADE_PRICE_RE = re.compile(
 )
 GEARTRADE_DISCOUNT_RE = re.compile(r"(?P<discount>[0-9]{1,3})%\s*Off", re.IGNORECASE)
 GEARTRADE_SIZE_RE = re.compile(r'<span[^>]+class="[^"]*\bplp_size\b[^"]*"[^>]*>.*?<b>\s*Size:\s*</b>\s*&nbsp;\s*(?P<size>[^<]+)', re.IGNORECASE | re.DOTALL)
+GEARTRADE_IMAGE_RE = re.compile(r'<img[^>]+(?:src|data-src)="(?P<src>[^"]+)"', re.IGNORECASE | re.DOTALL)
 EVO_COLLECTION_ITEM_RE = re.compile(
     r'\{id:"[^"]+",name:"(?P<name>(?:[^"\\]|\\.)+)",.*?variant:"(?P<variant>(?:[^"\\]|\\.)*)",'
     r'\s*price:\s*"(?P<price>[^"]+)",.*?variantId:\s*"(?P<variant_id>\d+)",.*?handle:"(?P<handle>[^"]+)",\s*compareAtPrice:\s*"(?P<compare>[^"]+)"',
@@ -114,6 +115,7 @@ class Deal:
     found_at: str
     sizes: list[str] | None = None
     stock_status: str | None = None
+    image_url: str | None = None
     previous_price: float | None = None
     price_change: float | None = None
     price_change_percent: float | None = None
@@ -173,6 +175,45 @@ def money(value: str | int | float | None) -> float | None:
         return round(float(match.group(0).replace(",", "")), 2)
     except ValueError:
         return None
+
+
+def image_url(value: Any, base_url: str = "") -> str | None:
+    if value is None:
+        return None
+    if isinstance(value, str):
+        candidate = clean_text(value)
+        if not candidate:
+            return None
+        if candidate.startswith("//"):
+            return f"https:{candidate}"
+        if candidate.startswith(("http://", "https://")):
+            return candidate
+        if base_url and candidate.startswith("/"):
+            return urljoin(base_url, candidate)
+        return None
+    if isinstance(value, list):
+        for item in value:
+            candidate = image_url(item, base_url)
+            if candidate:
+                return candidate
+    if isinstance(value, dict):
+        for key in ("src", "url", "image", "imageUrl", "thumbnail", "thumbnailUrl"):
+            candidate = image_url(value.get(key), base_url)
+            if candidate:
+                return candidate
+        for key in ("nodes", "edges"):
+            candidate = image_url(value.get(key), base_url)
+            if candidate:
+                return candidate
+    return None
+
+
+def first_image_from_fields(item: dict[str, Any], base_url: str, fields: tuple[str, ...]) -> str | None:
+    for field in fields:
+        candidate = image_url(item.get(field), base_url)
+        if candidate:
+            return candidate
+    return None
 
 
 def fetch(url: str, timeout: int = 25) -> str:
@@ -301,7 +342,17 @@ def json_ld_candidates(markup: str, base_url: str, source_name: str, found_at: s
             original = money(offer.get("highPrice") or price_spec_price)
             url = offer.get("url") or product.get("url") or base_url
             if current:
-                deals.append(make_deal(title, urljoin(base_url, str(url)), source_name, current, original, found_at))
+                deals.append(
+                    make_deal(
+                        title,
+                        urljoin(base_url, str(url)),
+                        source_name,
+                        current,
+                        original,
+                        found_at,
+                        image_url=image_url(product.get("image"), base_url),
+                    )
+                )
     return deals
 
 
@@ -345,6 +396,7 @@ def shopify_products_json_candidates(
             continue
 
         product_url = urljoin(base_url, f"/products/{handle}")
+        product_image = image_url(product.get("image"), base_url) or image_url(product.get("images"), base_url)
         for variant in product.get("variants", []):
             if ignore_sold_out and not variant.get("available", True):
                 continue
@@ -356,7 +408,17 @@ def shopify_products_json_candidates(
             original = money(variant.get("compare_at_price"))
             variant_title = normalize_shopify_variant_title(variant.get("title"))
             deal_title = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
-            deals.append(make_deal(deal_title, product_url, source_name, current, original, found_at))
+            deals.append(
+                make_deal(
+                    deal_title,
+                    product_url,
+                    source_name,
+                    current,
+                    original,
+                    found_at,
+                    image_url=image_url(variant.get("featured_image"), base_url) or product_image,
+                )
+            )
 
     return deals
 
@@ -402,6 +464,19 @@ def searchspring_candidates(
                 found_at,
                 sizes=searchspring_sizes(item),
                 stock_status="in_stock" if str(item.get("ss_sold_out", "0")) != "1" else "sold_out",
+                image_url=first_image_from_fields(
+                    item,
+                    base_url,
+                    (
+                        "thumbnailImageUrl",
+                        "imageUrl",
+                        "image",
+                        "thumbnail",
+                        "ss_image",
+                        "ss_image_url",
+                        "primary_image",
+                    ),
+                ),
             )
         )
 
@@ -434,6 +509,7 @@ def product_variant_deals(product: dict[str, Any], base_url: str, source_name: s
         return []
 
     product_url = urljoin(base_url, f"/products/{handle}")
+    product_image = image_url(product.get("featuredImage"), base_url) or image_url(product.get("images"), base_url)
     variants = product.get("variants", {}).get("nodes", [])
     deals: list[Deal] = []
     for variant in variants:
@@ -447,7 +523,7 @@ def product_variant_deals(product: dict[str, Any], base_url: str, source_name: s
         original = money((variant.get("compareAtPrice") or {}).get("amount"))
         variant_title = normalize_shopify_variant_title(variant.get("title"))
         deal_title = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
-        deals.append(make_deal(deal_title, product_url, source_name, current, original, found_at))
+        deals.append(make_deal(deal_title, product_url, source_name, current, original, found_at, image_url=product_image))
     return deals
 
 
@@ -517,6 +593,7 @@ def geartrade_search_candidates(markup: str, base_url: str, source_name: str, fo
             original = round(current / (1 - (discount / 100)), 2)
 
         size_match = GEARTRADE_SIZE_RE.search(card)
+        image_match = GEARTRADE_IMAGE_RE.search(card)
         sizes = [clean_text(size_match.group("size"))] if size_match else None
         deals.append(
             make_deal(
@@ -527,6 +604,7 @@ def geartrade_search_candidates(markup: str, base_url: str, source_name: str, fo
                 original,
                 found_at,
                 sizes=sizes,
+                image_url=image_url(image_match.group("src"), base_url) if image_match else None,
             )
         )
     return deals
@@ -570,6 +648,7 @@ def evo_collection_candidates(markup: str, base_url: str, source_name: str, foun
                 found_at,
                 sizes=sizes,
                 stock_status=stock_status,
+                image_url=evo_meta_product_image(meta_products.get(handle), base_url),
             )
         )
 
@@ -673,6 +752,18 @@ def evo_constructor_result_deal(item: Any, source_name: str, found_at: str) -> D
         found_at,
         sizes=sizes,
         stock_status=stock_status,
+        image_url=first_image_from_fields(
+            data,
+            url,
+            (
+                "image_url",
+                "image",
+                "thumbnail_url",
+                "thumbnail",
+                "primary_image",
+                "groups_image_url",
+            ),
+        ),
     )
 
 
@@ -704,6 +795,22 @@ def evo_meta_products(markup: str) -> dict[str, dict[str, Any]]:
         for product in products
         if isinstance(product, dict) and product.get("handle")
     }
+
+
+def evo_meta_product_image(product: dict[str, Any] | None, base_url: str) -> str | None:
+    if not isinstance(product, dict):
+        return None
+    return first_image_from_fields(
+        product,
+        base_url,
+        (
+            "featured_image",
+            "featuredImage",
+            "image",
+            "imageUrl",
+            "images",
+        ),
+    )
 
 
 def evo_product_availability(
@@ -823,7 +930,7 @@ def markdown_image_candidates(markdown: str, source_name: str, found_at: str) ->
         current, original = choose_prices(prices)
         if compare_at:
             original = money(compare_at.group(1))
-        deals.append(make_deal(title, url, source_name, current, original, found_at))
+        deals.append(make_deal(title, url, source_name, current, original, found_at, image_url=image_url(match.group("img"))))
     return deals
 
 
@@ -927,6 +1034,7 @@ def make_deal(
     found_at: str,
     sizes: list[str] | None = None,
     stock_status: str | None = None,
+    image_url: str | None = None,
 ) -> Deal:
     discount = None
     savings = None
@@ -947,6 +1055,7 @@ def make_deal(
         found_at=found_at,
         sizes=sizes,
         stock_status=stock_status,
+        image_url=image_url,
     )
 
 
@@ -992,7 +1101,21 @@ def consolidate_size_variants(deals: list[Deal]) -> list[Deal]:
         best_original = max(originals) if originals else None
         latest_found_at = max(deal.found_at for deal, _ in variants)
         sizes = sorted({size for _, size in variants})
-        consolidated.append(make_deal(base_title, url, source, best_current, best_original, latest_found_at, sizes=sizes))
+        image = next((deal.image_url for deal, _ in variants if deal.image_url), None)
+        stock_status = next((deal.stock_status for deal, _ in variants if deal.stock_status), None)
+        consolidated.append(
+            make_deal(
+                base_title,
+                url,
+                source,
+                best_current,
+                best_original,
+                latest_found_at,
+                sizes=sizes,
+                stock_status=stock_status,
+                image_url=image,
+            )
+        )
 
     return consolidated
 
@@ -1250,6 +1373,8 @@ def annotate_and_update_price_history(deals: list[Deal], history_path: Path, gen
     for deal in deals:
         key = price_history_key(deal)
         existing = items.get(key) if isinstance(items.get(key), dict) else {}
+        if not deal.image_url and existing.get("image_url"):
+            deal.image_url = str(existing["image_url"])
         previous = latest_prior_observation(existing, today)
         if previous:
             previous_price = money(previous.get("price"))
@@ -1286,6 +1411,7 @@ def annotate_and_update_price_history(deals: list[Deal], history_path: Path, gen
             "title": deal.title,
             "url": deal.url,
             "source": deal.source,
+            "image_url": deal.image_url,
             "first_seen_at": first_seen_at,
             "last_seen_at": generated_at,
             "current_price": deal.current_price,
@@ -1431,9 +1557,17 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
         status = stock_label(deal.get("stock_status"))
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
+        thumbnail = (
+            f"""<a class="thumb" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer" aria-label="{html.escape(deal['title'])}">
+                <img src="{html.escape(deal['image_url'])}" alt="" loading="lazy" decoding="async" />
+              </a>"""
+            if deal.get("image_url")
+            else "<div class='thumb thumb-empty' aria-hidden='true'></div>"
+        )
         cards.append(
             f"""
             <article class="deal" data-source="{html.escape(deal['source'])}">
+              {thumbnail}
               <div>
                 <p class="source">{html.escape(deal['source'])}</p>
                 <h2><a href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">{html.escape(deal['title'])}</a></h2>
@@ -1507,13 +1641,16 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .source-toggle input {{ accent-color: var(--accent); }}
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
-      .deal {{ display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }}
+      .deal {{ display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }}
       .deal[hidden] {{ display: none; }}
+      .thumb {{ display: block; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }}
+      .thumb img {{ width: 100%; height: 100%; object-fit: contain; display: block; }}
+      .thumb-empty {{ background: linear-gradient(135deg, #ffffff, #eef2ed); }}
       .source {{ margin: 0 0 5px; font-size: .86rem; }}
       .price {{ text-align: right; min-width: 120px; }}
       .price strong {{ display: block; font-size: 1.45rem; color: var(--hot); }}
       .was {{ display: block; text-decoration: line-through; }}
-      .badges {{ grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }}
+      .badges {{ grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; }}
       .badges span {{ border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }}
       .trend-down {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
@@ -1524,7 +1661,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 620px) {{ header, .deal, .filter-head {{ display: block; }} .filter-actions {{ margin-top: 10px; }} .price {{ text-align: left; margin-top: 12px; }} }}
+      @media (max-width: 620px) {{ header, .filter-head {{ display: block; }} .deal {{ grid-template-columns: 76px 1fr; }} .thumb {{ width: 76px; height: 76px; }} .filter-actions {{ margin-top: 10px; }} .price {{ grid-column: 2; text-align: left; margin-top: 4px; }} .badges {{ grid-column: 1 / -1; }} }}
     </style>
   </head>
   <body>

@@ -25,13 +25,16 @@
       .source-toggle input { accent-color: var(--accent); }
       .source-toggle b { color: var(--muted); font-size: .78rem; }
       .visible-count { margin: 12px 0 0; }
-      .deal { display: grid; grid-template-columns: 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+      .deal { display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
       .deal[hidden] { display: none; }
+      .thumb { display: block; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }
+      .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .thumb-empty { background: linear-gradient(135deg, #ffffff, #eef2ed); }
       .source { margin: 0 0 5px; font-size: .86rem; }
       .price { text-align: right; min-width: 120px; }
       .price strong { display: block; font-size: 1.45rem; color: var(--hot); }
       .was { display: block; text-decoration: line-through; }
-      .badges { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+      .badges { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
       .badges span { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }
       .trend-down { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .trend-up { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
@@ -42,7 +45,7 @@
       .stock-availability_unknown { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .empty { padding: 24px 0; color: var(--muted); }
       .errors { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
-      @media (max-width: 620px) { header, .deal, .filter-head { display: block; } .filter-actions { margin-top: 10px; } .price { text-align: left; margin-top: 12px; } }
+      @media (max-width: 620px) { header, .filter-head { display: block; } .deal { grid-template-columns: 76px 1fr; } .thumb { width: 76px; height: 76px; } .filter-actions { margin-top: 10px; } .price { grid-column: 2; text-align: left; margin-top: 4px; } .badges { grid-column: 1 / -1; } }
     </style>
   </head>
   <body>
@@ -50,11 +53,11 @@
       <header>
         <div>
           <h1>Ski Gear Deals</h1>
-          <p class="meta">Generated 2026-05-18T15:36:09+00:00</p>
+          <p class="meta">Generated 2026-05-18T09:36:12-06:00</p>
         </div>
-        <p class="meta">175 deals from 6 enabled sources</p>
+        <p class="meta">187 deals from 6 enabled sources</p>
       </header>
-      
+
         <section class="filters" aria-label="Store filters">
           <div class="filter-head">
             <h2>Stores</h2>
@@ -65,41 +68,50 @@
           </div>
           <div class="source-toggles">
         <label class="source-toggle">
+          <input type="checkbox" value="CampSaver backcountry skis" checked />
+          <span>CampSaver backcountry skis</span>
+          <b>12</b>
+        </label>
+
+        <label class="source-toggle">
           <input type="checkbox" value="ERIK&#x27;S downhill skis price ascending" checked />
           <span>ERIK&#x27;S downhill skis price ascending</span>
           <b>30</b>
         </label>
-        
+
         <label class="source-toggle">
           <input type="checkbox" value="Evo skis price ascending" checked />
           <span>Evo skis price ascending</span>
           <b>80</b>
         </label>
-        
+
         <label class="source-toggle">
           <input type="checkbox" value="J Skis Secret Stash" checked />
           <span>J Skis Secret Stash</span>
           <b>2</b>
         </label>
-        
+
         <label class="source-toggle">
           <input type="checkbox" value="The Gear Room skis price ascending" checked />
           <span>The Gear Room skis price ascending</span>
           <b>25</b>
         </label>
-        
+
         <label class="source-toggle">
           <input type="checkbox" value="Utah Skis demo skis sale" checked />
           <span>Utah Skis demo skis sale</span>
           <b>38</b>
         </label>
         </div>
-          <p class="meta visible-count"><span id="visibleDealCount">175</span> shown</p>
+          <p class="meta visible-count"><span id="visibleDealCount">187</span> shown</p>
         </section>
-        
+
       <section class="deals-list">
-        
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022" target="_blank" rel="noreferrer" aria-label="Dynastar M-Pro 99 W Skis - Women&#x27;s 2022">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-736345.jpg?v=1767747005" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022" target="_blank" rel="noreferrer">Dynastar M-Pro 99 W Skis - Women&#x27;s 2022</a></h2>
@@ -110,8 +122,11 @@
               </div>
               <div class="badges"><span>82.9% off</span><span>Save $579.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 136</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/228455-dynastar-e-pro-90-skis-women-s-2024" target="_blank" rel="noreferrer" aria-label="Dynastar E-Pro 90 Skis - Women&#x27;s 2024">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1023513.jpg?v=1771442828" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/228455-dynastar-e-pro-90-skis-women-s-2024" target="_blank" rel="noreferrer">Dynastar E-Pro 90 Skis - Women&#x27;s 2024</a></h2>
@@ -122,20 +137,26 @@
               </div>
               <div class="badges"><span>80.0% off</span><span>Save $559.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 132</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/salomon-mtn-86-flat-skis-164cm" target="_blank" rel="noreferrer" aria-label="Salomon MTN 86 Flat Ski&#x27;s, 2025 - Unisex (164cm) - 164cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Salomon_MTN_86_Flat_Ski_s-1.png?v=1768088406" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/salomon-mtn-86-flat-skis-164cm" target="_blank" rel="noreferrer">Salomon MTN 86 Flat Ski&#x27;s, 2025 - Unisex (164cm) - 164cm</a></h2>
               </div>
               <div class="price">
                 <strong>$199.82</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 16</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025" target="_blank" rel="noreferrer" aria-label="Nordica Unleashed 90 Skis 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1093983.jpg?v=1771443095" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025" target="_blank" rel="noreferrer">Nordica Unleashed 90 Skis 2025</a></h2>
@@ -146,8 +167,11 @@
               </div>
               <div class="badges"><span>55.6% off</span><span>Save $250.02</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/216289-rossignol-rallybird-104-ti-skis-women-s-2024" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird 104 Ti Skis - Women&#x27;s 2024">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-914132.jpg?v=1771446087" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/216289-rossignol-rallybird-104-ti-skis-women-s-2024" target="_blank" rel="noreferrer">Rossignol Rallybird 104 Ti Skis - Women&#x27;s 2024</a></h2>
@@ -158,8 +182,11 @@
               </div>
               <div class="badges"><span>76.5% off</span><span>Save $649.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 128</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/elan-element-sport-skis-with-el-9-0-bindings-pr5a16794" target="_blank" rel="noreferrer" aria-label="Elan Element Sport Skis With EL 9.0 Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-element-sport-ski-el-9-bnd.jpg?v=1758720336" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/elan-element-sport-skis-with-el-9-0-bindings-pr5a16794" target="_blank" rel="noreferrer">Elan Element Sport Skis With EL 9.0 Bindings</a></h2>
@@ -170,8 +197,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $199.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 146cm, 152cm, 160cm, 168cm</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-stance-76-skis-with-m10-gw-bindings-2026-pr5a25418" target="_blank" rel="noreferrer" aria-label="Salomon Stance 76 Skis with M10 GW Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-76-skis-with-m10-gw-bindings_blissful-blue_pr5a25418_30b4.jpg?v=1764238570" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-stance-76-skis-with-m10-gw-bindings-2026-pr5a25418" target="_blank" rel="noreferrer">Salomon Stance 76 Skis with M10 GW Bindings</a></h2>
@@ -182,8 +212,11 @@
               </div>
               <div class="badges"><span>50.7% off</span><span>Save $222.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes Blissful Blue / 138cm, Blissful Blue / 146cm, Blissful Blue / 154cm, Blissful Blue / 170cm</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025" target="_blank" rel="noreferrer" aria-label="Blizzard Zero G LT 80 W Skis - Women&#x27;s 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1020650.jpg?v=1771442806" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025" target="_blank" rel="noreferrer">Blizzard Zero G LT 80 W Skis - Women&#x27;s 2025</a></h2>
@@ -194,8 +227,11 @@
               </div>
               <div class="badges"><span>71.9% off</span><span>Save $574.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 122</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024" target="_blank" rel="noreferrer" aria-label="Nordica Unleashed 90 Tree Skis 2024">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1053654.jpg?v=1771442950" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024" target="_blank" rel="noreferrer">Nordica Unleashed 90 Tree Skis 2024</a></h2>
@@ -206,8 +242,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/fischer-pulse-pro-skis-with-rs-9-bindings-2026-pr5a25873" target="_blank" rel="noreferrer" aria-label="Fischer Pulse Pro Skis with RS 9 Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-pulse-pro-skis-with-rs-9-bindings_pr5a25873_5735.jpg?v=1756454341" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/fischer-pulse-pro-skis-with-rs-9-bindings-2026-pr5a25873" target="_blank" rel="noreferrer">Fischer Pulse Pro Skis with RS 9 Bindings</a></h2>
@@ -218,8 +257,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 145cm, 150cm, 155cm, 160cm, 165cm, 170cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-revolt-81-skis-2026-pr5a25813" target="_blank" rel="noreferrer" aria-label="Volkl Revolt 81 Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-revolt-81-skis_pr5a25813_2e50.jpg?v=1758094559" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-revolt-81-skis-2026-pr5a25813" target="_blank" rel="noreferrer">Volkl Revolt 81 Skis</a></h2>
@@ -230,8 +272,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168cm, 178cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266495-nordica-unleashed-90-skis-2025" target="_blank" rel="noreferrer" aria-label="Nordica Unleashed 90 Skis 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1263802.jpg?v=1767739685" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266495-nordica-unleashed-90-skis-2025" target="_blank" rel="noreferrer">Nordica Unleashed 90 Skis 2025</a></h2>
@@ -242,8 +287,11 @@
               </div>
               <div class="badges"><span>48.9% off</span><span>Save $220.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/261466-rossignol-soul-7-hd-skis-marker-squire-11-bindings-2020-used" target="_blank" rel="noreferrer" aria-label="Rossignol Soul 7 HD Skis + Marker Squire 11 Bindings 2020 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1254483.jpg?v=1767739328" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/261466-rossignol-soul-7-hd-skis-marker-squire-11-bindings-2020-used" target="_blank" rel="noreferrer">Rossignol Soul 7 HD Skis + Marker Squire 11 Bindings 2020 - Used</a></h2>
@@ -254,8 +302,24 @@
               </div>
               <div class="badges"><span>75.0% off</span><span>Save $712.46</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 125</span></div>
             </article>
-            
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/g3-findr-flx-r3-94-skis.html" target="_blank" rel="noreferrer">G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin&#x27; Deal</a></h2>
+              </div>
+              <div class="price">
+                <strong>$237.60</strong>
+                <span class='was'>Was $662.00</span>
+              </div>
+              <div class="badges"><span>64.1% off</span><span>Save $424.40</span><span class='trend trend-new'>Newly tracked</span><span>Score 114</span></div>
+            </article>
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-0" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 0">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy0_4.png?v=1778441115" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-0" target="_blank" rel="noreferrer">Faction Prodigy 0</a></h2>
@@ -266,8 +330,11 @@
               </div>
               <div class="badges"><span>44.3% off</span><span>Save $190.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150cm, 157cm</span><span>Score 95</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/fischer-rc-fire-mens-skis-with-rs9-gw-bindings-2026-pr5a25876" target="_blank" rel="noreferrer" aria-label="Fischer RC Fire Mens Skis with RS9 GW Bindings - 155cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-fire-mens-skis-with-rs9-gw-bindings_pr5a25876_05c2.jpg?v=1756638877" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/fischer-rc-fire-mens-skis-with-rs9-gw-bindings-2026-pr5a25876" target="_blank" rel="noreferrer">Fischer RC Fire Mens Skis with RS9 GW Bindings - 155cm</a></h2>
@@ -278,8 +345,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $160.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595" target="_blank" rel="noreferrer" aria-label="Salomon Stance 88 Womens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/355782.jpg?v=1726380065" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595" target="_blank" rel="noreferrer">Salomon Stance 88 Womens Skis</a></h2>
@@ -290,8 +360,11 @@
               </div>
               <div class="badges"><span>64.3% off</span><span>Save $449.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168cm, 174cm</span><span>Score 114</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/fischer-rc-comp-mens-skis-with-rs-10-gw-powerrail-bindings-2026-pr5a23292" target="_blank" rel="noreferrer" aria-label="Fischer RC Comp Mens Skis with RS 10 GW Powerrail Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-comp-mens-skis-with-rs-10-gw-powerrail-bindings_pr5a23292_e57f.jpg?v=1734987505" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/fischer-rc-comp-mens-skis-with-rs-10-gw-powerrail-bindings-2026-pr5a23292" target="_blank" rel="noreferrer">Fischer RC Comp Mens Skis with RS 10 GW Powerrail Bindings</a></h2>
@@ -302,8 +375,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 153cm, 160cm, 167cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/fischer-ranger-womens-skis-2026-pr5a23299" target="_blank" rel="noreferrer" aria-label="Fischer Ranger Womens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/395292.jpg?v=1727975532" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/fischer-ranger-womens-skis-2026-pr5a23299" target="_blank" rel="noreferrer">Fischer Ranger Womens Skis</a></h2>
@@ -314,8 +390,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152cm, 172cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268822-rossignol-sprayer-pro-skis-xpress-10-bindings-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sprayer Pro Skis + Xpress 10 Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187984.jpg?v=1771443536" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268822-rossignol-sprayer-pro-skis-xpress-10-bindings-2026" target="_blank" rel="noreferrer">Rossignol Sprayer Pro Skis + Xpress 10 Bindings 2026</a></h2>
@@ -326,8 +405,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $139.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul Pro Skis + XP 10 Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105192.jpg?v=1771443215" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026" target="_blank" rel="noreferrer">Rossignol Rallybird Soul Pro Skis + XP 10 Bindings 2026</a></h2>
@@ -338,8 +420,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $179.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Playmaker 87 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker87MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 87 Mens Demo Skis 2026</a></h2>
@@ -350,8 +435,11 @@
               </div>
               <div class="badges"><span>59.6% off</span><span>Save $405.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-wingman-80-ti-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Wingman 80 Ti Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Wingman80Ti_720x720.jpg?v=1775083807" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-wingman-80-ti-demo-skis-2026" target="_blank" rel="noreferrer">Elan Wingman 80 Ti Mens Demo Skis 2026</a></h2>
@@ -362,8 +450,11 @@
               </div>
               <div class="badges"><span>57.7% off</span><span>Save $375.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-shine-72-womens-skis-with-vmotion-10-bindings-2026-pr5a25816" target="_blank" rel="noreferrer" aria-label="Volkl Shine 72 Womens Skis with VMotion 10 Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-72-womens-skis-with-vmotion-10-bindings_pr5a25816_0301.jpg?v=1756540785" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-shine-72-womens-skis-with-vmotion-10-bindings-2026-pr5a25816" target="_blank" rel="noreferrer">Volkl Shine 72 Womens Skis with VMotion 10 Bindings</a></h2>
@@ -374,8 +465,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $274.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 144cm, 151cm, 158cm, 165cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267820-armada-arw-84-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Armada ARW 84 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1182480.jpg?v=1767736558" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267820-armada-arw-84-skis-women-s-2026" target="_blank" rel="noreferrer">Armada ARW 84 Skis - Women&#x27;s 2026</a></h2>
@@ -386,8 +480,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267761-armada-arv-84-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada ARV 84 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186537.jpg?v=1771443523" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267761-armada-arv-84-skis-2026" target="_blank" rel="noreferrer">Armada ARV 84 Skis 2026</a></h2>
@@ -398,8 +495,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/261830-season-primer-skis-blem-2026-used" target="_blank" rel="noreferrer" aria-label="Season Primer Skis - Blem 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1237374.jpg?v=1771443720" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/261830-season-primer-skis-blem-2026-used" target="_blank" rel="noreferrer">Season Primer Skis - Blem 2026</a></h2>
@@ -410,8 +510,11 @@
               </div>
               <div class="badges"><span>37.0% off</span><span>Save $166.50</span><span class='trend trend-new'>Newly tracked</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-smax-6xt-skis-with-m10-bindings-2026-pr5a25483" target="_blank" rel="noreferrer" aria-label="Salomon S/Max 6XT Skis with M10 Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-s-max-6xt-skis-with-m10-bindings_silver_pr5a25483_91b4.jpg?v=1774643105" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-smax-6xt-skis-with-m10-bindings-2026-pr5a25483" target="_blank" rel="noreferrer">Salomon S/Max 6XT Skis with M10 Bindings</a></h2>
@@ -422,8 +525,11 @@
               </div>
               <div class="badges"><span>50.5% off</span><span>Save $292.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes Silver / 150cm, Silver / 160cm, Silver / 167cm, Silver / 175cm</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-smax-n6-xt-womens-skis-with-m10-gw-bindings-2026-pr5a25495" target="_blank" rel="noreferrer" aria-label="Salomon S/MAX N6 XT Womens Skis with M10 GW Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-s-max-n6-xt-womens-skis-with-m10-gw-bindings_pr5a25495_db4f.jpg?v=1764928803" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-smax-n6-xt-womens-skis-with-m10-gw-bindings-2026-pr5a25495" target="_blank" rel="noreferrer">Salomon S/MAX N6 XT Womens Skis with M10 GW Bindings</a></h2>
@@ -434,8 +540,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $289.97</span><span class='trend trend-new'>Newly tracked</span><span>Sizes Black / 160cm, Black / 167cm</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/armada-tantrum-100-pow" target="_blank" rel="noreferrer" aria-label="Armada Tantrum 100 POW">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ArmadaTantrum100POW_5.png?v=1773352225" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/armada-tantrum-100-pow" target="_blank" rel="noreferrer">Armada Tantrum 100 POW</a></h2>
@@ -446,8 +555,11 @@
               </div>
               <div class="badges"><span>42.0% off</span><span>Save $210.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 148cm, 164cm</span><span>Score 91</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255543-rossignol-sender-soul-pro-skis-xpress-10-bindings-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Soul Pro Skis + Xpress 10 Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105187.jpg?v=1771443214" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255543-rossignol-sender-soul-pro-skis-xpress-10-bindings-2026" target="_blank" rel="noreferrer">Rossignol Sender Soul Pro Skis + Xpress 10 Bindings 2026</a></h2>
@@ -458,8 +570,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $157.48</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 170 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 84</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/atomic-maverick-84r-skis-with-m10-gw-bindings-2026-pr5a25071" target="_blank" rel="noreferrer" aria-label="Atomic Maverick 84R Skis with M10 GW Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-84r-skis-with-m10-gw-bindings_pr5a25071_ba12.jpg?v=1758008985" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/atomic-maverick-84r-skis-with-m10-gw-bindings-2026-pr5a25071" target="_blank" rel="noreferrer">Atomic Maverick 84R Skis with M10 GW Bindings</a></h2>
@@ -470,8 +585,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $199.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes Sand / 144cm, Sand / 153cm, Sand / 171cm</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/257155-season-nexus-skis-2026-used" target="_blank" rel="noreferrer" aria-label="Season Nexus Skis 2026 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241407.jpg?v=1771443725" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/257155-season-nexus-skis-2026-used" target="_blank" rel="noreferrer">Season Nexus Skis 2026 - Used</a></h2>
@@ -482,8 +600,11 @@
               </div>
               <div class="badges"><span>60.0% off</span><span>Save $449.97</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/scott-pure-90-2025-unisex" target="_blank" rel="noreferrer" aria-label="Scott Pure Free 90 Ti - Unisex">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ScottPure90_2025Unisex01.png?v=1755814773" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/scott-pure-90-2025-unisex" target="_blank" rel="noreferrer">Scott Pure Free 90 Ti - Unisex</a></h2>
@@ -494,8 +615,11 @@
               </div>
               <div class="badges"><span>57.1% off</span><span>Save $400.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 177cm, 184cm</span><span>Score 106</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/fischer-rc-lite-womens-skis-with-rs9-gw-bindings-2026-pr5a25879" target="_blank" rel="noreferrer" aria-label="Fischer RC Lite Womens Skis with RS9 GW Bindings - 160cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-lite-womens-skis-with-rs9-gw-bindings_pr5a25879_e7d7.jpg?v=1756454517" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/fischer-rc-lite-womens-skis-with-rs9-gw-bindings-2026-pr5a25879" target="_blank" rel="noreferrer">Fischer RC Lite Womens Skis with RS9 GW Bindings - 160cm</a></h2>
@@ -506,8 +630,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $200.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243" target="_blank" rel="noreferrer" aria-label="Lib Tech Backwards Mens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-backwards-mens-skis_pr5a25243_34ad.jpg?v=1758009588" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243" target="_blank" rel="noreferrer">Lib Tech Backwards Mens Skis</a></h2>
@@ -518,20 +645,26 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $299.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166cm, 178cm</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/k2-thrilavut-85" target="_blank" rel="noreferrer" aria-label="K2 Thrilavut 85 - 170cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/K2Thrilavut85.png?v=1765132387" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/k2-thrilavut-85" target="_blank" rel="noreferrer">K2 Thrilavut 85 - 170cm</a></h2>
               </div>
               <div class="price">
                 <strong>$300.82</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 14</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/238126-salomon-qst-lux-92-skis-women-s-2025-used" target="_blank" rel="noreferrer" aria-label="Salomon QST Lux 92 Skis - Women&#x27;s 2025 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1033079.jpg?v=1767730518" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/238126-salomon-qst-lux-92-skis-women-s-2025-used" target="_blank" rel="noreferrer">Salomon QST Lux 92 Skis - Women&#x27;s 2025 - Used</a></h2>
@@ -542,8 +675,11 @@
               </div>
               <div class="badges"><span>44.0% off</span><span>Save $241.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used" target="_blank" rel="noreferrer" aria-label="K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1155141.jpg?v=1771443389" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used" target="_blank" rel="noreferrer">K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used</a></h2>
@@ -554,8 +690,11 @@
               </div>
               <div class="badges"><span>63.5% off</span><span>Save $539.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 112</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/250664-season-primer-skis-2026" target="_blank" rel="noreferrer" aria-label="Season Primer Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159244.jpg?v=1767735605" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/250664-season-primer-skis-2026" target="_blank" rel="noreferrer">Season Primer Skis 2026</a></h2>
@@ -566,8 +705,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-new'>Newly tracked</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Honey Badger Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184446.jpg?v=1771443508" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026" target="_blank" rel="noreferrer">Line Skis Honey Badger Skis 2026</a></h2>
@@ -578,8 +720,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/285809-lib-tech-libstick-88-skis-women-s-2026-used" target="_blank" rel="noreferrer" aria-label="Lib Tech Libstick 88 Skis - Women&#x27;s 2026 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282328.jpg?v=1774050883" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/285809-lib-tech-libstick-88-skis-women-s-2026-used" target="_blank" rel="noreferrer">Lib Tech Libstick 88 Skis - Women&#x27;s 2026 - Used</a></h2>
@@ -590,8 +735,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-libstick-88-womens-skis-2026-pr5a25248" target="_blank" rel="noreferrer" aria-label="Lib Tech Libstick 88 Womens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-88-womens-skis_pr5a25248_52c1.jpg?v=1758009637" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-libstick-88-womens-skis-2026-pr5a25248" target="_blank" rel="noreferrer">Lib Tech Libstick 88 Womens Skis</a></h2>
@@ -602,8 +750,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 153cm, 160cm</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/251932-faction-prodigy-2-skis-2025-used" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 2 Skis 2025 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1100508.jpg?v=1771443152" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/251932-faction-prodigy-2-skis-2025-used" target="_blank" rel="noreferrer">Faction Prodigy 2 Skis 2025 - Used</a></h2>
@@ -614,8 +765,11 @@
               </div>
               <div class="badges"><span>51.0% off</span><span>Save $330.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-playmaker-101-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Playmaker 101 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker101MensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-playmaker-101-mens-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 101 Mens Demo Skis 2026</a></h2>
@@ -626,8 +780,11 @@
               </div>
               <div class="badges"><span>63.9% off</span><span>Save $575.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 180</span><span class='stock stock-in_stock'>In stock</span><span>Score 112</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/black-crows-captis-birdie-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Black Crows Captis Birdie Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsCaptisBirdieWomensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/black-crows-captis-birdie-womens-demo-skis-2026" target="_blank" rel="noreferrer">Black Crows Captis Birdie Womens Demo Skis 2026</a></h2>
@@ -638,8 +795,11 @@
               </div>
               <div class="badges"><span>56.6% off</span><span>Save $424.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154.4 CM, 160.1 CM</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/atomic-maven-86-w-r-m10-gw-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Atomic Maven 86 W+R M10 Gw Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/AtomicMaven86W_RM10GwWomensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/atomic-maven-86-w-r-m10-gw-womens-demo-skis-2026" target="_blank" rel="noreferrer">Atomic Maven 86 W+R M10 Gw Womens Demo Skis 2026</a></h2>
@@ -650,8 +810,11 @@
               </div>
               <div class="badges"><span>53.6% off</span><span>Save $374.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 147, 153, 159, 165</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-blaze-82-skis-with-v10-bindings-2026-pr5a25807" target="_blank" rel="noreferrer" aria-label="Volkl Blaze 82 Skis with V10 Bindings - Grey / 173cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-blaze-82-skis-with-v10-bindings_pr5a25807_255f.jpg?v=1763461634" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-blaze-82-skis-with-v10-bindings-2026-pr5a25807" target="_blank" rel="noreferrer">Volkl Blaze 82 Skis with V10 Bindings - Grey / 173cm</a></h2>
@@ -662,8 +825,24 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $324.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html" target="_blank" rel="noreferrer">8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 61%) Blazin&#x27; Deal</a></h2>
+              </div>
+              <div class="price">
+                <strong>$328.49</strong>
+
+              </div>
+              <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 13</span></div>
+            </article>
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269337-head-oblivion-84-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Oblivion 84 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187086.jpg?v=1767736709" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269337-head-oblivion-84-skis-2026" target="_blank" rel="noreferrer">Head Oblivion 84 Skis 2026</a></h2>
@@ -674,8 +853,11 @@
               </div>
               <div class="badges"><span>40.1% off</span><span>Save $220.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 171 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/atomic-maverick-86-skis-with-m10-gw-bindings-2026-pr5a25068" target="_blank" rel="noreferrer" aria-label="Atomic Maverick 86 Skis with M10 GW Bindings - Sage / 186cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-86-skis-with-m10-gw-bindings_pr5a25068_6c65.jpg?v=1758008928" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/atomic-maverick-86-skis-with-m10-gw-bindings-2026-pr5a25068" target="_blank" rel="noreferrer">Atomic Maverick 86 Skis with M10 GW Bindings - Sage / 186cm</a></h2>
@@ -686,8 +868,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $219.98</span><span class='trend trend-new'>Newly tracked</span><span>Score 88</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025" target="_blank" rel="noreferrer" aria-label="Nordica Santa Ana 102 Skis - Women&#x27;s 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1081665.jpg?v=1771443066" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025" target="_blank" rel="noreferrer">Nordica Santa Ana 102 Skis - Women&#x27;s 2025</a></h2>
@@ -698,8 +883,11 @@
               </div>
               <div class="badges"><span>60.0% off</span><span>Save $510.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/241716-k2-mindbender-106-c-w-skis-women-s-2024" target="_blank" rel="noreferrer" aria-label="K2 Mindbender 106 C W Skis - Women&#x27;s 2024">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1026161.jpg?v=1771442867" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/241716-k2-mindbender-106-c-w-skis-women-s-2024" target="_blank" rel="noreferrer">K2 Mindbender 106 C W Skis - Women&#x27;s 2024</a></h2>
@@ -710,8 +898,11 @@
               </div>
               <div class="badges"><span>51.4% off</span><span>Save $359.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-peregrine-xt-skis-with-vmotion-10-bindings-2026-pr5a25806" target="_blank" rel="noreferrer" aria-label="Volkl Peregrine XT Skis with VMotion 10 Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-xt-skis-with-vmotion-10-bindings_pr5a25806_8691.jpg?v=1763461596" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-peregrine-xt-skis-with-vmotion-10-bindings-2026-pr5a25806" target="_blank" rel="noreferrer">Volkl Peregrine XT Skis with VMotion 10 Bindings</a></h2>
@@ -722,8 +913,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154cm, 161cm, 168cm, 175cm</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-shine-76-womens-skis-with-vmotion-10-bindings-2026-pr5a25815" target="_blank" rel="noreferrer" aria-label="Volkl Shine 76 Womens Skis with VMotion 10 Bindings - 161cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-76-womens-skis-with-vmotion-10-bindings_pr5a25815_2aa5.jpg?v=1756540764" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-shine-76-womens-skis-with-vmotion-10-bindings-2026-pr5a25815" target="_blank" rel="noreferrer">Volkl Shine 76 Womens Skis with VMotion 10 Bindings - 161cm</a></h2>
@@ -734,8 +928,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-libstick-98-womens-skis-2026-pr5a25249" target="_blank" rel="noreferrer" aria-label="Lib Tech Libstick 98 Womens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-98-womens-skis_pr5a25249_e1c3.jpg?v=1756453983" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-libstick-98-womens-skis-2026-pr5a25249" target="_blank" rel="noreferrer">Lib Tech Libstick 98 Womens Skis</a></h2>
@@ -746,8 +943,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 155cm, 162cm</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-ufo-95-skis-2026-pr5a25244" target="_blank" rel="noreferrer" aria-label="Lib Tech UFO 95 Skis - 171cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-ufo-95-skis_pr5a25244_3894.jpg?v=1758009616" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-ufo-95-skis-2026-pr5a25244" target="_blank" rel="noreferrer">Lib Tech UFO 95 Skis - 171cm</a></h2>
@@ -758,8 +958,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-stance-80-skis-with-m11-bindings-2026-pr5a25484" target="_blank" rel="noreferrer" aria-label="Salomon Stance 80 Skis with M11 Bindings - Kelp / 161cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-80-skis-with-m11-bindings_pr5a25484_abbc.jpg?v=1763461232" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-stance-80-skis-with-m11-bindings-2026-pr5a25484" target="_blank" rel="noreferrer">Salomon Stance 80 Skis with M11 Bindings - Kelp / 161cm</a></h2>
@@ -770,8 +973,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $231.98</span><span class='trend trend-new'>Newly tracked</span><span>Score 88</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-5" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 1">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy1_4.png?v=1778439505" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-5" target="_blank" rel="noreferrer">Faction Prodigy 1</a></h2>
@@ -782,8 +988,11 @@
               </div>
               <div class="badges"><span>44.5% off</span><span>Save $280.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164cm, 178cm, 184cm</span><span>Score 93</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267760-armada-arv-88-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada ARV 88 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186542.jpg?v=1771443525" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267760-armada-arv-88-skis-2026" target="_blank" rel="noreferrer">Armada ARV 88 Skis 2026</a></h2>
@@ -794,8 +1003,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268051-atomic-maven-84-skis-m10-gw-bindings-women-s-2026" target="_blank" rel="noreferrer" aria-label="Atomic Maven 84 Skis + M10 GW Bindings - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1234764.jpg?v=1771443719" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268051-atomic-maven-84-skis-m10-gw-bindings-women-s-2026" target="_blank" rel="noreferrer">Atomic Maven 84 Skis + M10 GW Bindings - Women&#x27;s 2026</a></h2>
@@ -806,8 +1018,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 171 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268044-atomic-maverick-84-skis-m10-gw-bindings-2026" target="_blank" rel="noreferrer" aria-label="Atomic Maverick 84 Skis + M10 GW Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1234724.jpg?v=1767738525" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268044-atomic-maverick-84-skis-m10-gw-bindings-2026" target="_blank" rel="noreferrer">Atomic Maverick 84 Skis + M10 GW Bindings 2026</a></h2>
@@ -818,8 +1033,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267816-armada-arw-88-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Armada ARW 88 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186558.jpg?v=1771443525" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267816-armada-arw-88-skis-women-s-2026" target="_blank" rel="noreferrer">Armada ARW 88 Skis - Women&#x27;s 2026</a></h2>
@@ -830,8 +1048,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266169-line-skis-pandora-85-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Pandora 85 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184453.jpg?v=1771443509" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266169-line-skis-pandora-85-skis-2026" target="_blank" rel="noreferrer">Line Skis Pandora 85 Skis 2026</a></h2>
@@ -842,8 +1063,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $149.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025" target="_blank" rel="noreferrer" aria-label="Peak Skis Peak 98 By Dav Skis 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1248634.jpg?v=1771443741" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025" target="_blank" rel="noreferrer">Peak Skis Peak 98 By Dav Skis 2025</a></h2>
@@ -854,8 +1078,11 @@
               </div>
               <div class="badges"><span>61.1% off</span><span>Save $549.03</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/285146-rossignol-rallybird-soul-92-skis-xpress-11-w-gw-bindings-women-s-2025" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul 92 Skis + Xpress 11 W GW Bindings - Women&#x27;s 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1281435.jpg?v=1774050838" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/285146-rossignol-rallybird-soul-92-skis-xpress-11-w-gw-bindings-women-s-2025" target="_blank" rel="noreferrer">Rossignol Rallybird Soul 92 Skis + Xpress 11 W GW Bindings - Women&#x27;s 2025</a></h2>
@@ -866,8 +1093,11 @@
               </div>
               <div class="badges"><span>50.3% off</span><span>Save $354.03</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/262705-rossignol-sender-free-92-skis-xpress-11-bindings-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Free 92 Skis + Xpress 11 Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1212798.jpg?v=1771443678" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/262705-rossignol-sender-free-92-skis-xpress-11-bindings-2026" target="_blank" rel="noreferrer">Rossignol Sender Free 92 Skis + Xpress 11 Bindings 2026</a></h2>
@@ -878,8 +1108,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-smax-n10-xt-womens-skis-with-m10-gw-bindings-2026-pr5a23203" target="_blank" rel="noreferrer" aria-label="Salomon S/MAX N10 XT Womens Skis with M10 GW Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/391621.jpg?v=1726408034" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-smax-n10-xt-womens-skis-with-m10-gw-bindings-2026-pr5a23203" target="_blank" rel="noreferrer">Salomon S/MAX N10 XT Womens Skis with M10 GW Bindings</a></h2>
@@ -890,8 +1123,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163cm, 170cm</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 87 Ti Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/HeadKore87TiWomensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026" target="_blank" rel="noreferrer">Head Kore 87 Ti Womens Demo Skis 2026</a></h2>
@@ -902,8 +1138,11 @@
               </div>
               <div class="badges"><span>60.0% off</span><span>Save $525.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269716-volkl-revolt-86-skis-2026" target="_blank" rel="noreferrer" aria-label="Völkl Revolt 86 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184149.jpg?v=1771443509" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269716-volkl-revolt-86-skis-2026" target="_blank" rel="noreferrer">Völkl Revolt 86 Skis 2026</a></h2>
@@ -914,8 +1153,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255529-rossignol-sender-soul-92-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Soul 92 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105137.jpg?v=1767733197" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255529-rossignol-sender-soul-92-skis-2026" target="_blank" rel="noreferrer">Rossignol Sender Soul 92 Skis 2026</a></h2>
@@ -926,8 +1168,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255337-dynastar-m-free-90-skis-2026" target="_blank" rel="noreferrer" aria-label="Dynastar M-Free 90 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1111874.jpg?v=1771443288" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255337-dynastar-m-free-90-skis-2026" target="_blank" rel="noreferrer">Dynastar M-Free 90 Skis 2026</a></h2>
@@ -938,8 +1183,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 167 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/264796-k2-omen-85-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Omen 85 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180784.jpg?v=1771443486" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/264796-k2-omen-85-skis-2026" target="_blank" rel="noreferrer">K2 Omen 85 Skis 2026</a></h2>
@@ -950,8 +1198,11 @@
               </div>
               <div class="badges"><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/264797-k2-omen-85-w-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="K2 Omen 85 W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180787.jpg?v=1771443485" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/264797-k2-omen-85-w-skis-women-s-2026" target="_blank" rel="noreferrer">K2 Omen 85 W Skis - Women&#x27;s 2026</a></h2>
@@ -962,8 +1213,11 @@
               </div>
               <div class="badges"><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024" target="_blank" rel="noreferrer" aria-label="Nordica Santa Ana 104 Free Skis - Women&#x27;s 2024">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1014087.jpg?v=1771442737" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024" target="_blank" rel="noreferrer">Nordica Santa Ana 104 Free Skis - Women&#x27;s 2024</a></h2>
@@ -974,8 +1228,11 @@
               </div>
               <div class="badges"><span>57.6% off</span><span>Save $490.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-hemi-102-mens-skis-2026-pr5a25246" target="_blank" rel="noreferrer" aria-label="Lib Tech Hemi 102 Mens Skis - 171cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-102-mens-skis_pr5a25246_17ea.jpg?v=1756453951" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-hemi-102-mens-skis-2026-pr5a25246" target="_blank" rel="noreferrer">Lib Tech Hemi 102 Mens Skis - 171cm</a></h2>
@@ -986,8 +1243,24 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $364.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/g3-seekr-r3-100-skis.html" target="_blank" rel="noreferrer">2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin&#x27; Deal</a></h2>
+              </div>
+              <div class="price">
+                <strong>$374.40</strong>
+                <span class='was'>Was $1041.00</span>
+              </div>
+              <div class="badges"><span>64.0% off</span><span>Save $666.60</span><span class='trend trend-new'>Newly tracked</span><span>Score 112</span></div>
+            </article>
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/k2-blur-79-mens-skis-with-quikclik-bindings-2026-pr5a25767" target="_blank" rel="noreferrer" aria-label="K2 Blur 79 Mens Skis with QuikClik Bindings - 156cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/k2-blur-79-mens-skis-with-quikclik-bindings_pr5a25767_b17d.jpg?v=1770926068" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/k2-blur-79-mens-skis-with-quikclik-bindings-2026-pr5a25767" target="_blank" rel="noreferrer">K2 Blur 79 Mens Skis with QuikClik Bindings - 156cm</a></h2>
@@ -998,8 +1271,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $374.97</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada Arv 100 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ArmadaArv100MensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026" target="_blank" rel="noreferrer">Armada Arv 100 Mens Demo Skis 2026</a></h2>
@@ -1010,8 +1286,11 @@
               </div>
               <div class="badges"><span>59.5% off</span><span>Save $550.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172, 179</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Nordica Santa Ana 92 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaSantaAna92WomensDemoSkis2026_720x720.jpg?v=1774998605" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026" target="_blank" rel="noreferrer">Nordica Santa Ana 92 Womens Demo Skis 2026</a></h2>
@@ -1022,8 +1301,11 @@
               </div>
               <div class="badges"><span>58.3% off</span><span>Save $525.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150, 155, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Ripstick 94 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick94WomensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026" target="_blank" rel="noreferrer">Elan Ripstick 94 Womens Demo Skis 2026</a></h2>
@@ -1034,8 +1316,11 @@
               </div>
               <div class="badges"><span>58.3% off</span><span>Save $524.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/k2-mindbndr-90c-w-quick-clik-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Mindbndr 90C W + Quick Clik Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Mindbender99TiMensDemoSkis2026_d306aa13-b375-48fd-bf97-44e919d30016_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/k2-mindbndr-90c-w-quick-clik-womens-demo-skis-2026" target="_blank" rel="noreferrer">K2 Mindbndr 90C W + Quick Clik Womens Demo Skis 2026</a></h2>
@@ -1046,8 +1331,11 @@
               </div>
               <div class="badges"><span>55.9% off</span><span>Save $474.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 148, 154, 160</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/k2-reckoner-102-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Reckoner 102 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Reckoner102MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/k2-reckoner-102-mens-demo-skis-2026" target="_blank" rel="noreferrer">K2 Reckoner 102 Mens Demo Skis 2026</a></h2>
@@ -1058,8 +1346,11 @@
               </div>
               <div class="badges"><span>53.1% off</span><span>Save $424.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-mantra-84-womens-skis-2026-pr5a25818" target="_blank" rel="noreferrer" aria-label="Volkl Mantra 84 Womens Skis - 170cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-mantra-84-womens-skis_pr5a25818_dd8b.jpg?v=1756540843" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-mantra-84-womens-skis-2026-pr5a25818" target="_blank" rel="noreferrer">Volkl Mantra 84 Womens Skis - 170cm</a></h2>
@@ -1070,8 +1361,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $374.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-2" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 2">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy2_5.png?v=1771280061" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-2" target="_blank" rel="noreferrer">Faction Prodigy 2</a></h2>
@@ -1082,8 +1376,11 @@
               </div>
               <div class="badges"><span>44.3% off</span><span>Save $301.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165cm, 171cm, 177cm, 183cm</span><span>Score 92</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/271198-head-kore-x-90-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore X 90 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187019.jpg?v=1771443525" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/271198-head-kore-x-90-skis-2026" target="_blank" rel="noreferrer">Head Kore X 90 Skis 2026</a></h2>
@@ -1094,8 +1391,11 @@
               </div>
               <div class="badges"><span>41.6% off</span><span>Save $270.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267991-atomic-bent-90-skis-2026" target="_blank" rel="noreferrer" aria-label="Atomic Bent 90 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1171199.jpg?v=1767736112" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267991-atomic-bent-90-skis-2026" target="_blank" rel="noreferrer">Atomic Bent 90 Skis 2026</a></h2>
@@ -1106,8 +1406,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268050-atomic-bent-85-skis-m10-gw-bindings-2026" target="_blank" rel="noreferrer" aria-label="Atomic Bent 85 Skis + M10 GW Bindings 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241130.jpg?v=1767738797" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268050-atomic-bent-85-skis-m10-gw-bindings-2026" target="_blank" rel="noreferrer">Atomic Bent 85 Skis + M10 GW Bindings 2026</a></h2>
@@ -1118,8 +1421,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266184-line-skis-tom-wallisch-pro-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Tom Wallisch Pro Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1206610.jpg?v=1771443664" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266184-line-skis-tom-wallisch-pro-skis-2026" target="_blank" rel="noreferrer">Line Skis Tom Wallisch Pro Skis 2026</a></h2>
@@ -1130,8 +1436,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $164.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/277481-head-kore-87-ti-w-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 87 Ti W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1284563.jpg?v=1774627904" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/277481-head-kore-87-ti-w-skis-women-s-2026" target="_blank" rel="noreferrer">Head Kore 87 Ti W Skis - Women&#x27;s 2026</a></h2>
@@ -1142,8 +1451,11 @@
               </div>
               <div class="badges"><span>40.1% off</span><span>Save $260.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/salomon-stance-pro-82-skis-2026-pr5a25491" target="_blank" rel="noreferrer" aria-label="Salomon Stance Pro 82 Skis - Iceberg Green / 185cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-pro-82-skis_pr5a25491_1d53.jpg?v=1760690031" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/salomon-stance-pro-82-skis-2026-pr5a25491" target="_blank" rel="noreferrer">Salomon Stance Pro 82 Skis - Iceberg Green / 185cm</a></h2>
@@ -1154,8 +1466,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $259.98</span><span class='trend trend-new'>Newly tracked</span><span>Score 87</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255534-rossignol-rallybird-soul-92-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul 92 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105164.jpg?v=1771443214" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255534-rossignol-rallybird-soul-92-skis-women-s-2026" target="_blank" rel="noreferrer">Rossignol Rallybird Soul 92 Skis - Women&#x27;s 2026</a></h2>
@@ -1166,8 +1481,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $209.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 82</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/lib-tech-hemi-112-mens-skis-2026-pr5a25247" target="_blank" rel="noreferrer" aria-label="Lib Tech Hemi 112 Mens Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-112-mens-skis_pr5a25247_02a2.jpg?v=1756453968" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/lib-tech-hemi-112-mens-skis-2026-pr5a25247" target="_blank" rel="noreferrer">Lib Tech Hemi 112 Mens Skis</a></h2>
@@ -1178,8 +1496,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $389.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 171cm, 178cm</span><span>Score 97</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/283438-rossignol-scratch-pro-skis-xpress-10-gw-bindings-2027" target="_blank" rel="noreferrer" aria-label="Rossignol Scratch Pro Skis + Xpress 10 GW Bindings 2027">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1288083.jpg?v=1775507839" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/283438-rossignol-scratch-pro-skis-xpress-10-gw-bindings-2027" target="_blank" rel="noreferrer">Rossignol Scratch Pro Skis + Xpress 10 GW Bindings 2027</a></h2>
@@ -1190,8 +1511,11 @@
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/264788-k2-reckoner-92-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Reckoner 92 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180811.jpg?v=1771443489" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/264788-k2-reckoner-92-skis-2026" target="_blank" rel="noreferrer">K2 Reckoner 92 Skis 2026</a></h2>
@@ -1202,8 +1526,11 @@
               </div>
               <div class="badges"><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/264792-k2-reckoner-92-w-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="K2 Reckoner 92 W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180815.jpg?v=1771443486" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/264792-k2-reckoner-92-w-skis-women-s-2026" target="_blank" rel="noreferrer">K2 Reckoner 92 W Skis - Women&#x27;s 2026</a></h2>
@@ -1214,8 +1541,11 @@
               </div>
               <div class="badges"><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul 92 Xp11 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul92_Xp11MensDemoSkis2026_ce736728-0827-4d6a-bd32-9406fa139022_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026" target="_blank" rel="noreferrer">Rossignol Rallybird Soul 92 Xp11 Womens Demo Skis 2026</a></h2>
@@ -1226,20 +1556,11 @@
               </div>
               <div class="badges"><span>60.0% off</span><span>Save $600.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156, 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
-              <div>
-                <p class="source">Utah Skis demo skis sale</p>
-                <h2><a href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 111 Demo Skis 2026</a></h2>
-              </div>
-              <div class="price">
-                <strong>$399.99</strong>
-                <span class='was'>Was $999.99</span>
-              </div>
-              <div class="badges"><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
-            </article>
-            
-            <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul92Skis20262_720x720.jpg?v=1775083807" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026" target="_blank" rel="noreferrer">Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026</a></h2>
@@ -1250,8 +1571,26 @@
               </div>
               <div class="badges"><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156, 166, 176, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Playmaker 111 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker111DemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
+              <div>
+                <p class="source">Utah Skis demo skis sale</p>
+                <h2><a href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 111 Demo Skis 2026</a></h2>
+              </div>
+              <div class="price">
+                <strong>$399.99</strong>
+                <span class='was'>Was $999.99</span>
+              </div>
+              <div class="badges"><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+            </article>
+
+            <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/armada-arv-106-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada Arv 106 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ArmadaArv106DemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/armada-arv-106-demo-skis-2026" target="_blank" rel="noreferrer">Armada Arv 106 Demo Skis 2026</a></h2>
@@ -1262,8 +1601,11 @@
               </div>
               <div class="badges"><span>59.0% off</span><span>Save $575.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172, 180</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-ripstick-96-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Ripstick 96 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Ripstick96_ab0297d6-f3ce-4419-8aa2-01131e5ce3f1_720x720.jpg?v=1770327911" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-ripstick-96-demo-skis-2026" target="_blank" rel="noreferrer">Elan Ripstick 96 Demo Skis 2026</a></h2>
@@ -1274,8 +1616,11 @@
               </div>
               <div class="badges"><span>57.9% off</span><span>Save $550.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 161, 168, 175, 182, 189</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/nordica-enforcer-89-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Nordica Enforcer 89 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer89MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/nordica-enforcer-89-mens-demo-skis-2026" target="_blank" rel="noreferrer">Nordica Enforcer 89 Mens Demo Skis 2026</a></h2>
@@ -1286,8 +1631,11 @@
               </div>
               <div class="badges"><span>55.6% off</span><span>Save $500.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-ripstick-88-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Ripstick 88 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick88WomensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-ripstick-88-womens-demo-skis-2026" target="_blank" rel="noreferrer">Elan Ripstick 88 Womens Demo Skis 2026</a></h2>
@@ -1298,8 +1646,11 @@
               </div>
               <div class="badges"><span>52.9% off</span><span>Save $450.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 147, 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/salomon-qst-94-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Salomon Qst 94 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/QSTDemoFixed26_720x720.jpg?v=1776124086" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/salomon-qst-94-mens-demo-skis-2026" target="_blank" rel="noreferrer">Salomon Qst 94 Mens Demo Skis 2026</a></h2>
@@ -1310,8 +1661,11 @@
               </div>
               <div class="badges"><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/salomon-qst-100-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Salomon Qst 100 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/SalomonQst100MensDemoSkis2026_720x720.jpg?v=1774998605" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/salomon-qst-100-mens-demo-skis-2026" target="_blank" rel="noreferrer">Salomon Qst 100 Mens Demo Skis 2026</a></h2>
@@ -1322,8 +1676,11 @@
               </div>
               <div class="badges"><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes GRAY / 148</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/atomic-bent-chetler-100-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Atomic Bent Chetler 100 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BentChetler1001_720x720.jpg?v=1770327911" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/atomic-bent-chetler-100-demo-skis-2026" target="_blank" rel="noreferrer">Atomic Bent Chetler 100 Demo Skis 2026</a></h2>
@@ -1334,32 +1691,41 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $399.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 158, 165, 172, 179, 186</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/scott-pure-free-90-skis-tyrolia-am-12-gw-bindings-womens-168cm" target="_blank" rel="noreferrer" aria-label="Scott Pure Free 90 Skis, 2025 + Tyrolia AM 12 GW Bindings - Women&#x27;s (168cm) - 168cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Scott_Pure_Free_90_Skis_Tyrolia_AM_12_GW_Bindings-1.png?v=1768326108" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/scott-pure-free-90-skis-tyrolia-am-12-gw-bindings-womens-168cm" target="_blank" rel="noreferrer">Scott Pure Free 90 Skis, 2025 + Tyrolia AM 12 GW Bindings - Women&#x27;s (168cm) - 168cm</a></h2>
               </div>
               <div class="price">
                 <strong>$399.99</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/blizzard-hustle-10-188cm" target="_blank" rel="noreferrer" aria-label="Blizzard Hustle 10 (188cm) - 188cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/BlizzardHustle10.png?v=1765132387" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/blizzard-hustle-10-188cm" target="_blank" rel="noreferrer">Blizzard Hustle 10 (188cm) - 188cm</a></h2>
               </div>
               <div class="price">
                 <strong>$400.12</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267757-armada-arv-94-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada ARV 94 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1182326.jpg?v=1771443488" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267757-armada-arv-94-skis-2026" target="_blank" rel="noreferrer">Armada ARV 94 Skis 2026</a></h2>
@@ -1370,8 +1736,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267814-armada-arw-94-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Armada ARW 94 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186561.jpg?v=1771443522" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267814-armada-arw-94-skis-women-s-2026" target="_blank" rel="noreferrer">Armada ARW 94 Skis - Women&#x27;s 2026</a></h2>
@@ -1382,8 +1751,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/284004-armada-reliance-82-c-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Armada Reliance 82 C Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1270878.jpg?v=1770248657" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/284004-armada-reliance-82-c-skis-women-s-2026" target="_blank" rel="noreferrer">Armada Reliance 82 C Skis - Women&#x27;s 2026</a></h2>
@@ -1394,8 +1766,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/257157-season-kin-skis-2026" target="_blank" rel="noreferrer" aria-label="Season Kin Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241385.jpg?v=1771443727" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/257157-season-kin-skis-2026" target="_blank" rel="noreferrer">Season Kin Skis 2026</a></h2>
@@ -1406,8 +1781,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/264779-k2-mindbender-90-c-w-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="K2 Mindbender 90 C W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180772.jpg?v=1771443484" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/264779-k2-mindbender-90-c-w-skis-women-s-2026" target="_blank" rel="noreferrer">K2 Mindbender 90 C W Skis - Women&#x27;s 2026</a></h2>
@@ -1418,8 +1796,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266168-line-skis-pandora-92-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Pandora 92 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184460.jpg?v=1771443508" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266168-line-skis-pandora-92-skis-2026" target="_blank" rel="noreferrer">Line Skis Pandora 92 Skis 2026</a></h2>
@@ -1430,8 +1811,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266174-line-skis-chronic-94-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Chronic 94 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184433.jpg?v=1767736623" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266174-line-skis-chronic-94-skis-2026" target="_blank" rel="noreferrer">Line Skis Chronic 94 Skis 2026</a></h2>
@@ -1442,8 +1826,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268012-atomic-maverick-88-cti-skis-2026-used" target="_blank" rel="noreferrer" aria-label="Atomic Maverick 88 CTI Skis 2026 - Used">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1171238.jpg?v=1767736113" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268012-atomic-maverick-88-cti-skis-2026-used" target="_blank" rel="noreferrer">Atomic Maverick 88 CTI Skis 2026 - Used</a></h2>
@@ -1454,8 +1841,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $279.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/285803-lib-tech-backwards-skis-2025" target="_blank" rel="noreferrer" aria-label="Lib Tech Backwards Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282326.jpg?v=1774050882" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/285803-lib-tech-backwards-skis-2025" target="_blank" rel="noreferrer">Lib Tech Backwards Skis 2026</a></h2>
@@ -1466,8 +1856,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/254476-lib-tech-backwards-skis-2026" target="_blank" rel="noreferrer" aria-label="Lib Tech Backwards Skis 2025">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105029.jpg?v=1771443209" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/254476-lib-tech-backwards-skis-2026" target="_blank" rel="noreferrer">Lib Tech Backwards Skis 2025</a></h2>
@@ -1478,8 +1871,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens" target="_blank" rel="noreferrer" aria-label="Black Diamond Impulse TI 104 Ski - Women&#x27;s">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/115143_0000_W_IMPULSE_104_TI_SKIS_NO_COLOR_01.webp?v=1777571487" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens" target="_blank" rel="noreferrer">Black Diamond Impulse TI 104 Ski - Women&#x27;s</a></h2>
@@ -1490,8 +1886,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $425.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165cm, 172cm</span><span>Score 96</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/280300-armada-arv-84-skis-2027" target="_blank" rel="noreferrer" aria-label="Armada ARV 84 Skis 2027">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291578.jpg?v=1775845980" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/280300-armada-arv-84-skis-2027" target="_blank" rel="noreferrer">Armada ARV 84 Skis 2027</a></h2>
@@ -1502,8 +1901,11 @@
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/280298-armada-arv-84-madsteez-skis-2027" target="_blank" rel="noreferrer" aria-label="Armada ARV 84 Madsteez Skis 2027">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291532.jpg?v=1775845978" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/280298-armada-arv-84-madsteez-skis-2027" target="_blank" rel="noreferrer">Armada ARV 84 Madsteez Skis 2027</a></h2>
@@ -1514,8 +1916,11 @@
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/280304-armada-arw-84-skis-2027" target="_blank" rel="noreferrer" aria-label="Armada ARW 84 Skis - Women&#x27;s 2027">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291587.jpg?v=1775845979" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/280304-armada-arw-84-skis-2027" target="_blank" rel="noreferrer">Armada ARW 84 Skis - Women&#x27;s 2027</a></h2>
@@ -1526,8 +1931,11 @@
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/k2-mindbender-99ti-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Mindbender 99Ti Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Mindbender99TiMensDemoSkis2026Clean_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/k2-mindbender-99ti-mens-demo-skis-2026" target="_blank" rel="noreferrer">K2 Mindbender 99Ti Mens Demo Skis 2026</a></h2>
@@ -1538,8 +1946,11 @@
               </div>
               <div class="badges"><span>55.3% off</span><span>Save $524.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166, 172, 178, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269334-head-kore-93-ti-w-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 93 Ti W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187098.jpg?v=1771443527" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269334-head-kore-93-ti-w-skis-2026" target="_blank" rel="noreferrer">Head Kore 93 Ti W Skis - Women&#x27;s 2026</a></h2>
@@ -1550,8 +1961,11 @@
               </div>
               <div class="badges"><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 170 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269336-head-oblivion-102-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Oblivion 102 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187105.jpg?v=1771443527" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269336-head-oblivion-102-skis-2026" target="_blank" rel="noreferrer">Head Oblivion 102 Skis 2026</a></h2>
@@ -1562,8 +1976,11 @@
               </div>
               <div class="badges"><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/285245-faction-prodigy-0-skis-2026" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 0 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1277878.jpg?v=1773171084" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/285245-faction-prodigy-0-skis-2026" target="_blank" rel="noreferrer">Faction Prodigy 0 Skis 2026</a></h2>
@@ -1574,8 +1991,24 @@
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 11</span></div>
             </article>
-            
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/weston-skyline-carbon-ski.html" target="_blank" rel="noreferrer">Weston Skyline Carbon Ski (2) List: ( 52%) Blazin&#x27; Deal</a></h2>
+              </div>
+              <div class="price">
+                <strong>$431.46</strong>
+                <span class='was'>Was $899.00</span>
+              </div>
+              <div class="badges"><span>52.0% off</span><span>Save $467.54</span><span class='trend trend-new'>Newly tracked</span><span>Score 98</span></div>
+            </article>
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-3-capsule" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 3 Capsule - 164cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy3Capusle-7.png?v=1771284957" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-3-capsule" target="_blank" rel="noreferrer">Faction Prodigy 3 Capsule - 164cm</a></h2>
@@ -1586,8 +2019,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 91</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-3" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 3">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy3.png?v=1771276799" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-3" target="_blank" rel="noreferrer">Faction Prodigy 3</a></h2>
@@ -1598,8 +2034,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172cm, 178cm, 184cm</span><span>Score 91</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268121-k2-omen-90-skis-2026" target="_blank" rel="noreferrer" aria-label="K2 Omen 90 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180850.jpg?v=1771443488" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268121-k2-omen-90-skis-2026" target="_blank" rel="noreferrer">K2 Omen 90 Skis 2026</a></h2>
@@ -1610,8 +2049,11 @@
               </div>
               <div class="badges"><span>20.0% off</span><span>Save $109.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 59</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268495-faction-prodigy-1-skis-2026" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 1 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1215050.jpg?v=1767737736" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268495-faction-prodigy-1-skis-2026" target="_blank" rel="noreferrer">Faction Prodigy 1 Skis 2026</a></h2>
@@ -1622,8 +2064,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/268496-faction-prodigy-1-capsule-skis-2026" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 1 Capsule Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1215691.jpg?v=1767737758" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/268496-faction-prodigy-1-capsule-skis-2026" target="_blank" rel="noreferrer">Faction Prodigy 1 Capsule Skis 2026</a></h2>
@@ -1634,8 +2079,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/285809-lib-tech-libstick-88-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Lib Tech Libstick 88 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282328.jpg?v=1774050883" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/285809-lib-tech-libstick-88-skis-women-s-2026" target="_blank" rel="noreferrer">Lib Tech Libstick 88 Skis - Women&#x27;s 2026</a></h2>
@@ -1646,8 +2094,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $189.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/blizzard-black-pearl-94-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Blizzard Black Pearl 94 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardBlackPearl94WomensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/blizzard-black-pearl-94-womens-demo-skis-2026" target="_blank" rel="noreferrer">Blizzard Black Pearl 94 Womens Demo Skis 2026</a></h2>
@@ -1658,8 +2109,11 @@
               </div>
               <div class="badges"><span>52.8% off</span><span>Save $502.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152, 158, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/blizzard-black-pearl-88-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Blizzard Black Pearl 88 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardBlackPearl88WomensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/blizzard-black-pearl-88-womens-demo-skis-2026" target="_blank" rel="noreferrer">Blizzard Black Pearl 88 Womens Demo Skis 2026</a></h2>
@@ -1670,8 +2124,11 @@
               </div>
               <div class="badges"><span>50.2% off</span><span>Save $452.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 146, 152, 158, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269332-head-kore-94-ti-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 94 Ti Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187081.jpg?v=1771443527" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269332-head-kore-94-ti-skis-2026" target="_blank" rel="noreferrer">Head Kore 94 Ti Skis 2026</a></h2>
@@ -1682,8 +2139,11 @@
               </div>
               <div class="badges"><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/269340-head-kore-99-ti-w-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 99 Ti W Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187101.jpg?v=1771443527" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/269340-head-kore-99-ti-w-skis-2026" target="_blank" rel="noreferrer">Head Kore 99 Ti W Skis - Women&#x27;s 2026</a></h2>
@@ -1694,20 +2154,26 @@
               </div>
               <div class="badges"><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 177 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/fischer-transalp-86-cti-pro-w-skins" target="_blank" rel="noreferrer" aria-label="Fischer Transalp 86 CTI Pro w/Skins - 169cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FischerTransalp86CTIPro.png?v=1765132387" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/fischer-transalp-86-cti-pro-w-skins" target="_blank" rel="noreferrer">Fischer Transalp 86 CTI Pro w/Skins - 169cm</a></h2>
               </div>
               <div class="price">
                 <strong>$449.94</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 11</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/elan-ripstick-102-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Ripstick 102 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick102MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/elan-ripstick-102-mens-demo-skis-2026" target="_blank" rel="noreferrer">Elan Ripstick 102 Mens Demo Skis 2026</a></h2>
@@ -1718,8 +2184,11 @@
               </div>
               <div class="badges"><span>55.0% off</span><span>Save $550.04</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168, 175, 182</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/volkl-mantra-88-womens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Volkl Mantra 88 Womens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Volkl88Demo2_720x720.jpg?v=1775083808" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/volkl-mantra-88-womens-demo-skis-2026" target="_blank" rel="noreferrer">Volkl Mantra 88 Womens Demo Skis 2026</a></h2>
@@ -1730,8 +2199,11 @@
               </div>
               <div class="badges"><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/nordica-enforcer-99-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Nordica Enforcer 99 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer99MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/nordica-enforcer-99-mens-demo-skis-2026" target="_blank" rel="noreferrer">Nordica Enforcer 99 Mens Demo Skis 2026</a></h2>
@@ -1742,8 +2214,11 @@
               </div>
               <div class="badges"><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/blizzard-anomaly-94-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Blizzard Anomaly 94 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardAnomaly94MensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/blizzard-anomaly-94-mens-demo-skis-2026" target="_blank" rel="noreferrer">Blizzard Anomaly 94 Mens Demo Skis 2026</a></h2>
@@ -1754,8 +2229,11 @@
               </div>
               <div class="badges"><span>52.6% off</span><span>Save $500.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164, 170, 176, 182, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/black-crows-camox-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Black Crows Camox Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsCamoxMensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/black-crows-camox-mens-demo-skis-2026" target="_blank" rel="noreferrer">Black Crows Camox Mens Demo Skis 2026</a></h2>
@@ -1766,8 +2244,11 @@
               </div>
               <div class="badges"><span>52.6% off</span><span>Save $499.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 169.1 CM, 175.2 CM, 182.1 CM</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/279567-liberty-scope-104-skis-2026" target="_blank" rel="noreferrer" aria-label="Liberty Scope 104 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1260447.jpg?v=1767739553" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/279567-liberty-scope-104-skis-2026" target="_blank" rel="noreferrer">Liberty Scope 104 Skis 2026</a></h2>
@@ -1778,8 +2259,11 @@
               </div>
               <div class="badges"><span>40.0% off</span><span>Save $300.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/270190-faction-studio-0-gu-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Faction Studio 0 Gu Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1255745.jpg?v=1767739372" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/270190-faction-studio-0-gu-skis-women-s-2026" target="_blank" rel="noreferrer">Faction Studio 0 Gu Skis - Women&#x27;s 2026</a></h2>
@@ -1790,8 +2274,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $194.70</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267987-atomic-bent-100-skis-2026" target="_blank" rel="noreferrer" aria-label="Atomic Bent 100 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1168329.jpg?v=1767735989" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267987-atomic-bent-100-skis-2026" target="_blank" rel="noreferrer">Atomic Bent 100 Skis 2026</a></h2>
@@ -1802,8 +2289,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267823-armada-edollo-91-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada Edollo 91 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186573.jpg?v=1771443524" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267823-armada-edollo-91-skis-2026" target="_blank" rel="noreferrer">Armada Edollo 91 Skis 2026</a></h2>
@@ -1814,8 +2304,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/267825-armada-bdog-94-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada BDOG 94 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186564.jpg?v=1771443522" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/267825-armada-bdog-94-skis-2026" target="_blank" rel="noreferrer">Armada BDOG 94 Skis 2026</a></h2>
@@ -1826,8 +2319,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/283998-armada-declivity-88-c-skis-2026" target="_blank" rel="noreferrer" aria-label="Armada Declivity 88 C Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1270846.jpg?v=1770248662" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/283998-armada-declivity-88-c-skis-2026" target="_blank" rel="noreferrer">Armada Declivity 88 C Skis 2026</a></h2>
@@ -1838,8 +2334,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/284002-armada-reliance-88-c-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Armada Reliance 88 C Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1275531.jpg?v=1772482880" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/284002-armada-reliance-88-c-skis-women-s-2026" target="_blank" rel="noreferrer">Armada Reliance 88 C Skis - Women&#x27;s 2026</a></h2>
@@ -1850,8 +2349,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266167-line-skis-pandora-99-skis-2026" target="_blank" rel="noreferrer" aria-label="Line Skis Pandora 99 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184466.jpg?v=1771443510" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266167-line-skis-pandora-99-skis-2026" target="_blank" rel="noreferrer">Line Skis Pandora 99 Skis 2026</a></h2>
@@ -1862,8 +2364,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $194.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 177 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Free 100 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1162902.jpg?v=1767735753" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer">Rossignol Sender Free 100 Skis 2026</a></h2>
@@ -1874,8 +2379,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $244.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 81</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/255532-rossignol-rallybird-soul-102-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul 102 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105141.jpg?v=1767733195" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/255532-rossignol-rallybird-soul-102-skis-women-s-2026" target="_blank" rel="noreferrer">Rossignol Rallybird Soul 102 Skis - Women&#x27;s 2026</a></h2>
@@ -1886,8 +2394,11 @@
               </div>
               <div class="badges"><span>35.0% off</span><span>Save $244.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 81</span></div>
             </article>
-            
+
             <article class="deal" data-source="Evo skis price ascending">
+              <a class="thumb" href="https://www.evo.com/products/266494-nordica-unleashed-98-ca-skis-2026" target="_blank" rel="noreferrer" aria-label="Nordica Unleashed 98 CA Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1178944.jpg?v=1767736421" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Evo skis price ascending</p>
                 <h2><a href="https://www.evo.com/products/266494-nordica-unleashed-98-ca-skis-2026" target="_blank" rel="noreferrer">Nordica Unleashed 98 CA Skis 2026</a></h2>
@@ -1898,8 +2409,11 @@
               </div>
               <div class="badges"><span>30.0% off</span><span>Save $195.02</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-studio-2" target="_blank" rel="noreferrer" aria-label="Faction Studio 2">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionStudio2_4.png?v=1771277660" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-studio-2" target="_blank" rel="noreferrer">Faction Studio 2</a></h2>
@@ -1910,8 +2424,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $368.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 166cm, 183cm</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-dancer-2-blue" target="_blank" rel="noreferrer" aria-label="Faction Dancer 2, Blue">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer2Blue_5.png?v=1771282426" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-dancer-2-blue" target="_blank" rel="noreferrer">Faction Dancer 2, Blue</a></h2>
@@ -1922,8 +2439,11 @@
               </div>
               <div class="badges"><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 155cm, 163cm, 177cm</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-dancer-2-purple" target="_blank" rel="noreferrer" aria-label="Faction Dancer 2, Purple">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer2Purple_4.png?v=1771281292" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-dancer-2-purple" target="_blank" rel="noreferrer">Faction Dancer 2, Purple</a></h2>
@@ -1934,8 +2454,11 @@
               </div>
               <div class="badges"><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163cm, 171cm</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-la-machine-1" target="_blank" rel="noreferrer" aria-label="Faction La Machine 1">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionLaMachine1-1.png?v=1771460377" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-la-machine-1" target="_blank" rel="noreferrer">Faction La Machine 1</a></h2>
@@ -1946,8 +2469,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $377.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156cm, 163cm, 182cm</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/rossignol-arcade-84-spx-12-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Arcade 84 + Spx 12 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolArcade84_Spx12DemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/rossignol-arcade-84-spx-12-demo-skis-2026" target="_blank" rel="noreferrer">Rossignol Arcade 84 + Spx 12 Demo Skis 2026</a></h2>
@@ -1958,8 +2484,11 @@
               </div>
               <div class="badges"><span>58.7% off</span><span>Save $675.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 152, 160, 168, 176</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/head-kore-100-ti-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Head Kore 100 Ti Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/HeadKore100TiMensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/head-kore-100-ti-mens-demo-skis-2026" target="_blank" rel="noreferrer">Head Kore 100 Ti Mens Demo Skis 2026</a></h2>
@@ -1970,8 +2499,11 @@
               </div>
               <div class="badges"><span>54.8% off</span><span>Save $575.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156, 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/atomic-bent-110-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Atomic Bent 110 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/AtomicBent110MensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/atomic-bent-110-mens-demo-skis-2026" target="_blank" rel="noreferrer">Atomic Bent 110 Mens Demo Skis 2026</a></h2>
@@ -1982,8 +2514,11 @@
               </div>
               <div class="badges"><span>47.2% off</span><span>Save $424.96</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-dancer-3-turquoise" target="_blank" rel="noreferrer" aria-label="Faction Dancer 3, Turquoise">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer3Turquoise-1.png?v=1771460218" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-dancer-3-turquoise" target="_blank" rel="noreferrer">Faction Dancer 3, Turquoise</a></h2>
@@ -1994,8 +2529,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 164cm, 172cm</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-dancer-3-orange" target="_blank" rel="noreferrer" aria-label="Faction Dancer 3, Orange - 183cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer3Orange-1.png?v=1771289055" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-dancer-3-orange" target="_blank" rel="noreferrer">Faction Dancer 3, Orange - 183cm</a></h2>
@@ -2006,8 +2544,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-prodigy-4" target="_blank" rel="noreferrer" aria-label="Faction Prodigy 4 - 185cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy4-6.png?v=1771285955" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-prodigy-4" target="_blank" rel="noreferrer">Faction Prodigy 4 - 185cm</a></h2>
@@ -2018,8 +2559,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $395.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 90</span></div>
             </article>
-            
+
             <article class="deal" data-source="J Skis Secret Stash">
+              <a class="thumb" href="https://jskis.com/products/masterblaster-adapt-blemish?variant=41739551178839" target="_blank" rel="noreferrer" aria-label="MASTERBLASTER &quot;ADAPT&quot; BLEMISH">
+                <img src="https://jskis.com/cdn/shop/files/MASTERBLASTER_Adapt_COLLECTION-PAGE_bda135aa-fe31-4a9e-9338-84e5cd9fceee.png?v=1762439859&amp;width=3840" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">J Skis Secret Stash</p>
                 <h2><a href="https://jskis.com/products/masterblaster-adapt-blemish?variant=41739551178839" target="_blank" rel="noreferrer">MASTERBLASTER &quot;ADAPT&quot; BLEMISH</a></h2>
@@ -2030,8 +2574,11 @@
               </div>
               <div class="badges"><span>42.6% off</span><span>Save $370.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 88</span></div>
             </article>
-            
+
             <article class="deal" data-source="J Skis Secret Stash">
+              <a class="thumb" href="https://jskis.com/products/masterblaster-full-house-blemish?variant=41739558486103" target="_blank" rel="noreferrer" aria-label="MASTERBLASTER &quot;FULL HOUSE&quot; BLEMISH">
+                <img src="https://jskis.com/cdn/shop/files/MASTERBLASTER_FullHouse_COLLECTION-PAGE_1bdcbd5c-5c72-45f3-a57c-d9580f9c99fd.png?v=1762439568&amp;width=3840" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">J Skis Secret Stash</p>
                 <h2><a href="https://jskis.com/products/masterblaster-full-house-blemish?variant=41739558486103" target="_blank" rel="noreferrer">MASTERBLASTER &quot;FULL HOUSE&quot; BLEMISH</a></h2>
@@ -2042,20 +2589,26 @@
               </div>
               <div class="badges"><span>42.6% off</span><span>Save $370.00</span><span class='trend trend-new'>Newly tracked</span><span>Score 88</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/dynastar-m-tour-90-skis-177cm" target="_blank" rel="noreferrer" aria-label="Dynastar M-Tour 90 Skis - (178cm) - 177cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Dynastar_M-Tour_90_Skis-1.png?v=1769557081" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/dynastar-m-tour-90-skis-177cm" target="_blank" rel="noreferrer">Dynastar M-Tour 90 Skis - (178cm) - 177cm</a></h2>
               </div>
               <div class="price">
                 <strong>$499.00</strong>
-                
+
               </div>
               <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 10</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/rossignol-sender-soul-102-knx12-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Soul 102 + KNX12 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul102_KNX12MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/rossignol-sender-soul-102-knx12-mens-demo-skis-2026" target="_blank" rel="noreferrer">Rossignol Sender Soul 102 + KNX12 Mens Demo Skis 2026</a></h2>
@@ -2066,8 +2619,11 @@
               </div>
               <div class="badges"><span>58.3% off</span><span>Save $700.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156, 164, 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/nordica-enforcer-104-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Nordica Enforcer 104 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer104MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/nordica-enforcer-104-mens-demo-skis-2026" target="_blank" rel="noreferrer">Nordica Enforcer 104 Mens Demo Skis 2026</a></h2>
@@ -2078,8 +2634,11 @@
               </div>
               <div class="badges"><span>52.4% off</span><span>Save $550.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/volkl-mantra-88-flat-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Volkl Mantra 88 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/VolkleMantra881_720x720.jpg?v=1770327911" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/volkl-mantra-88-flat-demo-skis-2026" target="_blank" rel="noreferrer">Volkl Mantra 88 Demo Skis 2026</a></h2>
@@ -2090,8 +2649,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $500.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 95</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/armada-stranger-100" target="_blank" rel="noreferrer" aria-label="Armada Stranger 100 - 172cm">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ArmadaStranger100.png?v=1773351941" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/armada-stranger-100" target="_blank" rel="noreferrer">Armada Stranger 100 - 172cm</a></h2>
@@ -2102,8 +2664,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $400.01</span><span class='trend trend-new'>Newly tracked</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-peregrine-78-skis-with-lr-11-tcx-bindings-2026-pr5a25805" target="_blank" rel="noreferrer" aria-label="Volkl Peregrine 78 Skis with LR 11 TCX Bindings">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-78-skis-with-lr-11-tcx-bindings_pr5a25805_96a0.jpg?v=1756540682" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-peregrine-78-skis-with-lr-11-tcx-bindings-2026-pr5a25805" target="_blank" rel="noreferrer">Volkl Peregrine 78 Skis with LR 11 TCX Bindings</a></h2>
@@ -2114,8 +2679,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163cm, 177cm</span><span>Score 95</span></div>
             </article>
-            
+
             <article class="deal" data-source="ERIK&#x27;S downhill skis price ascending">
+              <a class="thumb" href="https://www.eriksbikeshop.com/products/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings-2026-pr5a25814" target="_blank" rel="noreferrer" aria-label="Volkl Shine 78 Womens Skis with LR 11 TCX Bindings - 163cm">
+                <img src="https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings_pr5a25814_9d42.jpg?v=1756540748" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">ERIK&#x27;S downhill skis price ascending</p>
                 <h2><a href="https://www.eriksbikeshop.com/products/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings-2026-pr5a25814" target="_blank" rel="noreferrer">Volkl Shine 78 Womens Skis with LR 11 TCX Bindings - 163cm</a></h2>
@@ -2126,8 +2694,11 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 95</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/rossignol-forza-70-ti-spx14-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Forza 70 Ti + Spx14 Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolForza70Ti_Spx14MensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/rossignol-forza-70-ti-spx14-mens-demo-skis-2026" target="_blank" rel="noreferrer">Rossignol Forza 70 Ti + Spx14 Mens Demo Skis 2026</a></h2>
@@ -2138,8 +2709,11 @@
               </div>
               <div class="badges"><span>59.6% off</span><span>Save $775.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163, 173, 181</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/volkl-m7-mantra-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Volkl M7 Mantra Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/VolklM7MantraMensDemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/volkl-m7-mantra-mens-demo-skis-2026" target="_blank" rel="noreferrer">Volkl M7 Mantra Mens Demo Skis 2026</a></h2>
@@ -2150,8 +2724,11 @@
               </div>
               <div class="badges"><span>51.4% off</span><span>Save $555.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 163, 170, 177</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/faction-studio-3" target="_blank" rel="noreferrer" aria-label="Faction Studio 3">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionStudio3_5.png?v=1771278448" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/faction-studio-3" target="_blank" rel="noreferrer">Faction Studio 3</a></h2>
@@ -2162,8 +2739,11 @@
               </div>
               <div class="badges"><span>44.4% off</span><span>Save $421.00</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165cm, 172cm, 175cm, 178cm, 184cm</span><span>Score 89</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/armada-116-jj-ul" target="_blank" rel="noreferrer" aria-label="Armada 116 JJ UL">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Armada116JJUL_2.png?v=1773350167" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/armada-116-jj-ul" target="_blank" rel="noreferrer">Armada 116 JJ UL</a></h2>
@@ -2174,8 +2754,11 @@
               </div>
               <div class="badges"><span>44.0% off</span><span>Save $440.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 175cm, 185cm</span><span>Score 88</span></div>
             </article>
-            
+
             <article class="deal" data-source="The Gear Room skis price ascending">
+              <a class="thumb" href="https://thegearroom.com/products/black-diamond-helio-carbon-104-skis" target="_blank" rel="noreferrer" aria-label="Black Diamond Helio Carbon 104 Skis">
+                <img src="https://cdn.shopify.com/s/files/1/0747/9096/1405/files/blackdiamondheliocarbon10401copy.png?v=1757047910" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">The Gear Room skis price ascending</p>
                 <h2><a href="https://thegearroom.com/products/black-diamond-helio-carbon-104-skis" target="_blank" rel="noreferrer">Black Diamond Helio Carbon 104 Skis</a></h2>
@@ -2186,8 +2769,11 @@
               </div>
               <div class="badges"><span>40.2% off</span><span>Save $381.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 160cm, 166cm, 172cm, 184cm</span><span>Score 84</span></div>
             </article>
-            
+
             <article class="deal" data-source="Utah Skis demo skis sale">
+              <a class="thumb" href="https://utahskis.com/products/black-crows-mirus-cor-mens-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Black Crows Mirus Cor Mens Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsMirusCorMensDemoSkis2026_720x720.jpg?v=1774670826" alt="" loading="lazy" decoding="async" />
+              </a>
               <div>
                 <p class="source">Utah Skis demo skis sale</p>
                 <h2><a href="https://utahskis.com/products/black-crows-mirus-cor-mens-demo-skis-2026" target="_blank" rel="noreferrer">Black Crows Mirus Cor Mens Demo Skis 2026</a></h2>
@@ -2198,9 +2784,113 @@
               </div>
               <div class="badges"><span>50.0% off</span><span>Save $574.01</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 160.1 CM</span><span class='stock stock-in_stock'>In stock</span><span>Score 94</span></div>
             </article>
-            
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-impulse-98-ti-skis-women-s.html" target="_blank" rel="noreferrer">8 models Black Diamond Impulse 98 Ti Skis - Women&#x27;s As Low As ( 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$599.96</strong>
+
+              </div>
+              <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 8</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-impulse-98-ti-skis.html" target="_blank" rel="noreferrer">4 models Black Diamond Impulse 98 Ti Skis As Low As ( Up to 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$599.96</strong>
+
+              </div>
+              <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 8</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-88-skis.html" target="_blank" rel="noreferrer">4 models Black Diamond Helio Carbon 88 Skis List: ( 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$618.71</strong>
+                <span class='was'>Was $824.95</span>
+              </div>
+              <div class="badges"><span>25.0% off</span><span>Save $206.24</span><span class='trend trend-new'>Newly tracked</span><span>Score 68</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-impulse-104-ti-skis.html" target="_blank" rel="noreferrer">3 models Black Diamond Impulse 104 Ti Skis List: ( 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$637.46</strong>
+                <span class='was'>Was $849.95</span>
+              </div>
+              <div class="badges"><span>25.0% off</span><span>Save $212.49</span><span class='trend trend-new'>Newly tracked</span><span>Score 67</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-impulse-104-ti-skis-women-s.html" target="_blank" rel="noreferrer">3 models Black Diamond Impulse 104 Ti Skis - Women&#x27;s As Low As ( Up to 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$637.46</strong>
+
+              </div>
+              <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 7</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-102-skis.html" target="_blank" rel="noreferrer">4 models Black Diamond Helio Carbon 102 Skis List: ( 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$674.96</strong>
+                <span class='was'>Was $899.95</span>
+              </div>
+              <div class="badges"><span>25.0% off</span><span>Save $224.99</span><span class='trend trend-new'>Newly tracked</span><span>Score 66</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-108-skis.html" target="_blank" rel="noreferrer">4 models Black Diamond Helio Carbon 108 Skis List: ( 25%) On</a></h2>
+              </div>
+              <div class="price">
+                <strong>$712.46</strong>
+                <span class='was'>Was $949.95</span>
+              </div>
+              <div class="badges"><span>25.0% off</span><span>Save $237.49</span><span class='trend trend-new'>Newly tracked</span><span>Score 66</span></div>
+            </article>
+
+            <article class="deal" data-source="CampSaver backcountry skis">
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div>
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-impulse-112-ti-skis.html" target="_blank" rel="noreferrer">2 models Black Diamond Impulse 112 Ti Skis</a></h2>
+              </div>
+              <div class="price">
+                <strong>$899.95</strong>
+
+              </div>
+              <div class="badges"><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Score 2</span></div>
+            </article>
+
       </section>
-      <section class='errors'><h2>Source errors</h2><ul><li>CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue</li></ul></section>
+
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
