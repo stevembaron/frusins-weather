@@ -1684,6 +1684,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               <div class="quick-filters" aria-label="Quick filters">
                 <label><input id="photoOnly" type="checkbox" /> Photos only</label>
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
+                <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
                 <button type="button" id="resetFilters">Reset</button>
               </div>
             </div>
@@ -1814,6 +1815,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const maxPriceInput = document.querySelector('#maxPrice');
       const photoOnly = document.querySelector('#photoOnly');
       const dropOnly = document.querySelector('#dropOnly');
+      const newOnly = document.querySelector('#newOnly');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
 
@@ -1838,6 +1840,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const maxPrice = Number.parseFloat(maxPriceInput?.value || '');
         const requirePhoto = Boolean(photoOnly?.checked);
         const requireDrop = Boolean(dropOnly?.checked);
+        const requireNew = Boolean(newOnly?.checked);
         let visible = 0;
         const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
@@ -1846,7 +1849,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
           const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
           const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
-          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop;
+          const matchesNew = !requireNew || deal.dataset.trend === 'new';
+          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -1880,7 +1884,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           updateView();
         }});
       }}
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly]) {{
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly]) {{
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }}
@@ -1890,6 +1894,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (maxPriceInput) maxPriceInput.value = '';
         if (photoOnly) photoOnly.checked = false;
         if (dropOnly) dropOnly.checked = false;
+        if (newOnly) newOnly.checked = false;
         for (const box of checkboxes) box.checked = true;
         updateView();
       }});
