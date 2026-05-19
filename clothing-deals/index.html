@@ -5,47 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Men&#x27;s Clothing Deals</title>
     <style>
-      :root { color-scheme: light; --ink:#16201c; --muted:#52645c; --line:#d8e0dc; --accent:#0d7c66; --hot:#b42318; --bg:#f7f8f5; }
+      :root { color-scheme: light; --ink:#17211d; --muted:#586a62; --line:#d9e1dc; --accent:#0d7c66; --accent-soft:#e7f3ef; --hot:#b42318; --gold:#8a5b00; --bg:#f4f2ea; --card:#fffef9; }
       * { box-sizing: border-box; }
-      body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
-      main { width: min(1060px, 100%); margin: 0 auto; padding: 32px 14px 56px; }
-      header { display: flex; justify-content: space-between; gap: 18px; align-items: end; border-bottom: 1px solid var(--line); padding-bottom: 18px; margin-bottom: 18px; }
-      h1 { margin: 0; font-size: 2rem; }
+      body { margin: 0; font-family: Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 0%, #ffffff 0, #f4f2ea 34%, #edf3ef 100%); color: var(--ink); }
+      main { width: min(1120px, 100%); margin: 0 auto; padding: 28px 14px 56px; }
+      header { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding: 24px; margin-bottom: 18px; border: 1px solid rgba(13,124,102,.16); border-radius: 22px; background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(232,244,239,.86)); box-shadow: 0 18px 45px rgba(39,61,51,.08); }
+      h1 { margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -0.055em; line-height: .95; }
       h2 { margin: 0; font-size: 1.05rem; line-height: 1.35; }
-      button { border: 1px solid var(--line); border-radius: 7px; background: white; color: var(--ink); padding: 7px 10px; font: inherit; cursor: pointer; }
+      button, input, select { font: inherit; }
+      button { border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 8px 12px; cursor: pointer; }
       button:hover { border-color: var(--accent); color: var(--accent); }
+      input, select { width: 100%; border: 1px solid var(--line); border-radius: 12px; background: white; color: var(--ink); padding: 11px 12px; }
+      input:focus, select:focus { outline: 3px solid rgba(13,124,102,.18); border-color: var(--accent); }
       a { color: inherit; }
       .meta, .source, .was { color: var(--muted); }
-      .filters { margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: #ffffff; border-radius: 8px; }
-      .filter-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-      .filter-head h2 { font-size: 1rem; }
+      .stats { display: grid; grid-template-columns: repeat(4, minmax(86px, 1fr)); gap: 10px; min-width: min(440px, 100%); }
+      .stat { padding: 12px; border: 1px solid rgba(13,124,102,.16); border-radius: 16px; background: rgba(255,255,255,.72); }
+      .stat strong { display: block; font-size: 1.35rem; letter-spacing: -0.04em; }
+      .stat span { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+      .controls { position: sticky; top: 0; z-index: 10; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 18px; box-shadow: 0 14px 32px rgba(39,61,51,.08); backdrop-filter: blur(12px); }
+      .controls-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 800; list-style: none; }
+      .controls-summary::-webkit-details-marker { display: none; }
+      .controls-summary::before { content: "Hide"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 5px 9px; font-size: .78rem; font-weight: 700; order: 3; }
+      .controls:not([open]) .controls-summary::before { content: "Show"; }
+      .summary-count { color: var(--muted); font-weight: 500; margin-left: auto; }
+      .summary-count strong { color: var(--ink); }
+      .controls-body { margin-top: 12px; }
+      .tool-grid { display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }
+      .field span { display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+      .quick-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }
+      .quick-filters label { display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }
+      .quick-filters input { width: auto; accent-color: var(--accent); }
+      .filter-note { margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }
+      .filter-note[hidden] { display: none; }
+      .store-panel { margin-top: 12px; }
+      .store-head { display: flex; justify-content: space-between; gap: 12px; }
       .filter-actions { display: flex; gap: 8px; }
+      .store-panel .filter-actions { margin: 10px 0; }
       .source-toggles { display: flex; flex-wrap: wrap; gap: 8px; }
       .source-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); font-size: .88rem; cursor: pointer; }
       .source-toggle input { accent-color: var(--accent); }
       .source-toggle b { color: var(--muted); font-size: .78rem; }
       .visible-count { margin: 12px 0 0; }
-      .deal { display: grid; grid-template-columns: 92px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: start; }
+      .deals-list { display: grid; gap: 12px; }
+      .deal { display: grid; grid-template-columns: 104px 1fr auto; gap: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 26px rgba(39,61,51,.06); align-items: start; }
+      .deal:hover { border-color: rgba(13,124,102,.45); transform: translateY(-1px); transition: transform .16s ease, border-color .16s ease; }
       .deal[hidden] { display: none; }
-      .thumb { display: block; width: 92px; height: 92px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: white; }
+      .thumb { display: block; width: 104px; height: 104px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: white; }
       .thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
       .thumb-empty { background: linear-gradient(135deg, #ffffff, #eef2ed); }
       .source { margin: 0 0 5px; font-size: .86rem; }
+      .deal-main { min-width: 0; }
+      .deal-main h2 a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
       .price { text-align: right; min-width: 120px; }
-      .price strong { display: block; font-size: 1.45rem; color: var(--hot); }
+      .price strong { display: block; font-size: 1.6rem; color: var(--hot); letter-spacing: -0.04em; }
       .was { display: block; text-decoration: line-through; }
       .badges { grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
-      .badges span { border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; background: white; }
+      .badges span { border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; background: white; font-size: .86rem; }
       .trend-down { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .trend-up { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
       .trend-flat { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .trend-new { border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }
+      .cached { border-color: #d8d1b1; background: #fff8df; color: var(--gold); }
       .stock-in_stock { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .stock-sold_out { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
       .stock-availability_unknown { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .empty { padding: 24px 0; color: var(--muted); }
       .errors { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
-      @media (max-width: 620px) { header, .filter-head { display: block; } .deal { grid-template-columns: 76px 1fr; } .thumb { width: 76px; height: 76px; } .filter-actions { margin-top: 10px; } .price { grid-column: 2; text-align: left; margin-top: 4px; } .badges { grid-column: 1 / -1; } }
+      @media (max-width: 850px) { header, .tool-grid { grid-template-columns: 1fr; } .stats { min-width: 0; } .controls { position: static; } }
+      @media (max-width: 620px) { main { padding-inline: 10px; } header { padding: 18px; } .stats { grid-template-columns: repeat(2, 1fr); } .deal { grid-template-columns: 82px 1fr; gap: 12px; } .thumb { width: 82px; height: 82px; } .price { grid-column: 2; text-align: left; margin-top: 2px; } .badges { grid-column: 1 / -1; } }
     </style>
   </head>
   <body>
@@ -53,51 +81,84 @@
       <header>
         <div>
           <h1>Men&#x27;s Clothing Deals</h1>
-          <p class="meta">Generated 2026-05-18T15:54:56+00:00</p>
+          <p class="meta">Generated 2026-05-19T12:55:57+00:00</p>
         </div>
-        <p class="meta">11 deals from 1 enabled sources</p>
+        <div class="stats" aria-label="Report summary">
+          <div class="stat"><strong>9</strong><span>Deals</span></div>
+          <div class="stat"><strong>$26</strong><span>Lowest</span></div>
+          <div class="stat"><strong>76%</strong><span>Best off</span></div>
+          <div class="stat"><strong>9</strong><span>Photos</span></div>
+        </div>
       </header>
-      
-        <section class="filters" aria-label="Store filters">
-          <div class="filter-head">
-            <h2>Stores</h2>
-            <div class="filter-actions">
-              <button type="button" data-filter-action="all">All</button>
-              <button type="button" data-filter-action="none">None</button>
+
+        <details class="controls" aria-label="Deal controls" open>
+          <summary class="controls-summary">
+            <span>Search and stores</span>
+            <span class="summary-count"><strong id="visibleDealCount">9</strong> shown</span>
+          </summary>
+          <div class="controls-body">
+            <div class="tool-grid">
+              <label class="field search-field">
+                <span>Search</span>
+                <input id="dealSearch" type="search" placeholder="brand, model, store..." autocomplete="off" />
+              </label>
+              <label class="field">
+                <span>Sort</span>
+                <select id="dealSort">
+                  <option value="price-asc">Lowest price</option>
+                  <option value="discount-desc">Biggest discount</option>
+                  <option value="savings-desc">Most saved</option>
+                  <option value="score-desc">Best score</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Max price</span>
+                <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
+              </label>
+              <div class="quick-filters" aria-label="Quick filters">
+                <label><input id="photoOnly" type="checkbox" /> Photos only</label>
+                <label><input id="dropOnly" type="checkbox" /> Price drops</label>
+                <button type="button" id="resetFilters">Reset</button>
+              </div>
             </div>
-          </div>
-          <div class="source-toggles">
+            <p class="filter-note" id="filterNote" hidden></p>
+            <div class="store-panel">
+              <div class="store-head">
+                <strong>Stores</strong>
+                <span class="meta">1 active</span>
+              </div>
+              <div class="filter-actions">
+                <button type="button" data-filter-action="all">All stores</button>
+                <button type="button" data-filter-action="none">No stores</button>
+              </div>
+              <div class="source-toggles">
         <label class="source-toggle">
           <input type="checkbox" value="Geartrade Stio men&#x27;s clothing" checked />
           <span>Geartrade Stio men&#x27;s clothing</span>
-          <b>11</b>
+          <b>9</b>
         </label>
         </div>
-          <p class="meta visible-count"><span id="visibleDealCount">11</span> shown</p>
-        </section>
-        
+            </div>
+          </div>
+        </details>
+
       <section class="deals-list">
-        
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
-              <a class="thumb" href="https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080" target="_blank" rel="noreferrer" aria-label="Stio Basis Seamless Tech Crew Long Sleeve - Men&#x27;s">
-                <img src="https://geartrade.com/cdn/shop/files/f32798cf-ed7a-4c71-a97c-2db2d63d309a.webp?v=1778925055&amp;width=460" alt="" loading="lazy" decoding="async" />
-              </a>
-              <div>
-                <p class="source">Geartrade Stio men&#x27;s clothing</p>
-                <h2><a href="https://geartrade.com/products/stio-basis-seamless-tech-crew-long-sleeve-mens-1656080" target="_blank" rel="noreferrer">Stio Basis Seamless Tech Crew Long Sleeve - Men&#x27;s</a></h2>
-              </div>
-              <div class="price">
-                <strong>$19.17</strong>
-                <span class='was'>Was $50.45</span>
-              </div>
-              <div class="badges"><span>62.0% off</span><span>Save $31.28</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 89</span></div>
-            </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio shifter shirt ss - men&#x27;s"
+              data-price="25.69"
+              data-discount="74.0"
+              data-savings="73.12"
+              data-score="111.77"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183" target="_blank" rel="noreferrer" aria-label="Stio Shifter Shirt SS - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/e1ebdf3e-8a73-47d2-a127-0c8e3365eeba.webp?v=1778768663&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183" target="_blank" rel="noreferrer">Stio Shifter Shirt SS - Men&#x27;s</a></h2>
               </div>
@@ -107,27 +168,22 @@
               </div>
               <div class="badges"><span>74.0% off</span><span>Save $73.12</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 112</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
-              <a class="thumb" href="https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430" target="_blank" rel="noreferrer" aria-label="Stio Turnpin Fleece Half Zip">
-                <img src="https://geartrade.com/cdn/shop/files/56d19601-afd1-4d87-b5c5-605f071ebadc.webp?v=1777194589&amp;width=460" alt="" loading="lazy" decoding="async" />
-              </a>
-              <div>
-                <p class="source">Geartrade Stio men&#x27;s clothing</p>
-                <h2><a href="https://geartrade.com/products/stio-turnpin-fleece-half-zip-mens-1428430" target="_blank" rel="noreferrer">Stio Turnpin Fleece Half Zip</a></h2>
-              </div>
-              <div class="price">
-                <strong>$28.61</strong>
-                <span class='was'>Was $98.66</span>
-              </div>
-              <div class="badges"><span>71.0% off</span><span>Save $70.05</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 108</span></div>
-            </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio hagen trail shirt - men&#x27;s"
+              data-price="30.86"
+              data-discount="76.0"
+              data-savings="97.72"
+              data-score="119.81"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850" target="_blank" rel="noreferrer" aria-label="Stio Hagen Trail Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/22d4b186-85d6-4d36-b8ad-8cc4dbd8c98d.webp?v=1777208737&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850" target="_blank" rel="noreferrer">Stio Hagen Trail Shirt - Men&#x27;s</a></h2>
               </div>
@@ -137,12 +193,22 @@
               </div>
               <div class="badges"><span>76.0% off</span><span>Save $97.72</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 120</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio hylas long sleeve crew - men&#x27;s"
+              data-price="31.05"
+              data-discount="55.0"
+              data-savings="37.95"
+              data-score="83.87"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256" target="_blank" rel="noreferrer" aria-label="Stio Hylas Long Sleeve Crew - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1778146292&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256" target="_blank" rel="noreferrer">Stio Hylas Long Sleeve Crew - Men&#x27;s</a></h2>
               </div>
@@ -152,12 +218,22 @@
               </div>
               <div class="badges"><span>55.0% off</span><span>Save $37.95</span><span class='trend trend-new'>Newly tracked</span><span>Sizes M</span><span>Score 84</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio ashton chambray shirt - men&#x27;s"
+              data-price="37.31"
+              data-discount="71.0"
+              data-savings="91.35"
+              data-score="113.09"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918" target="_blank" rel="noreferrer" aria-label="Stio Ashton Chambray Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/0f9dfff9-1e56-4991-bf0b-71a54ef99e69.webp?v=1777355079&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918" target="_blank" rel="noreferrer">Stio Ashton Chambray Shirt - Men&#x27;s</a></h2>
               </div>
@@ -167,12 +243,22 @@
               </div>
               <div class="badges"><span>71.0% off</span><span>Save $91.35</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 113</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio divide half zip - men’s"
+              data-price="42.67"
+              data-discount="52.0"
+              data-savings="46.23"
+              data-score="82.70"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-divide-half-zip-mens-1660860" target="_blank" rel="noreferrer" aria-label="Stio Divide Half Zip - Men’s">
                 <img src="https://geartrade.com/cdn/shop/files/dd076504-7cb9-4f14-9562-59c4e30ab950.webp?v=1777237524&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-divide-half-zip-mens-1660860" target="_blank" rel="noreferrer">Stio Divide Half Zip - Men’s</a></h2>
               </div>
@@ -182,12 +268,22 @@
               </div>
               <div class="badges"><span>52.0% off</span><span>Save $46.23</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 83</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio eddy shirt ls shirt - men&#x27;s"
+              data-price="48.92"
+              data-discount="62.0"
+              data-savings="79.82"
+              data-score="100.98"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203" target="_blank" rel="noreferrer" aria-label="Stio Eddy Shirt LS Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/541d2a7b-a579-4a06-b719-928cac7c64e0.webp?v=1777239562&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203" target="_blank" rel="noreferrer">Stio Eddy Shirt LS Shirt - Men&#x27;s</a></h2>
               </div>
@@ -197,12 +293,22 @@
               </div>
               <div class="badges"><span>62.0% off</span><span>Save $79.82</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 101</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio eddy slope long sleeve shirt - men&#x27;s"
+              data-price="52.29"
+              data-discount="69.0"
+              data-savings="116.39"
+              data-score="117.05"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864" target="_blank" rel="noreferrer" aria-label="Stio Eddy Slope Long Sleeve Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/10622373-4e07-4287-9f97-89e9d5b15b88.webp?v=1777221170&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864" target="_blank" rel="noreferrer">Stio Eddy Slope Long Sleeve Shirt - Men&#x27;s</a></h2>
               </div>
@@ -212,12 +318,22 @@
               </div>
               <div class="badges"><span>69.0% off</span><span>Save $116.39</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 117</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio azura insulated jacket - men&#x27;s"
+              data-price="83.33"
+              data-discount="64.0"
+              data-savings="148.14"
+              data-score="117.33"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087" target="_blank" rel="noreferrer" aria-label="Stio Azura Insulated Jacket - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1778842391&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087" target="_blank" rel="noreferrer">Stio Azura Insulated Jacket - Men&#x27;s</a></h2>
               </div>
@@ -227,52 +343,125 @@
               </div>
               <div class="badges"><span>64.0% off</span><span>Save $148.14</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 117</span></div>
             </article>
-            
-            <article class="deal" data-source="Geartrade Stio men&#x27;s clothing">
+
+            <article
+              class="deal"
+              data-source="Geartrade Stio men&#x27;s clothing"
+              data-title="stio hometown down hooded vest - men&#x27;s"
+              data-price="90.68"
+              data-discount="67.0"
+              data-savings="184.11"
+              data-score="120.19"
+              data-trend="new"
+              data-has-image="true"
+            >
               <a class="thumb" href="https://geartrade.com/products/stio-hometown-down-hooded-vest-mens-1649078" target="_blank" rel="noreferrer" aria-label="Stio Hometown Down Hooded Vest - Men&#x27;s">
-                <img src="https://geartrade.com/cdn/shop/files/84fb83cb-2707-4e03-a95a-fc563c9ea796.webp?v=1778493313&amp;width=460" alt="" loading="lazy" decoding="async" />
+                <img src="https://geartrade.com/cdn/shop/files/84fb83cb-2707-4e03-a95a-fc563c9ea796.webp?v=1779134903&amp;width=460" alt="" loading="lazy" decoding="async" />
               </a>
-              <div>
+              <div class="deal-main">
                 <p class="source">Geartrade Stio men&#x27;s clothing</p>
                 <h2><a href="https://geartrade.com/products/stio-hometown-down-hooded-vest-mens-1649078" target="_blank" rel="noreferrer">Stio Hometown Down Hooded Vest - Men&#x27;s</a></h2>
               </div>
               <div class="price">
-                <strong>$96.10</strong>
-                <span class='was'>Was $282.65</span>
+                <strong>$90.68</strong>
+                <span class='was'>Was $274.79</span>
               </div>
-              <div class="badges"><span>66.0% off</span><span>Save $186.55</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 119</span></div>
+              <div class="badges"><span>67.0% off</span><span>Save $184.11</span><span class='trend trend-new'>Newly tracked</span><span>Sizes S</span><span>Score 120</span></div>
             </article>
-            
+
       </section>
-      
+
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
       const deals = [...document.querySelectorAll('.deal')];
+      const dealsList = document.querySelector('.deals-list');
       const visibleDealCount = document.querySelector('#visibleDealCount');
+      const searchInput = document.querySelector('#dealSearch');
+      const sortSelect = document.querySelector('#dealSort');
+      const maxPriceInput = document.querySelector('#maxPrice');
+      const photoOnly = document.querySelector('#photoOnly');
+      const dropOnly = document.querySelector('#dropOnly');
+      const resetFilters = document.querySelector('#resetFilters');
+      const filterNote = document.querySelector('#filterNote');
 
-      function applyStoreFilters() {
+      function numericValue(deal, key) {
+        return Number.parseFloat(deal.dataset[key] || '0') || 0;
+      }
+
+      function sortDeals() {
+        const sorted = [...deals].sort((a, b) => {
+          const mode = sortSelect?.value || 'price-asc';
+          if (mode === 'discount-desc') return numericValue(b, 'discount') - numericValue(a, 'discount');
+          if (mode === 'savings-desc') return numericValue(b, 'savings') - numericValue(a, 'savings');
+          if (mode === 'score-desc') return numericValue(b, 'score') - numericValue(a, 'score');
+          return numericValue(a, 'price') - numericValue(b, 'price');
+        });
+        for (const deal of sorted) dealsList?.appendChild(deal);
+      }
+
+      function applyFilters() {
         const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        const query = (searchInput?.value || '').trim().toLowerCase();
+        const maxPrice = Number.parseFloat(maxPriceInput?.value || '');
+        const requirePhoto = Boolean(photoOnly?.checked);
+        const requireDrop = Boolean(dropOnly?.checked);
         let visible = 0;
+        const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {
-          const show = enabled.has(deal.dataset.source);
+          const matchesStore = enabled.has(deal.dataset.source);
+          const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
+          const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
+          const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
+          const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
+          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop;
           deal.hidden = !show;
           if (show) visible += 1;
+          if (requirePhoto && matchesStore && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {
+            hiddenNoPhotoSources.add(deal.dataset.source);
+          }
         }
         if (visibleDealCount) visibleDealCount.textContent = visible;
+        if (filterNote) {
+          if (hiddenNoPhotoSources.size) {
+            filterNote.hidden = false;
+            filterNote.textContent = `Photos only is hiding image-less stores: ${[...hiddenNoPhotoSources].sort().join(', ')}. Hit Reset or uncheck Photos only to show them.`;
+          } else {
+            filterNote.hidden = true;
+            filterNote.textContent = '';
+          }
+        }
+      }
+
+      function updateView() {
+        sortDeals();
+        applyFilters();
       }
 
       for (const box of checkboxes) {
-        box.addEventListener('change', applyStoreFilters);
+        box.addEventListener('change', updateView);
       }
       for (const button of document.querySelectorAll('[data-filter-action]')) {
         button.addEventListener('click', () => {
           const checked = button.dataset.filterAction === 'all';
           for (const box of checkboxes) box.checked = checked;
-          applyStoreFilters();
+          updateView();
         });
       }
-      applyStoreFilters();
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly]) {
+        control?.addEventListener('input', updateView);
+        control?.addEventListener('change', updateView);
+      }
+      resetFilters?.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (sortSelect) sortSelect.value = 'price-asc';
+        if (maxPriceInput) maxPriceInput.value = '';
+        if (photoOnly) photoOnly.checked = false;
+        if (dropOnly) dropOnly.checked = false;
+        for (const box of checkboxes) box.checked = true;
+        updateView();
+      });
+      updateView();
     </script>
   </body>
 </html>
