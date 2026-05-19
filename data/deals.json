@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-18T19:08:45+00:00",
+  "generated_at": "2026-05-19T15:27:55+00:00",
   "deal_count": 187,
   "sources_checked": 6,
-  "price_history_count": 187,
+  "price_history_count": 188,
   "price_change_count": 0,
   "deals": [
     {
@@ -14,17 +14,17 @@
       "discount_percent": 82.9,
       "savings": 579.96,
       "score": 135.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-736345.jpg?v=1767747005",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 119.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -36,17 +36,17 @@
       "discount_percent": 80.0,
       "savings": 559.96,
       "score": 132.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "162 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1023513.jpg?v=1771442828",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 139.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -58,17 +58,17 @@
       "discount_percent": 76.5,
       "savings": 649.96,
       "score": 127.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-914132.jpg?v=1771446087",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 199.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -80,39 +80,17 @@
       "discount_percent": 75.0,
       "savings": 712.46,
       "score": 125.25,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1254483.jpg?v=1767739328",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
-      "first_seen_at": "2026-05-18T09:14:43-06:00"
-    },
-    {
-      "title": "Blizzard Zero G LT 80 W Skis - Women's 2025",
-      "url": "https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025",
-      "source": "Evo skis price ascending",
-      "current_price": 224.99,
-      "original_price": 799.95,
-      "discount_percent": 71.9,
-      "savings": 574.96,
-      "score": 122.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
-      "sizes": [
-        "157 cm"
-      ],
-      "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1020650.jpg?v=1771442806",
-      "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 237.49,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -124,7 +102,7 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168cm",
         "174cm"
@@ -132,10 +110,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/355782.jpg?v=1726380065",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 249.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -147,17 +125,17 @@
       "discount_percent": 63.9,
       "savings": 575.0,
       "score": 112.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "180"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker101MensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 324.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -169,17 +147,17 @@
       "discount_percent": 63.5,
       "savings": 539.98,
       "score": 112.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1155141.jpg?v=1771443389",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 309.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -191,17 +169,17 @@
       "discount_percent": 61.1,
       "savings": 549.03,
       "score": 109.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1248634.jpg?v=1771443741",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -213,17 +191,17 @@
       "discount_percent": 59.6,
       "savings": 405.0,
       "score": 109.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker87MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 274.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -235,17 +213,17 @@
       "discount_percent": 60.0,
       "savings": 449.97,
       "score": 109.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "158 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241407.jpg?v=1771443725",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 299.98,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -257,17 +235,17 @@
       "discount_percent": 60.0,
       "savings": 510.0,
       "score": 108.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "173 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1081665.jpg?v=1771443066",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 339.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -279,7 +257,7 @@
       "discount_percent": 60.0,
       "savings": 525.01,
       "score": 108.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "149",
         "156",
@@ -288,10 +266,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/HeadKore87TiWomensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -303,17 +281,17 @@
       "discount_percent": 57.7,
       "savings": 375.0,
       "score": 107.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Wingman80Ti_720x720.jpg?v=1775083807",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 274.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -325,7 +303,7 @@
       "discount_percent": 60.0,
       "savings": 600.01,
       "score": 107.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156",
         "166"
@@ -333,10 +311,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul92_Xp11MensDemoSkis2026_ce736728-0827-4d6a-bd32-9406fa139022_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -348,17 +326,17 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "188"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker111DemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -370,7 +348,7 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156",
         "166",
@@ -380,10 +358,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul92Skis20262_720x720.jpg?v=1775083807",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -395,7 +373,7 @@
       "discount_percent": 59.5,
       "savings": 550.01,
       "score": 107.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172",
         "179"
@@ -403,10 +381,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ArmadaArv100MensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -418,17 +396,17 @@
       "discount_percent": 55.6,
       "savings": 250.02,
       "score": 106.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1093983.jpg?v=1771443095",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 199.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -440,7 +418,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "177cm",
         "184cm"
@@ -448,10 +426,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ScottPure90_2025Unisex01.png?v=1755814773",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 299.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -463,7 +441,7 @@
       "discount_percent": 59.0,
       "savings": 575.01,
       "score": 106.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172",
         "180"
@@ -471,10 +449,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ArmadaArv106DemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -486,7 +464,7 @@
       "discount_percent": 58.3,
       "savings": 525.0,
       "score": 105.8,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150",
         "155",
@@ -495,10 +473,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaSantaAna92WomensDemoSkis2026_720x720.jpg?v=1774998605",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -510,7 +488,7 @@
       "discount_percent": 58.3,
       "savings": 524.01,
       "score": 105.8,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154",
         "161"
@@ -518,10 +496,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick94WomensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -533,17 +511,17 @@
       "discount_percent": 57.6,
       "savings": 490.0,
       "score": 105.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1014087.jpg?v=1771442737",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 359.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -555,7 +533,7 @@
       "discount_percent": 56.6,
       "savings": 424.01,
       "score": 105.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154.4 CM",
         "160.1 CM"
@@ -563,10 +541,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsCaptisBirdieWomensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 324.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -578,7 +556,7 @@
       "discount_percent": 58.0,
       "savings": 550.95,
       "score": 105.02,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -588,10 +566,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/blackdiamondheliocarbon10401copy.png?v=1757047910",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -603,7 +581,7 @@
       "discount_percent": 57.9,
       "savings": 550.0,
       "score": 104.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "161",
         "168",
@@ -614,10 +592,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Ripstick96_ab0297d6-f3ce-4419-8aa2-01131e5ce3f1_720x720.jpg?v=1770327911",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -629,7 +607,7 @@
       "discount_percent": 58.7,
       "savings": 675.01,
       "score": 104.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152",
         "160",
@@ -639,10 +617,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolArcade84_Spx12DemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 474.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -654,7 +632,7 @@
       "discount_percent": 59.6,
       "savings": 775.01,
       "score": 104.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163",
         "173",
@@ -663,10 +641,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolForza70Ti_Spx14MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 524.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -678,7 +656,7 @@
       "discount_percent": 55.9,
       "savings": 474.96,
       "score": 103.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "148",
         "154",
@@ -687,10 +665,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Mindbender99TiMensDemoSkis2026_d306aa13-b375-48fd-bf97-44e919d30016_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -702,7 +680,7 @@
       "discount_percent": 58.3,
       "savings": 700.01,
       "score": 103.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156",
         "164",
@@ -713,10 +691,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/RossignolSenderSoul102_KNX12MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -728,7 +706,7 @@
       "discount_percent": 55.6,
       "savings": 500.0,
       "score": 102.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "167",
         "173",
@@ -738,10 +716,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer89MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -753,7 +731,7 @@
       "discount_percent": 53.6,
       "savings": 374.96,
       "score": 102.1,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "147",
         "153",
@@ -763,10 +741,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/AtomicMaven86W_RM10GwWomensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 324.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -778,7 +756,7 @@
       "discount_percent": 55.3,
       "savings": 524.96,
       "score": 101.8,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166",
         "172",
@@ -788,10 +766,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Mindbender99TiMensDemoSkis2026Clean_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 424.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -803,20 +781,19 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
-        "Blissful Blue / 154cm",
-        "Blissful Blue / 170cm"
+        "Blissful Blue / 154cm"
       ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-76-skis-with-m10-gw-bindings_blissful-blue_pr5a25418_30b4.jpg?v=1764238570",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 216.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -828,7 +805,7 @@
       "discount_percent": 55.0,
       "savings": 550.04,
       "score": 101.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168",
         "175",
@@ -837,10 +814,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick102MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -852,7 +829,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "149",
         "156",
@@ -861,10 +838,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/Volkl88Demo2_720x720.jpg?v=1775083808",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -876,7 +853,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "167",
         "173",
@@ -886,10 +863,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer99MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -901,7 +878,7 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -911,10 +888,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-element-sport-ski-el-9-bnd.jpg?v=1758720336",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 200.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -926,7 +903,7 @@
       "discount_percent": 53.1,
       "savings": 424.96,
       "score": 100.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163",
         "170",
@@ -936,10 +913,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/K2Reckoner102MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -951,17 +928,17 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1053654.jpg?v=1771442950",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 225.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -973,7 +950,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -985,10 +962,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-pulse-pro-skis-with-rs-9-bindings_pr5a25873_5735.jpg?v=1756454341",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 225.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1000,7 +977,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168cm",
         "178cm"
@@ -1008,10 +985,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-revolt-81-skis_pr5a25813_2e50.jpg?v=1758094559",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 225.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1023,7 +1000,7 @@
       "discount_percent": 54.8,
       "savings": 575.01,
       "score": 100.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156",
         "163",
@@ -1034,10 +1011,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/HeadKore100TiMensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 474.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1049,7 +1026,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -1058,10 +1035,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-comp-mens-skis-with-rs-10-gw-powerrail-bindings_pr5a23292_e57f.jpg?v=1734987505",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 250.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1073,7 +1050,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152cm",
         "172cm"
@@ -1081,10 +1058,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/395292.jpg?v=1727975532",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 250.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1096,7 +1073,7 @@
       "discount_percent": 52.9,
       "savings": 450.0,
       "score": 99.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "147",
         "154",
@@ -1105,10 +1082,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanRipstick88WomensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1120,7 +1097,7 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156",
         "164"
@@ -1128,10 +1105,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/QSTDemoFixed26_720x720.jpg?v=1776124086",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1143,17 +1120,17 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "GRAY / 148"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/SalomonQst100MensDemoSkis2026_720x720.jpg?v=1774998605",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1165,7 +1142,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -1175,10 +1152,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-s-max-6xt-skis-with-m10-bindings_silver_pr5a25483_91b4.jpg?v=1774643105",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 286.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1190,17 +1167,17 @@
       "discount_percent": 51.0,
       "savings": 330.99,
       "score": 99.64,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "165 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1100508.jpg?v=1771443152",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 318.01,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1212,17 +1189,17 @@
       "discount_percent": 51.4,
       "savings": 359.96,
       "score": 99.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "162 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1026161.jpg?v=1771442867",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 339.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1234,7 +1211,7 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "144cm",
         "151cm",
@@ -1244,10 +1221,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-72-womens-skis-with-vmotion-10-bindings_pr5a25816_0301.jpg?v=1756540785",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 275.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1259,17 +1236,17 @@
       "discount_percent": 48.9,
       "savings": 220.0,
       "score": 99.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1263802.jpg?v=1767739685",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 229.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1281,7 +1258,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -1289,10 +1266,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-s-max-n6-xt-womens-skis-with-m10-gw-bindings_pr5a25495_db4f.jpg?v=1764928803",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 289.98,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1304,15 +1281,15 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-backwards-mens-skis_pr5a25243_34ad.jpg?v=1758009588",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 300.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1324,7 +1301,7 @@
       "discount_percent": 52.8,
       "savings": 502.0,
       "score": 98.84,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152",
         "158",
@@ -1333,10 +1310,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardBlackPearl94WomensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 447.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1348,17 +1325,17 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "153 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282328.jpg?v=1774050883",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 315.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1370,7 +1347,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "153cm",
         "160cm"
@@ -1378,10 +1355,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-88-womens-skis_pr5a25248_52c1.jpg?v=1758009637",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 315.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1393,7 +1370,7 @@
       "discount_percent": 52.6,
       "savings": 500.0,
       "score": 98.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164",
         "170",
@@ -1404,10 +1381,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardAnomaly94MensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1419,7 +1396,7 @@
       "discount_percent": 52.6,
       "savings": 499.01,
       "score": 98.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "169.1 CM",
         "175.2 CM",
@@ -1428,10 +1405,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsCamoxMensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1443,15 +1420,15 @@
       "discount_percent": 50.0,
       "savings": 324.99,
       "score": 98.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-blaze-82-skis-with-v10-bindings_pr5a25807_255f.jpg?v=1763461634",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 325.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1463,17 +1440,17 @@
       "discount_percent": 50.3,
       "savings": 354.03,
       "score": 98.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1281435.jpg?v=1774050838",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1485,7 +1462,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -1495,10 +1472,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-xt-skis-with-vmotion-10-bindings_pr5a25806_8691.jpg?v=1763461596",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 340.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1510,15 +1487,15 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-76-womens-skis-with-vmotion-10-bindings_pr5a25815_2aa5.jpg?v=1756540764",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 340.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1530,7 +1507,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "155cm",
         "162cm"
@@ -1538,10 +1515,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-98-womens-skis_pr5a25249_e1c3.jpg?v=1756453983",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 340.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1553,15 +1530,15 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-ufo-95-skis_pr5a25244_3894.jpg?v=1758009616",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 340.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1573,17 +1550,17 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1212798.jpg?v=1771443678",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.98,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1595,7 +1572,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163cm",
         "170cm"
@@ -1603,10 +1580,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/391621.jpg?v=1726408034",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.98,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1618,15 +1595,15 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-102-mens-skis_pr5a25246_17ea.jpg?v=1756453951",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 365.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1638,15 +1615,15 @@
       "discount_percent": 50.0,
       "savings": 374.99,
       "score": 97.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-mantra-84-womens-skis_pr5a25818_dd8b.jpg?v=1756540843",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 375.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1658,15 +1635,15 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/k2-blur-79-mens-skis-with-quikclik-bindings_pr5a25767_b17d.jpg?v=1770926068",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.98,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1678,7 +1655,7 @@
       "discount_percent": 52.4,
       "savings": 550.0,
       "score": 97.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "173",
         "179",
@@ -1687,10 +1664,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/NordicaEnforcer104MensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1702,7 +1679,7 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "171cm",
         "178cm"
@@ -1710,10 +1687,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-112-mens-skis_pr5a25247_02a2.jpg?v=1756453968",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 390.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1725,7 +1702,7 @@
       "discount_percent": 50.0,
       "savings": 399.96,
       "score": 97.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "158",
         "165",
@@ -1736,10 +1713,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BentChetler1001_720x720.jpg?v=1770327911",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1751,7 +1728,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "165cm",
         "172cm"
@@ -1759,10 +1736,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/115143_0000_W_IMPULSE_104_TI_SKIS_NO_COLOR_01.webp?v=1777571487",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 424.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1774,20 +1751,18 @@
       "discount_percent": 50.2,
       "savings": 452.0,
       "score": 96.24,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "146",
-        "152",
-        "158",
-        "164"
+        "152"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlizzardBlackPearl88WomensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 447.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1799,7 +1774,7 @@
       "discount_percent": 51.4,
       "savings": 555.0,
       "score": 95.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163",
         "170",
@@ -1808,10 +1783,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/VolklM7MantraMensDemoSkis2026_720x720.jpg?v=1774998606",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 524.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1823,17 +1798,17 @@
       "discount_percent": 50.0,
       "savings": 500.0,
       "score": 95.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/VolkleMantra881_720x720.jpg?v=1770327911",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1845,7 +1820,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163cm",
         "177cm"
@@ -1853,10 +1828,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-78-skis-with-lr-11-tcx-bindings_pr5a25805_96a0.jpg?v=1756540682",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 500.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1868,15 +1843,15 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings_pr5a25814_9d42.jpg?v=1756540748",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 500.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1888,7 +1863,7 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150cm",
         "157cm"
@@ -1896,10 +1871,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy0_4.png?v=1778441115",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 239.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1911,17 +1886,17 @@
       "discount_percent": 50.0,
       "savings": 574.01,
       "score": 93.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "160.1 CM"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/BlackCrowsMirusCorMensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 574.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1933,17 +1908,17 @@
       "discount_percent": 44.0,
       "savings": 241.98,
       "score": 92.84,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "152 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1033079.jpg?v=1767730518",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 307.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1955,7 +1930,7 @@
       "discount_percent": 47.2,
       "savings": 424.96,
       "score": 92.7,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172",
         "180",
@@ -1964,10 +1939,10 @@
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0580/7410/3867/files/AtomicBent110MensDemoSkis2026_720x720.jpg?v=1774670826",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 474.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -1979,7 +1954,7 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164cm",
         "178cm",
@@ -1988,10 +1963,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy1_4.png?v=1778439505",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2003,7 +1978,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -2013,10 +1988,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy2_5.png?v=1771280061",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 378.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2028,7 +2003,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -2036,10 +2011,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ArmadaTantrum100POW_5.png?v=1773352225",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 289.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2051,15 +2026,15 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy3Capusle-7.png?v=1771284957",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 433.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2071,7 +2046,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -2080,10 +2055,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy3.png?v=1771276799",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 433.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2095,15 +2070,15 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-fire-mens-skis-with-rs9-gw-bindings_pr5a25876_05c2.jpg?v=1756638877",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 239.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2115,7 +2090,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -2123,10 +2098,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionStudio2_4.png?v=1771277660",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 461.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2138,7 +2113,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -2147,10 +2122,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionLaMachine1-1.png?v=1771460377",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 472.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2162,7 +2137,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -2171,10 +2146,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer2Blue_5.png?v=1771282426",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 467.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2186,7 +2161,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -2194,10 +2169,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer2Purple_4.png?v=1771281292",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 467.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2209,7 +2184,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -2217,10 +2192,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer3Turquoise-1.png?v=1771460218",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 489.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2232,15 +2207,15 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer3Orange-1.png?v=1771289055",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 489.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2252,17 +2227,17 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "160 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105192.jpg?v=1771443215",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 269.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2274,15 +2249,15 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy4-6.png?v=1771285955",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 494.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2294,15 +2269,15 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ArmadaStranger100.png?v=1773351941",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2314,17 +2289,17 @@
       "discount_percent": 41.6,
       "savings": 270.0,
       "score": 89.02,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187019.jpg?v=1771443525",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 379.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2336,15 +2311,15 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-lite-womens-skis-with-rs9-gw-bindings_pr5a25879_e7d7.jpg?v=1756454517",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 299.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2356,7 +2331,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
@@ -2365,10 +2340,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-84r-skis-with-m10-gw-bindings_pr5a25071_ba12.jpg?v=1758008985",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 299.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2380,7 +2355,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -2391,10 +2366,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionStudio3_5.png?v=1771278448",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 528.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2406,17 +2381,17 @@
       "discount_percent": 40.1,
       "savings": 220.0,
       "score": 88.52,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "171 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187086.jpg?v=1767736709",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 329.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2428,15 +2403,15 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-86-skis-with-m10-gw-bindings_pr5a25068_6c65.jpg?v=1758008928",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 329.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2448,15 +2423,15 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-80-skis-with-m11-bindings_pr5a25484_abbc.jpg?v=1763461232",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 347.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2468,7 +2443,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -2476,10 +2451,10 @@
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Armada116JJUL_2.png?v=1773350167",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 559.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2491,15 +2466,15 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://jskis.com/cdn/shop/files/MASTERBLASTER_Adapt_COLLECTION-PAGE_bda135aa-fe31-4a9e-9338-84e5cd9fceee.png?v=1762439859&width=3840",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2511,15 +2486,15 @@
       "discount_percent": 42.6,
       "savings": 370.0,
       "score": 87.62,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://jskis.com/cdn/shop/files/MASTERBLASTER_FullHouse_COLLECTION-PAGE_1bdcbd5c-5c72-45f3-a57c-d9580f9c99fd.png?v=1762439568&width=3840",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2531,17 +2506,17 @@
       "discount_percent": 40.1,
       "savings": 260.0,
       "score": 87.32,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1284563.jpg?v=1774627904",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 389.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2553,15 +2528,15 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-pro-82-skis_pr5a25491_1d53.jpg?v=1760690031",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 389.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2573,17 +2548,17 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "165 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1171238.jpg?v=1767736113",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2595,15 +2570,15 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1237374.jpg?v=1771443720",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 283.49,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2615,17 +2590,17 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187081.jpg?v=1771443527",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2637,17 +2612,17 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
-        "177 cm"
+        "156 cm"
       ],
       "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187101.jpg?v=1771443527",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187103.jpg?v=1771443528",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2659,17 +2634,17 @@
       "discount_percent": 40.0,
       "savings": 300.0,
       "score": 86.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1260447.jpg?v=1767739553",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2681,17 +2656,17 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "170 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187098.jpg?v=1771443527",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 429.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2703,17 +2678,17 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "173 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187105.jpg?v=1771443527",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 429.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2725,17 +2700,17 @@
       "discount_percent": 35.0,
       "savings": 139.98,
       "score": 84.8,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "178 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1187984.jpg?v=1771443536",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 259.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2747,17 +2722,17 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
-        "170 cm"
+        "160 cm"
       ],
       "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105187.jpg?v=1771443214",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105186.jpg?v=1771443215",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 292.47,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2769,17 +2744,17 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105137.jpg?v=1767733197",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 357.47,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2791,17 +2766,17 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "167 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1111874.jpg?v=1771443288",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 357.47,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2813,18 +2788,40 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105164.jpg?v=1771443214",
       "is_cached": false,
+      "previous_price": 389.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "Elan Ripstick 88 Skis - Women's 2026",
+      "url": "https://www.evo.com/products/252994-elan-ripstick-88-skis-women-s-2026",
+      "source": "Evo skis price ascending",
+      "current_price": 454.99,
+      "original_price": 699.99,
+      "discount_percent": 35.0,
+      "savings": 245.0,
+      "score": 80.9,
+      "found_at": "2026-05-19T15:27:33+00:00",
+      "sizes": [
+        "161 cm"
+      ],
+      "stock_status": "in_stock",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1110943.jpg?v=1771443279",
+      "is_cached": false,
       "previous_price": null,
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-18T09:14:43-06:00"
+      "first_seen_at": "2026-05-19T15:27:55+00:00"
     },
     {
       "title": "Rossignol Sender Free 100 Skis 2026",
@@ -2835,17 +2832,17 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "178 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1162902.jpg?v=1767735753",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2857,17 +2854,17 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105141.jpg?v=1767733195",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2879,17 +2876,17 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "161 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186542.jpg?v=1771443525",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2901,17 +2898,17 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "171 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1234764.jpg?v=1771443719",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2923,17 +2920,17 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "153 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1234724.jpg?v=1767738525",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2945,17 +2942,17 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "161 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186558.jpg?v=1771443525",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2967,17 +2964,17 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184149.jpg?v=1771443509",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -2989,37 +2986,17 @@
       "discount_percent": 30.0,
       "savings": 149.99,
       "score": 78.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184453.jpg?v=1771443509",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
-      "first_seen_at": "2026-05-18T09:14:43-06:00"
-    },
-    {
-      "title": "Season Primer Skis 2026",
-      "url": "https://www.evo.com/products/250664-season-primer-skis-2026",
-      "source": "Evo skis price ascending",
-      "current_price": 314.96,
-      "original_price": 449.95,
-      "discount_percent": 30.0,
-      "savings": 134.99,
-      "score": 77.45,
-      "found_at": "2026-05-18T19:08:33+00:00",
-      "sizes": null,
-      "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159244.jpg?v=1767735605",
-      "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 349.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3031,17 +3008,37 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184446.jpg?v=1771443508",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 314.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
+      "first_seen_at": "2026-05-18T09:14:43-06:00"
+    },
+    {
+      "title": "Season Primer Skis 2026",
+      "url": "https://www.evo.com/products/250664-season-primer-skis-2026",
+      "source": "Evo skis price ascending",
+      "current_price": 314.96,
+      "original_price": 449.95,
+      "discount_percent": 30.0,
+      "savings": 134.99,
+      "score": 77.45,
+      "found_at": "2026-05-19T15:27:33+00:00",
+      "sizes": null,
+      "stock_status": "in_stock",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159244.jpg?v=1767735605",
+      "is_cached": false,
+      "previous_price": 314.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3053,17 +3050,17 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1171199.jpg?v=1767736112",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 384.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3075,17 +3072,17 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241130.jpg?v=1767738797",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 384.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3097,17 +3094,17 @@
       "discount_percent": 30.0,
       "savings": 164.99,
       "score": 77.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
-        "178 cm"
+        "157 cm"
       ],
       "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1206610.jpg?v=1771443664",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1206604.jpg?v=1767737392",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 384.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3119,17 +3116,17 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "178 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1182326.jpg?v=1771443488",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3141,17 +3138,17 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186561.jpg?v=1771443522",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3163,17 +3160,17 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1270878.jpg?v=1770248657",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3185,17 +3182,17 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "166 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282326.jpg?v=1774050882",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3207,17 +3204,17 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "172 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105029.jpg?v=1771443209",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3229,17 +3226,17 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "163 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1241385.jpg?v=1771443727",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3251,17 +3248,17 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180772.jpg?v=1771443484",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3273,17 +3270,17 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "154 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184460.jpg?v=1771443508",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3295,17 +3292,17 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184433.jpg?v=1767736623",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 419.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3317,17 +3314,17 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
-        "164 cm"
+        "178 cm"
       ],
       "stock_status": "in_stock",
-      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1215050.jpg?v=1767737736",
+      "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1215059.jpg?v=1771443685",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 440.3,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3339,17 +3336,17 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "158 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1215691.jpg?v=1767737758",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 440.3,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3361,17 +3358,17 @@
       "discount_percent": 30.0,
       "savings": 189.0,
       "score": 76.18,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "153 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282328.jpg?v=1774050883",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 440.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3383,17 +3380,17 @@
       "discount_percent": 30.0,
       "savings": 194.7,
       "score": 75.91,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1255745.jpg?v=1767739372",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.3,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3405,17 +3402,17 @@
       "discount_percent": 30.0,
       "savings": 195.02,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "156 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1178944.jpg?v=1767736421",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.97,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3427,17 +3424,17 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "158 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1168329.jpg?v=1767735989",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3449,17 +3446,17 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "162 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186573.jpg?v=1771443524",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3471,17 +3468,17 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "164 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186564.jpg?v=1771443522",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3493,17 +3490,17 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "160 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1270846.jpg?v=1770248662",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3515,17 +3512,17 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1275531.jpg?v=1772482880",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3537,17 +3534,17 @@
       "discount_percent": 30.0,
       "savings": 194.99,
       "score": 75.9,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "177 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1184466.jpg?v=1771443510",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 454.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3559,17 +3556,17 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1182480.jpg?v=1767736558",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 279.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3581,17 +3578,17 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1186537.jpg?v=1771443523",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 279.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3603,17 +3600,17 @@
       "discount_percent": 20.0,
       "savings": 109.99,
       "score": 58.7,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "159 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180850.jpg?v=1771443488",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 439.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3625,17 +3622,17 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "159 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180811.jpg?v=1771443489",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3647,17 +3644,17 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "159 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180815.jpg?v=1771443486",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3669,17 +3666,17 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "159 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180784.jpg?v=1771443486",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 359.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3691,17 +3688,17 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "159 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1180787.jpg?v=1771443485",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 359.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3713,15 +3710,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 16.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Salomon_MTN_86_Flat_Ski_s-1.png?v=1768088406",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 199.82,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3733,15 +3730,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 15.25,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 237.6,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3753,15 +3750,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/K2Thrilavut85.png?v=1765132387",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 300.82,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3773,15 +3770,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.43,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 328.49,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3793,15 +3790,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.51,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 374.4,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3813,17 +3810,17 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "168 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1288083.jpg?v=1775507839",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3835,15 +3832,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Scott_Pure_Free_90_Skis_Tyrolia_AM_12_GW_Bindings-1.png?v=1768326108",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 399.99,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3855,15 +3852,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/BlizzardHustle10.png?v=1765132387",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 400.12,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3875,17 +3872,17 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291578.jpg?v=1775845980",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 424.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3897,17 +3894,17 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291532.jpg?v=1775845978",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 424.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3919,17 +3916,17 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "150 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1291587.jpg?v=1775845979",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 424.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3941,17 +3938,17 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.42,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": [
         "157 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1277878.jpg?v=1773171084",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 429.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3963,15 +3960,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.37,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 431.46,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -3983,15 +3980,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FischerTransalp86CTIPro.png?v=1765132387",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 449.94,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4003,15 +4000,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Dynastar_M-Tour_90_Skis-1.png?v=1769557081",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 499.0,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4023,15 +4020,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 599.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4043,15 +4040,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 599.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4063,15 +4060,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.63,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 618.71,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4083,15 +4080,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 637.46,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4103,15 +4100,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 637.46,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4123,15 +4120,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 6.5,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 674.96,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4143,15 +4140,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 5.75,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 712.46,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     },
     {
@@ -4163,15 +4160,15 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-18T19:08:33+00:00",
+      "found_at": "2026-05-19T15:27:33+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
       "is_cached": true,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 899.95,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-18T09:14:43-06:00"
     }
   ],
