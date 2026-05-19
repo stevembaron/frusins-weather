@@ -45,6 +45,7 @@ jobs:
           data/deal_report.md
           data/deals.html
           data/deals.json
+          data/price_history.json
           ski-deals/index.html
 
       - name: Setup Pages

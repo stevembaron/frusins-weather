@@ -31,6 +31,12 @@
       .summary-count { color: var(--muted); font-weight: 500; margin-left: auto; }
       .summary-count strong { color: var(--ink); }
       .controls-body { margin-top: 12px; }
+      .category-panel { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+      .category-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }
+      .category-toggle input { width: auto; accent-color: var(--accent); }
+      .category-toggle b { color: var(--muted); font-size: .82rem; }
+      .category-toggle:has(input:checked) { border-color: rgba(13,124,102,.38); background: var(--accent-soft); }
+      .category-clothing:has(input:checked) { border-color: #d6b86c; background: #fff7dc; }
       .tool-grid { display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }
       .field span { display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
       .quick-filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }
@@ -66,6 +72,8 @@
       .trend-up { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
       .trend-flat { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .trend-new { border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }
+      .category-ski { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
+      .category-clothing { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .cached { border-color: #d8d1b1; background: #fff8df; color: var(--gold); }
       .stock-in_stock { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .stock-sold_out { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
@@ -81,7 +89,7 @@
       <header>
         <div>
           <h1>Men&#x27;s Clothing Deals</h1>
-          <p class="meta">Generated 2026-05-19T15:56:05+00:00</p>
+          <p class="meta">Generated 2026-05-19T17:33:41-06:00</p>
         </div>
         <div class="stats" aria-label="Report summary">
           <div class="stat"><strong>9</strong><span>Deals</span></div>
@@ -97,6 +105,7 @@
             <span class="summary-count"><strong id="visibleDealCount">9</strong> shown</span>
           </summary>
           <div class="controls-body">
+
             <div class="tool-grid">
               <label class="field search-field">
                 <span>Search</span>
@@ -118,6 +127,7 @@
               <div class="quick-filters" aria-label="Quick filters">
                 <label><input id="photoOnly" type="checkbox" /> Photos only</label>
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
+                <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
                 <button type="button" id="resetFilters">Reset</button>
               </div>
             </div>
@@ -154,6 +164,7 @@
               data-score="111.77"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183" target="_blank" rel="noreferrer" aria-label="Stio Shifter Shirt SS - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/e1ebdf3e-8a73-47d2-a127-0c8e3365eeba.webp?v=1778768663&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -179,6 +190,7 @@
               data-score="119.81"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850" target="_blank" rel="noreferrer" aria-label="Stio Hagen Trail Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/22d4b186-85d6-4d36-b8ad-8cc4dbd8c98d.webp?v=1777208737&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -204,6 +216,7 @@
               data-score="83.87"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256" target="_blank" rel="noreferrer" aria-label="Stio Hylas Long Sleeve Crew - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1778146292&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -229,6 +242,7 @@
               data-score="113.09"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918" target="_blank" rel="noreferrer" aria-label="Stio Ashton Chambray Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/0f9dfff9-1e56-4991-bf0b-71a54ef99e69.webp?v=1777355079&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -254,6 +268,7 @@
               data-score="82.70"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-divide-half-zip-mens-1660860" target="_blank" rel="noreferrer" aria-label="Stio Divide Half Zip - Men’s">
                 <img src="https://geartrade.com/cdn/shop/files/dd076504-7cb9-4f14-9562-59c4e30ab950.webp?v=1777237524&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -279,6 +294,7 @@
               data-score="100.98"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203" target="_blank" rel="noreferrer" aria-label="Stio Eddy Shirt LS Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/541d2a7b-a579-4a06-b719-928cac7c64e0.webp?v=1777239562&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -304,6 +320,7 @@
               data-score="117.05"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864" target="_blank" rel="noreferrer" aria-label="Stio Eddy Slope Long Sleeve Shirt - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/10622373-4e07-4287-9f97-89e9d5b15b88.webp?v=1777221170&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -329,6 +346,7 @@
               data-score="117.33"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087" target="_blank" rel="noreferrer" aria-label="Stio Azura Insulated Jacket - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1778842391&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -354,6 +372,7 @@
               data-score="120.19"
               data-trend="new"
               data-has-image="true"
+              data-category="ski"
             >
               <a class="thumb" href="https://geartrade.com/products/stio-hometown-down-hooded-vest-mens-1649078" target="_blank" rel="noreferrer" aria-label="Stio Hometown Down Hooded Vest - Men&#x27;s">
                 <img src="https://geartrade.com/cdn/shop/files/84fb83cb-2707-4e03-a95a-fc563c9ea796.webp?v=1779134903&amp;width=460" alt="" loading="lazy" decoding="async" />
@@ -374,6 +393,7 @@
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
+      const categoryBoxes = [...document.querySelectorAll('.category-toggle input')];
       const deals = [...document.querySelectorAll('.deal')];
       const dealsList = document.querySelector('.deals-list');
       const visibleDealCount = document.querySelector('#visibleDealCount');
@@ -382,6 +402,7 @@
       const maxPriceInput = document.querySelector('#maxPrice');
       const photoOnly = document.querySelector('#photoOnly');
       const dropOnly = document.querySelector('#dropOnly');
+      const newOnly = document.querySelector('#newOnly');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
 
@@ -402,22 +423,26 @@
 
       function applyFilters() {
         const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        const enabledCategories = new Set(categoryBoxes.filter((box) => box.checked).map((box) => box.value));
         const query = (searchInput?.value || '').trim().toLowerCase();
         const maxPrice = Number.parseFloat(maxPriceInput?.value || '');
         const requirePhoto = Boolean(photoOnly?.checked);
         const requireDrop = Boolean(dropOnly?.checked);
+        const requireNew = Boolean(newOnly?.checked);
         let visible = 0;
         const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {
           const matchesStore = enabled.has(deal.dataset.source);
+          const matchesCategory = !categoryBoxes.length || enabledCategories.has(deal.dataset.category || 'ski');
           const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
           const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
           const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
           const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
-          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop;
+          const matchesNew = !requireNew || deal.dataset.trend === 'new';
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew;
           deal.hidden = !show;
           if (show) visible += 1;
-          if (requirePhoto && matchesStore && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {
+          if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {
             hiddenNoPhotoSources.add(deal.dataset.source);
           }
         }
@@ -441,6 +466,9 @@
       for (const box of checkboxes) {
         box.addEventListener('change', updateView);
       }
+      for (const box of categoryBoxes) {
+        box.addEventListener('change', updateView);
+      }
       for (const button of document.querySelectorAll('[data-filter-action]')) {
         button.addEventListener('click', () => {
           const checked = button.dataset.filterAction === 'all';
@@ -448,7 +476,7 @@
           updateView();
         });
       }
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly]) {
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly]) {
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }
@@ -458,7 +486,9 @@
         if (maxPriceInput) maxPriceInput.value = '';
         if (photoOnly) photoOnly.checked = false;
         if (dropOnly) dropOnly.checked = false;
+        if (newOnly) newOnly.checked = false;
         for (const box of checkboxes) box.checked = true;
+        for (const box of categoryBoxes) box.checked = true;
         updateView();
       });
       updateView();

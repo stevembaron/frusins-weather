@@ -31,6 +31,7 @@ JSON_OUTPUT = DATA_DIR / "deals.json"
 HTML_OUTPUT = DATA_DIR / "deals.html"
 MD_OUTPUT = DATA_DIR / "deal_report.md"
 PRICE_HISTORY_OUTPUT = DATA_DIR / "price_history.json"
+CLOTHING_JSON_OUTPUT = DATA_DIR / "clothing_deals.json"
 WEB_DIR = ROOT / "ski-deals"
 WEB_OUTPUT = WEB_DIR / "index.html"
 
@@ -1514,7 +1515,8 @@ def write_outputs(deals: list[Deal], errors: list[SourceError], config: dict[str
 
     json_output.write_text(json.dumps(payload, indent=2), encoding="utf-8")
     markdown_output.write_text(render_markdown(payload, config), encoding="utf-8")
-    html_output = trim_trailing_whitespace(render_html(payload, config))
+    html_payload, html_config = combined_tracker_payload(payload, config)
+    html_output = trim_trailing_whitespace(render_html(html_payload, html_config))
     html_output_path.write_text(html_output, encoding="utf-8")
     web_output.write_text(html_output, encoding="utf-8")
 
@@ -1530,6 +1532,58 @@ def resolve_output_path(value: str | None, default: Path) -> Path:
 
 def trim_trailing_whitespace(value: str) -> str:
     return "\n".join(line.rstrip() for line in value.splitlines()) + "\n"
+
+
+def combined_tracker_payload(payload: dict[str, Any], config: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
+    if resolve_output_path(config.get("json_output"), JSON_OUTPUT) != JSON_OUTPUT:
+        return payload, config
+
+    clothing_payload = load_json_payload(resolve_output_path(config.get("combined_clothing_json"), CLOTHING_JSON_OUTPUT))
+    if not clothing_payload:
+        tagged = dict(payload)
+        tagged["deals"] = [tag_deal_for_category(deal, "ski") for deal in payload.get("deals", [])]
+        tagged["category_counts"] = {"ski": len(tagged["deals"]), "clothing": 0}
+        return tagged, config
+
+    ski_deals = [tag_deal_for_category(deal, "ski") for deal in payload.get("deals", [])]
+    clothing_deals = [tag_deal_for_category(deal, "clothing") for deal in clothing_payload.get("deals", [])]
+    combined = dict(payload)
+    combined["deals"] = ski_deals + clothing_deals
+    combined["deal_count"] = len(combined["deals"])
+    combined["category_counts"] = {"ski": len(ski_deals), "clothing": len(clothing_deals)}
+    combined["errors"] = list(payload.get("errors", [])) + [
+        dict(error, source=f"Clothing: {error.get('source', 'unknown')}")
+        for error in clothing_payload.get("errors", [])
+        if isinstance(error, dict)
+    ]
+
+    html_config = dict(config)
+    html_config["report_title"] = "Gear Deals"
+    return combined, html_config
+
+
+def load_json_payload(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
+def tag_deal_for_category(deal: dict[str, Any], category: str) -> dict[str, Any]:
+    tagged = dict(deal)
+    tagged["category"] = category
+    tagged.setdefault("stock_status", None)
+    tagged.setdefault("image_url", None)
+    tagged.setdefault("is_cached", False)
+    tagged.setdefault("previous_price", None)
+    tagged.setdefault("price_change", None)
+    tagged.setdefault("price_change_percent", None)
+    tagged.setdefault("price_trend", None)
+    tagged.setdefault("first_seen_at", None)
+    return tagged
 
 
 def report_title(config: dict[str, Any]) -> str:
@@ -1579,6 +1633,7 @@ def render_markdown(payload: dict[str, Any], config: dict[str, Any]) -> str:
 
 def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     cards = []
+    show_category_filter = "category_counts" in payload or any("category" in deal for deal in payload.get("deals", []))
     html_deals = sorted(
         payload["deals"],
         key=lambda deal: (
@@ -1590,10 +1645,32 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     source_counts: dict[str, int] = {}
     for deal in html_deals:
         source_counts[str(deal["source"])] = source_counts.get(str(deal["source"]), 0) + 1
+    category_counts = payload.get("category_counts") or {
+        "ski": sum(1 for deal in html_deals if deal.get("category", "ski") == "ski"),
+        "clothing": sum(1 for deal in html_deals if deal.get("category") == "clothing"),
+    }
     image_count = sum(1 for deal in html_deals if deal.get("image_url"))
     price_drop_count = sum(1 for deal in html_deals if deal.get("price_trend") == "down")
     best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
     lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
+    category_panel = (
+        f"""
+        <div class="category-panel" aria-label="Category filters">
+          <label class="category-toggle category-ski">
+            <input type="checkbox" value="ski" checked />
+            <span>Ski deals</span>
+            <b>{category_counts["ski"]}</b>
+          </label>
+          <label class="category-toggle category-clothing">
+            <input type="checkbox" value="clothing" checked />
+            <span>Clothing deals</span>
+            <b>{category_counts["clothing"]}</b>
+          </label>
+        </div>
+        """
+        if show_category_filter
+        else ""
+    )
 
     for deal in html_deals:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
@@ -1602,6 +1679,13 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         trend_label = price_trend_label(deal)
         trend_class = f" trend-{html.escape(str(deal.get('price_trend') or 'unknown'))}"
         trend_badge = f"<span class='trend{trend_class}'>{html.escape(trend_label)}</span>" if trend_label else ""
+        category = str(deal.get("category") or "ski")
+        category_label = "Clothing" if category == "clothing" else "Ski"
+        category_badge = (
+            f"<span class='category category-{html.escape(category)}'>{html.escape(category_label)}</span>"
+            if show_category_filter
+            else ""
+        )
         sizes = f"<span>Sizes {html.escape(', '.join(deal['sizes']))}</span>" if deal.get("sizes") else ""
         status = stock_label(deal.get("stock_status"))
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
@@ -1625,6 +1709,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-score="{deal['score']:.2f}"
               data-trend="{html.escape(str(deal.get('price_trend') or ''))}"
               data-has-image="{'true' if deal.get('image_url') else 'false'}"
+              data-category="{html.escape(category)}"
             >
               {thumbnail}
               <div class="deal-main">
@@ -1635,7 +1720,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{category_badge}{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1663,6 +1748,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             <span class="summary-count"><strong id="visibleDealCount">{len(html_deals)}</strong> shown</span>
           </summary>
           <div class="controls-body">
+            {category_panel}
             <div class="tool-grid">
               <label class="field search-field">
                 <span>Search</span>
@@ -1740,6 +1826,12 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .summary-count {{ color: var(--muted); font-weight: 500; margin-left: auto; }}
       .summary-count strong {{ color: var(--ink); }}
       .controls-body {{ margin-top: 12px; }}
+      .category-panel {{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }}
+      .category-toggle {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }}
+      .category-toggle input {{ width: auto; accent-color: var(--accent); }}
+      .category-toggle b {{ color: var(--muted); font-size: .82rem; }}
+      .category-toggle:has(input:checked) {{ border-color: rgba(13,124,102,.38); background: var(--accent-soft); }}
+      .category-clothing:has(input:checked) {{ border-color: #d6b86c; background: #fff7dc; }}
       .tool-grid {{ display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }}
       .field span {{ display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
       .quick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }}
@@ -1775,6 +1867,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
+      .category-ski {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
+      .category-clothing {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .cached {{ border-color: #d8d1b1; background: #fff8df; color: var(--gold); }}
       .stock-in_stock {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .stock-sold_out {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
@@ -1807,6 +1901,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
+      const categoryBoxes = [...document.querySelectorAll('.category-toggle input')];
       const deals = [...document.querySelectorAll('.deal')];
       const dealsList = document.querySelector('.deals-list');
       const visibleDealCount = document.querySelector('#visibleDealCount');
@@ -1836,6 +1931,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
 
       function applyFilters() {{
         const enabled = new Set(checkboxes.filter((box) => box.checked).map((box) => box.value));
+        const enabledCategories = new Set(categoryBoxes.filter((box) => box.checked).map((box) => box.value));
         const query = (searchInput?.value || '').trim().toLowerCase();
         const maxPrice = Number.parseFloat(maxPriceInput?.value || '');
         const requirePhoto = Boolean(photoOnly?.checked);
@@ -1845,15 +1941,16 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
           const matchesStore = enabled.has(deal.dataset.source);
+          const matchesCategory = !categoryBoxes.length || enabledCategories.has(deal.dataset.category || 'ski');
           const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
           const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
           const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
           const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
           const matchesNew = !requireNew || deal.dataset.trend === 'new';
-          const show = matchesStore && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew;
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew;
           deal.hidden = !show;
           if (show) visible += 1;
-          if (requirePhoto && matchesStore && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
+          if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
             hiddenNoPhotoSources.add(deal.dataset.source);
           }}
         }}
@@ -1877,6 +1974,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       for (const box of checkboxes) {{
         box.addEventListener('change', updateView);
       }}
+      for (const box of categoryBoxes) {{
+        box.addEventListener('change', updateView);
+      }}
       for (const button of document.querySelectorAll('[data-filter-action]')) {{
         button.addEventListener('click', () => {{
           const checked = button.dataset.filterAction === 'all';
@@ -1896,6 +1996,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (dropOnly) dropOnly.checked = false;
         if (newOnly) newOnly.checked = false;
         for (const box of checkboxes) box.checked = true;
+        for (const box of categoryBoxes) box.checked = true;
         updateView();
       }});
       updateView();

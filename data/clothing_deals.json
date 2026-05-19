@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-19T15:56:05+00:00",
+  "generated_at": "2026-05-19T17:33:41-06:00",
   "deal_count": 9,
   "sources_checked": 1,
-  "price_history_count": 197,
+  "price_history_count": 200,
   "price_change_count": 0,
   "deals": [
     {
@@ -14,7 +14,7 @@
       "discount_percent": 67.0,
       "savings": 184.11,
       "score": 120.19,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -25,7 +25,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Hagen Trail Shirt - Men's",
@@ -36,7 +36,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -47,7 +47,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Azura Insulated Jacket - Men's",
@@ -58,7 +58,7 @@
       "discount_percent": 64.0,
       "savings": 148.14,
       "score": 117.33,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -69,7 +69,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Eddy Slope Long Sleeve Shirt - Men's",
@@ -80,7 +80,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -91,7 +91,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Ashton Chambray Shirt - Men's",
@@ -102,7 +102,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -113,7 +113,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Shifter Shirt SS - Men's",
@@ -124,7 +124,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "M"
       ],
@@ -135,7 +135,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Eddy Shirt LS Shirt - Men's",
@@ -146,7 +146,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -157,7 +157,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Hylas Long Sleeve Crew - Men's",
@@ -168,7 +168,7 @@
       "discount_percent": 55.0,
       "savings": 37.95,
       "score": 83.87,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "M"
       ],
@@ -179,7 +179,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
       "title": "Stio Divide Half Zip - Men\u2019s",
@@ -190,7 +190,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-05-19T15:56:02+00:00",
+      "found_at": "2026-05-19T23:33:39+00:00",
       "sizes": [
         "S"
       ],
@@ -201,7 +201,7 @@
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-05-19T15:56:05+00:00"
+      "first_seen_at": "2026-05-19T17:31:30-06:00"
     }
   ],
   "errors": []

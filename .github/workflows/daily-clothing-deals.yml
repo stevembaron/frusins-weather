@@ -38,10 +38,18 @@ jobs:
       - name: Run clothing deal monitor
         run: python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
 
+      - name: Rebuild combined gear tracker
+        run: python3 scripts/deal_monitor.py
+
       - name: Publish updated report
         run: >
           scripts/publish_generated_report.sh
           "Update daily clothing deals"
+          data/deal_report.md
+          data/deals.html
+          data/deals.json
+          data/price_history.json
+          ski-deals/index.html
           data/clothing_deal_report.md
           data/clothing_deals.html
           data/clothing_deals.json
