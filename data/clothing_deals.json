@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-19T17:33:41-06:00",
+  "generated_at": "2026-05-20T15:53:11+00:00",
   "deal_count": 9,
   "sources_checked": 1,
-  "price_history_count": 200,
+  "price_history_count": 202,
   "price_change_count": 0,
   "deals": [
     {
@@ -14,17 +14,17 @@
       "discount_percent": 67.0,
       "savings": 184.11,
       "score": 120.19,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/84fb83cb-2707-4e03-a95a-fc563c9ea796.webp?v=1779134903&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 90.68,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -36,17 +36,17 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/22d4b186-85d6-4d36-b8ad-8cc4dbd8c98d.webp?v=1777208737&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 30.86,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -58,17 +58,17 @@
       "discount_percent": 64.0,
       "savings": 148.14,
       "score": 117.33,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1778842391&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 83.33,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -80,17 +80,17 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/10622373-4e07-4287-9f97-89e9d5b15b88.webp?v=1777221170&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 52.29,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -102,17 +102,17 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/0f9dfff9-1e56-4991-bf0b-71a54ef99e69.webp?v=1777355079&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 37.31,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -124,17 +124,17 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/e1ebdf3e-8a73-47d2-a127-0c8e3365eeba.webp?v=1778768663&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 25.69,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -146,17 +146,17 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/541d2a7b-a579-4a06-b719-928cac7c64e0.webp?v=1777239562&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 48.92,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -168,17 +168,17 @@
       "discount_percent": 55.0,
       "savings": 37.95,
       "score": 83.87,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1778146292&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 31.05,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -190,17 +190,17 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-05-19T23:33:39+00:00",
+      "found_at": "2026-05-20T15:53:08+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/dd076504-7cb9-4f14-9562-59c4e30ab950.webp?v=1777237524&width=460",
       "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
+      "previous_price": 42.67,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     }
   ],
