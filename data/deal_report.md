@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-20T18:17:56+00:00
+Generated: 2026-05-21T12:46:52+00:00
 Deals found: 184
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -41,7 +41,7 @@ Deals found: 184
 
 7. [Season Nexus Skis - Blem 2025](https://www.evo.com/products/261037-season-nexus-skis-blem-2025)
    $289.99 was $749.00 (61.3% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 167 cm
    Stock: In stock
 
