@@ -1,8 +1,6 @@
 name: Update Daily Clothing Deals
 
 on:
-  schedule:
-    - cron: "15 12 * * *"
   workflow_dispatch:
 
 permissions:

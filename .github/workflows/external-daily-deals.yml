@@ -2,7 +2,8 @@ name: External Daily Deal Refresh
 
 on:
   schedule:
-    - cron: "30 12 * * *"
+    # GitHub schedules use UTC. This is 4:17 AM MDT / 3:17 AM MST.
+    - cron: "17 10 * * *"
   workflow_dispatch:
   repository_dispatch:
     types:
@@ -33,11 +34,11 @@ jobs:
       - name: Make publish helper executable
         run: chmod +x scripts/publish_generated_report.sh
 
-      - name: Run ski deal monitor
-        run: python3 scripts/deal_monitor.py
-
       - name: Run clothing deal monitor
         run: python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
+
+      - name: Run ski deal monitor
+        run: python3 scripts/deal_monitor.py
 
       - name: Publish updated reports
         run: >
@@ -46,6 +47,7 @@ jobs:
           data/deal_report.md
           data/deals.html
           data/deals.json
+          data/price_history.json
           ski-deals/index.html
           data/clothing_deal_report.md
           data/clothing_deals.html
