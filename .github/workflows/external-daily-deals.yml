@@ -49,7 +49,4 @@ jobs:
           data/deals.json
           data/price_history.json
           ski-deals/index.html
-          data/clothing_deal_report.md
-          data/clothing_deals.html
           data/clothing_deals.json
-          clothing-deals/index.html
