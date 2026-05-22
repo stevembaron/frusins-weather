@@ -1185,6 +1185,17 @@ def filter_and_sort(deals: list[Deal], config: dict[str, Any]) -> list[Deal]:
             continue
         filtered.append(deal)
 
+    if config.get("sort_results_by") == "price_asc":
+        return sorted(
+            filtered,
+            key=lambda item: (
+                stock_sort_key(item.stock_status),
+                item.current_price,
+                -(item.discount_percent or 0),
+                -(item.savings or 0),
+            ),
+        )
+
     return sorted(
         filtered,
         key=lambda item: (
@@ -1886,10 +1897,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     html_deals = sorted(
         payload["deals"],
         key=lambda deal: (
-            1 if deal.get("is_ignored") else 0,
-            0 if deal.get("is_watchlist") else 1,
             stock_sort_key(deal.get("stock_status")),
             deal["current_price"],
+            1 if deal.get("is_ignored") else 0,
+            0 if deal.get("is_watchlist") else 1,
             -(deal["discount_percent"] or 0),
         ),
     )
@@ -2311,8 +2322,15 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       function sortDeals() {{
         const sorted = [...deals].sort((a, b) => {{
           const mode = sortSelect?.value || 'price-asc';
-          if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
+          if (mode === 'price-asc') {{
+            const priceDelta = numericValue(a, 'price') - numericValue(b, 'price');
+            if (priceDelta !== 0) return priceDelta;
+            if (a.dataset.ignored !== b.dataset.ignored) return a.dataset.ignored === 'true' ? 1 : -1;
+            if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
+            return numericValue(b, 'discount') - numericValue(a, 'discount');
+          }}
           if (a.dataset.ignored !== b.dataset.ignored) return a.dataset.ignored === 'true' ? 1 : -1;
+          if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
           if (mode === 'discount-desc') return numericValue(b, 'discount') - numericValue(a, 'discount');
           if (mode === 'savings-desc') return numericValue(b, 'savings') - numericValue(a, 'savings');
           if (mode === 'score-desc') return numericValue(b, 'score') - numericValue(a, 'score');

@@ -125,6 +125,7 @@
       "shopify_required_variant_terms": [
         "New"
       ],
+      "sort_results_by": "price_asc",
       "size_min_cm": 152,
       "size_max_cm": 172
     }
