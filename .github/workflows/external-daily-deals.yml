@@ -4,6 +4,8 @@ on:
   schedule:
     # GitHub schedules use UTC. This is 4:17 AM MDT / 3:17 AM MST.
     - cron: "17 10 * * *"
+    # This is 12:17 PM MDT / 11:17 AM MST.
+    - cron: "17 18 * * *"
   workflow_dispatch:
   repository_dispatch:
     types:
