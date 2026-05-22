@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-21T12:49:31-06:00",
+  "generated_at": "2026-05-22T12:35:48+00:00",
   "deal_count": 9,
   "sources_checked": 1,
-  "price_history_count": 204,
-  "price_change_count": 0,
+  "price_history_count": 207,
+  "price_change_count": 1,
   "deals": [
     {
       "title": "Stio Hometown Down Hooded Vest - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 67.0,
       "savings": 184.11,
       "score": 120.19,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
@@ -36,7 +36,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
@@ -53,22 +53,22 @@
       "title": "Stio Azura Insulated Jacket - Men's",
       "url": "https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 83.33,
-      "original_price": 231.47,
-      "discount_percent": 64.0,
-      "savings": 148.14,
-      "score": 117.33,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "current_price": 78.88,
+      "original_price": 232.0,
+      "discount_percent": 66.0,
+      "savings": 153.12,
+      "score": 119.42,
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1778842391&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1779446545&width=460",
       "is_cached": false,
       "previous_price": 83.33,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -4.45,
+      "price_change_percent": -5.3,
+      "price_trend": "down",
       "first_seen_at": "2026-05-19T17:31:30-06:00"
     },
     {
@@ -80,7 +80,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
@@ -102,7 +102,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
@@ -124,7 +124,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "M"
       ],
@@ -146,7 +146,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
@@ -168,7 +168,7 @@
       "discount_percent": 55.0,
       "savings": 37.95,
       "score": 83.87,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "M"
       ],
@@ -190,7 +190,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-05-21T18:49:28+00:00",
+      "found_at": "2026-05-22T12:35:46+00:00",
       "sizes": [
         "S"
       ],
