@@ -2096,6 +2096,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             f"""
             <article
               class="deal"
+              data-url="{html.escape(str(deal['url']))}"
               data-source="{html.escape(deal['source'])}"
               data-title="{html.escape(str(deal['title']).lower())}"
               data-price="{deal['current_price']:.2f}"
@@ -2107,6 +2108,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-category="{html.escape(category)}"
               data-watchlist="{'true' if deal.get('is_watchlist') else 'false'}"
               data-ignored="{'true' if deal.get('is_ignored') else 'false'}"
+              data-server-ignored="{'true' if deal.get('is_ignored') else 'false'}"
+              data-local-ignored="false"
               data-size-match="{'true' if deal.get('matches_size') else 'false'}"
               data-my-size-match="{'true' if deal.get('matches_my_size') else 'false'}"
               data-family-size-match="{'true' if deal.get('matches_family_size') else 'false'}"
@@ -2466,6 +2469,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .note-button {{ border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; background: #fff; color: var(--muted); cursor: pointer; font: inherit; font-size: .86rem; }}
       .note-button:hover {{ border-color: rgba(13,124,102,.45); color: var(--accent); }}
+      .deal[data-local-ignored="true"] .note-button {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
       @media (max-width: 1080px) {{ header {{ grid-template-columns: 1fr; }} .app-shell {{ grid-template-columns: 280px minmax(0, 1fr); }} .digest-grid, .activity-grid {{ grid-template-columns: 1fr; }} }}
@@ -2525,9 +2529,42 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
       const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
+      const localIgnoreKey = 'skiDeals.localIgnoreUrls.v1';
+      let localIgnoredUrls = readLocalIgnores();
 
       function numericValue(deal, key) {{
         return Number.parseFloat(deal.dataset[key] || '0') || 0;
+      }}
+
+      function readLocalIgnores() {{
+        try {{
+          const storage = window.localStorage;
+          if (!storage) return new Set();
+          const parsed = JSON.parse(storage.getItem(localIgnoreKey) || '[]');
+          return new Set(Array.isArray(parsed) ? parsed.filter(Boolean) : []);
+        }} catch (error) {{
+          return new Set();
+        }}
+      }}
+
+      function writeLocalIgnores() {{
+        try {{
+          const storage = window.localStorage;
+          if (storage) storage.setItem(localIgnoreKey, JSON.stringify([...localIgnoredUrls].sort()));
+        }} catch (error) {{
+          // Storage can be unavailable in restricted browser contexts; current-page hiding still works.
+        }}
+      }}
+
+      function applyLocalIgnores() {{
+        for (const deal of deals) {{
+          const url = deal.dataset.url || '';
+          const isLocalIgnored = Boolean(url && localIgnoredUrls.has(url));
+          deal.dataset.localIgnored = String(isLocalIgnored);
+          deal.dataset.ignored = String(deal.dataset.serverIgnored === 'true' || isLocalIgnored);
+          const button = deal.querySelector('.note-button');
+          if (button) button.textContent = isLocalIgnored ? 'Undo ignore' : 'Not interested';
+        }}
       }}
 
       function sortDeals() {{
@@ -2689,13 +2726,15 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       for (const button of document.querySelectorAll('.note-button')) {{
         button.addEventListener('click', async () => {{
           const value = button.dataset.ignoreValue || '';
-          const text = value ? `"${{value}}"` : '';
-          try {{
-            await navigator.clipboard.writeText(text);
-            button.textContent = 'Copied ignore URL';
-          }} catch (error) {{
-            button.textContent = 'Copy failed';
+          if (!value) return;
+          if (localIgnoredUrls.has(value)) {{
+            localIgnoredUrls.delete(value);
+          }} else {{
+            localIgnoredUrls.add(value);
           }}
+          writeLocalIgnores();
+          applyLocalIgnores();
+          updateView();
         }});
       }}
       dealsOfDay?.addEventListener('click', () => {{
@@ -2727,6 +2766,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         for (const box of categoryBoxes) box.checked = true;
         updateView();
       }});
+      applyLocalIgnores();
       updateView();
     </script>
   </body>
