@@ -101,6 +101,32 @@
         "demo skis"
       ],
       "searchspring_json": "https://api.searchspring.net/api/search/search.json?siteId=0j0kr5&resultsFormat=native&resultsPerPage=80&page=1&filter.tags_category=Demo%20Skis&sort.ss_price=asc"
+    },
+    {
+      "name": "Lone Pine new flat skis",
+      "url": "https://lonepinegearx.com/collections/flat-skis?sort=price-ascending&pf_vrs1_length_cm=152.00%3A172.00&pf_opt_condition=New",
+      "enabled": true,
+      "max_results_per_source": 80,
+      "keywords": [],
+      "exclude_keywords": [
+        "juniors",
+        "junior",
+        "youth",
+        "kid",
+        "kids",
+        "j2"
+      ],
+      "ignore_sold_out": true,
+      "shopify_products_json": "https://lonepinegearx.com/collections/flat-skis/products.json?limit=250",
+      "shopify_required_tags": [
+        "New",
+        "SKI FLAT"
+      ],
+      "shopify_required_variant_terms": [
+        "New"
+      ],
+      "size_min_cm": 152,
+      "size_max_cm": 172
     }
   ]
 }

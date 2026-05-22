@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-22T11:26:26-06:00",
-  "deal_count": 184,
-  "sources_checked": 6,
-  "price_history_count": 208,
+  "generated_at": "2026-05-22T11:35:51-06:00",
+  "deal_count": 264,
+  "sources_checked": 7,
+  "price_history_count": 261,
   "price_change_count": 1,
   "deals": [
     {
@@ -14,7 +14,7 @@
       "discount_percent": 82.9,
       "savings": 579.96,
       "score": 135.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 80.0,
       "savings": 559.96,
       "score": 132.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 76.5,
       "savings": 649.96,
       "score": 127.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 75.0,
       "savings": 712.46,
       "score": 125.25,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 70.6,
       "savings": 599.96,
       "score": 120.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "176 cm"
       ],
@@ -126,6 +126,174 @@
       "highest_price": 249.99
     },
     {
+      "title": "2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New",
+      "url": "https://lonepinegearx.com/products/2024-dynastar-menace-80-95383",
+      "source": "Lone Pine new flat skis",
+      "current_price": 150.0,
+      "original_price": 430.0,
+      "discount_percent": 65.1,
+      "savings": 280.0,
+      "score": 117.1,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "158cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1726160496132UDA4639MVXGHYNBUEB8E.png?v=1774715170",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 150.0,
+      "highest_price": 150.0
+    },
+    {
+      "title": "2024 Dynastar Menace 80 - 168cm / Black/Yellow/Orange / New",
+      "url": "https://lonepinegearx.com/products/2024-dynastar-menace-80-95383",
+      "source": "Lone Pine new flat skis",
+      "current_price": 150.0,
+      "original_price": 430.0,
+      "discount_percent": 65.1,
+      "savings": 280.0,
+      "score": 117.1,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1726160496132UDA4639MVXGHYNBUEB8E.png?v=1774715170",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 150.0,
+      "highest_price": 150.0
+    },
+    {
+      "title": "2024 Rossignol Rallybird 102 - 154cm / Purple/Pink / New",
+      "url": "https://lonepinegearx.com/products/2024-rossignol-rallybird-102-374e8",
+      "source": "Lone Pine new flat skis",
+      "current_price": 279.0,
+      "original_price": 849.95,
+      "discount_percent": 67.2,
+      "savings": 570.95,
+      "score": 116.62,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "154cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1747776087213FDMI173M3SPKJVZSR04E.png?v=1773695934",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 279.0,
+      "highest_price": 279.0
+    },
+    {
+      "title": "2025 Zag Women's Harfang 86 *Floor Model* - 162cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-harfang-86-floor-model-08736",
+      "source": "Lone Pine new flat skis",
+      "current_price": 269.95,
+      "original_price": 780.0,
+      "discount_percent": 65.4,
+      "savings": 510.05,
+      "score": 115.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774035008210HVB8ZHEBLW2QYLEAJVIT_cefdf9db-6027-4c84-9aca-d7f31e9bd725.png?v=1774035262",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 269.95,
+      "highest_price": 269.95
+    },
+    {
+      "title": "2024 Zag UBAC 89 - 171cm / Blue/White / New",
+      "url": "https://lonepinegearx.com/products/2024-zag-ubac-89-f2ddc",
+      "source": "Lone Pine new flat skis",
+      "current_price": 280.0,
+      "original_price": 806.67,
+      "discount_percent": 65.3,
+      "savings": 526.67,
+      "score": 114.7,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "171cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1775762222487SSRMBTJTAZD2QEFQS02L.png?v=1775762261",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 280.0,
+      "highest_price": 280.0
+    },
+    {
+      "title": "2025 Zag Women's Slap 104 - 164cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.95,
+      "original_price": 870.0,
+      "discount_percent": 65.5,
+      "savings": 570.05,
+      "score": 114.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774552236474L3J9HIDE08I883HTVRKD.png?v=1776369826",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.95,
+      "highest_price": 299.95
+    },
+    {
+      "title": "2025 Zag Women's Slap 104 - 170cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.95,
+      "original_price": 870.0,
+      "discount_percent": 65.5,
+      "savings": 570.05,
+      "score": 114.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774552236474L3J9HIDE08I883HTVRKD.png?v=1776369826",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.95,
+      "highest_price": 299.95
+    },
+    {
       "title": "G3 FINDr FLX R3 94 Skis List: ( 64%) Blazin' Deal",
       "url": "https://www.campsaver.com/g3-findr-flx-r3-94-skis.html",
       "source": "CampSaver backcountry skis",
@@ -134,7 +302,7 @@
       "discount_percent": 64.1,
       "savings": 424.4,
       "score": 114.35,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -156,8 +324,10 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "174cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/355782.jpg?v=1726380065",
       "is_cached": false,
@@ -178,7 +348,7 @@
       "discount_percent": 63.5,
       "savings": 539.98,
       "score": 112.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -194,6 +364,102 @@
       "highest_price": 309.97
     },
     {
+      "title": "2025 Zag Harfang 86 - 170cm / Orange/Blue / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-harfang-86-fa09f",
+      "source": "Lone Pine new flat skis",
+      "current_price": 289.95,
+      "original_price": 780.0,
+      "discount_percent": 62.8,
+      "savings": 490.05,
+      "score": 112.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774038603788VYIIBGCDKPN3YNCZPTTC.png?v=1776279642",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 289.95,
+      "highest_price": 289.95
+    },
+    {
+      "title": "2025 Zag Women's Harfang 86 - 155cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e",
+      "source": "Lone Pine new flat skis",
+      "current_price": 289.95,
+      "original_price": 780.0,
+      "discount_percent": 62.8,
+      "savings": 490.05,
+      "score": 112.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "155cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774035008210HVB8ZHEBLW2QYLEAJVIT.png?v=1778174303",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 289.95,
+      "highest_price": 289.95
+    },
+    {
+      "title": "2025 Zag Women's Harfang 86 - 162cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e",
+      "source": "Lone Pine new flat skis",
+      "current_price": 289.95,
+      "original_price": 780.0,
+      "discount_percent": 62.8,
+      "savings": 490.05,
+      "score": 112.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774035008210HVB8ZHEBLW2QYLEAJVIT.png?v=1778174303",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 289.95,
+      "highest_price": 289.95
+    },
+    {
+      "title": "2025 Zag Women's Harfang 86 - 170cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e",
+      "source": "Lone Pine new flat skis",
+      "current_price": 289.95,
+      "original_price": 780.0,
+      "discount_percent": 62.8,
+      "savings": 490.05,
+      "score": 112.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774035008210HVB8ZHEBLW2QYLEAJVIT.png?v=1778174303",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 289.95,
+      "highest_price": 289.95
+    },
+    {
       "title": "2 models G3 SEEKr R3 100 Skis List: ( 64%) Blazin' Deal",
       "url": "https://www.campsaver.com/g3-seekr-r3-100-skis.html",
       "source": "CampSaver backcountry skis",
@@ -202,7 +468,7 @@
       "discount_percent": 64.0,
       "savings": 666.6,
       "score": 111.51,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -216,6 +482,30 @@
       "highest_price": 374.4
     },
     {
+      "title": "2025 Zag Women's Slap 92 - 166cm / Blue/Pink / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-slap-92-e0d32",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.95,
+      "original_price": 780.0,
+      "discount_percent": 61.5,
+      "savings": 480.05,
+      "score": 110.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "166cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17740426323552ESCFMRF8YMN738UB98K.png?v=1778873048",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.95,
+      "highest_price": 299.95
+    },
+    {
       "title": "Season Nexus Skis - Blem 2025",
       "url": "https://www.evo.com/products/261037-season-nexus-skis-blem-2025",
       "source": "Evo skis price ascending",
@@ -224,7 +514,7 @@
       "discount_percent": 61.3,
       "savings": 459.01,
       "score": 110.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "167 cm"
       ],
@@ -240,6 +530,78 @@
       "highest_price": 289.99
     },
     {
+      "title": "2024 Zag UBAC 95 - 170cm / Blue/Green/White / New",
+      "url": "https://lonepinegearx.com/products/2024-zag-ubac-95-cea07",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.0,
+      "original_price": 775.0,
+      "discount_percent": 61.4,
+      "savings": 476.0,
+      "score": 110.42,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774216828297DFD77ZSF9HT9LCNF24GP.png?v=1777577867",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.0,
+      "highest_price": 299.0
+    },
+    {
+      "title": "2023 Zag UBAC 95 - 170cm / Blue/White / New",
+      "url": "https://lonepinegearx.com/products/2023-zag-ubac-95-f51c9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.95,
+      "original_price": 775.0,
+      "discount_percent": 61.3,
+      "savings": 475.05,
+      "score": 110.3,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774557687772SA3CCAUS7CIXWPEFGKTQ.jpg?v=1778870766",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.95,
+      "highest_price": 299.95
+    },
+    {
+      "title": "2023 Zag UBAC 95 - 158cm / Blue/White / New",
+      "url": "https://lonepinegearx.com/products/2023-zag-ubac-95-f0cf3",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.99,
+      "original_price": 775.0,
+      "discount_percent": 61.3,
+      "savings": 475.01,
+      "score": 110.3,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "158cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774215622492A4CFA46V7XVRKW4P5GEY.png?v=1774470571",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.99,
+      "highest_price": 299.99
+    },
+    {
       "title": "Peak Skis Peak 98 By Dav Skis 2025",
       "url": "https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025",
       "source": "Evo skis price ascending",
@@ -248,7 +610,7 @@
       "discount_percent": 61.1,
       "savings": 549.03,
       "score": 109.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -272,7 +634,7 @@
       "discount_percent": 59.6,
       "savings": 405.0,
       "score": 109.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "166"
       ],
@@ -296,7 +658,7 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154cm",
         "160cm",
@@ -322,7 +684,7 @@
       "discount_percent": 60.0,
       "savings": 449.97,
       "score": 109.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "158 cm"
       ],
@@ -346,7 +708,7 @@
       "discount_percent": 62.9,
       "savings": 770.99,
       "score": 108.82,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165 cm"
       ],
@@ -370,7 +732,7 @@
       "discount_percent": 60.0,
       "savings": 510.0,
       "score": 108.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "173 cm"
       ],
@@ -394,7 +756,7 @@
       "discount_percent": 60.0,
       "savings": 525.01,
       "score": 108.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "149",
         "156",
@@ -412,6 +774,30 @@
       "highest_price": 349.99
     },
     {
+      "title": "2024 Zag Ardet 85 - 172cm / Black/Orange / New",
+      "url": "https://lonepinegearx.com/products/2024-zag-ardet-85-e4665",
+      "source": "Lone Pine new flat skis",
+      "current_price": 380.0,
+      "original_price": 948.95,
+      "discount_percent": 60.0,
+      "savings": 568.95,
+      "score": 107.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774214208420XHGQD9KSMMK3EN6VCVB8.png?v=1774215172",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 380.0,
+      "highest_price": 380.0
+    },
+    {
       "title": "Elan Wingman 80 Ti Mens Demo Skis 2026",
       "url": "https://utahskis.com/products/elan-wingman-80-ti-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -420,7 +806,7 @@
       "discount_percent": 57.7,
       "savings": 375.0,
       "score": 107.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168"
       ],
@@ -444,7 +830,7 @@
       "discount_percent": 60.0,
       "savings": 600.01,
       "score": 107.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156",
         "166"
@@ -469,7 +855,7 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156",
         "166",
@@ -496,7 +882,7 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "188"
       ],
@@ -520,7 +906,7 @@
       "discount_percent": 59.5,
       "savings": 550.01,
       "score": 107.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172",
         "179"
@@ -545,7 +931,7 @@
       "discount_percent": 55.6,
       "savings": 250.02,
       "score": 106.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152 cm"
       ],
@@ -561,6 +947,54 @@
       "highest_price": 199.97
     },
     {
+      "title": "2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3",
+      "source": "Lone Pine new flat skis",
+      "current_price": 345.0,
+      "original_price": 824.05,
+      "discount_percent": 58.1,
+      "savings": 479.05,
+      "score": 106.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774208674804Q9D878859NNPW63Z9WBH.png?v=1778009784",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 345.0,
+      "highest_price": 345.0
+    },
+    {
+      "title": "2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3",
+      "source": "Lone Pine new flat skis",
+      "current_price": 345.0,
+      "original_price": 824.05,
+      "discount_percent": 58.1,
+      "savings": 479.05,
+      "score": 106.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774208674804Q9D878859NNPW63Z9WBH.png?v=1778009784",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 345.0,
+      "highest_price": 345.0
+    },
+    {
       "title": "Scott Pure Free 90 Ti - Unisex",
       "url": "https://thegearroom.com/products/scott-pure-90-2025-unisex",
       "source": "The Gear Room skis price ascending",
@@ -569,7 +1003,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "177cm",
         "184cm"
@@ -594,7 +1028,7 @@
       "discount_percent": 59.0,
       "savings": 575.01,
       "score": 106.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172",
         "180"
@@ -619,7 +1053,7 @@
       "discount_percent": 58.3,
       "savings": 525.0,
       "score": 105.8,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150",
         "155",
@@ -645,7 +1079,7 @@
       "discount_percent": 58.3,
       "savings": 524.01,
       "score": 105.8,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154",
         "161"
@@ -670,7 +1104,7 @@
       "discount_percent": 57.6,
       "savings": 490.0,
       "score": 105.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -686,6 +1120,30 @@
       "highest_price": 359.99
     },
     {
+      "title": "2022 Zag Ardet 78 - 170cm / Grey/Orange / New",
+      "url": "https://lonepinegearx.com/products/2022-zag-ardet-78-64987",
+      "source": "Lone Pine new flat skis",
+      "current_price": 380.0,
+      "original_price": 898.95,
+      "discount_percent": 57.7,
+      "savings": 518.95,
+      "score": 105.1,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774212469104255IK1A5CNST6F0FY7KW.png?v=1774213517",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 380.0,
+      "highest_price": 380.0
+    },
+    {
       "title": "Black Crows Captis Birdie Womens Demo Skis 2026",
       "url": "https://utahskis.com/products/black-crows-captis-birdie-womens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -694,7 +1152,7 @@
       "discount_percent": 56.6,
       "savings": 424.01,
       "score": 105.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154.4",
         "160.1"
@@ -719,7 +1177,7 @@
       "discount_percent": 58.0,
       "savings": 550.95,
       "score": 105.02,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -746,7 +1204,7 @@
       "discount_percent": 57.9,
       "savings": 550.0,
       "score": 104.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "161",
         "168",
@@ -766,6 +1224,30 @@
       "highest_price": 399.99
     },
     {
+      "title": "2024 Zag UBAC 89 w/ Pomoca/Zag Climbing Skins - 171cm / Blue/White / New",
+      "url": "https://lonepinegearx.com/products/2024-zag-ubac-89-w-pomocazag-climbing-skins-be9b2",
+      "source": "Lone Pine new flat skis",
+      "current_price": 349.0,
+      "original_price": 806.67,
+      "discount_percent": 56.7,
+      "savings": 457.67,
+      "score": 104.72,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "171cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774209618433B8VR9IH5IX78HQ5VXTR0_47bf2d1d-9c24-4771-b274-0eec690ff0cf.png?v=1777564592",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 349.0,
+      "highest_price": 349.0
+    },
+    {
       "title": "Rossignol Arcade 84 + Spx 12 Demo Skis 2026",
       "url": "https://utahskis.com/products/rossignol-arcade-84-spx-12-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -774,7 +1256,7 @@
       "discount_percent": 58.7,
       "savings": 675.01,
       "score": 104.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152",
         "160",
@@ -793,6 +1275,30 @@
       "highest_price": 474.99
     },
     {
+      "title": "2022 Zag Women's UBAC 102 w/ Zag Climbing Skins - 170cm / Blue/Yellow / New",
+      "url": "https://lonepinegearx.com/products/2022-zag-womens-ubac-102-w-zag-climbing-skins-839db",
+      "source": "Lone Pine new flat skis",
+      "current_price": 429.95,
+      "original_price": 1020.0,
+      "discount_percent": 57.8,
+      "savings": 590.05,
+      "score": 104.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774549510742JTZMW6V4ZXYAA5LE48EI.png?v=1774551214",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 429.95,
+      "highest_price": 429.95
+    },
+    {
       "title": "Rossignol Forza 70 Ti + Spx14 Mens Demo Skis 2026",
       "url": "https://utahskis.com/products/rossignol-forza-70-ti-spx14-mens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -801,7 +1307,7 @@
       "discount_percent": 59.6,
       "savings": 775.01,
       "score": 104.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163",
         "173",
@@ -819,6 +1325,54 @@
       "highest_price": 524.99
     },
     {
+      "title": "2025 Zag Women's Slap 112 - 164cm / Blue/Green / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-slap-112-645cd",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.95,
+      "original_price": 920.0,
+      "discount_percent": 56.5,
+      "savings": 520.05,
+      "score": 103.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774555328758A02R42XRDXMTSKUN80CX.png?v=1774561858",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.95,
+      "highest_price": 399.95
+    },
+    {
+      "title": "2025 Zag Women's Slap 112 - 170cm / Blue/Green / New",
+      "url": "https://lonepinegearx.com/products/2025-zag-womens-slap-112-645cd",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.95,
+      "original_price": 920.0,
+      "discount_percent": 56.5,
+      "savings": 520.05,
+      "score": 103.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774555328758A02R42XRDXMTSKUN80CX.png?v=1774561858",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.95,
+      "highest_price": 399.95
+    },
+    {
       "title": "K2 Mindbndr 90C W + Quick Clik Womens Demo Skis 2026",
       "url": "https://utahskis.com/products/k2-mindbndr-90c-w-quick-clik-womens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -827,7 +1381,7 @@
       "discount_percent": 55.9,
       "savings": 474.96,
       "score": 103.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "148",
         "154",
@@ -853,7 +1407,7 @@
       "discount_percent": 58.3,
       "savings": 700.01,
       "score": 103.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156",
         "164",
@@ -881,7 +1435,7 @@
       "discount_percent": 55.6,
       "savings": 500.0,
       "score": 102.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "167",
         "173",
@@ -908,7 +1462,7 @@
       "discount_percent": 53.6,
       "savings": 374.96,
       "score": 102.1,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "147",
         "153",
@@ -935,7 +1489,7 @@
       "discount_percent": 55.3,
       "savings": 524.96,
       "score": 101.8,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "166",
         "172",
@@ -962,7 +1516,7 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
@@ -988,7 +1542,7 @@
       "discount_percent": 55.0,
       "savings": 550.04,
       "score": 101.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168",
         "175",
@@ -1014,7 +1568,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "149",
         "156",
@@ -1040,7 +1594,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "167",
         "173",
@@ -1067,7 +1621,7 @@
       "discount_percent": 50.0,
       "savings": 199.99,
       "score": 101.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -1094,7 +1648,7 @@
       "discount_percent": 53.1,
       "savings": 424.96,
       "score": 100.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163",
         "170",
@@ -1121,7 +1675,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152 cm"
       ],
@@ -1145,7 +1699,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "145cm",
         "150cm",
@@ -1174,7 +1728,7 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168cm",
         "178cm"
@@ -1199,7 +1753,7 @@
       "discount_percent": 54.8,
       "savings": 575.01,
       "score": 100.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156",
         "163",
@@ -1227,7 +1781,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "153cm",
         "160cm",
@@ -1253,7 +1807,7 @@
       "discount_percent": 50.0,
       "savings": 249.99,
       "score": 100.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152cm",
         "172cm"
@@ -1278,7 +1832,7 @@
       "discount_percent": 52.9,
       "savings": 450.0,
       "score": 99.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "147",
         "154",
@@ -1304,7 +1858,7 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156",
         "164"
@@ -1329,7 +1883,7 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Gray / 148"
       ],
@@ -1353,7 +1907,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -1380,7 +1934,7 @@
       "discount_percent": 51.0,
       "savings": 330.99,
       "score": 99.64,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165 cm"
       ],
@@ -1404,7 +1958,7 @@
       "discount_percent": 51.4,
       "savings": 359.96,
       "score": 99.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -1420,6 +1974,30 @@
       "highest_price": 339.99
     },
     {
+      "title": "2026 Zag Slap 104 Lite w/ Zag Climbing Skins - 170cm / Blue/Orange / New",
+      "url": "https://lonepinegearx.com/products/2026-zag-slap-104-lite-w-zag-climbing-skins-6c7af",
+      "source": "Lone Pine new flat skis",
+      "current_price": 499.95,
+      "original_price": 1100.0,
+      "discount_percent": 54.5,
+      "savings": 600.05,
+      "score": 99.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1775251278349UW6MH53DJEJZUKQL1HDT.png?v=1779165116",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 499.95,
+      "highest_price": 499.95
+    },
+    {
       "title": "Volkl Shine 72 Womens Skis with VMotion 10 Bindings",
       "url": "https://www.eriksbikeshop.com/products/volkl-shine-72-womens-skis-with-vmotion-10-bindings-2026-pr5a25816",
       "source": "ERIK'S downhill skis price ascending",
@@ -1428,7 +2006,7 @@
       "discount_percent": 50.0,
       "savings": 274.99,
       "score": 99.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "144cm",
         "151cm",
@@ -1455,7 +2033,7 @@
       "discount_percent": 48.9,
       "savings": 220.0,
       "score": 99.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -1471,6 +2049,30 @@
       "highest_price": 229.99
     },
     {
+      "title": "2026 Line Honey Badger - 172cm / Black/White / New",
+      "url": "https://lonepinegearx.com/products/2026-line-honey-badger-15f5a",
+      "source": "Lone Pine new flat skis",
+      "current_price": 229.99,
+      "original_price": 449.99,
+      "discount_percent": 48.9,
+      "savings": 220.0,
+      "score": 99.3,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17779272440250N38WMBE0UVG3XSGSZ8V.png?v=1779390084",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 229.99,
+      "highest_price": 229.99
+    },
+    {
       "title": "Salomon S/MAX N6 XT Womens Skis with M10 GW Bindings",
       "url": "https://www.eriksbikeshop.com/products/salomon-smax-n6-xt-womens-skis-with-m10-gw-bindings-2026-pr5a25495",
       "source": "ERIK'S downhill skis price ascending",
@@ -1479,7 +2081,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -1496,6 +2098,30 @@
       "highest_price": 289.98
     },
     {
+      "title": "2025 Armada ARW 88 - 161cm / Multi / New",
+      "url": "https://lonepinegearx.com/products/2025-armada-arw-88-0bc81",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.95,
+      "original_price": 599.95,
+      "discount_percent": 50.0,
+      "savings": 300.0,
+      "score": 99.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "161cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1770146808061L0C5D9UAPXBISIDK0KUB_8bd5f5fa-75a0-498b-81c2-565da368d852.png?v=1779066096",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.95,
+      "highest_price": 299.95
+    },
+    {
       "title": "Lib Tech Backwards Mens Skis",
       "url": "https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243",
       "source": "ERIK'S downhill skis price ascending",
@@ -1504,7 +2130,7 @@
       "discount_percent": 50.0,
       "savings": 299.99,
       "score": 99.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "166cm",
         "178cm"
@@ -1529,7 +2155,7 @@
       "discount_percent": 52.8,
       "savings": 502.0,
       "score": 98.84,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152",
         "158",
@@ -1555,7 +2181,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -1579,7 +2205,7 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "153cm",
         "160cm"
@@ -1604,7 +2230,7 @@
       "discount_percent": 52.6,
       "savings": 500.0,
       "score": 98.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164",
         "170",
@@ -1632,7 +2258,7 @@
       "discount_percent": 52.6,
       "savings": 499.01,
       "score": 98.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "169.1 CM",
         "175.2 CM",
@@ -1658,7 +2284,7 @@
       "discount_percent": 52.0,
       "savings": 467.54,
       "score": 98.37,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -1680,7 +2306,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -1707,8 +2333,10 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "161cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-76-womens-skis-with-vmotion-10-bindings_pr5a25815_2aa5.jpg?v=1756540764",
       "is_cached": false,
@@ -1729,7 +2357,7 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "155cm",
         "162cm"
@@ -1754,8 +2382,10 @@
       "discount_percent": 50.0,
       "savings": 339.99,
       "score": 98.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "171cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-ufo-95-skis_pr5a25244_3894.jpg?v=1758009616",
       "is_cached": false,
@@ -1768,6 +2398,102 @@
       "highest_price": 340.0
     },
     {
+      "title": "2026 Line Pandora 106 - 155cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-line-pandora-106-b92ac",
+      "source": "Lone Pine new flat skis",
+      "current_price": 349.99,
+      "original_price": 699.99,
+      "discount_percent": 50.0,
+      "savings": 350.0,
+      "score": 98.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "155cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777929828576RNT5QYCB5E5Q8Y8L79MF.png?v=1777929881",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 349.99,
+      "highest_price": 349.99
+    },
+    {
+      "title": "2026 Line Pandora 106 - 162cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-line-pandora-106-b92ac",
+      "source": "Lone Pine new flat skis",
+      "current_price": 349.99,
+      "original_price": 699.99,
+      "discount_percent": 50.0,
+      "savings": 350.0,
+      "score": 98.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777929828576RNT5QYCB5E5Q8Y8L79MF.png?v=1777929881",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 349.99,
+      "highest_price": 349.99
+    },
+    {
+      "title": "2026 Line Chronic 101 - 165cm / Black/Blue / New",
+      "url": "https://lonepinegearx.com/products/2026-line-chronic-101-9e608",
+      "source": "Lone Pine new flat skis",
+      "current_price": 349.99,
+      "original_price": 699.99,
+      "discount_percent": 50.0,
+      "savings": 350.0,
+      "score": 98.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "165cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777926453150QX7ZW6N5YNPGRTU83QVN.jpg?v=1777927385",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 349.99,
+      "highest_price": 349.99
+    },
+    {
+      "title": "2026 Line Chronic 101 - 172cm / Black/Blue / New",
+      "url": "https://lonepinegearx.com/products/2026-line-chronic-101-9e608",
+      "source": "Lone Pine new flat skis",
+      "current_price": 349.99,
+      "original_price": 699.99,
+      "discount_percent": 50.0,
+      "savings": 350.0,
+      "score": 98.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777926453150QX7ZW6N5YNPGRTU83QVN.jpg?v=1777927385",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 349.99,
+      "highest_price": 349.99
+    },
+    {
       "title": "Rossignol Sender Free 92 Skis + Xpress 11 Bindings 2026",
       "url": "https://www.evo.com/products/262705-rossignol-sender-free-92-skis-xpress-11-bindings-2026",
       "source": "Evo skis price ascending",
@@ -1776,7 +2502,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -1800,7 +2526,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163cm",
         "170cm"
@@ -1825,8 +2551,10 @@
       "discount_percent": 50.0,
       "savings": 364.99,
       "score": 97.7,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "171cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-102-mens-skis_pr5a25246_17ea.jpg?v=1756453951",
       "is_cached": false,
@@ -1839,6 +2567,78 @@
       "highest_price": 365.0
     },
     {
+      "title": "2026 Line Pandora 99 - 156cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-line-pandora-99-b52a2",
+      "source": "Lone Pine new flat skis",
+      "current_price": 329.99,
+      "original_price": 649.99,
+      "discount_percent": 49.2,
+      "savings": 320.0,
+      "score": 97.6,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777929043434B9XLAXQIEC9BQMJ1G3TK.png?v=1778173970",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 329.99,
+      "highest_price": 329.99
+    },
+    {
+      "title": "2026 Line Pandora 99 - 163cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-line-pandora-99-b52a2",
+      "source": "Lone Pine new flat skis",
+      "current_price": 329.99,
+      "original_price": 649.99,
+      "discount_percent": 49.2,
+      "savings": 320.0,
+      "score": 97.6,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "163cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777929043434B9XLAXQIEC9BQMJ1G3TK.png?v=1778173970",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 329.99,
+      "highest_price": 329.99
+    },
+    {
+      "title": "2026 Line Pandora 99 - 170cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-line-pandora-99-b52a2",
+      "source": "Lone Pine new flat skis",
+      "current_price": 329.99,
+      "original_price": 649.99,
+      "discount_percent": 49.2,
+      "savings": 320.0,
+      "score": 97.6,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777929043434B9XLAXQIEC9BQMJ1G3TK.png?v=1778173970",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 329.99,
+      "highest_price": 329.99
+    },
+    {
       "title": "K2 Blur 79 Mens Skis with QuikClik Bindings - 156cm",
       "url": "https://www.eriksbikeshop.com/products/k2-blur-79-mens-skis-with-quikclik-bindings-2026-pr5a25767",
       "source": "ERIK'S downhill skis price ascending",
@@ -1847,8 +2647,10 @@
       "discount_percent": 50.0,
       "savings": 374.97,
       "score": 97.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/k2-blur-79-mens-skis-with-quikclik-bindings_pr5a25767_b17d.jpg?v=1770926068",
       "is_cached": false,
@@ -1869,7 +2671,7 @@
       "discount_percent": 52.4,
       "savings": 550.0,
       "score": 97.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "173",
         "179",
@@ -1895,8 +2697,10 @@
       "discount_percent": 50.0,
       "savings": 389.99,
       "score": 97.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "171cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-112-mens-skis_pr5a25247_02a2.jpg?v=1756453968",
       "is_cached": false,
@@ -1909,6 +2713,102 @@
       "highest_price": 390.0
     },
     {
+      "title": "2026 Zag Women's Harfang 96 - 156cm / Orange/Teal / New",
+      "url": "https://lonepinegearx.com/products/2026-zag-womens-harfang-96-f03b9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.95,
+      "original_price": 800.0,
+      "discount_percent": 50.0,
+      "savings": 400.05,
+      "score": 97.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774032184114KCIQTVU4QIPJ2SHY5EC0.png?v=1774551245",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.95,
+      "highest_price": 399.95
+    },
+    {
+      "title": "2026 Zag Women's Harfang 96 - 164cm / Orange/Teal / New",
+      "url": "https://lonepinegearx.com/products/2026-zag-womens-harfang-96-f03b9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.95,
+      "original_price": 800.0,
+      "discount_percent": 50.0,
+      "savings": 400.05,
+      "score": 97.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774032184114KCIQTVU4QIPJ2SHY5EC0.png?v=1774551245",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.95,
+      "highest_price": 399.95
+    },
+    {
+      "title": "2026 Elan Ripstick 100 W - 168cm / Green/Purple / New",
+      "url": "https://lonepinegearx.com/products/2026-elan-ripstick-100-w-1a1b9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.99,
+      "original_price": 799.99,
+      "discount_percent": 50.0,
+      "savings": 400.0,
+      "score": 97.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777995006066IJ7L6DNYN9MU70ZV4EH6.png?v=1777995021",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.99,
+      "highest_price": 399.99
+    },
+    {
+      "title": "2025 Armada Reliance 92 Ti - 156cm / Black/White / New",
+      "url": "https://lonepinegearx.com/products/2025-armada-reliance-92-ti-52199",
+      "source": "Lone Pine new flat skis",
+      "current_price": 399.95,
+      "original_price": 799.95,
+      "discount_percent": 50.0,
+      "savings": 400.0,
+      "score": 97.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1770152271036060Z8PAYW4DS6Y88GM8L.jpg?v=1770671114",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 399.95,
+      "highest_price": 399.95
+    },
+    {
       "title": "Salomon QST 106 Skis",
       "url": "https://www.eriksbikeshop.com/products/salomon-qst-106-skis-2026-pr5a25489",
       "source": "ERIK'S downhill skis price ascending",
@@ -1917,7 +2817,7 @@
       "discount_percent": 50.0,
       "savings": 399.97,
       "score": 97.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Almond Milk / 165cm",
         "Almond Milk / 173cm",
@@ -1943,7 +2843,7 @@
       "discount_percent": 50.0,
       "savings": 399.96,
       "score": 97.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "158",
         "165",
@@ -1963,6 +2863,78 @@
       "highest_price": 399.99
     },
     {
+      "title": "2026 Black Diamond Helio Carbon 95 - 155cm / Blue/White/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-black-diamond-helio-carbon-95-b1fcc",
+      "source": "Lone Pine new flat skis",
+      "current_price": 424.99,
+      "original_price": 850.0,
+      "discount_percent": 50.0,
+      "savings": 425.01,
+      "score": 96.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "155cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1778010508680YJZ9KHUYWGBYFLB51TUL.jpg?v=1778339357",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 424.99,
+      "highest_price": 424.99
+    },
+    {
+      "title": "2026 Black Diamond Helio Carbon 95 - 162cm / Blue/White/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-black-diamond-helio-carbon-95-b1fcc",
+      "source": "Lone Pine new flat skis",
+      "current_price": 424.99,
+      "original_price": 850.0,
+      "discount_percent": 50.0,
+      "savings": 425.01,
+      "score": 96.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1778010508680YJZ9KHUYWGBYFLB51TUL.jpg?v=1778339357",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 424.99,
+      "highest_price": 424.99
+    },
+    {
+      "title": "2026 Black Diamond Helio Carbon 95 - 169cm / Blue/White/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-black-diamond-helio-carbon-95-b1fcc",
+      "source": "Lone Pine new flat skis",
+      "current_price": 424.99,
+      "original_price": 850.0,
+      "discount_percent": 50.0,
+      "savings": 425.01,
+      "score": 96.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "169cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1778010508680YJZ9KHUYWGBYFLB51TUL.jpg?v=1778339357",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 424.99,
+      "highest_price": 424.99
+    },
+    {
       "title": "Black Diamond Impulse TI 104 Ski - Women's",
       "url": "https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens",
       "source": "The Gear Room skis price ascending",
@@ -1971,7 +2943,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165cm",
         "172cm"
@@ -1988,6 +2960,54 @@
       "highest_price": 424.95
     },
     {
+      "title": "2025 Armada Declivity X 102 - 164cm / Black/White / New",
+      "url": "https://lonepinegearx.com/products/2025-armada-declivity-x-102-1f615",
+      "source": "Lone Pine new flat skis",
+      "current_price": 424.95,
+      "original_price": 849.95,
+      "discount_percent": 50.0,
+      "savings": 425.0,
+      "score": 96.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1758304807355786GAUM7Z4J18144UBXH.jpg?v=1770671749",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 424.95,
+      "highest_price": 424.95
+    },
+    {
+      "title": "2025 Dynastar Women's M-Pro 92 - 154cm / White/Blue / New",
+      "url": "https://lonepinegearx.com/products/2025-dynastar-womens-m-pro-92-80bb7",
+      "source": "Lone Pine new flat skis",
+      "current_price": 359.95,
+      "original_price": 699.95,
+      "discount_percent": 48.6,
+      "savings": 340.0,
+      "score": 96.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "154cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/177014538367011RSRDXMMX6V33T423GN.png?v=1771893734",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 359.95,
+      "highest_price": 359.95
+    },
+    {
       "title": "Blizzard Black Pearl 88 Womens Demo Skis 2026",
       "url": "https://utahskis.com/products/blizzard-black-pearl-88-womens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -1996,7 +3016,7 @@
       "discount_percent": 50.2,
       "savings": 452.0,
       "score": 96.24,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "146",
         "152"
@@ -2013,6 +3033,30 @@
       "highest_price": 447.99
     },
     {
+      "title": "2026 Black Diamond Helio Carbon 102 - 164cm / Green/White/Purple / New",
+      "url": "https://lonepinegearx.com/products/2026-black-diamond-helio-carbon-102-dd116",
+      "source": "Lone Pine new flat skis",
+      "current_price": 449.99,
+      "original_price": 900.0,
+      "discount_percent": 50.0,
+      "savings": 450.01,
+      "score": 96.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1778010876192WF4C0FVLX3SBEFE202H1_ad64a949-e353-4899-80c1-6ec895293ac6.jpg?v=1778447013",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 449.99,
+      "highest_price": 449.99
+    },
+    {
       "title": "Volkl M7 Mantra Mens Demo Skis 2026",
       "url": "https://utahskis.com/products/volkl-m7-mantra-mens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -2021,7 +3065,7 @@
       "discount_percent": 51.4,
       "savings": 555.0,
       "score": 95.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163",
         "170",
@@ -2039,6 +3083,30 @@
       "highest_price": 524.99
     },
     {
+      "title": "2024 Zag Ardet 85 w/ Pomoca/Zag Climbing Skins - 160cm / Grey/Orange / New",
+      "url": "https://lonepinegearx.com/products/2024-zag-ardet-85-w-pomocazag-climbing-skins-b12f2",
+      "source": "Lone Pine new flat skis",
+      "current_price": 475.0,
+      "original_price": 948.95,
+      "discount_percent": 49.9,
+      "savings": 473.95,
+      "score": 95.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "160cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774214729869YXF0RWEVYTE4P66S3MIT.png?v=1778183690",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 475.0,
+      "highest_price": 475.0
+    },
+    {
       "title": "Volkl Mantra 88 Demo Skis 2026",
       "url": "https://utahskis.com/products/volkl-mantra-88-flat-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -2047,7 +3115,7 @@
       "discount_percent": 50.0,
       "savings": 500.0,
       "score": 95.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163"
       ],
@@ -2071,7 +3139,7 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163cm",
         "177cm"
@@ -2096,8 +3164,10 @@
       "discount_percent": 50.0,
       "savings": 499.99,
       "score": 95.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "163cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings_pr5a25814_9d42.jpg?v=1756540748",
       "is_cached": false,
@@ -2118,7 +3188,7 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150cm",
         "157cm"
@@ -2135,6 +3205,30 @@
       "highest_price": 239.0
     },
     {
+      "title": "2024 Atomic Backland 86 SL - 172cm / Brown/Orange / New",
+      "url": "https://lonepinegearx.com/products/2024-atomic-backland-86-sl-46582",
+      "source": "Lone Pine new flat skis",
+      "current_price": 418.0,
+      "original_price": 800.0,
+      "discount_percent": 47.8,
+      "savings": 382.0,
+      "score": 94.44,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1731698555154M7ZLJ5JZKZQVJVFNV73L.jpg?v=1751372767",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 418.0,
+      "highest_price": 418.0
+    },
+    {
       "title": "Black Crows Mirus Cor Mens Demo Skis 2026",
       "url": "https://utahskis.com/products/black-crows-mirus-cor-mens-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -2143,7 +3237,7 @@
       "discount_percent": 50.0,
       "savings": 574.01,
       "score": 93.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "160.1"
       ],
@@ -2159,6 +3253,30 @@
       "highest_price": 574.99
     },
     {
+      "title": "2026 DPS Carbon Koala 103 - 168cm / Frozen Cherry / New",
+      "url": "https://lonepinegearx.com/products/2026-dps-carbon-koala-103-a7e0d",
+      "source": "Lone Pine new flat skis",
+      "current_price": 597.99,
+      "original_price": 1195.0,
+      "discount_percent": 50.0,
+      "savings": 597.01,
+      "score": 93.04,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777934428050SE1BJ065KEDRKM8L80YB.png?v=1777962925",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 597.99,
+      "highest_price": 597.99
+    },
+    {
       "title": "Salomon QST Lux 92 Skis - Women's 2025 - Used",
       "url": "https://www.evo.com/products/238126-salomon-qst-lux-92-skis-women-s-2025-used",
       "source": "Evo skis price ascending",
@@ -2167,7 +3285,7 @@
       "discount_percent": 44.0,
       "savings": 241.98,
       "score": 92.84,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "152 cm"
       ],
@@ -2191,7 +3309,7 @@
       "discount_percent": 47.2,
       "savings": 424.96,
       "score": 92.7,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172",
         "180",
@@ -2217,7 +3335,7 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164cm",
         "178cm",
@@ -2243,7 +3361,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -2262,6 +3380,30 @@
       "highest_price": 378.0
     },
     {
+      "title": "2025 Rossignol Rallybird 94 Open - 156cm / Blue / New",
+      "url": "https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522",
+      "source": "Lone Pine new flat skis",
+      "current_price": 389.97,
+      "original_price": 700.0,
+      "discount_percent": 44.3,
+      "savings": 310.03,
+      "score": 91.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1747775575521CGDU1YSPBILM4QXR03C9.png?v=1747775603",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 389.97,
+      "highest_price": 389.97
+    },
+    {
       "title": "Armada Tantrum 100 POW",
       "url": "https://thegearroom.com/products/armada-tantrum-100-pow",
       "source": "The Gear Room skis price ascending",
@@ -2270,7 +3412,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -2295,8 +3437,10 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy3Capusle-7.png?v=1771284957",
       "is_cached": false,
@@ -2317,7 +3461,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -2335,6 +3479,54 @@
       "highest_price": 433.0
     },
     {
+      "title": "2026 Atomic Bent 90 - 157cm / Red/Grey / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-90-04d29",
+      "source": "Lone Pine new flat skis",
+      "current_price": 384.99,
+      "original_price": 675.0,
+      "discount_percent": 43.0,
+      "savings": 290.01,
+      "score": 90.3,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "157cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1772487462821B1474SRSLF2ATCD5KWKJ.png?v=1777653965",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 384.99,
+      "highest_price": 384.99
+    },
+    {
+      "title": "2026 Atomic Bent 90 - 166cm / Red/Grey / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-90-f3c76",
+      "source": "Lone Pine new flat skis",
+      "current_price": 384.99,
+      "original_price": 675.0,
+      "discount_percent": 43.0,
+      "savings": 290.01,
+      "score": 90.3,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "166cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1765992669735GYYE1SAMF8I7MFWAZ8B3.png?v=1777653990",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 384.99,
+      "highest_price": 384.99
+    },
+    {
       "title": "Fischer RC Fire Mens Skis with RS9 GW Bindings - 155cm",
       "url": "https://www.eriksbikeshop.com/products/fischer-rc-fire-mens-skis-with-rs9-gw-bindings-2026-pr5a25876",
       "source": "ERIK'S downhill skis price ascending",
@@ -2343,8 +3535,10 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "155cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-fire-mens-skis-with-rs9-gw-bindings_pr5a25876_05c2.jpg?v=1756638877",
       "is_cached": false,
@@ -2365,7 +3559,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -2390,7 +3584,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -2416,7 +3610,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -2442,7 +3636,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -2459,6 +3653,30 @@
       "highest_price": 467.0
     },
     {
+      "title": "2026 Head Kore 99 Ti - 163cm / White / New",
+      "url": "https://lonepinegearx.com/products/2026-head-kore-99-ti-3590a",
+      "source": "Lone Pine new flat skis",
+      "current_price": 449.99,
+      "original_price": 799.99,
+      "discount_percent": 43.8,
+      "savings": 350.0,
+      "score": 89.8,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "163cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1761241079933K6FREUWRGVYAFNRP7BK7.jpg?v=1778013266",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 449.99,
+      "highest_price": 449.99
+    },
+    {
       "title": "Faction Dancer 3, Turquoise",
       "url": "https://thegearroom.com/products/faction-dancer-3-turquoise",
       "source": "The Gear Room skis price ascending",
@@ -2467,7 +3685,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -2492,8 +3710,10 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "183cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionDancer3Orange-1.png?v=1771289055",
       "is_cached": false,
@@ -2514,7 +3734,7 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "160 cm"
       ],
@@ -2538,8 +3758,10 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "185cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FactionProdigy4-6.png?v=1771285955",
       "is_cached": false,
@@ -2560,8 +3782,10 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/ArmadaStranger100.png?v=1773351941",
       "is_cached": false,
@@ -2582,7 +3806,7 @@
       "discount_percent": 41.6,
       "savings": 270.0,
       "score": 89.02,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -2598,6 +3822,78 @@
       "highest_price": 379.0
     },
     {
+      "title": "2026 Atomic Bent 100 - 158cm / Multicolor / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-100-aabc1",
+      "source": "Lone Pine new flat skis",
+      "current_price": 454.99,
+      "original_price": 800.0,
+      "discount_percent": 43.1,
+      "savings": 345.01,
+      "score": 89.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "158cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755619453871SGEUS5PX1GFZV959MKXU_997987be-a3f1-4c14-9700-280182a66c3d.png?v=1777653942",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 454.99,
+      "highest_price": 454.99
+    },
+    {
+      "title": "2026 Atomic Bent 100 - 165cm / Multicolor / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-100-aabc1",
+      "source": "Lone Pine new flat skis",
+      "current_price": 454.99,
+      "original_price": 800.0,
+      "discount_percent": 43.1,
+      "savings": 345.01,
+      "score": 89.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "165cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755619453871SGEUS5PX1GFZV959MKXU_997987be-a3f1-4c14-9700-280182a66c3d.png?v=1777653942",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 454.99,
+      "highest_price": 454.99
+    },
+    {
+      "title": "2026 Atomic Bent 100 - 172cm / Multicolor / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-100-aabc1",
+      "source": "Lone Pine new flat skis",
+      "current_price": 454.99,
+      "original_price": 800.0,
+      "discount_percent": 43.1,
+      "savings": 345.01,
+      "score": 89.0,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755619453871SGEUS5PX1GFZV959MKXU_997987be-a3f1-4c14-9700-280182a66c3d.png?v=1777653942",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 454.99,
+      "highest_price": 454.99
+    },
+    {
       "title": "Fischer RC Lite Womens Skis with RS9 GW Bindings - 160cm",
       "url": "https://www.eriksbikeshop.com/products/fischer-rc-lite-womens-skis-with-rs9-gw-bindings-2026-pr5a25879",
       "source": "ERIK'S downhill skis price ascending",
@@ -2606,8 +3902,10 @@
       "discount_percent": 40.0,
       "savings": 200.0,
       "score": 89.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "160cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-lite-womens-skis-with-rs9-gw-bindings_pr5a25879_e7d7.jpg?v=1756454517",
       "is_cached": false,
@@ -2628,7 +3926,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "Sand / 144cm",
         "Sand / 153cm",
@@ -2654,7 +3952,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -2682,7 +3980,7 @@
       "discount_percent": 40.1,
       "savings": 220.0,
       "score": 88.52,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "171 cm"
       ],
@@ -2706,8 +4004,10 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "186cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-86-skis-with-m10-gw-bindings_pr5a25068_6c65.jpg?v=1758008928",
       "is_cached": false,
@@ -2720,6 +4020,78 @@
       "highest_price": 329.97
     },
     {
+      "title": "2026 DPS Carbon Kaizen 112 - 168cm / Yellow / New",
+      "url": "https://lonepinegearx.com/products/2026-dps-carbon-kaizen-112-7c13b",
+      "source": "Lone Pine new flat skis",
+      "current_price": 847.99,
+      "original_price": 1695.99,
+      "discount_percent": 50.0,
+      "savings": 848.0,
+      "score": 88.04,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777934012224DK8FAYKEN31814AB11D3.png?v=1777934025",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 847.99,
+      "highest_price": 847.99
+    },
+    {
+      "title": "2026 DPS Carbon Kaizen 105 - 155cm / Blue / New",
+      "url": "https://lonepinegearx.com/products/2026-dps-carbon-kaizen-105-f2446",
+      "source": "Lone Pine new flat skis",
+      "current_price": 847.99,
+      "original_price": 1695.99,
+      "discount_percent": 50.0,
+      "savings": 848.0,
+      "score": 88.04,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "155cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777933657923TUEDBWCNR020XM0UUT0G.png?v=1777933676",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 847.99,
+      "highest_price": 847.99
+    },
+    {
+      "title": "2026 DPS Carbon Kaizen 105 - 163cm / Blue / New",
+      "url": "https://lonepinegearx.com/products/2026-dps-carbon-kaizen-105-f2446",
+      "source": "Lone Pine new flat skis",
+      "current_price": 847.99,
+      "original_price": 1695.99,
+      "discount_percent": 50.0,
+      "savings": 848.0,
+      "score": 88.04,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "163cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1777933657923TUEDBWCNR020XM0UUT0G.png?v=1777933676",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 847.99,
+      "highest_price": 847.99
+    },
+    {
       "title": "Salomon Stance 80 Skis with M11 Bindings - Kelp / 161cm",
       "url": "https://www.eriksbikeshop.com/products/salomon-stance-80-skis-with-m11-bindings-2026-pr5a25484",
       "source": "ERIK'S downhill skis price ascending",
@@ -2728,8 +4100,10 @@
       "discount_percent": 40.0,
       "savings": 231.98,
       "score": 88.04,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "161cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-80-skis-with-m11-bindings_pr5a25484_abbc.jpg?v=1763461232",
       "is_cached": false,
@@ -2750,7 +4124,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -2775,7 +4149,7 @@
       "discount_percent": 40.1,
       "savings": 260.0,
       "score": 87.32,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -2799,8 +4173,10 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "185cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-pro-82-skis_pr5a25491_1d53.jpg?v=1760690031",
       "is_cached": false,
@@ -2821,7 +4197,7 @@
       "discount_percent": 40.0,
       "savings": 267.98,
       "score": 86.96,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -2839,6 +4215,30 @@
       "highest_price": 401.97
     },
     {
+      "title": "2025 Rossignol Escaper 80 - 169cm / Green/Black / New",
+      "url": "https://lonepinegearx.com/products/2025-rossignol-escaper-80-5ff0c",
+      "source": "Lone Pine new flat skis",
+      "current_price": 299.0,
+      "original_price": 479.95,
+      "discount_percent": 37.7,
+      "savings": 180.95,
+      "score": 86.72,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "169cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1730487443819KQ3FL24DVUBNXNFH85EY.png?v=1771779967",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 299.0,
+      "highest_price": 299.0
+    },
+    {
       "title": "Atomic Maverick 88 CTI Skis 2026 - Used",
       "url": "https://www.evo.com/products/268012-atomic-maverick-88-cti-skis-2026-used",
       "source": "Evo skis price ascending",
@@ -2847,7 +4247,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "165 cm"
       ],
@@ -2863,6 +4263,102 @@
       "highest_price": 419.97
     },
     {
+      "title": "2026 Atomic Maverick 105 CTI - 170cm / Black/Gunmetal / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maverick-105-cti-94c5e",
+      "source": "Lone Pine new flat skis",
+      "current_price": 559.99,
+      "original_price": 975.0,
+      "discount_percent": 42.6,
+      "savings": 415.01,
+      "score": 86.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17555560771330SW62RBMDLSC80LD7Q9X.png?v=1777653355",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 559.99,
+      "highest_price": 559.99
+    },
+    {
+      "title": "2026 Atomic Maven 103 CTI - 156cm / Goldenrod / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maven-103-cti-2e091",
+      "source": "Lone Pine new flat skis",
+      "current_price": 559.99,
+      "original_price": 975.0,
+      "discount_percent": 42.6,
+      "savings": 415.01,
+      "score": 86.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755557223023CLPH2MSPX25EQ3FAQJKM.png?v=1777653577",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 559.99,
+      "highest_price": 559.99
+    },
+    {
+      "title": "2026 Atomic Maven 103 CTI - 162cm / Goldenrod / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maven-103-cti-2e091",
+      "source": "Lone Pine new flat skis",
+      "current_price": 559.99,
+      "original_price": 975.0,
+      "discount_percent": 42.6,
+      "savings": 415.01,
+      "score": 86.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755557223023CLPH2MSPX25EQ3FAQJKM.png?v=1777653577",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 559.99,
+      "highest_price": 559.99
+    },
+    {
+      "title": "2026 Atomic Maven 103 CTI - 170cm / Goldenrod / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maven-103-cti-2e091",
+      "source": "Lone Pine new flat skis",
+      "current_price": 559.99,
+      "original_price": 975.0,
+      "discount_percent": 42.6,
+      "savings": 415.01,
+      "score": 86.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755557223023CLPH2MSPX25EQ3FAQJKM.png?v=1777653577",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 559.99,
+      "highest_price": 559.99
+    },
+    {
       "title": "Season Primer Skis - Blem 2026",
       "url": "https://www.evo.com/products/261830-season-primer-skis-blem-2026-used",
       "source": "Evo skis price ascending",
@@ -2871,7 +4367,7 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1153661.jpg?v=1767735379",
@@ -2885,6 +4381,102 @@
       "highest_price": 283.49
     },
     {
+      "title": "2026 Atomic Bent 110 - 164cm / Multicolor / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-110-e1f68",
+      "source": "Lone Pine new flat skis",
+      "current_price": 524.99,
+      "original_price": 900.0,
+      "discount_percent": 41.7,
+      "savings": 375.01,
+      "score": 86.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1765992327102RCHJ72F74WGHMBP6QPLK.png?v=1777653876",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 524.99,
+      "highest_price": 524.99
+    },
+    {
+      "title": "2026 Atomic Bent 110 - 172cm / Multicolor / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-bent-110-e1f68",
+      "source": "Lone Pine new flat skis",
+      "current_price": 524.99,
+      "original_price": 900.0,
+      "discount_percent": 41.7,
+      "savings": 375.01,
+      "score": 86.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1765992327102RCHJ72F74WGHMBP6QPLK.png?v=1777653876",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 524.99,
+      "highest_price": 524.99
+    },
+    {
+      "title": "2026 Atomic Maverick 96 CTI - 165cm / Moss/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maverick-96-cti-76801",
+      "source": "Lone Pine new flat skis",
+      "current_price": 524.99,
+      "original_price": 900.0,
+      "discount_percent": 41.7,
+      "savings": 375.01,
+      "score": 86.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "165cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17556182286616RWTJ2VEPEED6QJMZMUM.png?v=1777653398",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 524.99,
+      "highest_price": 524.99
+    },
+    {
+      "title": "2026 Atomic Maverick 96 CTI - 172cm / Moss/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-atomic-maverick-96-cti-76801",
+      "source": "Lone Pine new flat skis",
+      "current_price": 524.99,
+      "original_price": 900.0,
+      "discount_percent": 41.7,
+      "savings": 375.01,
+      "score": 86.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17556182286616RWTJ2VEPEED6QJMZMUM.png?v=1777653398",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 524.99,
+      "highest_price": 524.99
+    },
+    {
       "title": "Head Kore 94 Ti Skis 2026",
       "url": "https://www.evo.com/products/269332-head-kore-94-ti-skis-2026",
       "source": "Evo skis price ascending",
@@ -2893,7 +4485,7 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -2917,7 +4509,7 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -2941,7 +4533,7 @@
       "discount_percent": 40.0,
       "savings": 300.0,
       "score": 86.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -2957,6 +4549,150 @@
       "highest_price": 449.99
     },
     {
+      "title": "2026 Zag Harfang 96 - 170cm / Blue/Yellow / New",
+      "url": "https://lonepinegearx.com/products/2026-zag-harfang-96-23572",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.95,
+      "original_price": 800.0,
+      "discount_percent": 40.0,
+      "savings": 320.05,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1774031323763RCRKYN1PEE1E771GFDXS.jpg?v=1774393876",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.95,
+      "highest_price": 479.95
+    },
+    {
+      "title": "2026 Head Women's Kore 104 Ti - 156cm / White / New",
+      "url": "https://lonepinegearx.com/products/2026-head-womens-kore-104-ti-6c7ea",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.99,
+      "original_price": 799.99,
+      "discount_percent": 40.0,
+      "savings": 320.0,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17779170310184WRR4L4K27UU50EPT32W.png?v=1778013079",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.99,
+      "highest_price": 479.99
+    },
+    {
+      "title": "2026 Head Women's Kore 104 Ti - 163cm / White / New",
+      "url": "https://lonepinegearx.com/products/2026-head-womens-kore-104-ti-6c7ea",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.99,
+      "original_price": 799.99,
+      "discount_percent": 40.0,
+      "savings": 320.0,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "163cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17779170310184WRR4L4K27UU50EPT32W.png?v=1778013079",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.99,
+      "highest_price": 479.99
+    },
+    {
+      "title": "2026 Head Women's Kore 104 Ti - 170cm / White / New",
+      "url": "https://lonepinegearx.com/products/2026-head-womens-kore-104-ti-6c7ea",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.99,
+      "original_price": 799.99,
+      "discount_percent": 40.0,
+      "savings": 320.0,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17779170310184WRR4L4K27UU50EPT32W.png?v=1778013079",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.99,
+      "highest_price": 479.99
+    },
+    {
+      "title": "2026 Head Kore 99 Ti - 156cm / White / New",
+      "url": "https://lonepinegearx.com/products/2026-head-kore-99-ti-3590a",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.99,
+      "original_price": 799.99,
+      "discount_percent": 40.0,
+      "savings": 320.0,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1761241079933K6FREUWRGVYAFNRP7BK7.jpg?v=1778013266",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.99,
+      "highest_price": 479.99
+    },
+    {
+      "title": "2026 Head Kore 100 TI - 170cm / Black/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-head-kore-100-ti-344fd",
+      "source": "Lone Pine new flat skis",
+      "current_price": 479.99,
+      "original_price": 799.99,
+      "discount_percent": 40.0,
+      "savings": 320.0,
+      "score": 85.4,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1756151715954IZ33PE2MRHM9AV6JDWC9.jpg?v=1778013257",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 479.99,
+      "highest_price": 479.99
+    },
+    {
       "title": "Head Oblivion 102 Skis 2026",
       "url": "https://www.evo.com/products/269336-head-oblivion-102-skis-2026",
       "source": "Evo skis price ascending",
@@ -2965,7 +4701,7 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "173 cm"
       ],
@@ -2989,7 +4725,7 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -3013,7 +4749,7 @@
       "discount_percent": 35.0,
       "savings": 139.98,
       "score": 84.8,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -3029,6 +4765,150 @@
       "highest_price": 259.97
     },
     {
+      "title": "2026 Faction Prodigy 2 Capsule - 165cm / White/Red / New",
+      "url": "https://lonepinegearx.com/products/2026-faction-prodigy-2-capsule-fe575",
+      "source": "Lone Pine new flat skis",
+      "current_price": 474.99,
+      "original_price": 779.0,
+      "discount_percent": 39.0,
+      "savings": 304.01,
+      "score": 84.5,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "165cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1778775814727HY2VNSM7BMS4GIAWR2XX.png?v=1778777899",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 474.99,
+      "highest_price": 474.99
+    },
+    {
+      "title": "2026 Rossignol Rallybird Soul 102 Open - 156cm / Blue/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-rallybird-soul-102-open-6f876",
+      "source": "Lone Pine new flat skis",
+      "current_price": 487.47,
+      "original_price": 799.95,
+      "discount_percent": 39.1,
+      "savings": 312.48,
+      "score": 84.35,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755889086818R7SI6IEJC6PUG9MGWYU4.png?v=1777754321",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 487.47,
+      "highest_price": 487.47
+    },
+    {
+      "title": "2026 Rossignol Rallybird Soul 102 Open - 164cm / Blue/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-rallybird-soul-102-open-6f876",
+      "source": "Lone Pine new flat skis",
+      "current_price": 487.47,
+      "original_price": 799.95,
+      "discount_percent": 39.1,
+      "savings": 312.48,
+      "score": 84.35,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755889086818R7SI6IEJC6PUG9MGWYU4.png?v=1777754321",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 487.47,
+      "highest_price": 487.47
+    },
+    {
+      "title": "2026 Rossignol Rallybird Soul 102 Open - 172cm / Blue/Pink / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-rallybird-soul-102-open-6f876",
+      "source": "Lone Pine new flat skis",
+      "current_price": 487.47,
+      "original_price": 799.95,
+      "discount_percent": 39.1,
+      "savings": 312.48,
+      "score": 84.35,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755889086818R7SI6IEJC6PUG9MGWYU4.png?v=1777754321",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 487.47,
+      "highest_price": 487.47
+    },
+    {
+      "title": "2026 Rossignol Sender Soul 102 Open - 164cm / Green/Yellow/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-sender-soul-102-open-a0218",
+      "source": "Lone Pine new flat skis",
+      "current_price": 487.47,
+      "original_price": 799.95,
+      "discount_percent": 39.1,
+      "savings": 312.48,
+      "score": 84.35,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "164cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17558940376608JZ07V972U5B5RXEXT0T.png?v=1777754250",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 487.47,
+      "highest_price": 487.47
+    },
+    {
+      "title": "2026 Rossignol Sender Soul 102 Open - 172cm / Green/Yellow/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-sender-soul-102-open-a0218",
+      "source": "Lone Pine new flat skis",
+      "current_price": 487.47,
+      "original_price": 799.95,
+      "discount_percent": 39.1,
+      "savings": 312.48,
+      "score": 84.35,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "172cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/17558940376608JZ07V972U5B5RXEXT0T.png?v=1777754250",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 487.47,
+      "highest_price": 487.47
+    },
+    {
       "title": "Rossignol Sender Soul Pro Skis + Xpress 10 Bindings 2026",
       "url": "https://www.evo.com/products/255543-rossignol-sender-soul-pro-skis-xpress-10-bindings-2026",
       "source": "Evo skis price ascending",
@@ -3037,7 +4917,7 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "160 cm"
       ],
@@ -3061,7 +4941,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -3085,7 +4965,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3109,7 +4989,7 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -3125,6 +5005,54 @@
       "highest_price": 389.97
     },
     {
+      "title": "2026 Rossignol Rallybird Soul 92 Open - 156cm / Purple/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-rallybird-soul-92-open-ec9d9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 389.97,
+      "original_price": 599.95,
+      "discount_percent": 35.0,
+      "savings": 209.98,
+      "score": 82.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "156cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755894850204NYKMVSYQ7HVB35NJ6X0R.png?v=1777754162",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 389.97,
+      "highest_price": 389.97
+    },
+    {
+      "title": "2026 Rossignol Rallybird Soul 92 Open - 166cm / Purple/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-rallybird-soul-92-open-ec9d9",
+      "source": "Lone Pine new flat skis",
+      "current_price": 389.97,
+      "original_price": 599.95,
+      "discount_percent": 35.0,
+      "savings": 209.98,
+      "score": 82.2,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "166cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755894850204NYKMVSYQ7HVB35NJ6X0R.png?v=1777754162",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 389.97,
+      "highest_price": 389.97
+    },
+    {
       "title": "Rossignol Sender Free 100 Skis 2026",
       "url": "https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026",
       "source": "Evo skis price ascending",
@@ -3133,7 +5061,7 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -3149,6 +5077,30 @@
       "highest_price": 454.97
     },
     {
+      "title": "2026 Rossignol Sender Free 100 Open - 170cm / Pink/Purple/Black / New",
+      "url": "https://lonepinegearx.com/products/2026-rossignol-sender-free-100-open-1d435",
+      "source": "Lone Pine new flat skis",
+      "current_price": 454.97,
+      "original_price": 699.95,
+      "discount_percent": 35.0,
+      "savings": 244.98,
+      "score": 80.9,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0286/7439/2148/files/1755889556310NK404FWKD0C4239QJ3K4.png?v=1775594874",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-05-22T11:34:46-06:00",
+      "lowest_price": 454.97,
+      "highest_price": 454.97
+    },
+    {
       "title": "Armada ARV 88 Skis 2026",
       "url": "https://www.evo.com/products/267760-armada-arv-88-skis-2026",
       "source": "Evo skis price ascending",
@@ -3157,7 +5109,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "161 cm"
       ],
@@ -3181,7 +5133,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -3205,7 +5157,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -3229,7 +5181,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "161 cm"
       ],
@@ -3253,7 +5205,7 @@
       "discount_percent": 30.0,
       "savings": 149.99,
       "score": 78.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3277,7 +5229,7 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "155 cm"
       ],
@@ -3301,7 +5253,7 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159244.jpg?v=1767735605",
@@ -3323,7 +5275,7 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3347,7 +5299,7 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -3371,7 +5323,7 @@
       "discount_percent": 30.0,
       "savings": 164.99,
       "score": 77.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3395,7 +5347,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -3419,7 +5371,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3443,7 +5395,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -3467,7 +5419,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "166 cm"
       ],
@@ -3491,7 +5443,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -3515,7 +5467,7 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -3539,7 +5491,7 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3563,7 +5515,7 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3587,7 +5539,7 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -3611,7 +5563,7 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -3635,7 +5587,7 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "158 cm"
       ],
@@ -3659,7 +5611,7 @@
       "discount_percent": 30.0,
       "savings": 189.0,
       "score": 76.18,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -3683,7 +5635,7 @@
       "discount_percent": 30.0,
       "savings": 194.7,
       "score": 75.91,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -3707,7 +5659,7 @@
       "discount_percent": 30.0,
       "savings": 195.02,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -3731,7 +5683,7 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "158 cm"
       ],
@@ -3755,7 +5707,7 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -3779,7 +5731,7 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -3803,7 +5755,7 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "160 cm"
       ],
@@ -3827,7 +5779,7 @@
       "discount_percent": 30.0,
       "savings": 195.0,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -3851,7 +5803,7 @@
       "discount_percent": 30.0,
       "savings": 194.99,
       "score": 75.9,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "177 cm"
       ],
@@ -3875,7 +5827,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3899,7 +5851,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3923,7 +5875,7 @@
       "discount_percent": 25.0,
       "savings": 206.24,
       "score": 67.63,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -3945,7 +5897,7 @@
       "discount_percent": 25.0,
       "savings": 212.49,
       "score": 67.25,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -3967,7 +5919,7 @@
       "discount_percent": 25.0,
       "savings": 224.99,
       "score": 66.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -3989,7 +5941,7 @@
       "discount_percent": 25.0,
       "savings": 237.49,
       "score": 65.75,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -4011,7 +5963,7 @@
       "discount_percent": 20.0,
       "savings": 109.99,
       "score": 58.7,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -4035,7 +5987,7 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -4059,7 +6011,7 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -4083,7 +6035,7 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -4107,7 +6059,7 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -4131,8 +6083,10 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "170cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/K2Thrilavut85.png?v=1765132387",
       "is_cached": false,
@@ -4153,7 +6107,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.83,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -4175,7 +6129,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -4199,8 +6153,10 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "168cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Scott_Pure_Free_90_Skis_Tyrolia_AM_12_GW_Bindings-1.png?v=1768326108",
       "is_cached": false,
@@ -4221,8 +6177,10 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "188cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/BlizzardHustle10.png?v=1765132387",
       "is_cached": false,
@@ -4243,7 +6201,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -4267,7 +6225,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -4291,7 +6249,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -4315,7 +6273,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.42,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -4339,7 +6297,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": [
         "155 cm"
       ],
@@ -4363,8 +6321,10 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "169cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/FischerTransalp86CTIPro.png?v=1765132387",
       "is_cached": false,
@@ -4385,8 +6345,10 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-05-22T17:26:11+00:00",
-      "sizes": null,
+      "found_at": "2026-05-22T17:35:36+00:00",
+      "sizes": [
+        "177cm"
+      ],
       "stock_status": null,
       "image_url": "https://cdn.shopify.com/s/files/1/0747/9096/1405/files/Dynastar_M-Tour_90_Skis-1.png?v=1769557081",
       "is_cached": false,
@@ -4407,7 +6369,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -4429,7 +6391,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -4451,7 +6413,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -4473,7 +6435,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-05-22T17:26:11+00:00",
+      "found_at": "2026-05-22T17:35:36+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,

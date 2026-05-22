@@ -387,6 +387,10 @@ def shopify_products_json_candidates(
     source_name: str,
     found_at: str,
     ignore_sold_out: bool = True,
+    required_tags: list[str] | None = None,
+    required_variant_terms: list[str] | None = None,
+    size_min_cm: int | None = None,
+    size_max_cm: int | None = None,
 ) -> list[Deal]:
     try:
         payload = json.loads(payload_text)
@@ -394,10 +398,15 @@ def shopify_products_json_candidates(
         return []
 
     deals: list[Deal] = []
+    required_tag_set = {tag.lower() for tag in required_tags or []}
+    required_terms = [term.lower() for term in required_variant_terms or []]
     for product in payload.get("products", []):
         title = clean_text(str(product.get("title", "")))
         handle = product.get("handle")
         if not title or not handle:
+            continue
+        product_tags = {str(tag).lower() for tag in product.get("tags", [])}
+        if required_tag_set and not required_tag_set.issubset(product_tags):
             continue
 
         product_url = urljoin(base_url, f"/products/{handle}")
@@ -412,6 +421,12 @@ def shopify_products_json_candidates(
 
             original = money(variant.get("compare_at_price"))
             variant_title = normalize_shopify_variant_title(variant.get("title"))
+            variant_text = variant_title.lower()
+            if required_terms and not all(term in variant_text for term in required_terms):
+                continue
+            if not shopify_variant_size_allowed(variant_title, size_min_cm, size_max_cm):
+                continue
+            variant_size = shopify_variant_size_label(variant_title)
             deal_title = title if variant_title in ("", "Default Title") else f"{title} - {variant_title}"
             deals.append(
                 make_deal(
@@ -421,11 +436,31 @@ def shopify_products_json_candidates(
                     current,
                     original,
                     found_at,
+                    sizes=[variant_size] if variant_size else None,
                     image_url=image_url(variant.get("featured_image"), base_url) or product_image,
                 )
             )
 
     return deals
+
+
+def shopify_variant_size_label(variant_title: str) -> str | None:
+    match = re.search(r"\b(\d{2,3})\s*cm\b", variant_title, re.IGNORECASE)
+    return f"{int(match.group(1))}cm" if match else None
+
+
+def shopify_variant_size_allowed(variant_title: str, size_min_cm: int | None, size_max_cm: int | None) -> bool:
+    if size_min_cm is None and size_max_cm is None:
+        return True
+    label = shopify_variant_size_label(variant_title)
+    if not label:
+        return False
+    size = int(label.removesuffix("cm"))
+    if size_min_cm is not None and size < size_min_cm:
+        return False
+    if size_max_cm is not None and size > size_max_cm:
+        return False
+    return True
 
 
 def searchspring_candidates(
@@ -1211,6 +1246,10 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                             source_name,
                             found_at,
                             bool(source.get("ignore_sold_out", True)),
+                            list(source.get("shopify_required_tags", [])),
+                            list(source.get("shopify_required_variant_terms", [])),
+                            source.get("size_min_cm"),
+                            source.get("size_max_cm"),
                         )
                     )
                 if candidates:
@@ -1250,6 +1289,10 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                         source_name,
                         found_at,
                         bool(source.get("ignore_sold_out", True)),
+                        list(source.get("shopify_required_tags", [])),
+                        list(source.get("shopify_required_variant_terms", [])),
+                        source.get("size_min_cm"),
+                        source.get("size_max_cm"),
                     )
                 )
             candidates.extend(link_candidates(markup, url, source_name, found_at))
@@ -1274,6 +1317,10 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                                 source_name,
                                 found_at,
                                 bool(source.get("ignore_sold_out", True)),
+                                list(source.get("shopify_required_tags", [])),
+                                list(source.get("shopify_required_variant_terms", [])),
+                                source.get("size_min_cm"),
+                                source.get("size_max_cm"),
                             )
                         )
                     if candidates:
