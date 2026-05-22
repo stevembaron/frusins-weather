@@ -2254,12 +2254,12 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             <span>{int(preferences.get("preference_match_count") or 0)} matches</span>
           </div>
           <div class="preference-grid">
-            <div><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></div>
-            <div><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>my size</span></div>
-            <div><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></div>
-            <div><strong>{sweet_spot_count}</strong><span>sweet spot</span></div>
-            <div><strong>{lowest_seen_count}</strong><span>lowest seen</span></div>
-            <div><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></div>
+            <button type="button" data-radar-filter="watchOnly" aria-pressed="false"><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></button>
+            <button type="button" data-radar-filter="mySizeOnly" aria-pressed="false"><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>my size</span></button>
+            <button type="button" data-radar-filter="familySizeOnly" aria-pressed="false"><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></button>
+            <button type="button" data-radar-filter="sweetOnly" aria-pressed="false"><strong>{sweet_spot_count}</strong><span>sweet spot</span></button>
+            <button type="button" data-radar-filter="lowestSeenOnly" aria-pressed="false"><strong>{lowest_seen_count}</strong><span>lowest seen</span></button>
+            <button type="button" data-radar-filter="showIgnored" aria-pressed="false"><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></button>
           </div>
           <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
         </section>
@@ -2411,7 +2411,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .health-panel {{ margin: 0 0 18px; }}
       .preference-panel {{ margin: 0 0 18px; }}
       .preference-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }}
-      .preference-grid div {{ padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; }}
+      .preference-grid button {{ width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; text-align: left; cursor: pointer; color: var(--ink); }}
+      .preference-grid button:hover {{ border-color: rgba(13,124,102,.45); transform: translateY(-1px); }}
+      .preference-grid button[aria-pressed="true"] {{ border-color: rgba(13,124,102,.55); background: var(--accent-soft); box-shadow: inset 0 0 0 1px rgba(13,124,102,.16); }}
       .preference-grid strong {{ display: block; font-size: 1.2rem; }}
       .preference-grid span, .preference-panel p {{ color: var(--muted); font-size: .84rem; }}
       .health-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
@@ -2522,6 +2524,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
+      const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
 
       function numericValue(deal, key) {{
         return Number.parseFloat(deal.dataset[key] || '0') || 0;
@@ -2628,6 +2631,29 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       function updateView() {{
         sortDeals();
         applyFilters();
+        syncRadarButtons();
+      }}
+
+      function radarTarget(name) {{
+        if (name === 'watchOnly') return watchOnly;
+        if (name === 'mySizeOnly') return mySizeOnly;
+        if (name === 'familySizeOnly') return familySizeOnly;
+        if (name === 'sweetOnly') return sweetOnly;
+        if (name === 'lowestSeenOnly') return lowestSeenOnly;
+        if (name === 'showIgnored') return hideIgnored;
+        return null;
+      }}
+
+      function syncRadarButtons() {{
+        for (const button of radarButtons) {{
+          const name = button.dataset.radarFilter;
+          if (name === 'showIgnored') {{
+            button.setAttribute('aria-pressed', String(Boolean(hideIgnored && !hideIgnored.checked)));
+            continue;
+          }}
+          const target = radarTarget(name);
+          button.setAttribute('aria-pressed', String(Boolean(target?.checked)));
+        }}
       }}
 
       for (const box of checkboxes) {{
@@ -2640,6 +2666,19 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         button.addEventListener('click', () => {{
           const checked = button.dataset.filterAction === 'all';
           for (const box of checkboxes) box.checked = checked;
+          updateView();
+        }});
+      }}
+      for (const button of radarButtons) {{
+        button.addEventListener('click', () => {{
+          const name = button.dataset.radarFilter;
+          if (name === 'showIgnored') {{
+            if (hideIgnored) hideIgnored.checked = !hideIgnored.checked;
+            updateView();
+            return;
+          }}
+          const target = radarTarget(name);
+          if (target) target.checked = !target.checked;
           updateView();
         }});
       }}

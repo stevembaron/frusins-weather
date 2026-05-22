@@ -81,7 +81,9 @@
       .health-panel { margin: 0 0 18px; }
       .preference-panel { margin: 0 0 18px; }
       .preference-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
-      .preference-grid div { padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+      .preference-grid button { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; text-align: left; cursor: pointer; color: var(--ink); }
+      .preference-grid button:hover { border-color: rgba(13,124,102,.45); transform: translateY(-1px); }
+      .preference-grid button[aria-pressed="true"] { border-color: rgba(13,124,102,.55); background: var(--accent-soft); box-shadow: inset 0 0 0 1px rgba(13,124,102,.16); }
       .preference-grid strong { display: block; font-size: 1.2rem; }
       .preference-grid span, .preference-panel p { color: var(--muted); font-size: .84rem; }
       .health-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
@@ -146,7 +148,7 @@
       <header>
         <div>
           <h1>Gear Deals</h1>
-          <p class="meta">Generated 2026-05-22T15:03:51-06:00</p>
+          <p class="meta">Generated 2026-05-22T15:19:01-06:00</p>
         </div>
         <div class="stats" aria-label="Report summary">
           <div class="stat"><strong>273</strong><span>Deals</span></div>
@@ -277,12 +279,12 @@
             <span>168 matches</span>
           </div>
           <div class="preference-grid">
-            <div><strong>38</strong><span>watchlist</span></div>
-            <div><strong>95</strong><span>my size</span></div>
-            <div><strong>89</strong><span>family size</span></div>
-            <div><strong>111</strong><span>sweet spot</span></div>
-            <div><strong>2</strong><span>lowest seen</span></div>
-            <div><strong>11</strong><span>hidden junk</span></div>
+            <button type="button" data-radar-filter="watchOnly" aria-pressed="false"><strong>39</strong><span>watchlist</span></button>
+            <button type="button" data-radar-filter="mySizeOnly" aria-pressed="false"><strong>94</strong><span>my size</span></button>
+            <button type="button" data-radar-filter="familySizeOnly" aria-pressed="false"><strong>89</strong><span>family size</span></button>
+            <button type="button" data-radar-filter="sweetOnly" aria-pressed="false"><strong>110</strong><span>sweet spot</span></button>
+            <button type="button" data-radar-filter="lowestSeenOnly" aria-pressed="false"><strong>2</strong><span>lowest seen</span></button>
+            <button type="button" data-radar-filter="showIgnored" aria-pressed="false"><strong>10</strong><span>hidden junk</span></button>
           </div>
           <p>Terms: dynastar, ripstick, black pearl, santa ana, rallybird, stio.</p>
         </section>
@@ -377,11 +379,6 @@
           <span>$150.00 &middot; Lone Pine new flat skis</span>
         </a>
 
-        <a class="mini-card" href="https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023" target="_blank" rel="noreferrer">
-          <strong>Nordica Unleashed 98 Skis - Women&#x27;s 2023</strong>
-          <span>$219.99 &middot; Evo skis price ascending</span>
-        </a>
-
         <a class="mini-card" href="https://lonepinegearx.com/products/2026-line-honey-badger-15f5a" target="_blank" rel="noreferrer">
           <strong>2026 Line Honey Badger - 172cm / Black/White / New</strong>
           <span>$229.99 &middot; Lone Pine new flat skis</span>
@@ -404,6 +401,11 @@
 
         <a class="mini-card" href="https://lonepinegearx.com/products/2025-zag-harfang-86-fa09f" target="_blank" rel="noreferrer">
           <strong>2025 Zag Harfang 86 - 170cm / Orange/Blue / New</strong>
+          <span>$289.95 &middot; Lone Pine new flat skis</span>
+        </a>
+
+        <a class="mini-card" href="https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e" target="_blank" rel="noreferrer">
+          <strong>2025 Zag Women&#x27;s Harfang 86 - 155cm / Blue/Orange / New</strong>
           <span>$289.95 &middot; Lone Pine new flat skis</span>
         </a>
         </div>
@@ -429,9 +431,14 @@
           <span>Last seen $199.82 &middot; May 22</span>
         </a>
 
-        <a class="mini-card ghost-card" href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer">
-          <strong>Rossignol Sender Free 100 Skis 2026</strong>
-          <span>Last seen $454.97 &middot; May 22</span>
+        <a class="mini-card ghost-card" href="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used" target="_blank" rel="noreferrer">
+          <strong>K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used</strong>
+          <span>Last seen $309.97 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023" target="_blank" rel="noreferrer">
+          <strong>Nordica Unleashed 98 Skis - Women&#x27;s 2023</strong>
+          <span>Last seen $219.99 &middot; May 22</span>
         </a>
 
         <a class="mini-card ghost-card" href="https://www.evo.com/products/240558-blizzard-rustler-10-skis-2025" target="_blank" rel="noreferrer">
@@ -447,11 +454,6 @@
         <a class="mini-card ghost-card" href="https://utahskis.com/products/elan-playmaker-101-mens-demo-skis-2026" target="_blank" rel="noreferrer">
           <strong>Elan Playmaker 101 Mens Demo Skis 2026</strong>
           <span>Last seen $324.99 &middot; May 22</span>
-        </a>
-
-        <a class="mini-card ghost-card" href="https://www.evo.com/products/285146-rossignol-rallybird-soul-92-skis-xpress-11-w-gw-bindings-women-s-2025" target="_blank" rel="noreferrer">
-          <strong>Rossignol Rallybird Soul 92 Skis + Xpress 11 W GW Bindings - Women&#x27;s 2025</strong>
-          <span>Last seen $349.97 &middot; May 22</span>
         </a>
         </div>
           </div>
@@ -997,7 +999,7 @@
                 <strong>$199.97</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='ignored-badge'>Hidden by preference</span><span class='verdict verdict-skip'>Skip</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $250.02</span><span class='trend trend-flat'>Same as prior day</span><span class='dupe-badge'>2 alternates</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025">Not interested</button></div>
+              <div class="badges"><span class='ignored-badge'>Hidden by preference</span><span class='verdict verdict-skip'>Skip</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $250.02</span><span class='trend trend-flat'>Same as prior day</span><span class='dupe-badge'>1 alternate</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025">Not interested</button></div>
             </article>
 
             <article
@@ -1103,41 +1105,6 @@
                 <span class='was'>Was $439.95</span>
               </div>
               <div class="badges"><span class='verdict verdict-size'>Only if size is right</span><span class='sweet-badge'>Sweet spot</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.7% off</span><span>Save $222.96</span><span class='trend trend-flat'>Same as prior day</span><span class='family-size-badge'>Family size</span><span>Sizes Blissful Blue / 138cm, Blissful Blue / 146cm, Blissful Blue / 154cm</span><span>Score 101</span><button class="note-button" type="button" data-ignore-value="https://www.eriksbikeshop.com/products/salomon-stance-76-skis-with-m10-gw-bindings-2026-pr5a25418">Not interested</button></div>
-            </article>
-
-            <article
-              class="deal"
-              data-source="Evo skis price ascending"
-              data-title="nordica unleashed 98 skis - women&#x27;s 2023"
-              data-price="219.99"
-              data-discount="68.6"
-              data-savings="480.00"
-              data-score="119.20"
-              data-trend="new"
-              data-has-image="true"
-              data-category="ski"
-              data-watchlist="false"
-              data-ignored="true"
-              data-size-match="false"
-              data-my-size-match="false"
-              data-family-size-match="false"
-              data-sweet-spot="false"
-              data-lowest-seen="false"
-              data-verdict="skip"
-              data-dupe-primary="false"
-            >
-              <a class="thumb" href="https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023" target="_blank" rel="noreferrer" aria-label="Nordica Unleashed 98 Skis - Women&#x27;s 2023">
-                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-910257.jpg?v=1767753722" alt="" loading="lazy" decoding="async" />
-              </a>
-              <div class="deal-main">
-                <p class="source">Evo skis price ascending</p>
-                <h2><a href="https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023" target="_blank" rel="noreferrer">Nordica Unleashed 98 Skis - Women&#x27;s 2023</a></h2>
-              </div>
-              <div class="price">
-                <strong>$219.99</strong>
-                <span class='was'>Was $699.99</span>
-              </div>
-              <div class="badges"><span class='ignored-badge'>Hidden by preference</span><span class='verdict verdict-skip'>Skip</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>68.6% off</span><span>Save $480.00</span><span class='trend trend-new'>Newly tracked</span><span class='dupe-badge'>2 alternates</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 119</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023">Not interested</button></div>
             </article>
 
             <article
@@ -1312,7 +1279,7 @@
                 <strong>$229.99</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='ignored-badge'>Hidden by preference</span><span class='verdict verdict-skip'>Skip</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>48.9% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span class='size-badge'>My size</span><span class='dupe-badge'>2 alternates</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/266495-nordica-unleashed-90-skis-2025">Not interested</button></div>
+              <div class="badges"><span class='ignored-badge'>Hidden by preference</span><span class='verdict verdict-skip'>Skip</span><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>48.9% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span class='size-badge'>My size</span><span class='dupe-badge'>1 alternate</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/266495-nordica-unleashed-90-skis-2025">Not interested</button></div>
             </article>
 
             <article
@@ -2884,41 +2851,6 @@
 
               </div>
               <div class="badges"><span class='verdict verdict-wait'>Wait</span><span class='floor-badge'>Lowest seen</span><span class='buy-zone zone-new-low'>New low</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-down'>Down $20.00 (6.1%) since prior day</span><span>Score 14</span><button class="note-button" type="button" data-ignore-value="https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html">Not interested</button></div>
-            </article>
-
-            <article
-              class="deal"
-              data-source="Evo skis price ascending"
-              data-title="k2 mindbender 115 c alliance skis + marker squire 11 demo bindings 2020 - used"
-              data-price="309.97"
-              data-discount="63.5"
-              data-savings="539.98"
-              data-score="112.30"
-              data-trend="flat"
-              data-has-image="true"
-              data-category="ski"
-              data-watchlist="false"
-              data-ignored="false"
-              data-size-match="true"
-              data-my-size-match="true"
-              data-family-size-match="false"
-              data-sweet-spot="true"
-              data-lowest-seen="false"
-              data-verdict="buy now"
-              data-dupe-primary="true"
-            >
-              <a class="thumb" href="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used" target="_blank" rel="noreferrer" aria-label="K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used">
-                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1155139.jpg?v=1767735445" alt="" loading="lazy" decoding="async" />
-              </a>
-              <div class="deal-main">
-                <p class="source">Evo skis price ascending</p>
-                <h2><a href="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used" target="_blank" rel="noreferrer">K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used</a></h2>
-              </div>
-              <div class="price">
-                <strong>$309.97</strong>
-                <span class='was'>Was $849.95</span>
-              </div>
-              <div class="badges"><span class='verdict verdict-buy'>Buy now</span><span class='sweet-badge'>Sweet spot</span><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>63.5% off</span><span>Save $539.98</span><span class='trend trend-flat'>Same as prior day</span><span class='size-badge'>My size</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 112</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used">Not interested</button></div>
             </article>
 
             <article
@@ -5086,7 +5018,7 @@
                 <strong>$389.97</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='watch-badge'>Watchlist</span><span class='verdict verdict-size'>Only if size is right</span><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $209.98</span><span class='trend trend-flat'>Same as prior day</span><span class='family-size-badge'>Family size</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 82</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/255534-rossignol-rallybird-soul-92-skis-women-s-2026">Not interested</button></div>
+              <div class="badges"><span class='watch-badge'>Watchlist</span><span class='verdict verdict-size'>Only if size is right</span><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $209.98</span><span class='trend trend-flat'>Same as prior day</span><span class='family-size-badge'>Family size</span><span class='dupe-badge'>1 alternate</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 82</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/255534-rossignol-rallybird-soul-92-skis-women-s-2026">Not interested</button></div>
             </article>
 
             <article
@@ -7924,6 +7856,76 @@
 
             <article
               class="deal"
+              data-source="Evo skis price ascending"
+              data-title="rossignol rallybird soul 102 skis - women&#x27;s 2026"
+              data-price="454.97"
+              data-discount="35.0"
+              data-savings="244.98"
+              data-score="80.90"
+              data-trend="flat"
+              data-has-image="true"
+              data-category="ski"
+              data-watchlist="true"
+              data-ignored="false"
+              data-size-match="false"
+              data-my-size-match="false"
+              data-family-size-match="false"
+              data-sweet-spot="false"
+              data-lowest-seen="false"
+              data-verdict="worth a look"
+              data-dupe-primary="false"
+            >
+              <a class="thumb" href="https://www.evo.com/products/255532-rossignol-rallybird-soul-102-skis-women-s-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Rallybird Soul 102 Skis - Women&#x27;s 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1105141.jpg?v=1767733195" alt="" loading="lazy" decoding="async" />
+              </a>
+              <div class="deal-main">
+                <p class="source">Evo skis price ascending</p>
+                <h2><a href="https://www.evo.com/products/255532-rossignol-rallybird-soul-102-skis-women-s-2026" target="_blank" rel="noreferrer">Rossignol Rallybird Soul 102 Skis - Women&#x27;s 2026</a></h2>
+              </div>
+              <div class="price">
+                <strong>$454.97</strong>
+                <span class='was'>Was $699.95</span>
+              </div>
+              <div class="badges"><span class='watch-badge'>Watchlist</span><span class='verdict verdict-look'>Worth a look</span><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $244.98</span><span class='trend trend-flat'>Same as prior day</span><span class='dupe-badge'>1 alternate</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 81</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/255532-rossignol-rallybird-soul-102-skis-women-s-2026">Not interested</button></div>
+            </article>
+
+            <article
+              class="deal"
+              data-source="Evo skis price ascending"
+              data-title="rossignol sender free 100 skis 2026"
+              data-price="454.97"
+              data-discount="35.0"
+              data-savings="244.98"
+              data-score="80.90"
+              data-trend="flat"
+              data-has-image="true"
+              data-category="ski"
+              data-watchlist="false"
+              data-ignored="false"
+              data-size-match="false"
+              data-my-size-match="false"
+              data-family-size-match="false"
+              data-sweet-spot="false"
+              data-lowest-seen="false"
+              data-verdict="worth a look"
+              data-dupe-primary="true"
+            >
+              <a class="thumb" href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer" aria-label="Rossignol Sender Free 100 Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1162902.jpg?v=1767735753" alt="" loading="lazy" decoding="async" />
+              </a>
+              <div class="deal-main">
+                <p class="source">Evo skis price ascending</p>
+                <h2><a href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer">Rossignol Sender Free 100 Skis 2026</a></h2>
+              </div>
+              <div class="price">
+                <strong>$454.97</strong>
+                <span class='was'>Was $699.95</span>
+              </div>
+              <div class="badges"><span class='verdict verdict-look'>Worth a look</span><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $244.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 81</span><button class="note-button" type="button" data-ignore-value="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026">Not interested</button></div>
+            </article>
+
+            <article
+              class="deal"
               data-source="Lone Pine new flat skis"
               data-title="2026 rossignol sender free 100 open - 170cm / pink/purple/black / new"
               data-price="454.97"
@@ -10068,6 +10070,7 @@
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
+      const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
 
       function numericValue(deal, key) {
         return Number.parseFloat(deal.dataset[key] || '0') || 0;
@@ -10174,6 +10177,29 @@
       function updateView() {
         sortDeals();
         applyFilters();
+        syncRadarButtons();
+      }
+
+      function radarTarget(name) {
+        if (name === 'watchOnly') return watchOnly;
+        if (name === 'mySizeOnly') return mySizeOnly;
+        if (name === 'familySizeOnly') return familySizeOnly;
+        if (name === 'sweetOnly') return sweetOnly;
+        if (name === 'lowestSeenOnly') return lowestSeenOnly;
+        if (name === 'showIgnored') return hideIgnored;
+        return null;
+      }
+
+      function syncRadarButtons() {
+        for (const button of radarButtons) {
+          const name = button.dataset.radarFilter;
+          if (name === 'showIgnored') {
+            button.setAttribute('aria-pressed', String(Boolean(hideIgnored && !hideIgnored.checked)));
+            continue;
+          }
+          const target = radarTarget(name);
+          button.setAttribute('aria-pressed', String(Boolean(target?.checked)));
+        }
       }
 
       for (const box of checkboxes) {
@@ -10186,6 +10212,19 @@
         button.addEventListener('click', () => {
           const checked = button.dataset.filterAction === 'all';
           for (const box of checkboxes) box.checked = checked;
+          updateView();
+        });
+      }
+      for (const button of radarButtons) {
+        button.addEventListener('click', () => {
+          const name = button.dataset.radarFilter;
+          if (name === 'showIgnored') {
+            if (hideIgnored) hideIgnored.checked = !hideIgnored.checked;
+            updateView();
+            return;
+          }
+          const target = radarTarget(name);
+          if (target) target.checked = !target.checked;
           updateView();
         });
       }
