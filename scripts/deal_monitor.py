@@ -2337,10 +2337,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     <style>
       :root {{ color-scheme: light; --ink:#17211d; --muted:#586a62; --line:#d9e1dc; --accent:#0d7c66; --accent-soft:#e7f3ef; --hot:#b42318; --gold:#8a5b00; --bg:#f4f2ea; --card:#fffef9; }}
       * {{ box-sizing: border-box; }}
-      body {{ margin: 0; font-family: Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 15% 0%, #ffffff 0, #f4f2ea 34%, #edf3ef 100%); color: var(--ink); }}
-      main {{ width: min(1120px, 100%); margin: 0 auto; padding: 28px 14px 56px; }}
-      header {{ display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding: 24px; margin-bottom: 18px; border: 1px solid rgba(13,124,102,.16); border-radius: 22px; background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(232,244,239,.86)); box-shadow: 0 18px 45px rgba(39,61,51,.08); }}
-      h1 {{ margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); letter-spacing: -0.055em; line-height: .95; }}
+      body {{ margin: 0; font-family: Avenir Next, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 7% 0%, #ffffff 0, #f4f2ea 28%, #e8f0eb 100%); color: var(--ink); }}
+      main {{ width: min(1480px, 100%); margin: 0 auto; padding: 18px 16px 52px; }}
+      header {{ display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .75fr); gap: 18px; align-items: end; padding: 18px 20px; margin-bottom: 14px; border: 1px solid rgba(13,124,102,.16); border-radius: 24px; background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(232,244,239,.78)); box-shadow: 0 16px 34px rgba(39,61,51,.07); }}
+      h1 {{ margin: 0; font-size: clamp(1.85rem, 3vw, 2.8rem); letter-spacing: -0.055em; line-height: .94; }}
       h2 {{ margin: 0; font-size: 1.05rem; line-height: 1.35; }}
       button, input, select {{ font: inherit; }}
       button {{ border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 8px 12px; cursor: pointer; }}
@@ -2349,11 +2349,14 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       input:focus, select:focus {{ outline: 3px solid rgba(13,124,102,.18); border-color: var(--accent); }}
       a {{ color: inherit; }}
       .meta, .source, .was {{ color: var(--muted); }}
-      .stats {{ display: grid; grid-template-columns: repeat(4, minmax(86px, 1fr)); gap: 10px; min-width: min(440px, 100%); }}
-      .stat {{ padding: 12px; border: 1px solid rgba(13,124,102,.16); border-radius: 16px; background: rgba(255,255,255,.72); }}
+      .stats {{ display: grid; grid-template-columns: repeat(4, minmax(74px, 1fr)); gap: 8px; min-width: 0; }}
+      .stat {{ padding: 10px; border: 1px solid rgba(13,124,102,.16); border-radius: 16px; background: rgba(255,255,255,.72); }}
       .stat strong {{ display: block; font-size: 1.35rem; letter-spacing: -0.04em; }}
       .stat span {{ color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
-      .controls {{ position: sticky; top: 0; z-index: 10; margin: 0 0 18px; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 18px; box-shadow: 0 14px 32px rgba(39,61,51,.08); backdrop-filter: blur(12px); }}
+      .app-shell {{ display: grid; grid-template-columns: 322px minmax(0, 1fr); gap: 16px; align-items: start; }}
+      .sidebar {{ position: sticky; top: 14px; max-height: calc(100vh - 28px); overflow: auto; scrollbar-width: thin; }}
+      .content {{ min-width: 0; }}
+      .controls {{ margin: 0; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 22px; box-shadow: 0 16px 36px rgba(39,61,51,.10); backdrop-filter: blur(12px); }}
       .controls-summary {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; font-weight: 800; list-style: none; }}
       .controls-summary::-webkit-details-marker {{ display: none; }}
       .controls-summary::before {{ content: "Hide"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 5px 9px; font-size: .78rem; font-weight: 700; order: 3; }}
@@ -2361,16 +2364,17 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .summary-count {{ color: var(--muted); font-weight: 500; margin-left: auto; }}
       .summary-count strong {{ color: var(--ink); }}
       .controls-body {{ margin-top: 12px; }}
-      .category-panel {{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }}
+      .category-panel {{ display: grid; gap: 8px; margin-bottom: 12px; }}
       .category-toggle {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }}
       .category-toggle input {{ width: auto; accent-color: var(--accent); }}
       .category-toggle b {{ color: var(--muted); font-size: .82rem; }}
       .category-toggle:has(input:checked) {{ border-color: rgba(13,124,102,.38); background: var(--accent-soft); }}
       .category-clothing:has(input:checked) {{ border-color: #d6b86c; background: #fff7dc; }}
-      .tool-grid {{ display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }}
+      .tool-grid {{ display: grid; grid-template-columns: 1fr; gap: 10px; align-items: stretch; }}
       .field span {{ display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
-      .quick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }}
-      .quick-filters label, .quick-button {{ display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }}
+      .quick-filters {{ display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: stretch; padding-bottom: 1px; }}
+      .quick-filters label, .quick-button {{ display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 8px 9px; border: 1px solid var(--line); border-radius: 12px; background: var(--accent-soft); white-space: nowrap; font-size: .88rem; }}
+      .quick-filters #resetFilters, .quick-filters #dealsOfDay {{ grid-column: 1 / -1; }}
       .quick-filters input {{ width: auto; accent-color: var(--accent); }}
       .quick-button {{ cursor: pointer; color: var(--ink); font: inherit; }}
       .quick-button[aria-pressed="true"] {{ border-color: rgba(13,124,102,.45); background: #edf8f4; color: var(--accent); box-shadow: inset 0 0 0 1px rgba(13,124,102,.18); }}
@@ -2380,8 +2384,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .store-head {{ display: flex; justify-content: space-between; gap: 12px; }}
       .filter-actions {{ display: flex; gap: 8px; }}
       .store-panel .filter-actions {{ margin: 10px 0; }}
-      .source-toggles {{ display: flex; flex-wrap: wrap; gap: 8px; }}
-      .source-toggle {{ display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); font-size: .88rem; cursor: pointer; }}
+      .source-toggles {{ display: grid; gap: 7px; }}
+      .source-toggle {{ display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 7px; min-height: 34px; padding: 7px 9px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); font-size: .88rem; cursor: pointer; }}
       .source-toggle input {{ accent-color: var(--accent); }}
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
@@ -2398,7 +2402,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .ghost-card {{ background: #fbfaf4; }}
       .digest-panel {{ margin: 0 0 18px; background: linear-gradient(135deg, rgba(20,54,47,.96), rgba(13,124,102,.82)); color: white; }}
       .digest-panel .section-head span {{ color: rgba(255,255,255,.72); }}
-      .digest-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
+      .digest-grid {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }}
       .digest-card {{ display: block; padding: 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 14px; background: rgba(255,255,255,.10); color: white; text-decoration: none; }}
       .digest-card span {{ display: block; color: rgba(255,255,255,.72); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
       .digest-card strong {{ display: block; margin-top: 5px; line-height: 1.2; }}
@@ -2462,8 +2466,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .note-button:hover {{ border-color: rgba(13,124,102,.45); color: var(--accent); }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 850px) {{ header, .tool-grid, .activity-grid {{ grid-template-columns: 1fr; }} .stats {{ min-width: 0; }} .controls {{ position: static; }} }}
-      @media (max-width: 620px) {{ main {{ padding-inline: 10px; }} header {{ padding: 18px; }} .stats {{ grid-template-columns: repeat(2, 1fr); }} .deal {{ grid-template-columns: 82px 1fr; gap: 12px; }} .thumb {{ width: 82px; height: 82px; }} .price {{ grid-column: 2; text-align: left; margin-top: 2px; }} .badges {{ grid-column: 1 / -1; }} }}
+      @media (max-width: 1080px) {{ header {{ grid-template-columns: 1fr; }} .app-shell {{ grid-template-columns: 280px minmax(0, 1fr); }} .digest-grid, .activity-grid {{ grid-template-columns: 1fr; }} }}
+      @media (max-width: 820px) {{ main {{ padding-inline: 10px; }} .app-shell {{ grid-template-columns: 1fr; }} .sidebar {{ position: static; max-height: none; overflow: visible; }} .controls {{ margin-bottom: 14px; }} .controls:not([open]) {{ padding-bottom: 14px; }} .quick-filters {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }} }}
+      @media (max-width: 620px) {{ header {{ padding: 16px; }} .stats {{ grid-template-columns: repeat(2, 1fr); }} .deal {{ grid-template-columns: 82px 1fr; gap: 12px; }} .thumb {{ width: 82px; height: 82px; }} .price {{ grid-column: 2; text-align: left; margin-top: 2px; }} .badges {{ grid-column: 1 / -1; }} }}
     </style>
   </head>
   <body>
@@ -2480,14 +2485,20 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           <div class="stat"><strong>{image_count}</strong><span>Photos</span></div>
         </div>
       </header>
-      {source_filter}
-      {preference_panel}
-      {activity_panel}
-      {health_panel}
-      <section class="deals-list">
-        {''.join(cards) if cards else empty}
-      </section>
-      {"<section class='errors'><h2>Source errors</h2><ul>" + errors + "</ul></section>" if errors else ""}
+      <div class="app-shell">
+        <aside class="sidebar">
+          {source_filter}
+        </aside>
+        <div class="content">
+          {preference_panel}
+          {activity_panel}
+          {health_panel}
+          <section class="deals-list">
+            {''.join(cards) if cards else empty}
+          </section>
+          {"<section class='errors'><h2>Source errors</h2><ul>" + errors + "</ul></section>" if errors else ""}
+        </div>
+      </div>
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];
