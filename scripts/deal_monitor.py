@@ -1788,7 +1788,10 @@ def annotate_preferences(deals: list[dict[str, Any]], preferences: dict[str, Any
     watch_terms = preference_terms(preferences, "watch_terms")
     ignore_terms = preference_terms(preferences, "ignore_terms")
     ignored_urls = set(preference_terms(preferences, "ignore_urls"))
-    ski_sizes = preference_numbers(preferences, "ski_sizes")
+    my_ski_sizes = preference_numbers(preferences, "my_ski_sizes")
+    family_ski_sizes = preference_numbers(preferences, "family_ski_sizes")
+    if not my_ski_sizes and not family_ski_sizes:
+        my_ski_sizes = preference_numbers(preferences, "ski_sizes")
     clothing_sizes = set(preference_terms(preferences, "clothing_sizes"))
     max_prices = preferences.get("max_prices") if isinstance(preferences.get("max_prices"), dict) else {}
 
@@ -1807,7 +1810,9 @@ def annotate_preferences(deals: list[dict[str, Any]], preferences: dict[str, Any
 
         deal["is_watchlist"] = any(term in haystack for term in watch_terms)
         deal["is_ignored"] = any(term in haystack for term in ignore_terms) or str(deal.get("url") or "").lower() in ignored_urls
-        deal["matches_size"] = matches_preferred_size(category, sizes, ski_sizes, clothing_sizes)
+        deal["matches_my_size"] = matches_preferred_size(category, sizes, my_ski_sizes, clothing_sizes)
+        deal["matches_family_size"] = category != "clothing" and matches_preferred_size(category, sizes, family_ski_sizes, set())
+        deal["matches_size"] = bool(deal["matches_my_size"] or deal["matches_family_size"])
         deal["matches_price"] = max_price is None or current_price <= max_price
         deal["matches_preferences"] = bool(deal["is_watchlist"] or (deal["matches_size"] and deal["matches_price"]))
 
@@ -1832,15 +1837,22 @@ def matches_preferred_size(category: str, sizes: list[str], ski_sizes: list[int]
 def preference_summary(preferences: dict[str, Any], deals: list[dict[str, Any]]) -> dict[str, Any]:
     watch_terms = preference_terms(preferences, "watch_terms")
     ignore_terms = preference_terms(preferences, "ignore_terms")
-    ski_sizes = preference_numbers(preferences, "ski_sizes")
+    my_ski_sizes = preference_numbers(preferences, "my_ski_sizes")
+    family_ski_sizes = preference_numbers(preferences, "family_ski_sizes")
+    if not my_ski_sizes and not family_ski_sizes:
+        my_ski_sizes = preference_numbers(preferences, "ski_sizes")
     clothing_sizes = preference_terms(preferences, "clothing_sizes")
     return {
         "watch_terms": watch_terms,
         "ignore_terms": ignore_terms,
-        "ski_sizes": ski_sizes,
+        "my_ski_sizes": my_ski_sizes,
+        "family_ski_sizes": family_ski_sizes,
+        "ski_sizes": sorted(set(my_ski_sizes + family_ski_sizes)),
         "clothing_sizes": clothing_sizes,
         "watchlist_count": sum(1 for deal in deals if deal.get("is_watchlist")),
         "ignored_count": sum(1 for deal in deals if deal.get("is_ignored")),
+        "my_size_match_count": sum(1 for deal in deals if deal.get("matches_my_size")),
+        "family_size_match_count": sum(1 for deal in deals if deal.get("matches_family_size")),
         "size_match_count": sum(1 for deal in deals if deal.get("matches_size")),
         "preference_match_count": sum(1 for deal in deals if deal.get("matches_preferences")),
     }
@@ -1962,7 +1974,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         cached_badge = "<span class='cached'>Cached last seen price</span>" if deal.get("is_cached") else ""
         watch_badge = "<span class='watch-badge'>Watchlist</span>" if deal.get("is_watchlist") else ""
         ignored_badge = "<span class='ignored-badge'>Hidden by preference</span>" if deal.get("is_ignored") else ""
-        size_badge = "<span class='size-badge'>My size</span>" if deal.get("matches_size") else ""
+        my_size_badge = "<span class='size-badge'>My size</span>" if deal.get("matches_my_size") else ""
+        family_size_badge = "<span class='family-size-badge'>Family size</span>" if deal.get("matches_family_size") else ""
         thumbnail = (
             f"""<a class="thumb" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer" aria-label="{html.escape(deal['title'])}">
                 <img src="{html.escape(deal['image_url'])}" alt="" loading="lazy" decoding="async" />
@@ -1986,6 +1999,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-watchlist="{'true' if deal.get('is_watchlist') else 'false'}"
               data-ignored="{'true' if deal.get('is_ignored') else 'false'}"
               data-size-match="{'true' if deal.get('matches_size') else 'false'}"
+              data-my-size-match="{'true' if deal.get('matches_my_size') else 'false'}"
+              data-family-size-match="{'true' if deal.get('matches_family_size') else 'false'}"
             >
               {thumbnail}
               <div class="deal-main">
@@ -1996,7 +2011,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{watch_badge}{ignored_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{size_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{watch_badge}{ignored_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -2089,7 +2104,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           </div>
           <div class="preference-grid">
             <div><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></div>
-            <div><strong>{int(preferences.get("size_match_count") or 0)}</strong><span>my sizes</span></div>
+            <div><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>my size</span></div>
+            <div><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></div>
             <div><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></div>
           </div>
           <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
@@ -2131,7 +2147,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
                 <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
                 <label><input id="watchOnly" type="checkbox" /> Watchlist</label>
-                <label><input id="sizeOnly" type="checkbox" /> My sizes</label>
+                <label><input id="mySizeOnly" type="checkbox" /> My size</label>
+                <label><input id="familySizeOnly" type="checkbox" /> Family size</label>
                 <label><input id="hideIgnored" type="checkbox" checked /> Hide junk</label>
                 <button type="button" id="resetFilters">Reset</button>
               </div>
@@ -2225,7 +2242,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .ghost-card {{ background: #fbfaf4; }}
       .health-panel {{ margin: 0 0 18px; }}
       .preference-panel {{ margin: 0 0 18px; }}
-      .preference-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }}
+      .preference-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }}
       .preference-grid div {{ padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; }}
       .preference-grid strong {{ display: block; font-size: 1.2rem; }}
       .preference-grid span, .preference-panel p {{ color: var(--muted); font-size: .84rem; }}
@@ -2261,6 +2278,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .watch-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); font-weight: 800; }}
       .ignored-badge {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .size-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; font-weight: 800; }}
+      .family-size-badge {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; font-weight: 800; }}
       .zone-new-low, .zone-buy {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .zone-strong {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
       .zone-watch {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
@@ -2313,7 +2331,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const dropOnly = document.querySelector('#dropOnly');
       const newOnly = document.querySelector('#newOnly');
       const watchOnly = document.querySelector('#watchOnly');
-      const sizeOnly = document.querySelector('#sizeOnly');
+      const mySizeOnly = document.querySelector('#mySizeOnly');
+      const familySizeOnly = document.querySelector('#familySizeOnly');
       const hideIgnored = document.querySelector('#hideIgnored');
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
@@ -2356,7 +2375,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requireDrop = Boolean(dropOnly?.checked);
         const requireNew = Boolean(newOnly?.checked);
         const requireWatch = Boolean(watchOnly?.checked);
-        const requireSize = Boolean(sizeOnly?.checked);
+        const requireMySize = Boolean(mySizeOnly?.checked);
+        const requireFamilySize = Boolean(familySizeOnly?.checked);
         const shouldHideIgnored = Boolean(hideIgnored?.checked);
         const topDealsMode = dealsOfDay?.getAttribute('aria-pressed') === 'true';
         const eligibleTopDeals = topDealsMode
@@ -2370,9 +2390,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
                 const matchesNew = !requireNew || deal.dataset.trend === 'new';
                 const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
-                const matchesSize = !requireSize || deal.dataset.sizeMatch === 'true';
+                const matchesSizeGroup = (!requireMySize && !requireFamilySize) || (requireMySize && deal.dataset.mySizeMatch === 'true') || (requireFamilySize && deal.dataset.familySizeMatch === 'true');
                 const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
-                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored;
+                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesIgnored;
               }})
               .sort((a, b) => numericValue(b, 'score') - numericValue(a, 'score') || numericValue(a, 'price') - numericValue(b, 'price'))
               .slice(0, 5)
@@ -2389,10 +2409,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
           const matchesNew = !requireNew || deal.dataset.trend === 'new';
           const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
-          const matchesSize = !requireSize || deal.dataset.sizeMatch === 'true';
+          const matchesSizeGroup = (!requireMySize && !requireFamilySize) || (requireMySize && deal.dataset.mySizeMatch === 'true') || (requireFamilySize && deal.dataset.familySizeMatch === 'true');
           const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
           const matchesTopDeals = !topDealsMode || topDealSet.has(deal);
-          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored && matchesTopDeals;
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesIgnored && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -2429,7 +2449,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           updateView();
         }});
       }}
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, sizeOnly, hideIgnored]) {{
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, mySizeOnly, familySizeOnly, hideIgnored]) {{
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }}
@@ -2448,7 +2468,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (dropOnly) dropOnly.checked = false;
         if (newOnly) newOnly.checked = false;
         if (watchOnly) watchOnly.checked = false;
-        if (sizeOnly) sizeOnly.checked = false;
+        if (mySizeOnly) mySizeOnly.checked = false;
+        if (familySizeOnly) familySizeOnly.checked = false;
         if (hideIgnored) hideIgnored.checked = true;
         if (dealsOfDay) {{
           dealsOfDay.setAttribute('aria-pressed', 'false');
