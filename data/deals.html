@@ -53,6 +53,27 @@
       .source-toggle input { accent-color: var(--accent); }
       .source-toggle b { color: var(--muted); font-size: .78rem; }
       .visible-count { margin: 12px 0 0; }
+      .activity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
+      .activity-card, .health-panel { border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }
+      .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
+      .section-head h2 { margin: 0; font-size: 1rem; }
+      .section-head span { color: var(--muted); font-size: .84rem; }
+      .mini-list { display: grid; gap: 8px; }
+      .mini-card { display: block; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; text-decoration: none; }
+      .mini-card:hover { border-color: rgba(13,124,102,.45); }
+      .mini-card strong { display: block; font-size: .92rem; line-height: 1.25; }
+      .mini-card span, .empty-mini { display: block; margin: 4px 0 0; color: var(--muted); font-size: .84rem; }
+      .ghost-card { background: #fbfaf4; }
+      .health-panel { margin: 0 0 18px; }
+      .health-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+      .health-card { border: 1px solid var(--line); border-radius: 14px; background: white; padding: 10px; }
+      .health-card strong { display: block; font-size: .9rem; line-height: 1.25; }
+      .health-card span { display: inline-block; margin-top: 7px; border-radius: 999px; padding: 3px 7px; font-size: .75rem; font-weight: 800; }
+      .health-card p { margin: 7px 0 0; color: var(--muted); font-size: .82rem; }
+      .health-live span { background: #edf8f4; color: var(--accent); }
+      .health-cached span { background: #fff8df; color: var(--gold); }
+      .health-issue span { background: #fff0ee; color: var(--hot); }
+      .health-quiet span { background: #f0f2ef; color: var(--muted); }
       .deals-list { display: grid; gap: 12px; }
       .deal { display: grid; grid-template-columns: 104px 1fr auto; gap: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 26px rgba(39,61,51,.06); align-items: start; }
       .deal:hover { border-color: rgba(13,124,102,.45); transform: translateY(-1px); transition: transform .16s ease, border-color .16s ease; }
@@ -72,6 +93,11 @@
       .trend-up { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
       .trend-flat { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .trend-new { border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }
+      .buy-zone { font-weight: 800; }
+      .zone-new-low, .zone-buy { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
+      .zone-strong { border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }
+      .zone-watch { border-color: #efc2bd; background: #fff0ee; color: var(--hot); }
+      .zone-fair { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .category-ski { border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }
       .category-clothing { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .cached { border-color: #d8d1b1; background: #fff8df; color: var(--gold); }
@@ -80,7 +106,7 @@
       .stock-availability_unknown { border-color: #d8d1b1; background: #fff8df; color: #7a6200; }
       .empty { padding: 24px 0; color: var(--muted); }
       .errors { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }
-      @media (max-width: 850px) { header, .tool-grid { grid-template-columns: 1fr; } .stats { min-width: 0; } .controls { position: static; } }
+      @media (max-width: 850px) { header, .tool-grid, .activity-grid { grid-template-columns: 1fr; } .stats { min-width: 0; } .controls { position: static; } }
       @media (max-width: 620px) { main { padding-inline: 10px; } header { padding: 18px; } .stats { grid-template-columns: repeat(2, 1fr); } .deal { grid-template-columns: 82px 1fr; gap: 12px; } .thumb { width: 82px; height: 82px; } .price { grid-column: 2; text-align: left; margin-top: 2px; } .badges { grid-column: 1 / -1; } }
     </style>
   </head>
@@ -89,7 +115,7 @@
       <header>
         <div>
           <h1>Gear Deals</h1>
-          <p class="meta">Generated 2026-05-22T12:36:18+00:00</p>
+          <p class="meta">Generated 2026-05-22T11:18:51-06:00</p>
         </div>
         <div class="stats" aria-label="Report summary">
           <div class="stat"><strong>193</strong><span>Deals</span></div>
@@ -195,6 +221,124 @@
           </div>
         </details>
 
+
+        <section class="activity-grid" aria-label="Deal activity">
+          <div class="activity-card">
+            <div class="section-head">
+              <h2>New since last run</h2>
+              <span>3 shown</span>
+            </div>
+            <div class="mini-list">
+        <a class="mini-card" href="https://www.eriksbikeshop.com/products/salomon-smax-8-st-skis-with-m11-gw-bindings-2026-pr5a23198" target="_blank" rel="noreferrer">
+          <strong>Salomon S/Max 8 ST Skis with M11 GW Bindings</strong>
+          <span>$401.97 &middot; ERIK&#x27;S downhill skis price ascending</span>
+        </a>
+
+        <a class="mini-card" href="https://www.evo.com/products/280476-line-honey-badger-skis-2027" target="_blank" rel="noreferrer">
+          <strong>Line Honey Badger Skis 2027</strong>
+          <span>$449.95 &middot; Evo skis price ascending</span>
+        </a>
+
+        <a class="mini-card" href="https://www.evo.com/products/287836-blizzard-black-pearl-97-skis-look-pivot-12-gw-ski-bindings-women-s-2024-used" target="_blank" rel="noreferrer">
+          <strong>Blizzard Black Pearl 97 Skis + Look Pivot 12 GW Ski Bindings - Women&#x27;s 2024 - Used</strong>
+          <span>$453.96 &middot; Evo skis price ascending</span>
+        </a>
+        </div>
+          </div>
+          <div class="activity-card">
+            <div class="section-head">
+              <h2>Recently disappeared</h2>
+              <span>8 shown</span>
+            </div>
+            <div class="mini-list">
+        <a class="mini-card ghost-card" href="https://www.evo.com/products/223117-blizzard-zero-g-lt-80-w-skis-women-s-2025" target="_blank" rel="noreferrer">
+          <strong>Blizzard Zero G LT 80 W Skis - Women&#x27;s 2025</strong>
+          <span>Last seen $224.99 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://utahskis.com/products/elan-playmaker-101-mens-demo-skis-2026" target="_blank" rel="noreferrer">
+          <strong>Elan Playmaker 101 Mens Demo Skis 2026</strong>
+          <span>Last seen $324.99 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://www.eriksbikeshop.com/products/volkl-blaze-82-skis-with-v10-bindings-2026-pr5a25807" target="_blank" rel="noreferrer">
+          <strong>Volkl Blaze 82 Skis with V10 Bindings - Grey / 173cm</strong>
+          <span>Last seen $325.00 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://www.evo.com/products/285146-rossignol-rallybird-soul-92-skis-xpress-11-w-gw-bindings-women-s-2025" target="_blank" rel="noreferrer">
+          <strong>Rossignol Rallybird Soul 92 Skis + Xpress 11 W GW Bindings - Women&#x27;s 2025</strong>
+          <span>Last seen $349.97 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://www.eriksbikeshop.com/products/volkl-mantra-84-womens-skis-2026-pr5a25818" target="_blank" rel="noreferrer">
+          <strong>Volkl Mantra 84 Womens Skis - 170cm</strong>
+          <span>Last seen $375.00 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://jskis.com/products/masterblaster-adapt-blemish?variant=41739551178839" target="_blank" rel="noreferrer">
+          <strong>MASTERBLASTER &quot;ADAPT&quot; BLEMISH</strong>
+          <span>Last seen $499.00 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://jskis.com/products/masterblaster-full-house-blemish?variant=41739558486103" target="_blank" rel="noreferrer">
+          <strong>MASTERBLASTER &quot;FULL HOUSE&quot; BLEMISH</strong>
+          <span>Last seen $499.00 &middot; May 22</span>
+        </a>
+
+        <a class="mini-card ghost-card" href="https://www.evo.com/products/266042-rossignol-sender-free-100-skis-2026" target="_blank" rel="noreferrer">
+          <strong>Rossignol Sender Free 100 Skis 2026</strong>
+          <span>Last seen $454.97 &middot; May 22</span>
+        </a>
+        </div>
+          </div>
+        </section>
+
+
+        <section class="health-panel" aria-label="Store health">
+          <div class="section-head">
+            <h2>Store health</h2>
+            <span>6 sources</span>
+          </div>
+          <div class="health-grid">
+    <div class="health-card health-live">
+      <strong>CampSaver backcountry skis</strong>
+      <span>Live</span>
+      <p>12 deals - 0 photos - 1 drops</p>
+    </div>
+
+    <div class="health-card health-live">
+      <strong>ERIK&#x27;S downhill skis price ascending</strong>
+      <span>Live</span>
+      <p>30 deals - 30 photos - 0 drops</p>
+    </div>
+
+    <div class="health-card health-live">
+      <strong>Evo skis price ascending</strong>
+      <span>Live</span>
+      <p>80 deals - 80 photos - 0 drops</p>
+    </div>
+
+    <div class="health-card health-live">
+      <strong>Geartrade Stio men&#x27;s clothing</strong>
+      <span>Live</span>
+      <p>9 deals - 9 photos - 1 drops</p>
+    </div>
+
+    <div class="health-card health-live">
+      <strong>The Gear Room skis price ascending</strong>
+      <span>Live</span>
+      <p>25 deals - 25 photos - 0 drops</p>
+    </div>
+
+    <div class="health-card health-live">
+      <strong>Utah Skis demo skis sale</strong>
+      <span>Live</span>
+      <p>37 deals - 37 photos - 0 drops</p>
+    </div>
+    </div>
+        </section>
+
       <section class="deals-list">
 
             <article
@@ -220,7 +364,7 @@
                 <strong>$25.69</strong>
                 <span class='was'>Was $98.81</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>74.0% off</span><span>Save $73.12</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes M</span><span>Score 112</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-clothing'>Clothing</span><span>74.0% off</span><span>Save $73.12</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes M</span><span>Score 112</span></div>
             </article>
 
             <article
@@ -246,7 +390,7 @@
                 <strong>$30.86</strong>
                 <span class='was'>Was $128.58</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>76.0% off</span><span>Save $97.72</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 120</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-clothing'>Clothing</span><span>76.0% off</span><span>Save $97.72</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 120</span></div>
             </article>
 
             <article
@@ -272,7 +416,7 @@
                 <strong>$31.05</strong>
                 <span class='was'>Was $69.00</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>55.0% off</span><span>Save $37.95</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes M</span><span>Score 84</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-clothing'>Clothing</span><span>55.0% off</span><span>Save $37.95</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes M</span><span>Score 84</span></div>
             </article>
 
             <article
@@ -298,7 +442,7 @@
                 <strong>$37.31</strong>
                 <span class='was'>Was $128.66</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>71.0% off</span><span>Save $91.35</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 113</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-clothing'>Clothing</span><span>71.0% off</span><span>Save $91.35</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 113</span></div>
             </article>
 
             <article
@@ -324,7 +468,7 @@
                 <strong>$42.67</strong>
                 <span class='was'>Was $88.90</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>52.0% off</span><span>Save $46.23</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 83</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-clothing'>Clothing</span><span>52.0% off</span><span>Save $46.23</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 83</span></div>
             </article>
 
             <article
@@ -350,7 +494,7 @@
                 <strong>$48.92</strong>
                 <span class='was'>Was $128.74</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>62.0% off</span><span>Save $79.82</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-clothing'>Clothing</span><span>62.0% off</span><span>Save $79.82</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -376,7 +520,7 @@
                 <strong>$52.29</strong>
                 <span class='was'>Was $168.68</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>69.0% off</span><span>Save $116.39</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 117</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-clothing'>Clothing</span><span>69.0% off</span><span>Save $116.39</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 117</span></div>
             </article>
 
             <article
@@ -402,7 +546,7 @@
                 <strong>$78.88</strong>
                 <span class='was'>Was $232.00</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>66.0% off</span><span>Save $153.12</span><span class='trend trend-down'>Down $4.45 (5.3%) since prior day</span><span>Sizes S</span><span>Score 119</span></div>
+              <div class="badges"><span class='buy-zone zone-new-low'>New low</span><span class='category category-clothing'>Clothing</span><span>66.0% off</span><span>Save $153.12</span><span class='trend trend-down'>Down $4.45 (5.3%) since prior day</span><span>Sizes S</span><span>Score 119</span></div>
             </article>
 
             <article
@@ -428,7 +572,7 @@
                 <strong>$90.68</strong>
                 <span class='was'>Was $274.79</span>
               </div>
-              <div class="badges"><span class='category category-clothing'>Clothing</span><span>67.0% off</span><span>Save $184.11</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 120</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-clothing'>Clothing</span><span>67.0% off</span><span>Save $184.11</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes S</span><span>Score 120</span></div>
             </article>
 
             <article
@@ -454,7 +598,7 @@
                 <strong>$119.99</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>82.9% off</span><span>Save $579.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 136</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>82.9% off</span><span>Save $579.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 136</span></div>
             </article>
 
             <article
@@ -480,7 +624,7 @@
                 <strong>$139.99</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>80.0% off</span><span>Save $559.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 132</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>80.0% off</span><span>Save $559.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 132</span></div>
             </article>
 
             <article
@@ -506,7 +650,7 @@
                 <strong>$199.97</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $250.02</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $250.02</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
 
             <article
@@ -532,7 +676,7 @@
                 <strong>$199.99</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>76.5% off</span><span>Save $649.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 128</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>76.5% off</span><span>Save $649.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 128</span></div>
             </article>
 
             <article
@@ -558,7 +702,7 @@
                 <strong>$200.00</strong>
                 <span class='was'>Was $399.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $199.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 146cm, 152cm, 160cm, 168cm</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $199.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 146cm, 152cm, 160cm, 168cm</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -584,7 +728,7 @@
                 <strong>$216.99</strong>
                 <span class='was'>Was $439.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.7% off</span><span>Save $222.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Blissful Blue / 138cm, Blissful Blue / 146cm, Blissful Blue / 154cm</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.7% off</span><span>Save $222.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Blissful Blue / 138cm, Blissful Blue / 146cm, Blissful Blue / 154cm</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -610,7 +754,7 @@
                 <strong>$225.00</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -636,7 +780,7 @@
                 <strong>$225.00</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 145cm, 150cm, 155cm, 160cm, 165cm, 170cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 145cm, 150cm, 155cm, 160cm, 165cm, 170cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -662,7 +806,7 @@
                 <strong>$225.00</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168cm, 178cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168cm, 178cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -688,7 +832,7 @@
                 <strong>$229.99</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>48.9% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>48.9% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -714,7 +858,7 @@
                 <strong>$237.49</strong>
                 <span class='was'>Was $949.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>75.0% off</span><span>Save $712.46</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 125</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>75.0% off</span><span>Save $712.46</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 125</span></div>
             </article>
 
             <article
@@ -722,9 +866,9 @@
               data-source="CampSaver backcountry skis"
               data-title="g3 findr flx r3 94 skis list: ( 64%) blazin&#x27; deal"
               data-price="237.60"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="15.25"
+              data-discount="64.1"
+              data-savings="424.40"
+              data-score="114.35"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -736,9 +880,9 @@
               </div>
               <div class="price">
                 <strong>$237.60</strong>
-                <span class='was'>Was $237.60</span>
+                <span class='was'>Was $662.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 15</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>64.1% off</span><span>Save $424.40</span><span class='trend trend-flat'>Same as prior day</span><span>Score 114</span></div>
             </article>
 
             <article
@@ -764,7 +908,7 @@
                 <strong>$239.00</strong>
                 <span class='was'>Was $429.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $190.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150cm, 157cm</span><span>Score 95</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $190.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150cm, 157cm</span><span>Score 95</span></div>
             </article>
 
             <article
@@ -790,7 +934,7 @@
                 <strong>$239.99</strong>
                 <span class='was'>Was $399.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $160.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $160.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -816,7 +960,7 @@
                 <strong>$249.99</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>70.6% off</span><span>Save $599.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 176 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 121</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>70.6% off</span><span>Save $599.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 176 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 121</span></div>
             </article>
 
             <article
@@ -842,7 +986,7 @@
                 <strong>$249.99</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>64.3% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Score 114</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>64.3% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Score 114</span></div>
             </article>
 
             <article
@@ -868,7 +1012,7 @@
                 <strong>$250.00</strong>
                 <span class='was'>Was $499.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153cm, 160cm, 167cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153cm, 160cm, 167cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -894,7 +1038,7 @@
                 <strong>$250.00</strong>
                 <span class='was'>Was $499.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152cm, 172cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-buy'>Buy zone</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $249.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152cm, 172cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -920,7 +1064,7 @@
                 <strong>$259.97</strong>
                 <span class='was'>Was $399.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $139.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $139.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
 
             <article
@@ -946,7 +1090,7 @@
                 <strong>$269.97</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $179.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $179.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -972,7 +1116,7 @@
                 <strong>$274.99</strong>
                 <span class='was'>Was $679.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>59.6% off</span><span>Save $405.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>59.6% off</span><span>Save $405.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
 
             <article
@@ -998,7 +1142,7 @@
                 <strong>$274.99</strong>
                 <span class='was'>Was $649.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>57.7% off</span><span>Save $375.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>57.7% off</span><span>Save $375.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
 
             <article
@@ -1024,7 +1168,7 @@
                 <strong>$275.00</strong>
                 <span class='was'>Was $549.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $274.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 144cm, 151cm, 158cm, 165cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $274.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 144cm, 151cm, 158cm, 165cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -1050,7 +1194,7 @@
                 <strong>$279.95</strong>
                 <span class='was'>Was $399.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
             </article>
 
             <article
@@ -1076,7 +1220,7 @@
                 <strong>$279.95</strong>
                 <span class='was'>Was $399.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $120.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 74</span></div>
             </article>
 
             <article
@@ -1102,7 +1246,7 @@
                 <strong>$283.49</strong>
                 <span class='was'>Was $449.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>37.0% off</span><span>Save $166.50</span><span class='trend trend-flat'>Same as prior day</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>37.0% off</span><span>Save $166.50</span><span class='trend trend-flat'>Same as prior day</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
 
             <article
@@ -1128,7 +1272,7 @@
                 <strong>$286.99</strong>
                 <span class='was'>Was $579.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.5% off</span><span>Save $292.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Silver / 150cm, Silver / 160cm, Silver / 167cm, Silver / 175cm</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.5% off</span><span>Save $292.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Silver / 150cm, Silver / 160cm, Silver / 167cm, Silver / 175cm</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -1154,7 +1298,7 @@
                 <strong>$289.98</strong>
                 <span class='was'>Was $579.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $289.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Black / 160cm, Black / 167cm</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $289.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Black / 160cm, Black / 167cm</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -1180,7 +1324,7 @@
                 <strong>$289.99</strong>
                 <span class='was'>Was $749.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>61.3% off</span><span>Save $459.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 110</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>61.3% off</span><span>Save $459.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 110</span></div>
             </article>
 
             <article
@@ -1206,7 +1350,7 @@
                 <strong>$289.99</strong>
                 <span class='was'>Was $500.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>42.0% off</span><span>Save $210.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 148cm, 164cm</span><span>Score 91</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>42.0% off</span><span>Save $210.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 148cm, 164cm</span><span>Score 91</span></div>
             </article>
 
             <article
@@ -1232,7 +1376,7 @@
                 <strong>$292.47</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $157.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 84</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $157.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 84</span></div>
             </article>
 
             <article
@@ -1258,7 +1402,7 @@
                 <strong>$299.97</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $199.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Sand / 144cm, Sand / 153cm, Sand / 171cm</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $199.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Sand / 144cm, Sand / 153cm, Sand / 171cm</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -1284,7 +1428,7 @@
                 <strong>$299.98</strong>
                 <span class='was'>Was $749.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $449.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $449.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
 
             <article
@@ -1310,7 +1454,7 @@
                 <strong>$299.99</strong>
                 <span class='was'>Was $750.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $450.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154cm, 160cm, 168cm</span><span>Score 109</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $450.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154cm, 160cm, 168cm</span><span>Score 109</span></div>
             </article>
 
             <article
@@ -1336,7 +1480,7 @@
                 <strong>$299.99</strong>
                 <span class='was'>Was $700.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>57.1% off</span><span>Save $400.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 177cm, 184cm</span><span>Score 106</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>57.1% off</span><span>Save $400.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 177cm, 184cm</span><span>Score 106</span></div>
             </article>
 
             <article
@@ -1362,7 +1506,7 @@
                 <strong>$299.99</strong>
                 <span class='was'>Was $499.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $200.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $200.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -1388,7 +1532,7 @@
                 <strong>$300.00</strong>
                 <span class='was'>Was $599.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $299.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166cm, 178cm</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $299.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166cm, 178cm</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -1414,7 +1558,7 @@
                 <strong>$300.82</strong>
 
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 14</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 14</span></div>
             </article>
 
             <article
@@ -1440,7 +1584,31 @@
                 <strong>$307.97</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.0% off</span><span>Save $241.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.0% off</span><span>Save $241.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
+            </article>
+
+            <article
+              class="deal"
+              data-source="CampSaver backcountry skis"
+              data-title="8 models black diamond helio carbon 95 skis as low as ( up to 64%) blazin&#x27; deal"
+              data-price="308.49"
+              data-discount="0.0"
+              data-savings="0.00"
+              data-score="13.83"
+              data-trend="down"
+              data-has-image="false"
+              data-category="ski"
+            >
+              <div class='thumb thumb-empty' aria-hidden='true'></div>
+              <div class="deal-main">
+                <p class="source">CampSaver backcountry skis</p>
+                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html" target="_blank" rel="noreferrer">8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 64%) Blazin&#x27; Deal</a></h2>
+              </div>
+              <div class="price">
+                <strong>$308.49</strong>
+
+              </div>
+              <div class="badges"><span class='buy-zone zone-new-low'>New low</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-down'>Down $20.00 (6.1%) since prior day</span><span>Score 14</span></div>
             </article>
 
             <article
@@ -1466,7 +1634,7 @@
                 <strong>$309.97</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>63.5% off</span><span>Save $539.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 112</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>63.5% off</span><span>Save $539.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 112</span></div>
             </article>
 
             <article
@@ -1492,7 +1660,7 @@
                 <strong>$314.96</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -1518,7 +1686,7 @@
                 <strong>$314.96</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-flat'>Same as prior day</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $134.99</span><span class='trend trend-flat'>Same as prior day</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -1544,7 +1712,7 @@
                 <strong>$315.00</strong>
                 <span class='was'>Was $629.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -1570,7 +1738,7 @@
                 <strong>$315.00</strong>
                 <span class='was'>Was $629.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153cm, 160cm</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $314.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153cm, 160cm</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -1596,7 +1764,7 @@
                 <strong>$318.01</strong>
                 <span class='was'>Was $649.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>51.0% off</span><span>Save $330.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>51.0% off</span><span>Save $330.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -1622,7 +1790,7 @@
                 <strong>$324.99</strong>
                 <span class='was'>Was $749.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>56.6% off</span><span>Save $424.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154.4, 160.1</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>56.6% off</span><span>Save $424.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154.4, 160.1</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
 
             <article
@@ -1648,31 +1816,7 @@
                 <strong>$324.99</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>53.6% off</span><span>Save $374.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 147, 153, 159, 165</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
-            </article>
-
-            <article
-              class="deal"
-              data-source="CampSaver backcountry skis"
-              data-title="8 models black diamond helio carbon 95 skis as low as ( up to 61%) blazin&#x27; deal"
-              data-price="328.49"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="13.43"
-              data-trend="flat"
-              data-has-image="false"
-              data-category="ski"
-            >
-              <div class='thumb thumb-empty' aria-hidden='true'></div>
-              <div class="deal-main">
-                <p class="source">CampSaver backcountry skis</p>
-                <h2><a href="https://www.campsaver.com/black-diamond-helio-carbon-95-skis.html" target="_blank" rel="noreferrer">8 models Black Diamond Helio Carbon 95 Skis As Low As ( Up to 61%) Blazin&#x27; Deal</a></h2>
-              </div>
-              <div class="price">
-                <strong>$328.49</strong>
-                <span class='was'>Was $328.49</span>
-              </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 13</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>53.6% off</span><span>Save $374.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 147, 153, 159, 165</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
             </article>
 
             <article
@@ -1698,7 +1842,7 @@
                 <strong>$329.00</strong>
                 <span class='was'>Was $549.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 171 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $220.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 171 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -1724,7 +1868,7 @@
                 <strong>$329.97</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $219.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 88</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $219.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 88</span></div>
             </article>
 
             <article
@@ -1750,7 +1894,7 @@
                 <strong>$339.99</strong>
                 <span class='was'>Was $849.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $510.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $510.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
             </article>
 
             <article
@@ -1776,7 +1920,7 @@
                 <strong>$339.99</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>51.4% off</span><span>Save $359.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>51.4% off</span><span>Save $359.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -1802,7 +1946,7 @@
                 <strong>$340.00</strong>
                 <span class='was'>Was $679.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154cm, 161cm, 168cm, 175cm</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154cm, 161cm, 168cm, 175cm</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -1828,7 +1972,7 @@
                 <strong>$340.00</strong>
                 <span class='was'>Was $679.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -1854,7 +1998,7 @@
                 <strong>$340.00</strong>
                 <span class='was'>Was $679.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155cm, 162cm</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155cm, 162cm</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -1880,7 +2024,7 @@
                 <strong>$340.00</strong>
                 <span class='was'>Was $679.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $339.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -1906,7 +2050,7 @@
                 <strong>$347.97</strong>
                 <span class='was'>Was $579.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $231.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 88</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $231.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 88</span></div>
             </article>
 
             <article
@@ -1932,7 +2076,7 @@
                 <strong>$349.00</strong>
                 <span class='was'>Was $629.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.5% off</span><span>Save $280.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164cm, 178cm, 184cm</span><span>Score 93</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.5% off</span><span>Save $280.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164cm, 178cm, 184cm</span><span>Score 93</span></div>
             </article>
 
             <article
@@ -1958,7 +2102,7 @@
                 <strong>$349.95</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
 
             <article
@@ -1984,7 +2128,7 @@
                 <strong>$349.95</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
 
             <article
@@ -2010,7 +2154,7 @@
                 <strong>$349.95</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
 
             <article
@@ -2036,7 +2180,7 @@
                 <strong>$349.95</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $150.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
 
             <article
@@ -2062,7 +2206,7 @@
                 <strong>$349.96</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $149.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $149.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 78</span></div>
             </article>
 
             <article
@@ -2088,7 +2232,7 @@
                 <strong>$349.97</strong>
                 <span class='was'>Was $899.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>61.1% off</span><span>Save $549.03</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>61.1% off</span><span>Save $549.03</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
 
             <article
@@ -2114,7 +2258,7 @@
                 <strong>$349.97</strong>
                 <span class='was'>Was $799.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>56.3% off</span><span>Save $449.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>56.3% off</span><span>Save $449.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
             </article>
 
             <article
@@ -2140,7 +2284,7 @@
                 <strong>$349.98</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -2166,7 +2310,7 @@
                 <strong>$349.98</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 170cm</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $349.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 170cm</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -2192,7 +2336,7 @@
                 <strong>$349.99</strong>
                 <span class='was'>Was $875.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $525.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $525.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 108</span></div>
             </article>
 
             <article
@@ -2218,7 +2362,7 @@
                 <strong>$357.47</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
             </article>
 
             <article
@@ -2244,7 +2388,7 @@
                 <strong>$357.47</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $192.48</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 83</span></div>
             </article>
 
             <article
@@ -2270,7 +2414,7 @@
                 <strong>$359.96</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
             </article>
 
             <article
@@ -2296,7 +2440,7 @@
                 <strong>$359.96</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $89.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 55</span></div>
             </article>
 
             <article
@@ -2322,7 +2466,7 @@
                 <strong>$359.99</strong>
                 <span class='was'>Was $849.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>57.6% off</span><span>Save $490.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>57.6% off</span><span>Save $490.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
 
             <article
@@ -2348,7 +2492,7 @@
                 <strong>$365.00</strong>
                 <span class='was'>Was $729.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $364.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $364.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -2356,9 +2500,9 @@
               data-source="CampSaver backcountry skis"
               data-title="2 models g3 seekr r3 100 skis list: ( 64%) blazin&#x27; deal"
               data-price="374.40"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="12.51"
+              data-discount="64.0"
+              data-savings="666.60"
+              data-score="111.51"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -2370,9 +2514,9 @@
               </div>
               <div class="price">
                 <strong>$374.40</strong>
-                <span class='was'>Was $374.40</span>
+                <span class='was'>Was $1041.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 13</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>64.0% off</span><span>Save $666.60</span><span class='trend trend-flat'>Same as prior day</span><span>Score 112</span></div>
             </article>
 
             <article
@@ -2398,7 +2542,7 @@
                 <strong>$374.98</strong>
                 <span class='was'>Was $749.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $374.97</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $374.97</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -2424,7 +2568,7 @@
                 <strong>$374.99</strong>
                 <span class='was'>Was $925.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>59.5% off</span><span>Save $550.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 179</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>59.5% off</span><span>Save $550.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 179</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
 
             <article
@@ -2450,7 +2594,7 @@
                 <strong>$374.99</strong>
                 <span class='was'>Was $899.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $525.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150, 155, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $525.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150, 155, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
 
             <article
@@ -2476,7 +2620,7 @@
                 <strong>$374.99</strong>
                 <span class='was'>Was $899.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $524.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $524.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
 
             <article
@@ -2502,7 +2646,7 @@
                 <strong>$374.99</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.9% off</span><span>Save $474.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 148, 154, 160</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.9% off</span><span>Save $474.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 148, 154, 160</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
 
             <article
@@ -2528,7 +2672,7 @@
                 <strong>$374.99</strong>
                 <span class='was'>Was $799.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>53.1% off</span><span>Save $424.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>53.1% off</span><span>Save $424.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -2554,7 +2698,7 @@
                 <strong>$378.00</strong>
                 <span class='was'>Was $679.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $301.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 171cm, 177cm, 183cm</span><span>Score 92</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $301.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 171cm, 177cm, 183cm</span><span>Score 92</span></div>
             </article>
 
             <article
@@ -2580,7 +2724,7 @@
                 <strong>$379.00</strong>
                 <span class='was'>Was $649.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>41.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>41.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -2606,7 +2750,7 @@
                 <strong>$384.95</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -2632,7 +2776,7 @@
                 <strong>$384.95</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $165.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -2658,7 +2802,7 @@
                 <strong>$384.96</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $164.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $164.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -2684,7 +2828,7 @@
                 <strong>$389.00</strong>
                 <span class='was'>Was $649.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $260.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $260.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
             </article>
 
             <article
@@ -2710,7 +2854,7 @@
                 <strong>$389.97</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $259.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 87</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $259.98</span><span class='trend trend-flat'>Same as prior day</span><span>Score 87</span></div>
             </article>
 
             <article
@@ -2736,7 +2880,7 @@
                 <strong>$389.97</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $209.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 82</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>35.0% off</span><span>Save $209.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 82</span></div>
             </article>
 
             <article
@@ -2762,7 +2906,7 @@
                 <strong>$390.00</strong>
                 <span class='was'>Was $779.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $389.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 97</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $389.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 97</span></div>
             </article>
 
             <article
@@ -2788,7 +2932,7 @@
                 <strong>$399.00</strong>
                 <span class='was'>Was $949.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>58.0% off</span><span>Save $550.95</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160cm, 166cm, 172cm, 184cm</span><span>Score 105</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>58.0% off</span><span>Save $550.95</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160cm, 166cm, 172cm, 184cm</span><span>Score 105</span></div>
             </article>
 
             <article
@@ -2814,7 +2958,7 @@
                 <strong>$399.95</strong>
                 <span class='was'>Was $399.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -2840,7 +2984,7 @@
                 <strong>$399.96</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
             </article>
 
             <article
@@ -2866,7 +3010,7 @@
                 <strong>$399.96</strong>
                 <span class='was'>Was $499.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $99.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 57</span></div>
             </article>
 
             <article
@@ -2892,7 +3036,7 @@
                 <strong>$399.98</strong>
                 <span class='was'>Was $799.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $399.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Almond Milk / 165cm, Almond Milk / 173cm, Nirvana / 165cm</span><span>Score 97</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $399.97</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Almond Milk / 165cm, Almond Milk / 173cm, Nirvana / 165cm</span><span>Score 97</span></div>
             </article>
 
             <article
@@ -2918,33 +3062,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $1000.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
-            </article>
-
-            <article
-              class="deal"
-              data-source="Utah Skis demo skis sale"
-              data-title="elan playmaker 111 demo skis 2026"
-              data-price="399.99"
-              data-discount="60.0"
-              data-savings="600.00"
-              data-score="107.00"
-              data-trend="flat"
-              data-has-image="true"
-              data-category="ski"
-            >
-              <a class="thumb" href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Playmaker 111 Demo Skis 2026">
-                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker111DemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
-              </a>
-              <div class="deal-main">
-                <p class="source">Utah Skis demo skis sale</p>
-                <h2><a href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 111 Demo Skis 2026</a></h2>
-              </div>
-              <div class="price">
-                <strong>$399.99</strong>
-                <span class='was'>Was $999.99</span>
-              </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 166</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
 
             <article
@@ -2970,7 +3088,33 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 166, 176, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 166, 176, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
+            </article>
+
+            <article
+              class="deal"
+              data-source="Utah Skis demo skis sale"
+              data-title="elan playmaker 111 demo skis 2026"
+              data-price="399.99"
+              data-discount="60.0"
+              data-savings="600.00"
+              data-score="107.00"
+              data-trend="flat"
+              data-has-image="true"
+              data-category="ski"
+            >
+              <a class="thumb" href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer" aria-label="Elan Playmaker 111 Demo Skis 2026">
+                <img src="https://cdn.shopify.com/s/files/1/0580/7410/3867/files/ElanPlaymaker111DemoSkis2026_720x720.jpg?v=1774998606" alt="" loading="lazy" decoding="async" />
+              </a>
+              <div class="deal-main">
+                <p class="source">Utah Skis demo skis sale</p>
+                <h2><a href="https://utahskis.com/products/elan-playmaker-111-demo-skis-2026" target="_blank" rel="noreferrer">Elan Playmaker 111 Demo Skis 2026</a></h2>
+              </div>
+              <div class="price">
+                <strong>$399.99</strong>
+                <span class='was'>Was $999.99</span>
+              </div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>60.0% off</span><span>Save $600.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 107</span></div>
             </article>
 
             <article
@@ -2996,7 +3140,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $975.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>59.0% off</span><span>Save $575.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 180</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>59.0% off</span><span>Save $575.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 180</span><span class='stock stock-in_stock'>In stock</span><span>Score 106</span></div>
             </article>
 
             <article
@@ -3022,7 +3166,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $949.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>57.9% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161, 168, 175, 182, 189</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>57.9% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 161, 168, 175, 182, 189</span><span class='stock stock-in_stock'>In stock</span><span>Score 105</span></div>
             </article>
 
             <article
@@ -3048,7 +3192,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $899.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.6% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
 
             <article
@@ -3074,7 +3218,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $849.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $450.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 147, 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $450.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 147, 154, 161</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -3100,7 +3244,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -3126,7 +3270,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Gray / 148</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.9% off</span><span>Save $449.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes Gray / 148</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -3152,7 +3296,7 @@
                 <strong>$399.99</strong>
                 <span class='was'>Was $799.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $399.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158, 165, 172, 179, 186</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $399.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158, 165, 172, 179, 186</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
             </article>
 
             <article
@@ -3178,7 +3322,7 @@
                 <strong>$399.99</strong>
 
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -3204,7 +3348,7 @@
                 <strong>$400.12</strong>
 
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -3230,7 +3374,7 @@
                 <strong>$401.97</strong>
                 <span class='was'>Was $669.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $267.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156cm, 163cm, 170cm</span><span>Score 87</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $267.98</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 156cm, 163cm, 170cm</span><span>Score 87</span></div>
             </article>
 
             <article
@@ -3256,7 +3400,7 @@
                 <strong>$419.95</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3282,7 +3426,7 @@
                 <strong>$419.95</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3308,7 +3452,7 @@
                 <strong>$419.95</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3334,7 +3478,7 @@
                 <strong>$419.96</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3360,7 +3504,7 @@
                 <strong>$419.96</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3386,7 +3530,7 @@
                 <strong>$419.96</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 154 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3412,7 +3556,7 @@
                 <strong>$419.96</strong>
                 <span class='was'>Was $599.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $179.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3438,7 +3582,7 @@
                 <strong>$419.97</strong>
                 <span class='was'>Was $699.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $279.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $279.98</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 87</span></div>
             </article>
 
             <article
@@ -3464,7 +3608,7 @@
                 <strong>$419.99</strong>
                 <span class='was'>Was $599.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3490,7 +3634,7 @@
                 <strong>$419.99</strong>
                 <span class='was'>Was $599.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $180.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 77</span></div>
             </article>
 
             <article
@@ -3516,7 +3660,7 @@
                 <strong>$424.95</strong>
                 <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $425.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 172cm</span><span>Score 96</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $425.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 172cm</span><span>Score 96</span></div>
             </article>
 
             <article
@@ -3542,7 +3686,7 @@
                 <strong>$424.95</strong>
                 <span class='was'>Was $424.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -3568,7 +3712,7 @@
                 <strong>$424.95</strong>
                 <span class='was'>Was $424.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -3594,7 +3738,7 @@
                 <strong>$424.95</strong>
                 <span class='was'>Was $424.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 150 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 12</span></div>
             </article>
 
             <article
@@ -3620,7 +3764,7 @@
                 <strong>$424.99</strong>
                 <span class='was'>Was $949.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.3% off</span><span>Save $524.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166, 172, 178, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.3% off</span><span>Save $524.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166, 172, 178, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 102</span></div>
             </article>
 
             <article
@@ -3646,7 +3790,7 @@
                 <strong>$429.00</strong>
                 <span class='was'>Was $699.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
 
             <article
@@ -3672,7 +3816,7 @@
                 <strong>$429.00</strong>
                 <span class='was'>Was $699.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>38.6% off</span><span>Save $270.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 85</span></div>
             </article>
 
             <article
@@ -3698,7 +3842,7 @@
                 <strong>$429.00</strong>
                 <span class='was'>Was $429.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 11</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 157 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 11</span></div>
             </article>
 
             <article
@@ -3706,9 +3850,9 @@
               data-source="CampSaver backcountry skis"
               data-title="weston skyline carbon ski (2) list: ( 52%) blazin&#x27; deal"
               data-price="431.46"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="11.37"
+              data-discount="52.0"
+              data-savings="467.54"
+              data-score="98.37"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -3720,9 +3864,9 @@
               </div>
               <div class="price">
                 <strong>$431.46</strong>
-                <span class='was'>Was $431.46</span>
+                <span class='was'>Was $899.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 11</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.0% off</span><span>Save $467.54</span><span class='trend trend-flat'>Same as prior day</span><span>Score 98</span></div>
             </article>
 
             <article
@@ -3748,7 +3892,7 @@
                 <strong>$433.00</strong>
                 <span class='was'>Was $779.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 91</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 91</span></div>
             </article>
 
             <article
@@ -3774,7 +3918,7 @@
                 <strong>$433.00</strong>
                 <span class='was'>Was $779.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172cm, 178cm, 184cm</span><span>Score 91</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $346.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172cm, 178cm, 184cm</span><span>Score 91</span></div>
             </article>
 
             <article
@@ -3800,7 +3944,7 @@
                 <strong>$439.96</strong>
                 <span class='was'>Was $549.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $109.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 59</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>20.0% off</span><span>Save $109.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 159 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 59</span></div>
             </article>
 
             <article
@@ -3826,7 +3970,7 @@
                 <strong>$440.30</strong>
                 <span class='was'>Was $629.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 178 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -3852,7 +3996,7 @@
                 <strong>$440.30</strong>
                 <span class='was'>Was $629.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $188.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -3878,7 +4022,7 @@
                 <strong>$440.99</strong>
                 <span class='was'>Was $629.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $189.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $189.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 153 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -3904,7 +4048,7 @@
                 <strong>$447.99</strong>
                 <span class='was'>Was $949.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.8% off</span><span>Save $502.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152, 158, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.8% off</span><span>Save $502.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152, 158, 164</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -3930,7 +4074,7 @@
                 <strong>$447.99</strong>
                 <span class='was'>Was $899.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.2% off</span><span>Save $452.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 146, 152</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.2% off</span><span>Save $452.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 146, 152</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
             </article>
 
             <article
@@ -3956,7 +4100,7 @@
                 <strong>$449.00</strong>
                 <span class='was'>Was $749.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
 
             <article
@@ -3982,7 +4126,7 @@
                 <strong>$449.00</strong>
                 <span class='was'>Was $749.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.1% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
 
             <article
@@ -4008,7 +4152,7 @@
                 <strong>$449.94</strong>
 
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 11</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 11</span></div>
             </article>
 
             <article
@@ -4034,7 +4178,7 @@
                 <strong>$449.95</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.04</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168, 175, 182</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.04</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168, 175, 182</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -4060,7 +4204,7 @@
                 <strong>$449.95</strong>
                 <span class='was'>Was $449.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 155 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 11</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 155 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 11</span></div>
             </article>
 
             <article
@@ -4086,7 +4230,7 @@
                 <strong>$449.99</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 149, 156, 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -4112,7 +4256,7 @@
                 <strong>$449.99</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>55.0% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 167, 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 101</span></div>
             </article>
 
             <article
@@ -4138,7 +4282,7 @@
                 <strong>$449.99</strong>
                 <span class='was'>Was $949.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.6% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164, 170, 176, 182, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.6% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164, 170, 176, 182, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -4164,7 +4308,7 @@
                 <strong>$449.99</strong>
                 <span class='was'>Was $949.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.6% off</span><span>Save $499.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 169.1 CM, 175.2 CM, 182.1 CM</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.6% off</span><span>Save $499.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 169.1 CM, 175.2 CM, 182.1 CM</span><span class='stock stock-in_stock'>In stock</span><span>Score 99</span></div>
             </article>
 
             <article
@@ -4190,7 +4334,7 @@
                 <strong>$449.99</strong>
                 <span class='was'>Was $749.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>40.0% off</span><span>Save $300.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 86</span></div>
             </article>
 
             <article
@@ -4216,7 +4360,7 @@
                 <strong>$453.96</strong>
                 <span class='was'>Was $1224.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>62.9% off</span><span>Save $770.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>62.9% off</span><span>Save $770.99</span><span class='trend trend-new'>Newly tracked</span><span>Sizes 165 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 109</span></div>
             </article>
 
             <article
@@ -4242,7 +4386,7 @@
                 <strong>$454.30</strong>
                 <span class='was'>Was $649.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $194.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $194.70</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4268,7 +4412,7 @@
                 <strong>$454.95</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 158 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4294,7 +4438,7 @@
                 <strong>$454.95</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 162 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4320,7 +4464,7 @@
                 <strong>$454.95</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4346,7 +4490,7 @@
                 <strong>$454.95</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4372,7 +4516,7 @@
                 <strong>$454.95</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 168 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4398,7 +4542,7 @@
                 <strong>$454.96</strong>
                 <span class='was'>Was $649.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $194.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 177 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $194.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 177 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4424,7 +4568,7 @@
                 <strong>$454.97</strong>
                 <span class='was'>Was $649.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.02</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>30.0% off</span><span>Save $195.02</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156 cm</span><span class='stock stock-in_stock'>In stock</span><span>Score 76</span></div>
             </article>
 
             <article
@@ -4450,7 +4594,7 @@
                 <strong>$461.00</strong>
                 <span class='was'>Was $829.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $368.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166cm, 183cm</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $368.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 166cm, 183cm</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4476,7 +4620,7 @@
                 <strong>$467.00</strong>
                 <span class='was'>Was $839.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155cm, 163cm, 177cm</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 155cm, 163cm, 177cm</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4502,7 +4646,7 @@
                 <strong>$467.00</strong>
                 <span class='was'>Was $839.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 171cm</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.3% off</span><span>Save $372.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 171cm</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4528,7 +4672,7 @@
                 <strong>$472.00</strong>
                 <span class='was'>Was $849.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $377.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156cm, 163cm, 182cm</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $377.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156cm, 163cm, 182cm</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4554,7 +4698,7 @@
                 <strong>$474.99</strong>
                 <span class='was'>Was $1150.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>58.7% off</span><span>Save $675.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152, 160, 168, 176</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>58.7% off</span><span>Save $675.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 152, 160, 168, 176</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
             </article>
 
             <article
@@ -4580,7 +4724,7 @@
                 <strong>$474.99</strong>
                 <span class='was'>Was $1050.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>54.8% off</span><span>Save $575.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>54.8% off</span><span>Save $575.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 163, 170, 177, 184</span><span class='stock stock-in_stock'>In stock</span><span>Score 100</span></div>
             </article>
 
             <article
@@ -4606,7 +4750,7 @@
                 <strong>$474.99</strong>
                 <span class='was'>Was $899.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>47.2% off</span><span>Save $424.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>47.2% off</span><span>Save $424.96</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 93</span></div>
             </article>
 
             <article
@@ -4632,7 +4776,7 @@
                 <strong>$489.00</strong>
                 <span class='was'>Was $879.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164cm, 172cm</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 164cm, 172cm</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4658,7 +4802,7 @@
                 <strong>$489.00</strong>
                 <span class='was'>Was $879.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $390.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4684,7 +4828,7 @@
                 <strong>$494.00</strong>
                 <span class='was'>Was $889.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $395.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $395.00</span><span class='trend trend-flat'>Same as prior day</span><span>Score 90</span></div>
             </article>
 
             <article
@@ -4710,7 +4854,7 @@
                 <strong>$499.00</strong>
 
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 10</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 10</span></div>
             </article>
 
             <article
@@ -4736,7 +4880,7 @@
                 <strong>$499.99</strong>
                 <span class='was'>Was $1200.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $700.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 164, 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>58.3% off</span><span>Save $700.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 156, 164, 172, 180, 188</span><span class='stock stock-in_stock'>In stock</span><span>Score 103</span></div>
             </article>
 
             <article
@@ -4762,7 +4906,7 @@
                 <strong>$499.99</strong>
                 <span class='was'>Was $1049.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>52.4% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>52.4% off</span><span>Save $550.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 173, 179, 185</span><span class='stock stock-in_stock'>In stock</span><span>Score 97</span></div>
             </article>
 
             <article
@@ -4788,7 +4932,7 @@
                 <strong>$499.99</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 95</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $500.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163</span><span class='stock stock-in_stock'>In stock</span><span>Score 95</span></div>
             </article>
 
             <article
@@ -4814,7 +4958,7 @@
                 <strong>$499.99</strong>
                 <span class='was'>Was $900.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $400.01</span><span class='trend trend-flat'>Same as prior day</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $400.01</span><span class='trend trend-flat'>Same as prior day</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -4840,7 +4984,7 @@
                 <strong>$500.00</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 177cm</span><span>Score 95</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163cm, 177cm</span><span>Score 95</span></div>
             </article>
 
             <article
@@ -4866,7 +5010,7 @@
                 <strong>$500.00</strong>
                 <span class='was'>Was $999.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 95</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $499.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 95</span></div>
             </article>
 
             <article
@@ -4892,7 +5036,7 @@
                 <strong>$524.99</strong>
                 <span class='was'>Was $1300.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>59.6% off</span><span>Save $775.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 173, 181</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
+              <div class="badges"><span class='buy-zone zone-strong'>Strong deal</span><span class='category category-ski'>Ski</span><span>59.6% off</span><span>Save $775.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 173, 181</span><span class='stock stock-in_stock'>In stock</span><span>Score 104</span></div>
             </article>
 
             <article
@@ -4918,7 +5062,7 @@
                 <strong>$524.99</strong>
                 <span class='was'>Was $1079.99</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>51.4% off</span><span>Save $555.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 170, 177</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>51.4% off</span><span>Save $555.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 163, 170, 177</span><span class='stock stock-in_stock'>In stock</span><span>Score 96</span></div>
             </article>
 
             <article
@@ -4944,7 +5088,7 @@
                 <strong>$528.00</strong>
                 <span class='was'>Was $949.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $421.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 172cm, 175cm, 178cm, 184cm</span><span>Score 89</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.4% off</span><span>Save $421.00</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 165cm, 172cm, 175cm, 178cm, 184cm</span><span>Score 89</span></div>
             </article>
 
             <article
@@ -4970,7 +5114,7 @@
                 <strong>$559.99</strong>
                 <span class='was'>Was $1000.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>44.0% off</span><span>Save $440.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 175cm, 185cm</span><span>Score 88</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>44.0% off</span><span>Save $440.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 175cm, 185cm</span><span>Score 88</span></div>
             </article>
 
             <article
@@ -4996,7 +5140,7 @@
                 <strong>$574.99</strong>
                 <span class='was'>Was $1149.00</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $574.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160.1</span><span class='stock stock-in_stock'>In stock</span><span>Score 94</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>50.0% off</span><span>Save $574.01</span><span class='trend trend-flat'>Same as prior day</span><span>Sizes 160.1</span><span class='stock stock-in_stock'>In stock</span><span>Score 94</span></div>
             </article>
 
             <article
@@ -5018,9 +5162,9 @@
               </div>
               <div class="price">
                 <strong>$599.96</strong>
-                <span class='was'>Was $599.96</span>
+
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 8</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 8</span></div>
             </article>
 
             <article
@@ -5042,9 +5186,9 @@
               </div>
               <div class="price">
                 <strong>$599.96</strong>
-                <span class='was'>Was $599.96</span>
+
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 8</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 8</span></div>
             </article>
 
             <article
@@ -5052,9 +5196,9 @@
               data-source="CampSaver backcountry skis"
               data-title="4 models black diamond helio carbon 88 skis list: ( 25%) on"
               data-price="618.71"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="7.63"
+              data-discount="25.0"
+              data-savings="206.24"
+              data-score="67.63"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -5066,9 +5210,9 @@
               </div>
               <div class="price">
                 <strong>$618.71</strong>
-                <span class='was'>Was $618.71</span>
+                <span class='was'>Was $824.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 8</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>25.0% off</span><span>Save $206.24</span><span class='trend trend-flat'>Same as prior day</span><span>Score 68</span></div>
             </article>
 
             <article
@@ -5076,9 +5220,9 @@
               data-source="CampSaver backcountry skis"
               data-title="3 models black diamond impulse 104 ti skis list: ( 25%) on"
               data-price="637.46"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="7.25"
+              data-discount="25.0"
+              data-savings="212.49"
+              data-score="67.25"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -5090,9 +5234,9 @@
               </div>
               <div class="price">
                 <strong>$637.46</strong>
-                <span class='was'>Was $637.46</span>
+                <span class='was'>Was $849.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 7</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>25.0% off</span><span>Save $212.49</span><span class='trend trend-flat'>Same as prior day</span><span>Score 67</span></div>
             </article>
 
             <article
@@ -5114,9 +5258,9 @@
               </div>
               <div class="price">
                 <strong>$637.46</strong>
-                <span class='was'>Was $637.46</span>
+
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 7</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 7</span></div>
             </article>
 
             <article
@@ -5124,9 +5268,9 @@
               data-source="CampSaver backcountry skis"
               data-title="4 models black diamond helio carbon 102 skis list: ( 25%) on"
               data-price="674.96"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="6.50"
+              data-discount="25.0"
+              data-savings="224.99"
+              data-score="66.50"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -5138,9 +5282,9 @@
               </div>
               <div class="price">
                 <strong>$674.96</strong>
-                <span class='was'>Was $674.96</span>
+                <span class='was'>Was $899.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 6</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>25.0% off</span><span>Save $224.99</span><span class='trend trend-flat'>Same as prior day</span><span>Score 66</span></div>
             </article>
 
             <article
@@ -5148,9 +5292,9 @@
               data-source="CampSaver backcountry skis"
               data-title="4 models black diamond helio carbon 108 skis list: ( 25%) on"
               data-price="712.46"
-              data-discount="0.0"
-              data-savings="0.00"
-              data-score="5.75"
+              data-discount="25.0"
+              data-savings="237.49"
+              data-score="65.75"
               data-trend="flat"
               data-has-image="false"
               data-category="ski"
@@ -5162,9 +5306,9 @@
               </div>
               <div class="price">
                 <strong>$712.46</strong>
-                <span class='was'>Was $712.46</span>
+                <span class='was'>Was $949.95</span>
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 6</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>25.0% off</span><span>Save $237.49</span><span class='trend trend-flat'>Same as prior day</span><span>Score 66</span></div>
             </article>
 
             <article
@@ -5186,13 +5330,13 @@
               </div>
               <div class="price">
                 <strong>$899.95</strong>
-                <span class='was'>Was $899.95</span>
+
               </div>
-              <div class="badges"><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span class='cached'>Cached last seen price</span><span>Score 2</span></div>
+              <div class="badges"><span class='buy-zone zone-fair'>Fair deal</span><span class='category category-ski'>Ski</span><span>Price found</span><span class='trend trend-flat'>Same as prior day</span><span>Score 2</span></div>
             </article>
 
       </section>
-      <section class='errors'><h2>Source errors</h2><ul><li>CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue</li></ul></section>
+
     </main>
     <script>
       const checkboxes = [...document.querySelectorAll('.source-toggle input')];

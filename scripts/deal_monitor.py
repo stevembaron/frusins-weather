@@ -123,6 +123,8 @@ class Deal:
     price_change_percent: float | None = None
     price_trend: str | None = None
     first_seen_at: str | None = None
+    lowest_price: float | None = None
+    highest_price: float | None = None
 
 
 @dataclass
@@ -1448,6 +1450,8 @@ def annotate_and_update_price_history(deals: list[Deal], history_path: Path, gen
         deal.first_seen_at = first_seen_at
         lowest = min([deal.current_price] + [price for price in [money(obs.get("price")) for obs in observations] if price is not None])
         highest = max([deal.current_price] + [price for price in [money(obs.get("price")) for obs in observations] if price is not None])
+        deal.lowest_price = round(lowest, 2)
+        deal.highest_price = round(highest, 2)
         items[key] = {
             "title": deal.title,
             "url": deal.url,
@@ -1556,6 +1560,10 @@ def combined_tracker_payload(payload: dict[str, Any], config: dict[str, Any]) ->
         for error in clothing_payload.get("errors", [])
         if isinstance(error, dict)
     ]
+    current_keys = {price_history_key(deal) for deal in combined["deals"]}
+    error_sources = {str(error.get("source", "")) for error in combined["errors"] if isinstance(error, dict)}
+    history = load_price_history(resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT))
+    combined["disappeared_deals"] = recent_disappeared_deals(history, current_keys, error_sources, limit=10)
 
     html_config = dict(config)
     html_config["report_title"] = "Gear Deals"
@@ -1583,7 +1591,105 @@ def tag_deal_for_category(deal: dict[str, Any], category: str) -> dict[str, Any]
     tagged.setdefault("price_change_percent", None)
     tagged.setdefault("price_trend", None)
     tagged.setdefault("first_seen_at", None)
+    tagged.setdefault("lowest_price", None)
+    tagged.setdefault("highest_price", None)
     return tagged
+
+
+def recent_disappeared_deals(
+    history: dict[str, Any],
+    current_keys: set[str],
+    error_sources: set[str],
+    *,
+    limit: int,
+) -> list[dict[str, Any]]:
+    items = history.get("items", {})
+    if not isinstance(items, dict):
+        return []
+
+    disappeared = []
+    for key, item in items.items():
+        if key in current_keys or not isinstance(item, dict):
+            continue
+        source = str(item.get("source") or "")
+        if source in error_sources:
+            continue
+        title = clean_text(str(item.get("title") or ""))
+        url = clean_text(str(item.get("url") or ""))
+        current = money(item.get("current_price"))
+        last_seen_at = str(item.get("last_seen_at") or "")
+        if not title or not url or current is None or not last_seen_at:
+            continue
+        disappeared.append(
+            {
+                "title": title,
+                "url": url,
+                "source": source,
+                "current_price": current,
+                "last_seen_at": last_seen_at,
+            }
+        )
+
+    return sorted(disappeared, key=lambda item: item["last_seen_at"], reverse=True)[:limit]
+
+
+def buy_zone(deal: dict[str, Any]) -> tuple[str, str]:
+    price = money(deal.get("current_price")) or 0
+    discount = float(deal.get("discount_percent") or 0)
+    trend = str(deal.get("price_trend") or "")
+    category = str(deal.get("category") or "ski")
+    lowest = money(deal.get("lowest_price"))
+
+    if trend == "down" and lowest is not None and price <= lowest:
+        return "New low", "zone-new-low"
+    if discount >= 70 or (category == "ski" and price <= 250 and discount >= 45):
+        return "Buy zone", "zone-buy"
+    if discount >= 55 or (category == "clothing" and price <= 50 and discount >= 45):
+        return "Strong deal", "zone-strong"
+    if trend == "up":
+        return "Going up", "zone-watch"
+    return "Fair deal", "zone-fair"
+
+
+def short_seen_label(value: str) -> str:
+    if not value:
+        return "last run"
+    try:
+        seen = datetime.fromisoformat(value)
+    except ValueError:
+        return value[:10]
+    return seen.strftime("%b %-d")
+
+
+def source_health_card(source: str, deals: list[dict[str, Any]], count: int, error: str | None) -> str:
+    source_deals = [deal for deal in deals if str(deal.get("source")) == source]
+    cached = sum(1 for deal in source_deals if deal.get("is_cached"))
+    photos = sum(1 for deal in source_deals if deal.get("image_url"))
+    drops = sum(1 for deal in source_deals if deal.get("price_trend") == "down")
+    if error:
+        status = "Issue"
+        status_class = "health-issue"
+        detail = error
+    elif cached:
+        status = "Cached"
+        status_class = "health-cached"
+        detail = f"{cached} cached listing{'s' if cached != 1 else ''}"
+    elif count:
+        status = "Live"
+        status_class = "health-live"
+        detail = f"{count} deals - {photos} photos - {drops} drops"
+    else:
+        status = "Quiet"
+        status_class = "health-quiet"
+        detail = "No matching deals this run"
+
+    return f"""
+    <div class="health-card {status_class}">
+      <strong>{html.escape(source)}</strong>
+      <span>{html.escape(status)}</span>
+      <p>{html.escape(detail)}</p>
+    </div>
+    """
 
 
 def report_title(config: dict[str, Any]) -> str:
@@ -1651,6 +1757,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     }
     image_count = sum(1 for deal in html_deals if deal.get("image_url"))
     price_drop_count = sum(1 for deal in html_deals if deal.get("price_trend") == "down")
+    newly_tracked_deals = sorted(
+        [deal for deal in html_deals if deal.get("price_trend") == "new"],
+        key=lambda deal: (deal["current_price"], -(deal.get("discount_percent") or 0)),
+    )[:8]
+    disappeared_deals = payload.get("disappeared_deals") if isinstance(payload.get("disappeared_deals"), list) else []
     best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
     lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
     category_panel = (
@@ -1679,6 +1790,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         trend_label = price_trend_label(deal)
         trend_class = f" trend-{html.escape(str(deal.get('price_trend') or 'unknown'))}"
         trend_badge = f"<span class='trend{trend_class}'>{html.escape(trend_label)}</span>" if trend_label else ""
+        zone_label, zone_class = buy_zone(deal)
+        zone_badge = f"<span class='buy-zone {html.escape(zone_class)}'>{html.escape(zone_label)}</span>"
         category = str(deal.get("category") or "ski")
         category_label = "Clothing" if category == "clothing" else "Ski"
         category_badge = (
@@ -1720,7 +1833,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{category_badge}{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1739,6 +1852,70 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         </label>
         """
         for source, count in sorted(source_counts.items())
+    )
+    new_items = "".join(
+        f"""
+        <a class="mini-card" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">
+          <strong>{html.escape(deal['title'])}</strong>
+          <span>${deal['current_price']:.2f} &middot; {html.escape(deal['source'])}</span>
+        </a>
+        """
+        for deal in newly_tracked_deals
+    )
+    disappeared_items = "".join(
+        f"""
+        <a class="mini-card ghost-card" href="{html.escape(str(deal['url']))}" target="_blank" rel="noreferrer">
+          <strong>{html.escape(str(deal['title']))}</strong>
+          <span>Last seen ${float(deal['current_price']):.2f} &middot; {html.escape(short_seen_label(str(deal.get('last_seen_at') or '')))}</span>
+        </a>
+        """
+        for deal in disappeared_deals[:8]
+        if isinstance(deal, dict) and money(deal.get("current_price")) is not None
+    )
+    activity_panel = (
+        f"""
+        <section class="activity-grid" aria-label="Deal activity">
+          <div class="activity-card">
+            <div class="section-head">
+              <h2>New since last run</h2>
+              <span>{len(newly_tracked_deals)} shown</span>
+            </div>
+            <div class="mini-list">{new_items if new_items else "<p class='empty-mini'>Nothing new this run.</p>"}</div>
+          </div>
+          <div class="activity-card">
+            <div class="section-head">
+              <h2>Recently disappeared</h2>
+              <span>{len(disappeared_deals[:8])} shown</span>
+            </div>
+            <div class="mini-list">{disappeared_items if disappeared_items else "<p class='empty-mini'>No recent vanishers.</p>"}</div>
+          </div>
+        </section>
+        """
+        if show_category_filter
+        else ""
+    )
+    error_by_source = {
+        str(error.get("source", "")): str(error.get("error", "Source error"))
+        for error in payload.get("errors", [])
+        if isinstance(error, dict)
+    }
+    health_sources = sorted(set(source_counts) | set(error_by_source))
+    health_cards = "".join(
+        source_health_card(source, html_deals, source_counts.get(source, 0), error_by_source.get(source))
+        for source in health_sources
+    )
+    health_panel = (
+        f"""
+        <section class="health-panel" aria-label="Store health">
+          <div class="section-head">
+            <h2>Store health</h2>
+            <span>{len(health_sources)} sources</span>
+          </div>
+          <div class="health-grid">{health_cards}</div>
+        </section>
+        """
+        if health_cards
+        else ""
     )
     source_filter = (
         f"""
@@ -1848,6 +2025,27 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .source-toggle input {{ accent-color: var(--accent); }}
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
+      .activity-grid {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }}
+      .activity-card, .health-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
+      .section-head {{ display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }}
+      .section-head h2 {{ margin: 0; font-size: 1rem; }}
+      .section-head span {{ color: var(--muted); font-size: .84rem; }}
+      .mini-list {{ display: grid; gap: 8px; }}
+      .mini-card {{ display: block; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; text-decoration: none; }}
+      .mini-card:hover {{ border-color: rgba(13,124,102,.45); }}
+      .mini-card strong {{ display: block; font-size: .92rem; line-height: 1.25; }}
+      .mini-card span, .empty-mini {{ display: block; margin: 4px 0 0; color: var(--muted); font-size: .84rem; }}
+      .ghost-card {{ background: #fbfaf4; }}
+      .health-panel {{ margin: 0 0 18px; }}
+      .health-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
+      .health-card {{ border: 1px solid var(--line); border-radius: 14px; background: white; padding: 10px; }}
+      .health-card strong {{ display: block; font-size: .9rem; line-height: 1.25; }}
+      .health-card span {{ display: inline-block; margin-top: 7px; border-radius: 999px; padding: 3px 7px; font-size: .75rem; font-weight: 800; }}
+      .health-card p {{ margin: 7px 0 0; color: var(--muted); font-size: .82rem; }}
+      .health-live span {{ background: #edf8f4; color: var(--accent); }}
+      .health-cached span {{ background: #fff8df; color: var(--gold); }}
+      .health-issue span {{ background: #fff0ee; color: var(--hot); }}
+      .health-quiet span {{ background: #f0f2ef; color: var(--muted); }}
       .deals-list {{ display: grid; gap: 12px; }}
       .deal {{ display: grid; grid-template-columns: 104px 1fr auto; gap: 16px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: 0 10px 26px rgba(39,61,51,.06); align-items: start; }}
       .deal:hover {{ border-color: rgba(13,124,102,.45); transform: translateY(-1px); transition: transform .16s ease, border-color .16s ease; }}
@@ -1867,6 +2065,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .trend-up {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
+      .buy-zone {{ font-weight: 800; }}
+      .zone-new-low, .zone-buy {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
+      .zone-strong {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
+      .zone-watch {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .zone-fair {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .category-ski {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .category-clothing {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .cached {{ border-color: #d8d1b1; background: #fff8df; color: var(--gold); }}
@@ -1875,7 +2078,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 850px) {{ header, .tool-grid {{ grid-template-columns: 1fr; }} .stats {{ min-width: 0; }} .controls {{ position: static; }} }}
+      @media (max-width: 850px) {{ header, .tool-grid, .activity-grid {{ grid-template-columns: 1fr; }} .stats {{ min-width: 0; }} .controls {{ position: static; }} }}
       @media (max-width: 620px) {{ main {{ padding-inline: 10px; }} header {{ padding: 18px; }} .stats {{ grid-template-columns: repeat(2, 1fr); }} .deal {{ grid-template-columns: 82px 1fr; gap: 12px; }} .thumb {{ width: 82px; height: 82px; }} .price {{ grid-column: 2; text-align: left; margin-top: 2px; }} .badges {{ grid-column: 1 / -1; }} }}
     </style>
   </head>
@@ -1894,6 +2097,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         </div>
       </header>
       {source_filter}
+      {activity_panel}
+      {health_panel}
       <section class="deals-list">
         {''.join(cards) if cards else empty}
       </section>
