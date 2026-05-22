@@ -2126,6 +2126,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
               </label>
               <div class="quick-filters" aria-label="Quick filters">
+                <button id="dealsOfDay" class="quick-button" type="button" aria-pressed="false">Top 5 deals today</button>
                 <label><input id="photoOnly" type="checkbox" /> Photos only</label>
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
                 <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
@@ -2196,8 +2197,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .tool-grid {{ display: grid; grid-template-columns: minmax(220px, 1.5fr) minmax(150px, .7fr) minmax(120px, .55fr) auto; gap: 10px; align-items: end; }}
       .field span {{ display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
       .quick-filters {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 1px; }}
-      .quick-filters label {{ display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }}
+      .quick-filters label, .quick-button {{ display: inline-flex; align-items: center; gap: 7px; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--accent-soft); white-space: nowrap; }}
       .quick-filters input {{ width: auto; accent-color: var(--accent); }}
+      .quick-button {{ cursor: pointer; color: var(--ink); font: inherit; }}
+      .quick-button[aria-pressed="true"] {{ border-color: rgba(13,124,102,.45); background: #edf8f4; color: var(--accent); box-shadow: inset 0 0 0 1px rgba(13,124,102,.18); }}
       .filter-note {{ margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }}
       .filter-note[hidden] {{ display: none; }}
       .store-panel {{ margin-top: 12px; }}
@@ -2312,6 +2315,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const watchOnly = document.querySelector('#watchOnly');
       const sizeOnly = document.querySelector('#sizeOnly');
       const hideIgnored = document.querySelector('#hideIgnored');
+      const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
 
@@ -2322,6 +2326,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       function sortDeals() {{
         const sorted = [...deals].sort((a, b) => {{
           const mode = sortSelect?.value || 'price-asc';
+          const topDealsMode = dealsOfDay?.getAttribute('aria-pressed') === 'true';
+          if (topDealsMode) {{
+            return numericValue(b, 'score') - numericValue(a, 'score') || numericValue(a, 'price') - numericValue(b, 'price');
+          }}
           if (mode === 'price-asc') {{
             const priceDelta = numericValue(a, 'price') - numericValue(b, 'price');
             if (priceDelta !== 0) return priceDelta;
@@ -2350,6 +2358,26 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requireWatch = Boolean(watchOnly?.checked);
         const requireSize = Boolean(sizeOnly?.checked);
         const shouldHideIgnored = Boolean(hideIgnored?.checked);
+        const topDealsMode = dealsOfDay?.getAttribute('aria-pressed') === 'true';
+        const eligibleTopDeals = topDealsMode
+          ? [...deals]
+              .filter((deal) => {{
+                const matchesStore = enabled.has(deal.dataset.source);
+                const matchesCategory = !categoryBoxes.length || enabledCategories.has(deal.dataset.category || 'ski');
+                const matchesSearch = !query || deal.dataset.title.includes(query) || deal.dataset.source.toLowerCase().includes(query);
+                const matchesPrice = Number.isNaN(maxPrice) || numericValue(deal, 'price') <= maxPrice;
+                const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
+                const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
+                const matchesNew = !requireNew || deal.dataset.trend === 'new';
+                const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
+                const matchesSize = !requireSize || deal.dataset.sizeMatch === 'true';
+                const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
+                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored;
+              }})
+              .sort((a, b) => numericValue(b, 'score') - numericValue(a, 'score') || numericValue(a, 'price') - numericValue(b, 'price'))
+              .slice(0, 5)
+          : [];
+        const topDealSet = new Set(eligibleTopDeals);
         let visible = 0;
         const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
@@ -2363,7 +2391,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
           const matchesSize = !requireSize || deal.dataset.sizeMatch === 'true';
           const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
-          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored;
+          const matchesTopDeals = !topDealsMode || topDealSet.has(deal);
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -2404,6 +2433,13 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }}
+      dealsOfDay?.addEventListener('click', () => {{
+        const enabled = dealsOfDay.getAttribute('aria-pressed') !== 'true';
+        dealsOfDay.setAttribute('aria-pressed', String(enabled));
+        dealsOfDay.textContent = enabled ? 'Showing top 5 deals' : 'Top 5 deals today';
+        if (enabled && sortSelect) sortSelect.value = 'score-desc';
+        updateView();
+      }});
       resetFilters?.addEventListener('click', () => {{
         if (searchInput) searchInput.value = '';
         if (sortSelect) sortSelect.value = 'price-asc';
@@ -2414,6 +2450,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (watchOnly) watchOnly.checked = false;
         if (sizeOnly) sizeOnly.checked = false;
         if (hideIgnored) hideIgnored.checked = true;
+        if (dealsOfDay) {{
+          dealsOfDay.setAttribute('aria-pressed', 'false');
+          dealsOfDay.textContent = 'Top 5 deals today';
+        }}
         for (const box of checkboxes) box.checked = true;
         for (const box of categoryBoxes) box.checked = true;
         updateView();
