@@ -1732,7 +1732,7 @@ def is_sweet_spot(deal: dict[str, Any]) -> bool:
         and price <= max_price
         and discount >= 40
         and stock_status != "sold_out"
-        and not deal.get("is_ignored")
+        and not deal.get("is_muted")
     )
 
 
@@ -1742,8 +1742,8 @@ def deal_verdict(deal: dict[str, Any]) -> tuple[str, str]:
     trend = str(deal.get("price_trend") or "")
     category = str(deal.get("category") or "ski")
 
-    if deal.get("is_ignored"):
-        return "Skip", "verdict-skip"
+    if deal.get("is_muted"):
+        return "Muted", "verdict-muted"
     if is_sweet_spot(deal) and (is_lowest_seen(deal) or trend == "down" or discount >= 55):
         return "Buy now", "verdict-buy"
     if deal.get("matches_my_size") or deal.get("matches_family_size"):
@@ -1842,8 +1842,8 @@ def preference_numbers(preferences: dict[str, Any], key: str) -> list[int]:
 
 def annotate_preferences(deals: list[dict[str, Any]], preferences: dict[str, Any]) -> None:
     watch_terms = preference_terms(preferences, "watch_terms")
-    ignore_terms = preference_terms(preferences, "ignore_terms")
-    ignored_urls = set(preference_terms(preferences, "ignore_urls"))
+    muted_terms = preference_terms(preferences, "muted_terms")
+    muted_urls = set(preference_terms(preferences, "muted_urls"))
     my_ski_sizes = preference_numbers(preferences, "my_ski_sizes")
     family_ski_sizes = preference_numbers(preferences, "family_ski_sizes")
     if not my_ski_sizes and not family_ski_sizes:
@@ -1865,7 +1865,7 @@ def annotate_preferences(deals: list[dict[str, Any]], preferences: dict[str, Any
         max_price = money(max_prices.get(category)) if isinstance(max_prices, dict) else None
 
         deal["is_watchlist"] = any(term in haystack for term in watch_terms)
-        deal["is_ignored"] = any(term in haystack for term in ignore_terms) or str(deal.get("url") or "").lower() in ignored_urls
+        deal["is_muted"] = any(term in haystack for term in muted_terms) or str(deal.get("url") or "").lower() in muted_urls
         deal["matches_my_size"] = matches_preferred_size(category, sizes, my_ski_sizes, clothing_sizes)
         deal["matches_family_size"] = category != "clothing" and matches_preferred_size(category, sizes, family_ski_sizes, set())
         deal["matches_size"] = bool(deal["matches_my_size"] or deal["matches_family_size"])
@@ -1892,7 +1892,7 @@ def matches_preferred_size(category: str, sizes: list[str], ski_sizes: list[int]
 
 def preference_summary(preferences: dict[str, Any], deals: list[dict[str, Any]]) -> dict[str, Any]:
     watch_terms = preference_terms(preferences, "watch_terms")
-    ignore_terms = preference_terms(preferences, "ignore_terms")
+    muted_terms = preference_terms(preferences, "muted_terms")
     my_ski_sizes = preference_numbers(preferences, "my_ski_sizes")
     family_ski_sizes = preference_numbers(preferences, "family_ski_sizes")
     if not my_ski_sizes and not family_ski_sizes:
@@ -1900,13 +1900,13 @@ def preference_summary(preferences: dict[str, Any], deals: list[dict[str, Any]])
     clothing_sizes = preference_terms(preferences, "clothing_sizes")
     return {
         "watch_terms": watch_terms,
-        "ignore_terms": ignore_terms,
+        "muted_terms": muted_terms,
         "my_ski_sizes": my_ski_sizes,
         "family_ski_sizes": family_ski_sizes,
         "ski_sizes": sorted(set(my_ski_sizes + family_ski_sizes)),
         "clothing_sizes": clothing_sizes,
         "watchlist_count": sum(1 for deal in deals if deal.get("is_watchlist")),
-        "ignored_count": sum(1 for deal in deals if deal.get("is_ignored")),
+        "muted_count": sum(1 for deal in deals if deal.get("is_muted")),
         "my_size_match_count": sum(1 for deal in deals if deal.get("matches_my_size")),
         "family_size_match_count": sum(1 for deal in deals if deal.get("matches_family_size")),
         "size_match_count": sum(1 for deal in deals if deal.get("matches_size")),
@@ -1967,7 +1967,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         key=lambda deal: (
             stock_sort_key(deal.get("stock_status")),
             deal["current_price"],
-            1 if deal.get("is_ignored") else 0,
+            1 if deal.get("is_muted") else 0,
             0 if deal.get("is_watchlist") else 1,
             -(deal["discount_percent"] or 0),
         ),
@@ -2007,7 +2007,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         [
             deal
             for deal in html_deals
-            if not deal.get("is_ignored")
+            if not deal.get("is_muted")
             and (
                 deal.get("is_watchlist")
                 or deal.get("matches_my_size")
@@ -2021,7 +2021,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     biggest_drop_deal = next(
         iter(
             sorted(
-                [deal for deal in html_deals if deal.get("price_trend") == "down" and not deal.get("is_ignored")],
+                [deal for deal in html_deals if deal.get("price_trend") == "down" and not deal.get("is_muted")],
                 key=lambda deal: (-(abs(float(deal.get("price_change") or 0))), deal["current_price"]),
             )
         ),
@@ -2082,7 +2082,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
         cached_badge = "<span class='cached'>Cached last seen price</span>" if deal.get("is_cached") else ""
         watch_badge = "<span class='watch-badge'>Watchlist</span>" if deal.get("is_watchlist") else ""
-        ignored_badge = "<span class='ignored-badge'>Hidden by preference</span>" if deal.get("is_ignored") else ""
+        muted_badge = "<span class='muted-badge'>Muted</span>" if deal.get("is_muted") else ""
         my_size_badge = "<span class='size-badge'>My size</span>" if deal.get("matches_my_size") else ""
         family_size_badge = "<span class='family-size-badge'>Family size</span>" if deal.get("matches_family_size") else ""
         thumbnail = (
@@ -2107,9 +2107,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-has-image="{'true' if deal.get('image_url') else 'false'}"
               data-category="{html.escape(category)}"
               data-watchlist="{'true' if deal.get('is_watchlist') else 'false'}"
-              data-ignored="{'true' if deal.get('is_ignored') else 'false'}"
-              data-server-ignored="{'true' if deal.get('is_ignored') else 'false'}"
-              data-local-ignored="false"
+              data-muted="{'true' if deal.get('is_muted') else 'false'}"
+              data-server-muted="{'true' if deal.get('is_muted') else 'false'}"
+              data-local-muted="false"
               data-size-match="{'true' if deal.get('matches_size') else 'false'}"
               data-my-size-match="{'true' if deal.get('matches_my_size') else 'false'}"
               data-family-size-match="{'true' if deal.get('matches_family_size') else 'false'}"
@@ -2127,7 +2127,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{watch_badge}{ignored_badge}{verdict_badge}{sweet_badge}{lowest_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{duplicate_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span><button class="note-button" type="button" data-ignore-value="{html.escape(str(deal['url']))}">Not interested</button></div>
+              <div class="badges">{watch_badge}{muted_badge}{verdict_badge}{sweet_badge}{lowest_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{duplicate_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span><button class="note-button" type="button" data-ignore-value="{html.escape(str(deal['url']))}">Not interested</button></div>
             </article>
             """
         )
@@ -2262,7 +2262,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             <button type="button" data-radar-filter="familySizeOnly" aria-pressed="false"><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></button>
             <button type="button" data-radar-filter="sweetOnly" aria-pressed="false"><strong>{sweet_spot_count}</strong><span>sweet spot</span></button>
             <button type="button" data-radar-filter="lowestSeenOnly" aria-pressed="false"><strong>{lowest_seen_count}</strong><span>lowest seen</span></button>
-            <button type="button" data-radar-filter="showIgnored" aria-pressed="false"><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></button>
+            <button type="button" data-radar-filter="showMuted" aria-pressed="false"><strong>{int(preferences.get("muted_count") or 0)}</strong><span>muted</span></button>
           </div>
           <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
         </section>
@@ -2308,7 +2308,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <label><input id="watchOnly" type="checkbox" /> Watchlist</label>
                 <label><input id="mySizeOnly" type="checkbox" /> My size</label>
                 <label><input id="familySizeOnly" type="checkbox" /> Family size</label>
-                <label><input id="hideIgnored" type="checkbox" checked /> Hide junk</label>
+                <label><input id="hideMuted" type="checkbox" checked /> Hide muted</label>
                 <button type="button" id="resetFilters">Reset</button>
               </div>
             </div>
@@ -2451,10 +2451,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .verdict {{ font-weight: 900; }}
       .verdict-buy, .sweet-badge, .floor-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .verdict-size, .dupe-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
-      .verdict-wait, .verdict-skip {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .verdict-wait, .verdict-muted {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .verdict-look {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .watch-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); font-weight: 800; }}
-      .ignored-badge {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .muted-badge {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .size-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; font-weight: 800; }}
       .family-size-badge {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; font-weight: 800; }}
       .zone-new-low, .zone-buy {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
@@ -2469,7 +2469,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .note-button {{ border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; background: #fff; color: var(--muted); cursor: pointer; font: inherit; font-size: .86rem; }}
       .note-button:hover {{ border-color: rgba(13,124,102,.45); color: var(--accent); }}
-      .deal[data-local-ignored="true"] .note-button {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .deal[data-local-muted="true"] .note-button {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
       @media (max-width: 1080px) {{ header {{ grid-template-columns: 1fr; }} .app-shell {{ grid-template-columns: 280px minmax(0, 1fr); }} .digest-grid, .activity-grid {{ grid-template-columns: 1fr; }} }}
@@ -2524,46 +2524,46 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const sweetOnly = document.querySelector('#sweetOnly');
       const lowestSeenOnly = document.querySelector('#lowestSeenOnly');
       const hideAlternates = document.querySelector('#hideAlternates');
-      const hideIgnored = document.querySelector('#hideIgnored');
+      const hideMuted = document.querySelector('#hideMuted');
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
       const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
-      const localIgnoreKey = 'skiDeals.localIgnoreUrls.v1';
-      let localIgnoredUrls = readLocalIgnores();
+      const localMuteKey = 'skiDeals.localMutedUrls.v1';
+      let localMutedUrls = readLocalMutes();
 
       function numericValue(deal, key) {{
         return Number.parseFloat(deal.dataset[key] || '0') || 0;
       }}
 
-      function readLocalIgnores() {{
+      function readLocalMutes() {{
         try {{
           const storage = window.localStorage;
           if (!storage) return new Set();
-          const parsed = JSON.parse(storage.getItem(localIgnoreKey) || '[]');
+          const parsed = JSON.parse(storage.getItem(localMuteKey) || '[]');
           return new Set(Array.isArray(parsed) ? parsed.filter(Boolean) : []);
         }} catch (error) {{
           return new Set();
         }}
       }}
 
-      function writeLocalIgnores() {{
+      function writeLocalMutes() {{
         try {{
           const storage = window.localStorage;
-          if (storage) storage.setItem(localIgnoreKey, JSON.stringify([...localIgnoredUrls].sort()));
+          if (storage) storage.setItem(localMuteKey, JSON.stringify([...localMutedUrls].sort()));
         }} catch (error) {{
           // Storage can be unavailable in restricted browser contexts; current-page hiding still works.
         }}
       }}
 
-      function applyLocalIgnores() {{
+      function applyLocalMutes() {{
         for (const deal of deals) {{
           const url = deal.dataset.url || '';
-          const isLocalIgnored = Boolean(url && localIgnoredUrls.has(url));
-          deal.dataset.localIgnored = String(isLocalIgnored);
-          deal.dataset.ignored = String(deal.dataset.serverIgnored === 'true' || isLocalIgnored);
+          const isLocalIgnored = Boolean(url && localMutedUrls.has(url));
+          deal.dataset.localMuted = String(isLocalIgnored);
+          deal.dataset.muted = String(deal.dataset.serverMuted === 'true' || isLocalIgnored);
           const button = deal.querySelector('.note-button');
-          if (button) button.textContent = isLocalIgnored ? 'Undo ignore' : 'Not interested';
+          if (button) button.textContent = isLocalIgnored ? 'Undo' : 'Not interested';
         }}
       }}
 
@@ -2577,11 +2577,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           if (mode === 'price-asc') {{
             const priceDelta = numericValue(a, 'price') - numericValue(b, 'price');
             if (priceDelta !== 0) return priceDelta;
-            if (a.dataset.ignored !== b.dataset.ignored) return a.dataset.ignored === 'true' ? 1 : -1;
+            if (a.dataset.muted !== b.dataset.muted) return a.dataset.muted === 'true' ? 1 : -1;
             if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
             return numericValue(b, 'discount') - numericValue(a, 'discount');
           }}
-          if (a.dataset.ignored !== b.dataset.ignored) return a.dataset.ignored === 'true' ? 1 : -1;
+          if (a.dataset.muted !== b.dataset.muted) return a.dataset.muted === 'true' ? 1 : -1;
           if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
           if (mode === 'discount-desc') return numericValue(b, 'discount') - numericValue(a, 'discount');
           if (mode === 'savings-desc') return numericValue(b, 'savings') - numericValue(a, 'savings');
@@ -2605,7 +2605,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requireSweet = Boolean(sweetOnly?.checked);
         const requireLowestSeen = Boolean(lowestSeenOnly?.checked);
         const shouldHideAlternates = Boolean(hideAlternates?.checked);
-        const shouldHideIgnored = Boolean(hideIgnored?.checked);
+        const shouldHideMuted = Boolean(hideMuted?.checked);
         const topDealsMode = dealsOfDay?.getAttribute('aria-pressed') === 'true';
         const eligibleTopDeals = topDealsMode
           ? [...deals]
@@ -2622,8 +2622,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 const matchesSweet = !requireSweet || deal.dataset.sweetSpot === 'true';
                 const matchesLowestSeen = !requireLowestSeen || deal.dataset.lowestSeen === 'true';
                 const matchesAlternate = !shouldHideAlternates || deal.dataset.dupePrimary === 'true';
-                const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
-                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesIgnored;
+                const matchesMuted = !shouldHideMuted || deal.dataset.muted !== 'true';
+                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesMuted;
               }})
               .sort((a, b) => numericValue(b, 'score') - numericValue(a, 'score') || numericValue(a, 'price') - numericValue(b, 'price'))
               .slice(0, 5)
@@ -2644,9 +2644,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesSweet = !requireSweet || deal.dataset.sweetSpot === 'true';
           const matchesLowestSeen = !requireLowestSeen || deal.dataset.lowestSeen === 'true';
           const matchesAlternate = !shouldHideAlternates || deal.dataset.dupePrimary === 'true';
-          const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
+          const matchesMuted = !shouldHideMuted || deal.dataset.muted !== 'true';
           const matchesTopDeals = !topDealsMode || topDealSet.has(deal);
-          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesIgnored && matchesTopDeals;
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesMuted && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -2677,15 +2677,15 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (name === 'familySizeOnly') return familySizeOnly;
         if (name === 'sweetOnly') return sweetOnly;
         if (name === 'lowestSeenOnly') return lowestSeenOnly;
-        if (name === 'showIgnored') return hideIgnored;
+        if (name === 'showMuted') return hideMuted;
         return null;
       }}
 
       function syncRadarButtons() {{
         for (const button of radarButtons) {{
           const name = button.dataset.radarFilter;
-          if (name === 'showIgnored') {{
-            button.setAttribute('aria-pressed', String(Boolean(hideIgnored && !hideIgnored.checked)));
+          if (name === 'showMuted') {{
+            button.setAttribute('aria-pressed', String(Boolean(hideMuted && !hideMuted.checked)));
             continue;
           }}
           const target = radarTarget(name);
@@ -2709,8 +2709,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       for (const button of radarButtons) {{
         button.addEventListener('click', () => {{
           const name = button.dataset.radarFilter;
-          if (name === 'showIgnored') {{
-            if (hideIgnored) hideIgnored.checked = !hideIgnored.checked;
+          if (name === 'showMuted') {{
+            if (hideMuted) hideMuted.checked = !hideMuted.checked;
             updateView();
             return;
           }}
@@ -2719,7 +2719,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           updateView();
         }});
       }}
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, mySizeOnly, familySizeOnly, sweetOnly, lowestSeenOnly, hideAlternates, hideIgnored]) {{
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, mySizeOnly, familySizeOnly, sweetOnly, lowestSeenOnly, hideAlternates, hideMuted]) {{
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }}
@@ -2727,13 +2727,13 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         button.addEventListener('click', async () => {{
           const value = button.dataset.ignoreValue || '';
           if (!value) return;
-          if (localIgnoredUrls.has(value)) {{
-            localIgnoredUrls.delete(value);
+          if (localMutedUrls.has(value)) {{
+            localMutedUrls.delete(value);
           }} else {{
-            localIgnoredUrls.add(value);
+            localMutedUrls.add(value);
           }}
-          writeLocalIgnores();
-          applyLocalIgnores();
+          writeLocalMutes();
+          applyLocalMutes();
           updateView();
         }});
       }}
@@ -2757,7 +2757,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (sweetOnly) sweetOnly.checked = false;
         if (lowestSeenOnly) lowestSeenOnly.checked = false;
         if (hideAlternates) hideAlternates.checked = false;
-        if (hideIgnored) hideIgnored.checked = true;
+        if (hideMuted) hideMuted.checked = true;
         if (dealsOfDay) {{
           dealsOfDay.setAttribute('aria-pressed', 'false');
           dealsOfDay.textContent = 'Top 5 deals today';
@@ -2766,7 +2766,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         for (const box of categoryBoxes) box.checked = true;
         updateView();
       }});
-      applyLocalIgnores();
+      applyLocalMutes();
       updateView();
     </script>
   </body>

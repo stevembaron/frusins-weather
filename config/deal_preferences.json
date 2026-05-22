@@ -7,17 +7,10 @@
     "rallybird",
     "stio"
   ],
-  "ignore_terms": [
-    "single ski",
-    "kids",
-    "youth",
-    "junior",
-    "nordic",
-    "cross country",
-    "xc",
+  "muted_terms": [
     "zag"
   ],
-  "ignore_urls": [],
+  "muted_urls": [],
   "my_ski_sizes": [
     166,
     168,
