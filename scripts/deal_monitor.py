@@ -32,6 +32,7 @@ HTML_OUTPUT = DATA_DIR / "deals.html"
 MD_OUTPUT = DATA_DIR / "deal_report.md"
 PRICE_HISTORY_OUTPUT = DATA_DIR / "price_history.json"
 CLOTHING_JSON_OUTPUT = DATA_DIR / "clothing_deals.json"
+PREFERENCES_CONFIG = ROOT / "config" / "deal_preferences.json"
 WEB_DIR = ROOT / "ski-deals"
 WEB_OUTPUT = WEB_DIR / "index.html"
 
@@ -1564,6 +1565,9 @@ def combined_tracker_payload(payload: dict[str, Any], config: dict[str, Any]) ->
     error_sources = {str(error.get("source", "")) for error in combined["errors"] if isinstance(error, dict)}
     history = load_price_history(resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT))
     combined["disappeared_deals"] = recent_disappeared_deals(history, current_keys, error_sources, limit=10)
+    preferences = load_preferences(resolve_output_path(config.get("preferences"), PREFERENCES_CONFIG))
+    annotate_preferences(combined["deals"], preferences)
+    combined["preferences"] = preference_summary(preferences, combined["deals"])
 
     html_config = dict(config)
     html_config["report_title"] = "Gear Deals"
@@ -1692,6 +1696,98 @@ def source_health_card(source: str, deals: list[dict[str, Any]], count: int, err
     """
 
 
+def load_preferences(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def preference_terms(preferences: dict[str, Any], key: str) -> list[str]:
+    values = preferences.get(key)
+    if not isinstance(values, list):
+        return []
+    return [str(value).strip().lower() for value in values if str(value).strip()]
+
+
+def preference_numbers(preferences: dict[str, Any], key: str) -> list[int]:
+    values = preferences.get(key)
+    if not isinstance(values, list):
+        return []
+    numbers = []
+    for value in values:
+        try:
+            numbers.append(int(value))
+        except (TypeError, ValueError):
+            continue
+    return numbers
+
+
+def annotate_preferences(deals: list[dict[str, Any]], preferences: dict[str, Any]) -> None:
+    watch_terms = preference_terms(preferences, "watch_terms")
+    ignore_terms = preference_terms(preferences, "ignore_terms")
+    ignored_urls = set(preference_terms(preferences, "ignore_urls"))
+    ski_sizes = preference_numbers(preferences, "ski_sizes")
+    clothing_sizes = set(preference_terms(preferences, "clothing_sizes"))
+    max_prices = preferences.get("max_prices") if isinstance(preferences.get("max_prices"), dict) else {}
+
+    for deal in deals:
+        haystack = " ".join(
+            [
+                str(deal.get("title") or ""),
+                str(deal.get("source") or ""),
+                str(deal.get("url") or ""),
+            ]
+        ).lower()
+        category = str(deal.get("category") or "ski")
+        sizes = [str(size).lower() for size in deal.get("sizes") or []]
+        current_price = money(deal.get("current_price")) or 0
+        max_price = money(max_prices.get(category)) if isinstance(max_prices, dict) else None
+
+        deal["is_watchlist"] = any(term in haystack for term in watch_terms)
+        deal["is_ignored"] = any(term in haystack for term in ignore_terms) or str(deal.get("url") or "").lower() in ignored_urls
+        deal["matches_size"] = matches_preferred_size(category, sizes, ski_sizes, clothing_sizes)
+        deal["matches_price"] = max_price is None or current_price <= max_price
+        deal["matches_preferences"] = bool(deal["is_watchlist"] or (deal["matches_size"] and deal["matches_price"]))
+
+
+def matches_preferred_size(category: str, sizes: list[str], ski_sizes: list[int], clothing_sizes: set[str]) -> bool:
+    if not sizes:
+        return False
+    if category == "clothing":
+        return any(size in clothing_sizes for size in sizes)
+    if not ski_sizes:
+        return False
+    for size in sizes:
+        for number in re.findall(r"\d{2,3}", size):
+            try:
+                if int(number) in ski_sizes:
+                    return True
+            except ValueError:
+                continue
+    return False
+
+
+def preference_summary(preferences: dict[str, Any], deals: list[dict[str, Any]]) -> dict[str, Any]:
+    watch_terms = preference_terms(preferences, "watch_terms")
+    ignore_terms = preference_terms(preferences, "ignore_terms")
+    ski_sizes = preference_numbers(preferences, "ski_sizes")
+    clothing_sizes = preference_terms(preferences, "clothing_sizes")
+    return {
+        "watch_terms": watch_terms,
+        "ignore_terms": ignore_terms,
+        "ski_sizes": ski_sizes,
+        "clothing_sizes": clothing_sizes,
+        "watchlist_count": sum(1 for deal in deals if deal.get("is_watchlist")),
+        "ignored_count": sum(1 for deal in deals if deal.get("is_ignored")),
+        "size_match_count": sum(1 for deal in deals if deal.get("matches_size")),
+        "preference_match_count": sum(1 for deal in deals if deal.get("matches_preferences")),
+    }
+
+
 def report_title(config: dict[str, Any]) -> str:
     return str(config.get("report_title") or "Ski Gear Deals")
 
@@ -1743,6 +1839,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     html_deals = sorted(
         payload["deals"],
         key=lambda deal: (
+            1 if deal.get("is_ignored") else 0,
+            0 if deal.get("is_watchlist") else 1,
             stock_sort_key(deal.get("stock_status")),
             deal["current_price"],
             -(deal["discount_percent"] or 0),
@@ -1762,6 +1860,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         key=lambda deal: (deal["current_price"], -(deal.get("discount_percent") or 0)),
     )[:8]
     disappeared_deals = payload.get("disappeared_deals") if isinstance(payload.get("disappeared_deals"), list) else []
+    preferences = payload.get("preferences") if isinstance(payload.get("preferences"), dict) else {}
     best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
     lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
     category_panel = (
@@ -1803,6 +1902,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         status = stock_label(deal.get("stock_status"))
         stock_badge = f"<span class='stock stock-{html.escape(deal['stock_status'])}'>{html.escape(status)}</span>" if status else ""
         cached_badge = "<span class='cached'>Cached last seen price</span>" if deal.get("is_cached") else ""
+        watch_badge = "<span class='watch-badge'>Watchlist</span>" if deal.get("is_watchlist") else ""
+        ignored_badge = "<span class='ignored-badge'>Hidden by preference</span>" if deal.get("is_ignored") else ""
+        size_badge = "<span class='size-badge'>My size</span>" if deal.get("matches_size") else ""
         thumbnail = (
             f"""<a class="thumb" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer" aria-label="{html.escape(deal['title'])}">
                 <img src="{html.escape(deal['image_url'])}" alt="" loading="lazy" decoding="async" />
@@ -1823,6 +1925,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-trend="{html.escape(str(deal.get('price_trend') or ''))}"
               data-has-image="{'true' if deal.get('image_url') else 'false'}"
               data-category="{html.escape(category)}"
+              data-watchlist="{'true' if deal.get('is_watchlist') else 'false'}"
+              data-ignored="{'true' if deal.get('is_ignored') else 'false'}"
+              data-size-match="{'true' if deal.get('matches_size') else 'false'}"
             >
               {thumbnail}
               <div class="deal-main">
@@ -1833,7 +1938,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{watch_badge}{ignored_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{size_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
             </article>
             """
         )
@@ -1917,6 +2022,24 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if health_cards
         else ""
     )
+    preference_panel = (
+        f"""
+        <section class="preference-panel" aria-label="Deal preferences">
+          <div class="section-head">
+            <h2>Preference radar</h2>
+            <span>{int(preferences.get("preference_match_count") or 0)} matches</span>
+          </div>
+          <div class="preference-grid">
+            <div><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></div>
+            <div><strong>{int(preferences.get("size_match_count") or 0)}</strong><span>my sizes</span></div>
+            <div><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></div>
+          </div>
+          <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
+        </section>
+        """
+        if preferences
+        else ""
+    )
     source_filter = (
         f"""
         <details class="controls" aria-label="Deal controls" open>
@@ -1948,6 +2071,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <label><input id="photoOnly" type="checkbox" /> Photos only</label>
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
                 <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
+                <label><input id="watchOnly" type="checkbox" /> Watchlist</label>
+                <label><input id="sizeOnly" type="checkbox" /> My sizes</label>
+                <label><input id="hideIgnored" type="checkbox" checked /> Hide junk</label>
                 <button type="button" id="resetFilters">Reset</button>
               </div>
             </div>
@@ -2026,7 +2152,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
       .activity-grid {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }}
-      .activity-card, .health-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
+      .activity-card, .health-panel, .preference-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
       .section-head {{ display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }}
       .section-head h2 {{ margin: 0; font-size: 1rem; }}
       .section-head span {{ color: var(--muted); font-size: .84rem; }}
@@ -2037,6 +2163,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .mini-card span, .empty-mini {{ display: block; margin: 4px 0 0; color: var(--muted); font-size: .84rem; }}
       .ghost-card {{ background: #fbfaf4; }}
       .health-panel {{ margin: 0 0 18px; }}
+      .preference-panel {{ margin: 0 0 18px; }}
+      .preference-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }}
+      .preference-grid div {{ padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; }}
+      .preference-grid strong {{ display: block; font-size: 1.2rem; }}
+      .preference-grid span, .preference-panel p {{ color: var(--muted); font-size: .84rem; }}
       .health-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
       .health-card {{ border: 1px solid var(--line); border-radius: 14px; background: white; padding: 10px; }}
       .health-card strong {{ display: block; font-size: .9rem; line-height: 1.25; }}
@@ -2066,6 +2197,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
       .buy-zone {{ font-weight: 800; }}
+      .watch-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); font-weight: 800; }}
+      .ignored-badge {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .size-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; font-weight: 800; }}
       .zone-new-low, .zone-buy {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .zone-strong {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
       .zone-watch {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
@@ -2097,6 +2231,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         </div>
       </header>
       {source_filter}
+      {preference_panel}
       {activity_panel}
       {health_panel}
       <section class="deals-list">
@@ -2116,6 +2251,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const photoOnly = document.querySelector('#photoOnly');
       const dropOnly = document.querySelector('#dropOnly');
       const newOnly = document.querySelector('#newOnly');
+      const watchOnly = document.querySelector('#watchOnly');
+      const sizeOnly = document.querySelector('#sizeOnly');
+      const hideIgnored = document.querySelector('#hideIgnored');
       const resetFilters = document.querySelector('#resetFilters');
       const filterNote = document.querySelector('#filterNote');
 
@@ -2126,6 +2264,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       function sortDeals() {{
         const sorted = [...deals].sort((a, b) => {{
           const mode = sortSelect?.value || 'price-asc';
+          if (a.dataset.watchlist !== b.dataset.watchlist) return a.dataset.watchlist === 'true' ? -1 : 1;
+          if (a.dataset.ignored !== b.dataset.ignored) return a.dataset.ignored === 'true' ? 1 : -1;
           if (mode === 'discount-desc') return numericValue(b, 'discount') - numericValue(a, 'discount');
           if (mode === 'savings-desc') return numericValue(b, 'savings') - numericValue(a, 'savings');
           if (mode === 'score-desc') return numericValue(b, 'score') - numericValue(a, 'score');
@@ -2142,6 +2282,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requirePhoto = Boolean(photoOnly?.checked);
         const requireDrop = Boolean(dropOnly?.checked);
         const requireNew = Boolean(newOnly?.checked);
+        const requireWatch = Boolean(watchOnly?.checked);
+        const requireSize = Boolean(sizeOnly?.checked);
+        const shouldHideIgnored = Boolean(hideIgnored?.checked);
         let visible = 0;
         const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
@@ -2152,7 +2295,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesPhoto = !requirePhoto || deal.dataset.hasImage === 'true';
           const matchesDrop = !requireDrop || deal.dataset.trend === 'down';
           const matchesNew = !requireNew || deal.dataset.trend === 'new';
-          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew;
+          const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
+          const matchesSize = !requireSize || deal.dataset.sizeMatch === 'true';
+          const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSize && matchesIgnored;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -2189,7 +2335,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           updateView();
         }});
       }}
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly]) {{
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, sizeOnly, hideIgnored]) {{
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
       }}
@@ -2200,6 +2346,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (photoOnly) photoOnly.checked = false;
         if (dropOnly) dropOnly.checked = false;
         if (newOnly) newOnly.checked = false;
+        if (watchOnly) watchOnly.checked = false;
+        if (sizeOnly) sizeOnly.checked = false;
+        if (hideIgnored) hideIgnored.checked = true;
         for (const box of checkboxes) box.checked = true;
         for (const box of categoryBoxes) box.checked = true;
         updateView();

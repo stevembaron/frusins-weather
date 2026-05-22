@@ -1,0 +1,42 @@
+{
+  "watch_terms": [
+    "dynastar",
+    "ripstick",
+    "black pearl",
+    "santa ana",
+    "rallybird",
+    "stio"
+  ],
+  "ignore_terms": [
+    "single ski",
+    "kids",
+    "youth",
+    "junior",
+    "nordic",
+    "cross country",
+    "xc"
+  ],
+  "ignore_urls": [],
+  "ski_sizes": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    166,
+    168,
+    170,
+    171,
+    172
+  ],
+  "clothing_sizes": [
+    "s",
+    "m"
+  ],
+  "max_prices": {
+    "ski": 500,
+    "clothing": 100
+  }
+}
