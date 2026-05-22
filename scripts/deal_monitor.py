@@ -1713,6 +1713,62 @@ def buy_zone(deal: dict[str, Any]) -> tuple[str, str]:
     return "Fair deal", "zone-fair"
 
 
+def is_lowest_seen(deal: dict[str, Any]) -> bool:
+    price = money(deal.get("current_price"))
+    lowest = money(deal.get("lowest_price"))
+    highest = money(deal.get("highest_price"))
+    return price is not None and lowest is not None and highest is not None and highest > lowest and price <= lowest
+
+
+def is_sweet_spot(deal: dict[str, Any]) -> bool:
+    price = money(deal.get("current_price")) or 0
+    discount = float(deal.get("discount_percent") or 0)
+    category = str(deal.get("category") or "ski")
+    stock_status = str(deal.get("stock_status") or "in_stock")
+    size_match = bool(deal.get("matches_my_size") or deal.get("matches_family_size") or category == "clothing")
+    max_price = 500 if category == "ski" else 100
+    return bool(
+        size_match
+        and price <= max_price
+        and discount >= 40
+        and stock_status != "sold_out"
+        and not deal.get("is_ignored")
+    )
+
+
+def deal_verdict(deal: dict[str, Any]) -> tuple[str, str]:
+    price = money(deal.get("current_price")) or 0
+    discount = float(deal.get("discount_percent") or 0)
+    trend = str(deal.get("price_trend") or "")
+    category = str(deal.get("category") or "ski")
+
+    if deal.get("is_ignored"):
+        return "Skip", "verdict-skip"
+    if is_sweet_spot(deal) and (is_lowest_seen(deal) or trend == "down" or discount >= 55):
+        return "Buy now", "verdict-buy"
+    if deal.get("matches_my_size") or deal.get("matches_family_size"):
+        if category == "ski" and price <= 500 and discount >= 35:
+            return "Only if size is right", "verdict-size"
+        if category == "clothing" and price <= 100 and discount >= 25:
+            return "Only if size is right", "verdict-size"
+    if trend == "up":
+        return "Wait", "verdict-wait"
+    if discount < 30:
+        return "Wait", "verdict-wait"
+    return "Worth a look", "verdict-look"
+
+
+def duplicate_key(deal: dict[str, Any]) -> str:
+    title = str(deal.get("title") or "").lower()
+    title = re.sub(r"\b(?:19|20)\d{2}\b", " ", title)
+    title = re.sub(r"\b\d{2,3}(?:\.\d)?\s*cm\b", " ", title)
+    title = re.sub(r"\b\d{2,3}(?:\.\d)?\b", " ", title)
+    title = re.sub(r"\b(?:new|used|demo|open|skis?|womens?|mens?|unisex|flat|with|bindings?|cm)\b", " ", title)
+    title = re.sub(r"[^a-z0-9]+", " ", title)
+    words = [word for word in title.split() if len(word) > 1]
+    return " ".join(words[:6])
+
+
 def short_seen_label(value: str) -> str:
     if not value:
         return "last run"
@@ -1933,6 +1989,46 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     preferences = payload.get("preferences") if isinstance(payload.get("preferences"), dict) else {}
     best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
     lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
+    duplicate_groups: dict[str, list[dict[str, Any]]] = {}
+    for deal in html_deals:
+        key = duplicate_key(deal)
+        if len(key) >= 6:
+            duplicate_groups.setdefault(key, []).append(deal)
+    duplicate_winners: set[int] = set()
+    duplicate_counts: dict[int, int] = {}
+    for group in duplicate_groups.values():
+        if len(group) < 2:
+            continue
+        ranked = sorted(group, key=lambda item: (item["current_price"], -(item.get("score") or 0)))
+        duplicate_winners.add(id(ranked[0]))
+        for item in group:
+            duplicate_counts[id(item)] = len(group)
+    for_you_deals = sorted(
+        [
+            deal
+            for deal in html_deals
+            if not deal.get("is_ignored")
+            and (
+                deal.get("is_watchlist")
+                or deal.get("matches_my_size")
+                or (deal.get("matches_family_size") and (deal.get("current_price") or 0) <= 500)
+            )
+        ],
+        key=lambda deal: (-(deal.get("score") or 0), deal["current_price"]),
+    )[:8]
+    best_my_deal = next((deal for deal in for_you_deals if deal.get("matches_my_size")), None)
+    best_family_deal = next((deal for deal in for_you_deals if deal.get("matches_family_size")), None)
+    biggest_drop_deal = next(
+        iter(
+            sorted(
+                [deal for deal in html_deals if deal.get("price_trend") == "down" and not deal.get("is_ignored")],
+                key=lambda deal: (-(abs(float(deal.get("price_change") or 0))), deal["current_price"]),
+            )
+        ),
+        None,
+    )
+    sweet_spot_count = sum(1 for deal in html_deals if is_sweet_spot(deal))
+    lowest_seen_count = sum(1 for deal in html_deals if is_lowest_seen(deal))
     category_panel = (
         f"""
         <div class="category-panel" aria-label="Category filters">
@@ -1961,6 +2057,19 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         trend_badge = f"<span class='trend{trend_class}'>{html.escape(trend_label)}</span>" if trend_label else ""
         zone_label, zone_class = buy_zone(deal)
         zone_badge = f"<span class='buy-zone {html.escape(zone_class)}'>{html.escape(zone_label)}</span>"
+        verdict_label, verdict_class = deal_verdict(deal)
+        verdict_badge = f"<span class='verdict {html.escape(verdict_class)}'>{html.escape(verdict_label)}</span>"
+        sweet_spot = is_sweet_spot(deal)
+        sweet_badge = "<span class='sweet-badge'>Sweet spot</span>" if sweet_spot else ""
+        lowest_seen = is_lowest_seen(deal)
+        lowest_badge = "<span class='floor-badge'>Lowest seen</span>" if lowest_seen else ""
+        duplicate_count = duplicate_counts.get(id(deal), 1)
+        duplicate_badge = (
+            f"<span class='dupe-badge'>{duplicate_count - 1} alternate{'s' if duplicate_count != 2 else ''}</span>"
+            if duplicate_count > 1
+            else ""
+        )
+        dupe_primary = duplicate_count <= 1 or id(deal) in duplicate_winners
         category = str(deal.get("category") or "ski")
         category_label = "Clothing" if category == "clothing" else "Ski"
         category_badge = (
@@ -2001,6 +2110,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               data-size-match="{'true' if deal.get('matches_size') else 'false'}"
               data-my-size-match="{'true' if deal.get('matches_my_size') else 'false'}"
               data-family-size-match="{'true' if deal.get('matches_family_size') else 'false'}"
+              data-sweet-spot="{'true' if sweet_spot else 'false'}"
+              data-lowest-seen="{'true' if lowest_seen else 'false'}"
+              data-verdict="{html.escape(verdict_label.lower())}"
+              data-dupe-primary="{'true' if dupe_primary else 'false'}"
             >
               {thumbnail}
               <div class="deal-main">
@@ -2011,7 +2124,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
               </div>
-              <div class="badges">{watch_badge}{ignored_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span></div>
+              <div class="badges">{watch_badge}{ignored_badge}{verdict_badge}{sweet_badge}{lowest_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{duplicate_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span><button class="note-button" type="button" data-ignore-value="{html.escape(str(deal['url']))}">Not interested</button></div>
             </article>
             """
         )
@@ -2040,6 +2153,30 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         """
         for deal in newly_tracked_deals
     )
+    for_you_items = "".join(
+        f"""
+        <a class="mini-card" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">
+          <strong>{html.escape(deal['title'])}</strong>
+          <span>${deal['current_price']:.2f} &middot; {html.escape(deal['source'])} &middot; Score {float(deal.get('score') or 0):.0f}</span>
+        </a>
+        """
+        for deal in for_you_deals
+    )
+    digest_cards = "".join(
+        f"""
+        <a class="digest-card" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer">
+          <span>{html.escape(label)}</span>
+          <strong>{html.escape(deal['title'])}</strong>
+          <em>${deal['current_price']:.2f} &middot; {html.escape(deal['source'])}</em>
+        </a>
+        """
+        for label, deal in (
+            ("Best for me", best_my_deal),
+            ("Best for family", best_family_deal),
+            ("Biggest drop", biggest_drop_deal),
+        )
+        if isinstance(deal, dict)
+    )
     disappeared_items = "".join(
         f"""
         <a class="mini-card ghost-card" href="{html.escape(str(deal['url']))}" target="_blank" rel="noreferrer">
@@ -2052,6 +2189,20 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     )
     activity_panel = (
         f"""
+        <section class="digest-panel" aria-label="Daily digest">
+          <div class="section-head">
+            <h2>Daily digest</h2>
+            <span>best quick reads</span>
+          </div>
+          <div class="digest-grid">{digest_cards if digest_cards else "<p class='empty-mini'>No digest picks yet.</p>"}</div>
+        </section>
+        <section class="for-you-panel" aria-label="For you">
+          <div class="section-head">
+            <h2>For you</h2>
+            <span>{len(for_you_deals)} watchlist or size hits</span>
+          </div>
+          <div class="mini-list">{for_you_items if for_you_items else "<p class='empty-mini'>No preference matches yet.</p>"}</div>
+        </section>
         <section class="activity-grid" aria-label="Deal activity">
           <div class="activity-card">
             <div class="section-head">
@@ -2106,6 +2257,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             <div><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></div>
             <div><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>my size</span></div>
             <div><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></div>
+            <div><strong>{sweet_spot_count}</strong><span>sweet spot</span></div>
+            <div><strong>{lowest_seen_count}</strong><span>lowest seen</span></div>
             <div><strong>{int(preferences.get("ignored_count") or 0)}</strong><span>hidden junk</span></div>
           </div>
           <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
@@ -2143,6 +2296,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               </label>
               <div class="quick-filters" aria-label="Quick filters">
                 <button id="dealsOfDay" class="quick-button" type="button" aria-pressed="false">Top 5 deals today</button>
+                <label><input id="sweetOnly" type="checkbox" /> Sweet spot</label>
+                <label><input id="lowestSeenOnly" type="checkbox" /> Lowest seen</label>
+                <label><input id="hideAlternates" type="checkbox" /> Hide alternates</label>
                 <label><input id="photoOnly" type="checkbox" /> Photos only</label>
                 <label><input id="dropOnly" type="checkbox" /> Price drops</label>
                 <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
@@ -2230,7 +2386,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
       .activity-grid {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }}
-      .activity-card, .health-panel, .preference-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
+      .activity-card, .health-panel, .preference-panel, .for-you-panel, .digest-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
       .section-head {{ display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }}
       .section-head h2 {{ margin: 0; font-size: 1rem; }}
       .section-head span {{ color: var(--muted); font-size: .84rem; }}
@@ -2240,6 +2396,14 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .mini-card strong {{ display: block; font-size: .92rem; line-height: 1.25; }}
       .mini-card span, .empty-mini {{ display: block; margin: 4px 0 0; color: var(--muted); font-size: .84rem; }}
       .ghost-card {{ background: #fbfaf4; }}
+      .digest-panel {{ margin: 0 0 18px; background: linear-gradient(135deg, rgba(20,54,47,.96), rgba(13,124,102,.82)); color: white; }}
+      .digest-panel .section-head span {{ color: rgba(255,255,255,.72); }}
+      .digest-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
+      .digest-card {{ display: block; padding: 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 14px; background: rgba(255,255,255,.10); color: white; text-decoration: none; }}
+      .digest-card span {{ display: block; color: rgba(255,255,255,.72); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
+      .digest-card strong {{ display: block; margin-top: 5px; line-height: 1.2; }}
+      .digest-card em {{ display: block; margin-top: 5px; color: rgba(255,255,255,.78); font-style: normal; font-size: .86rem; }}
+      .for-you-panel {{ margin: 0 0 18px; background: linear-gradient(135deg, rgba(237,248,244,.96), rgba(255,248,223,.72)); }}
       .health-panel {{ margin: 0 0 18px; }}
       .preference-panel {{ margin: 0 0 18px; }}
       .preference-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }}
@@ -2275,6 +2439,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .trend-flat {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .trend-new {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
       .buy-zone {{ font-weight: 800; }}
+      .verdict {{ font-weight: 900; }}
+      .verdict-buy, .sweet-badge, .floor-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
+      .verdict-size, .dupe-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; }}
+      .verdict-wait, .verdict-skip {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
+      .verdict-look {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
       .watch-badge {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); font-weight: 800; }}
       .ignored-badge {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .size-badge {{ border-color: #c9d6e8; background: #f0f6ff; color: #24558f; font-weight: 800; }}
@@ -2289,6 +2458,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stock-in_stock {{ border-color: #b7d9d0; background: #edf8f4; color: var(--accent); }}
       .stock-sold_out {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .stock-availability_unknown {{ border-color: #d8d1b1; background: #fff8df; color: #7a6200; }}
+      .note-button {{ border: 1px solid var(--line); border-radius: 999px; padding: 5px 8px; background: #fff; color: var(--muted); cursor: pointer; font: inherit; font-size: .86rem; }}
+      .note-button:hover {{ border-color: rgba(13,124,102,.45); color: var(--accent); }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
       @media (max-width: 850px) {{ header, .tool-grid, .activity-grid {{ grid-template-columns: 1fr; }} .stats {{ min-width: 0; }} .controls {{ position: static; }} }}
@@ -2333,6 +2504,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const watchOnly = document.querySelector('#watchOnly');
       const mySizeOnly = document.querySelector('#mySizeOnly');
       const familySizeOnly = document.querySelector('#familySizeOnly');
+      const sweetOnly = document.querySelector('#sweetOnly');
+      const lowestSeenOnly = document.querySelector('#lowestSeenOnly');
+      const hideAlternates = document.querySelector('#hideAlternates');
       const hideIgnored = document.querySelector('#hideIgnored');
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
@@ -2377,6 +2551,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         const requireWatch = Boolean(watchOnly?.checked);
         const requireMySize = Boolean(mySizeOnly?.checked);
         const requireFamilySize = Boolean(familySizeOnly?.checked);
+        const requireSweet = Boolean(sweetOnly?.checked);
+        const requireLowestSeen = Boolean(lowestSeenOnly?.checked);
+        const shouldHideAlternates = Boolean(hideAlternates?.checked);
         const shouldHideIgnored = Boolean(hideIgnored?.checked);
         const topDealsMode = dealsOfDay?.getAttribute('aria-pressed') === 'true';
         const eligibleTopDeals = topDealsMode
@@ -2391,8 +2568,11 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 const matchesNew = !requireNew || deal.dataset.trend === 'new';
                 const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
                 const matchesSizeGroup = (!requireMySize && !requireFamilySize) || (requireMySize && deal.dataset.mySizeMatch === 'true') || (requireFamilySize && deal.dataset.familySizeMatch === 'true');
+                const matchesSweet = !requireSweet || deal.dataset.sweetSpot === 'true';
+                const matchesLowestSeen = !requireLowestSeen || deal.dataset.lowestSeen === 'true';
+                const matchesAlternate = !shouldHideAlternates || deal.dataset.dupePrimary === 'true';
                 const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
-                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesIgnored;
+                return matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesIgnored;
               }})
               .sort((a, b) => numericValue(b, 'score') - numericValue(a, 'score') || numericValue(a, 'price') - numericValue(b, 'price'))
               .slice(0, 5)
@@ -2410,9 +2590,12 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const matchesNew = !requireNew || deal.dataset.trend === 'new';
           const matchesWatch = !requireWatch || deal.dataset.watchlist === 'true';
           const matchesSizeGroup = (!requireMySize && !requireFamilySize) || (requireMySize && deal.dataset.mySizeMatch === 'true') || (requireFamilySize && deal.dataset.familySizeMatch === 'true');
+          const matchesSweet = !requireSweet || deal.dataset.sweetSpot === 'true';
+          const matchesLowestSeen = !requireLowestSeen || deal.dataset.lowestSeen === 'true';
+          const matchesAlternate = !shouldHideAlternates || deal.dataset.dupePrimary === 'true';
           const matchesIgnored = !shouldHideIgnored || deal.dataset.ignored !== 'true';
           const matchesTopDeals = !topDealsMode || topDealSet.has(deal);
-          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesIgnored && matchesTopDeals;
+          const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesIgnored && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
           if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
@@ -2449,9 +2632,21 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           updateView();
         }});
       }}
-      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, mySizeOnly, familySizeOnly, hideIgnored]) {{
+      for (const control of [searchInput, sortSelect, maxPriceInput, photoOnly, dropOnly, newOnly, watchOnly, mySizeOnly, familySizeOnly, sweetOnly, lowestSeenOnly, hideAlternates, hideIgnored]) {{
         control?.addEventListener('input', updateView);
         control?.addEventListener('change', updateView);
+      }}
+      for (const button of document.querySelectorAll('.note-button')) {{
+        button.addEventListener('click', async () => {{
+          const value = button.dataset.ignoreValue || '';
+          const text = value ? `"${{value}}"` : '';
+          try {{
+            await navigator.clipboard.writeText(text);
+            button.textContent = 'Copied ignore URL';
+          }} catch (error) {{
+            button.textContent = 'Copy failed';
+          }}
+        }});
       }}
       dealsOfDay?.addEventListener('click', () => {{
         const enabled = dealsOfDay.getAttribute('aria-pressed') !== 'true';
@@ -2470,6 +2665,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (watchOnly) watchOnly.checked = false;
         if (mySizeOnly) mySizeOnly.checked = false;
         if (familySizeOnly) familySizeOnly.checked = false;
+        if (sweetOnly) sweetOnly.checked = false;
+        if (lowestSeenOnly) lowestSeenOnly.checked = false;
+        if (hideAlternates) hideAlternates.checked = false;
         if (hideIgnored) hideIgnored.checked = true;
         if (dealsOfDay) {{
           dealsOfDay.setAttribute('aria-pressed', 'false');
