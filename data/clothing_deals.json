@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-22T15:43:40-06:00",
+  "generated_at": "2026-05-23T11:37:39+00:00",
   "deal_count": 9,
   "sources_checked": 1,
   "price_history_count": 262,
-  "price_change_count": 1,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Stio Hylas Long Sleeve Crew - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 55.0,
       "savings": 37.95,
       "score": 83.87,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "M"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 30.0,
       "savings": 38.86,
       "score": 57.9,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -62,17 +62,17 @@
       "discount_percent": 30.0,
       "savings": 33.81,
       "score": 56.87,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1779446545&width=460",
       "is_cached": false,
-      "previous_price": 83.33,
-      "price_change": -4.45,
-      "price_change_percent": -5.3,
-      "price_trend": "down",
+      "previous_price": 78.88,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00",
       "lowest_price": 78.88,
       "highest_price": 83.33
@@ -86,7 +86,7 @@
       "discount_percent": 20.0,
       "savings": 13.07,
       "score": 42.22,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 20.0,
       "savings": 12.23,
       "score": 42.08,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 20.0,
       "savings": 10.67,
       "score": 41.81,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 20.0,
       "savings": 9.33,
       "score": 41.59,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -182,7 +182,7 @@
       "discount_percent": 20.0,
       "savings": 7.71,
       "score": 41.31,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "S"
       ],
@@ -206,7 +206,7 @@
       "discount_percent": 20.0,
       "savings": 6.42,
       "score": 41.09,
-      "found_at": "2026-05-22T21:43:37+00:00",
+      "found_at": "2026-05-23T11:37:35+00:00",
       "sizes": [
         "M"
       ],
