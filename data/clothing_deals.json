@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-25T13:44:02+00:00",
+  "generated_at": "2026-05-25T19:57:37+00:00",
   "deal_count": 9,
   "sources_checked": 1,
-  "price_history_count": 266,
+  "price_history_count": 267,
   "price_change_count": 1,
   "deals": [
     {
@@ -14,7 +14,7 @@
       "discount_percent": 55.0,
       "savings": 37.95,
       "score": 83.87,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "M"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 30.0,
       "savings": 36.54,
       "score": 57.43,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 30.0,
       "savings": 33.81,
       "score": 56.87,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 20.0,
       "savings": 13.07,
       "score": 42.22,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 20.0,
       "savings": 12.23,
       "score": 42.08,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 20.0,
       "savings": 10.67,
       "score": 41.81,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 20.0,
       "savings": 9.33,
       "score": 41.59,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -182,7 +182,7 @@
       "discount_percent": 20.0,
       "savings": 7.71,
       "score": 41.31,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "S"
       ],
@@ -206,7 +206,7 @@
       "discount_percent": 20.0,
       "savings": 6.42,
       "score": 41.09,
-      "found_at": "2026-05-25T13:43:59+00:00",
+      "found_at": "2026-05-25T19:57:34+00:00",
       "sizes": [
         "M"
       ],
