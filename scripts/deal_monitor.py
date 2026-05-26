@@ -2194,34 +2194,40 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         f"""
         <section class="digest-panel" aria-label="Daily digest">
           <div class="section-head">
-            <h2>Daily digest</h2>
+            <h2>Today at a glance</h2>
             <span>best quick reads</span>
           </div>
           <div class="digest-grid">{digest_cards if digest_cards else "<p class='empty-mini'>No digest picks yet.</p>"}</div>
         </section>
-        <section class="for-you-panel" aria-label="For you">
-          <div class="section-head">
-            <h2>For you</h2>
-            <span>{len(for_you_deals)} watchlist or size hits</span>
-          </div>
-          <div class="mini-list">{for_you_items if for_you_items else "<p class='empty-mini'>No preference matches yet.</p>"}</div>
-        </section>
-        <section class="activity-grid" aria-label="Deal activity">
-          <div class="activity-card">
+        <details class="secondary-panel">
+          <summary>
+            <span>More context</span>
+            <b>{len(for_you_deals)} for you &middot; {len(newly_tracked_deals)} new &middot; {len(disappeared_deals[:8])} gone</b>
+          </summary>
+          <section class="for-you-panel" aria-label="For you">
             <div class="section-head">
-              <h2>New since last run</h2>
-              <span>{len(newly_tracked_deals)} shown</span>
+              <h2>For you</h2>
+              <span>{len(for_you_deals)} watchlist or size hits</span>
             </div>
-            <div class="mini-list">{new_items if new_items else "<p class='empty-mini'>Nothing new this run.</p>"}</div>
-          </div>
-          <div class="activity-card">
-            <div class="section-head">
-              <h2>Recently disappeared</h2>
-              <span>{len(disappeared_deals[:8])} shown</span>
+            <div class="mini-list">{for_you_items if for_you_items else "<p class='empty-mini'>No preference matches yet.</p>"}</div>
+          </section>
+          <section class="activity-grid" aria-label="Deal activity">
+            <div class="activity-card">
+              <div class="section-head">
+                <h2>New since last run</h2>
+                <span>{len(newly_tracked_deals)} shown</span>
+              </div>
+              <div class="mini-list">{new_items if new_items else "<p class='empty-mini'>Nothing new this run.</p>"}</div>
             </div>
-            <div class="mini-list">{disappeared_items if disappeared_items else "<p class='empty-mini'>No recent vanishers.</p>"}</div>
-          </div>
-        </section>
+            <div class="activity-card">
+              <div class="section-head">
+                <h2>Recently disappeared</h2>
+                <span>{len(disappeared_deals[:8])} shown</span>
+              </div>
+              <div class="mini-list">{disappeared_items if disappeared_items else "<p class='empty-mini'>No recent vanishers.</p>"}</div>
+            </div>
+          </section>
+        </details>
         """
         if show_category_filter
         else ""
@@ -2238,33 +2244,33 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     )
     health_panel = (
         f"""
-        <section class="health-panel" aria-label="Store health">
-          <div class="section-head">
-            <h2>Store health</h2>
-            <span>{len(health_sources)} sources</span>
-          </div>
+        <details class="health-panel secondary-panel" aria-label="Store health">
+          <summary>
+            <span>Store health</span>
+            <b>{len(health_sources)} sources</b>
+          </summary>
           <div class="health-grid">{health_cards}</div>
-        </section>
+        </details>
         """
         if health_cards
         else ""
     )
     preference_panel = (
         f"""
-        <section class="preference-panel" aria-label="Deal preferences">
-          <div class="section-head">
-            <h2>Preference radar</h2>
-            <span>{int(preferences.get("preference_match_count") or 0)} matches</span>
+        <section class="preference-panel start-panel" aria-label="Deal preferences">
+          <div>
+            <span class="eyebrow">Start here</span>
+            <h2>Pick a lane, then browse.</h2>
+            <p>The buttons below change the list instantly. Use the sidebar only when you need to get fussy.</p>
           </div>
           <div class="preference-grid">
-            <button type="button" data-radar-filter="watchOnly" aria-pressed="false"><strong>{int(preferences.get("watchlist_count") or 0)}</strong><span>watchlist</span></button>
-            <button type="button" data-radar-filter="mySizeOnly" aria-pressed="false"><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>my size</span></button>
-            <button type="button" data-radar-filter="familySizeOnly" aria-pressed="false"><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family size</span></button>
+            <button type="button" data-radar-filter="dealsOfDay" aria-pressed="false"><strong>5</strong><span>best today</span></button>
+            <button type="button" data-radar-filter="mySizeOnly" aria-pressed="false"><strong>{int(preferences.get("my_size_match_count") or 0)}</strong><span>for me</span></button>
+            <button type="button" data-radar-filter="familySizeOnly" aria-pressed="false"><strong>{int(preferences.get("family_size_match_count") or 0)}</strong><span>family sizes</span></button>
+            <button type="button" data-radar-filter="dropOnly" aria-pressed="false"><strong>{price_drop_count}</strong><span>price drops</span></button>
             <button type="button" data-radar-filter="sweetOnly" aria-pressed="false"><strong>{sweet_spot_count}</strong><span>sweet spot</span></button>
             <button type="button" data-radar-filter="lowestSeenOnly" aria-pressed="false"><strong>{lowest_seen_count}</strong><span>lowest seen</span></button>
-            <button type="button" data-radar-filter="showMuted" aria-pressed="false"><strong>{int(preferences.get("muted_count") or 0)}</strong><span>muted</span></button>
           </div>
-          <p>Terms: {html.escape(', '.join(preferences.get("watch_terms") or []) or 'none yet')}.</p>
         </section>
         """
         if preferences
@@ -2274,7 +2280,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         f"""
         <details class="controls" aria-label="Deal controls" open>
           <summary class="controls-summary">
-            <span>Search and stores</span>
+            <span>Filters</span>
             <span class="summary-count"><strong id="visibleDealCount">{len(html_deals)}</strong> shown</span>
           </summary>
           <div class="controls-body">
@@ -2297,33 +2303,38 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 <span>Max price</span>
                 <input id="maxPrice" type="number" min="0" step="25" placeholder="Any" />
               </label>
-              <div class="quick-filters" aria-label="Quick filters">
-                <button id="dealsOfDay" class="quick-button" type="button" aria-pressed="false">Top 5 deals today</button>
-                <label><input id="sweetOnly" type="checkbox" /> Sweet spot</label>
-                <label><input id="lowestSeenOnly" type="checkbox" /> Lowest seen</label>
-                <label><input id="hideAlternates" type="checkbox" /> Hide alternates</label>
-                <label><input id="photoOnly" type="checkbox" /> Photos only</label>
-                <label><input id="dropOnly" type="checkbox" /> Price drops</label>
-                <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
-                <label><input id="watchOnly" type="checkbox" /> Watchlist</label>
-                <label><input id="mySizeOnly" type="checkbox" /> My size</label>
-                <label><input id="familySizeOnly" type="checkbox" /> Family size</label>
-                <label><input id="hideMuted" type="checkbox" checked /> Hide muted</label>
-                <button type="button" id="resetFilters">Reset</button>
+              <div class="quick-filters primary-filters" aria-label="Quick filters">
+                <button id="dealsOfDay" class="quick-button" type="button" aria-pressed="false">Best 5 today</button>
+                <label><input id="mySizeOnly" type="checkbox" /> For me</label>
+                <label><input id="familySizeOnly" type="checkbox" /> Family</label>
+                <label><input id="dropOnly" type="checkbox" /> Drops</label>
               </div>
+              <details class="filter-section">
+                <summary>More filters</summary>
+                <div class="quick-filters" aria-label="Advanced filters">
+                  <label><input id="sweetOnly" type="checkbox" /> Sweet spot</label>
+                  <label><input id="lowestSeenOnly" type="checkbox" /> Lowest seen</label>
+                  <label><input id="hideAlternates" type="checkbox" /> Hide alternates</label>
+                  <label><input id="photoOnly" type="checkbox" /> Photos only</label>
+                  <label><input id="newOnly" type="checkbox" /> Newly tracked</label>
+                  <label><input id="watchOnly" type="checkbox" /> Watchlist</label>
+                  <label><input id="hideMuted" type="checkbox" checked /> Hide muted</label>
+                  <button type="button" id="resetFilters">Reset everything</button>
+                </div>
+              </details>
             </div>
             <p class="filter-note" id="filterNote" hidden></p>
-            <div class="store-panel">
-              <div class="store-head">
+            <details class="store-panel">
+              <summary>
                 <strong>Stores</strong>
                 <span class="meta">{len(source_counts)} active</span>
-              </div>
+              </summary>
               <div class="filter-actions">
                 <button type="button" data-filter-action="all">All stores</button>
                 <button type="button" data-filter-action="none">No stores</button>
               </div>
               <div class="source-toggles">{source_controls}</div>
-            </div>
+            </details>
           </div>
         </details>
         """
@@ -2356,7 +2367,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .stat {{ padding: 10px; border: 1px solid rgba(13,124,102,.16); border-radius: 16px; background: rgba(255,255,255,.72); }}
       .stat strong {{ display: block; font-size: 1.35rem; letter-spacing: -0.04em; }}
       .stat span {{ color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
-      .app-shell {{ display: grid; grid-template-columns: 322px minmax(0, 1fr); gap: 16px; align-items: start; }}
+      .app-shell {{ display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 16px; align-items: start; }}
       .sidebar {{ position: sticky; top: 14px; max-height: calc(100vh - 28px); overflow: auto; scrollbar-width: thin; }}
       .content {{ min-width: 0; }}
       .controls {{ margin: 0; padding: 14px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 22px; box-shadow: 0 16px 36px rgba(39,61,51,.10); backdrop-filter: blur(12px); }}
@@ -2377,14 +2388,20 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .field span {{ display: block; margin: 0 0 5px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
       .quick-filters {{ display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: stretch; padding-bottom: 1px; }}
       .quick-filters label, .quick-button {{ display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 38px; padding: 8px 9px; border: 1px solid var(--line); border-radius: 12px; background: var(--accent-soft); white-space: nowrap; font-size: .88rem; }}
-      .quick-filters #resetFilters, .quick-filters #dealsOfDay {{ grid-column: 1 / -1; }}
+      .quick-filters #resetFilters {{ grid-column: 1 / -1; }}
+      .primary-filters {{ grid-template-columns: 1fr; }}
+      .primary-filters label, .primary-filters .quick-button {{ justify-content: flex-start; min-height: 42px; padding-inline: 12px; font-weight: 800; }}
       .quick-filters input {{ width: auto; accent-color: var(--accent); }}
       .quick-button {{ cursor: pointer; color: var(--ink); font: inherit; }}
       .quick-button[aria-pressed="true"] {{ border-color: rgba(13,124,102,.45); background: #edf8f4; color: var(--accent); box-shadow: inset 0 0 0 1px rgba(13,124,102,.18); }}
+      .filter-section, .store-panel {{ margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; }}
+      .filter-section summary, .store-panel summary, .secondary-panel summary {{ display: flex; align-items: center; justify-content: space-between; gap: 10px; cursor: pointer; list-style: none; font-weight: 800; }}
+      .filter-section summary::-webkit-details-marker, .store-panel summary::-webkit-details-marker, .secondary-panel summary::-webkit-details-marker {{ display: none; }}
+      .filter-section summary::after, .store-panel summary::after, .secondary-panel summary::after {{ content: "Show"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 4px 8px; font-size: .74rem; font-weight: 800; }}
+      .filter-section[open] summary::after, .store-panel[open] summary::after, .secondary-panel[open] summary::after {{ content: "Hide"; }}
+      .filter-section .quick-filters {{ margin-top: 10px; }}
       .filter-note {{ margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }}
       .filter-note[hidden] {{ display: none; }}
-      .store-panel {{ margin-top: 12px; }}
-      .store-head {{ display: flex; justify-content: space-between; gap: 12px; }}
       .filter-actions {{ display: flex; gap: 8px; }}
       .store-panel .filter-actions {{ margin: 10px 0; }}
       .source-toggles {{ display: grid; gap: 7px; }}
@@ -2393,7 +2410,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .source-toggle b {{ color: var(--muted); font-size: .78rem; }}
       .visible-count {{ margin: 12px 0 0; }}
       .activity-grid {{ display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }}
-      .activity-card, .health-panel, .preference-panel, .for-you-panel, .digest-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
+      .activity-card, .health-panel, .preference-panel, .for-you-panel, .digest-panel, .secondary-panel {{ border: 1px solid var(--line); border-radius: 18px; background: rgba(255,254,249,.9); box-shadow: 0 10px 26px rgba(39,61,51,.05); padding: 14px; }}
       .section-head {{ display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }}
       .section-head h2 {{ margin: 0; font-size: 1rem; }}
       .section-head span {{ color: var(--muted); font-size: .84rem; }}
@@ -2410,14 +2427,21 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .digest-card span {{ display: block; color: rgba(255,255,255,.72); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }}
       .digest-card strong {{ display: block; margin-top: 5px; line-height: 1.2; }}
       .digest-card em {{ display: block; margin-top: 5px; color: rgba(255,255,255,.78); font-style: normal; font-size: .86rem; }}
-      .for-you-panel {{ margin: 0 0 18px; background: linear-gradient(135deg, rgba(237,248,244,.96), rgba(255,248,223,.72)); }}
+      .for-you-panel {{ margin: 12px 0 0; background: linear-gradient(135deg, rgba(237,248,244,.96), rgba(255,248,223,.72)); }}
       .health-panel {{ margin: 0 0 18px; }}
-      .preference-panel {{ margin: 0 0 18px; }}
-      .preference-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }}
-      .preference-grid button {{ width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: white; text-align: left; cursor: pointer; color: var(--ink); }}
+      .secondary-panel {{ margin: 0 0 18px; }}
+      .secondary-panel summary b {{ color: var(--muted); font-size: .84rem; font-weight: 700; }}
+      .secondary-panel[open] > summary {{ margin-bottom: 12px; }}
+      .preference-panel {{ margin: 0 0 14px; }}
+      .start-panel {{ display: grid; grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr); gap: 14px; align-items: center; padding: 16px; background: linear-gradient(135deg, rgba(255,254,249,.96), rgba(237,248,244,.88)); }}
+      .start-panel h2 {{ font-size: clamp(1.35rem, 2.2vw, 2rem); letter-spacing: -0.045em; line-height: 1; }}
+      .start-panel p {{ margin: 8px 0 0; color: var(--muted); max-width: 42ch; }}
+      .eyebrow {{ display: inline-block; margin-bottom: 6px; color: var(--accent); font-size: .75rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }}
+      .preference-grid {{ display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }}
+      .preference-grid button {{ width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: white; text-align: left; cursor: pointer; color: var(--ink); }}
       .preference-grid button:hover {{ border-color: rgba(13,124,102,.45); transform: translateY(-1px); }}
       .preference-grid button[aria-pressed="true"] {{ border-color: rgba(13,124,102,.55); background: var(--accent-soft); box-shadow: inset 0 0 0 1px rgba(13,124,102,.16); }}
-      .preference-grid strong {{ display: block; font-size: 1.2rem; }}
+      .preference-grid strong {{ display: block; font-size: 1.45rem; letter-spacing: -0.04em; }}
       .preference-grid span, .preference-panel p {{ color: var(--muted); font-size: .84rem; }}
       .health-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }}
       .health-card {{ border: 1px solid var(--line); border-radius: 14px; background: white; padding: 10px; }}
@@ -2472,8 +2496,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .deal[data-local-muted="true"] .note-button {{ border-color: #efc2bd; background: #fff0ee; color: var(--hot); }}
       .empty {{ padding: 24px 0; color: var(--muted); }}
       .errors {{ margin-top: 26px; border-top: 1px solid var(--line); padding-top: 16px; }}
-      @media (max-width: 1080px) {{ header {{ grid-template-columns: 1fr; }} .app-shell {{ grid-template-columns: 280px minmax(0, 1fr); }} .digest-grid, .activity-grid {{ grid-template-columns: 1fr; }} }}
-      @media (max-width: 820px) {{ main {{ padding-inline: 10px; }} .app-shell {{ grid-template-columns: 1fr; }} .sidebar {{ position: static; max-height: none; overflow: visible; }} .controls {{ margin-bottom: 14px; }} .controls:not([open]) {{ padding-bottom: 14px; }} .quick-filters {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }} }}
+      @media (max-width: 1080px) {{ header {{ grid-template-columns: 1fr; }} .app-shell {{ grid-template-columns: 280px minmax(0, 1fr); }} .digest-grid, .activity-grid, .start-panel {{ grid-template-columns: 1fr; }} }}
+      @media (max-width: 820px) {{ main {{ padding-inline: 10px; }} .app-shell {{ grid-template-columns: 1fr; }} .sidebar {{ position: static; max-height: none; overflow: visible; }} .controls {{ margin-bottom: 14px; }} .controls:not([open]) {{ padding-bottom: 14px; }} .quick-filters, .preference-grid {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }} }}
       @media (max-width: 620px) {{ header {{ padding: 16px; }} .stats {{ grid-template-columns: repeat(2, 1fr); }} .deal {{ grid-template-columns: 82px 1fr; gap: 12px; }} .thumb {{ width: 82px; height: 82px; }} .price {{ grid-column: 2; text-align: left; margin-top: 2px; }} .badges {{ grid-column: 1 / -1; }} }}
     </style>
   </head>
@@ -2672,6 +2696,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       }}
 
       function radarTarget(name) {{
+        if (name === 'dropOnly') return dropOnly;
         if (name === 'watchOnly') return watchOnly;
         if (name === 'mySizeOnly') return mySizeOnly;
         if (name === 'familySizeOnly') return familySizeOnly;
@@ -2684,6 +2709,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       function syncRadarButtons() {{
         for (const button of radarButtons) {{
           const name = button.dataset.radarFilter;
+          if (name === 'dealsOfDay') {{
+            button.setAttribute('aria-pressed', String(dealsOfDay?.getAttribute('aria-pressed') === 'true'));
+            continue;
+          }}
           if (name === 'showMuted') {{
             button.setAttribute('aria-pressed', String(Boolean(hideMuted && !hideMuted.checked)));
             continue;
@@ -2709,6 +2738,16 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       for (const button of radarButtons) {{
         button.addEventListener('click', () => {{
           const name = button.dataset.radarFilter;
+          if (name === 'dealsOfDay') {{
+            const enabled = dealsOfDay?.getAttribute('aria-pressed') !== 'true';
+            if (dealsOfDay) {{
+              dealsOfDay.setAttribute('aria-pressed', String(enabled));
+              dealsOfDay.textContent = enabled ? 'Showing best 5' : 'Best 5 today';
+            }}
+            if (enabled && sortSelect) sortSelect.value = 'score-desc';
+            updateView();
+            return;
+          }}
           if (name === 'showMuted') {{
             if (hideMuted) hideMuted.checked = !hideMuted.checked;
             updateView();
@@ -2740,7 +2779,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       dealsOfDay?.addEventListener('click', () => {{
         const enabled = dealsOfDay.getAttribute('aria-pressed') !== 'true';
         dealsOfDay.setAttribute('aria-pressed', String(enabled));
-        dealsOfDay.textContent = enabled ? 'Showing top 5 deals' : 'Top 5 deals today';
+        dealsOfDay.textContent = enabled ? 'Showing best 5' : 'Best 5 today';
         if (enabled && sortSelect) sortSelect.value = 'score-desc';
         updateView();
       }});
@@ -2760,7 +2799,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if (hideMuted) hideMuted.checked = true;
         if (dealsOfDay) {{
           dealsOfDay.setAttribute('aria-pressed', 'false');
-          dealsOfDay.textContent = 'Top 5 deals today';
+          dealsOfDay.textContent = 'Best 5 today';
         }}
         for (const box of checkboxes) box.checked = true;
         for (const box of categoryBoxes) box.checked = true;
