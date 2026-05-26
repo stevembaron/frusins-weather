@@ -76,6 +76,11 @@ GEARTRADE_PRICE_RE = re.compile(
 GEARTRADE_DISCOUNT_RE = re.compile(r"(?P<discount>[0-9]{1,3})%\s*Off", re.IGNORECASE)
 GEARTRADE_SIZE_RE = re.compile(r'<span[^>]+class="[^"]*\bplp_size\b[^"]*"[^>]*>.*?<b>\s*Size:\s*</b>\s*&nbsp;\s*(?P<size>[^<]+)', re.IGNORECASE | re.DOTALL)
 GEARTRADE_IMAGE_RE = re.compile(r'<img[^>]+(?:src|data-src)="(?P<src>[^"]+)"', re.IGNORECASE | re.DOTALL)
+CAMPSAVER_GRID_RE = re.compile(
+    r'<div\b(?P<attrs>[^>]*\bgtmProduct\b[^>]*)>(?P<body>.*?)(?=<div\b[^>]*\bgtmProduct\b|<script\b|</main>|</body>)',
+    re.IGNORECASE | re.DOTALL,
+)
+HTML_ATTR_RE = re.compile(r'([a-zA-Z_:][-a-zA-Z0-9_:.]*)\s*=\s*"([^"]*)"')
 EVO_COLLECTION_ITEM_RE = re.compile(
     r'\{id:"[^"]+",name:"(?P<name>(?:[^"\\]|\\.)+)",.*?variant:"(?P<variant>(?:[^"\\]|\\.)*)",'
     r'\s*price:\s*"(?P<price>[^"]+)",.*?variantId:\s*"(?P<variant_id>\d+)",.*?handle:"(?P<handle>[^"]+)",\s*compareAtPrice:\s*"(?P<compare>[^"]+)"',
@@ -580,13 +585,11 @@ def link_candidates(markup: str, base_url: str, source_name: str, found_at: str)
     deals: list[Deal] = []
 
     for link in parser.links:
-        prices = [money(match.group(1)) for match in PRICE_RE.finditer(link["text"])]
-        prices = [price for price in prices if price is not None]
+        prices = extract_offer_prices(link["text"], source_name)
         if not prices:
             continue
 
-        current = min(prices)
-        original = max(prices) if len(prices) > 1 and max(prices) > current else None
+        current, original = choose_prices(prices)
         title = PRICE_RE.sub("", link["text"])
         title = clean_text(re.sub(r"\b(now|sale|was|reg|regular|from|save)\b", " ", title, flags=re.I))
         if len(title) < 8:
@@ -607,6 +610,44 @@ def markdown_candidates(markdown: str, base_url: str, source_name: str, found_at
 
     deals = markdown_image_candidates(markdown, source_name, found_at)
     deals.extend(markdown_sierra_sequence_candidates(markdown, source_name, found_at))
+    return deals
+
+
+def campsaver_grid_candidates(markup: str, base_url: str, source_name: str, found_at: str) -> list[Deal]:
+    if "campsaver" not in source_name.lower():
+        return []
+
+    deals: list[Deal] = []
+    for match in CAMPSAVER_GRID_RE.finditer(markup):
+        attrs = {name.lower(): html.unescape(value) for name, value in HTML_ATTR_RE.findall(match.group("attrs"))}
+        title = clean_text(attrs.get("data-name") or "")
+        current = money(attrs.get("data-price"))
+        slug = attrs.get("data-url") or ""
+        if not title or current is None or not slug:
+            continue
+
+        body = match.group("body")
+        save_match = re.search(r"Save\s+(?:Up\s+to\s+)?\$\s?([0-9,]+(?:\.[0-9]{2})?)", body, re.I)
+        savings = money(save_match.group(1)) if save_match else None
+        original = round(current + savings, 2) if savings else None
+        image_match = re.search(r'<img[^>]+src="(?P<src>[^"]+)"', body, re.I | re.DOTALL)
+        model_match = re.search(r'title="(?P<count>[0-9]+\s+models?)\s+available"', body, re.I)
+        flag_match = re.search(r'class="[^"]*\bgrid__item-flag\b[^"]*".*?<span\s+title="(?P<flag>[^"]+)"', body, re.I | re.DOTALL)
+        prefix = f"{model_match.group('count')} " if model_match else ""
+        suffix = f" {clean_text(flag_match.group('flag'))}" if flag_match else ""
+        product_url = urljoin(base_url, slug if slug.endswith(".html") else f"{slug}.html")
+        deals.append(
+            make_deal(
+                f"{prefix}{title}{suffix}",
+                product_url,
+                source_name,
+                current,
+                original,
+                found_at,
+                image_url=image_url(image_match.group("src"), base_url) if image_match else None,
+            )
+        )
+
     return deals
 
 
@@ -962,14 +1003,17 @@ def markdown_image_candidates(markdown: str, source_name: str, found_at: str) ->
 
         next_start = matches[index + 1].start() if index + 1 < len(matches) else min(len(markdown), match.end() + 800)
         block = markdown[match.start() : next_start]
-        prices = extract_prices(block)
+        prices = extract_offer_prices(block, source_name)
         if not prices:
             continue
 
         compare_at = re.search(r"Compare At\s+\$\s?([0-9,]+(?:\.[0-9]{2})?)", block, re.I)
+        list_at = re.search(r"\bList:?\s+\$\s?([0-9,]+(?:\.[0-9]{2})?)", block, re.I)
         current, original = choose_prices(prices)
         if compare_at:
             original = money(compare_at.group(1))
+        elif list_at:
+            original = money(list_at.group(1))
         deals.append(make_deal(title, url, source_name, current, original, found_at, image_url=image_url(match.group("img"))))
     return deals
 
@@ -1012,6 +1056,14 @@ def markdown_sierra_sequence_candidates(markdown: str, source_name: str, found_a
 def extract_prices(value: str) -> list[float]:
     prices = [money(match.group(1)) for match in PRICE_RE.finditer(value)]
     return [price for price in prices if price is not None]
+
+
+def extract_offer_prices(value: str, source_name: str) -> list[float]:
+    if "campsaver" in source_name.lower():
+        # CampSaver variant rows include "Save $X" next to List/current prices.
+        # Treating that savings amount as a price creates impossible $69 ski deals.
+        value = re.sub(r"\bSave\s+(?:Up\s+to\s+)?\$\s?[0-9,]+(?:\.[0-9]{2})?", " ", value, flags=re.I)
+    return extract_prices(value)
 
 
 def choose_prices(prices: list[float]) -> tuple[float, float | None]:
@@ -1306,13 +1358,19 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                         source.get("size_max_cm"),
                     )
                 )
-            candidates.extend(link_candidates(markup, url, source_name, found_at))
-            candidates.extend(markdown_candidates(markup, url, source_name, found_at))
+            campsaver_candidates = campsaver_grid_candidates(markup, url, source_name, found_at)
+            if campsaver_candidates:
+                candidates.extend(campsaver_candidates)
+            else:
+                candidates.extend(link_candidates(markup, url, source_name, found_at))
+                candidates.extend(markdown_candidates(markup, url, source_name, found_at))
             candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
             if not candidates and source.get("reader_fallback"):
                 markup = fetch_reader_target(source.get("reader_url") or url, timeout=45)
-                candidates = markdown_candidates(markup, url, source_name, found_at)
-                candidates.extend(link_candidates(markup, url, source_name, found_at))
+                candidates = campsaver_grid_candidates(markup, url, source_name, found_at)
+                if not candidates:
+                    candidates = markdown_candidates(markup, url, source_name, found_at)
+                    candidates.extend(link_candidates(markup, url, source_name, found_at))
                 candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
             all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
             time.sleep(float(source.get("delay_seconds", 1.2)))
@@ -1344,8 +1402,10 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                         all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                         errors.append(SourceError(source_name, url, blocked))
                         continue
-                    candidates = markdown_candidates(markup, url, source_name, found_at)
-                    candidates.extend(link_candidates(markup, url, source_name, found_at))
+                    candidates = campsaver_grid_candidates(markup, url, source_name, found_at)
+                    if not candidates:
+                        candidates = markdown_candidates(markup, url, source_name, found_at)
+                        candidates.extend(link_candidates(markup, url, source_name, found_at))
                     candidates.extend(geartrade_search_candidates(markup, url, source_name, found_at))
                     all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
                     time.sleep(float(source.get("delay_seconds", 1.2)))
