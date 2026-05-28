@@ -1512,7 +1512,50 @@ def load_price_history(path: Path) -> dict[str, Any]:
         return {"items": {}}
     if not isinstance(payload, dict) or not isinstance(payload.get("items"), dict):
         return {"items": {}}
+    sanitize_price_history(payload)
     return payload
+
+
+def sanitize_price_history(history: dict[str, Any]) -> None:
+    items = history.get("items")
+    if not isinstance(items, dict):
+        return
+
+    for item in items.values():
+        if not isinstance(item, dict) or item.get("source") != "CampSaver backcountry skis":
+            continue
+        if not campsaver_has_suspicious_cached_price(item):
+            continue
+
+        observations = item.get("observations")
+        if not isinstance(observations, list):
+            continue
+        sane_observations = [
+            observation
+            for observation in observations
+            if isinstance(observation, dict) and (money(observation.get("price")) or 0) >= 100
+        ]
+        if not sane_observations:
+            continue
+
+        item["observations"] = sane_observations
+        latest = max(sane_observations, key=lambda observation: str(observation.get("date", "")))
+        prices = [price for price in [money(observation.get("price")) for observation in sane_observations] if price is not None]
+        latest_price = money(latest.get("price"))
+        if latest_price is not None:
+            item["current_price"] = latest_price
+        if prices:
+            item["lowest_price"] = min(prices)
+            item["highest_price"] = max(prices)
+
+
+def campsaver_has_suspicious_cached_price(item: dict[str, Any]) -> bool:
+    current = money(item.get("current_price"))
+    highest = money(item.get("highest_price"))
+    title = str(item.get("title") or "").lower()
+    if current is None:
+        return False
+    return current < 100 and (highest or 0) > 300 and ("as low as" in title or "black diamond impulse" in title)
 
 
 def latest_prior_observation(item: dict[str, Any], today: str) -> dict[str, Any] | None:
