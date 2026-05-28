@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-28T12:59:19+00:00
+Generated: 2026-05-28T14:08:10+00:00
 Deals found: 263
 
 1. [3 models Black Diamond Impulse 104 Ti Skis As Low As ( Up to ) Shed](https://www.campsaver.com/black-diamond-impulse-104-ti-skis.html)
