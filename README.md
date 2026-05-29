@@ -1,22 +1,26 @@
-# Web Apps
+# Pool Days Tracker
 
-This repository publishes small static apps with each app in its own folder.
+Log every day you swim and capture that day's weather, so you can spot trends across the season.
 
-## Apps
+## Features
 
-- [Frusins Weather](frusins-weather/)
-- [AP Human Geography Prep Atlas](ap-human-geography-prep/)
-- [Ski Deals](ski-deals/)
-- [Utah Permit Practice](utah-permit-practice/)
+- **Log a pool day** with the date and an optional note. Duplicate dates are blocked.
+- **Automatic weather** for each logged day from [Open-Meteo](https://open-meteo.com/) (no API key): daily high/low temperature, conditions, and rainfall.
+- **Trends**: season stats (total days, average high, warmest day, rainy days), pool days by month, and daily high temperature per pool day.
+- **Season filter** to view a single year or all seasons.
+- **Persistent storage** in the browser via `localStorage`.
+- **Backup**: export your log to JSON and import it on another device — that's how you keep your phone and laptop in sync, since a static GitHub Pages site has no shared backend.
 
-## Published URLs
+## Weather location
 
-- Directory page: <https://stevembaron.github.io/projects/>
-- Frusins Weather: <https://stevembaron.github.io/projects/frusins-weather/>
-- AP Human Geography Prep Atlas: <https://stevembaron.github.io/projects/ap-human-geography-prep/>
-- Ski Deals: <https://stevembaron.github.io/projects/ski-deals/>
-- Utah Permit Practice: <https://stevembaron.github.io/projects/utah-permit-practice/>
+Defaults to the Perrys Hollow / Salt Lake City area (`40.78, -111.83`). Change it in
+**Settings & backup** by entering `latitude, longitude`. New days use the saved location;
+press ↻ on an existing day to refetch its weather.
 
-## Structure Rule
+## Files
 
-Keep the repository root as the directory page. New apps should be added as sibling folders at the root.
+- `index.html` — markup
+- `styles.css` — styling
+- `app.js` — logging, storage, weather, and charts (vanilla JS, no build step)
+
+Part of the GitHub Pages site; lives in its own folder so it can't collide with other apps.
