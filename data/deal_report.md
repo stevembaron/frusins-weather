@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-28T21:17:43+00:00
+Generated: 2026-05-29T12:55:45+00:00
 Deals found: 263
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -35,7 +35,7 @@ Deals found: 263
 
 6. [K2 Mindbender 90 C W Skis - Women's 2025](https://www.evo.com/products/252238-k2-mindbender-90-c-w-skis-women-s-2025)
    $189.99 was $549.95 (65.5% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 172 cm
    Stock: In stock
 
