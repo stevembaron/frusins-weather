@@ -3,123 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Steve's Web Apps</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --bg: #f5f7f4;
-        --ink: #182321;
-        --muted: #61706b;
-        --line: #d8ddd7;
-        --surface: #ffffff;
-        --green: #176b57;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: var(--bg);
-        color: var(--ink);
-      }
-
-      main {
-        width: min(920px, calc(100% - 32px));
-        margin: 0 auto;
-        padding: 48px 0;
-      }
-
-      h1 {
-        margin: 0;
-        font-size: clamp(2.25rem, 6vw, 4.25rem);
-        line-height: 1;
-      }
-
-      p {
-        color: var(--muted);
-        font-size: 1.08rem;
-        line-height: 1.55;
-      }
-
-      .app-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 16px;
-        margin-top: 28px;
-      }
-
-      a.app-card {
-        display: grid;
-        gap: 8px;
-        min-height: 150px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--surface);
-        color: inherit;
-        text-decoration: none;
-      }
-
-      a.app-card:hover,
-      a.app-card:focus-visible {
-        border-color: var(--green);
-        outline: none;
-      }
-
-      .app-card strong {
-        color: var(--green);
-        font-size: 1.35rem;
-      }
-
-      .app-card span {
-        color: var(--muted);
-        line-height: 1.45;
-      }
-    </style>
+    <meta name="theme-color" content="#176b57" />
+    <title>Pool Days Tracker</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
-      <h1>Web Apps</h1>
-      <p>Small tools live in their own folders so one app cannot accidentally replace another.</p>
+      <header class="page-head">
+        <h1>Pool Days</h1>
+        <p>Log every day you swim and capture that day's weather, so you can spot the trends across the season.</p>
+      </header>
 
-      <div class="app-grid">
-        <a class="app-card" href="./frusins-weather/">
-          <strong>Frusins Weather</strong>
-          <span>Weather dashboard for saved family locations.</span>
-        </a>
-        <a class="app-card" href="./home-weather/">
-          <strong>Home Weather</strong>
-          <span>Live conditions from the Perrys Hollow WeatherFlow station.</span>
-        </a>
-        <a class="app-card" href="./pool-tracker/">
-          <strong>Pool Days</strong>
-          <span>Log the days you use the pool with that day's weather, and track trends across the season.</span>
-        </a>
-        <a class="app-card" href="./ski-deals/">
-          <strong>Ski Deals</strong>
-          <span>Daily ski gear deals sorted from lowest price to highest price.</span>
-        </a>
-        <a class="app-card" href="./clothing-deals/">
-          <strong>Clothing Deals</strong>
-          <span>Daily men's clothing deals from Geartrade, sorted from lowest price to highest price.</span>
-        </a>
-        <a class="app-card" href="./utah-permit-practice/">
-          <strong>Utah Permit Practice</strong>
-          <span>Interactive learner permit quiz with explanations and official Utah sources.</span>
-        </a>
-        <a class="app-card" href="./ap-human-geography-prep/">
-          <strong>AP Human Geography Prep Atlas</strong>
-          <span>Mobile-friendly AP Human Geography review with official unit maps, exam structure, and practice sprints.</span>
-        </a>
-        <a class="app-card" href="./whs-calendar/index.html">
-          <strong>WHS Calendar</strong>
-          <span>Import WHS calendar PDFs, review events, and sync selected dates to Google Calendar.</span>
-        </a>
-      </div>
+      <section class="card log-card" aria-labelledby="logHeading">
+        <h2 id="logHeading">Log a pool day</h2>
+        <form id="logForm" class="log-form">
+          <div class="field">
+            <label for="dateInput">Date</label>
+            <input type="date" id="dateInput" required />
+          </div>
+          <div class="field grow">
+            <label for="noteInput">Note <span class="muted">(optional)</span></label>
+            <input type="text" id="noteInput" placeholder="e.g. Pool party, water felt great" maxlength="140" />
+          </div>
+          <button type="submit" id="logButton">Add day</button>
+        </form>
+        <p id="logStatus" class="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="stats" id="statsGrid" aria-label="Season statistics"></section>
+
+      <section class="card" aria-labelledby="trendsHeading">
+        <div class="card-head">
+          <h2 id="trendsHeading">Trends</h2>
+          <div class="season-picker">
+            <label for="seasonSelect" class="muted">Season</label>
+            <select id="seasonSelect"></select>
+          </div>
+        </div>
+        <div class="trends">
+          <div class="chart-block">
+            <h3>Pool days by month</h3>
+            <div id="monthChart" class="bar-chart"></div>
+          </div>
+          <div class="chart-block">
+            <h3>Daily high temperature on pool days</h3>
+            <div id="tempChart" class="bar-chart temp"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="daysHeading">
+        <div class="card-head">
+          <h2 id="daysHeading">Logged days <span id="dayCount" class="count"></span></h2>
+        </div>
+        <ul id="dayList" class="day-list"></ul>
+        <p id="emptyState" class="empty">No pool days logged yet. Add your first one above.</p>
+      </section>
+
+      <section class="card settings" aria-labelledby="settingsHeading">
+        <h2 id="settingsHeading">Settings &amp; backup</h2>
+        <div class="field">
+          <label for="locInput">Weather location <span class="muted">(lat, lon)</span></label>
+          <div class="loc-row">
+            <input type="text" id="locInput" placeholder="40.78, -111.83" />
+            <button type="button" id="locSave" class="secondary">Save</button>
+          </div>
+          <small class="muted">Used to fetch each pool day's weather from Open-Meteo. Default is the Perrys Hollow / Salt Lake City area.</small>
+        </div>
+        <div class="backup-row">
+          <button type="button" id="exportButton" class="secondary">Export backup (JSON)</button>
+          <button type="button" id="importButton" class="secondary">Import backup</button>
+          <input type="file" id="importFile" accept="application/json,.json" hidden />
+        </div>
+        <small class="muted">Data lives in this browser only. Export from one device and import on another to keep your phone and laptop in sync.</small>
+      </section>
+
+      <footer class="page-foot">
+        <a href="../">&larr; All web apps</a>
+      </footer>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
