@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-05-30T14:18:23+00:00
-Deals found: 263
+Generated: 2026-05-30T19:40:48+00:00
+Deals found: 238
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -21,139 +21,142 @@ Deals found: 263
    Sizes: 163 cm
    Stock: In stock
 
-4. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
-   $150.00 was $430.00 (65.1% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 158cm
-
-
-5. [2024 Dynastar Menace 80 - 168cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
-   $150.00 was $430.00 (65.1% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 168cm
-
-
-6. [K2 Mindbender 90 C W Skis - Women's 2025](https://www.evo.com/products/252238-k2-mindbender-90-c-w-skis-women-s-2025)
+4. [K2 Mindbender 90 C W Skis - Women's 2025](https://www.evo.com/products/252238-k2-mindbender-90-c-w-skis-women-s-2025)
    $189.99 was $549.95 (65.5% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 172 cm
    Stock: In stock
 
-7. [2024 Rossignol Rallybird 102 - 154cm / Purple/Pink / New](https://lonepinegearx.com/products/2024-rossignol-rallybird-102-374e8)
-   $279.00 was $849.95 (67.2% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 154cm
-
-
-8. [2025 Zag Women's Harfang 86 *Floor Model* - 162cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-floor-model-08736)
-   $269.95 was $780.00 (65.4% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 162cm
-
-
-9. [2024 Zag UBAC 89 - 171cm / Blue/White / New](https://lonepinegearx.com/products/2024-zag-ubac-89-f2ddc)
-   $280.00 was $806.67 (65.3% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 171cm
-
-
-10. [2025 Zag Women's Slap 104 - 164cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57)
-   $299.95 was $870.00 (65.5% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 164cm
-
-
-11. [2025 Zag Women's Slap 104 - 170cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57)
-   $299.95 was $870.00 (65.5% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 170cm
-
-
-12. [Salomon Stance 88 Womens Skis - 174cm](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
-   $249.99 was $699.95 (64.3% off) - ERIK'S downhill skis price ascending
-   Price trend: Same as prior day
-   Sizes: 174cm
-
-
-13. [2025 Zag Harfang 86 - 170cm / Orange/Blue / New](https://lonepinegearx.com/products/2025-zag-harfang-86-fa09f)
-   $289.95 was $780.00 (62.8% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 170cm
-
-
-14. [2025 Zag Women's Harfang 86 - 155cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e)
-   $289.95 was $780.00 (62.8% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 155cm
-
-
-15. [2025 Zag Women's Harfang 86 - 162cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e)
-   $289.95 was $780.00 (62.8% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 162cm
-
-
-16. [2025 Zag Women's Harfang 86 - 170cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-76f4e)
-   $289.95 was $780.00 (62.8% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 170cm
-
-
-17. [2025 Zag Women's Slap 92 - 166cm / Blue/Pink / New](https://lonepinegearx.com/products/2025-zag-womens-slap-92-e0d32)
-   $299.95 was $780.00 (61.5% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 166cm
-
-
-18. [2024 Zag UBAC 95 - 170cm / Blue/Green/White / New](https://lonepinegearx.com/products/2024-zag-ubac-95-cea07)
-   $299.00 was $775.00 (61.4% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 170cm
-
-
-19. [2023 Zag UBAC 95 - 170cm / Blue/White / New](https://lonepinegearx.com/products/2023-zag-ubac-95-f51c9)
-   $299.95 was $775.00 (61.3% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 170cm
-
-
-20. [2023 Zag UBAC 95 - 158cm / Blue/White / New](https://lonepinegearx.com/products/2023-zag-ubac-95-f0cf3)
-   $299.99 was $775.00 (61.3% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 158cm
-
-
-21. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
+5. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
    $349.97 was $899.00 (61.1% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 168 cm
    Stock: In stock
 
-22. [Elan Playmaker 87 Mens Demo Skis 2026](https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026)
+6. [Elan Playmaker 87 Mens Demo Skis 2026](https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026)
    $274.99 was $679.99 (59.6% off) - Utah Skis demo skis sale
    Price trend: Same as prior day
    Sizes: 166
    Stock: In stock
 
-23. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
-   $299.99 was $750.00 (60.0% off) - The Gear Room skis price ascending
-   Price trend: Same as prior day
-   Sizes: 154cm, 160cm, 168cm
-
-
-24. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
+7. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
    $299.98 was $749.95 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 158 cm
    Stock: In stock
 
-25. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
+8. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
    $339.99 was $849.99 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 173 cm
+   Stock: In stock
+
+9. [Head Kore 87 Ti Womens Demo Skis 2026](https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026)
+   $349.99 was $875.00 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 149, 156, 163
+   Stock: In stock
+
+10. [K2 Mindbender 85 Skis 2025](https://www.evo.com/products/252190-k2-mindbender-85-skis-2025)
+   $194.99 was $449.95 (56.7% off) - Evo skis price ascending
+   Price trend: Newly tracked
+   Sizes: 177 cm
+   Stock: In stock
+
+11. [Elan Wingman 80 Ti Mens Demo Skis 2026](https://utahskis.com/products/elan-wingman-80-ti-demo-skis-2026)
+   $274.99 was $649.99 (57.7% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 168
+   Stock: In stock
+
+12. [Rossignol Rallybird Soul 92 Xp11 Womens Demo Skis 2026](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)
+   $399.99 was $1000.00 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 156, 166
+   Stock: In stock
+
+13. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
+   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 188
+   Stock: In stock
+
+14. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
+   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 156, 166, 176, 184
+   Stock: In stock
+
+15. [Armada Arv 100 Mens Demo Skis 2026](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)
+   $374.99 was $925.00 (59.5% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 172, 179
+   Stock: In stock
+
+16. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
+   $199.97 was $449.99 (55.6% off) - Evo skis price ascending
+   Price trend: Same as prior day
+   Sizes: 152 cm
+   Stock: In stock
+
+17. [Armada Arv 106 Demo Skis 2026](https://utahskis.com/products/armada-arv-106-demo-skis-2026)
+   $399.99 was $975.00 (59.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 172, 180
+   Stock: In stock
+
+18. [Nordica Santa Ana 92 Womens Demo Skis 2026](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
+   $374.99 was $899.99 (58.3% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 150, 155, 161
+   Stock: In stock
+
+19. [Elan Ripstick 94 Womens Demo Skis 2026](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)
+   $374.99 was $899.00 (58.3% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 161
+   Stock: In stock
+
+20. [Nordica Santa Ana 104 Free Skis - Women's 2024](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)
+   $359.99 was $849.99 (57.6% off) - Evo skis price ascending
+   Price trend: Same as prior day
+   Sizes: 172 cm
+   Stock: In stock
+
+21. [Black Crows Captis Birdie Womens Demo Skis 2026](https://utahskis.com/products/black-crows-captis-birdie-womens-demo-skis-2026)
+   $324.99 was $749.00 (56.6% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 154.4, 160.1
+   Stock: In stock
+
+22. [Elan Ripstick 96 Demo Skis 2026](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)
+   $399.99 was $949.99 (57.9% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 161, 168, 175, 182, 189
+   Stock: In stock
+
+23. [Rossignol Arcade 84 + Spx 12 Demo Skis 2026](https://utahskis.com/products/rossignol-arcade-84-spx-12-demo-skis-2026)
+   $474.99 was $1150.00 (58.7% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 152, 160, 168
+   Stock: In stock
+
+24. [Rossignol Forza 70 Ti + Spx14 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-forza-70-ti-spx14-mens-demo-skis-2026)
+   $524.99 was $1300.00 (59.6% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 163, 173, 181
+   Stock: In stock
+
+25. [K2 Mindbender 90C W + QuickClik Womens Demo Skis 2026](https://utahskis.com/products/k2-mindbender-90c-w-quick-clik-womens-demo-skis-2026)
+   $374.99 was $849.95 (55.9% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 148, 154, 160
    Stock: In stock
 
 
 ## Source Errors
 
 - CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue
+- ERIK'S downhill skis price ascending: HTTP Error 403: Forbidden; reader fallback failed: HTTP Error 403: Forbidden
+- The Gear Room skis price ascending: HTTP Error 403: Forbidden; reader fallback failed: HTTP Error 403: Forbidden
+- Lone Pine new flat skis: HTTP Error 403: Forbidden
