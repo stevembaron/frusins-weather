@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-05-30T19:40:48+00:00
+Generated: 2026-05-31T11:52:13+00:00
 Deals found: 238
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -59,7 +59,7 @@ Deals found: 238
 
 10. [K2 Mindbender 85 Skis 2025](https://www.evo.com/products/252190-k2-mindbender-85-skis-2025)
    $194.99 was $449.95 (56.7% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 177 cm
    Stock: In stock
 
@@ -75,16 +75,16 @@ Deals found: 238
    Sizes: 156, 166
    Stock: In stock
 
-13. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
-   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 188
-   Stock: In stock
-
-14. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
+13. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
    $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
    Price trend: Same as prior day
    Sizes: 156, 166, 176, 184
+   Stock: In stock
+
+14. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
+   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 188
    Stock: In stock
 
 15. [Armada Arv 100 Mens Demo Skis 2026](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)
