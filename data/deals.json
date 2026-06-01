@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-01T12:42:43+00:00",
+  "generated_at": "2026-06-01T16:19:51+00:00",
   "deal_count": 263,
   "sources_checked": 7,
-  "price_history_count": 296,
-  "price_change_count": 2,
+  "price_history_count": 311,
+  "price_change_count": 8,
   "deals": [
     {
       "title": "Dynastar M-Pro 99 W Skis - Women's 2022",
@@ -14,7 +14,7 @@
       "discount_percent": 82.9,
       "savings": 579.96,
       "score": 135.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 80.0,
       "savings": 559.96,
       "score": 132.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 76.5,
       "savings": 649.96,
       "score": 127.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 65.1,
       "savings": 280.0,
       "score": 117.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158cm"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 65.1,
       "savings": 280.0,
       "score": 117.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168cm"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 65.5,
       "savings": 359.96,
       "score": 116.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 67.2,
       "savings": 570.95,
       "score": 116.62,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154cm"
       ],
@@ -182,7 +182,7 @@
       "discount_percent": 65.4,
       "savings": 510.05,
       "score": 115.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162cm"
       ],
@@ -206,7 +206,7 @@
       "discount_percent": 65.3,
       "savings": 526.67,
       "score": 114.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "171cm"
       ],
@@ -230,7 +230,7 @@
       "discount_percent": 65.5,
       "savings": 570.05,
       "score": 114.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -254,7 +254,7 @@
       "discount_percent": 65.5,
       "savings": 570.05,
       "score": 114.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -278,7 +278,7 @@
       "discount_percent": 64.3,
       "savings": 449.96,
       "score": 114.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "174cm"
       ],
@@ -302,7 +302,7 @@
       "discount_percent": 62.8,
       "savings": 490.05,
       "score": 112.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -326,7 +326,7 @@
       "discount_percent": 62.8,
       "savings": 490.05,
       "score": 112.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155cm"
       ],
@@ -350,7 +350,7 @@
       "discount_percent": 62.8,
       "savings": 490.05,
       "score": 112.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162cm"
       ],
@@ -374,7 +374,7 @@
       "discount_percent": 62.8,
       "savings": 490.05,
       "score": 112.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -398,7 +398,7 @@
       "discount_percent": 61.5,
       "savings": 480.05,
       "score": 110.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166cm"
       ],
@@ -422,7 +422,7 @@
       "discount_percent": 61.4,
       "savings": 476.0,
       "score": 110.42,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -446,7 +446,7 @@
       "discount_percent": 61.3,
       "savings": 475.05,
       "score": 110.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -470,7 +470,7 @@
       "discount_percent": 61.3,
       "savings": 475.01,
       "score": 110.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158cm"
       ],
@@ -494,7 +494,7 @@
       "discount_percent": 61.1,
       "savings": 549.03,
       "score": 109.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -518,7 +518,7 @@
       "discount_percent": 59.6,
       "savings": 405.0,
       "score": 109.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166"
       ],
@@ -542,7 +542,7 @@
       "discount_percent": 60.0,
       "savings": 450.01,
       "score": 109.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154cm",
         "160cm",
@@ -568,7 +568,7 @@
       "discount_percent": 60.0,
       "savings": 449.97,
       "score": 109.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158 cm"
       ],
@@ -592,7 +592,7 @@
       "discount_percent": 60.0,
       "savings": 510.0,
       "score": 108.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "173 cm"
       ],
@@ -616,7 +616,7 @@
       "discount_percent": 60.0,
       "savings": 525.01,
       "score": 108.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "149",
         "156",
@@ -642,7 +642,7 @@
       "discount_percent": 56.7,
       "savings": 254.96,
       "score": 107.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "177 cm"
       ],
@@ -666,7 +666,7 @@
       "discount_percent": 60.0,
       "savings": 568.95,
       "score": 107.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -690,7 +690,7 @@
       "discount_percent": 57.7,
       "savings": 375.0,
       "score": 107.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168"
       ],
@@ -714,7 +714,7 @@
       "discount_percent": 60.0,
       "savings": 600.01,
       "score": 107.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156",
         "166"
@@ -739,7 +739,7 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "188"
       ],
@@ -763,7 +763,7 @@
       "discount_percent": 60.0,
       "savings": 600.0,
       "score": 107.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156",
         "166",
@@ -790,7 +790,7 @@
       "discount_percent": 59.5,
       "savings": 550.01,
       "score": 107.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172",
         "179"
@@ -815,7 +815,7 @@
       "discount_percent": 55.6,
       "savings": 250.02,
       "score": 106.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "152 cm"
       ],
@@ -839,7 +839,7 @@
       "discount_percent": 58.1,
       "savings": 479.05,
       "score": 106.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -863,7 +863,7 @@
       "discount_percent": 58.1,
       "savings": 479.05,
       "score": 106.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -887,7 +887,7 @@
       "discount_percent": 57.1,
       "savings": 400.01,
       "score": 106.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "177cm",
         "184cm"
@@ -912,7 +912,7 @@
       "discount_percent": 59.0,
       "savings": 575.01,
       "score": 106.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172",
         "180"
@@ -937,7 +937,7 @@
       "discount_percent": 58.3,
       "savings": 525.0,
       "score": 105.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150",
         "155",
@@ -963,7 +963,7 @@
       "discount_percent": 58.3,
       "savings": 524.01,
       "score": 105.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "161"
       ],
@@ -987,7 +987,7 @@
       "discount_percent": 57.6,
       "savings": 490.0,
       "score": 105.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -1011,7 +1011,7 @@
       "discount_percent": 57.7,
       "savings": 518.95,
       "score": 105.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -1035,7 +1035,7 @@
       "discount_percent": 56.6,
       "savings": 424.01,
       "score": 105.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154.4",
         "160.1"
@@ -1060,7 +1060,7 @@
       "discount_percent": 58.0,
       "savings": 550.95,
       "score": 105.02,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "160cm",
         "166cm",
@@ -1087,7 +1087,7 @@
       "discount_percent": 57.9,
       "savings": 550.0,
       "score": 104.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "161",
         "168",
@@ -1115,7 +1115,7 @@
       "discount_percent": 56.7,
       "savings": 457.67,
       "score": 104.72,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "171cm"
       ],
@@ -1139,7 +1139,7 @@
       "discount_percent": 58.7,
       "savings": 675.01,
       "score": 104.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "152",
         "160",
@@ -1165,7 +1165,7 @@
       "discount_percent": 57.8,
       "savings": 590.05,
       "score": 104.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -1189,7 +1189,7 @@
       "discount_percent": 59.6,
       "savings": 775.01,
       "score": 104.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163",
         "173",
@@ -1215,7 +1215,7 @@
       "discount_percent": 56.5,
       "savings": 520.05,
       "score": 103.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -1239,7 +1239,7 @@
       "discount_percent": 56.5,
       "savings": 520.05,
       "score": 103.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -1263,7 +1263,7 @@
       "discount_percent": 55.9,
       "savings": 474.96,
       "score": 103.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "148",
         "154",
@@ -1289,7 +1289,7 @@
       "discount_percent": 58.3,
       "savings": 700.01,
       "score": 103.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156",
         "164",
@@ -1317,7 +1317,7 @@
       "discount_percent": 55.6,
       "savings": 500.0,
       "score": 102.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "167",
         "173",
@@ -1344,7 +1344,7 @@
       "discount_percent": 52.0,
       "savings": 260.01,
       "score": 102.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166cm"
       ],
@@ -1368,7 +1368,7 @@
       "discount_percent": 53.6,
       "savings": 374.96,
       "score": 102.1,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "147",
         "153",
@@ -1394,7 +1394,7 @@
       "discount_percent": 55.3,
       "savings": 524.96,
       "score": 101.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166",
         "172",
@@ -1421,7 +1421,7 @@
       "discount_percent": 50.7,
       "savings": 222.96,
       "score": 101.36,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "Blissful Blue / 138cm",
         "Blissful Blue / 146cm",
@@ -1447,7 +1447,7 @@
       "discount_percent": 52.9,
       "savings": 369.96,
       "score": 101.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "176 cm"
       ],
@@ -1471,7 +1471,7 @@
       "discount_percent": 55.0,
       "savings": 550.04,
       "score": 101.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168",
         "175",
@@ -1497,7 +1497,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "149",
         "156",
@@ -1523,7 +1523,7 @@
       "discount_percent": 55.0,
       "savings": 550.0,
       "score": 101.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "167",
         "173",
@@ -1550,7 +1550,7 @@
       "discount_percent": 53.1,
       "savings": 424.96,
       "score": 100.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163",
         "170",
@@ -1577,66 +1577,12 @@
       "discount_percent": 50.0,
       "savings": 224.99,
       "score": 100.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "152 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1053642.jpg?v=1767731312",
-      "is_cached": false,
-      "previous_price": 225.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 225.0,
-      "highest_price": 225.0
-    },
-    {
-      "title": "Fischer Pulse Pro Skis with RS 9 Bindings",
-      "url": "https://www.eriksbikeshop.com/products/fischer-pulse-pro-skis-with-rs-9-bindings-2026-pr5a25873",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 225.0,
-      "original_price": 449.99,
-      "discount_percent": 50.0,
-      "savings": 224.99,
-      "score": 100.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "145cm",
-        "150cm",
-        "155cm",
-        "160cm",
-        "165cm",
-        "170cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-pulse-pro-skis-with-rs-9-bindings_pr5a25873_5735.jpg?v=1756454341",
-      "is_cached": false,
-      "previous_price": 225.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 225.0,
-      "highest_price": 225.0
-    },
-    {
-      "title": "Volkl Revolt 81 Skis",
-      "url": "https://www.eriksbikeshop.com/products/volkl-revolt-81-skis-2026-pr5a25813",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 225.0,
-      "original_price": 449.99,
-      "discount_percent": 50.0,
-      "savings": 224.99,
-      "score": 100.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "168cm",
-        "178cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-revolt-81-skis_pr5a25813_2e50.jpg?v=1758094559",
       "is_cached": false,
       "previous_price": 225.0,
       "price_change": 0.0,
@@ -1655,7 +1601,7 @@
       "discount_percent": 54.8,
       "savings": 575.01,
       "score": 100.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156",
         "163",
@@ -1683,7 +1629,7 @@
       "discount_percent": 52.9,
       "savings": 450.0,
       "score": 99.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "147",
         "154",
@@ -1709,7 +1655,7 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156",
         "164"
@@ -1734,7 +1680,7 @@
       "discount_percent": 52.9,
       "savings": 449.96,
       "score": 99.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "Gray / 148"
       ],
@@ -1758,7 +1704,7 @@
       "discount_percent": 50.5,
       "savings": 292.96,
       "score": 99.76,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "Silver / 150cm",
         "Silver / 160cm",
@@ -1785,7 +1731,7 @@
       "discount_percent": 51.4,
       "savings": 359.96,
       "score": 99.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -1809,7 +1755,7 @@
       "discount_percent": 54.5,
       "savings": 600.05,
       "score": 99.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -1825,33 +1771,6 @@
       "highest_price": 499.95
     },
     {
-      "title": "Volkl Shine 72 Womens Skis with VMotion 10 Bindings",
-      "url": "https://www.eriksbikeshop.com/products/volkl-shine-72-womens-skis-with-vmotion-10-bindings-2026-pr5a25816",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 275.0,
-      "original_price": 549.99,
-      "discount_percent": 50.0,
-      "savings": 274.99,
-      "score": 99.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "144cm",
-        "151cm",
-        "158cm",
-        "165cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-72-womens-skis-with-vmotion-10-bindings_pr5a25816_0301.jpg?v=1756540785",
-      "is_cached": false,
-      "previous_price": 275.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 275.0,
-      "highest_price": 275.0
-    },
-    {
       "title": "2026 Line Honey Badger - 172cm / Black/White / New",
       "url": "https://lonepinegearx.com/products/2026-line-honey-badger-15f5a",
       "source": "Lone Pine new flat skis",
@@ -1860,7 +1779,7 @@
       "discount_percent": 48.9,
       "savings": 220.0,
       "score": 99.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -1884,7 +1803,7 @@
       "discount_percent": 50.0,
       "savings": 289.97,
       "score": 99.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "Black / 160cm",
         "Black / 167cm"
@@ -1909,7 +1828,7 @@
       "discount_percent": 50.0,
       "savings": 300.0,
       "score": 99.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "161cm"
       ],
@@ -1925,30 +1844,6 @@
       "highest_price": 299.95
     },
     {
-      "title": "Lib Tech Backwards Mens Skis - 178cm",
-      "url": "https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 300.0,
-      "original_price": 599.99,
-      "discount_percent": 50.0,
-      "savings": 299.99,
-      "score": 99.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "178cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-backwards-mens-skis_pr5a25243_34ad.jpg?v=1758009588",
-      "is_cached": false,
-      "previous_price": 300.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 300.0,
-      "highest_price": 300.0
-    },
-    {
       "title": "Lib Tech Libstick 88 Skis - Women's 2026 - Used",
       "url": "https://www.evo.com/products/285809-lib-tech-libstick-88-skis-women-s-2026-used",
       "source": "Evo skis price ascending",
@@ -1957,37 +1852,12 @@
       "discount_percent": 50.0,
       "savings": 314.99,
       "score": 98.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "153 cm"
       ],
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1282328.jpg?v=1774050883",
-      "is_cached": false,
-      "previous_price": 315.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 315.0,
-      "highest_price": 315.0
-    },
-    {
-      "title": "Lib Tech Libstick 88 Womens Skis",
-      "url": "https://www.eriksbikeshop.com/products/lib-tech-libstick-88-womens-skis-2026-pr5a25248",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 315.0,
-      "original_price": 629.99,
-      "discount_percent": 50.0,
-      "savings": 314.99,
-      "score": 98.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "153cm",
-        "160cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-88-womens-skis_pr5a25248_52c1.jpg?v=1758009637",
       "is_cached": false,
       "previous_price": 315.0,
       "price_change": 0.0,
@@ -2006,7 +1876,7 @@
       "discount_percent": 52.6,
       "savings": 500.0,
       "score": 98.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164",
         "170",
@@ -2034,7 +1904,7 @@
       "discount_percent": 52.6,
       "savings": 499.01,
       "score": 98.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "169.1 CM",
         "175.2 CM",
@@ -2052,106 +1922,6 @@
       "highest_price": 449.99
     },
     {
-      "title": "Volkl Peregrine XT Skis with VMotion 10 Bindings",
-      "url": "https://www.eriksbikeshop.com/products/volkl-peregrine-xt-skis-with-vmotion-10-bindings-2026-pr5a25806",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 340.0,
-      "original_price": 679.99,
-      "discount_percent": 50.0,
-      "savings": 339.99,
-      "score": 98.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "154cm",
-        "161cm",
-        "168cm",
-        "175cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-xt-skis-with-vmotion-10-bindings_pr5a25806_8691.jpg?v=1763461596",
-      "is_cached": false,
-      "previous_price": 340.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 340.0,
-      "highest_price": 340.0
-    },
-    {
-      "title": "Volkl Shine 76 Womens Skis with VMotion 10 Bindings - 161cm",
-      "url": "https://www.eriksbikeshop.com/products/volkl-shine-76-womens-skis-with-vmotion-10-bindings-2026-pr5a25815",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 340.0,
-      "original_price": 679.99,
-      "discount_percent": 50.0,
-      "savings": 339.99,
-      "score": 98.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "161cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-76-womens-skis-with-vmotion-10-bindings_pr5a25815_2aa5.jpg?v=1756540764",
-      "is_cached": false,
-      "previous_price": 340.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 340.0,
-      "highest_price": 340.0
-    },
-    {
-      "title": "Lib Tech Libstick 98 Womens Skis",
-      "url": "https://www.eriksbikeshop.com/products/lib-tech-libstick-98-womens-skis-2026-pr5a25249",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 340.0,
-      "original_price": 679.99,
-      "discount_percent": 50.0,
-      "savings": 339.99,
-      "score": 98.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "155cm",
-        "162cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-98-womens-skis_pr5a25249_e1c3.jpg?v=1756453983",
-      "is_cached": false,
-      "previous_price": 340.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 340.0,
-      "highest_price": 340.0
-    },
-    {
-      "title": "Lib Tech UFO 95 Skis - 171cm",
-      "url": "https://www.eriksbikeshop.com/products/lib-tech-ufo-95-skis-2026-pr5a25244",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 340.0,
-      "original_price": 679.99,
-      "discount_percent": 50.0,
-      "savings": 339.99,
-      "score": 98.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "171cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-ufo-95-skis_pr5a25244_3894.jpg?v=1758009616",
-      "is_cached": false,
-      "previous_price": 340.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 340.0,
-      "highest_price": 340.0
-    },
-    {
       "title": "2026 Line Pandora 106 - 155cm / Black/Red / New",
       "url": "https://lonepinegearx.com/products/2026-line-pandora-106-b92ac",
       "source": "Lone Pine new flat skis",
@@ -2160,7 +1930,7 @@
       "discount_percent": 50.0,
       "savings": 350.0,
       "score": 98.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155cm"
       ],
@@ -2184,7 +1954,7 @@
       "discount_percent": 50.0,
       "savings": 350.0,
       "score": 98.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162cm"
       ],
@@ -2208,7 +1978,7 @@
       "discount_percent": 50.0,
       "savings": 350.0,
       "score": 98.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm"
       ],
@@ -2232,7 +2002,7 @@
       "discount_percent": 50.0,
       "savings": 350.0,
       "score": 98.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -2256,7 +2026,7 @@
       "discount_percent": 50.0,
       "savings": 349.97,
       "score": 98.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -2280,7 +2050,7 @@
       "discount_percent": 49.2,
       "savings": 320.0,
       "score": 97.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -2304,7 +2074,7 @@
       "discount_percent": 49.2,
       "savings": 320.0,
       "score": 97.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163cm"
       ],
@@ -2328,7 +2098,7 @@
       "discount_percent": 49.2,
       "savings": 320.0,
       "score": 97.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -2352,7 +2122,7 @@
       "discount_percent": 52.4,
       "savings": 550.0,
       "score": 97.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "173",
         "179",
@@ -2370,30 +2140,6 @@
       "highest_price": 499.99
     },
     {
-      "title": "Lib Tech Hemi 112 Mens Skis - 171cm",
-      "url": "https://www.eriksbikeshop.com/products/lib-tech-hemi-112-mens-skis-2026-pr5a25247",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 390.0,
-      "original_price": 779.99,
-      "discount_percent": 50.0,
-      "savings": 389.99,
-      "score": 97.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "171cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-112-mens-skis_pr5a25247_02a2.jpg?v=1756453968",
-      "is_cached": false,
-      "previous_price": 390.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 390.0,
-      "highest_price": 390.0
-    },
-    {
       "title": "2026 Zag Women's Harfang 96 - 156cm / Orange/Teal / New",
       "url": "https://lonepinegearx.com/products/2026-zag-womens-harfang-96-f03b9",
       "source": "Lone Pine new flat skis",
@@ -2402,7 +2148,7 @@
       "discount_percent": 50.0,
       "savings": 400.05,
       "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -2426,7 +2172,7 @@
       "discount_percent": 50.0,
       "savings": 400.05,
       "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -2450,7 +2196,7 @@
       "discount_percent": 50.0,
       "savings": 400.0,
       "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168cm"
       ],
@@ -2474,7 +2220,7 @@
       "discount_percent": 50.0,
       "savings": 400.0,
       "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -2490,32 +2236,6 @@
       "highest_price": 399.95
     },
     {
-      "title": "Salomon QST 106 Skis",
-      "url": "https://www.eriksbikeshop.com/products/salomon-qst-106-skis-2026-pr5a25489",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 399.98,
-      "original_price": 799.95,
-      "discount_percent": 50.0,
-      "savings": 399.97,
-      "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "Almond Milk / 165cm",
-        "Almond Milk / 173cm",
-        "Nirvana / 165cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-qst-106-skis_pr5a25489_b9a7.jpg?v=1760689964",
-      "is_cached": false,
-      "previous_price": 399.98,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-21T12:50:13-06:00",
-      "lowest_price": 399.98,
-      "highest_price": 399.98
-    },
-    {
       "title": "Atomic Bent Chetler 100 Demo Skis 2026",
       "url": "https://utahskis.com/products/atomic-bent-chetler-100-demo-skis-2026",
       "source": "Utah Skis demo skis sale",
@@ -2524,7 +2244,7 @@
       "discount_percent": 50.0,
       "savings": 399.96,
       "score": 97.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158",
         "165",
@@ -2552,7 +2272,7 @@
       "discount_percent": 50.0,
       "savings": 425.01,
       "score": 96.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155cm"
       ],
@@ -2576,7 +2296,7 @@
       "discount_percent": 50.0,
       "savings": 425.01,
       "score": 96.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "169cm"
       ],
@@ -2600,7 +2320,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm",
         "172cm"
@@ -2625,7 +2345,7 @@
       "discount_percent": 50.0,
       "savings": 425.0,
       "score": 96.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -2649,7 +2369,7 @@
       "discount_percent": 48.6,
       "savings": 340.0,
       "score": 96.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154cm"
       ],
@@ -2673,7 +2393,7 @@
       "discount_percent": 50.2,
       "savings": 452.0,
       "score": 96.24,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "146",
         "152"
@@ -2698,7 +2418,7 @@
       "discount_percent": 50.0,
       "savings": 450.01,
       "score": 96.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -2722,7 +2442,7 @@
       "discount_percent": 51.4,
       "savings": 555.0,
       "score": 95.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163",
         "170",
@@ -2748,7 +2468,7 @@
       "discount_percent": 49.9,
       "savings": 473.95,
       "score": 95.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "160cm"
       ],
@@ -2772,7 +2492,7 @@
       "discount_percent": 50.0,
       "savings": 500.0,
       "score": 95.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163"
       ],
@@ -2788,55 +2508,6 @@
       "highest_price": 499.99
     },
     {
-      "title": "Volkl Peregrine 78 Skis with LR 11 TCX Bindings",
-      "url": "https://www.eriksbikeshop.com/products/volkl-peregrine-78-skis-with-lr-11-tcx-bindings-2026-pr5a25805",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 500.0,
-      "original_price": 999.99,
-      "discount_percent": 50.0,
-      "savings": 499.99,
-      "score": 95.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "163cm",
-        "177cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-peregrine-78-skis-with-lr-11-tcx-bindings_pr5a25805_96a0.jpg?v=1756540682",
-      "is_cached": false,
-      "previous_price": 500.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 500.0,
-      "highest_price": 500.0
-    },
-    {
-      "title": "Volkl Shine 78 Womens Skis with LR 11 TCX Bindings - 163cm",
-      "url": "https://www.eriksbikeshop.com/products/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings-2026-pr5a25814",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 500.0,
-      "original_price": 999.99,
-      "discount_percent": 50.0,
-      "savings": 499.99,
-      "score": 95.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "163cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/volkl-shine-78-womens-skis-with-lr-11-tcx-bindings_pr5a25814_9d42.jpg?v=1756540748",
-      "is_cached": false,
-      "previous_price": 500.0,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 500.0,
-      "highest_price": 500.0
-    },
-    {
       "title": "Faction Prodigy 0",
       "url": "https://thegearroom.com/products/faction-prodigy-0",
       "source": "The Gear Room skis price ascending",
@@ -2845,7 +2516,7 @@
       "discount_percent": 44.3,
       "savings": 190.0,
       "score": 94.52,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150cm",
         "157cm"
@@ -2870,7 +2541,7 @@
       "discount_percent": 47.8,
       "savings": 382.0,
       "score": 94.44,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -2894,7 +2565,7 @@
       "discount_percent": 50.0,
       "savings": 574.01,
       "score": 93.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "160.1"
       ],
@@ -2918,7 +2589,7 @@
       "discount_percent": 50.0,
       "savings": 597.01,
       "score": 93.04,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168cm"
       ],
@@ -2942,7 +2613,7 @@
       "discount_percent": 47.2,
       "savings": 424.96,
       "score": 92.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172",
         "180",
@@ -2968,7 +2639,7 @@
       "discount_percent": 44.5,
       "savings": 280.0,
       "score": 92.52,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm",
         "178cm",
@@ -2994,7 +2665,7 @@
       "discount_percent": 44.3,
       "savings": 301.0,
       "score": 91.74,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm",
         "171cm",
@@ -3021,7 +2692,7 @@
       "discount_percent": 44.3,
       "savings": 310.03,
       "score": 91.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -3045,7 +2716,7 @@
       "discount_percent": 42.0,
       "savings": 210.01,
       "score": 91.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "148cm",
         "164cm"
@@ -3070,7 +2741,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -3094,7 +2765,7 @@
       "discount_percent": 44.4,
       "savings": 346.0,
       "score": 90.74,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm",
         "178cm",
@@ -3120,7 +2791,7 @@
       "discount_percent": 43.0,
       "savings": 290.01,
       "score": 90.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157cm"
       ],
@@ -3144,7 +2815,7 @@
       "discount_percent": 43.0,
       "savings": 290.01,
       "score": 90.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166cm"
       ],
@@ -3168,7 +2839,7 @@
       "discount_percent": 40.0,
       "savings": 160.0,
       "score": 90.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "146cm",
         "152cm",
@@ -3187,30 +2858,6 @@
       "highest_price": 239.99
     },
     {
-      "title": "Fischer RC Fire Mens Skis with RS9 GW Bindings - 155cm",
-      "url": "https://www.eriksbikeshop.com/products/fischer-rc-fire-mens-skis-with-rs9-gw-bindings-2026-pr5a25876",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 239.99,
-      "original_price": 399.99,
-      "discount_percent": 40.0,
-      "savings": 160.0,
-      "score": 90.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "155cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-fire-mens-skis-with-rs9-gw-bindings_pr5a25876_05c2.jpg?v=1756638877",
-      "is_cached": false,
-      "previous_price": 239.99,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 239.99,
-      "highest_price": 239.99
-    },
-    {
       "title": "Faction Studio 2",
       "url": "https://thegearroom.com/products/faction-studio-2",
       "source": "The Gear Room skis price ascending",
@@ -3219,7 +2866,7 @@
       "discount_percent": 44.4,
       "savings": 368.0,
       "score": 90.18,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166cm",
         "183cm"
@@ -3244,7 +2891,7 @@
       "discount_percent": 44.4,
       "savings": 377.0,
       "score": 89.96,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm",
         "163cm",
@@ -3270,7 +2917,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155cm",
         "163cm",
@@ -3296,7 +2943,7 @@
       "discount_percent": 44.3,
       "savings": 372.0,
       "score": 89.96,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163cm",
         "171cm"
@@ -3321,7 +2968,7 @@
       "discount_percent": 43.8,
       "savings": 350.0,
       "score": 89.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163cm"
       ],
@@ -3345,7 +2992,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm",
         "172cm"
@@ -3370,7 +3017,7 @@
       "discount_percent": 44.4,
       "savings": 390.0,
       "score": 89.62,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "183cm"
       ],
@@ -3394,7 +3041,7 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -3418,7 +3065,7 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "160 cm"
       ],
@@ -3442,7 +3089,7 @@
       "discount_percent": 40.0,
       "savings": 179.98,
       "score": 89.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170 cm"
       ],
@@ -3466,7 +3113,7 @@
       "discount_percent": 44.4,
       "savings": 395.0,
       "score": 89.52,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "185cm"
       ],
@@ -3490,7 +3137,7 @@
       "discount_percent": 44.4,
       "savings": 400.01,
       "score": 89.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -3514,7 +3161,7 @@
       "discount_percent": 41.6,
       "savings": 270.0,
       "score": 89.02,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -3538,7 +3185,7 @@
       "discount_percent": 43.1,
       "savings": 345.01,
       "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158cm"
       ],
@@ -3562,7 +3209,7 @@
       "discount_percent": 43.1,
       "savings": 345.01,
       "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm"
       ],
@@ -3586,7 +3233,7 @@
       "discount_percent": 43.1,
       "savings": 345.01,
       "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -3602,30 +3249,6 @@
       "highest_price": 454.99
     },
     {
-      "title": "Fischer RC Lite Womens Skis with RS9 GW Bindings - 160cm",
-      "url": "https://www.eriksbikeshop.com/products/fischer-rc-lite-womens-skis-with-rs9-gw-bindings-2026-pr5a25879",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 299.99,
-      "original_price": 499.99,
-      "discount_percent": 40.0,
-      "savings": 200.0,
-      "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "160cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/fischer-rc-lite-womens-skis-with-rs9-gw-bindings_pr5a25879_e7d7.jpg?v=1756454517",
-      "is_cached": false,
-      "previous_price": 299.99,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 299.99,
-      "highest_price": 299.99
-    },
-    {
       "title": "Line Skis Pandora 85 Skis 2026",
       "url": "https://www.evo.com/products/266169-line-skis-pandora-85-skis-2026",
       "source": "Evo skis price ascending",
@@ -3634,7 +3257,7 @@
       "discount_percent": 40.0,
       "savings": 199.98,
       "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3650,32 +3273,6 @@
       "highest_price": 349.96
     },
     {
-      "title": "Atomic Maverick 84R Skis with M10 GW Bindings",
-      "url": "https://www.eriksbikeshop.com/products/atomic-maverick-84r-skis-with-m10-gw-bindings-2026-pr5a25071",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 299.97,
-      "original_price": 499.95,
-      "discount_percent": 40.0,
-      "savings": 199.98,
-      "score": 89.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "Sand / 144cm",
-        "Sand / 153cm",
-        "Sand / 171cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-84r-skis-with-m10-gw-bindings_pr5a25071_ba12.jpg?v=1758008985",
-      "is_cached": false,
-      "previous_price": 299.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 299.97,
-      "highest_price": 299.97
-    },
-    {
       "title": "Faction Studio 3",
       "url": "https://thegearroom.com/products/faction-studio-3",
       "source": "The Gear Room skis price ascending",
@@ -3684,7 +3281,7 @@
       "discount_percent": 44.4,
       "savings": 421.0,
       "score": 88.84,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm",
         "172cm",
@@ -3712,7 +3309,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -3736,7 +3333,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166 cm"
       ],
@@ -3752,30 +3349,6 @@
       "highest_price": 329.97
     },
     {
-      "title": "Atomic Maverick 86 Skis with M10 GW Bindings - Sage / 186cm",
-      "url": "https://www.eriksbikeshop.com/products/atomic-maverick-86-skis-with-m10-gw-bindings-2026-pr5a25068",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 329.97,
-      "original_price": 549.95,
-      "discount_percent": 40.0,
-      "savings": 219.98,
-      "score": 88.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "186cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/atomic-maverick-86-skis-with-m10-gw-bindings_pr5a25068_6c65.jpg?v=1758008928",
-      "is_cached": false,
-      "previous_price": 329.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 329.97,
-      "highest_price": 329.97
-    },
-    {
       "title": "Line Tom Wallisch Pro Skis",
       "url": "https://www.eriksbikeshop.com/products/line-tom-wallisch-pro-skis-2026-pr5a25734",
       "source": "ERIK'S downhill skis price ascending",
@@ -3784,7 +3357,7 @@
       "discount_percent": 40.0,
       "savings": 219.98,
       "score": 88.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157cm",
         "164cm",
@@ -3812,7 +3385,7 @@
       "discount_percent": 50.0,
       "savings": 848.0,
       "score": 88.04,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155cm"
       ],
@@ -3836,7 +3409,7 @@
       "discount_percent": 50.0,
       "savings": 848.0,
       "score": 88.04,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163cm"
       ],
@@ -3852,30 +3425,6 @@
       "highest_price": 847.99
     },
     {
-      "title": "Salomon Stance 80 Skis with M11 Bindings - Kelp / 161cm",
-      "url": "https://www.eriksbikeshop.com/products/salomon-stance-80-skis-with-m11-bindings-2026-pr5a25484",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 347.97,
-      "original_price": 579.95,
-      "discount_percent": 40.0,
-      "savings": 231.98,
-      "score": 88.04,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "161cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-80-skis-with-m11-bindings_pr5a25484_abbc.jpg?v=1763461232",
-      "is_cached": false,
-      "previous_price": 347.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 347.97,
-      "highest_price": 347.97
-    },
-    {
       "title": "Armada 116 JJ UL",
       "url": "https://thegearroom.com/products/armada-116-jj-ul",
       "source": "The Gear Room skis price ascending",
@@ -3884,7 +3433,7 @@
       "discount_percent": 44.0,
       "savings": 440.01,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "175cm",
         "185cm"
@@ -3901,6 +3450,30 @@
       "highest_price": 559.99
     },
     {
+      "title": "Lib Tech Backwards Mens Skis - 178cm",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 359.99,
+      "original_price": 599.99,
+      "discount_percent": 40.0,
+      "savings": 240.0,
+      "score": 87.8,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "178cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-backwards-mens-skis_pr5a25243_34ad.jpg?v=1758009588",
+      "is_cached": false,
+      "previous_price": 300.0,
+      "price_change": 59.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 300.0,
+      "highest_price": 359.99
+    },
+    {
       "title": "Line Skis Pandora 92 Skis 2026",
       "url": "https://www.evo.com/products/266168-line-skis-pandora-92-skis-2026",
       "source": "Evo skis price ascending",
@@ -3909,7 +3482,7 @@
       "discount_percent": 40.0,
       "savings": 239.98,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3933,7 +3506,7 @@
       "discount_percent": 40.0,
       "savings": 239.98,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -3957,7 +3530,7 @@
       "discount_percent": 40.0,
       "savings": 239.98,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -3973,30 +3546,6 @@
       "highest_price": 419.96
     },
     {
-      "title": "K2 Mindbender 85 Womens Skis with QuikClik Bindings - 149cm",
-      "url": "https://www.eriksbikeshop.com/products/k2-mindbender-85-womens-skis-with-quikclik-bindings-2026-pr5a25783",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 359.97,
-      "original_price": 599.95,
-      "discount_percent": 40.0,
-      "savings": 239.98,
-      "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "149cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/k2-mindbender-85-womens-skis-with-quikclik-bindings_pr5a25783_69ae.jpg?v=1756454280",
-      "is_cached": false,
-      "previous_price": 359.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-30T14:18:23+00:00",
-      "lowest_price": 359.97,
-      "highest_price": 359.97
-    },
-    {
       "title": "Line Honey Badger Skis with QuikClik Bindings",
       "url": "https://www.eriksbikeshop.com/products/line-honey-badger-skis-with-quikclik-bindings-2026-pr5a25735",
       "source": "ERIK'S downhill skis price ascending",
@@ -4005,7 +3554,7 @@
       "discount_percent": 40.0,
       "savings": 239.98,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "144cm",
         "172cm"
@@ -4030,7 +3579,7 @@
       "discount_percent": 40.0,
       "savings": 239.98,
       "score": 87.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm",
         "171cm"
@@ -4047,6 +3596,31 @@
       "highest_price": 359.97
     },
     {
+      "title": "Lib Tech Libstick 88 Womens Skis",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-libstick-88-womens-skis-2026-pr5a25248",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 377.99,
+      "original_price": 629.99,
+      "discount_percent": 40.0,
+      "savings": 252.0,
+      "score": 87.44,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "153cm",
+        "160cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-88-womens-skis_pr5a25248_52c1.jpg?v=1758009637",
+      "is_cached": false,
+      "previous_price": 315.0,
+      "price_change": 62.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 315.0,
+      "highest_price": 377.99
+    },
+    {
       "title": "Head Kore 87 Ti W Skis - Women's 2026",
       "url": "https://www.evo.com/products/277481-head-kore-87-ti-w-skis-women-s-2026",
       "source": "Evo skis price ascending",
@@ -4055,7 +3629,7 @@
       "discount_percent": 40.1,
       "savings": 260.0,
       "score": 87.32,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -4079,7 +3653,7 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "177 cm"
       ],
@@ -4095,54 +3669,6 @@
       "highest_price": 454.96
     },
     {
-      "title": "Salomon Stance Pro 82 Skis - Iceberg Green / 185cm",
-      "url": "https://www.eriksbikeshop.com/products/salomon-stance-pro-82-skis-2026-pr5a25491",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 389.97,
-      "original_price": 649.95,
-      "discount_percent": 40.0,
-      "savings": 259.98,
-      "score": 87.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "185cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/salomon-stance-pro-82-skis_pr5a25491_1d53.jpg?v=1760690031",
-      "is_cached": false,
-      "previous_price": 389.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-18T09:14:43-06:00",
-      "lowest_price": 389.97,
-      "highest_price": 389.97
-    },
-    {
-      "title": "K2 Reckoner 92 Mens Skis with QuikClik Bindings - 159cm",
-      "url": "https://www.eriksbikeshop.com/products/k2-reckoner-92-mens-skis-with-quikclik-bindings-2026-pr5a25780",
-      "source": "ERIK'S downhill skis price ascending",
-      "current_price": 389.97,
-      "original_price": 649.95,
-      "discount_percent": 40.0,
-      "savings": 259.98,
-      "score": 87.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
-      "sizes": [
-        "159cm"
-      ],
-      "stock_status": null,
-      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/k2-reckoner-92-mens-skis-with-quikclik-bindings_pr5a25780_4cf1.jpg?v=1763461522",
-      "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
-      "first_seen_at": "2026-06-01T12:42:43+00:00",
-      "lowest_price": 389.97,
-      "highest_price": 389.97
-    },
-    {
       "title": "Line Pandora 85 Skis with QuikClik Bindings",
       "url": "https://www.eriksbikeshop.com/products/line-pandora-85-skis-with-quikclik-bindings-2026-pr5a25740",
       "source": "ERIK'S downhill skis price ascending",
@@ -4151,7 +3677,7 @@
       "discount_percent": 40.0,
       "savings": 259.98,
       "score": 87.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154cm",
         "161cm",
@@ -4177,7 +3703,7 @@
       "discount_percent": 40.0,
       "savings": 269.98,
       "score": 86.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -4201,7 +3727,7 @@
       "discount_percent": 40.0,
       "savings": 269.98,
       "score": 86.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -4217,6 +3743,108 @@
       "highest_price": 472.46
     },
     {
+      "title": "Line Blend TBL Skis",
+      "url": "https://www.eriksbikeshop.com/products/line-blend-tbl-skis-2026-pr5a25733",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 404.97,
+      "original_price": 674.95,
+      "discount_percent": 40.0,
+      "savings": 269.98,
+      "score": 86.9,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "163cm",
+        "169cm",
+        "175cm",
+        "180cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-blend-tbl-skis_pr5a25733_bea7.jpg?v=1758094355",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 404.97,
+      "highest_price": 404.97
+    },
+    {
+      "title": "Line Blend Skis",
+      "url": "https://www.eriksbikeshop.com/products/line-blend-skis-2026-pr5a25732",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 404.97,
+      "original_price": 674.95,
+      "discount_percent": 40.0,
+      "savings": 269.98,
+      "score": 86.9,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "169cm",
+        "175cm",
+        "180cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-blend-skis_pr5a25732_8949.jpg?v=1754723673",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 404.97,
+      "highest_price": 404.97
+    },
+    {
+      "title": "Lib Tech Libstick 98 Womens Skis",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-libstick-98-womens-skis-2026-pr5a25249",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 407.99,
+      "original_price": 679.99,
+      "discount_percent": 40.0,
+      "savings": 272.0,
+      "score": 86.84,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "155cm",
+        "162cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-libstick-98-womens-skis_pr5a25249_e1c3.jpg?v=1756453983",
+      "is_cached": false,
+      "previous_price": 340.0,
+      "price_change": 67.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 340.0,
+      "highest_price": 407.99
+    },
+    {
+      "title": "Lib Tech UFO 95 Skis - 171cm",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-ufo-95-skis-2026-pr5a25244",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 407.99,
+      "original_price": 679.99,
+      "discount_percent": 40.0,
+      "savings": 272.0,
+      "score": 86.84,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "171cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-ufo-95-skis_pr5a25244_3894.jpg?v=1758009616",
+      "is_cached": false,
+      "previous_price": 340.0,
+      "price_change": 67.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 340.0,
+      "highest_price": 407.99
+    },
+    {
       "title": "2025 Rossignol Escaper 80 - 169cm / Green/Black / New",
       "url": "https://lonepinegearx.com/products/2025-rossignol-escaper-80-5ff0c",
       "source": "Lone Pine new flat skis",
@@ -4225,7 +3853,7 @@
       "discount_percent": 37.7,
       "savings": 180.95,
       "score": 86.72,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "169cm"
       ],
@@ -4249,7 +3877,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -4273,7 +3901,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166 cm"
       ],
@@ -4297,7 +3925,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155 cm"
       ],
@@ -4321,7 +3949,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "154 cm"
       ],
@@ -4345,7 +3973,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165 cm"
       ],
@@ -4369,7 +3997,7 @@
       "discount_percent": 40.0,
       "savings": 279.98,
       "score": 86.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165 cm"
       ],
@@ -4385,6 +4013,32 @@
       "highest_price": 419.97
     },
     {
+      "title": "Line Chronic 101 Skis",
+      "url": "https://www.eriksbikeshop.com/products/line-chronic-101-skis-2026-pr5a25736",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 419.97,
+      "original_price": 699.95,
+      "discount_percent": 40.0,
+      "savings": 279.98,
+      "score": 86.6,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "165cm",
+        "172cm",
+        "186cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-chronic-101-skis_pr5a25736_fab9.jpg?v=1755242119",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 419.97,
+      "highest_price": 419.97
+    },
+    {
       "title": "2026 Atomic Maverick 105 CTI - 170cm / Black/Gunmetal / New",
       "url": "https://lonepinegearx.com/products/2026-atomic-maverick-105-cti-94c5e",
       "source": "Lone Pine new flat skis",
@@ -4393,7 +4047,7 @@
       "discount_percent": 42.6,
       "savings": 415.01,
       "score": 86.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -4417,7 +4071,7 @@
       "discount_percent": 42.6,
       "savings": 415.01,
       "score": 86.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -4441,7 +4095,7 @@
       "discount_percent": 42.6,
       "savings": 415.01,
       "score": 86.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162cm"
       ],
@@ -4465,7 +4119,7 @@
       "discount_percent": 42.6,
       "savings": 415.01,
       "score": 86.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -4489,7 +4143,7 @@
       "discount_percent": 37.0,
       "savings": 166.5,
       "score": 86.33,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1153661.jpg?v=1767735379",
@@ -4503,6 +4157,30 @@
       "highest_price": 283.49
     },
     {
+      "title": "Lib Tech Hemi 102 Mens Skis - 171cm",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-hemi-102-mens-skis-2026-pr5a25246",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 437.99,
+      "original_price": 729.99,
+      "discount_percent": 40.0,
+      "savings": 292.0,
+      "score": 86.24,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "171cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-102-mens-skis_pr5a25246_17ea.jpg?v=1756453951",
+      "is_cached": false,
+      "previous_price": 365.0,
+      "price_change": 72.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 365.0,
+      "highest_price": 437.99
+    },
+    {
       "title": "2026 Atomic Bent 110 - 164cm / Multicolor / New",
       "url": "https://lonepinegearx.com/products/2026-atomic-bent-110-e1f68",
       "source": "Lone Pine new flat skis",
@@ -4511,7 +4189,7 @@
       "discount_percent": 41.7,
       "savings": 375.01,
       "score": 86.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -4535,7 +4213,7 @@
       "discount_percent": 41.7,
       "savings": 375.01,
       "score": 86.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -4559,7 +4237,7 @@
       "discount_percent": 41.7,
       "savings": 375.01,
       "score": 86.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm"
       ],
@@ -4583,7 +4261,7 @@
       "discount_percent": 41.7,
       "savings": 375.01,
       "score": 86.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -4607,7 +4285,7 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "177 cm"
       ],
@@ -4631,7 +4309,7 @@
       "discount_percent": 40.1,
       "savings": 300.0,
       "score": 86.12,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -4655,7 +4333,7 @@
       "discount_percent": 40.0,
       "savings": 300.07,
       "score": 86.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -4679,7 +4357,7 @@
       "discount_percent": 40.0,
       "savings": 300.0,
       "score": 86.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -4703,7 +4381,7 @@
       "discount_percent": 40.0,
       "savings": 301.98,
       "score": 85.94,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -4719,6 +4397,55 @@
       "highest_price": 452.97
     },
     {
+      "title": "Line Pandora 92 Skis with QuikClik Bindings",
+      "url": "https://www.eriksbikeshop.com/products/line-pandora-92-skis-with-quikclik-bindings-2026-pr5a25741",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 452.97,
+      "original_price": 754.95,
+      "discount_percent": 40.0,
+      "savings": 301.98,
+      "score": 85.94,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "154cm",
+        "175cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-pandora-92-skis-with-quikclik-bindings_pr5a25741_dff7.jpg?v=1755242194",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 452.97,
+      "highest_price": 452.97
+    },
+    {
+      "title": "Lib Tech Hemi 112 Mens Skis - 171cm",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-hemi-112-mens-skis-2026-pr5a25247",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 467.99,
+      "original_price": 779.99,
+      "discount_percent": 40.0,
+      "savings": 312.0,
+      "score": 85.64,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "171cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/lib-tech-hemi-112-mens-skis_pr5a25247_02a2.jpg?v=1756453968",
+      "is_cached": false,
+      "previous_price": 390.0,
+      "price_change": 77.99,
+      "price_change_percent": 20.0,
+      "price_trend": "up",
+      "first_seen_at": "2026-05-18T09:14:43-06:00",
+      "lowest_price": 390.0,
+      "highest_price": 467.99
+    },
+    {
       "title": "2026 Zag Harfang 96 - 170cm / Blue/Yellow / New",
       "url": "https://lonepinegearx.com/products/2026-zag-harfang-96-23572",
       "source": "Lone Pine new flat skis",
@@ -4727,7 +4454,7 @@
       "discount_percent": 40.0,
       "savings": 320.05,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -4751,7 +4478,7 @@
       "discount_percent": 40.0,
       "savings": 320.0,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -4775,7 +4502,7 @@
       "discount_percent": 40.0,
       "savings": 320.0,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163cm"
       ],
@@ -4799,7 +4526,7 @@
       "discount_percent": 40.0,
       "savings": 320.0,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -4823,7 +4550,7 @@
       "discount_percent": 40.0,
       "savings": 320.0,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -4847,7 +4574,7 @@
       "discount_percent": 40.0,
       "savings": 320.0,
       "score": 85.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -4871,7 +4598,7 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "173 cm"
       ],
@@ -4895,7 +4622,7 @@
       "discount_percent": 38.6,
       "savings": 270.0,
       "score": 85.02,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -4919,7 +4646,7 @@
       "discount_percent": 35.0,
       "savings": 139.98,
       "score": 84.8,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -4935,6 +4662,31 @@
       "highest_price": 259.97
     },
     {
+      "title": "Line Optic 88 Skis with QuikClik Bindings",
+      "url": "https://www.eriksbikeshop.com/products/line-optic-88-skis-with-quikclik-bindings-2026-pr5a25739",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 518.97,
+      "original_price": 864.95,
+      "discount_percent": 40.0,
+      "savings": 345.98,
+      "score": 84.62,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "170cm",
+        "177cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-optic-88-skis-with-quikclik-bindings_pr5a25739_7745.jpg?v=1755242167",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 518.97,
+      "highest_price": 518.97
+    },
+    {
       "title": "2026 Faction Prodigy 2 Capsule - 165cm / White/Red / New",
       "url": "https://lonepinegearx.com/products/2026-faction-prodigy-2-capsule-fe575",
       "source": "Lone Pine new flat skis",
@@ -4943,7 +4695,7 @@
       "discount_percent": 39.0,
       "savings": 304.01,
       "score": 84.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "165cm"
       ],
@@ -4967,7 +4719,7 @@
       "discount_percent": 36.4,
       "savings": 200.0,
       "score": 84.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -4991,7 +4743,7 @@
       "discount_percent": 39.1,
       "savings": 312.48,
       "score": 84.35,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -5015,7 +4767,7 @@
       "discount_percent": 39.1,
       "savings": 312.48,
       "score": 84.35,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -5039,7 +4791,7 @@
       "discount_percent": 39.1,
       "savings": 312.48,
       "score": 84.35,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -5063,7 +4815,7 @@
       "discount_percent": 39.1,
       "savings": 312.48,
       "score": 84.35,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164cm"
       ],
@@ -5087,7 +4839,7 @@
       "discount_percent": 39.1,
       "savings": 312.48,
       "score": 84.35,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172cm"
       ],
@@ -5111,7 +4863,7 @@
       "discount_percent": 35.0,
       "savings": 157.48,
       "score": 84.15,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "160 cm"
       ],
@@ -5127,6 +4879,137 @@
       "highest_price": 292.47
     },
     {
+      "title": "Line Optic 96 Skis with QuikClik Bindings",
+      "url": "https://www.eriksbikeshop.com/products/line-optic-96-skis-with-quikclik-bindings-2026-pr5a25738",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 551.97,
+      "original_price": 919.95,
+      "discount_percent": 40.0,
+      "savings": 367.98,
+      "score": 83.96,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "163cm",
+        "170cm",
+        "177cm",
+        "184cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/line-optic-96-skis-with-quikclik-bindings_pr5a25738_a7c0.jpg?v=1755242153",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 551.97,
+      "highest_price": 551.97
+    },
+    {
+      "title": "Elan Wingman 78 Lite Skis with EL10.0 Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-wingman-78-lite-skis-with-el10-0-bindings-2026-pr5a25390",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 324.99,
+      "original_price": 499.99,
+      "discount_percent": 35.0,
+      "savings": 175.0,
+      "score": 83.5,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "152cm",
+        "160cm",
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-wingman-78-lite-skis-with-el10-0-bindings_pr5a25390_eae2.jpg?v=1763460690",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 324.99,
+      "highest_price": 324.99
+    },
+    {
+      "title": "Elan Wildcat 78 Lite Womens Skis with EL9.0 Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-wildcat-78-lite-womens-skis-with-el9-0-bindings-2026-pr5a25397",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 324.99,
+      "original_price": 499.99,
+      "discount_percent": 35.0,
+      "savings": 175.0,
+      "score": 83.5,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "144cm",
+        "152cm",
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-wildcat-78-lite-womens-skis-with-el9-0-bindings_pr5a25397_c393.jpg?v=1763460821",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 324.99,
+      "highest_price": 324.99
+    },
+    {
+      "title": "Elan Element 78 Mens Skis with EL 10.0 Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-element-78-mens-skis-with-el-10-0-bindings-2026-pr5a25395",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 344.49,
+      "original_price": 529.99,
+      "discount_percent": 35.0,
+      "savings": 185.5,
+      "score": 83.11,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "152cm",
+        "160cm",
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-element-78-mens-skis-with-el-10-0-bindings_pr5a25395_11a0.jpg?v=1763460771",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 344.49,
+      "highest_price": 344.49
+    },
+    {
+      "title": "Elan Element 78 Womens Skis with EL 9.0 GW Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-element-78-womens-skis-with-el-9-0-gw-bindings-2026-pr5a25401",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 344.49,
+      "original_price": 529.99,
+      "discount_percent": 35.0,
+      "savings": 185.5,
+      "score": 83.11,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "144cm",
+        "152cm",
+        "160cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-element-78-womens-skis-with-el-9-0-gw-bindings_pr5a25401_e6f2.jpg?v=1756799078",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 344.49,
+      "highest_price": 344.49
+    },
+    {
       "title": "Dynastar M-Free 90 Skis 2026",
       "url": "https://www.evo.com/products/255337-dynastar-m-free-90-skis-2026",
       "source": "Evo skis price ascending",
@@ -5135,7 +5018,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "167 cm"
       ],
@@ -5159,7 +5042,7 @@
       "discount_percent": 35.0,
       "savings": 192.48,
       "score": 82.85,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -5175,6 +5058,30 @@
       "highest_price": 357.47
     },
     {
+      "title": "Lib Tech Backwards Mens Skis - 178cm",
+      "url": "https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2025-pr5a22804",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 389.99,
+      "original_price": 599.99,
+      "discount_percent": 35.0,
+      "savings": 210.0,
+      "score": 82.2,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "178cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/392041.jpg?v=1776496367",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 389.99,
+      "highest_price": 389.99
+    },
+    {
       "title": "Rossignol Rallybird Soul 92 Skis - Women's 2026",
       "url": "https://www.evo.com/products/255534-rossignol-rallybird-soul-92-skis-women-s-2026",
       "source": "Evo skis price ascending",
@@ -5183,7 +5090,7 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156 cm"
       ],
@@ -5207,7 +5114,7 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "156cm"
       ],
@@ -5231,7 +5138,7 @@
       "discount_percent": 35.0,
       "savings": 209.98,
       "score": 82.2,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166cm"
       ],
@@ -5247,6 +5154,82 @@
       "highest_price": 389.97
     },
     {
+      "title": "Elan Playmaker 87 Skis with EL 10.0 Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-playmaker-87-skis-with-el-10-0-bindings-2026-pr5a25396",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 422.49,
+      "original_price": 649.99,
+      "discount_percent": 35.0,
+      "savings": 227.5,
+      "score": 81.55,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "156cm",
+        "176cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-playmaker-87-skis-with-el-10-0-bindings_pr5a25396_c0a3.jpg?v=1756799036",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 422.49,
+      "highest_price": 422.49
+    },
+    {
+      "title": "Elan Wildcat 80 Ti Womens Skis with EL 9.0 GW Shift Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-wildcat-80-ti-womens-skis-with-el-9-0-gw-shift-bindings-2026-pr5a26440",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 454.99,
+      "original_price": 699.99,
+      "discount_percent": 35.0,
+      "savings": 245.0,
+      "score": 80.9,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "152",
+        "160"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-wildcat-80-ti-womens-skis-with-el-9-0-gw-shift-bindings_pr5a26440_1cab.jpg?v=1756367048",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 454.99,
+      "highest_price": 454.99
+    },
+    {
+      "title": "Elan Wingman 80 Ti Mens Skis with EL10.0 Bindings",
+      "url": "https://www.eriksbikeshop.com/products/elan-wingman-80-ti-mens-skis-with-el10-0-bindings-2026-pr5a25393",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 454.99,
+      "original_price": 699.99,
+      "discount_percent": 35.0,
+      "savings": 245.0,
+      "score": 80.9,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "160cm",
+        "168cm",
+        "174cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/elan-wingman-80-ti-mens-skis-with-el10-0-bindings_pr5a25393_e714.jpg?v=1756798989",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 454.99,
+      "highest_price": 454.99
+    },
+    {
       "title": "2026 Rossignol Sender Free 100 Open - 170cm / Pink/Purple/Black / New",
       "url": "https://lonepinegearx.com/products/2026-rossignol-sender-free-100-open-1d435",
       "source": "Lone Pine new flat skis",
@@ -5255,7 +5238,7 @@
       "discount_percent": 35.0,
       "savings": 244.98,
       "score": 80.9,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -5271,6 +5254,32 @@
       "highest_price": 454.97
     },
     {
+      "title": "Elan Ripstick 94 Womens Skis",
+      "url": "https://www.eriksbikeshop.com/products/elan-ripstick-94-womens-skis-2026-pr5a23030",
+      "source": "ERIK'S downhill skis price ascending",
+      "current_price": 487.49,
+      "original_price": 749.99,
+      "discount_percent": 35.0,
+      "savings": 262.5,
+      "score": 80.25,
+      "found_at": "2026-06-01T16:19:27+00:00",
+      "sizes": [
+        "154cm",
+        "161cm",
+        "168cm"
+      ],
+      "stock_status": null,
+      "image_url": "https://cdn.shopify.com/s/files/1/0697/5252/0918/files/394820.jpg?v=1727888894",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-01T16:19:51+00:00",
+      "lowest_price": 487.49,
+      "highest_price": 487.49
+    },
+    {
       "title": "2026 Dynastar M-Free 100 Open - 162cm / Black/White / New",
       "url": "https://lonepinegearx.com/products/2026-dynastar-m-free-100-open-7c719",
       "source": "Lone Pine new flat skis",
@@ -5279,7 +5288,7 @@
       "discount_percent": 35.0,
       "savings": 262.48,
       "score": 80.25,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162cm"
       ],
@@ -5303,7 +5312,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "161 cm"
       ],
@@ -5327,7 +5336,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "162 cm"
       ],
@@ -5351,7 +5360,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -5375,7 +5384,7 @@
       "discount_percent": 30.0,
       "savings": 150.0,
       "score": 78.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "161 cm"
       ],
@@ -5399,7 +5408,7 @@
       "discount_percent": 30.0,
       "savings": 134.99,
       "score": 77.45,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159244.jpg?v=1767735605",
@@ -5421,7 +5430,7 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -5445,7 +5454,7 @@
       "discount_percent": 30.0,
       "savings": 165.0,
       "score": 77.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -5469,7 +5478,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "178 cm"
       ],
@@ -5493,7 +5502,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -5517,7 +5526,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -5541,7 +5550,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "166 cm"
       ],
@@ -5565,7 +5574,7 @@
       "discount_percent": 30.0,
       "savings": 180.0,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "172 cm"
       ],
@@ -5589,7 +5598,7 @@
       "discount_percent": 30.0,
       "savings": 179.99,
       "score": 76.6,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "163 cm"
       ],
@@ -5613,7 +5622,7 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "164 cm"
       ],
@@ -5637,7 +5646,7 @@
       "discount_percent": 30.0,
       "savings": 188.7,
       "score": 76.19,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "158 cm"
       ],
@@ -5661,7 +5670,7 @@
       "discount_percent": 30.0,
       "savings": 189.0,
       "score": 76.18,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "153 cm"
       ],
@@ -5685,7 +5694,7 @@
       "discount_percent": 30.0,
       "savings": 194.7,
       "score": 75.91,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -5709,7 +5718,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -5733,7 +5742,7 @@
       "discount_percent": 30.0,
       "savings": 120.0,
       "score": 74.4,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -5757,7 +5766,7 @@
       "discount_percent": 24.0,
       "savings": 107.99,
       "score": 64.16,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": "in_stock",
       "image_url": "https://cdn.shopify.com/s/files/1/0679/7882/1782/files/product-image-1159257.jpg?v=1767735605",
@@ -5779,7 +5788,7 @@
       "discount_percent": 20.0,
       "savings": 109.99,
       "score": 58.7,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -5803,7 +5812,7 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "179 cm"
       ],
@@ -5827,7 +5836,7 @@
       "discount_percent": 20.0,
       "savings": 99.99,
       "score": 57.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -5851,7 +5860,7 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "169 cm"
       ],
@@ -5875,7 +5884,7 @@
       "discount_percent": 20.0,
       "savings": 89.99,
       "score": 55.3,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "159 cm"
       ],
@@ -5899,7 +5908,7 @@
       "discount_percent": 6.1,
       "savings": 20.0,
       "score": 24.93,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-black-diamond-helio-carbon-95-skis-169-cm-bd11513800001691-main.jpg",
@@ -5921,7 +5930,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 15.25,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-g3-findr-flx-r3-94-skis-187cm-187cm-9121-main.jpg",
@@ -5943,7 +5952,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 13.98,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "170cm"
       ],
@@ -5967,7 +5976,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.51,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-g3-seekr-r3-100-skis-186cm-186cm-9134-main.jpg",
@@ -5989,7 +5998,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168 cm"
       ],
@@ -6013,7 +6022,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "168cm"
       ],
@@ -6037,7 +6046,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 12.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "188cm"
       ],
@@ -6061,7 +6070,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -6085,7 +6094,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -6109,7 +6118,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "150 cm"
       ],
@@ -6133,7 +6142,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.42,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "157 cm"
       ],
@@ -6157,7 +6166,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.37,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-weston-skyline-carbon-ski-blue-184-22-006-731-184v0-main.jpg",
@@ -6179,7 +6188,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "155 cm"
       ],
@@ -6203,7 +6212,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 11.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "169cm"
       ],
@@ -6227,7 +6236,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 10.02,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": [
         "177cm"
       ],
@@ -6251,7 +6260,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -6273,7 +6282,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 8.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -6295,7 +6304,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -6317,7 +6326,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 7.25,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": null,
@@ -6339,7 +6348,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 3.5,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-black-diamond-helio-carbon-88-skis-179-cm-bd11514700001791-main.jpg",
@@ -6361,7 +6370,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-black-diamond-helio-carbon-102-skis-185-cm-bd11515000001851-main.jpg",
@@ -6383,7 +6392,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 2.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-black-diamond-impulse-112-ti-skis-no-color-186-cm-bd11514500001861-main.jpg",
@@ -6405,7 +6414,7 @@
       "discount_percent": null,
       "savings": null,
       "score": 1.0,
-      "found_at": "2026-06-01T12:42:16+00:00",
+      "found_at": "2026-06-01T16:19:27+00:00",
       "sizes": null,
       "stock_status": null,
       "image_url": "https://www.campsaver.com/i/160-146-ffffff-q/opplanet-black-diamond-helio-carbon-108-skis-187-cm-bd11515200001871-main.jpg",
