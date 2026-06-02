@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-01T21:43:45+00:00
+Generated: 2026-06-02T12:49:14+00:00
 Deals found: 263
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
@@ -45,10 +45,10 @@ Deals found: 263
    Sizes: 170cm
 
 
-8. [Salomon Stance 88 Womens Skis - 174cm](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
+8. [Salomon Stance 88 Womens Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
    $249.99 was $699.95 (64.3% off) - ERIK'S downhill skis price ascending
    Price trend: Same as prior day
-   Sizes: 174cm
+   Sizes: 168cm, 174cm
 
 
 9. [2025 Zag Harfang 86 - 170cm / Orange/Blue / New](https://lonepinegearx.com/products/2025-zag-harfang-86-fa09f)
