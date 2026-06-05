@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-05T13:28:39+00:00
+Generated: 2026-06-05T20:11:05+00:00
 Deals found: 264
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
@@ -150,7 +150,7 @@ Deals found: 264
 25. [Armada Arv 100 Mens Demo Skis 2026](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)
    $374.99 was $925.00 (59.5% off) - Utah Skis demo skis sale
    Price trend: Same as prior day
-   Sizes: 172, 179
+   Sizes: 172
    Stock: In stock
 
 
