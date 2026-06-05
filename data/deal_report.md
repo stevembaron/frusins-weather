@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-05T12:49:34+00:00
+Generated: 2026-06-05T13:28:39+00:00
 Deals found: 264
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
