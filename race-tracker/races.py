@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Race results tracker - add and query your running history."""
+"""Race results tracker - add and query your running history.
 
-import sqlite3
+Data lives in races.json (the single source of truth, committed to git).
+The website (index.html) is regenerated from it automatically whenever you
+add or delete a race. See README.md for usage.
+"""
+
 import argparse
-import sys
+import json
 from datetime import datetime
 from pathlib import Path
 
-DB_PATH = Path(__file__).parent / "races.db"
+DATA_PATH = Path(__file__).parent / "races.json"
 
 DEFAULT_RUNNER = "Steve"
+
+FIELDS = ["name", "date", "location", "overall_place", "overall_total",
+          "gender_place", "gender_total", "division_place", "division_total",
+          "pace", "final_time"]
 
 # Each tuple: (name, date, location, overall_place, overall_total,
 #              gender_place, gender_total, division_place, division_total, pace, final_time)
@@ -96,53 +104,44 @@ KELLY_RACES = [
 SEED_DATA = {"Steve": STEVE_RACES, "Kelly": KELLY_RACES}
 
 
-def get_conn():
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
+# --------------------------------------------------------------------------
+# Storage: a single races.json file is the source of truth.
+# --------------------------------------------------------------------------
 
-
-def init_db(conn):
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS races (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            runner TEXT NOT NULL DEFAULT 'Steve',
-            name TEXT NOT NULL,
-            date TEXT NOT NULL,
-            location TEXT NOT NULL,
-            overall_place INTEGER,
-            overall_total INTEGER,
-            gender_place INTEGER,
-            gender_total INTEGER,
-            division_place INTEGER,
-            division_total INTEGER,
-            pace TEXT,
-            final_time TEXT NOT NULL
-        )
-    """)
-    # Migrate older databases that predate the runner column.
-    cols = [r["name"] for r in conn.execute("PRAGMA table_info(races)").fetchall()]
-    if "runner" not in cols:
-        conn.execute("ALTER TABLE races ADD COLUMN runner TEXT NOT NULL DEFAULT 'Steve'")
-    conn.commit()
-
-
-def seed_data(conn):
-    """Seed each runner's historical races if they have none yet."""
-    seeded = {}
+def _seed_records():
+    records = []
     for runner, races in SEED_DATA.items():
-        count = conn.execute("SELECT COUNT(*) FROM races WHERE runner = ?", (runner,)).fetchone()[0]
-        if count == 0:
-            conn.executemany(
-                "INSERT INTO races (runner, name, date, location, overall_place, overall_total, "
-                "gender_place, gender_total, division_place, division_total, pace, final_time) "
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                [(runner, *r) for r in races]
-            )
-            seeded[runner] = len(races)
-    if seeded:
-        conn.commit()
-    return seeded
+        for r in races:
+            records.append(dict(runner=runner, **dict(zip(FIELDS, r))))
+    return records
+
+
+def load_races():
+    """Return the list of race dicts, creating races.json from the historical
+    seed the first time if it doesn't exist yet."""
+    if not DATA_PATH.exists():
+        records = _seed_records()
+        save_races(records)
+        return records
+    with DATA_PATH.open() as f:
+        return json.load(f)
+
+
+def save_races(records):
+    records = sorted(records, key=lambda r: r["date"], reverse=True)
+    with DATA_PATH.open("w") as f:
+        json.dump(records, f, indent=2)
+        f.write("\n")
+
+
+def rebuild_site():
+    """Regenerate index.html from the current data."""
+    try:
+        import build_site
+        build_site.build()
+    except Exception as e:  # site rebuild is best-effort; data is already saved
+        print(f"(Note: could not rebuild website automatically: {e})")
+        print("Run 'python3 build_site.py' manually to refresh index.html.")
 
 
 def fmt_place(place, total):
@@ -152,77 +151,79 @@ def fmt_place(place, total):
     return "—"
 
 
-def cmd_add(args):
-    conn = get_conn()
-    init_db(conn)
-
-    print("Add a new race result (press Enter to skip optional fields)")
-    runner = input(f"Runner [{DEFAULT_RUNNER}]: ").strip() or DEFAULT_RUNNER
-    name = input("Race name: ").strip()
-    date_str = input("Date (YYYY-MM-DD or MM/DD/YYYY): ").strip()
-    location = input("Location (City, ST, Country): ").strip()
-    final_time = input("Final time (H:MM:SS or M:SS): ").strip()
-    pace = input("Pace (M:SS min/mi, optional): ").strip() or None
-
-    # Normalize date
-    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%B %d, %Y"):
+def normalize_date(s):
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m-%d-%Y", "%B %d, %Y", "%b %d, %Y"):
         try:
-            date_str = datetime.strptime(date_str, fmt).strftime("%Y-%m-%d")
-            break
+            return datetime.strptime(s, fmt).strftime("%Y-%m-%d")
         except ValueError:
             continue
+    return s  # leave as-is if unrecognized
 
-    def parse_place(prompt):
-        val = input(prompt).strip()
-        if not val:
-            return None, None
-        parts = val.replace(" of ", "/").split("/")
-        try:
-            return int(parts[0].replace(",", "")), int(parts[1].replace(",", ""))
-        except (IndexError, ValueError):
-            return None, None
 
-    overall_place, overall_total = parse_place("Overall place (e.g. 1234 of 5678, optional): ")
-    gender_place, gender_total = parse_place("Gender place (e.g. 567 of 2345, optional): ")
-    div_place, div_total = parse_place("Division place (e.g. 89 of 120, optional): ")
+def parse_place(val):
+    """Parse '1234 of 5678' or '1234/5678' into (place, total)."""
+    if not val:
+        return None, None
+    parts = val.replace(" of ", "/").split("/")
+    try:
+        return int(parts[0].replace(",", "")), int(parts[1].replace(",", ""))
+    except (IndexError, ValueError):
+        return None, None
 
-    conn.execute(
-        "INSERT INTO races (runner, name, date, location, overall_place, overall_total, "
-        "gender_place, gender_total, division_place, division_total, pace, final_time) "
-        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-        (runner, name, date_str, location, overall_place, overall_total,
-         gender_place, gender_total, div_place, div_total, pace, final_time)
-    )
-    conn.commit()
-    print(f"\nAdded ({runner}): {name} on {date_str}")
+
+def cmd_add(args):
+    # Use command-line flags when given, otherwise prompt interactively.
+    interactive = not (args.name and args.date and args.time)
+
+    if interactive:
+        print("Add a new race result (press Enter to skip optional fields)")
+        runner = args.runner or input(f"Runner [{DEFAULT_RUNNER}]: ").strip() or DEFAULT_RUNNER
+        name = args.name or input("Race name: ").strip()
+        date_str = args.date or input("Date (YYYY-MM-DD or MM/DD/YYYY): ").strip()
+        location = args.location or input("Location (City, ST, Country): ").strip()
+        final_time = args.time or input("Final time (H:MM:SS or M:SS): ").strip()
+        pace = args.pace or (input("Pace (M:SS min/mi, optional): ").strip() or None)
+        overall = args.overall or input("Overall place (e.g. 1234 of 5678, optional): ").strip()
+        gender = args.gender or input("Gender place (e.g. 567 of 2345, optional): ").strip()
+        division = args.division or input("Division place (e.g. 89 of 120, optional): ").strip()
+    else:
+        runner = args.runner or DEFAULT_RUNNER
+        name, date_str, location = args.name, args.date, (args.location or "")
+        final_time, pace = args.time, args.pace
+        overall, gender, division = args.overall, args.gender, args.division
+
+    op, ot = parse_place(overall)
+    gp, gt = parse_place(gender)
+    dp, dt = parse_place(division)
+
+    record = {
+        "runner": runner, "name": name, "date": normalize_date(date_str),
+        "location": location, "overall_place": op, "overall_total": ot,
+        "gender_place": gp, "gender_total": gt, "division_place": dp,
+        "division_total": dt, "pace": pace, "final_time": final_time,
+    }
+
+    records = load_races()
+    records.append(record)
+    save_races(records)
+    print(f"\nAdded ({runner}): {name} on {record['date']} — {final_time}")
+    rebuild_site()
+    print("Done. Commit & push to publish, or just ask Claude to do it.")
 
 
 def cmd_list(args):
-    conn = get_conn()
-    init_db(conn)
-    seeded = seed_data(conn)
-    if seeded:
-        print("Seeded: " + ", ".join(f"{n} for {r}" for r, n in seeded.items()) + "\n")
-
-    where, params = [], []
+    rows = load_races()
     if args.runner:
-        where.append("runner = ?")
-        params.append(args.runner)
+        rows = [r for r in rows if r["runner"].lower() == args.runner.lower()]
     if args.year:
-        where.append("strftime('%Y', date) = ?")
-        params.append(str(args.year))
+        rows = [r for r in rows if r["date"][:4] == str(args.year)]
     if args.search:
-        where.append("(name LIKE ? OR location LIKE ?)")
-        params.extend([f"%{args.search}%", f"%{args.search}%"])
-
-    sql = "SELECT * FROM races"
-    if where:
-        sql += " WHERE " + " AND ".join(where)
-    sql += " ORDER BY date DESC"
+        q = args.search.lower()
+        rows = [r for r in rows if q in r["name"].lower() or q in r["location"].lower()]
+    rows.sort(key=lambda r: r["date"], reverse=True)
     if args.limit:
-        sql += f" LIMIT {args.limit}"
+        rows = rows[:args.limit]
 
-    rows = conn.execute(sql, params).fetchall()
     if not rows:
         print("No races found.")
         return
@@ -230,33 +231,28 @@ def cmd_list(args):
     print(f"{'#':<4} {'Runner':<7} {'Date':<12} {'Race':<45} {'Time':<10} {'Pace':<9} {'Overall'}")
     print("-" * 118)
     for i, r in enumerate(rows, 1):
-        overall = fmt_place(r["overall_place"], r["overall_total"])
-        print(f"{i:<4} {r['runner']:<7} {r['date']:<12} {r['name'][:44]:<45} {r['final_time']:<10} {(r['pace'] or '—'):<9} {overall}")
+        overall = fmt_place(r.get("overall_place"), r.get("overall_total"))
+        print(f"{i:<4} {r['runner']:<7} {r['date']:<12} {r['name'][:44]:<45} {r['final_time']:<10} {(r.get('pace') or '—'):<9} {overall}")
 
     print(f"\n{len(rows)} race(s) shown.")
 
 
 def cmd_stats(args):
-    conn = get_conn()
-    init_db(conn)
-    seed_data(conn)
-
-    runners = [args.runner] if args.runner else [
-        r["runner"] for r in conn.execute("SELECT DISTINCT runner FROM races ORDER BY runner").fetchall()
-    ]
+    data = load_races()
+    runners = [args.runner] if args.runner else sorted({r["runner"] for r in data})
 
     for idx, runner in enumerate(runners):
         if idx:
             print()
-        rows = conn.execute("SELECT * FROM races WHERE runner = ? ORDER BY date", (runner,)).fetchall()
+        rows = sorted([r for r in data if r["runner"].lower() == runner.lower()],
+                      key=lambda r: r["date"])
         if not rows:
             print(f"{runner}: no races found.")
             continue
 
-        total = len(rows)
         years = len({r["date"][:4] for r in rows})
-        print(f"=== {runner} ===")
-        print(f"Total races:   {total}")
+        print(f"=== {rows[0]['runner']} ===")
+        print(f"Total races:   {len(rows)}")
         print(f"Years active:  {years}")
         print(f"First race:    {rows[0]['date']}  {rows[0]['name']}")
         print(f"Latest race:   {rows[-1]['date']}  {rows[-1]['name']}")
@@ -270,32 +266,42 @@ def cmd_stats(args):
 
 
 def cmd_delete(args):
-    conn = get_conn()
-    init_db(conn)
-    rows = conn.execute("SELECT * FROM races ORDER BY date DESC").fetchall()
-    print(f"{'ID':<5} {'Runner':<7} {'Date':<12} {'Race'}")
+    records = load_races()
+    rows = sorted(records, key=lambda r: r["date"], reverse=True)
+    print(f"{'#':<5} {'Runner':<7} {'Date':<12} {'Race'}")
     print("-" * 75)
-    for r in rows:
-        print(f"{r['id']:<5} {r['runner']:<7} {r['date']:<12} {r['name']}")
-    race_id = input("\nEnter ID to delete (or Enter to cancel): ").strip()
-    if not race_id:
+    for i, r in enumerate(rows, 1):
+        print(f"{i:<5} {r['runner']:<7} {r['date']:<12} {r['name']}")
+    sel = input("\nEnter # to delete (or Enter to cancel): ").strip()
+    if not sel:
         return
-    row = conn.execute("SELECT * FROM races WHERE id = ?", (race_id,)).fetchone()
-    if not row:
-        print("ID not found.")
+    try:
+        target = rows[int(sel) - 1]
+    except (ValueError, IndexError):
+        print("Invalid selection.")
         return
-    confirm = input(f"Delete {row['runner']}'s '{row['name']}' on {row['date']}? (y/N): ").strip().lower()
+    confirm = input(f"Delete {target['runner']}'s '{target['name']}' on {target['date']}? (y/N): ").strip().lower()
     if confirm == "y":
-        conn.execute("DELETE FROM races WHERE id = ?", (race_id,))
-        conn.commit()
+        records.remove(target)
+        save_races(records)
         print("Deleted.")
+        rebuild_site()
 
 
 def main():
     parser = argparse.ArgumentParser(description="Race results tracker")
     sub = parser.add_subparsers(dest="cmd")
 
-    sub.add_parser("add", help="Add a new race result")
+    ad = sub.add_parser("add", help="Add a new race result (prompts if flags omitted)")
+    ad.add_argument("--runner", "-r", help="Runner name (default: Steve)")
+    ad.add_argument("--name", help="Race name")
+    ad.add_argument("--date", help="Date (YYYY-MM-DD or MM/DD/YYYY)")
+    ad.add_argument("--location", help="Location, e.g. 'Chicago, IL, USA'")
+    ad.add_argument("--time", help="Final time, e.g. 1:53:19 or 29:08")
+    ad.add_argument("--pace", help="Pace, e.g. 9:30")
+    ad.add_argument("--overall", help="Overall place, e.g. '1234 of 5678'")
+    ad.add_argument("--gender", help="Gender place, e.g. '567 of 2345'")
+    ad.add_argument("--division", help="Division place, e.g. '89 of 120'")
 
     ls = sub.add_parser("list", help="List races")
     ls.add_argument("--runner", "-r", help="Filter by runner (e.g. Steve, Kelly)")

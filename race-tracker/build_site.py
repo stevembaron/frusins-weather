@@ -11,13 +11,9 @@ seed data in races.py changes:
 import json
 from pathlib import Path
 
-from races import STEVE_RACES, KELLY_RACES
+from races import load_races
 
 OUT = Path(__file__).parent / "index.html"
-
-FIELDS = ["name", "date", "location", "overall_place", "overall_total",
-          "gender_place", "gender_total", "division_place", "division_total",
-          "pace", "final_time"]
 
 
 def _minutes(t):
@@ -46,17 +42,10 @@ def classify(pace, final_time):
     return "Other"
 
 
-def to_records(runner, races):
-    out = []
-    for r in races:
-        rec = dict(runner=runner, **dict(zip(FIELDS, r)))
-        rec["kind"] = classify(rec["pace"], rec["final_time"])
-        out.append(rec)
-    return out
-
-
 def build():
-    records = to_records("Steve", STEVE_RACES) + to_records("Kelly", KELLY_RACES)
+    records = [dict(r) for r in load_races()]
+    for rec in records:
+        rec["kind"] = classify(rec.get("pace"), rec.get("final_time"))
     records.sort(key=lambda r: r["date"], reverse=True)
     data_json = json.dumps(records, indent=0, separators=(",", ":"))
 
