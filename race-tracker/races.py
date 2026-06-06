@@ -60,7 +60,6 @@ STEVE_RACES = [
 ]
 
 KELLY_RACES = [
-    ("Hot Chocolate 15K/5K - Chicago", "2014-11-09", "Chicago, IL, USA", 25704, 25849, 19291, 19397, 2413, 2427, "24:05", "1:14:51"),
     ("Fleet Feet Sports Soldier Field 10 Mile", "2014-05-24", "Chicago, IL, USA", 3500, 12281, 1249, 7179, 213, 1339, "9:00", "1:30:04"),
     ("Fleet Feet Sports Soldier Field 10 Mile", "2013-05-25", "Chicago, IL, USA", 4439, 12593, 1684, 7245, 387, 1633, "9:05", "1:30:55"),
     ("Fleet Feet Sports Soldier Field 10 Mile", "2012-05-26", "Chicago, IL, USA", 7314, 12858, 3350, 7325, 759, 1661, "10:08", "1:41:23"),
