@@ -3,58 +3,129 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Baron Family Race Results</title>
+<title>The Baron Race Log</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f172a; --card: #1e293b; --line: #334155;
-    --text: #e2e8f0; --muted: #94a3b8;
-    --steve: #38bdf8; --kelly: #f472b6; --accent: #34d399;
+    --paper: #f3ece0;
+    --card: #fbf7ef;
+    --ink: #1c1b19;
+    --muted: #8a8170;
+    --line: #ddd3c1;
+    --steve: #1f5673;
+    --kelly: #b23a6e;
+    --flag: #e0502a;
+    --display: "Oswald", "Arial Narrow", sans-serif;
+    --body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, monospace;
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg); color: var(--text); line-height: 1.5;
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); line-height: 1.55;
   }
-  header { padding: 2rem 1rem 1rem; text-align: center; }
-  h1 { margin: 0 0 .25rem; font-size: 1.8rem; }
-  .sub { color: var(--muted); font-size: .95rem; }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 1rem 3rem; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .75rem; margin: 1.5rem 0; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1rem; text-align: center; }
-  .card .num { font-size: 1.6rem; font-weight: 700; }
-  .card .lbl { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
-  .controls { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin-bottom: 1rem; }
-  .controls input, .controls select {
-    background: var(--card); color: var(--text); border: 1px solid var(--line);
-    border-radius: 8px; padding: .5rem .7rem; font-size: .9rem;
+  .checker {
+    height: 14px;
+    background-image:
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
+      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
+    background-size: 14px 14px;
+    background-position: 0 0, 7px 7px;
   }
-  .controls input[type=search] { flex: 1; min-width: 160px; }
-  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .seg button { background: var(--card); color: var(--muted); border: 0; padding: .5rem .9rem; cursor: pointer; font-size: .9rem; }
-  .seg button.active { background: var(--accent); color: #06281d; font-weight: 600; }
-  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
-  th, td { padding: .6rem .5rem; text-align: left; border-bottom: 1px solid var(--line); }
-  th { color: var(--muted); font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap; }
-  th:hover { color: var(--text); }
-  tbody tr:hover { background: rgba(148,163,184,.08); }
-  .pill { display: inline-block; padding: .12rem .5rem; border-radius: 999px; font-size: .75rem; font-weight: 600; }
-  .pill.Steve { background: rgba(56,189,248,.15); color: var(--steve); }
-  .pill.Kelly { background: rgba(244,114,182,.15); color: var(--kelly); }
-  .num-cell { font-variant-numeric: tabular-nums; }
+  header { max-width: 1040px; margin: 0 auto; padding: 2.4rem 1.25rem 1rem; }
+  .kicker {
+    font-family: var(--mono); font-size: .72rem; letter-spacing: .35em;
+    text-transform: uppercase; color: var(--flag); font-weight: 500; margin-bottom: .4rem;
+  }
+  h1 {
+    font-family: var(--display); font-weight: 700; font-size: clamp(2.4rem, 7vw, 4.2rem);
+    line-height: .95; letter-spacing: .01em; text-transform: uppercase; margin: 0;
+  }
+  .tagline { color: var(--muted); font-size: 1rem; margin-top: .5rem; max-width: 46ch; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.25rem 4rem; }
+
+  .stats {
+    display: flex; flex-wrap: wrap; gap: 0; margin: 1.75rem 0 2rem;
+    border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);
+  }
+  .stat { flex: 1 1 120px; padding: 1rem .5rem 1.1rem; text-align: center; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  .stat-num { display: block; font-family: var(--display); font-weight: 700; font-size: 2.6rem; line-height: 1; }
+  .stat-lbl { display: block; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-top: .4rem; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin-bottom: 1.4rem; }
+  .seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 2px; overflow: hidden; }
+  .seg button {
+    background: transparent; color: var(--ink); border: 0; border-right: 1px solid var(--ink);
+    padding: .5rem 1.05rem; cursor: pointer; font-family: var(--display); font-weight: 600;
+    font-size: .9rem; letter-spacing: .08em; text-transform: uppercase;
+  }
+  .seg button:last-child { border-right: 0; }
+  .seg button.active { background: var(--ink); color: var(--paper); }
+  select, input[type=search] {
+    font-family: var(--body); font-size: .9rem; color: var(--ink);
+    background: var(--card); border: 1px solid var(--ink); border-radius: 2px; padding: .55rem .7rem;
+  }
+  input[type=search] { flex: 1; min-width: 170px; }
+
+  .table-wrap { border: 2px solid var(--ink); border-radius: 2px; background: var(--card); overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  thead th {
+    font-family: var(--display); font-weight: 600; text-transform: uppercase;
+    font-size: .72rem; letter-spacing: .12em; color: var(--ink);
+    text-align: left; padding: .8rem .7rem; border-bottom: 2px solid var(--ink);
+    cursor: pointer; user-select: none; white-space: nowrap; background: var(--paper);
+  }
+  thead th:hover { color: var(--flag); }
+  tbody td { padding: .72rem .7rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody tr:hover { background: #fffdf7; }
+
+  .bib {
+    font-family: var(--mono); font-size: .68rem; font-weight: 500; letter-spacing: .06em;
+    text-transform: uppercase; padding: .2rem .5rem; border-radius: 2px; color: #fff; white-space: nowrap;
+  }
+  .bib.Steve { background: var(--steve); }
+  .bib.Kelly { background: var(--kelly); }
+
+  .race-name { font-weight: 600; }
+  .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .time { font-family: var(--mono); font-weight: 500; font-size: 1rem; }
   .muted { color: var(--muted); }
-  footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 2rem 1rem; }
-  @media (max-width: 640px) {
-    .hide-sm { display: none; }
+
+  .rank { min-width: 150px; }
+  .rank-txt { font-family: var(--mono); font-size: .8rem; display: block; }
+  .rank-bar { display: block; height: 5px; margin-top: .35rem; background: var(--line); border-radius: 999px; overflow: hidden; }
+  .rank-bar i { display: block; height: 100%; background: var(--flag); }
+
+  .count { color: var(--muted); font-size: .85rem; margin-top: 1rem; font-family: var(--mono); }
+  footer {
+    max-width: 1040px; margin: 0 auto; padding: 1.5rem 1.25rem 3rem;
+    color: var(--muted); font-size: .78rem; font-family: var(--mono); letter-spacing: .03em;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
+    border-top: 1px solid var(--line);
   }
+  .legend { display: inline-flex; gap: 1rem; }
+  .legend span { display: inline-flex; align-items: center; gap: .35rem; }
+  .dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .dot.Steve { background: var(--steve); } .dot.Kelly { background: var(--kelly); }
+
+  @media (max-width: 680px) { .hide-sm { display: none; } }
 </style>
 </head>
 <body>
+<div class="checker"></div>
 <header>
-  <h1>🏃 Baron Family Race Results</h1>
-  <div class="sub">A running history, 2003–present</div>
+  <div class="kicker">Est. 2003 &nbsp;&bull;&nbsp; Salt Lake to Charleston</div>
+  <h1>The Baron<br>Race Log</h1>
+  <p class="tagline">Two runners, two decades, every start line on record &mdash; from neighborhood 5Ks to full marathons.</p>
 </header>
 <div class="wrap">
-  <div class="cards" id="cards"></div>
+  <div class="stats" id="cards"></div>
 
   <div class="controls">
     <div class="seg" id="runnerSeg">
@@ -63,26 +134,34 @@
       <button data-runner="Kelly">Kelly</button>
     </div>
     <select id="yearSel"><option value="">All years</option></select>
-    <input type="search" id="search" placeholder="Search race or location…">
+    <input type="search" id="search" placeholder="Search race or place…">
   </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th data-key="runner">Runner</th>
-        <th data-key="date">Date</th>
-        <th data-key="name">Race</th>
-        <th data-key="location" class="hide-sm">Location</th>
-        <th data-key="final_time">Time</th>
-        <th data-key="pace" class="hide-sm">Pace</th>
-        <th data-key="overall_pct">Overall</th>
-      </tr>
-    </thead>
-    <tbody id="rows"></tbody>
-  </table>
-  <p class="muted" id="count"></p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-key="runner">Runner</th>
+          <th data-key="date">Date</th>
+          <th data-key="name">Race</th>
+          <th data-key="location" class="hide-sm">Where</th>
+          <th data-key="final_time">Time</th>
+          <th data-key="pace" class="hide-sm">Pace</th>
+          <th data-key="overall_pct">Overall finish</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <p class="count" id="count"></p>
 </div>
-<footer>Generated from the race-tracker database · updated automatically</footer>
+<footer>
+  <span class="legend">
+    <span><i class="dot Steve"></i> Steve</span>
+    <span><i class="dot Kelly"></i> Kelly</span>
+  </span>
+  <span>Generated from the race-tracker database</span>
+</footer>
 
 <script>
 const DATA = [
@@ -1127,7 +1206,15 @@ const DATA = [
 const state = { runner: "All", year: "", search: "", sortKey: "date", sortDir: -1 };
 
 function pct(p, t) { return (p && t) ? Math.round(p / t * 100) : null; }
-function placeText(p, t) { return (p && t) ? `${p.toLocaleString()} of ${t.toLocaleString()} (${pct(p,t)}%)` : "—"; }
+
+function rankCell(p, t) {
+  if (!p || !t) return '<span class="muted mono">&mdash;</span>';
+  const beat = 100 - pct(p, t);              // % of the field finished behind
+  return `<div class="rank">
+    <span class="rank-txt">${p.toLocaleString()} / ${t.toLocaleString()}</span>
+    <span class="rank-bar"><i style="width:${beat}%"></i></span>
+  </div>`;
+}
 
 function filtered() {
   return DATA.filter(r => {
@@ -1154,18 +1241,17 @@ function sorted(rows) {
 }
 
 function renderCards(rows) {
-  const total = rows.length;
   const years = new Set(rows.map(r => r.date.slice(0, 4)));
   const marathons = rows.filter(r => /marathon/i.test(r.name) && !/half/i.test(r.name)).length;
   const halfs = rows.filter(r => /half/i.test(r.name)).length;
   const cards = [
-    ["Total races", total],
-    ["Years active", years.size],
+    ["Races", rows.length],
+    ["Years", years.size],
     ["Marathons", marathons],
-    ["Half marathons", halfs],
+    ["Halfs", halfs],
   ];
   document.getElementById("cards").innerHTML = cards.map(([l, n]) =>
-    `<div class="card"><div class="num">${n}</div><div class="lbl">${l}</div></div>`).join("");
+    `<div class="stat"><span class="stat-num">${n}</span><span class="stat-lbl">${l}</span></div>`).join("");
 }
 
 function render() {
@@ -1173,23 +1259,21 @@ function render() {
   renderCards(rows);
   document.getElementById("rows").innerHTML = rows.map(r => `
     <tr>
-      <td><span class="pill ${r.runner}">${r.runner}</span></td>
-      <td class="num-cell">${r.date}</td>
-      <td>${r.name}</td>
+      <td><span class="bib ${r.runner}">${r.runner}</span></td>
+      <td class="mono muted">${r.date}</td>
+      <td class="race-name">${r.name}</td>
       <td class="hide-sm muted">${r.location}</td>
-      <td class="num-cell">${r.final_time}</td>
-      <td class="hide-sm num-cell">${r.pace ? r.pace + " /mi" : "—"}</td>
-      <td class="num-cell">${placeText(r.overall_place, r.overall_total)}</td>
+      <td class="time">${r.final_time}</td>
+      <td class="hide-sm mono muted">${r.pace ? r.pace : "&mdash;"}</td>
+      <td>${rankCell(r.overall_place, r.overall_total)}</td>
     </tr>`).join("");
-  document.getElementById("count").textContent = `${rows.length} race(s) shown`;
+  document.getElementById("count").textContent = `${rows.length} race${rows.length === 1 ? "" : "s"} shown`;
 }
 
-// Year dropdown
 const years = [...new Set(DATA.map(r => r.date.slice(0, 4)))].sort().reverse();
 const yearSel = document.getElementById("yearSel");
 years.forEach(y => { const o = document.createElement("option"); o.value = y; o.textContent = y; yearSel.appendChild(o); });
 
-// Wire controls
 document.getElementById("runnerSeg").addEventListener("click", e => {
   if (e.target.tagName !== "BUTTON") return;
   state.runner = e.target.dataset.runner;
