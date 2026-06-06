@@ -20,8 +20,39 @@ FIELDS = ["name", "date", "location", "overall_place", "overall_total",
           "pace", "final_time"]
 
 
+def _minutes(t):
+    """Total minutes from 'H:MM:SS' or 'M:SS'."""
+    parts = [int(x) for x in t.split(":")]
+    h, m, s = ([0] + parts)[-3:] if len(parts) < 3 else parts
+    return h * 60 + m + s / 60
+
+
+def _pace_minutes(p):
+    m, s = [int(x) for x in p.split(":")]
+    return m + s / 60
+
+
+def classify(pace, final_time):
+    """Infer the actual race distance from time ÷ pace, since race names are
+    unreliable (e.g. a '...Marathon & Half & 5K' event where the runner ran
+    the full, or a '...Marathon' where they ran the half)."""
+    if not pace or not final_time:
+        return "Other"
+    dist = _minutes(final_time) / _pace_minutes(pace)
+    if 24 <= dist <= 28:
+        return "Full"
+    if 12 <= dist <= 14.5:
+        return "Half"
+    return "Other"
+
+
 def to_records(runner, races):
-    return [dict(runner=runner, **dict(zip(FIELDS, r))) for r in races]
+    out = []
+    for r in races:
+        rec = dict(runner=runner, **dict(zip(FIELDS, r)))
+        rec["kind"] = classify(rec["pace"], rec["final_time"])
+        out.append(rec)
+    return out
 
 
 def build():
@@ -242,8 +273,8 @@ function sorted(rows) {
 
 function renderCards(rows) {
   const years = new Set(rows.map(r => r.date.slice(0, 4)));
-  const marathons = rows.filter(r => /marathon/i.test(r.name) && !/half/i.test(r.name)).length;
-  const halfs = rows.filter(r => /half/i.test(r.name)).length;
+  const marathons = rows.filter(r => r.kind === "Full").length;
+  const halfs = rows.filter(r => r.kind === "Half").length;
   const cards = [
     ["Races", rows.length],
     ["Years", years.size],
