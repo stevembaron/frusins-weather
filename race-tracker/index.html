@@ -27,35 +27,7 @@
     margin: 0; background: var(--paper); color: var(--ink);
     font-family: var(--body); line-height: 1.55;
   }
-  .checker {
-    height: 14px;
-    background-image:
-      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%),
-      linear-gradient(45deg, var(--ink) 25%, transparent 25%, transparent 75%, var(--ink) 75%);
-    background-size: 14px 14px;
-    background-position: 0 0, 7px 7px;
-  }
-  header { max-width: 1040px; margin: 0 auto; padding: 2.4rem 1.25rem 1rem; }
-  .kicker {
-    font-family: var(--mono); font-size: .72rem; letter-spacing: .35em;
-    text-transform: uppercase; color: var(--flag); font-weight: 500; margin-bottom: .4rem;
-  }
-  h1 {
-    font-family: var(--display); font-weight: 700; font-size: clamp(2.4rem, 7vw, 4.2rem);
-    line-height: .95; letter-spacing: .01em; text-transform: uppercase; margin: 0;
-  }
-  .tagline { color: var(--muted); font-size: 1rem; margin-top: .5rem; max-width: 46ch; }
-
-  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.25rem 4rem; }
-
-  .stats {
-    display: flex; flex-wrap: wrap; gap: 0; margin: 1.75rem 0 2rem;
-    border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink);
-  }
-  .stat { flex: 1 1 120px; padding: 1rem .5rem 1.1rem; text-align: center; border-right: 1px solid var(--line); }
-  .stat:last-child { border-right: 0; }
-  .stat-num { display: block; font-family: var(--display); font-weight: 700; font-size: 2.6rem; line-height: 1; }
-  .stat-lbl { display: block; font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-top: .4rem; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 1.25rem 1.25rem 4rem; }
 
   .controls { display: flex; flex-wrap: wrap; gap: .7rem; align-items: center; margin-bottom: 1.4rem; }
   .seg { display: inline-flex; border: 2px solid var(--ink); border-radius: 2px; overflow: hidden; }
@@ -158,15 +130,7 @@
 </style>
 </head>
 <body>
-<div class="checker"></div>
-<header>
-  <div class="kicker">Est. 2003 &nbsp;&bull;&nbsp; Salt Lake to Charleston</div>
-  <h1>The Baron<br>Race Log</h1>
-  <p class="tagline">Two runners, two decades, every start line on record &mdash; from neighborhood 5Ks to full marathons.</p>
-</header>
 <div class="wrap">
-  <div class="stats" id="cards"></div>
-
   <div class="controls">
     <div class="seg" id="runnerSeg">
       <button data-runner="All" class="active">All</button>
@@ -1422,7 +1386,6 @@ function renderCards(rows) {
 
 function render() {
   const rows = sorted(filtered());
-  renderCards(rows);
   document.getElementById("rows").innerHTML = rows.map(r => `
     <tr>
       <td><span class="bib ${r.runner}">${esc(r.runner)}</span></td>
