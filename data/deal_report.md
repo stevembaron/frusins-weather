@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-06T19:46:19+00:00
+Generated: 2026-06-07T12:03:19+00:00
 Deals found: 264
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
@@ -135,16 +135,16 @@ Deals found: 264
    Sizes: 156, 166
    Stock: In stock
 
-23. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
-   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 188
-   Stock: In stock
-
-24. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
+23. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
    $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
    Price trend: Same as prior day
    Sizes: 156, 166, 176, 184
+   Stock: In stock
+
+24. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
+   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 188
    Stock: In stock
 
 25. [Armada Arv 100 Mens Demo Skis 2026](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)

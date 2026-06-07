@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-06T19:45:56+00:00",
+  "generated_at": "2026-06-07T12:02:57+00:00",
   "deal_count": 8,
   "sources_checked": 1,
   "price_history_count": 319,
-  "price_change_count": 1,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Stio Azura Insulated Jacket - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 69.0,
       "savings": 155.74,
       "score": 122.6,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
@@ -158,17 +158,17 @@
       "discount_percent": 57.0,
       "savings": 39.63,
       "score": 86.31,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1780729717&width=460",
       "is_cached": false,
-      "previous_price": 31.05,
-      "price_change": -1.15,
-      "price_change_percent": -3.7,
-      "price_trend": "down",
+      "previous_price": 29.9,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00",
       "lowest_price": 29.9,
       "highest_price": 31.05
@@ -182,7 +182,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-06-06T19:45:54+00:00",
+      "found_at": "2026-06-07T12:02:55+00:00",
       "sizes": [
         "S"
       ],
