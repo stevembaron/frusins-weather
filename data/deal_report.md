@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-08T14:31:52+00:00
+Generated: 2026-06-08T20:32:43+00:00
 Deals found: 264
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
@@ -99,58 +99,58 @@ Deals found: 264
    Sizes: 158cm
 
 
-17. [Elan Playmaker 87 Mens Demo Skis 2026](https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026)
-   $274.99 was $679.99 (59.6% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 166
-   Stock: In stock
-
-18. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
+17. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
    $299.99 was $750.00 (60.0% off) - The Gear Room skis price ascending
    Price trend: Same as prior day
    Sizes: 154cm, 160cm, 168cm
 
 
-19. [Head Kore 87 Ti Womens Demo Skis 2026](https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026)
-   $349.99 was $875.00 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 149, 156, 163
-   Stock: In stock
-
-20. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
+18. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
    $380.00 was $948.95 (60.0% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 172cm
 
 
-21. [Elan Wingman 80 Ti Mens Demo Skis 2026](https://utahskis.com/products/elan-wingman-80-ti-demo-skis-2026)
-   $274.99 was $649.99 (57.7% off) - Utah Skis demo skis sale
+19. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+   $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
    Price trend: Same as prior day
-   Sizes: 168
+   Sizes: 164cm
+
+
+20. [2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+   $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
+   Price trend: Same as prior day
+   Sizes: 170cm
+
+
+21. [Scott Pure Free 90 Ti - Unisex](https://thegearroom.com/products/scott-pure-90-2025-unisex)
+   $299.99 was $700.00 (57.1% off) - The Gear Room skis price ascending
+   Price trend: Same as prior day
+   Sizes: 177cm, 184cm
+
+
+22. [2022 Zag Ardet 78 - 170cm / Grey/Orange / New](https://lonepinegearx.com/products/2022-zag-ardet-78-64987)
+   $380.00 was $898.95 (57.7% off) - Lone Pine new flat skis
+   Price trend: Same as prior day
+   Sizes: 170cm
+
+
+23. [Black Diamond Helio Carbon 104 Skis](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)
+   $399.00 was $949.95 (58.0% off) - The Gear Room skis price ascending
+   Price trend: Same as prior day
+   Sizes: 160cm, 166cm, 172cm, 184cm
+
+
+24. [Elan Ripstick 96 Demo Skis 2026](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)
+   $399.99 was $949.99 (57.9% off) - Utah Skis demo skis sale
+   Price trend: Same as prior day
+   Sizes: 161, 168, 175, 182, 189
    Stock: In stock
 
-22. [Rossignol Rallybird Soul 92 Xp11 Womens Demo Skis 2026](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)
-   $399.99 was $1000.00 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 156, 166
-   Stock: In stock
-
-23. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
-   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 188
-   Stock: In stock
-
-24. [Rossignol Sender Soul 92 + Xp11 Mens Demo Skis 2026](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)
-   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 156, 166, 176, 184
-   Stock: In stock
-
-25. [Armada Arv 100 Mens Demo Skis 2026](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)
-   $374.99 was $925.00 (59.5% off) - Utah Skis demo skis sale
-   Price trend: Same as prior day
-   Sizes: 172
+25. [Elan Playmaker 87 Mens Demo Skis 2026](https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026)
+   $299.99 was $679.99 (55.9% off) - Utah Skis demo skis sale
+   Price trend: Up $25.00 (9.1%) since prior day
+   Sizes: 166
    Stock: In stock
 
 
