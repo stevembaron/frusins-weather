@@ -15,6 +15,8 @@ The monitor looks for product metadata and linked text with prices, filters by t
 
 Sierra and evo block plain automated requests, so their configured sources use a reader fallback. The script still tries the retailer URL first, then falls back to a readable copy of the page and parses product links/prices from that.
 
+Evo has an extra fallback: its product search runs on the public Constructor.io API, and the script caches the API key (`data/evo_constructor_key.json`) every time a page fetch succeeds. When evo's page returns a 403, the monitor queries the search API directly with the cached key instead, so results keep flowing even while the HTML page is blocked. You can also pin a key manually with a `"constructor_key"` field on the evo source in `config/deal_sources.json` (view source on any evo page and search for `constructor_index_key`).
+
 ## Add URLs
 
 Edit a config such as `config/deal_sources.json` or `config/clothing_deal_sources.json` and add sources like this:
@@ -55,6 +57,21 @@ python3 scripts/deal_monitor.py --config config/clothing_deal_sources.json
 ```
 
 For the easiest Mac workflow, double-click `Run Ski Deals.command` or `Run Clothing Deals.command`. Each runs the monitor and opens the matching HTML report.
+
+## Deal Analyst (Claude brief)
+
+After the monitors run, `make brief` sends the day's deals, their price history, and `config/deal_preferences.json` to Claude (`claude-fable-5`) and writes a short judgment-based morning brief — what's actually worth buying today, what to watch, and why (real lows vs inflated MSRPs, size fit, model-year closeouts).
+
+```bash
+pip install anthropic           # one-time
+export ANTHROPIC_API_KEY=...    # or put it in your shell profile
+make deals clothing-deals       # refresh data first
+make brief                      # writes data/deal_brief.md + data/briefs/YYYY-MM-DD.md
+```
+
+Use `python3 scripts/deal_analyst.py --dry-run` to inspect exactly what gets sent without making an API call. The brief is intentionally honest: on a quiet day the "Act now" section says there's nothing worth acting on.
+
+## Reports
 
 The HTML report is sorted from lowest price to highest price:
 
