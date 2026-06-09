@@ -31,21 +31,33 @@ JSON_OUTPUT = DATA_DIR / "deals.json"
 HTML_OUTPUT = DATA_DIR / "deals.html"
 MD_OUTPUT = DATA_DIR / "deal_report.md"
 PRICE_HISTORY_OUTPUT = DATA_DIR / "price_history.json"
+EVO_CONSTRUCTOR_KEY_CACHE = DATA_DIR / "evo_constructor_key.json"
 CLOTHING_JSON_OUTPUT = DATA_DIR / "clothing_deals.json"
 PREFERENCES_CONFIG = ROOT / "config" / "deal_preferences.json"
 WEB_DIR = ROOT / "ski-deals"
 WEB_OUTPUT = WEB_DIR / "index.html"
 
+# Keep this looking like a real, current browser. WAFs flag stale Chrome
+# versions and custom UA suffixes (the old "... SkiDealMonitor/1.0" tail was a
+# likely trigger for evo's 403s).
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/123.0 Safari/537.36 SkiDealMonitor/1.0"
+    "Chrome/137.0.0.0 Safari/537.36"
 )
 REQUEST_HEADERS = {
     "User-Agent": USER_AGENT,
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "en-US,en;q=0.9",
     "Cache-Control": "no-cache",
+    "Sec-Ch-Ua": '"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"macOS"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 PRICE_RE = re.compile(r"\$\s?([0-9]{1,4}(?:,[0-9]{3})?(?:\.[0-9]{2})?)")
@@ -750,6 +762,39 @@ def evo_hydrated_collection_candidates(
     if not api_key:
         return []
 
+    save_cached_evo_constructor_key(api_key)
+    return evo_constructor_deals(api_key, base_url, source_name, found_at, max_results)
+
+
+def evo_api_fallback_candidates(
+    base_url: str,
+    source: dict[str, Any],
+    source_name: str,
+    found_at: str,
+    max_results: int,
+) -> list[Deal]:
+    """Query evo's Constructor search API directly when the page fetch is blocked.
+
+    The API key is a public client-side key embedded in evo's pages. It rarely
+    changes, so the last key seen on a successful page fetch is cached and
+    reused here; a `constructor_key` field on the source config wins if set.
+    """
+    if "evo.com" not in base_url:
+        return []
+
+    api_key = clean_text(str(source.get("constructor_key") or "")) or load_cached_evo_constructor_key()
+    if not api_key:
+        return []
+    return evo_constructor_deals(api_key, base_url, source_name, found_at, max_results)
+
+
+def evo_constructor_deals(
+    api_key: str,
+    base_url: str,
+    source_name: str,
+    found_at: str,
+    max_results: int,
+) -> list[Deal]:
     parsed = urlparse(base_url)
     base_query = parse_qs(parsed.query, keep_blank_values=True)
     page = 1
@@ -786,6 +831,33 @@ def evo_hydrated_collection_candidates(
 def evo_constructor_api_key(markup: str) -> str | None:
     match = EVO_CONSTRUCTOR_KEY_RE.search(markup)
     return match.group("key") if match else None
+
+
+def load_cached_evo_constructor_key(path: Path | None = None) -> str | None:
+    path = path or EVO_CONSTRUCTOR_KEY_CACHE
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return None
+    key = clean_text(str(payload.get("key") or "")) if isinstance(payload, dict) else ""
+    return key or None
+
+
+def save_cached_evo_constructor_key(api_key: str, path: Path | None = None) -> None:
+    path = path or EVO_CONSTRUCTOR_KEY_CACHE
+    if load_cached_evo_constructor_key(path) == api_key:
+        return
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(
+            json.dumps(
+                {"key": api_key, "saved_at": datetime.now(timezone.utc).isoformat(timespec="seconds")},
+                indent=2,
+            ),
+            encoding="utf-8",
+        )
+    except OSError:
+        pass
 
 
 def evo_constructor_api_url(api_key: str, query: dict[str, list[str]], page: int, per_page: int) -> str:
@@ -1319,6 +1391,11 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
                     all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
                     time.sleep(float(source.get("delay_seconds", 1.2)))
                     continue
+                evo_deals = evo_api_fallback_candidates(url, source, source_name, found_at, per_source_limit)
+                if evo_deals:
+                    all_deals.extend(filter_and_sort(evo_deals, source_filter_config)[:per_source_limit])
+                    time.sleep(float(source.get("delay_seconds", 1.2)))
+                    continue
                 if not source.get("reader_fallback"):
                     all_deals.extend(cached_source_deals(history, source_name, found_at, per_source_limit))
                     errors.append(SourceError(source_name, url, blocked))
@@ -1375,6 +1452,14 @@ def scan(config: dict[str, Any]) -> tuple[list[Deal], list[SourceError]]:
             all_deals.extend(filter_and_sort(candidates, source_filter_config)[:per_source_limit])
             time.sleep(float(source.get("delay_seconds", 1.2)))
         except (HTTPError, URLError, TimeoutError, OSError) as error:
+            try:
+                evo_deals = evo_api_fallback_candidates(url, source, source_name, found_at, per_source_limit)
+            except (HTTPError, URLError, TimeoutError, OSError):
+                evo_deals = []
+            if evo_deals:
+                all_deals.extend(filter_and_sort(evo_deals, source_filter_config)[:per_source_limit])
+                time.sleep(float(source.get("delay_seconds", 1.2)))
+                continue
             if source.get("reader_fallback"):
                 try:
                     candidates = []
@@ -2426,7 +2511,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 </div>
               </details>
             </div>
-            <p class="filter-note" id="filterNote" hidden></p>
             <details class="store-panel">
               <summary>
                 <strong>Stores</strong>
@@ -2503,8 +2587,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .filter-section summary::after, .store-panel summary::after, .secondary-panel summary::after {{ content: "Show"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 4px 8px; font-size: .74rem; font-weight: 800; }}
       .filter-section[open] summary::after, .store-panel[open] summary::after, .secondary-panel[open] summary::after {{ content: "Hide"; }}
       .filter-section .quick-filters {{ margin-top: 10px; }}
-      .filter-note {{ margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }}
-      .filter-note[hidden] {{ display: none; }}
       .filter-actions {{ display: flex; gap: 8px; }}
       .store-panel .filter-actions {{ margin: 10px 0; }}
       .source-toggles {{ display: grid; gap: 7px; }}
@@ -2654,7 +2736,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const hideMuted = document.querySelector('#hideMuted');
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
-      const filterNote = document.querySelector('#filterNote');
       const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
       const localMuteKey = 'skiDeals.localMutedUrls.v1';
       let localMutedUrls = readLocalMutes();
@@ -2757,7 +2838,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           : [];
         const topDealSet = new Set(eligibleTopDeals);
         let visible = 0;
-        const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
           const matchesStore = enabled.has(deal.dataset.source);
           const matchesCategory = !categoryBoxes.length || enabledCategories.has(deal.dataset.category || 'ski');
@@ -2776,20 +2856,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesMuted && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
-          if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
-            hiddenNoPhotoSources.add(deal.dataset.source);
-          }}
         }}
         if (visibleDealCount) visibleDealCount.textContent = visible;
-        if (filterNote) {{
-          if (hiddenNoPhotoSources.size) {{
-            filterNote.hidden = false;
-            filterNote.textContent = `Photos only is hiding image-less stores: ${{[...hiddenNoPhotoSources].sort().join(', ')}}. Hit Reset or uncheck Photos only to show them.`;
-          }} else {{
-            filterNote.hidden = true;
-            filterNote.textContent = '';
-          }}
-        }}
       }}
 
       function updateView() {{
