@@ -289,7 +289,19 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--dry-run", action="store_true", help="print the assembled prompt and exit without calling the API")
     parser.add_argument("--max-deals", type=int, default=120, help="max deals per category to include (default: 120)")
+    parser.add_argument(
+        "--render-only",
+        metavar="BRIEF_MD",
+        help="skip analysis; render an existing brief markdown file to all outputs (used by CI, where Claude Code writes the brief)",
+    )
     args = parser.parse_args()
+
+    if args.render_only:
+        brief = Path(args.render_only).read_text(encoding="utf-8").strip()
+        if not brief:
+            sys.exit(f"{args.render_only} is empty; not writing output.")
+        write_brief(brief)
+        return
 
     user_prompt, stats = build_user_prompt(args.max_deals)
 

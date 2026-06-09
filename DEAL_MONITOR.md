@@ -73,7 +73,12 @@ Use `python3 scripts/deal_analyst.py --dry-run` to inspect exactly what gets sen
 
 ### Automated daily brief
 
-The `External Daily Deal Refresh` workflow generates the brief automatically after each scheduled scrape, as long as an `ANTHROPIC_API_KEY` repository secret exists (GitHub repo → Settings → Secrets and variables → Actions → New repository secret). The brief steps are best-effort — if the secret is missing or the API call fails, the deal reports still publish normally.
+The `External Daily Deal Refresh` workflow generates the brief automatically after each scheduled scrape using Claude Code billed against a Claude subscription — no per-call API charges. One-time setup:
+
+1. Run `claude setup-token` anywhere you're logged in to Claude Code (requires a Pro/Max subscription) and copy the OAuth token it prints.
+2. Add it as a repository secret named `CLAUDE_CODE_OAUTH_TOKEN` (GitHub repo → Settings → Secrets and variables → Actions → New repository secret).
+
+The brief steps are best-effort — if the secret is missing or the run fails, the deal reports still publish normally. In CI, Claude Code reads the same prompt `--dry-run` produces, writes the brief, and hands it to `scripts/deal_analyst.py --render-only` for the markdown/HTML outputs. (The script's direct-API mode still exists for local use with an `ANTHROPIC_API_KEY`, but nothing in automation depends on it.)
 
 The workflow commits the markdown plus a web version, published at:
 
