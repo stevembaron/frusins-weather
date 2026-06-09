@@ -18,7 +18,9 @@ Requires the `anthropic` package and an ANTHROPIC_API_KEY environment variable
 from __future__ import annotations
 
 import argparse
+import html
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -31,6 +33,7 @@ CLOTHING_DEALS = DATA_DIR / "clothing_deals.json"
 PREFERENCES = ROOT / "config" / "deal_preferences.json"
 BRIEF_OUTPUT = DATA_DIR / "deal_brief.md"
 BRIEF_ARCHIVE_DIR = DATA_DIR / "briefs"
+WEB_BRIEF_OUTPUT = ROOT / "deal-brief" / "index.html"
 
 MODEL = "claude-fable-5"
 MAX_OUTPUT_TOKENS = 8000
@@ -201,8 +204,85 @@ def write_brief(brief: str) -> None:
     BRIEF_ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     archive = BRIEF_ARCHIVE_DIR / f"{datetime.now().astimezone():%Y-%m-%d}.md"
     archive.write_text(brief + "\n", encoding="utf-8")
+    WEB_BRIEF_OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    WEB_BRIEF_OUTPUT.write_text(render_brief_html(brief), encoding="utf-8")
     print(f"\nWrote {BRIEF_OUTPUT}")
     print(f"Wrote {archive}")
+    print(f"Wrote {WEB_BRIEF_OUTPUT}")
+
+
+INLINE_LINK_RE = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+BARE_URL_RE = re.compile(r'(?<!["(>])(https?://[^\s<,]+)')
+BOLD_RE = re.compile(r"\*\*([^*]+)\*\*")
+
+
+def markdown_inline(value: str) -> str:
+    value = html.escape(value, quote=False)
+    value = INLINE_LINK_RE.sub(r'<a href="\2">\1</a>', value)
+    value = BARE_URL_RE.sub(r'<a href="\1">\1</a>', value)
+    return BOLD_RE.sub(r"<strong>\1</strong>", value)
+
+
+def markdown_to_html(markdown: str) -> str:
+    """Render the brief's constrained markdown (headings, lists, links, bold)."""
+    blocks: list[str] = []
+    list_items: list[str] = []
+
+    def flush_list() -> None:
+        if list_items:
+            blocks.append("<ul>\n" + "\n".join(list_items) + "\n</ul>")
+            list_items.clear()
+
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if not stripped:
+            flush_list()
+            continue
+        heading = re.match(r"^(#{1,3})\s+(.*)$", stripped)
+        if heading:
+            flush_list()
+            level = len(heading.group(1))
+            blocks.append(f"<h{level}>{markdown_inline(heading.group(2))}</h{level}>")
+        elif stripped.startswith(("- ", "* ")):
+            list_items.append(f"  <li>{markdown_inline(stripped[2:])}</li>")
+        else:
+            flush_list()
+            blocks.append(f"<p>{markdown_inline(stripped)}</p>")
+    flush_list()
+    return "\n".join(blocks)
+
+
+def render_brief_html(brief: str) -> str:
+    generated = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M %Z")
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gear brief</title>
+  <style>
+    :root {{ --ink: #232a31; --soft: #5d6a76; --line: #dce3e9; --accent: #1f6f43; }}
+    body {{ margin: 0; padding: 24px 16px 48px; background: #f4f6f8; color: var(--ink);
+           font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }}
+    main {{ max-width: 720px; margin: 0 auto; background: #fff; border: 1px solid var(--line);
+            border-radius: 14px; padding: 26px 28px; }}
+    h1 {{ font-size: 1.5rem; margin: 0 0 4px; }}
+    h2 {{ font-size: 1.05rem; margin: 22px 0 8px; color: var(--accent); text-transform: uppercase;
+          letter-spacing: 0.04em; border-bottom: 1px solid var(--line); padding-bottom: 4px; }}
+    ul {{ margin: 0; padding-left: 20px; }}
+    li {{ margin: 8px 0; }}
+    a {{ color: var(--accent); }}
+    .meta {{ color: var(--soft); font-size: 0.85rem; margin-top: 26px; }}
+  </style>
+</head>
+<body>
+  <main>
+{markdown_to_html(brief)}
+    <p class="meta">Generated {generated} by scripts/deal_analyst.py ({MODEL}). <a href="../ski-deals/">Full deal table</a></p>
+  </main>
+</body>
+</html>
+"""
 
 
 def main() -> None:
