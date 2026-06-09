@@ -13,7 +13,21 @@ shift
 git config user.name "github-actions[bot]"
 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-git add -- "$@"
+existing=()
+for path in "$@"; do
+  if [ -e "$path" ]; then
+    existing+=("$path")
+  else
+    echo "Skipping missing path: $path" >&2
+  fi
+done
+
+if [ "${#existing[@]}" -eq 0 ]; then
+  echo "No listed paths exist; nothing to commit."
+  exit 0
+fi
+
+git add -- "${existing[@]}"
 
 if git diff --cached --quiet; then
   echo "No report changes to commit."

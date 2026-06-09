@@ -52,6 +52,7 @@ jobs:
           data/deals.html
           data/deals.json
           data/price_history.json
+          data/evo_constructor_key.json
           ski-deals/index.html
           data/clothing_deals.json
 
