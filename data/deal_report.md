@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-08T20:32:43+00:00
+Generated: 2026-06-09T13:19:03+00:00
 Deals found: 264
 
 1. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
@@ -149,7 +149,7 @@ Deals found: 264
 
 25. [Elan Playmaker 87 Mens Demo Skis 2026](https://utahskis.com/products/elan-playmaker-87-mens-demo-skis-2026)
    $299.99 was $679.99 (55.9% off) - Utah Skis demo skis sale
-   Price trend: Up $25.00 (9.1%) since prior day
+   Price trend: Same as prior day
    Sizes: 166
    Stock: In stock
 
