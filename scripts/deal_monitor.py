@@ -2511,7 +2511,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
                 </div>
               </details>
             </div>
-            <p class="filter-note" id="filterNote" hidden></p>
             <details class="store-panel">
               <summary>
                 <strong>Stores</strong>
@@ -2588,8 +2587,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .filter-section summary::after, .store-panel summary::after, .secondary-panel summary::after {{ content: "Show"; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); padding: 4px 8px; font-size: .74rem; font-weight: 800; }}
       .filter-section[open] summary::after, .store-panel[open] summary::after, .secondary-panel[open] summary::after {{ content: "Hide"; }}
       .filter-section .quick-filters {{ margin-top: 10px; }}
-      .filter-note {{ margin: 10px 0 0; padding: 9px 11px; border: 1px solid #e1d2a6; border-radius: 12px; background: #fff8df; color: var(--gold); }}
-      .filter-note[hidden] {{ display: none; }}
       .filter-actions {{ display: flex; gap: 8px; }}
       .store-panel .filter-actions {{ margin: 10px 0; }}
       .source-toggles {{ display: grid; gap: 7px; }}
@@ -2739,7 +2736,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       const hideMuted = document.querySelector('#hideMuted');
       const dealsOfDay = document.querySelector('#dealsOfDay');
       const resetFilters = document.querySelector('#resetFilters');
-      const filterNote = document.querySelector('#filterNote');
       const radarButtons = [...document.querySelectorAll('[data-radar-filter]')];
       const localMuteKey = 'skiDeals.localMutedUrls.v1';
       let localMutedUrls = readLocalMutes();
@@ -2842,7 +2838,6 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           : [];
         const topDealSet = new Set(eligibleTopDeals);
         let visible = 0;
-        const hiddenNoPhotoSources = new Set();
         for (const deal of deals) {{
           const matchesStore = enabled.has(deal.dataset.source);
           const matchesCategory = !categoryBoxes.length || enabledCategories.has(deal.dataset.category || 'ski');
@@ -2861,20 +2856,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           const show = matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesPhoto && matchesDrop && matchesNew && matchesWatch && matchesSizeGroup && matchesSweet && matchesLowestSeen && matchesAlternate && matchesMuted && matchesTopDeals;
           deal.hidden = !show;
           if (show) visible += 1;
-          if (requirePhoto && matchesStore && matchesCategory && matchesSearch && matchesPrice && matchesDrop && deal.dataset.hasImage !== 'true') {{
-            hiddenNoPhotoSources.add(deal.dataset.source);
-          }}
         }}
         if (visibleDealCount) visibleDealCount.textContent = visible;
-        if (filterNote) {{
-          if (hiddenNoPhotoSources.size) {{
-            filterNote.hidden = false;
-            filterNote.textContent = `Photos only is hiding image-less stores: ${{[...hiddenNoPhotoSources].sort().join(', ')}}. Hit Reset or uncheck Photos only to show them.`;
-          }} else {{
-            filterNote.hidden = true;
-            filterNote.textContent = '';
-          }}
-        }}
       }}
 
       function updateView() {{

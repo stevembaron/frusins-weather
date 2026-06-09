@@ -58,7 +58,8 @@
     {
       "name": "CampSaver backcountry skis",
       "url": "https://www.campsaver.com/backcountry-skis.html?_iv_sort=lowest-price",
-      "enabled": true
+      "enabled": true,
+      "reader_fallback": true
     },
     {
       "name": "J Skis Secret Stash",
