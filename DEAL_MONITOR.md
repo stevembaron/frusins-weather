@@ -71,6 +71,16 @@ make brief                      # writes data/deal_brief.md + data/briefs/YYYY-M
 
 Use `python3 scripts/deal_analyst.py --dry-run` to inspect exactly what gets sent without making an API call. The brief is intentionally honest: on a quiet day the "Act now" section says there's nothing worth acting on.
 
+### Automated daily brief
+
+The `External Daily Deal Refresh` workflow generates the brief automatically after each scheduled scrape, as long as an `ANTHROPIC_API_KEY` repository secret exists (GitHub repo → Settings → Secrets and variables → Actions → New repository secret). The brief steps are best-effort — if the secret is missing or the API call fails, the deal reports still publish normally.
+
+The workflow commits the markdown plus a web version, published at:
+
+```text
+https://stevembaron.github.io/projects/deal-brief/
+```
+
 ## Reports
 
 The HTML report is sorted from lowest price to highest price:

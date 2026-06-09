@@ -21,6 +21,8 @@ concurrency:
 jobs:
   update-reports:
     runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -52,3 +54,22 @@ jobs:
           data/price_history.json
           ski-deals/index.html
           data/clothing_deals.json
+
+      # The brief steps are best-effort: a missing ANTHROPIC_API_KEY secret or
+      # a failed API call must never block the deal reports above.
+      - name: Generate deal brief (Claude)
+        if: env.ANTHROPIC_API_KEY != ''
+        continue-on-error: true
+        run: |
+          pip install anthropic
+          python3 scripts/deal_analyst.py
+
+      - name: Publish deal brief
+        if: env.ANTHROPIC_API_KEY != ''
+        continue-on-error: true
+        run: >
+          scripts/publish_generated_report.sh
+          "Update daily deal brief"
+          data/deal_brief.md
+          data/briefs
+          deal-brief/index.html
