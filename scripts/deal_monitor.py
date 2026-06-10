@@ -2469,6 +2469,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         <details class="controls" aria-label="Deal controls" open>
           <summary class="controls-summary">
             <span>Filters</span>
+            <a class="brief-link" href="../deal-brief/index.html" onclick="event.stopPropagation()">Morning brief</a>
             <span class="summary-count"><strong id="visibleDealCount">{len(html_deals)}</strong> shown</span>
           </summary>
           <div class="controls-body">
@@ -2564,6 +2565,8 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .controls:not([open]) .controls-summary::before {{ content: "Show"; }}
       .summary-count {{ color: var(--muted); font-weight: 500; margin-left: auto; }}
       .summary-count strong {{ color: var(--ink); }}
+      .brief-link {{ border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 5px 11px; font-size: .78rem; font-weight: 700; text-decoration: none; }}
+      .brief-link:hover {{ border-color: var(--ink); }}
       .controls-body {{ margin-top: 12px; }}
       .category-panel {{ display: grid; gap: 8px; margin-bottom: 12px; }}
       .category-toggle {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }}
