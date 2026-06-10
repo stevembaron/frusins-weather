@@ -2226,7 +2226,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
             <b>{category_counts["ski"]}</b>
           </label>
           <label class="category-toggle category-clothing">
-            <input type="checkbox" value="clothing" checked />
+            <input type="checkbox" value="clothing" />
             <span>Clothing deals</span>
             <b>{category_counts["clothing"]}</b>
           </label>
@@ -2235,6 +2235,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         if show_category_filter
         else ""
     )
+    brief_panel = brief_panel_html()
 
     for deal in html_deals:
         original = f"<span class='was'>Was ${deal['original_price']:.2f}</span>" if deal["original_price"] else ""
@@ -2567,6 +2568,15 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .summary-count strong {{ color: var(--ink); }}
       .brief-link {{ border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 5px 11px; font-size: .78rem; font-weight: 700; text-decoration: none; }}
       .brief-link:hover {{ border-color: var(--ink); }}
+      .brief-panel {{ margin: 0 0 16px; padding: 14px 18px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 22px; box-shadow: 0 16px 36px rgba(39,61,51,.10); }}
+      .brief-panel summary {{ cursor: pointer; font-weight: 800; display: flex; align-items: baseline; gap: 10px; list-style: none; }}
+      .brief-panel summary::-webkit-details-marker {{ display: none; }}
+      .brief-panel summary .meta {{ color: var(--muted); font-weight: 500; font-size: .85rem; }}
+      .brief-body h1 {{ font-size: 1.05rem; margin: 12px 0 2px; }}
+      .brief-body h2 {{ font-size: .85rem; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }}
+      .brief-body ul {{ margin: 0; padding-left: 20px; }}
+      .brief-body li {{ margin: 7px 0; }}
+      .brief-body a {{ color: var(--ink); }}
       .controls-body {{ margin-top: 12px; }}
       .category-panel {{ display: grid; gap: 8px; margin-bottom: 12px; }}
       .category-toggle {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }}
@@ -2708,6 +2718,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           {source_filter}
         </aside>
         <div class="content">
+          {brief_panel}
           {preference_panel}
           {activity_panel}
           {health_panel}
@@ -2976,7 +2987,7 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
           dealsOfDay.textContent = 'Best 5 today';
         }}
         for (const box of checkboxes) box.checked = true;
-        for (const box of categoryBoxes) box.checked = true;
+        for (const box of categoryBoxes) box.checked = box.defaultChecked;
         updateView();
       }});
       applyLocalMutes();
@@ -2987,12 +2998,56 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
 """
 
 
+def brief_panel_html() -> str:
+    """Inline the latest Claude morning brief (if one exists) into the report."""
+    try:
+        brief = (DATA_DIR / "deal_brief.md").read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+    if not brief:
+        return ""
+    try:
+        from deal_analyst import markdown_to_html
+
+        body = markdown_to_html(brief)
+    except ImportError:
+        body = f"<pre>{html.escape(brief)}</pre>"
+    return f"""
+          <details class="brief-panel" open>
+            <summary><strong>Morning brief</strong><span class="meta">Claude's take on today's deals</span></summary>
+            <div class="brief-body">{body}</div>
+          </details>
+    """
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Monitor configured URLs for ski gear deals.")
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
+    parser.add_argument(
+        "--rerender",
+        action="store_true",
+        help="rebuild the HTML reports from the existing JSON data without scraping (used after the brief updates)",
+    )
     args = parser.parse_args()
 
     config = load_config(args.config)
+
+    if args.rerender:
+        json_output = resolve_output_path(config.get("json_output"), JSON_OUTPUT)
+        payload = load_json_payload(json_output)
+        if not payload:
+            print(f"No payload at {json_output}; run a scrape first.", file=sys.stderr)
+            return 1
+        html_output_path = resolve_output_path(config.get("html_output"), HTML_OUTPUT)
+        web_output = resolve_output_path(config.get("web_output"), WEB_OUTPUT)
+        html_payload, html_config = combined_tracker_payload(payload, config)
+        html_output = trim_trailing_whitespace(render_html(html_payload, html_config))
+        html_output_path.write_text(html_output, encoding="utf-8")
+        web_output.write_text(html_output, encoding="utf-8")
+        print(f"Wrote {html_output_path}")
+        print(f"Wrote {web_output}")
+        return 0
+
     deals, errors = scan(config)
     write_outputs(deals, errors, config)
 

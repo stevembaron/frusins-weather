@@ -85,6 +85,11 @@ jobs:
             --allowedTools "Bash(python3 scripts/deal_analyst.py*),Read,Write,Glob,Grep"
             --max-turns 12
 
+      - name: Re-render tracker with fresh brief
+        if: env.CLAUDE_CODE_OAUTH_TOKEN != ''
+        continue-on-error: true
+        run: python3 scripts/deal_monitor.py --rerender
+
       - name: Publish deal brief
         if: env.CLAUDE_CODE_OAUTH_TOKEN != ''
         continue-on-error: true
@@ -94,3 +99,5 @@ jobs:
           data/deal_brief.md
           data/briefs
           deal-brief/index.html
+          data/deals.html
+          ski-deals/index.html

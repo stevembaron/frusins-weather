@@ -35,6 +35,15 @@
       .summary-count strong { color: var(--ink); }
       .brief-link { border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--ink); padding: 5px 11px; font-size: .78rem; font-weight: 700; text-decoration: none; }
       .brief-link:hover { border-color: var(--ink); }
+      .brief-panel { margin: 0 0 16px; padding: 14px 18px; border: 1px solid var(--line); background: rgba(255,254,249,.94); border-radius: 22px; box-shadow: 0 16px 36px rgba(39,61,51,.10); }
+      .brief-panel summary { cursor: pointer; font-weight: 800; display: flex; align-items: baseline; gap: 10px; list-style: none; }
+      .brief-panel summary::-webkit-details-marker { display: none; }
+      .brief-panel summary .meta { color: var(--muted); font-weight: 500; font-size: .85rem; }
+      .brief-body h1 { font-size: 1.05rem; margin: 12px 0 2px; }
+      .brief-body h2 { font-size: .85rem; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+      .brief-body ul { margin: 0; padding-left: 20px; }
+      .brief-body li { margin: 7px 0; }
+      .brief-body a { color: var(--ink); }
       .controls-body { margin-top: 12px; }
       .category-panel { display: grid; gap: 8px; margin-bottom: 12px; }
       .category-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }
@@ -189,7 +198,7 @@
             <b>264</b>
           </label>
           <label class="category-toggle category-clothing">
-            <input type="checkbox" value="clothing" checked />
+            <input type="checkbox" value="clothing" />
             <span>Clothing deals</span>
             <b>8</b>
           </label>
@@ -291,6 +300,32 @@
 
         </aside>
         <div class="content">
+
+          <details class="brief-panel" open>
+            <summary><strong>Morning brief</strong><span class="meta">Claude's take on today's deals</span></summary>
+            <div class="brief-body"><h1>Gear brief — Wednesday, June 10, 2026</h1>
+<h2>Act now</h2>
+<ul>
+  <li><strong><a href="https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022">Dynastar M-Pro 99 W, 154 cm — $119.99</a></strong> (was $699.95, 83% off). Watch-term brand, family size; 2022 closeout but $120 for a Dynastar is genuine value. No 90d range on record (first tracked May 18) but this is by far the cheapest it's appeared. In stock at Evo.</li>
+</ul>
+<ul>
+  <li><strong><a href="https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087">Stio Azura Insulated Jacket, S — $69.97</a></strong> (was $225.71, 69% off). Watch-term brand, your size, confirmed at its 90-day low ($69.97–$83.33 range). Under the $100 clothing cap.</li>
+</ul>
+<ul>
+  <li><strong><a href="https://utahskis.com/products/elan-ripstick-96-demo-skis-2026">Elan Ripstick 96 Demo 2026, 168 cm — $399.99</a></strong> (was $949.99, 58% off). Watch-term ski in your size with bindings included; current model year, demo condition. No tracked price history to confirm floor, but watch term + exact size + sub-$500 is the right combination. In stock at Utah Skis.</li>
+</ul>
+<h2>Worth watching</h2>
+<ul>
+  <li><strong><a href="https://lonepinegearx.com/products/2024-rossignol-rallybird-102-374e8">Rossignol Rallybird 102, 154 cm — $279</a></strong> (was $850, 67% off). Watch term, family size. No 90d history to confirm this is the low; buy if it drops under $250.</li>
+  <li><strong><a href="https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024">Nordica Santa Ana 104 Free Women's 2024, 172 cm — $359.99</a></strong> (was $849.99, 58% off). Watch term, your size. Parked at this price since May 18 — no urgency, but check stock before season ramps.</li>
+  <li><strong><a href="https://www.eriksbikeshop.com/products/lib-tech-backwards-mens-skis-2026-pr5a25243">Lib Tech Backwards, 172 cm — $300</a></strong> (was $599.99, 50% off). Your size, dropped $60 today to its confirmed 90-day low ($300–$359.99). Not a watch term but a clean price signal.</li>
+  <li><strong><a href="https://lonepinegearx.com/products/2024-dynastar-menace-80-95383">Dynastar Menace 80, 168 cm — $150</a></strong> (was $430, 65% off). Watch term, your size. Entry-level piste ski — only interesting as a dedicated groomers board.</li>
+  <li><strong><a href="https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256">Stio Hylas Long Sleeve Crew, M — $29.90</a></strong> (was $69.53). Watch term, your size, at 90-day low ($29.90–$31.05). Low urgency but confirmed cheapest tracked price.</li>
+</ul>
+<h2>Notes</h2>
+<p>CampSaver backcountry skis source blocked today (anti-bot) — some BC ski listings may be missing.</p></div>
+          </details>
+
 
         <section class="preference-panel start-panel" aria-label="Deal preferences">
           <div>
@@ -11095,7 +11130,7 @@
           dealsOfDay.textContent = 'Best 5 today';
         }
         for (const box of checkboxes) box.checked = true;
-        for (const box of categoryBoxes) box.checked = true;
+        for (const box of categoryBoxes) box.checked = box.defaultChecked;
         updateView();
       });
       applyLocalMutes();
