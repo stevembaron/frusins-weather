@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-06-09T20:52:49+00:00
-Deals found: 261
+Generated: 2026-06-10T12:53:52+00:00
+Deals found: 264
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -17,7 +17,7 @@ Deals found: 261
 
 3. [Völkl RTM 81 Skis + iPT WR XL 12 TCX GW Bindings 2018 - Used](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)
    $269.97 was $899.00 (70.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 156 cm
    Stock: In stock
 
@@ -71,7 +71,7 @@ Deals found: 261
 
 12. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
    $314.99 was $899.00 (65.0% off) - Evo skis price ascending
-   Price trend: Down $34.98 (10.0%) since prior day
+   Price trend: Same as prior day
    Sizes: 168 cm
    Stock: In stock
 
@@ -152,3 +152,8 @@ Deals found: 261
    Price trend: Same as prior day
    Sizes: 152 cm
    Stock: In stock
+
+
+## Source Errors
+
+- CampSaver backcountry skis: Blocked by retailer anti-bot page: before we continue; reader fallback failed: Blocked by retailer anti-bot page: before we continue
