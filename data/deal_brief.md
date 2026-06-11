@@ -2,19 +2,18 @@
 
 ## Act now
 
-- **Stio Hylas Long Sleeve Crew, Men's M — $29.90** (Geartrade): Watch term, my size, at its confirmed 90d low ($29.90–$31.05). Has held the floor since first listed in May — cheap enough to stop waiting on. [geartrade.com](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
+- **Stio Hylas Long Sleeve Crew, Men's M — $29.90** (Geartrade): Watch term, my size, at its confirmed 90d floor ($29.90–$31.05). No lower price on record — straightforward buy. [geartrade.com](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
 
-- **Dynastar Menace 80, 158cm — $150** (Lone Pine, new, 2024): Watch term, family size. Same genuine $150 closeout as the 168 flagged the past two days, but for the family quiver (158cm is in the family range). Listed since May 22 with no price movement. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
+- **Dynastar Menace 80, 158cm — $150** (Lone Pine, new 2024): Watch term, family size. Genuine closeout at 65% off — price has held since May 22 with no movement, still in stock. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
 
 ## Worth watching
 
-- **Stio Azura Insulated Jacket, Men's S — $69.97** (Geartrade, 90d low $69.97–$83.33): Third day at the floor — watch term, right size. Buy this week or let it go; Geartrade consignment doesn't restock.
-- **Nordica Santa Ana 104 Free, Women's 2024, 172cm — $359.99** (Evo, in stock): Third day unchanged. Watch term, your exact size. Act before Evo's closeout clears — won't come back at this price.
-- **Dynastar Menace 80, 168cm — $150** (Lone Pine): Demoting after two Act Now pitches with no change. Price stable since May 22 — buy if you want it, no urgency signal.
-- **Elan Ripstick 96 Demo 2026, 168cm — $399.99** (Utah Skis, 90d range $374.99–$399.99): Watch term, my size. Currently at the range high — buy if it drops to $375.
-- **Rossignol Rallybird Soul 92 Demo 2026, 166cm — $424.99** (Utah Skis, 90d range $399.99–$424.99): Watch term, my size (and 156cm for family). Buy at $400.
+- **Stio Azura Insulated Jacket, Men's S — $69.97** (Geartrade): Watch term, right size, fourth day at the 90d floor. Last call — Geartrade consignment doesn't restock; buy or drop this week.
+- **Nordica Santa Ana 104 Free, Women's 2024, 172cm — $359.99** (Evo, in stock): Watch term, exact size. Unchanged since May 18; end-of-line closeout — this is the price until stock clears.
+- **Dynastar Menace 80, 168cm — $150** (Lone Pine): Watch term, my size. Unchanged since May 22 — final watch cycle; buy if you want the 168cm at $150, no restock expected.
+- **Elan Ripstick 96 Demo, 168cm — $399.99** (Utah Skis, 90d $374.99–$399.99): Watch term, my size. At the range high — buy if it drops to $375.
+- **Rossignol Rallybird Soul 92 Demo, 166cm — $424.99** (Utah Skis, 90d $399.99–$424.99): Watch term, my size; 156cm also listed (family size). At range high — buy at $400.
 
 ## Notes
 
-- Rallybird 102 (154cm) and Dynastar M-Pro 99W (154cm) dropped from watching after two quiet days with no price movement since May.
-- All Zag listings excluded per muted terms (~15 items).
+- CampSaver backcountry skis blocked by anti-bot page for the second consecutive day — those listings absent.
