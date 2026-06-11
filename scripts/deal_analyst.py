@@ -58,6 +58,15 @@ Apply real judgment, not keyword matching:
 - Weigh urgency honestly. "New low + in stock + watch-term brand" is act-now.
   A small price wiggle on something plentiful is not.
 - Respect the budget caps and muted terms in the preferences.
+- Use cross-store data. Some lines note the same product at another store —
+  always recommend the cheapest listing and mention the spread when it's
+  meaningful ("$40 cheaper at Evo than Lone Pine").
+- Maintain continuity with your recent briefs (included below when available).
+  If you recommended an item before and it's still listed, say so and how long
+  ("third day at $314.99"). Don't re-pitch an unchanged item more than twice —
+  demote it to Worth watching with a concrete trigger, or drop it. If an item
+  you flagged recently has disappeared, note that briefly in Notes; it tells
+  the owner how fast these move.
 
 Output format (markdown):
 
@@ -90,7 +99,41 @@ def fmt_price(value: Any) -> str:
         return "?"
 
 
-def deal_line(deal: dict[str, Any], category: str) -> str:
+def cross_store_notes(deals: list[dict[str, Any]]) -> dict[int, str]:
+    """Map id(deal) -> a cross-store context string, via deal_monitor's grouping."""
+    try:
+        from deal_monitor import cross_store_annotations
+    except ImportError:
+        return {}
+    notes: dict[int, str] = {}
+    for deal_id, info in cross_store_annotations(deals).items():
+        if info.get("best"):
+            notes[deal_id] = f"BEST PRICE across {info['stores']} stores"
+        elif info.get("note"):
+            notes[deal_id] = str(info["note"])
+    return notes
+
+
+def recent_briefs_section(archive_dir: Path | None = None, limit: int = 3, max_chars: int = 2500) -> str:
+    archive_dir = archive_dir or BRIEF_ARCHIVE_DIR
+    try:
+        files = sorted(archive_dir.glob("*.md"), reverse=True)[:limit]
+    except OSError:
+        return ""
+    sections = []
+    for path in files:
+        try:
+            text = path.read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+        if text:
+            sections.append(f"### Your brief from {path.stem}\n{text[:max_chars]}")
+    if not sections:
+        return ""
+    return "## Your recent briefs (for continuity — do not repeat them verbatim)\n\n" + "\n\n".join(sections)
+
+
+def deal_line(deal: dict[str, Any], category: str, cross_note: str | None = None) -> str:
     parts = [f"[{category}] {deal.get('title', 'Untitled')}", fmt_price(deal.get("current_price"))]
 
     original = deal.get("original_price")
@@ -127,6 +170,9 @@ def deal_line(deal: dict[str, Any], category: str) -> str:
     if deal.get("is_cached"):
         parts.append("CACHED (source failed today, price may be stale)")
 
+    if cross_note:
+        parts.append(cross_note)
+
     parts.append(str(deal.get("source", "")))
     parts.append(str(deal.get("url", "")))
     return "- " + " | ".join(parts)
@@ -147,7 +193,8 @@ def build_user_prompt(max_deals_per_category: int) -> tuple[str, dict[str, int]]
 
         deals = payload.get("deals", [])[:max_deals_per_category]
         stats[label] = len(deals)
-        lines = [deal_line(deal, label) for deal in deals]
+        notes = cross_store_notes(deals)
+        lines = [deal_line(deal, label, notes.get(id(deal))) for deal in deals]
         generated = payload.get("generated_at", "unknown")
         sections.append(
             f"## {label.title()} deals (scraped {generated}, {len(deals)} shown)\n" + "\n".join(lines)
@@ -169,6 +216,10 @@ def build_user_prompt(max_deals_per_category: int) -> tuple[str, dict[str, int]]
                 if isinstance(item, dict)
             ]
             sections.append(f"## Recently disappeared {label} listings\n" + "\n".join(gone_lines))
+
+    briefs = recent_briefs_section()
+    if briefs:
+        sections.append(briefs)
 
     today = datetime.now().astimezone().strftime("%A, %B %-d, %Y")
     header = f"Today is {today}. Write the morning gear brief from the data below.\n"

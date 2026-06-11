@@ -1957,6 +1957,74 @@ def duplicate_key(deal: dict[str, Any]) -> str:
     return " ".join(words[:6])
 
 
+def cross_store_annotations(deals: list[dict[str, Any]]) -> dict[int, dict[str, Any]]:
+    """Flag the same product listed at multiple stores.
+
+    Returns, keyed by id(deal): {"best": True, "stores": N} for the cheapest
+    listing of a multi-store product, or {"best": False, "note": "Also at ..."}
+    pointing the other listings at the cheapest one.
+    """
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for deal in deals:
+        key = duplicate_key(deal)
+        if len(key) >= 6:
+            groups.setdefault(f"{deal.get('category') or 'ski'}|{key}", []).append(deal)
+
+    annotations: dict[int, dict[str, Any]] = {}
+    for group in groups.values():
+        sources = {str(item.get("source")) for item in group}
+        if len(sources) < 2:
+            continue
+        cheapest = min(group, key=lambda item: float(item["current_price"]))
+        for item in group:
+            if item is cheapest:
+                annotations[id(item)] = {"best": True, "stores": len(sources)}
+            else:
+                annotations[id(item)] = {
+                    "best": False,
+                    "note": f"Also at {cheapest.get('source')} for ${float(cheapest['current_price']):.2f}",
+                }
+    return annotations
+
+
+def deal_price_series(history_items: dict[str, Any], deal: dict[str, Any]) -> list[float]:
+    item = history_items.get(price_history_key(deal))
+    if not isinstance(item, dict):
+        return []
+    observations = item.get("observations")
+    if not isinstance(observations, list):
+        return []
+    prices = [money(obs.get("price")) for obs in observations if isinstance(obs, dict)]
+    return [price for price in prices if price is not None]
+
+
+def sparkline_svg(prices: list[float], width: int = 88, height: int = 26) -> str:
+    if len(prices) < 2:
+        return ""
+    lo, hi = min(prices), max(prices)
+    span = (hi - lo) or 1.0
+    pad = 2.5
+    step = (width - 2 * pad) / (len(prices) - 1)
+    points = " ".join(
+        f"{pad + index * step:.1f},{pad + (height - 2 * pad) * (1 - (price - lo) / span):.1f}"
+        for index, price in enumerate(prices)
+    )
+    if hi == lo:
+        color = "#9aa6a0"
+    elif prices[-1] <= prices[0]:
+        color = "#1f6f43"  # trending down = good
+    else:
+        color = "#b3422f"
+    last_x = pad + (len(prices) - 1) * step
+    last_y = pad + (height - 2 * pad) * (1 - (prices[-1] - lo) / span)
+    return (
+        f"<svg class='spark' viewBox='0 0 {width} {height}' width='{width}' height='{height}' role='img'>"
+        f"<title>{len(prices)} checks: ${lo:.0f}-${hi:.0f}</title>"
+        f"<polyline points='{points}' fill='none' stroke='{color}' stroke-width='1.5' />"
+        f"<circle cx='{last_x:.1f}' cy='{last_y:.1f}' r='2' fill='{color}' /></svg>"
+    )
+
+
 def short_seen_label(value: str) -> str:
     if not value:
         return "last run"
@@ -2177,6 +2245,10 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
     preferences = payload.get("preferences") if isinstance(payload.get("preferences"), dict) else {}
     best_discount = max((deal.get("discount_percent") or 0 for deal in html_deals), default=0)
     lowest_price = min((deal["current_price"] for deal in html_deals), default=0)
+    cross_store = cross_store_annotations(html_deals)
+    history_items = load_price_history(
+        resolve_output_path(config.get("price_history_output"), PRICE_HISTORY_OUTPUT)
+    ).get("items", {})
     duplicate_groups: dict[str, list[dict[str, Any]]] = {}
     for deal in html_deals:
         key = duplicate_key(deal)
@@ -2274,6 +2346,14 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
         muted_badge = "<span class='muted-badge'>Muted</span>" if deal.get("is_muted") else ""
         my_size_badge = "<span class='size-badge'>My size</span>" if deal.get("matches_my_size") else ""
         family_size_badge = "<span class='family-size-badge'>Family size</span>" if deal.get("matches_family_size") else ""
+        cross = cross_store.get(id(deal))
+        if cross and cross.get("best"):
+            cross_badge = f"<span class='cross-badge'>Best of {cross['stores']} stores</span>"
+        elif cross:
+            cross_badge = f"<span class='cross-note'>{html.escape(str(cross.get('note') or ''))}</span>"
+        else:
+            cross_badge = ""
+        spark = sparkline_svg(deal_price_series(history_items, deal))
         thumbnail = (
             f"""<a class="thumb" href="{html.escape(deal['url'])}" target="_blank" rel="noreferrer" aria-label="{html.escape(deal['title'])}">
                 <img src="{html.escape(deal['image_url'])}" alt="" loading="lazy" decoding="async" />
@@ -2315,8 +2395,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
               <div class="price">
                 <strong>${deal['current_price']:.2f}</strong>
                 {original}
+                {spark}
               </div>
-              <div class="badges">{watch_badge}{muted_badge}{verdict_badge}{sweet_badge}{lowest_badge}{zone_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{duplicate_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span><button class="note-button" type="button" data-ignore-value="{html.escape(str(deal['url']))}">Not interested</button></div>
+              <div class="badges">{watch_badge}{muted_badge}{verdict_badge}{sweet_badge}{lowest_badge}{zone_badge}{cross_badge}{category_badge}{discount}{savings}{trend_badge}{cached_badge}{my_size_badge}{family_size_badge}{duplicate_badge}{sizes}{stock_badge}<span>Score {deal['score']:.0f}</span><button class="note-button" type="button" data-ignore-value="{html.escape(str(deal['url']))}">Not interested</button></div>
             </article>
             """
         )
@@ -2577,6 +2658,9 @@ def render_html(payload: dict[str, Any], config: dict[str, Any]) -> str:
       .brief-body ul {{ margin: 0; padding-left: 20px; }}
       .brief-body li {{ margin: 7px 0; }}
       .brief-body a {{ color: var(--ink); }}
+      .cross-badge {{ background: #e2f3e8; border: 1px solid #b9ddc6; color: #1f6f43; border-radius: 999px; padding: 3px 9px; font-weight: 700; }}
+      .cross-note {{ color: var(--muted); }}
+      .spark {{ display: block; margin-top: 5px; margin-left: auto; }}
       .controls-body {{ margin-top: 12px; }}
       .category-panel {{ display: grid; gap: 8px; margin-bottom: 12px; }}
       .category-toggle {{ display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: white; cursor: pointer; font-weight: 700; }}
