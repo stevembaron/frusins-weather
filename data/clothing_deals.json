@@ -1,32 +1,32 @@
 {
-  "generated_at": "2026-06-11T20:34:43+00:00",
-  "deal_count": 8,
+  "generated_at": "2026-06-12T13:44:03+00:00",
+  "deal_count": 10,
   "sources_checked": 1,
-  "price_history_count": 323,
-  "price_change_count": 0,
+  "price_history_count": 325,
+  "price_change_count": 1,
   "deals": [
     {
       "title": "Stio Azura Insulated Jacket - Men's",
       "url": "https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 69.97,
-      "original_price": 225.71,
-      "discount_percent": 69.0,
-      "savings": 155.74,
-      "score": 122.6,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "current_price": 65.52,
+      "original_price": 225.93,
+      "discount_percent": 71.0,
+      "savings": 160.41,
+      "score": 124.69,
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1780654961&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1781260059&width=460",
       "is_cached": false,
       "previous_price": 69.97,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -4.45,
+      "price_change_percent": -6.4,
+      "price_trend": "down",
       "first_seen_at": "2026-05-19T17:31:30-06:00",
-      "lowest_price": 69.97,
+      "lowest_price": 65.52,
       "highest_price": 83.33
     },
     {
@@ -38,7 +38,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 57.0,
       "savings": 39.63,
       "score": 86.31,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "M"
       ],
@@ -174,6 +174,30 @@
       "highest_price": 31.05
     },
     {
+      "title": "Mountain Khaki Flannel Shirt - Men's",
+      "url": "https://geartrade.com/products/mountain-khaki-flannel-shirt-mens-1686729",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 36.0,
+      "original_price": 80.0,
+      "discount_percent": 55.0,
+      "savings": 44.0,
+      "score": 85.28,
+      "found_at": "2026-06-12T13:44:01+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/aa9005ad-79a4-496b-8313-3495c9e2d737.webp?v=1781172544&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-12T13:44:03+00:00",
+      "lowest_price": 36.0,
+      "highest_price": 36.0
+    },
+    {
       "title": "Stio Divide Half Zip - Men\u2019s",
       "url": "https://geartrade.com/products/stio-divide-half-zip-mens-1660860",
       "source": "Geartrade Stio men's clothing",
@@ -182,7 +206,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-06-11T20:34:41+00:00",
+      "found_at": "2026-06-12T13:44:01+00:00",
       "sizes": [
         "S"
       ],
@@ -196,6 +220,30 @@
       "first_seen_at": "2026-05-19T17:31:30-06:00",
       "lowest_price": 42.67,
       "highest_price": 42.67
+    },
+    {
+      "title": "Alpine Design Hoodie - Men's",
+      "url": "https://geartrade.com/products/alpine-design-hoodie-mens-1687179",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 26.1,
+      "original_price": 58.0,
+      "discount_percent": 55.0,
+      "savings": 31.9,
+      "score": 82.45,
+      "found_at": "2026-06-12T13:44:01+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/a99bc198-3386-42f7-8e30-101fc7ffda23.webp?v=1781173286&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-12T13:44:03+00:00",
+      "lowest_price": 26.1,
+      "highest_price": 26.1
     }
   ],
   "errors": []
