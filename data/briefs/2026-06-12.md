@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Stio Azura Insulated Jacket, Men's S — $65.52** (Geartrade): dropped $4.45 overnight to a new 90d floor ($65.52–$83.33), below the $69.97 that prompted the "final mention" call yesterday. Watch term, right size, well under the $100 cap. Geartrade consignment does not restock — new low is the trigger. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
+- **Stio Azura Insulated Jacket, Men's S — $65.52** (Geartrade): Still at the new 90d floor hit today ($65.52–$83.33 range, down $4.45 from prior floor). Watch term, right size, under the $100 cap. Consignment — no restock. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
 
-- **Dynastar Menace 80, 158cm — $150** (Lone Pine, 2024 new): watch term, family size. Second day in Act Now; stable at $150 since May 22. Genuine 2024 closeout at 65% off $430; no restock once gone. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
-
-- **Nordica Santa Ana 92 Demo 2026, 155cm — $339.99 at Evo** (Utah Skis lists same ski at $399.99, 90d range $374.99–$399.99): watch term, family size. Second day; Evo price is $60 cheaper and $35 below Utah Skis' tracked floor. Verify 155cm in stock at Evo before ordering. [utahskis.com](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
+- **Stio Shifter Shirt SS, Men's M — $25.69** (Geartrade): Watch term, right size (M), 74% off $98.81. First mention — no floor history, but at $26 the only downside to waiting is it sells. [geartrade.com](https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183)
 
 ## Worth watching
 
-- **Nordica Santa Ana 104 Free Women's 2024, 172cm — $359.99** (Evo, in stock): watch term, my size. Second and final WW mention — unchanged since May 18, end-of-line closeout at 58% off $849.99. Won't restock; buy now or drop it. [evo.com](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)
-- **Stio Divide Half Zip, Men's S — $42.67** (Geartrade): watch term, right size, under $100. New to brief; no price floor confirmed yet — buy if $43 works or wait for a dip. [geartrade.com](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)
-- **Stio Hagen Trail Shirt, Men's S — $30.86** (Geartrade): watch term, right size. New to brief; no 90d range yet. Low-risk add-on at $31 if the style works. [geartrade.com](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)
+- **Dynastar Menace 80, 158cm — $150** (Lone Pine, 2024 new): Three days in Act Now unchanged — demoting per rule. Family size, watch term, genuine closeout. Final mention: buy now or let it go. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
+- **Nordica Santa Ana 92 Demo 2026, 155cm — $339.99 at Evo** (Utah Skis $399.99, $60 spread): Demoted after third Act Now mention, no change. Buy if 155cm is confirmed in stock at Evo. [utahskis.com](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
+- **Stio Divide Half Zip, Men's S — $42.67** (Geartrade): Second mention, stable. Buy at $43 or wait for a drop below $40. [geartrade.com](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)
+- **Stio Hagen Trail Shirt, Men's S — $30.86** (Geartrade): Second mention, stable. Low-risk add-on at $31. [geartrade.com](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)
+- **Stio Ashton Chambray Shirt, Men's S — $37.31** (Geartrade): First mention — watch term, right size, sitting 3+ weeks unsold. [geartrade.com](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)
 
 ## Notes
 
-- Dynastar Menace 80 168cm ($150, my size) and Stio Hylas Long Sleeve Crew ($29.90) retired per June 11 final-mention commitment; both still listed if you want to act independently.
-- CampSaver source failed again (anti-bot block).
-- Elan Ripstick 96 Demo 168cm still at $399.99 — resume watching at $375.
+- Nordica Santa Ana 104 Free Women's 172cm ($359.99, Evo) dropped per this morning's final-WW commitment — still listed if you want to act independently.
+- CampSaver source still blocked by anti-bot.
