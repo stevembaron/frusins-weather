@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-12T20:25:05+00:00",
+  "generated_at": "2026-06-13T12:04:11+00:00",
   "deal_count": 10,
   "sources_checked": 1,
-  "price_history_count": 325,
+  "price_history_count": 327,
   "price_change_count": 1,
   "deals": [
     {
@@ -14,17 +14,17 @@
       "discount_percent": 71.0,
       "savings": 160.41,
       "score": 124.69,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/de116004-e454-4a02-a053-b0b40c425cc0.webp?v=1781260059&width=460",
       "is_cached": false,
-      "previous_price": 69.97,
-      "price_change": -4.45,
-      "price_change_percent": -6.4,
-      "price_trend": "down",
+      "previous_price": 65.52,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-05-19T17:31:30-06:00",
       "lowest_price": 65.52,
       "highest_price": 83.33
@@ -38,7 +38,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
@@ -153,49 +153,25 @@
       "title": "Stio Hylas Long Sleeve Crew - Men's",
       "url": "https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 29.9,
-      "original_price": 69.53,
-      "discount_percent": 57.0,
-      "savings": 39.63,
-      "score": 86.31,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "current_price": 28.75,
+      "original_price": 68.45,
+      "discount_percent": 58.0,
+      "savings": 39.7,
+      "score": 87.35,
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1780729717&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/660e927c-f53c-4b65-9eeb-d7236a77db0e.webp?v=1781334505&width=460",
       "is_cached": false,
       "previous_price": 29.9,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -1.15,
+      "price_change_percent": -3.8,
+      "price_trend": "down",
       "first_seen_at": "2026-05-19T17:31:30-06:00",
-      "lowest_price": 29.9,
+      "lowest_price": 28.75,
       "highest_price": 31.05
-    },
-    {
-      "title": "Mountain Khaki Flannel Shirt - Men's",
-      "url": "https://geartrade.com/products/mountain-khaki-flannel-shirt-mens-1686729",
-      "source": "Geartrade Stio men's clothing",
-      "current_price": 36.0,
-      "original_price": 80.0,
-      "discount_percent": 55.0,
-      "savings": 44.0,
-      "score": 85.28,
-      "found_at": "2026-06-12T20:25:03+00:00",
-      "sizes": [
-        "M"
-      ],
-      "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/aa9005ad-79a4-496b-8313-3495c9e2d737.webp?v=1781172544&width=460",
-      "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
-      "first_seen_at": "2026-06-12T13:44:03+00:00",
-      "lowest_price": 36.0,
-      "highest_price": 36.0
     },
     {
       "title": "Stio Divide Half Zip - Men\u2019s",
@@ -206,7 +182,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
         "S"
       ],
@@ -222,28 +198,52 @@
       "highest_price": 42.67
     },
     {
-      "title": "Alpine Design Hoodie - Men's",
-      "url": "https://geartrade.com/products/alpine-design-hoodie-mens-1687179",
+      "title": "Little Donkey Andy Lightweight Running Vest - Men's",
+      "url": "https://geartrade.com/products/little-donkey-andy-lightweight-running-vest-mens-1686616",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 26.1,
-      "original_price": 58.0,
+      "current_price": 22.5,
+      "original_price": 50.0,
       "discount_percent": 55.0,
-      "savings": 31.9,
-      "score": 82.45,
-      "found_at": "2026-06-12T20:25:03+00:00",
+      "savings": 27.5,
+      "score": 81.42,
+      "found_at": "2026-06-13T12:04:09+00:00",
       "sizes": [
-        "M"
+        "S"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/a99bc198-3386-42f7-8e30-101fc7ffda23.webp?v=1781173286&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/42f8f6a5-2a4e-41ea-8be2-46dea9466769.webp?v=1781257084&width=460",
       "is_cached": false,
       "previous_price": null,
       "price_change": null,
       "price_change_percent": null,
       "price_trend": "new",
-      "first_seen_at": "2026-06-12T13:44:03+00:00",
-      "lowest_price": 26.1,
-      "highest_price": 26.1
+      "first_seen_at": "2026-06-13T12:04:11+00:00",
+      "lowest_price": 22.5,
+      "highest_price": 22.5
+    },
+    {
+      "title": "The North Face Wander Short Sleeve T-Shirt - Men's",
+      "url": "https://geartrade.com/products/the-north-face-wander-short-sleeve-t-shirt-mens-1687180",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 22.5,
+      "original_price": 45.0,
+      "discount_percent": 50.0,
+      "savings": 22.5,
+      "score": 75.17,
+      "found_at": "2026-06-13T12:04:09+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/32f504a5-d198-4a92-a2fa-99929909c130.webp?v=1781314552&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-13T12:04:11+00:00",
+      "lowest_price": 22.5,
+      "highest_price": 22.5
     }
   ],
   "errors": []
