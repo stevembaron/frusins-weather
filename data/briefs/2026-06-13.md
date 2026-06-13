@@ -2,20 +2,20 @@
 
 ## Act now
 
-- **Stio Hylas Long Sleeve Crew, Men's M — $28.75** (Geartrade): New 90d low today — floor just slid from $29.90 to $28.75, down $1.15 from yesterday. Watch term, right size. Was Act Now on June 11 at the prior floor; now cheaper. Consignment, won't restock. [geartrade.com](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
+- **Stio Hylas Long Sleeve Crew, Men's M — $28.75** (Geartrade): Second recommendation; hit a new 90d floor yesterday (range $28.75–$31.05, down $1.15 from prior floor), still there. Watch term, right size. Consignment — won't restock. [geartrade.com](https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256)
 
-- **Stio Shifter Shirt SS, Men's M — $25.69** (Geartrade): Watch term, M, 74% off $98.81. Stable since May 19, second mention. At $26 the only risk is waiting too long on a consignment item. [geartrade.com](https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183)
+- **Stio Shifter Shirt SS, Men's M — $25.69** (Geartrade): Second mention; stable since May 19 at 74% off $98.81. Watch term, right size. At $26 on consignment, waiting risk exceeds price risk. [geartrade.com](https://geartrade.com/products/stio-shifter-shirt-ss-mens-1052183)
 
 ## Worth watching
 
-- **Stio Azura Insulated Jacket, Men's S — $65.52** (Geartrade): Third day unchanged at the 90d floor; demoting from Act Now per rule. Trigger: act if you want a lightweight insulated layer at its tracked low — consignment, no restock. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
-- **Nordica Santa Ana 92 Demo 2026, 155cm — $339.99 at Evo** (Utah Skis asks $399.99, 90d range $374.99–$399.99): Watch term, family size. Evo is $60 below Utah Skis' tracked floor. Trigger: confirm 155cm in stock at Evo, then buy. [utahskis.com](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
-- **Rossignol Rallybird Soul Pro + XP 10, 160cm — $269.97** (Evo, in stock): Watch term, family size, bindings included. New entry, no 90d history to confirm a floor. Trigger: buy if it drops below $250 or holds in stock through next week. [evo.com](https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026)
-- **Dynastar M-Pro 99 W 2022, 154cm — $119.99** (Evo, in stock): Watch term, family size. 83% off; 2022 model is 4 seasons old — fine for resort use if age is acceptable. [evo.com](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
-- **Stio Ashton Chambray Shirt, Men's S — $37.31** (Geartrade): Watch term, S, stable since May 22. Second mention. Trigger: buy at $37 or wait for a drop below $33. [geartrade.com](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)
+- **Rossignol Rallybird Soul Pro + XP10 Bindings, 160cm — $269.97** (Evo, in stock): Second WW. Watch term, family size, bindings included, 2026 ski. No tracked floor yet. Trigger: holds through next week or drops to $250. [evo.com](https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026)
+
+- **Rossignol Rallybird 102, 154cm — $279** (Lone Pine, 2024 new): First mention. Watch term, family size. 2024 closeout at 67% off $849.95; stable at Lone Pine since May 22. No floor data. Trigger: drops to $250 or buy when ready. [lonepinegearx.com](https://lonepinegearx.com/products/2024-rossignol-rallybird-102-374e8)
+
+- **Stio Azura Insulated Jacket, Men's S — $65.52** (Geartrade): 90d floor ($65.52–$83.33); fourth mention. Final mention — act at the tracked low or let it go. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
+
+- **Dynastar Women's M-Pro 92, 154cm — $359.95** (Lone Pine, 2025 new): First mention. Watch term, family size. 2025 model at 49% off $699.95; stable since May 22, no floor data. Trigger: drops to $300. [lonepinegearx.com](https://lonepinegearx.com/products/2025-dynastar-womens-m-pro-92-80bb7)
 
 ## Notes
 
-- Dynastar Menace 80 (158cm and 168cm, $150, Lone Pine) — both still listed; dropped per yesterday's final-mention commitment.
-- Stio Hagen Trail Shirt ($30.86) and Stio Divide Half Zip ($42.67) — dropped after two stable WW entries; add back if prices move.
-- CampSaver backcountry source still blocked by anti-bot.
+- CampSaver backcountry source still blocked by anti-bot; those skis not included today.
