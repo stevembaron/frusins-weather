@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-14T12:17:27+00:00",
-  "deal_count": 10,
+  "generated_at": "2026-06-14T19:56:24+00:00",
+  "deal_count": 9,
   "sources_checked": 1,
-  "price_history_count": 328,
+  "price_history_count": 329,
   "price_change_count": 0,
   "deals": [
     {
@@ -14,7 +14,7 @@
       "discount_percent": 71.0,
       "savings": 160.41,
       "score": 124.69,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 69.0,
       "savings": 116.39,
       "score": 117.05,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 74.0,
       "savings": 73.12,
       "score": 111.77,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -150,6 +150,30 @@
       "highest_price": 48.92
     },
     {
+      "title": "Cotopaxi Otero Fleece Half-Zip Pullover - Men's",
+      "url": "https://geartrade.com/products/cotopaxi-otero-fleece-half-zip-pullover-mens-1686606",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 54.0,
+      "original_price": 120.0,
+      "discount_percent": 55.0,
+      "savings": 66.0,
+      "score": 90.42,
+      "found_at": "2026-06-14T19:56:22+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/60d01889-5b08-4e60-9153-738e141653df.webp?v=1781258309&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-06-14T19:56:24+00:00",
+      "lowest_price": 54.0,
+      "highest_price": 54.0
+    },
+    {
       "title": "Stio Hylas Long Sleeve Crew - Men's",
       "url": "https://geartrade.com/products/stio-hylas-long-sleeve-crew-mens-1677256",
       "source": "Geartrade Stio men's clothing",
@@ -158,7 +182,7 @@
       "discount_percent": 58.0,
       "savings": 39.7,
       "score": 87.35,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "M"
       ],
@@ -174,30 +198,6 @@
       "highest_price": 31.05
     },
     {
-      "title": "Ride Forever Bib Shorts - Men's",
-      "url": "https://geartrade.com/products/ride-forever-bib-shorts-mens-1691244",
-      "source": "Geartrade Stio men's clothing",
-      "current_price": 27.0,
-      "original_price": 60.0,
-      "discount_percent": 55.0,
-      "savings": 33.0,
-      "score": 82.71,
-      "found_at": "2026-06-14T12:17:25+00:00",
-      "sizes": [
-        "M"
-      ],
-      "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/38443daa-68ae-450a-ad6e-bd2709ea839a.webp?v=1781343751&width=460",
-      "is_cached": false,
-      "previous_price": null,
-      "price_change": null,
-      "price_change_percent": null,
-      "price_trend": "new",
-      "first_seen_at": "2026-06-14T12:17:27+00:00",
-      "lowest_price": 27.0,
-      "highest_price": 27.0
-    },
-    {
       "title": "Stio Divide Half Zip - Men\u2019s",
       "url": "https://geartrade.com/products/stio-divide-half-zip-mens-1660860",
       "source": "Geartrade Stio men's clothing",
@@ -206,7 +206,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-06-14T12:17:25+00:00",
+      "found_at": "2026-06-14T19:56:22+00:00",
       "sizes": [
         "S"
       ],
@@ -220,30 +220,6 @@
       "first_seen_at": "2026-05-19T17:31:30-06:00",
       "lowest_price": 42.67,
       "highest_price": 42.67
-    },
-    {
-      "title": "Little Donkey Andy Lightweight Running Vest - Men's",
-      "url": "https://geartrade.com/products/little-donkey-andy-lightweight-running-vest-mens-1686616",
-      "source": "Geartrade Stio men's clothing",
-      "current_price": 22.5,
-      "original_price": 50.0,
-      "discount_percent": 55.0,
-      "savings": 27.5,
-      "score": 81.42,
-      "found_at": "2026-06-14T12:17:25+00:00",
-      "sizes": [
-        "S"
-      ],
-      "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/42f8f6a5-2a4e-41ea-8be2-46dea9466769.webp?v=1781257084&width=460",
-      "is_cached": false,
-      "previous_price": 22.5,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-06-13T12:04:11+00:00",
-      "lowest_price": 22.5,
-      "highest_price": 22.5
     }
   ],
   "errors": []
