@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-15T16:07:04+00:00
+Generated: 2026-06-15T21:24:17+00:00
 Deals found: 264
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -15,16 +15,16 @@ Deals found: 264
    Sizes: 163 cm
    Stock: In stock
 
-3. [Stöckli Nela 96 Skis - Women's 2024](https://www.evo.com/products/226712-stockli-nela-96-skis-women-s-2024)
-   $329.99 was $1149.00 (71.3% off) - Evo skis price ascending
-   Price trend: Newly tracked
-   Sizes: 156 cm
-   Stock: In stock
-
-4. [Völkl RTM 81 Skis + iPT WR XL 12 TCX GW Bindings 2018 - Used](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)
+3. [Völkl RTM 81 Skis + iPT WR XL 12 TCX GW Bindings 2018 - Used](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)
    $269.97 was $899.00 (70.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 156 cm
+   Stock: In stock
+
+4. [Nordica Unleashed 98 Skis - Women's 2023](https://www.evo.com/products/224781-nordica-unleashed-98-skis-women-s-2023)
+   $219.99 was $699.99 (68.6% off) - Evo skis price ascending
+   Price trend: Same as prior day
+   Sizes: 162 cm
    Stock: In stock
 
 5. [2024 Dynastar Menace 80 - 158cm / Black/Yellow/Orange / New](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
