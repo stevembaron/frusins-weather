@@ -1606,6 +1606,16 @@ def sanitize_price_history(history: dict[str, Any]) -> None:
     if not isinstance(items, dict):
         return
 
+    stale_keys = [
+        key
+        for key, item in items.items()
+        if isinstance(item, dict)
+        and item.get("source") == "Geartrade Stio men's clothing"
+        and not is_stio_deal(item)
+    ]
+    for key in stale_keys:
+        del items[key]
+
     for item in items.values():
         if not isinstance(item, dict) or item.get("source") != "CampSaver backcountry skis":
             continue
@@ -1632,6 +1642,12 @@ def sanitize_price_history(history: dict[str, Any]) -> None:
         if prices:
             item["lowest_price"] = min(prices)
             item["highest_price"] = max(prices)
+
+
+def is_stio_deal(deal: Deal | dict[str, Any]) -> bool:
+    title = str(deal["title"] if isinstance(deal, dict) else deal.title)
+    url = str(deal["url"] if isinstance(deal, dict) else deal.url)
+    return bool(re.search(r"\bstio\b", title, re.I) or re.search(r"/products/stio-", url, re.I))
 
 
 def campsaver_has_suspicious_cached_price(item: dict[str, Any]) -> bool:
