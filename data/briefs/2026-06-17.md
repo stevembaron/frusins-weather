@@ -2,17 +2,16 @@
 
 ## Act now
 
-- **Stio Azura Insulated Jacket – Men's S — $65.52** (Geartrade): Second day. Watch term, right size, still sitting at its tracked 90-day low ($65.52–$83.33), 71% off $225.93. Consignment, no restock — buy now or let it go for good. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
-- **Nordica Santa Ana 92 Women's Demo 2026, 155cm — $339.99 at Evo** (listed at Utah for $399.99): Second mention. Watch term, family size, in stock. Utah's price is unchanged at its 90-day high; same ski is $60 cheaper at Evo. Buy at Evo, not Utah — last call before this drops off. [utahskis.com](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
-- **Stio Hylas Long Sleeve Crew – Men's M — $28.75** (Geartrade): First mention. Watch term, right size, sitting at its 90-day low ($28.75–$31.05), 58% off $68.45. Small dollar amount, genuine floor, consignment — low-risk buy.
+Nothing clears the bar today — no watch-term item is both fit-confirmed and at a genuine price low.
 
 ## Worth watching
 
-- **Dynastar Menace 80, 158cm (family) / 168cm (mine) — $150** (Lone Pine): Second mention. Watch term, both sizes fit, 65% off $430 — but flat at this price for nearly a month, so no fresh urgency. Buy if you want it at this price; demoted again next time either way.
-- **Stio Divide Half Zip – Men's S — $42.67** (Geartrade): Third and final mention. Watch term, right size, 52% off $88.90, consignment. Act now or it's off the brief.
-- **Rossignol Rallybird 94 Open, 156cm — $389.97** (Lone Pine): First mention. Watch term, family size, but only 44% off and unchanged since May 22 — no urgency signal. Trigger: drops to $350.
+- **2024 Rossignol Rallybird 102, 154cm (family) — $279.00** (Lone Pine): First mention. Watch term, family size fits, 67% off $849.95 — but unchanged since May 22 with no 90-day trend data to confirm this isn't just a high MSRP. Trigger: any further drop, or 90d range data showing it's a real floor.
+- **2025 Dynastar Women's M-Pro 92, 154cm (family) — $359.95** (Lone Pine): First mention. Watch term, family size fits, 49% off $699.95, but also flat since May 22 — same caveat as above. Trigger: price move or confirmed low.
+- **2025 Rossignol Rallybird 94 Open, 156cm (family) — $389.97** (Lone Pine): Second mention. Watch term, family size fits, still only 44% off and unchanged since May 22 — no fresh urgency. Trigger: drops to $350; final mention after this.
 
 ## Notes
 
 - CampSaver backcountry skis source blocked by an anti-bot page again today (recurring failure) — no data from that retailer.
-- Nordica Santa Ana 104 Free (172cm), Rossignol Rallybird Soul 92 Demo, both Elan Ripsticks, and the Stio Hagen/Ashton/Eddy Slope items have all exhausted their three mentions and roll off today, unchanged — still listed if you want to act independently.
+- Stio Hylas Long Sleeve Crew (Men's M, $28.75), flagged as a first-mention Act Now yesterday, is gone from today's scrape — sold or delisted fast.
+- Stio Azura Jacket, Stio Divide Half Zip, and Dynastar Menace 80 are all still listed unchanged but have exhausted their mention limit as of yesterday's brief — dropped here, still available if you want to act independently.
