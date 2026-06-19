@@ -2,19 +2,19 @@
 
 ## Act now
 
-- **Peak Skis Peak 98 by Dav 2025, 168cm — $314.99** (Evo, in stock): Second mention, still pinned to its 90-day low ($314.99–$349.97). 65% off a real $899 MSRP, exact size match. [evo.com](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
-- **Stio Azura Insulated Jacket, Men's S — $61.07** (Geartrade): Dropped $4.45 today to a new 90-day low (prior floor was $65.52). Watch term, exact size, 73% off a $226.19 MSRP — genuine fresh news after weeks flat. Consignment, no restock once gone. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
-- **Dynastar M-Pro 99 W 2022, 154cm (family) — $119.99** (Evo, in stock): Second mention. Watch term, family size, 83% off $699.95 — cheapest ski in today's scrape, unchanged for a month, so this reads as a clearance floor, not a flash discount. [evo.com](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
+- **Nordica Santa Ana 92 Women's Demo 2026, 155cm (family) — $339.99 at Evo** (vs. $399.99 at Utah Skis): Watch term, family fit. Evo's price beats Utah's own tracked 90-day low ($374.99–$399.99) — a real floor, not just a relisting. Buy at Evo; Utah's own listing is sitting at its high. [utahskis.com](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)
+- **Stio Azura Insulated Jacket, Men's S — $61.07** (Geartrade): Second mention, still pinned to its 90-day low ($61.07–$83.33). Watch term, exact size, 73% off a $226.19 MSRP. Final mention — consignment stock could vanish without warning. [geartrade.com](https://geartrade.com/products/stio-azura-insulated-jacket-mens-1652087)
 
 ## Worth watching
 
-- **Rossignol Rallybird Soul 92 Xp11 Demo 2026, 156/166cm (fits both family and you) — $424.99** (Utah Skis): Second mention, still at its 90-day high ($399.99–$424.99). Buy if it drops toward $400.
-- **Elan Ripstick 96 Demo 2026, 168cm — $399.99** (Utah Skis, in stock): Second mention, watch term, exact size — still no 90-day trend to confirm this is a real floor. Trigger: trend data or a further drop.
-- **2026 Elan Women's Ripstick 88, 154cm (family) — $329.99** (Lone Pine, new today): Watch term, family size, 53% off $699.95 — but brand-new listing with zero price history. Trigger: see if it holds or drops over the next few days.
-- **Stio Eddy Shirt LS Shirt, Men's S — $48.92** (Geartrade): Second mention, watch term, right size, 62% off — still no price history, consignment. Trigger: confirm it's not just intro pricing.
+- **Elan Women's Ripstick 88, 154cm (family) — $329.99** (Lone Pine): Second mention, watch term, family fit, still zero price history. Trigger: holds or drops further over the next few days.
+- **New Lone Pine Ripstick batch, 168cm (your size) — $379.99–$479.99** (Ripstick 96, Ripstick 100, Ripstick 102 Black Edition): All newly tracked today, watch term, exact size, but no trend data yet. Trigger: see which one holds once price history builds.
+- **Nordica Santa Ana 104 Free, 172cm (your size) — $359.99** (Evo, in stock): Watch term, exact fit, 58% off $849.99 — but no 90-day trend data to confirm this is a real low. Trigger: trend data or a further drop.
+- **Black Diamond Helio Carbon 104, 166/172cm (your size) — $399.00** (The Gear Room): 58% off $949.95, multiple sizes fit, but no price history. Trigger: confirm via trend data.
+- **Salomon Stance 88 Women's, 168cm (your size) — $249.99** (ERIK'S, in stock): 64% off $699.95, no history yet — a budget option if it proves to be a genuine floor. Trigger: trend data.
 
 ## Notes
 
 - CampSaver backcountry skis blocked by an anti-bot page again today (recurring failure) — no data from that retailer.
-- Lone Pine added a batch of new 2026 Elan Ripstick listings today (88/96/100/102 Black Edition) at 50–53% off; only the 154cm and 168cm sizes fit, and only the strongest is flagged above — treat the rest as unconfirmed until price history builds.
-- Stio Hylas Long Sleeve Crew ($28.75) and several other Stio pieces (Hagen, Ashton, Eddy Slope, Divide) have now hit their mention limit unchanged; still listed if you want to act independently, but dropped from today's brief. Same for Dynastar Menace 80, Rossignol Rallybird 102, and Dynastar M-Pro 92.
+- Utah Skis' entire demo lineup (Rallybird Soul, Ripstick 88/96/102, Mindbender, Arv, Mantra, and more) is sitting at the top of its own 90-day range today — none of those represent a real discount right now; skip until they actually drop.
+- Peak Skis Peak 98 ($314.99), Dynastar M-Pro 99W 154cm ($119.99), Dynastar M-Pro 92 154cm ($359.95), Rallybird 102/94 Open, and most Stio shirts (Hagen, Ashton, Eddy Slope, Eddy Shirt LS, Hylas, Divide) have all hit their mention limit unchanged — dropped from today's brief, still listed if you want to act independently.
