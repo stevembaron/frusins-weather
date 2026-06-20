@@ -2,19 +2,18 @@
 
 ## Act now
 
-Nothing clears the bar today — no watch-term item is both fit-confirmed and at a genuine price low.
+Nothing clears the bar today — every watch-term ski is either unconfirmed on price history, sitting at the top of its own range, or already past its mention limit.
 
 ## Worth watching
 
-- **Nordica Santa Ana 104 Free, 172cm (your size) — $359.99** (Evo, in stock): Second mention, watch term, exact fit, 58% off $849.99 — still no 90-day trend data to confirm a genuine low. Final mention unless trend data appears or it drops further.
-- **Lone Pine Ripstick batch, 168cm (your size) — $379.99–$479.99** (Ripstick 96, Ripstick 100, Ripstick 102 Black Edition): Second mention, watch term, exact fit, held steady since yesterday — still no price history. Trigger: confirmed low once 90-day data builds.
-- **Black Diamond Helio Carbon 104, 166/172cm (your size) — $399.00** (The Gear Room): Second mention, multiple sizes fit, 58% off $949.95 — still no trend data. Final mention unless a real low confirms.
-- **Salomon Stance 88 Women's, 168cm (your size) — $249.99** (ERIK'S, in stock): Second mention, 64% off $699.95, no history yet — a budget option if it holds. Trigger: trend data confirms a floor.
-- **Scott Pure Free 90 Ti, 154/160/168cm (fits both family and you) — $299.99** (The Gear Room): First mention. Not a watch-term brand, but fits broadly and is 60% off $750, unchanged for a month. Trigger: trend data or a further drop.
+- **Scott Pure Free 90 Ti Women's, 154/160/168cm (fits family and you) — $299.99** (The Gear Room): Second mention. Steady at this price for a month, 60% off $750 — reads as a real floor. Not a watch-term brand. Trigger: buy if it holds another week or drops further.
+- **Völkl RTM 81 + iPT bindings, 156cm (family), Used — $269.97** (Evo, in stock): First mention. 70% off $899, a ski+binding package, but no price history and used-gear MSRP comparisons tend to run inflated — treat the discount with some skepticism. Trigger: trend data confirms it's a real floor.
+- **Faction Prodigy 2, 171cm (your size) — $378.00** (The Gear Room): First mention. 44% off $679, held steady for a month, exact fit. Modest discount — worth it mainly for the size match, not the price. Trigger: a further drop or trend confirmation.
 
 ## Notes
 
 - CampSaver backcountry skis blocked by an anti-bot page again today (recurring failure) — no data from that retailer.
-- Stio Azura Insulated Jacket (Men's S, $61.07) was called "final mention" yesterday and is still listed unchanged — dropping it now per the mention limit.
-- Stio Objective Pro Ski Jacket, Men's M — newly tracked at $319.60 (60% off, watch term) — well over your $100 clothing cap, so skipping despite the brand match.
-- Utah Skis' demo lineup (Rallybird Soul, Mindbender, Mantra, and more) remains at the top of its own 90-day range — still no real discount there.
+- Dropping four items that hit the mention limit unchanged: Nordica Santa Ana 104 Free 172cm ($359.99), the Lone Pine Ripstick batch 168cm ($379.99–$479.99, that source never builds price history), Black Diamond Helio Carbon 104 ($399.00), and Salomon Stance 88 Women's 168cm ($249.99). All still listed if you want to act independently.
+- K2 Mindbender 90C W, 166cm (your size) at $239.99 looks tempting but is sitting at the top of its own 90-day range ($189.99 low) — skip despite the fit.
+- Stio shirts (Hagen, Ashton, Eddy Slope, Divide) remain at past-mention-limit prices, unchanged. Stio Objective Pro Ski Jacket (M, $319.60, watch term) is still well over your $100 clothing cap.
+- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board — still no real discount there.
