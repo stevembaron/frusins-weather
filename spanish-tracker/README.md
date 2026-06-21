@@ -19,6 +19,9 @@ The two courses:
 - **What-if calculator**: enter how many modules per week Molly can realistically do and it
   projects her finish date, then tells you whether she beats the goal (and what pace she'd
   need if not).
+- **Big goal countdown** front-and-center (days until the finish-by date), a **day-streak
+  counter** that rewards steady work, and a **confetti burst** when she checks off a Unit
+  Review.
 - **Withdrawal-deadline countdown** so the drop decision doesn't sneak up.
 - **Saves automatically** in the browser via `localStorage`. **Export / import** JSON to
   sync between a phone and a laptop.
