@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#b22234" />
-    <title>Spanish 2 Progress Tracker</title>
+    <title>Molly's Spanish 2 Progress Tracker</title>
     <style>
       :root {
         --red: #b22234;
@@ -160,7 +160,7 @@
   <body>
     <main>
       <header class="page-head">
-        <h1><span class="flag">🇪🇸</span>Spanish 2 Progress Tracker</h1>
+        <h1><span class="flag">🇪🇸</span>Molly's Spanish 2 Progress Tracker</h1>
         <p class="sub">BYU Independent Study · two courses, 30 modules · summer 2026</p>
       </header>
 
@@ -195,7 +195,7 @@
 
       <!-- SNAPSHOT -->
       <section class="card" aria-labelledby="snapHeading">
-        <h2 id="snapHeading">Where she stands</h2>
+        <h2 id="snapHeading">Where Molly stands</h2>
         <div class="stats" id="stats"></div>
         <div class="progress-wrap">
           <div class="progress-top">
@@ -213,7 +213,7 @@
 
       <!-- WHAT-IF CALCULATOR -->
       <section class="card" aria-labelledby="whatifHeading">
-        <h2 id="whatifHeading">What-if calculator <span class="hint">— how fast does she need to go?</span></h2>
+        <h2 id="whatifHeading">What-if calculator <span class="hint">— how fast does Molly need to go?</span></h2>
         <div class="whatif-row">
           <label for="paceInput">Modules per week:</label>
           <input type="number" id="paceInput" min="0.5" max="14" step="0.5" />
@@ -238,7 +238,7 @@
         </div>
         <p class="save-note">
           Progress saves automatically in this browser. It does <strong>not</strong> sync between
-          devices on its own — if she checks on her phone and you check on a laptop, use
+          devices on its own — if Molly checks on her phone and you check on a laptop, use
           <em>Export</em> on one and <em>Import</em> on the other to keep them in sync.
         </p>
       </section>
@@ -305,11 +305,11 @@
       const STATUS_LABEL = { none: "Not started", prog: "In progress", done: "Done" };
       const WEIGHT = { none: 0, prog: 0.5, done: 1 };
 
-      // ---------- Default state (reflects her current progress) ----------
+      // ---------- Default state (reflects Molly's current progress) ----------
       function defaultState() {
         const status = {};
         COURSES.forEach((c) => c.modules.forEach((_, i) => (status[c.id + "-" + i] = "none")));
-        // Part 1: Modules 1-5 done, Module 6 in progress (she's on Module 6, lesson 2)
+        // Part 1: Modules 1-5 done, Module 6 in progress (Molly's on Module 6, lesson 2)
         for (let i = 0; i < 5; i++) status["p1-" + i] = "done";
         status["p1-5"] = "prog";
         return {
@@ -472,7 +472,7 @@
         }
         if (daysLeft == null) {
           el.className = "banner warn";
-          el.innerHTML = "Set a finish-by date above to see the pace she needs.";
+          el.innerHTML = "Set a finish-by date above to see the pace Molly needs.";
           return;
         }
         if (daysLeft <= 0) {
@@ -490,7 +490,7 @@
           everyN && everyN <= 7
             ? ` — about <strong>one module every ${everyN === 1 ? "day" : everyN + " days"}</strong>`
             : "";
-        el.innerHTML = `To finish by <strong>${fmtShort(parseDate(state.targetDate))}</strong>, she needs to complete <strong>${round1(
+        el.innerHTML = `To finish by <strong>${fmtShort(parseDate(state.targetDate))}</strong>, Molly needs to complete <strong>${round1(
           t.remaining
         )} modules</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
       }
@@ -500,12 +500,12 @@
         const pace = Number(state.pace) || 0;
         if (t.remaining <= 0) {
           el.className = "projection good";
-          el.innerHTML = "Nothing left to schedule — she's finished this goal. 🎉";
+          el.innerHTML = "Nothing left to schedule — Molly's finished this goal. 🎉";
           return;
         }
         if (pace <= 0) {
           el.className = "projection";
-          el.textContent = "Enter how many modules she can realistically do each week.";
+          el.textContent = "Enter how many modules Molly can realistically do each week.";
           return;
         }
         const weeksNeeded = t.remaining / pace;
@@ -521,7 +521,7 @@
             const need = round1(t.remaining / Math.max(dayDiff(now, target) / 7, 0.1));
             verdict = ` ⚠️ That's <strong>${Math.abs(slack)} day${slack === -1 ? "" : "s"} past</strong> the ${fmtShort(
               target
-            )} goal. She'd need about <strong>${need}/week</strong> to make it.`;
+            )} goal. Molly would need about <strong>${need}/week</strong> to make it.`;
           }
         }
         let withdrawNote = "";
@@ -532,7 +532,7 @@
           )} — ${wd} day${wd === 1 ? "" : "s"} away.</span>`;
         }
         el.className = "projection " + cls;
-        el.innerHTML = `At <strong>${pace}/week</strong>, she'd finish the remaining <strong>${round1(
+        el.innerHTML = `At <strong>${pace}/week</strong>, Molly would finish the remaining <strong>${round1(
           t.remaining
         )} modules</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
       }
