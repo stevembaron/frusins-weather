@@ -37,6 +37,34 @@
       .page-head .sub { color: var(--muted); margin: 0; font-size: 0.98rem; }
       .flag { font-size: 1.5rem; margin-right: 6px; }
 
+      /* Hero: countdown + streak */
+      .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+      .hero-tile {
+        border-radius: 16px; padding: 18px 16px; text-align: center; color: #fff;
+        box-shadow: var(--shadow);
+      }
+      .hero-count { background: linear-gradient(135deg, #b22234, #d4515f); }
+      .hero-count.is-soon { background: linear-gradient(135deg, #8a1a28, #b22234); }
+      .hero-count.is-past { background: linear-gradient(135deg, #5b6470, #7b8593); }
+      .hero-streak { background: linear-gradient(135deg, #e08a00, #f0a500); }
+      .hero-streak.is-cold { background: linear-gradient(135deg, #8d94a0, #aab0ba); }
+      .hero-num { font-size: 2.6rem; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
+      .hero-num .fire { font-size: 1.7rem; margin-right: 4px; vertical-align: 4px; }
+      .hero-streak.is-cold .fire { filter: grayscale(1); opacity: 0.85; }
+      .hero-lbl { margin-top: 6px; font-size: 0.84rem; opacity: 0.95; font-weight: 600; }
+
+      /* Confetti */
+      .confetti-piece {
+        position: fixed; top: -16px; width: 9px; height: 14px; z-index: 9999;
+        will-change: transform, opacity; pointer-events: none; border-radius: 2px;
+        animation: confetti-fall linear forwards;
+      }
+      @keyframes confetti-fall {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(102vh) rotate(720deg); opacity: 0.9; }
+      }
+      @media (prefers-reduced-motion: reduce) { .confetti-piece { display: none; } }
+
       .card {
         background: var(--card);
         border: 1px solid var(--line);
@@ -163,6 +191,18 @@
         <h1><span class="flag">🇪🇸</span>Molly's Spanish 2 Progress Tracker</h1>
         <p class="sub">BYU Independent Study · two courses, 30 modules · summer 2026</p>
       </header>
+
+      <!-- HERO: COUNTDOWN + STREAK -->
+      <section class="hero" aria-label="Countdown and streak">
+        <div class="hero-tile hero-count">
+          <div class="hero-num" id="heroDays">—</div>
+          <div class="hero-lbl" id="heroDaysLbl">days to go</div>
+        </div>
+        <div class="hero-tile hero-streak">
+          <div class="hero-num"><span class="fire">🔥</span><span id="heroStreak">0</span></div>
+          <div class="hero-lbl" id="heroStreakLbl">day streak</div>
+        </div>
+      </section>
 
       <!-- KEY DATES -->
       <section class="card" aria-labelledby="datesHeading">
@@ -318,6 +358,7 @@
           targetDate: "2026-08-14",
           withdrawDate: "2026-07-29",
           pace: 3,
+          activeDates: {}, // { "YYYY-MM-DD": true } — days Molly moved a module forward
         };
       }
 
@@ -335,6 +376,7 @@
             targetDate: saved.targetDate || base.targetDate,
             withdrawDate: saved.withdrawDate || base.withdrawDate,
             pace: saved.pace != null ? saved.pace : base.pace,
+            activeDates: saved.activeDates || {},
           };
         } catch (e) {
           return defaultState();
@@ -371,6 +413,73 @@
       function plural(n, word) {
         const r = Math.round(n * 10) / 10;
         return r + " " + word + (r === 1 ? "" : "s");
+      }
+      function isoOf(date) {
+        return (
+          date.getFullYear() +
+          "-" +
+          String(date.getMonth() + 1).padStart(2, "0") +
+          "-" +
+          String(date.getDate()).padStart(2, "0")
+        );
+      }
+
+      // ---------- Activity & streak ----------
+      // Records that Molly made progress today (called when a module moves forward).
+      function recordActivity() {
+        state.activeDates[isoOf(today())] = true;
+      }
+      // Current streak = consecutive days with activity ending today (or yesterday, so an
+      // untouched-today doesn't drop it to zero). Best streak = longest run ever.
+      function streakInfo() {
+        const set = state.activeDates || {};
+        const has = (d) => !!set[isoOf(d)];
+        let cursor = today();
+        if (!has(cursor)) {
+          const y = addDays(cursor, -1);
+          if (has(y)) cursor = y;
+          else return { current: 0, best: bestStreak(set), activeToday: false };
+        }
+        let current = 0;
+        while (has(cursor)) {
+          current++;
+          cursor = addDays(cursor, -1);
+        }
+        return { current, best: Math.max(current, bestStreak(set)), activeToday: has(today()) };
+      }
+      function bestStreak(set) {
+        const days = Object.keys(set)
+          .sort()
+          .map((s) => parseDate(s).getTime());
+        let best = 0, run = 0, prev = null;
+        days.forEach((t) => {
+          if (prev != null && t - prev === 86400000) run++;
+          else run = 1;
+          best = Math.max(best, run);
+          prev = t;
+        });
+        return best;
+      }
+
+      // ---------- Milestones & confetti ----------
+      function isMilestone(name) {
+        return /unit \d+ review/i.test(name) || /course review/i.test(name) || /2b review/i.test(name);
+      }
+      function celebrate() {
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const colors = ["#b22234", "#f0a500", "#2e8b57", "#3a7bd5", "#d4515f", "#ffd166"];
+        for (let i = 0; i < 70; i++) {
+          const p = document.createElement("div");
+          p.className = "confetti-piece";
+          p.style.left = Math.random() * 100 + "vw";
+          p.style.background = colors[i % colors.length];
+          const dur = 2.4 + Math.random() * 1.6;
+          p.style.animationDuration = dur + "s";
+          p.style.animationDelay = Math.random() * 0.3 + "s";
+          p.style.transform = "scale(" + (0.7 + Math.random() * 0.9) + ")";
+          document.body.appendChild(p);
+          setTimeout(() => p.remove(), (dur + 0.4) * 1000);
+        }
       }
 
       // ---------- Scope ----------
@@ -410,6 +519,9 @@
         document.getElementById("targetDate").value = state.targetDate;
         document.getElementById("withdrawDate").value = state.withdrawDate;
         document.getElementById("paceInput").value = state.pace;
+
+        // Hero: countdown + streak
+        renderHero(daysLeft, target);
 
         document.getElementById("targetNote").textContent =
           daysLeft != null ? (daysLeft >= 0 ? daysLeft + " days from today" : Math.abs(daysLeft) + " days ago") : "";
@@ -461,6 +573,40 @@
 
       function round1(n) {
         return (Math.round(n * 10) / 10).toString();
+      }
+
+      function renderHero(daysLeft, target) {
+        // Countdown tile
+        const countEl = document.querySelector(".hero-count");
+        const numEl = document.getElementById("heroDays");
+        const lblEl = document.getElementById("heroDaysLbl");
+        countEl.classList.remove("is-soon", "is-past");
+        if (daysLeft == null) {
+          numEl.textContent = "—";
+          lblEl.textContent = "set a goal date";
+        } else if (daysLeft < 0) {
+          countEl.classList.add("is-past");
+          numEl.textContent = Math.abs(daysLeft);
+          lblEl.textContent = "days past " + fmtShort(target) + " goal";
+        } else {
+          if (daysLeft <= 14) countEl.classList.add("is-soon");
+          numEl.textContent = daysLeft;
+          lblEl.innerHTML = "day" + (daysLeft === 1 ? "" : "s") + " until " + fmtShort(target) + " goal";
+        }
+
+        // Streak tile
+        const s = streakInfo();
+        const streakEl = document.querySelector(".hero-streak");
+        document.getElementById("heroStreak").textContent = s.current;
+        const sLbl = document.getElementById("heroStreakLbl");
+        streakEl.classList.toggle("is-cold", s.current === 0);
+        if (s.current === 0) {
+          sLbl.textContent = "start a streak today!";
+        } else {
+          const bestTxt = s.best > s.current ? " · best " + s.best : "";
+          sLbl.innerHTML =
+            "day streak" + (s.activeToday ? "" : " · keep it alive today") + bestTxt;
+        }
       }
 
       function renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded) {
@@ -571,8 +717,21 @@
         if (!btn) return;
         const key = btn.dataset.key;
         const cur = state.status[key] || "none";
-        const next = STATUSES[(STATUSES.indexOf(cur) + 1) % STATUSES.length];
+        const curIdx = STATUSES.indexOf(cur);
+        const nextIdx = (curIdx + 1) % STATUSES.length;
+        const next = STATUSES[nextIdx];
         state.status[key] = next;
+
+        // Forward progress (to in-progress or done) counts toward the streak.
+        if (nextIdx > curIdx) recordActivity();
+
+        // Celebrate finishing a Unit Review or course review.
+        if (next === "done") {
+          const [cid, idx] = key.split("-");
+          const course = COURSES.find((c) => c.id === cid);
+          const name = course && course.modules[Number(idx)];
+          if (name && isMilestone(name)) celebrate();
+        }
         render();
       });
 
