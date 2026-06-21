@@ -15,6 +15,12 @@ The two courses:
   half-finished module counts as half.
 - **Live snapshot**: modules done, modules left, days to the goal date, and the pace
   (modules/week) Molly needs to keep.
+- **This week's plan**: turns the required pace into a concrete to-do list — the next action
+  ("Next up: Module 6 — Travel Plans"), a weekly target with progress, and the exact modules
+  to tackle (checkable right from the plan).
+- **On track? (real pace)**: as she checks modules off, it logs the date and projects her
+  finish from her *actual* pace, compares it to the goal, and flags a stall if nothing's been
+  completed in a week.
 - **Headline banner** that turns green / amber / red based on how demanding that pace is.
 - **What-if calculator**: enter how many modules per week Molly can realistically do and it
   projects her finish date, then tells you whether she beats the goal (and what pace she'd

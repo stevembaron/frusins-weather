@@ -65,6 +65,30 @@
       }
       @media (prefers-reduced-motion: reduce) { .confetti-piece { display: none; } }
 
+      /* This week plan */
+      .week-card { border-left: 5px solid var(--red); }
+      .card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+      .card-head h2 { margin: 0; }
+      .week-range { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+      .next-up {
+        background: #fff7ed; border: 1px solid #f3d9a8; border-radius: 10px;
+        padding: 11px 14px; margin: 12px 0; font-size: 1.02rem;
+      }
+      .next-up .tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--amber); font-weight: 700; display: block; margin-bottom: 2px; }
+      .next-up.done-state { background: var(--green-soft); border-color: #bfe3cd; }
+      .week-progress { font-size: 0.92rem; margin: 4px 0 12px; }
+      .week-progress .wbar { height: 10px; border-radius: 999px; background: #eee; overflow: hidden; margin-top: 6px; }
+      .week-progress .wbar > div { height: 100%; background: var(--green); transition: width 0.3s; }
+      .week-progress.on-target .wbar > div { background: var(--green); }
+      .plan-list { list-style: none; margin: 0; padding: 0; }
+      .plan-list li {
+        display: flex; align-items: center; gap: 11px; padding: 8px 2px; border-bottom: 1px solid var(--line);
+      }
+      .plan-list li:last-child { border-bottom: 0; }
+      .plan-list .p-course { font-size: 0.72rem; color: var(--muted); background: #f1f2f4; border-radius: 5px; padding: 2px 7px; flex-shrink: 0; }
+      .plan-list .p-name { flex: 1; }
+      .plan-empty { color: var(--green); font-weight: 600; padding: 6px 2px; }
+
       .card {
         background: var(--card);
         border: 1px solid var(--line);
@@ -233,6 +257,17 @@
       <!-- HEADLINE BANNER -->
       <div id="banner" class="banner" role="status" aria-live="polite"></div>
 
+      <!-- THIS WEEK PLAN -->
+      <section class="card week-card" id="weekCard" aria-labelledby="weekHeading">
+        <div class="card-head">
+          <h2 id="weekHeading">This week's plan</h2>
+          <span class="week-range" id="weekRange"></span>
+        </div>
+        <div class="next-up" id="nextUp"></div>
+        <div class="week-progress" id="weekProgress"></div>
+        <ul class="plan-list" id="planList"></ul>
+      </section>
+
       <!-- SNAPSHOT -->
       <section class="card" aria-labelledby="snapHeading">
         <h2 id="snapHeading">Where Molly stands</h2>
@@ -249,6 +284,12 @@
             <span class="l-none"><i></i>Not started</span>
           </div>
         </div>
+      </section>
+
+      <!-- REAL PACE / ON TRACK -->
+      <section class="card" aria-labelledby="paceHeading">
+        <h2 id="paceHeading">On track? <span class="hint">— based on her actual pace</span></h2>
+        <p class="projection" id="realPace"></p>
       </section>
 
       <!-- WHAT-IF CALCULATOR -->
@@ -359,6 +400,7 @@
           withdrawDate: "2026-07-29",
           pace: 3,
           activeDates: {}, // { "YYYY-MM-DD": true } — days Molly moved a module forward
+          doneDates: {}, // { "p1-2": "YYYY-MM-DD" } — when each module was marked done
         };
       }
 
@@ -377,6 +419,7 @@
             withdrawDate: saved.withdrawDate || base.withdrawDate,
             pace: saved.pace != null ? saved.pace : base.pace,
             activeDates: saved.activeDates || {},
+            doneDates: saved.doneDates || {},
           };
         } catch (e) {
           return defaultState();
@@ -489,6 +532,53 @@
         return COURSES;
       }
 
+      // ---------- Week + real pace ----------
+      // Current Sun–Sat week containing today.
+      function currentWeek() {
+        const t = today();
+        const dow = t.getDay(); // 0 = Sunday
+        const weekStart = addDays(t, -dow);
+        return { weekStart, weekEnd: addDays(weekStart, 6) };
+      }
+      // Real pace from logged completion dates (only modules finished while using the app).
+      function realPaceInfo() {
+        const dates = Object.values(state.doneDates || {}).sort();
+        if (!dates.length) return { completions: 0, perWeek: null };
+        const first = parseDate(dates[0]);
+        const last = parseDate(dates[dates.length - 1]);
+        const spanDays = dayDiff(first, today());
+        const weeksElapsed = Math.max(spanDays / 7, 1); // floor at 1 week so early bursts don't explode
+        return {
+          completions: dates.length,
+          first,
+          last,
+          perWeek: dates.length / weeksElapsed,
+          daysSinceLast: dayDiff(last, today()),
+        };
+      }
+      // The list of not-done modules in scope order, and this week's target/progress.
+      function weekPlan(scope, t, daysLeft) {
+        const list = [];
+        scope.forEach((c) =>
+          c.modules.forEach((name, i) => {
+            const key = c.id + "-" + i;
+            const s = state.status[key] || "none";
+            if (s !== "done") list.push({ key, name, course: c, status: s, idx: i });
+          })
+        );
+        let weeklyTarget;
+        if (t.remaining <= 0) weeklyTarget = 0;
+        else if (daysLeft != null && daysLeft > 0) weeklyTarget = Math.max(1, Math.ceil(t.remaining / (daysLeft / 7)));
+        else weeklyTarget = Math.min(3, list.length); // no/passed date: gentle default
+        const { weekStart, weekEnd } = currentWeek();
+        const doneThisWeek = Object.values(state.doneDates || {}).filter((d) => {
+          const dt = parseDate(d);
+          return dt >= weekStart && dt <= weekEnd;
+        }).length;
+        const toGo = Math.max(0, weeklyTarget - doneThisWeek);
+        return { weeklyTarget, doneThisWeek, toGo, planned: list.slice(0, toGo), nextUp: list[0], weekEnd, listLen: list.length };
+      }
+
       // ---------- Totals ----------
       function tally(courses) {
         let total = 0, done = 0, prog = 0, weighted = 0;
@@ -562,6 +652,12 @@
         // Banner
         renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded);
 
+        // This week's plan
+        renderWeekPlan(scope, t, daysLeft);
+
+        // On track? (real pace projection)
+        renderRealPace(t, now, target);
+
         // What-if projection
         renderProjection(t, now, target, withdraw);
 
@@ -607,6 +703,101 @@
           sLbl.innerHTML =
             "day streak" + (s.activeToday ? "" : " · keep it alive today") + bestTxt;
         }
+      }
+
+      function planStatusBtn(item) {
+        return `<button class="status-btn s-${item.status}" data-key="${item.key}" aria-label="${item.name}: ${STATUS_LABEL[item.status]}. Click to change."><span class="dot"></span>${STATUS_LABEL[item.status]}</button>`;
+      }
+
+      function renderWeekPlan(scope, t, daysLeft) {
+        const range = document.getElementById("weekRange");
+        const nextEl = document.getElementById("nextUp");
+        const progEl = document.getElementById("weekProgress");
+        const listEl = document.getElementById("planList");
+        const p = weekPlan(scope, t, daysLeft);
+
+        if (t.remaining <= 0) {
+          range.textContent = "";
+          nextEl.className = "next-up done-state";
+          nextEl.innerHTML = "🎉 <strong>Everything in this goal is finished.</strong> Nothing left to plan!";
+          progEl.innerHTML = "";
+          listEl.innerHTML = "";
+          return;
+        }
+
+        range.textContent =
+          "through " + p.weekEnd.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+
+        // Next action
+        if (p.nextUp) {
+          nextEl.className = "next-up";
+          nextEl.innerHTML =
+            `<span class="tag">Next up</span><strong>${p.nextUp.course.code} · Module ${p.nextUp.idx + 1}</strong> — ${p.nextUp.name}`;
+        } else {
+          nextEl.className = "next-up done-state";
+          nextEl.innerHTML = "Nothing left — great work!";
+        }
+
+        // Weekly target + progress
+        const onTarget = p.toGo === 0 && p.weeklyTarget > 0;
+        const pct = p.weeklyTarget ? Math.min(100, (p.doneThisWeek / p.weeklyTarget) * 100) : 0;
+        progEl.className = "week-progress" + (onTarget ? " on-target" : "");
+        progEl.innerHTML =
+          `<strong>Goal this week: ${p.weeklyTarget} module${p.weeklyTarget === 1 ? "" : "s"}</strong> · done ${p.doneThisWeek} of ${p.weeklyTarget}` +
+          `<div class="wbar"><div style="width:${pct}%"></div></div>`;
+
+        // To-do list
+        if (onTarget) {
+          listEl.innerHTML = `<li class="plan-empty">✅ This week's goal is met — anything more puts her ahead of schedule. Next up is queued above.</li>`;
+        } else {
+          listEl.innerHTML = p.planned
+            .map(
+              (m) =>
+                `<li><span class="p-course">${m.course.code.replace("SPAN-", "")}</span><span class="p-name">Module ${m.idx + 1} — ${m.name}</span>${planStatusBtn(m)}</li>`
+            )
+            .join("");
+        }
+      }
+
+      function renderRealPace(t, now, target) {
+        const el = document.getElementById("realPace");
+        const rp = realPaceInfo();
+        if (t.remaining <= 0) {
+          el.className = "projection good";
+          el.innerHTML = "She's finished this goal — nothing left to project. 🎉";
+          return;
+        }
+        if (!rp.completions) {
+          el.className = "projection";
+          el.innerHTML =
+            "As Molly checks off modules here, this will track her <strong>real pace</strong> and project a finish date. Mark a couple done to get started.";
+          return;
+        }
+        // Stalled?
+        if (rp.daysSinceLast >= 7) {
+          el.className = "projection bad";
+          el.innerHTML = `⚠️ <strong>No modules completed in ${rp.daysSinceLast} days.</strong> Time to jump back in — see this week's plan above.`;
+          return;
+        }
+        const perWeek = rp.perWeek;
+        const finish = addDays(now, Math.ceil((t.remaining / perWeek) * 7));
+        let cls = "good", verdict = "";
+        if (target) {
+          const slack = dayDiff(finish, target);
+          if (slack >= 0) {
+            cls = "good";
+            verdict = ` ✅ On her current pace that's <strong>${slack} day${slack === 1 ? "" : "s"} before</strong> the ${fmtShort(target)} goal.`;
+          } else {
+            cls = "bad";
+            verdict = ` ⚠️ That's <strong>${Math.abs(slack)} day${slack === -1 ? "" : "s"} past</strong> the ${fmtShort(target)} goal — she'll need to pick up the pace.`;
+          }
+        }
+        el.className = "projection " + cls;
+        el.innerHTML = `Molly has completed <strong>${rp.completions} module${rp.completions === 1 ? "" : "s"}</strong> since ${fmtShort(
+          rp.first
+        )} — about <strong>${round1(perWeek)}/week</strong>. At that rate she'd finish the remaining <strong>${round1(
+          t.remaining
+        )}</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}`;
       }
 
       function renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded) {
@@ -724,6 +915,10 @@
 
         // Forward progress (to in-progress or done) counts toward the streak.
         if (nextIdx > curIdx) recordActivity();
+
+        // Log / unlog the completion date (drives the real-pace projection).
+        if (next === "done") state.doneDates[key] = isoOf(today());
+        else if (cur === "done") delete state.doneDates[key];
 
         // Celebrate finishing a Unit Review or course review.
         if (next === "done") {
