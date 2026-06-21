@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b22234" />
+    <title>Molly's Spanish 2 Progress Tracker</title>
+    <style>
+      :root {
+        --red: #b22234;
+        --red-dark: #8a1a28;
+        --gold: #f0a500;
+        --green: #2e8b57;
+        --green-soft: #e6f4ec;
+        --amber: #c97a00;
+        --amber-soft: #fdf3e0;
+        --rose-soft: #fdeaec;
+        --ink: #20242b;
+        --muted: #6b7280;
+        --line: #e6e8ec;
+        --bg: #faf7f2;
+        --card: #ffffff;
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      main { max-width: 880px; margin: 0 auto; padding: 20px 16px 64px; }
+      .page-head { text-align: center; margin: 8px 0 22px; }
+      .page-head h1 { margin: 0 0 4px; font-size: 1.7rem; letter-spacing: -0.01em; }
+      .page-head .sub { color: var(--muted); margin: 0; font-size: 0.98rem; }
+      .flag { font-size: 1.5rem; margin-right: 6px; }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+      }
+      .card h2 { margin: 0 0 14px; font-size: 1.12rem; }
+      .card h2 .hint { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
+
+      /* Dates row */
+      .dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .field { display: flex; flex-direction: column; gap: 5px; }
+      .field label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+      .field input, .field select {
+        font: inherit; padding: 9px 10px; border: 1px solid var(--line);
+        border-radius: 9px; background: #fff; color: var(--ink);
+      }
+      .field input:focus, .field select:focus { outline: 2px solid var(--red); outline-offset: 1px; }
+      .field .note { font-size: 0.74rem; color: var(--muted); }
+
+      /* Headline status banner */
+      .banner {
+        border-radius: 12px; padding: 14px 16px; margin-bottom: 16px;
+        font-size: 1.02rem; border: 1px solid transparent;
+      }
+      .banner strong { font-weight: 700; }
+      .banner.good { background: var(--green-soft); border-color: #bfe3cd; color: #1c5e3a; }
+      .banner.warn { background: var(--amber-soft); border-color: #f3d9a8; color: #8a5400; }
+      .banner.bad  { background: var(--rose-soft); border-color: #f2c2c8; color: #92202c; }
+
+      /* Stat cards */
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 4px; }
+      .stat { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; text-align: center; }
+      .stat .num { font-size: 1.55rem; font-weight: 750; line-height: 1.1; }
+      .stat .lbl { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; margin-top: 3px; }
+      .stat.accent .num { color: var(--red); }
+
+      /* Progress bar */
+      .progress-wrap { margin: 6px 0 2px; }
+      .progress-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; font-size: 0.9rem; }
+      .progress-top .pct { font-weight: 700; }
+      .bar { height: 16px; border-radius: 999px; background: #eee; overflow: hidden; display: flex; }
+      .bar .done { background: var(--green); height: 100%; transition: width 0.3s; }
+      .bar .prog { background: var(--gold); height: 100%; transition: width 0.3s; }
+      .legend { display: flex; gap: 16px; font-size: 0.78rem; color: var(--muted); margin-top: 8px; flex-wrap: wrap; }
+      .legend i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+      .legend .l-done i { background: var(--green); }
+      .legend .l-prog i { background: var(--gold); }
+      .legend .l-none i { background: #d8dadf; }
+
+      /* What-if */
+      .whatif-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      .whatif-row label { font-weight: 600; }
+      .whatif-row input[type="number"] { width: 84px; font: inherit; padding: 9px 10px; border: 1px solid var(--line); border-radius: 9px; }
+      .presets { display: flex; gap: 6px; }
+      .presets button {
+        font: inherit; padding: 7px 12px; border: 1px solid var(--line); background: #fff;
+        border-radius: 999px; cursor: pointer; color: var(--ink);
+      }
+      .presets button:hover { border-color: var(--red); color: var(--red); }
+      .presets button.active { background: var(--red); border-color: var(--red); color: #fff; }
+      .projection { margin: 14px 0 0; padding: 12px 14px; border-radius: 10px; background: #f6f7f9; font-size: 0.98rem; }
+      .projection.good { background: var(--green-soft); }
+      .projection.warn { background: var(--amber-soft); }
+      .projection.bad { background: var(--rose-soft); }
+
+      /* Course panels */
+      .course-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+      .course-head h2 { margin: 0; }
+      .course-head a { color: var(--red); text-decoration: none; font-size: 0.82rem; font-weight: 600; }
+      .course-head a:hover { text-decoration: underline; }
+      .course-count { font-size: 0.85rem; color: var(--muted); font-weight: 600; }
+      .mini-bar { height: 8px; border-radius: 999px; background: #eee; overflow: hidden; display: flex; margin: 10px 0 14px; }
+      .mini-bar .done { background: var(--green); }
+      .mini-bar .prog { background: var(--gold); }
+
+      .modules { list-style: none; margin: 0; padding: 0; }
+      .module {
+        display: flex; align-items: center; gap: 12px; padding: 9px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+      .module:last-child { border-bottom: 0; }
+      .module .idx { color: var(--muted); font-size: 0.82rem; width: 22px; flex-shrink: 0; text-align: right; }
+      .module .name { flex: 1; }
+      .module.is-done .name { color: var(--muted); }
+      .status-btn {
+        font: inherit; cursor: pointer; border: 1px solid var(--line); background: #fff;
+        border-radius: 999px; padding: 6px 13px 6px 11px; min-width: 132px; text-align: left;
+        display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; transition: all 0.12s;
+      }
+      .status-btn .dot { width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0; border: 2px solid #cfd2d8; }
+      .status-btn.s-none { color: var(--muted); }
+      .status-btn.s-prog { background: var(--amber-soft); border-color: #f0d49a; color: var(--amber); }
+      .status-btn.s-prog .dot { background: var(--gold); border-color: var(--gold); }
+      .status-btn.s-done { background: var(--green-soft); border-color: #bfe3cd; color: #1c5e3a; font-weight: 600; }
+      .status-btn.s-done .dot { background: var(--green); border-color: var(--green); }
+      .status-btn:hover { border-color: var(--red); }
+
+      /* Footer / settings */
+      .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      .tools button {
+        font: inherit; padding: 8px 14px; border-radius: 9px; border: 1px solid var(--line);
+        background: #fff; cursor: pointer; color: var(--ink);
+      }
+      .tools button:hover { border-color: var(--red); color: var(--red); }
+      .tools .danger:hover { border-color: var(--red); color: var(--red); }
+      .save-note { color: var(--muted); font-size: 0.8rem; margin: 10px 0 0; }
+      footer { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 8px; }
+      footer a { color: var(--muted); }
+
+      @media (max-width: 620px) {
+        .dates { grid-template-columns: 1fr; }
+        .stats { grid-template-columns: repeat(2, 1fr); }
+        .status-btn { min-width: 124px; }
+        .module .name { font-size: 0.95rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="page-head">
+        <h1><span class="flag">🇪🇸</span>Molly's Spanish 2 Progress Tracker</h1>
+        <p class="sub">BYU Independent Study · two courses, 30 modules · summer 2026</p>
+      </header>
+
+      <!-- KEY DATES -->
+      <section class="card" aria-labelledby="datesHeading">
+        <h2 id="datesHeading">Key dates &amp; goal</h2>
+        <div class="dates">
+          <div class="field">
+            <label for="goalSelect">What needs to be done?</label>
+            <select id="goalSelect">
+              <option value="both">Both courses (Part 1 + Part 2)</option>
+              <option value="p1">Part 1 only (SPAN 2A)</option>
+              <option value="p2">Part 2 only (SPAN 2B)</option>
+            </select>
+            <span class="note">Pace below is calculated for this scope.</span>
+          </div>
+          <div class="field">
+            <label for="targetDate">Finish-by date (goal)</label>
+            <input type="date" id="targetDate" />
+            <span class="note" id="targetNote"></span>
+          </div>
+          <div class="field">
+            <label for="withdrawDate">Withdrawal deadline</label>
+            <input type="date" id="withdrawDate" />
+            <span class="note" id="withdrawNote"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- HEADLINE BANNER -->
+      <div id="banner" class="banner" role="status" aria-live="polite"></div>
+
+      <!-- SNAPSHOT -->
+      <section class="card" aria-labelledby="snapHeading">
+        <h2 id="snapHeading">Where Molly stands</h2>
+        <div class="stats" id="stats"></div>
+        <div class="progress-wrap">
+          <div class="progress-top">
+            <span id="progLabel">Overall progress</span>
+            <span class="pct" id="progPct"></span>
+          </div>
+          <div class="bar"><div class="done" id="barDone"></div><div class="prog" id="barProg"></div></div>
+          <div class="legend">
+            <span class="l-done"><i></i>Done</span>
+            <span class="l-prog"><i></i>In progress (counts as ½)</span>
+            <span class="l-none"><i></i>Not started</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT-IF CALCULATOR -->
+      <section class="card" aria-labelledby="whatifHeading">
+        <h2 id="whatifHeading">What-if calculator <span class="hint">— how fast does Molly need to go?</span></h2>
+        <div class="whatif-row">
+          <label for="paceInput">Modules per week:</label>
+          <input type="number" id="paceInput" min="0.5" max="14" step="0.5" />
+          <div class="presets" id="presets"></div>
+        </div>
+        <p class="projection" id="projection"></p>
+      </section>
+
+      <!-- COURSE 1 -->
+      <section class="card" id="course-p1"></section>
+      <!-- COURSE 2 -->
+      <section class="card" id="course-p2"></section>
+
+      <!-- TOOLS -->
+      <section class="card" aria-labelledby="toolsHeading">
+        <h2 id="toolsHeading">Save &amp; backup</h2>
+        <div class="tools">
+          <button id="exportBtn">⬇ Export progress</button>
+          <button id="importBtn">⬆ Import progress</button>
+          <input type="file" id="importFile" accept="application/json" hidden />
+          <button id="resetBtn" class="danger">↺ Reset to starting point</button>
+        </div>
+        <p class="save-note">
+          Progress saves automatically in this browser. It does <strong>not</strong> sync between
+          devices on its own — if Molly checks on her phone and you check on a laptop, use
+          <em>Export</em> on one and <em>Import</em> on the other to keep them in sync.
+        </p>
+      </section>
+
+      <footer>
+        Tap a module's status button to cycle: not started → in progress → done.
+        Built for tracking BYU Independent Study Spanish 2.
+      </footer>
+    </main>
+
+    <script>
+      // ---------- Course data ----------
+      const COURSES = [
+        {
+          id: "p1",
+          name: "Part 1 · SPAN 2A",
+          code: "SPAN-051",
+          url: "https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291",
+          modules: [
+            "1st Year Spanish, Part 1 Review",
+            "1st Year Spanish, Part 2 Review",
+            "Past Events",
+            "Past Events 2",
+            "Unit 1 Review",
+            "Travel Plans",
+            "Transportation",
+            "Unit 2 Review",
+            "Plan a Vacation",
+            "Going On Vacation",
+            "Unit 3 Review",
+            "Plan a Holiday",
+            "Participate in a Holiday",
+            "Unit 4 Review",
+            "Course Review",
+          ],
+        },
+        {
+          id: "p2",
+          name: "Part 2 · SPAN 2B",
+          code: "SPAN-043",
+          url: "https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394",
+          modules: [
+            "Review",
+            "Biography",
+            "Celebrities",
+            "Unit 1 Review",
+            "Novels",
+            "Media",
+            "Unit 2 Review",
+            "Body",
+            "Healthcare",
+            "Health",
+            "Unit 3 Review",
+            "Childhood",
+            "Telling Stories",
+            "Unit 4 Review",
+            "SPAN 2B Review",
+          ],
+        },
+      ];
+
+      const STORAGE_KEY = "spanish-tracker-v1";
+      const STATUSES = ["none", "prog", "done"];
+      const STATUS_LABEL = { none: "Not started", prog: "In progress", done: "Done" };
+      const WEIGHT = { none: 0, prog: 0.5, done: 1 };
+
+      // ---------- Default state (reflects Molly's current progress) ----------
+      function defaultState() {
+        const status = {};
+        COURSES.forEach((c) => c.modules.forEach((_, i) => (status[c.id + "-" + i] = "none")));
+        // Part 1: Modules 1-5 done, Module 6 in progress (Molly's on Module 6, lesson 2)
+        for (let i = 0; i < 5; i++) status["p1-" + i] = "done";
+        status["p1-5"] = "prog";
+        return {
+          status,
+          goal: "both",
+          targetDate: "2026-08-14",
+          withdrawDate: "2026-07-29",
+          pace: 3,
+        };
+      }
+
+      // ---------- State load/save ----------
+      let state = loadState();
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return defaultState();
+          const saved = JSON.parse(raw);
+          const base = defaultState();
+          return {
+            status: Object.assign(base.status, saved.status || {}),
+            goal: saved.goal || base.goal,
+            targetDate: saved.targetDate || base.targetDate,
+            withdrawDate: saved.withdrawDate || base.withdrawDate,
+            pace: saved.pace != null ? saved.pace : base.pace,
+          };
+        } catch (e) {
+          return defaultState();
+        }
+      }
+      function save() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+
+      // ---------- Date helpers ----------
+      function today() {
+        const d = new Date();
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+      }
+      function parseDate(s) {
+        if (!s) return null;
+        const [y, m, d] = s.split("-").map(Number);
+        return new Date(y, m - 1, d);
+      }
+      function dayDiff(a, b) {
+        return Math.round((b - a) / 86400000);
+      }
+      function addDays(date, n) {
+        const d = new Date(date);
+        d.setDate(d.getDate() + n);
+        return d;
+      }
+      function fmtDate(d) {
+        return d.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+      }
+      function fmtShort(d) {
+        return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+      }
+      function plural(n, word) {
+        const r = Math.round(n * 10) / 10;
+        return r + " " + word + (r === 1 ? "" : "s");
+      }
+
+      // ---------- Scope ----------
+      function coursesInScope() {
+        if (state.goal === "p1") return COURSES.filter((c) => c.id === "p1");
+        if (state.goal === "p2") return COURSES.filter((c) => c.id === "p2");
+        return COURSES;
+      }
+
+      // ---------- Totals ----------
+      function tally(courses) {
+        let total = 0, done = 0, prog = 0, weighted = 0;
+        courses.forEach((c) => {
+          c.modules.forEach((_, i) => {
+            total++;
+            const s = state.status[c.id + "-" + i] || "none";
+            if (s === "done") done++;
+            if (s === "prog") prog++;
+            weighted += WEIGHT[s];
+          });
+        });
+        return { total, done, prog, weighted, remaining: total - weighted };
+      }
+
+      // ---------- Render ----------
+      function render() {
+        const scope = coursesInScope();
+        const t = tally(scope);
+        const now = today();
+        const target = parseDate(state.targetDate);
+        const withdraw = parseDate(state.withdrawDate);
+        const daysLeft = target ? dayDiff(now, target) : null;
+        const weeksLeft = daysLeft != null ? daysLeft / 7 : null;
+
+        // Sync date/goal inputs
+        document.getElementById("goalSelect").value = state.goal;
+        document.getElementById("targetDate").value = state.targetDate;
+        document.getElementById("withdrawDate").value = state.withdrawDate;
+        document.getElementById("paceInput").value = state.pace;
+
+        document.getElementById("targetNote").textContent =
+          daysLeft != null ? (daysLeft >= 0 ? daysLeft + " days from today" : Math.abs(daysLeft) + " days ago") : "";
+        if (withdraw) {
+          const wd = dayDiff(now, withdraw);
+          document.getElementById("withdrawNote").textContent =
+            wd >= 0 ? "Decide before this · " + wd + " days left" : "Passed " + Math.abs(wd) + " days ago";
+        }
+
+        // Pace needed
+        const perWeekNeeded = weeksLeft && weeksLeft > 0 ? t.remaining / weeksLeft : null;
+        const perDayNeeded = daysLeft && daysLeft > 0 ? t.remaining / daysLeft : null;
+
+        // Stat cards
+        const stats = [
+          { num: t.done + (t.prog ? " + " + t.prog + "½" : ""), lbl: "Modules done", accent: false },
+          { num: round1(t.remaining), lbl: "Modules left", accent: true },
+          { num: daysLeft != null ? Math.max(daysLeft, 0) : "—", lbl: "Days to goal", accent: false },
+          {
+            num: t.remaining <= 0 ? "0" : perWeekNeeded ? round1(perWeekNeeded) : "—",
+            lbl: "Need / week",
+            accent: true,
+          },
+        ];
+        document.getElementById("stats").innerHTML = stats
+          .map((s) => `<div class="stat ${s.accent ? "accent" : ""}"><div class="num">${s.num}</div><div class="lbl">${s.lbl}</div></div>`)
+          .join("");
+
+        // Progress bar
+        const pctDone = t.total ? (t.done / t.total) * 100 : 0;
+        const pctProg = t.total ? (t.prog / t.total) * 100 : 0;
+        document.getElementById("barDone").style.width = pctDone + "%";
+        document.getElementById("barProg").style.width = pctProg + "%";
+        document.getElementById("progPct").textContent = Math.round(((t.weighted) / t.total) * 100) + "% complete";
+        document.getElementById("progLabel").textContent =
+          "Overall progress (" + (state.goal === "both" ? "both courses" : state.goal === "p1" ? "Part 1" : "Part 2") + ")";
+
+        // Banner
+        renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded);
+
+        // What-if projection
+        renderProjection(t, now, target, withdraw);
+
+        // Course panels
+        COURSES.forEach((c) => renderCourse(c));
+
+        save();
+      }
+
+      function round1(n) {
+        return (Math.round(n * 10) / 10).toString();
+      }
+
+      function renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded) {
+        const el = document.getElementById("banner");
+        if (t.remaining <= 0) {
+          el.className = "banner good";
+          el.innerHTML = "🎉 <strong>All done!</strong> Every module in this goal is complete. ¡Felicidades!";
+          return;
+        }
+        if (daysLeft == null) {
+          el.className = "banner warn";
+          el.innerHTML = "Set a finish-by date above to see the pace Molly needs.";
+          return;
+        }
+        if (daysLeft <= 0) {
+          el.className = "banner bad";
+          el.innerHTML = `⚠️ The goal date has passed with <strong>${round1(t.remaining)} modules</strong> still to go.`;
+          return;
+        }
+        const perWeek = round1(perWeekNeeded);
+        const everyN = perDayNeeded ? Math.max(1, Math.round(1 / perDayNeeded)) : null;
+        let cls = "good";
+        if (perWeekNeeded > 5) cls = "bad";
+        else if (perWeekNeeded > 3) cls = "warn";
+        el.className = "banner " + cls;
+        const cadence =
+          everyN && everyN <= 7
+            ? ` — about <strong>one module every ${everyN === 1 ? "day" : everyN + " days"}</strong>`
+            : "";
+        el.innerHTML = `To finish by <strong>${fmtShort(parseDate(state.targetDate))}</strong>, Molly needs to complete <strong>${round1(
+          t.remaining
+        )} modules</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
+      }
+
+      function renderProjection(t, now, target, withdraw) {
+        const el = document.getElementById("projection");
+        const pace = Number(state.pace) || 0;
+        if (t.remaining <= 0) {
+          el.className = "projection good";
+          el.innerHTML = "Nothing left to schedule — Molly's finished this goal. 🎉";
+          return;
+        }
+        if (pace <= 0) {
+          el.className = "projection";
+          el.textContent = "Enter how many modules Molly can realistically do each week.";
+          return;
+        }
+        const weeksNeeded = t.remaining / pace;
+        const finish = addDays(now, Math.ceil(weeksNeeded * 7));
+        let cls = "good", verdict = "";
+        if (target) {
+          const slack = dayDiff(finish, target);
+          if (slack >= 0) {
+            cls = "good";
+            verdict = ` ✅ That finishes <strong>${slack} day${slack === 1 ? "" : "s"}</strong> before the ${fmtShort(target)} goal.`;
+          } else {
+            cls = "bad";
+            const need = round1(t.remaining / Math.max(dayDiff(now, target) / 7, 0.1));
+            verdict = ` ⚠️ That's <strong>${Math.abs(slack)} day${slack === -1 ? "" : "s"} past</strong> the ${fmtShort(
+              target
+            )} goal. Molly would need about <strong>${need}/week</strong> to make it.`;
+          }
+        }
+        let withdrawNote = "";
+        if (withdraw) {
+          const wd = dayDiff(now, withdraw);
+          if (wd >= 0) withdrawNote = `<br><span style="color:var(--muted);font-size:0.88rem">Withdrawal deadline is ${fmtShort(
+            withdraw
+          )} — ${wd} day${wd === 1 ? "" : "s"} away.</span>`;
+        }
+        el.className = "projection " + cls;
+        el.innerHTML = `At <strong>${pace}/week</strong>, Molly would finish the remaining <strong>${round1(
+          t.remaining
+        )} modules</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
+      }
+
+      function renderCourse(course) {
+        const el = document.getElementById("course-" + course.id);
+        const tc = tally([course]);
+        const pctDone = (tc.done / tc.total) * 100;
+        const pctProg = (tc.prog / tc.total) * 100;
+        const rows = course.modules
+          .map((name, i) => {
+            const key = course.id + "-" + i;
+            const s = state.status[key] || "none";
+            return `<li class="module ${s === "done" ? "is-done" : ""}">
+              <span class="idx">${i + 1}</span>
+              <span class="name">${name}</span>
+              <button class="status-btn s-${s}" data-key="${key}" aria-label="${name}: ${STATUS_LABEL[s]}. Click to change.">
+                <span class="dot"></span>${STATUS_LABEL[s]}
+              </button>
+            </li>`;
+          })
+          .join("");
+        el.innerHTML = `
+          <div class="course-head">
+            <h2>${course.name}</h2>
+            <a href="${course.url}" target="_blank" rel="noopener">Open ${course.code} ↗</a>
+          </div>
+          <div class="course-count">${tc.done} of ${tc.total} modules done${tc.prog ? " · " + tc.prog + " in progress" : ""}</div>
+          <div class="mini-bar"><div class="done" style="width:${pctDone}%"></div><div class="prog" style="width:${pctProg}%"></div></div>
+          <ul class="modules">${rows}</ul>`;
+      }
+
+      // ---------- Events ----------
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest(".status-btn");
+        if (!btn) return;
+        const key = btn.dataset.key;
+        const cur = state.status[key] || "none";
+        const next = STATUSES[(STATUSES.indexOf(cur) + 1) % STATUSES.length];
+        state.status[key] = next;
+        render();
+      });
+
+      document.getElementById("goalSelect").addEventListener("change", (e) => {
+        state.goal = e.target.value;
+        render();
+      });
+      document.getElementById("targetDate").addEventListener("change", (e) => {
+        state.targetDate = e.target.value;
+        render();
+      });
+      document.getElementById("withdrawDate").addEventListener("change", (e) => {
+        state.withdrawDate = e.target.value;
+        render();
+      });
+      document.getElementById("paceInput").addEventListener("input", (e) => {
+        state.pace = Number(e.target.value);
+        renderPresetsActive();
+        renderProjection(tally(coursesInScope()), today(), parseDate(state.targetDate), parseDate(state.withdrawDate));
+        save();
+      });
+
+      // Pace presets
+      const PRESETS = [2, 3, 4, 5];
+      function renderPresets() {
+        document.getElementById("presets").innerHTML = PRESETS.map(
+          (p) => `<button data-pace="${p}">${p}/wk</button>`
+        ).join("");
+        document.querySelectorAll("#presets button").forEach((b) =>
+          b.addEventListener("click", () => {
+            state.pace = Number(b.dataset.pace);
+            render();
+          })
+        );
+      }
+      function renderPresetsActive() {
+        document.querySelectorAll("#presets button").forEach((b) =>
+          b.classList.toggle("active", Number(b.dataset.pace) === Number(state.pace))
+        );
+      }
+
+      // Export / import / reset
+      document.getElementById("exportBtn").addEventListener("click", () => {
+        const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "spanish-2-progress.json";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      });
+      document.getElementById("importBtn").addEventListener("click", () => document.getElementById("importFile").click());
+      document.getElementById("importFile").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          try {
+            const data = JSON.parse(reader.result);
+            state = Object.assign(defaultState(), data);
+            render();
+            renderPresetsActive();
+          } catch (err) {
+            alert("That file couldn't be read as progress data.");
+          }
+        };
+        reader.readAsText(file);
+      });
+      document.getElementById("resetBtn").addEventListener("click", () => {
+        if (confirm("Reset everything back to the starting point (Part 1 through Module 6 in progress)?")) {
+          state = defaultState();
+          render();
+          renderPresetsActive();
+        }
+      });
+
+      // ---------- Init ----------
+      renderPresets();
+      render();
+      renderPresetsActive();
+    </script>
+  </body>
+</html>
