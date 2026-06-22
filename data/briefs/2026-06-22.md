@@ -2,19 +2,18 @@
 
 ## Act now
 
-Nothing clears the bar today — every watch-term ski is past its mention limit, unconfirmed on price history, or sitting at the top of its own 90-day range.
+- **Peak Skis Peak 98 (DAV), 168cm (you) — $314.99** (Evo, in stock): 65% off $899, sitting right at its 90-day low ($314.99–$349.97) — a real floor, not a stale percentage, and an exact fit. First mention. [evo.com](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
+- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** (Evo, in stock): 83% off $699.95, watch-term brand, exact family fit, unchanged for over a month — a deep discount that's held steady rather than a flash blip. First mention. [evo.com](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
 
 ## Worth watching
 
-- **2024 Dynastar Menace 80, 158cm (family) & 168cm (you) — $150.00** (Lone Pine, new): Demoted from Act now as promised — unchanged for a month at 65% off a real $430 MSRP, watch-term brand, fits both sizes, but it isn't moving. Last mention either way. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
-- **Rossignol Rallybird Soul 92 Xp11 Demo, 166cm (you) — $424.99** (Utah Skis): Second mention, watch term, exact fit, still pinned to the top of its own 90-day range ($399.99–$424.99) — not a real discount yet. Trigger: drop toward the range low.
-- **2025 Rossignol Rallybird 94 Open, 156cm (family) — $389.97** (Lone Pine): First mention, watch term, family fit, 44% off $700 — modest discount, unchanged for a month with no trend data to confirm a floor. Trigger: a further drop or trend confirmation.
-- **2026 Elan Ripstick 96, 161cm (family) & 168cm (you) — $379.99** (Lone Pine, Green): Second mention since the 6/19 batch, watch term, exact fit, but Lone Pine still hasn't built price history. Trigger: confirm via a drop or more days tracked.
-- **2026 Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** (Lone Pine): Second mention since 6/19, watch term, exact fit, sitting just under your $500 cap with no trend data. Trigger: a drop that gives more breathing room under the cap.
+- **Völkl RTM 81 + iPT bindings, 156cm (family), used — $269.97** (Evo): Second mention. Steady since 06-09; 70% off looks big, but used-gear MSRPs run inflated and there's still no trend data. Trigger: trend confirms a real floor.
+- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** (Lone Pine): Second mention, watch term, but only 44% off, unchanged for a month, no trend data. Trigger: a further drop or confirmed trend.
+- **Salomon Stance 88 Women's, 168cm (you) — $249.99** (ERIK'S): First mention, 64% off, stable for a month, exact fit, not a watch-term brand. Trigger: trend data confirming the floor.
+- **Elan Playmaker 87 Men's Demo, 166cm (you) — $299.99** (Utah Skis): First mention, exact fit, but sitting at the top of its own 90-day range ($274.99–$299.99). Trigger: drop toward the range low.
 
 ## Notes
 
-- CampSaver backcountry skis blocked by an anti-bot page again today (recurring failure) — no data from that retailer.
-- Utah Skis' entire demo lineup (Rallybird Soul, Ripstick, Mindbender, Arv, Mantra, Enforcer, and more) is again sitting at the top of its own 90-day range — no real discounts there today.
-- Dropping three items past the mention limit, unchanged: 2024 Rossignol Rallybird 102 154cm ($279.00), Elan Ripstick 96 Demo 168cm ($399.99), and 2026 Elan Women's Ripstick 100 168cm ($379.99). All still listed if you want to act independently.
-- Stio Objective Pro Ski Jacket (M, $319.60, watch term) remains well over your $100 clothing cap; the rest of the Stio shirts are unchanged at past-mention-limit prices.
+- CampSaver backcountry skis blocked by an anti-bot page again today (recurring) — no data from that retailer.
+- Dropping three items past the two-mention limit, unchanged: Rossignol Rallybird Soul 92 Xp11 Demo 166cm ($424.99, still pinned to its range top), 2026 Elan Ripstick 96 161/168cm ($379.99, Lone Pine never builds price history), and 2026 Elan Ripstick 102 Black Edition 168cm ($479.99). All still listed if you want to act independently.
+- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board (Mindbender, Arv, Mantra, Enforcer, etc.) — Peak 98 above is the exception, genuinely at its low.
