@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Peak Skis Peak 98 (DAV), 168cm (you) — $314.99** (Evo, in stock): Second mention, still sitting at its 90-day low ($314.99–$349.97), unchanged since yesterday — exact fit and a confirmed floor, not a one-day blip. [evo.com](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
-- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** (Evo, in stock): Second mention, watch-term brand, 83% off a real $699.95 MSRP, holding steady for over a month — a deep discount that's proven durable. [evo.com](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
+- Nothing clears the bar today — the genuine lows already had their two mentions, and nothing new is sitting at a confirmed floor.
 
 ## Worth watching
 
-- **Salomon Stance 88 Women's, 168cm (you) — $249.99** (ERIK'S): Second mention, 64% off, unchanged for a month, exact fit, not a watch-term brand. Trigger: trend data confirming the floor.
-- **Elan Playmaker 87 Men's Demo, 166cm (you) — $299.99** (Utah Skis): Second mention, exact fit, but still pinned to the top of its own 90-day range ($274.99–$299.99). Trigger: a drop toward the range low.
-- **Nordica Santa Ana 92 Women's Demo, 155cm (family) — $339.99 at Evo / $399.99 at Utah** (watch term): First mention. Family-fit, but only the Utah listing shows range data and it's at the top ($374.99–$399.99); no history for the cheaper Evo price yet. Trigger: confirmed history at the Evo price.
-- **Stöckli Nela 96, 156cm (family) — $329.99** (Evo, in stock): First mention, 71% off a plausible $1,149 MSRP, but no price history yet — treat with some skepticism. Trigger: a few more days tracked or a further drop.
-- **2026 Line Chronic 101, 172cm (you) — $349.99** (Lone Pine, new): First mention, exact fit, 50% off, but Lone Pine listings rarely build price history. Trigger: confirmation via more days tracked.
+- **Nordica Santa Ana 92 Women's Demo, 155cm (family) — $339.99 at Evo / $399.99 at Utah** (watch term): Second mention. The Utah listing sits at the top of its own range ($374.99–$399.99); the cheaper Evo price still has no history. Buy if Evo's price holds a few more days, or if Utah drops toward its low.
+- **Stöckli Nela 96, 156cm (family) — $329.99** (Evo, in stock): Second mention, 71% off a plausible $1,149 MSRP, but still no price history. Buy once a few more days of tracking confirm it's a real floor, not a one-day list price.
+- **2026 Line Chronic 101, 172cm (you) — $349.99** (Lone Pine, new): Second mention, exact fit, 50% off — but Lone Pine listings rarely build price history. Buy if it holds steady past this week.
+- **Elan Ripstick 94 Women's Demo, 154cm (family) — $399.99** (Utah Skis): First mention, watch term, exact fit, but pinned to the top of its 90-day range ($374.99–$399.99) — not a real discount yet. Trigger: a drop toward $375.
+- **Stio Eddy Shirt LS, S — $48.92** (Geartrade): First mention, watch term, within your $100 cap, 62% off and unchanged for over a month. Low priority — opportunistic buy, not urgent.
 
 ## Notes
 
-- CampSaver backcountry skis blocked by an anti-bot page again today (recurring) — no data from that retailer.
-- Several previously-flagged items are unchanged but already past the two-mention limit, so they're dropped from the lists rather than re-pitched: 2024 Dynastar Menace 80 ($150, both sizes), Rossignol Rallybird Soul 92 Xp11 Demo ($424.99, still range-top), and the Lone Pine Elan Ripstick 96/100/102 Black Edition batch ($379.99–$479.99). All still listed if you want to act independently.
-- Stio shirts (Hagen, Ashton, Eddy Slope, Divide) remain unchanged and past their mention limit. Stio Objective Pro Ski Jacket, M — still $319.60, well over your $100 clothing cap.
-- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board (Mindbender, Arv, Mantra, Kore, Ripstick 102) — nothing there clears the bar today.
+- Dropping three items past the two-mention limit, unchanged: Peak Skis Peak 98, 168cm ($314.99, still genuinely at its 90-day low), Dynastar M-Pro 99 W, 154cm ($119.99, still 83% off), and Salomon Stance 88 Women's, 168cm ($249.99). All still listed if you want to act independently.
+- CampSaver came back online today after its recurring anti-bot block, with three newly tracked listings (G3 FINDr FLX R3 94 $203.15, G3 SEEKr R3 100 $303.26, Weston Skyline Carbon Ski $349.48) — no size data and no price history yet, too early to call.
+- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board.
+- Stio Hagen/Ashton/Eddy Slope/Divide remain unchanged and past their mention limit; Objective Pro Ski Jacket, M ($319.60) is still well over the $100 clothing cap.
