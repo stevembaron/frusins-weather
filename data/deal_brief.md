@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Nordica Santa Ana 104 Free, Women's, 172cm (you) — $359.99** (Evo, in stock): Watch-term brand, exact fit, 58% off $849.99 and unchanged since mid-May — a real, settled discount, not a flash blip. First mention. [evo.com](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)
-- **Scott Pure Free 90 Ti, Women's — $299.99** (The Gear Room): Fits both your size (168) and family sizes (154, 160), 60% off $750, stable for over a month. First mention. [thegearroom.com](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
-- **Black Diamond Helio Carbon 104 — $399.00** (The Gear Room): Fits your sizes (166, 172) and family (160), 58% off $949.95, stable for over a month. First mention. [thegearroom.com](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)
+- **Nordica Santa Ana 104 Free, Women's, 172cm (you) — $359.99** (Evo, in stock): Watch-term brand, exact fit, 58% off $849.99, unchanged since mid-May — a settled discount, not a flash blip. Second mention. [evo.com](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)
+- **Scott Pure Free 90 Ti, Women's — $299.99** (The Gear Room): Fits both your size (168) and family sizes (154, 160), 60% off $750, stable for over a month. Second mention. [thegearroom.com](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
+- **Black Diamond Helio Carbon 104 — $399.00** (The Gear Room): Fits your sizes (166, 172) and family (160), 58% off $949.95, stable for over a month. Second mention. [thegearroom.com](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)
 
 ## Worth watching
 
-- **Elan Ripstick 94 Women's Demo, 154cm (family) — $399.99** (Utah Skis): Second mention, watch term, exact fit, but still pinned to the top of its 90-day range ($374.99–$399.99). Trigger: a drop toward $375.
-- **Elan Playmaker 87 Men's Demo, 166cm (you) — $299.99** (Utah Skis): Second mention, exact fit, but again at the top of its range ($274.99–$299.99). Trigger: drop toward $275.
-- **2025 Volkl Women's Secret 88, 170cm (you) — $389.99** (Lone Pine, new): First mention, exact fit, 48% off, no price history yet — Lone Pine rarely builds trend data. Buy if it holds past this week.
-- **Salomon S/Max 6XT + M10 bindings, 160cm (family) — $286.99** (ERIK'S): First mention, exact fit, 50% off, no trend data. Watch for a few more days.
-- **Stio Eddy Shirt LS, S — $48.92** (Geartrade): Second mention, watch term, within your $100 cap, unchanged for over a month. Low priority, opportunistic buy.
+- **2025 Volkl Women's Secret 88, 170cm (you) — $389.99** (Lone Pine, new): Second mention, exact fit, 48% off, still no price history — Lone Pine rarely builds trend data. Buy if it holds past this week.
+- **Salomon S/Max 6XT + M10 bindings, 160cm (family) — $286.99** (ERIK'S): Second mention, exact fit, 50% off, still no trend data.
+- **Elan Ripstick 96 Demo, 168cm (you) — $399.99** (Utah Skis): Watch term, exact fit, 58% off $949.99, in stock — but this listing has no 90-day range yet, so the floor is unconfirmed. First mention.
+- **2026 Elan Ripstick 96, 168cm (you) — $379.99** (Lone Pine, new): Watch term, exact fit, 52% off, only 5 days tracked, no trend yet. Trigger: holds past this week.
+- **2026 Line Honey Badger, 172cm (you) — $229.99** (Lone Pine): Exact fit, 49% off, stable for a month, no watch term but a solid price point. First mention.
 
 ## Notes
 
-- Dropping three items past the two-mention limit, unchanged: 2026 Line Chronic 101 172cm ($349.99, Lone Pine, never built history), Stöckli Nela 96 156cm ($329.99, still no trend), and Rossignol Rallybird 94 Open 156cm ($389.97, watch term, only 44% off). All still listed if you want to act independently.
-- CampSaver backcountry skis blocked by an anti-bot page again today (recurring failure) — no data from that retailer.
-- Nordica Santa Ana 92 Women's Demo (155/150cm) is back at the top of its own range at both Evo ($339.99) and Utah ($399.99) — already past its mention limit, dropping for now.
+- Dropping three items past the two-mention limit, unchanged: Elan Ripstick 94 Women's Demo 154cm ($399.99, still pinned to the top of its range), Elan Playmaker 87 Men's Demo 166cm ($299.99, same situation), and Stio Eddy Shirt LS S ($48.92). All still listed if you want to act independently.
+- CampSaver is back online today with three new, untracked listings (G3 FINDr FLX R3 94 $203.15, G3 SEEKr R3 100 $303.26, Weston Skyline Carbon Ski $349.48) — no sizes or price history yet, too early to call.
