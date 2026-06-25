@@ -2,18 +2,19 @@
 
 ## Act now
 
-- **2024 Dynastar Menace 80 — $150** (Lone Pine, new), sizes 158cm (family) and 168cm (you): watch-term brand, exact fit in both your size and family size, 65% off $430, unchanged for over five weeks — a settled price, not a flash discount. First mention. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
+- **2024 Dynastar Menace 80 — $150** (Lone Pine, new), sizes 158cm (family) and 168cm (you): watch-term brand, exact fit both sizes, 65% off $430, unchanged for over five weeks — a settled price, not a flash discount. Second mention. [lonepinegearx.com](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)
 
 ## Worth watching
 
-- **2026 Elan Ripstick 96, 168cm (you) — $379.99** (Lone Pine, new): Second mention, watch term, exact fit, 52% off, still no price history (Lone Pine rarely builds trend data). Buy if it holds steady past this week.
-- **Elan Ripstick 96 Demo, 168cm (you) — $399.99** (Utah Skis, in stock): Second mention, watch term, 58% off $949.99, but still no 90-day range to confirm the floor. Trigger: price history showing a genuine low.
-- **Nordica Santa Ana 92 Demo, 155cm (family) — $339.99 at Evo / $399.99 at Utah**: Second mention, watch term. Utah's listing sits at the top of its own range ($374.99–$399.99); the cheaper Evo price has no tracked history yet. Buy if Evo's price holds, or if Utah drops toward its low.
-- **2026 Elan Women's Ripstick 100, 168cm (you) — $379.99** (Lone Pine, new): First mention, watch term, exact fit, 52% off $799.99, only 6 days tracked. Trigger: holds past this week.
-- **2026 Line Honey Badger, 172cm (you) — $229.99** (Lone Pine): Second mention, exact fit, 49% off, stable for over a month, solid price point though not a watch-term brand. Trigger: a further drop, or treat this as the last call.
+- **2026 Elan Women's Ripstick 100, 168cm (you) — $379.99** (Lone Pine, new): Second mention, watch term, exact fit, 52% off, still no price history. Buy if it holds steady past this week.
+- **2026 Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** (Lone Pine, new): First mention, watch term, exact fit, 52% off $999.99 but only 6 days tracked and close to your $500 cap. Trigger: confirm it holds another week before acting.
+- **Rossignol Rallybird Soul 92 Demo, 156cm (family) / 166cm (you) — $424.99** (Utah Skis, in stock): First mention, watch term, fits both your sizes, but sitting at the top of its own 90-day range ($399.99–$424.99) — not a real discount yet. Trigger: buy if it drops toward $400.
+- **2025 Rossignol Rallybird 94 Open, 156cm (family) — $389.97** (Lone Pine, new): First mention, watch term, exact fit, 44% off, no price history, stable for five weeks. Trigger: holds steady, or wait for a repeat listing to confirm the floor.
+- **Rossignol Sender Free 92 + Xpress 11 Bindings, 156cm (family) — $349.98** (Evo, in stock): First mention, no watch term but solid fit and 50% off $699.95, unchanged for five weeks with no tracked range yet. Trigger: hold past this week, or wait for trend data.
 
 ## Notes
 
-- Dropping five items past the two-mention limit, unchanged: Scott Pure Free 90 Ti ($299.99), Nordica Santa Ana 104 Free 172cm ($359.99), Black Diamond Helio Carbon 104 ($399.00), 2025 Volkl Women's Secret 88 170cm ($389.99), and Salomon S/Max 6XT 160cm ($286.99). All still listed if you want to act independently.
-- Blizzard Black Pearl 88 Demo ($472.99) carries a watch term but only comes in 146cm/152cm — outside both your and family sizes, so skipping it.
-- CampSaver's three untracked listings (G3 FINDr FLX R3 94 $203.15, G3 SEEKr R3 100 $303.26, Weston Skyline Carbon Ski $349.48) are now on their third day with no size or price history — still too early to call.
+- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board (Ripstick 102/88/94, Mantra 88, Enforcer, Mindbender, Rallybird Soul, etc.) — the big "% off MSRP" headline isn't a real discount right now.
+- Dropping four items past the two-mention limit, unchanged: 2026 Elan Ripstick 96 168cm ($379.99, Lone Pine), Elan Ripstick 96 Demo 168cm ($399.99, Utah), Nordica Santa Ana 92 Demo 155cm ($339.99 Evo / $399.99 Utah), and 2026 Line Honey Badger 172cm ($229.99). All still listed if you want to act independently.
+- CampSaver's three untracked listings (G3 FINDr FLX R3 94 $203.15, G3 SEEKr R3 100 $303.26, Weston Skyline Carbon Ski $349.48) still have no size or price history — too early to call.
+- Stio clothing is unchanged: Hagen/Ashton/Eddy Slope/Eddy LS/Divide are past their mention limit, and Objective Pro Ski Jacket ($319.60, M) remains well over your $100 clothing cap. Nothing new to flag.
