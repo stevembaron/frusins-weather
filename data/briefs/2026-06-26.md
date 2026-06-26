@@ -2,19 +2,21 @@
 
 ## Act now
 
-- Nothing clears the bar today — the genuine lows already had their two mentions, and nothing new is sitting at a confirmed floor.
+- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** (Evo, in stock): 83% off $699.95, unchanged for 5+ weeks — a settled floor, not a flash sale. Watch-term brand, exact family fit. [evo.com](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
+- **Peak 98 by DAV, 168cm (you) — $314.99** (Evo, in stock): Sitting at the bottom of its 90-day range ($314.99–$349.97), 65% off, exact fit, stable for 5+ weeks. [evo.com](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
+- **Line Honey Badger, 172cm (you) — $269.97** (Evo, in stock): Also at the bottom of its 90-day range ($269.97–$314.96), 40% off, exact fit, stable for 5+ weeks. [evo.com](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)
 
 ## Worth watching
 
-- **Rossignol Rallybird Soul 92 Xp11 Demo, 156cm (family) / 166cm (you) — $424.99** (Utah Skis, in stock): Second mention, watch term, fits both sizes, but still pinned to the top of its 90-day range ($399.99–$424.99) — not a real discount yet. Trigger: buy if it drops toward $400.
-- **2026 Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** (Lone Pine, new): Second mention, watch term, exact fit, 52% off $999.99, but only 7 days tracked and close to your $500 cap. Trigger: confirm it holds another week.
-- **Armada ARV 106 Skis 2025, 172cm (you) — $339.99** (Evo, in stock, newly tracked): First mention, no watch term, but exact fit, 55% off $749.95, and $85 cheaper than the equivalent Utah Skis demo ($424.99) — best price across 2 stores. No price history yet. Trigger: confirm it holds a few more days.
-- **Black Diamond Impulse TI 104, 172cm (you) — $424.95** (The Gear Room): First mention, no watch term, exact fit, 50% off $849.95, unchanged for over five weeks — a settled price. Trigger: buy if no cheaper cross-store listing turns up.
-- **Elan Ripstick 102 Mens Demo, 168cm (you) — $474.95** (Utah Skis, in stock): First mention, watch term, exact fit, but sitting at the top of its own 90-day range ($449.95–$474.95) like the rest of Utah's demo lineup. Trigger: wait for it to actually move off $474.95 toward $450.
+- **Armada ARV 106 2025, 172cm (you) — $339.99** (Evo, in stock, second mention): Still no price history, but $85 cheaper than the equivalent Utah demo. Buy if it holds a few more days.
+- **Head Kore 87 Ti Demo, 156cm (family) — $374.99** (Utah Skis, best price across 2 stores): Pinned to the top of its own 90-day range ($349.99–$374.99), like the rest of Utah's demo lineup — not a real discount yet. Wait for it to move toward $350.
+- **Nordica Santa Ana 92 Demo, 155cm (family), watch term** — listed $399.99 at Utah but $339.99 at Evo. Take the Evo price if confirmed; the Utah price isn't worth it.
+- **Elan Ripstick 102 Mens Demo, 168cm (you) — $474.95** (Utah Skis, second mention): Still at the top of its range, watch term, close to your $500 cap. Buy only if it actually drops toward $450.
+- **Völkl RTM 81 + bindings, 156cm (family), used — $269.97** (Evo, in stock): 70% off, stable for 2+ weeks — a solid backup if the picks above sell out.
 
 ## Notes
 
-- Dropping 2024 Dynastar Menace 80 (158cm family / 168cm you, $150, Lone Pine) past the two-mention limit — unchanged for five weeks, still listed if you want it independently.
-- Utah Skis' demo lineup is again sitting at the top of its own 90-day range across the board (Ripstick 102, Mantra 88, Mindbender, Rallybird Soul, etc.) — the headline "% off MSRP" isn't a real discount right now.
-- Stio clothing (Hagen, Ashton, Eddy Slope, Eddy LS, Divide — all size S, all under $100) is unchanged since mid-May and past its mention limit; Objective Pro Ski Jacket ($319.60, M) remains well over your $100 clothing cap.
-- Zag listings are muted per your preferences and excluded despite heavy markdowns across the line.
+- Dropping Rossignol Rallybird Soul 92 Xp11 Demo, 156/166cm — $424.99 (Utah): third mention, still unmoved at the top of its range. Still listed if you want it independently.
+- ERIK'S, The Gear Room, and Lone Pine all failed to load today (HTTP 429) — can't confirm current status of previously-flagged items there, including the Lone Pine Elan Ripstick 102 Black Edition.
+- Stio clothing is all CACHED (Geartrade 500 error), has never carried size data, and is past its mention limit — can't confirm fit or freshness.
+- Several Armada/Atomic "also at Evo for $279.95" cross-store notes repeat identically across different models — looks like a matching glitch, not a confirmed price match.
