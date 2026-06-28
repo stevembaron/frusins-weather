@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-06-27T19:43:44+00:00
+Generated: 2026-06-28T11:59:40+00:00
 Deals found: 262
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -47,7 +47,7 @@ Deals found: 262
 
 8. [Line Skis Pandora 99 Skis 2025](https://www.evo.com/products/251664-line-skis-pandora-99-skis-2025)
    $209.99 was $599.95 (65.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 156 cm
    Stock: In stock
 
