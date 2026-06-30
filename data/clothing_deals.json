@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-29T20:14:15+00:00",
-  "deal_count": 6,
+  "generated_at": "2026-06-30T12:25:24+00:00",
+  "deal_count": 5,
   "sources_checked": 1,
   "price_history_count": 361,
   "price_change_count": 0,
@@ -14,7 +14,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-06-29T20:14:13+00:00",
+      "found_at": "2026-06-30T12:25:22+00:00",
       "sizes": [
         "S"
       ],
@@ -30,30 +30,6 @@
       "highest_price": 30.86
     },
     {
-      "title": "Stio Eddy Slope Long Sleeve Shirt - Men's",
-      "url": "https://geartrade.com/products/stio-eddy-slope-long-sleeve-shirt-mens-1626864",
-      "source": "Geartrade Stio men's clothing",
-      "current_price": 52.29,
-      "original_price": 168.68,
-      "discount_percent": 69.0,
-      "savings": 116.39,
-      "score": 117.05,
-      "found_at": "2026-06-29T20:14:13+00:00",
-      "sizes": [
-        "S"
-      ],
-      "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/10622373-4e07-4287-9f97-89e9d5b15b88.webp?v=1782742093&width=460",
-      "is_cached": false,
-      "previous_price": 52.29,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-05-19T17:31:30-06:00",
-      "lowest_price": 52.29,
-      "highest_price": 52.29
-    },
-    {
       "title": "Stio Ashton Chambray Shirt - Men's",
       "url": "https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918",
       "source": "Geartrade Stio men's clothing",
@@ -62,7 +38,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-06-29T20:14:13+00:00",
+      "found_at": "2026-06-30T12:25:22+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +62,7 @@
       "discount_percent": 60.0,
       "savings": 479.4,
       "score": 108.61,
-      "found_at": "2026-06-29T20:14:13+00:00",
+      "found_at": "2026-06-30T12:25:22+00:00",
       "sizes": [
         "M"
       ],
@@ -110,7 +86,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-06-29T20:14:13+00:00",
+      "found_at": "2026-06-30T12:25:22+00:00",
       "sizes": [
         "S"
       ],
@@ -134,7 +110,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-06-29T20:14:13+00:00",
+      "found_at": "2026-06-30T12:25:22+00:00",
       "sizes": [
         "S"
       ],
