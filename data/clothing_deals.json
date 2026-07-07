@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-07T12:39:50+00:00",
-  "deal_count": 5,
+  "generated_at": "2026-07-07T20:12:46+00:00",
+  "deal_count": 9,
   "sources_checked": 1,
   "price_history_count": 365,
-  "price_change_count": 0,
+  "price_change_count": 2,
   "deals": [
     {
       "title": "Stio Hagen Trail Shirt - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-07-07T12:39:48+00:00",
+      "found_at": "2026-07-07T20:12:42+00:00",
       "sizes": [
         "S"
       ],
@@ -30,6 +30,30 @@
       "highest_price": 30.86
     },
     {
+      "title": "Stio Environ Pant - Men's",
+      "url": "https://geartrade.com/products/stio-environ-pant-mens-1687321",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 159.68,
+      "original_price": 431.57,
+      "discount_percent": 63.0,
+      "savings": 271.89,
+      "score": 114.81,
+      "found_at": "2026-07-07T20:12:42+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/d4c308b3-d6c1-46ce-a5b9-dacdbc41968a.webp?v=1783424907&width=460",
+      "is_cached": false,
+      "previous_price": 171.6,
+      "price_change": -11.92,
+      "price_change_percent": -6.9,
+      "price_trend": "down",
+      "first_seen_at": "2026-05-31T11:51:57+00:00",
+      "lowest_price": 159.68,
+      "highest_price": 171.6
+    },
+    {
       "title": "Stio Ashton Chambray Shirt - Men's",
       "url": "https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918",
       "source": "Geartrade Stio men's clothing",
@@ -38,7 +62,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-07-07T12:39:48+00:00",
+      "found_at": "2026-07-07T20:12:42+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +86,7 @@
       "discount_percent": 60.0,
       "savings": 479.4,
       "score": 108.61,
-      "found_at": "2026-07-07T12:39:48+00:00",
+      "found_at": "2026-07-07T20:12:42+00:00",
       "sizes": [
         "M"
       ],
@@ -78,6 +102,30 @@
       "highest_price": 319.6
     },
     {
+      "title": "Stio Full-Zip Shacket - Men's",
+      "url": "https://geartrade.com/products/stio-full-zip-shacket-mens-1685510",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 82.33,
+      "original_price": 191.47,
+      "discount_percent": 57.0,
+      "savings": 109.14,
+      "score": 102.64,
+      "found_at": "2026-07-07T20:12:42+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/f8854326-13e1-4091-9f71-3e4f7ee70f78.webp?v=1783422719&width=460",
+      "is_cached": false,
+      "previous_price": 85.5,
+      "price_change": -3.17,
+      "price_change_percent": -3.7,
+      "price_trend": "down",
+      "first_seen_at": "2026-06-27T11:47:36+00:00",
+      "lowest_price": 82.33,
+      "highest_price": 85.5
+    },
+    {
       "title": "Stio Eddy Shirt LS Shirt - Men's",
       "url": "https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203",
       "source": "Geartrade Stio men's clothing",
@@ -86,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-07-07T12:39:48+00:00",
+      "found_at": "2026-07-07T20:12:42+00:00",
       "sizes": [
         "S"
       ],
@@ -102,6 +150,54 @@
       "highest_price": 48.92
     },
     {
+      "title": "Stio Pinedale Joggers - Men's",
+      "url": "https://geartrade.com/products/stio-pinedale-joggers-mens-1687998",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 71.55,
+      "original_price": 159.0,
+      "discount_percent": 55.0,
+      "savings": 87.45,
+      "score": 95.43,
+      "found_at": "2026-07-07T20:12:42+00:00",
+      "sizes": [
+        "S"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/70f17501-ea5a-4607-9349-1cccde0a95ea.webp?v=1780915077&width=460",
+      "is_cached": false,
+      "previous_price": 71.55,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
+      "first_seen_at": "2026-06-27T11:47:36+00:00",
+      "lowest_price": 71.55,
+      "highest_price": 71.55
+    },
+    {
+      "title": "Stio Skycrest Insulated Snap Shirt - Men's",
+      "url": "https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 99.5,
+      "original_price": 199.0,
+      "discount_percent": 50.0,
+      "savings": 99.5,
+      "score": 92.89,
+      "found_at": "2026-07-07T20:12:42+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/b2d794df-d829-45e6-aaa8-741137458561.webp?v=1781798788&width=460",
+      "is_cached": false,
+      "previous_price": 99.5,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
+      "first_seen_at": "2026-06-27T11:47:36+00:00",
+      "lowest_price": 99.5,
+      "highest_price": 99.5
+    },
+    {
       "title": "Stio Divide Half Zip - Men\u2019s",
       "url": "https://geartrade.com/products/stio-divide-half-zip-mens-1660860",
       "source": "Geartrade Stio men's clothing",
@@ -110,7 +206,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-07-07T12:39:48+00:00",
+      "found_at": "2026-07-07T20:12:42+00:00",
       "sizes": [
         "S"
       ],
