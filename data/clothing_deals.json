@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T19:49:41+00:00",
-  "deal_count": 9,
+  "generated_at": "2026-07-11T11:26:46+00:00",
+  "deal_count": 8,
   "sources_checked": 1,
-  "price_history_count": 369,
+  "price_history_count": 370,
   "price_change_count": 0,
   "deals": [
     {
@@ -14,7 +14,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "S"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 63.0,
       "savings": 271.89,
       "score": 114.81,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "M"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "S"
       ],
@@ -78,30 +78,6 @@
       "highest_price": 37.31
     },
     {
-      "title": "Stio Objective Pro Ski Jacket - Men's",
-      "url": "https://geartrade.com/products/stio-objective-pro-ski-jacket-mens-1693069",
-      "source": "Geartrade Stio men's clothing",
-      "current_price": 319.6,
-      "original_price": 799.0,
-      "discount_percent": 60.0,
-      "savings": 479.4,
-      "score": 108.61,
-      "found_at": "2026-07-10T19:49:38+00:00",
-      "sizes": [
-        "M"
-      ],
-      "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/185e60d7-5604-44ec-98b5-781220413d6b.webp?v=1781949583&width=460",
-      "is_cached": false,
-      "previous_price": 319.6,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
-      "first_seen_at": "2026-06-20T12:11:45+00:00",
-      "lowest_price": 319.6,
-      "highest_price": 319.6
-    },
-    {
       "title": "Stio Full-Zip Shacket - Men's",
       "url": "https://geartrade.com/products/stio-full-zip-shacket-mens-1685510",
       "source": "Geartrade Stio men's clothing",
@@ -110,7 +86,7 @@
       "discount_percent": 57.0,
       "savings": 109.14,
       "score": 102.64,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +110,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "S"
       ],
@@ -158,12 +134,12 @@
       "discount_percent": 57.0,
       "savings": 91.33,
       "score": 98.45,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/70f17501-ea5a-4607-9349-1cccde0a95ea.webp?v=1783665310&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/70f17501-ea5a-4607-9349-1cccde0a95ea.webp?v=1783750924&width=460",
       "is_cached": false,
       "previous_price": 68.9,
       "price_change": 0.0,
@@ -182,7 +158,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "M"
       ],
@@ -206,7 +182,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-07-10T19:49:38+00:00",
+      "found_at": "2026-07-11T11:26:43+00:00",
       "sizes": [
         "S"
       ],
