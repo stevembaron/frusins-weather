@@ -2,18 +2,18 @@
 
 ## Act now
 
-- **Völkl RTM 81 Skis + iPT WR XL 12 TCX GW Bindings (used), 156cm (family) — $269.97** ([Evo](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)): 70% off $899, in stock, flat since June 9 — a month at the same price confirms the floor, and bindings are included.
-- **Season Nexus Skis 2026 (used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): 60% off $749.95, in stock, unchanged since May 18 — nearly two months at one price, exact family fit.
-- **Line Skis Honey Badger 2026, 166cm (you) — $269.97** ([Evo](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)): in stock, sitting at the bottom of its own 90-day range ($269.97–$314.96), 40% off $449.95 — flagged in worth watching yesterday, unchanged, so promoting to act now.
+- **Völkl RTM 81 Skis + iPT WR XL 12 TCX GW Bindings (used), 156cm (family) — $269.97** ([Evo](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)): 70% off $899, in stock, flat since June 9 — a month at one price confirms the floor, bindings included. Second (last) mention.
+- **Season Nexus 2026 Skis (used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): 60% off $749.95, in stock, unchanged since May 18 (eight weeks) — exact family fit, confirmed floor. Second (last) mention.
+- **Nordica Santa Ana 92 Demo, 155cm (family) — $339.99 at Evo**, not the $399.99 shown at Utah Skis ([listing](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, exact family fit, 62% off $899.99 at the cheaper store — no independent price history for the Evo listing, but the gap alone makes Utah's own price a pass.
 
 ## Worth watching
 
-- **Peak Skis Peak 98, 168cm (you) — $314.99** ([Evo](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)): in stock, still at the floor of its 90-day range ($314.99–$349.97), 65% off $899 — buy if you want it, it isn't going lower. Last mention.
-- **2026 Line Pandora 99, 156cm & 170cm (family & you) — $329.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-pandora-99-b52a2)): rare double-fit, 49% off $649.99, flat since May 22.
-- **Black Diamond Impulse TI 104, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): 50% off $849.95, flat since May 18, but Gear Room doesn't report stock here — confirm availability before buying.
-- **Stio Hagen Trail Shirt, size S — $30.86** ([Geartrade](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)): watch-term brand, 76% off $128.58, flat since May 19. Last mention.
-- **Stio Ashton Chambray Shirt, size S — $37.31** ([Geartrade](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)): watch-term brand, 71% off $128.66, flat since May 19 — same pattern as the Hagen shirt above.
+- **2026 Line Pandora 99, 156cm & 170cm (family & you) — $329.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-pandora-99-b52a2)): rare double-fit, 49% off $649.99, flat since May 22. Last mention.
+- **Black Diamond Impulse TI 104, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): 50% off $849.95, flat since May 18 — Gear Room doesn't report stock here, confirm before buying. Last mention.
+- **Stio Ashton Chambray Shirt, size S — $37.31** ([Geartrade](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)): watch-term brand, 71% off $128.66, flat since May 19. Last mention.
+- **Stio Divide Half Zip, size S — $42.67** ([Geartrade](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)): watch-term brand, exact fit, 52% off $88.90, flat since May 19 — comfortably under budget.
 
 ## Notes
 
-- Dropping after hitting the two-mention cap, all unchanged: Dynastar M-Pro 99 W 154cm ($119.99), Nordica Santa Ana 104 Free 172cm ($359.99), Black Diamond Helio Carbon 104 166/172cm ($399.00), Rossignol Sender Free 92 156cm ($349.98), and 2026 Elan Ripstick 102 Black Edition 168cm ($479.99) — still listed at the same prices if you want them anyway.
+- Utah Skis' Ripstick/Rallybird/Sender demo lineup (e.g. Ripstick 96 168cm, Rallybird Soul 92 166cm) is currently priced at the *top* of each item's own 90-day range — deep off-MSRP but not an actual low; wait for them to cycle back down before buying.
+- Dropping after hitting the two-mention cap, all unchanged: Line Honey Badger 166cm ($269.97, Evo), Peak Skis Peak 98 168cm ($314.99, Evo), and Stio Hagen Trail Shirt S ($30.86, Geartrade) — still listed at the same prices if you want them anyway.
