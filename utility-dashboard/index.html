@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Utilities</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header class="site-header">
+        <p class="kicker">Salt Lake City</p>
+        <h1>Home Utilities</h1>
+        <p class="sub">Water, electricity, and natural gas — usage and spend. <span id="coverage"></span></p>
+      </header>
+
+      <div class="filters" role="group" aria-label="Date range" id="filters">
+        <button type="button" data-range="12">Last 12 months</button>
+        <button type="button" data-range="24" aria-pressed="true">Last 24 months</button>
+        <button type="button" data-range="all">All data</button>
+      </div>
+
+      <section class="kpis" id="kpis" aria-label="Latest month summary"></section>
+
+      <section class="card">
+        <h2>Monthly spend</h2>
+        <p class="caption">Total billed per month, stacked by utility; lighter bars are projected. Electricity billing starts Jun 2024 and gas Aug 2023 — earlier bars are water only.</p>
+        <div class="target-control">
+          <label>Monthly target $<input id="targetInput" type="number" min="0" step="25" inputmode="numeric"></label>
+          <span id="targetNote"></span>
+        </div>
+        <div class="chart" id="spendChart"></div>
+        <div class="legend" id="spendLegend"></div>
+        <details class="data-table" id="spendTable"><summary>View data</summary><div class="scroller"></div></details>
+      </section>
+
+      <section class="card">
+        <h2>Projected — next six months</h2>
+        <p class="caption" id="projCaption">Same month last year scaled by the last three months' year-over-year trend. July electricity blends this month's actual daily readings with that seasonal estimate for the remaining days.</p>
+        <details class="data-table" id="projTable" open><summary>View data</summary><div class="scroller"></div></details>
+      </section>
+
+      <div class="card-grid">
+        <section class="card">
+          <h2>Water usage</h2>
+          <p class="caption">Cubic feet per billing month; lighter bars are projected.</p>
+          <div class="chart" id="waterChart"></div>
+          <details class="data-table" id="waterTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+        <section class="card">
+          <h2>Electricity usage</h2>
+          <p class="caption">kWh per billing month; lighter bars are projected.</p>
+          <div class="chart" id="elecChart"></div>
+          <details class="data-table" id="elecTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+        <section class="card">
+          <h2>Gas usage</h2>
+          <p class="caption">Decatherms per billing month; lighter bars are projected.</p>
+          <div class="chart" id="gasChart"></div>
+          <details class="data-table" id="gasTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+      </div>
+
+      <div class="card-grid">
+        <section class="card">
+          <h2>Water, year over year</h2>
+          <p class="caption">Usage by calendar month; the current year is highlighted.</p>
+          <div class="chart" id="waterYoy"></div>
+          <div class="legend" id="waterYoyLegend"></div>
+          <details class="data-table" id="waterYoyTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+        <section class="card">
+          <h2>Electricity, year over year</h2>
+          <p class="caption">Usage by calendar month; the current year is highlighted.</p>
+          <div class="chart" id="elecYoy"></div>
+          <div class="legend" id="elecYoyLegend"></div>
+          <details class="data-table" id="elecYoyTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+        <section class="card">
+          <h2>Gas, year over year</h2>
+          <p class="caption">Usage by calendar month; the current year is highlighted.</p>
+          <div class="chart" id="gasYoy"></div>
+          <div class="legend" id="gasYoyLegend"></div>
+          <details class="data-table" id="gasYoyTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+      </div>
+
+      <div class="card-grid">
+        <section class="card">
+          <h2>Electricity vs temperature</h2>
+          <p class="caption">Monthly kWh against the bill's average temperature.</p>
+          <div class="chart" id="elecScatter"></div>
+          <details class="data-table" id="elecScatterTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+        <section class="card">
+          <h2>Gas vs temperature</h2>
+          <p class="caption">Monthly Dth against average temperature (from the electric bill for the same month).</p>
+          <div class="chart" id="gasScatter"></div>
+          <details class="data-table" id="gasScatterTable"><summary>View data</summary><div class="scroller"></div></details>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Daily electricity — last 30 days</h2>
+        <p class="caption">Most recent daily readings regardless of the range filter. Costs are the utility's rounded estimates.</p>
+        <div class="chart" id="dailyChart"></div>
+        <details class="data-table" id="dailyTable"><summary>View data</summary><div class="scroller"></div></details>
+      </section>
+
+      <footer>
+        Sources: SLC Public Utilities (water), Rocky Mountain Power (electricity), Dominion Energy (gas usage; costs joined
+        from the account ledger by bill date). Usage is assigned to the month the billing period mostly covers.
+      </footer>
+    </main>
+
+    <div id="tooltip" role="status"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
