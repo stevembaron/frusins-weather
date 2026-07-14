@@ -44,6 +44,70 @@
     return allMonths.filter(m => m >= start);
   }
 
+  // ---------- projections ----------
+  const PROJ_HORIZON = 6;
+  const daysInMonth = m => new Date(+m.slice(0, 4), +m.slice(5, 7), 0).getDate();
+
+  // trend factor: last three actual months vs the same months a year earlier, clamped
+  function yoyFactor(map, getVal) {
+    let num = 0, den = 0;
+    for (let i = 0; i < 3; i++) {
+      const m = addMonths(lastMonth, -i);
+      const a = map.get(m), b = map.get(addMonths(m, -12));
+      if (a && b && getVal(a) != null && getVal(b) != null) { num += getVal(a); den += getVal(b); }
+    }
+    if (!den || !num) return 1;
+    return Math.min(1.4, Math.max(0.7, num / den));
+  }
+
+  const PROJ = (() => {
+    const months = Array.from({ length: PROJ_HORIZON }, (_, i) => addMonths(lastMonth, i + 1));
+    const out = { months, water: new Map(), elec: new Map(), gas: new Map() };
+    const defs = [
+      ['water', waterM, r => r.cubicFeet, r => r.cost],
+      ['elec', elecM, r => r.kwh, r => r.cost],
+      ['gas', gasM, r => r.dth, r => r.cost],
+    ];
+    for (const [key, map, getU, getC] of defs) {
+      const fU = yoyFactor(map, getU), fC = yoyFactor(map, getC);
+      for (const m of months) {
+        const base = map.get(addMonths(m, -12));
+        if (!base || getU(base) == null) continue;
+        out[key].set(m, {
+          usage: getU(base) * fU,
+          cost: getC(base) != null ? getC(base) * fC : null,
+        });
+      }
+    }
+    // Current month electricity: nowcast from daily actuals. Month-to-date is real;
+    // remaining days run at the average of the trailing 7 days and last year's
+    // trend-adjusted daily rate for this month.
+    const cur = months[0];
+    const daily = DATA.electricityDaily.filter(d => d.date.startsWith(cur));
+    const lastYear = elecM.get(addMonths(cur, -12));
+    if (daily.length && lastYear) {
+      const mtd = daily.reduce((s, d) => s + d.kwh, 0);
+      const lastDay = Math.max(...daily.map(d => +d.date.slice(8)));
+      const remaining = daysInMonth(cur) - lastDay;
+      const tail = DATA.electricityDaily.slice(-7);
+      const recentRate = tail.reduce((s, d) => s + d.kwh, 0) / tail.length;
+      const seasonalRate = (lastYear.kwh / daysInMonth(addMonths(cur, -12))) * yoyFactor(elecM, r => r.kwh);
+      const kwh = mtd + remaining * (recentRate + seasonalRate) / 2;
+      const lastYearRate = lastYear.cost / lastYear.kwh;
+      out.elec.set(cur, {
+        usage: kwh,
+        cost: kwh * lastYearRate * yoyFactor(elecM, r => r.cost) / yoyFactor(elecM, r => r.kwh),
+        nowcast: { mtd, lastDay },
+      });
+    }
+    return out;
+  })();
+
+  const projTotal = m => {
+    const parts = [PROJ.water.get(m)?.cost, PROJ.elec.get(m)?.cost, PROJ.gas.get(m)?.cost];
+    return parts.every(p => p != null) ? parts.reduce((a, b) => a + b, 0) : null;
+  };
+
   // ---------- DOM helpers ----------
   const $ = id => document.getElementById(id);
 
@@ -163,12 +227,11 @@
         const gap = isTop ? 0 : 2;
         const h = Math.max(0.75, y0 - y1 - gap);
         const y = y0 - h - gap;
-        if (isTop) {
-          const p = svgEl('path', { d: barPath(x, y, barW, h), fill: s.color });
-          c.svg.append(p);
-        } else {
-          c.svg.append(svgEl('rect', { x, y, width: barW, height: h, fill: s.color }));
-        }
+        const mark = isTop
+          ? svgEl('path', { d: barPath(x, y, barW, h), fill: s.color })
+          : svgEl('rect', { x, y, width: barW, height: h, fill: s.color });
+        if (d.projected) mark.setAttribute('fill-opacity', '0.4');
+        c.svg.append(mark);
         acc += s.value;
       });
       if (i % every === 0) {
@@ -416,28 +479,58 @@
     const g = gasM.get(m), gp = gasM.get(prev);
     box.append(tile(`Gas — ${label}`, g ? [fmt1(g.dth), 'Dth'] : ['—'],
       g?.dth, gp?.dth, prevLabel, spark('gas'), 'var(--c-gas)'));
+
+    // projected current month
+    const pm = PROJ.months[0];
+    const pTotal = projTotal(pm);
+    if (pTotal != null) {
+      const pPrev = addMonths(pm, -12);
+      const actualPrev = [waterM.get(pPrev)?.cost, elecM.get(pPrev)?.cost, gasM.get(pPrev)?.cost];
+      const prevTotal = actualPrev.every(p => p != null) ? actualPrev.reduce((a, b) => a + b, 0) : null;
+      const t = tile(`Projected spend — ${monthLabel(pm)}`, [fmtMoney0(pTotal)], pTotal, prevTotal, monthLabel(pPrev), null, null);
+      const parts = div('delta');
+      parts.textContent = `water ${fmtMoney0(PROJ.water.get(pm).cost)} · elec ${fmtMoney0(PROJ.elec.get(pm).cost)} · gas ${fmtMoney0(PROJ.gas.get(pm).cost)}`;
+      t.append(parts);
+      box.append(t);
+    }
   }
 
   // ---------- sections ----------
   function renderSpend() {
     const months = monthsInRange();
-    const items = months.map(mo => {
-      const w = waterM.get(mo), g = gasM.get(mo), e = elecM.get(mo);
+    const costsOf = mo => ({
+      w: waterM.get(mo)?.cost ?? null,
+      g: gasM.get(mo)?.cost ?? null,
+      e: elecM.get(mo)?.cost ?? null,
+      projected: false,
+    });
+    const projCostsOf = mo => ({
+      w: PROJ.water.get(mo)?.cost ?? null,
+      g: PROJ.gas.get(mo)?.cost ?? null,
+      e: PROJ.elec.get(mo)?.cost ?? null,
+      projected: true,
+    });
+    const entries = [
+      ...months.map(mo => [mo, costsOf(mo)]),
+      ...PROJ.months.map(mo => [mo, projCostsOf(mo)]),
+    ];
+    const items = entries.map(([mo, c]) => {
+      const suffix = c.projected ? ' — projected' : '';
       const rows = [
-        { label: 'Electricity', color: UTIL.elec.color, value: e ? fmtMoney(e.cost) : 'no data' },
-        { label: 'Gas', color: UTIL.gas.color, value: g?.cost != null ? fmtMoney(g.cost) : 'no data' },
-        { label: 'Water', color: UTIL.water.color, value: w ? fmtMoney(w.cost) : 'no data' },
+        { label: 'Electricity', color: UTIL.elec.color, value: c.e != null ? fmtMoney(c.e) : 'no data' },
+        { label: 'Gas', color: UTIL.gas.color, value: c.g != null ? fmtMoney(c.g) : 'no data' },
+        { label: 'Water', color: UTIL.water.color, value: c.w != null ? fmtMoney(c.w) : 'no data' },
+        { label: 'Total', value: fmtMoney((c.w || 0) + (c.g || 0) + (c.e || 0)) },
       ];
-      const totalV = (w?.cost || 0) + (g?.cost || 0) + (e?.cost || 0);
-      rows.push({ label: 'Total', value: fmtMoney(totalV) });
       return {
         label: monthShort(mo),
-        tipTitle: monthLabel(mo),
+        projected: c.projected,
+        tipTitle: monthLabel(mo) + suffix,
         tipRows: rows,
         segments: [
-          { name: 'Water', value: w?.cost || 0, color: UTIL.water.color },
-          { name: 'Gas', value: g?.cost || 0, color: UTIL.gas.color },
-          { name: 'Electricity', value: e?.cost || 0, color: UTIL.elec.color },
+          { name: 'Water', value: c.w || 0, color: UTIL.water.color },
+          { name: 'Gas', value: c.g || 0, color: UTIL.gas.color },
+          { name: 'Electricity', value: c.e || 0, color: UTIL.elec.color },
         ],
       };
     });
@@ -446,19 +539,55 @@
       { label: 'Water', color: UTIL.water.color },
       { label: 'Gas', color: UTIL.gas.color },
       { label: 'Electricity', color: UTIL.elec.color },
+      { label: 'Projected', color: 'var(--deemph)' },
     ]);
-    fillTable('spendTable', ['Month', 'Water', 'Gas', 'Electricity', 'Total'], months.map(mo => {
-      const w = waterM.get(mo)?.cost, g = gasM.get(mo)?.cost, e = elecM.get(mo)?.cost;
-      return [monthLabel(mo), w != null ? fmtMoney(w) : null, g != null ? fmtMoney(g) : null,
-        e != null ? fmtMoney(e) : null, fmtMoney((w || 0) + (g || 0) + (e || 0))];
-    }));
+    fillTable('spendTable', ['Month', 'Water', 'Gas', 'Electricity', 'Total'], entries.map(([mo, c]) =>
+      [monthLabel(mo) + (c.projected ? ' (proj.)' : ''),
+        c.w != null ? fmtMoney(c.w) : null, c.g != null ? fmtMoney(c.g) : null,
+        c.e != null ? fmtMoney(c.e) : null, fmtMoney((c.w || 0) + (c.g || 0) + (c.e || 0))]));
+  }
+
+  function renderProjections() {
+    const rows = PROJ.months.map(mo => {
+      const w = PROJ.water.get(mo), e = PROJ.elec.get(mo), g = PROJ.gas.get(mo);
+      const t = projTotal(mo);
+      return [
+        monthLabel(mo) + (e?.nowcast ? ' (in progress)' : ''),
+        w ? fmtInt(w.usage) : null, w?.cost != null ? fmtMoney0(w.cost) : null,
+        e ? fmtInt(e.usage) : null, e?.cost != null ? fmtMoney0(e.cost) : null,
+        g ? fmt1(g.usage) : null, g?.cost != null ? fmtMoney0(g.cost) : null,
+        t != null ? fmtMoney0(t) : null,
+      ];
+    });
+    fillTable('projTable', ['Month', 'Water cu ft', 'Water $', 'Elec kWh', 'Elec $', 'Gas Dth', 'Gas $', 'Total $'], rows);
+    const e0 = PROJ.elec.get(PROJ.months[0]);
+    if (e0?.nowcast) {
+      $('projCaption').textContent =
+        `Same month last year scaled by the last three months' year-over-year trend. ${monthLabel(PROJ.months[0])} electricity blends ` +
+        `${fmtInt(e0.nowcast.mtd)} kWh of actual usage through the ${e0.nowcast.lastDay}th with that seasonal estimate for the remaining days.`;
+    }
   }
 
   function renderUsageCards() {
     const months = monthsInRange();
+    const projItems = (projMap, color, fmtUsage, unit) => PROJ.months
+      .filter(mo => projMap.has(mo))
+      .map(mo => {
+        const p = projMap.get(mo);
+        return {
+          label: monthShort(mo),
+          projected: true,
+          tipTitle: monthLabel(mo) + ' — projected',
+          tipRows: [
+            { label: 'Usage', value: `${fmtUsage(p.usage)} ${unit}` },
+            { label: 'Est. bill', value: p.cost != null ? fmtMoney0(p.cost) : 'n/a' },
+          ],
+          segments: [{ name: 'proj', value: p.usage, color }],
+        };
+      });
 
     const wRows = months.filter(mo => waterM.has(mo)).map(mo => waterM.get(mo));
-    columnChart($('waterChart'), wRows.map(r => ({
+    columnChart($('waterChart'), [...wRows.map(r => ({
       label: monthShort(r.month),
       tipTitle: monthLabel(r.month),
       tipRows: [
@@ -467,12 +596,17 @@
         { label: 'Bill', value: fmtMoney(r.cost) },
       ],
       segments: [{ name: 'Water', value: r.cubicFeet, color: UTIL.water.color }],
-    })), { height: 200 });
-    fillTable('waterTable', ['Month', 'Cu ft', 'Gallons', 'Bill'], wRows.map(r =>
-      [monthLabel(r.month), fmtInt(r.cubicFeet), fmtInt(r.cubicFeet * GAL_PER_CUFT), fmtMoney(r.cost)]));
+    })), ...projItems(PROJ.water, UTIL.water.color, fmtInt, 'cu ft')], { height: 200 });
+    fillTable('waterTable', ['Month', 'Cu ft', 'Gallons', 'Bill'], [
+      ...wRows.map(r => [monthLabel(r.month), fmtInt(r.cubicFeet), fmtInt(r.cubicFeet * GAL_PER_CUFT), fmtMoney(r.cost)]),
+      ...PROJ.months.filter(mo => PROJ.water.has(mo)).map(mo => {
+        const p = PROJ.water.get(mo);
+        return [monthLabel(mo) + ' (proj.)', fmtInt(p.usage), fmtInt(p.usage * GAL_PER_CUFT), fmtMoney0(p.cost)];
+      }),
+    ]);
 
     const eRows = months.filter(mo => elecM.has(mo)).map(mo => elecM.get(mo));
-    columnChart($('elecChart'), eRows.map(r => ({
+    columnChart($('elecChart'), [...eRows.map(r => ({
       label: monthShort(r.month),
       tipTitle: monthLabel(r.month),
       tipRows: [
@@ -481,12 +615,17 @@
         { label: 'Bill', value: fmtMoney(r.cost) },
       ],
       segments: [{ name: 'Electricity', value: r.kwh, color: UTIL.elec.color }],
-    })), { height: 200 });
-    fillTable('elecTable', ['Month', 'kWh', 'Avg temp', 'Bill'], eRows.map(r =>
-      [monthLabel(r.month), fmtInt(r.kwh), r.avgTempF.toFixed(1) + '°F', fmtMoney(r.cost)]));
+    })), ...projItems(PROJ.elec, UTIL.elec.color, fmtInt, 'kWh')], { height: 200 });
+    fillTable('elecTable', ['Month', 'kWh', 'Avg temp', 'Bill'], [
+      ...eRows.map(r => [monthLabel(r.month), fmtInt(r.kwh), r.avgTempF.toFixed(1) + '°F', fmtMoney(r.cost)]),
+      ...PROJ.months.filter(mo => PROJ.elec.has(mo)).map(mo => {
+        const p = PROJ.elec.get(mo);
+        return [monthLabel(mo) + ' (proj.)', fmtInt(p.usage), null, fmtMoney0(p.cost)];
+      }),
+    ]);
 
     const gRows = months.filter(mo => gasM.has(mo)).map(mo => gasM.get(mo));
-    columnChart($('gasChart'), gRows.map(r => ({
+    columnChart($('gasChart'), [...gRows.map(r => ({
       label: monthShort(r.month),
       tipTitle: monthLabel(r.month),
       tipRows: [
@@ -495,9 +634,14 @@
         { label: 'Bill', value: r.cost != null ? fmtMoney(r.cost) : 'n/a' },
       ],
       segments: [{ name: 'Gas', value: r.dth, color: UTIL.gas.color }],
-    })), { height: 200 });
-    fillTable('gasTable', ['Month', 'Dth', 'Weather-adj. Dth', 'Bill'], gRows.map(r =>
-      [monthLabel(r.month), fmt1(r.dth), fmt1(r.dthWeatherAdj), r.cost != null ? fmtMoney(r.cost) : null]));
+    })), ...projItems(PROJ.gas, UTIL.gas.color, fmt1, 'Dth')], { height: 200 });
+    fillTable('gasTable', ['Month', 'Dth', 'Weather-adj. Dth', 'Bill'], [
+      ...gRows.map(r => [monthLabel(r.month), fmt1(r.dth), fmt1(r.dthWeatherAdj), r.cost != null ? fmtMoney(r.cost) : null]),
+      ...PROJ.months.filter(mo => PROJ.gas.has(mo)).map(mo => {
+        const p = PROJ.gas.get(mo);
+        return [monthLabel(mo) + ' (proj.)', fmt1(p.usage), null, fmtMoney0(p.cost)];
+      }),
+    ]);
   }
 
   function renderYoy(key, chartId, legendId, tableId, map, getVal, yFormat, tipFormat, color) {
@@ -577,6 +721,7 @@
   function renderAll() {
     renderKpis();
     renderSpend();
+    renderProjections();
     renderUsageCards();
     renderYoy('water', 'waterYoy', 'waterYoyLegend', 'waterYoyTable', waterM,
       r => r.cubicFeet, fmtInt, v => `${fmtInt(v)} cu ft`, UTIL.water.color);
