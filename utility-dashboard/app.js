@@ -108,6 +108,25 @@
     return parts.every(p => p != null) ? parts.reduce((a, b) => a + b, 0) : null;
   };
 
+  // ---------- monthly spend target ----------
+  const actualTotal = mo => {
+    const parts = [waterM.get(mo)?.cost, elecM.get(mo)?.cost, gasM.get(mo)?.cost];
+    return parts.every(p => p != null) ? parts.reduce((a, b) => a + b, 0) : null;
+  };
+
+  function defaultTarget() {
+    const totals = Array.from({ length: 12 }, (_, i) => actualTotal(addMonths(lastMonth, -i)))
+      .filter(t => t != null);
+    if (!totals.length) return 0;
+    return Math.round(totals.reduce((a, b) => a + b, 0) / totals.length / 25) * 25;
+  }
+
+  const TARGET_KEY = 'utilityDashboard.targetMonthly';
+  {
+    const saved = Number(localStorage.getItem(TARGET_KEY));
+    state.target = Number.isFinite(saved) && saved > 0 ? saved : defaultTarget();
+  }
+
   // ---------- DOM helpers ----------
   const $ = id => document.getElementById(id);
 
@@ -207,7 +226,7 @@
   function columnChart(container, items, opts) {
     const c = baseChart(container, opts.height || 220, { t: 12, r: 8, b: 26, l: opts.left || 46 });
     const totals = items.map(d => d.segments.reduce((s, g) => s + (g.value || 0), 0));
-    const { max: yMax, step } = niceMax(Math.max(...totals, 1e-9), opts.yTicks || 4);
+    const { max: yMax, step } = niceMax(Math.max(...totals, opts.refLine?.value || 0, 1e-9), opts.yTicks || 4);
     drawYAxis(c, yMax, step, opts.yFormat || fmtInt);
 
     const n = items.length;
@@ -240,6 +259,14 @@
         c.svg.append(t);
       }
     });
+
+    if (opts.refLine?.value > 0) {
+      const y = yOf(opts.refLine.value);
+      c.svg.append(svgEl('line', { x1: c.m.l, x2: c.m.l + c.iw, y1: y, y2: y, class: 'ref-line' }));
+      const t = svgEl('text', { x: c.m.l + c.iw - 2, y: y - 6, 'text-anchor': 'end', class: 'ref-label' });
+      t.textContent = opts.refLine.label;
+      c.svg.append(t);
+    }
 
     // hit targets: the full column slot, keyboard focusable
     items.forEach((d, i) => {
@@ -534,7 +561,20 @@
         ],
       };
     });
-    columnChart($('spendChart'), items, { height: 250, yFormat: fmtMoney0, left: 52 });
+    columnChart($('spendChart'), items, {
+      height: 250, yFormat: fmtMoney0, left: 52,
+      refLine: state.target > 0 ? { value: state.target, label: 'Target ' + fmtMoney0(state.target) } : null,
+    });
+    // over/under note for the last 12 actual months
+    if (state.target > 0) {
+      const last12 = Array.from({ length: 12 }, (_, i) => actualTotal(addMonths(lastMonth, -i))).filter(t => t != null);
+      const over = last12.filter(t => t > state.target).length;
+      const projOver = PROJ.months.map(projTotal).filter(t => t != null && t > state.target).length;
+      $('targetNote').textContent =
+        `${over} of the last ${last12.length} months over target; ${projOver} of the next ${PROJ.months.length} projected over.`;
+    } else {
+      $('targetNote').textContent = '';
+    }
     legend('spendLegend', [
       { label: 'Water', color: UTIL.water.color },
       { label: 'Gas', color: UTIL.gas.color },
@@ -732,6 +772,17 @@
     renderScatters();
     renderDaily();
   }
+
+  // ---------- target input ----------
+  const targetInput = $('targetInput');
+  targetInput.value = state.target || '';
+  targetInput.addEventListener('change', () => {
+    const v = Number(targetInput.value);
+    state.target = Number.isFinite(v) && v > 0 ? v : 0;
+    if (state.target > 0) localStorage.setItem(TARGET_KEY, String(state.target));
+    else localStorage.removeItem(TARGET_KEY);
+    renderSpend();
+  });
 
   // ---------- filters ----------
   $('filters').addEventListener('click', e => {

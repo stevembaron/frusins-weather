@@ -25,6 +25,10 @@
       <section class="card">
         <h2>Monthly spend</h2>
         <p class="caption">Total billed per month, stacked by utility; lighter bars are projected. Electricity billing starts Jun 2024 and gas Aug 2023 — earlier bars are water only.</p>
+        <div class="target-control">
+          <label>Monthly target $<input id="targetInput" type="number" min="0" step="25" inputmode="numeric"></label>
+          <span id="targetNote"></span>
+        </div>
         <div class="chart" id="spendChart"></div>
         <div class="legend" id="spendLegend"></div>
         <details class="data-table" id="spendTable"><summary>View data</summary><div class="scroller"></div></details>

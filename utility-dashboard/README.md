@@ -7,7 +7,9 @@ Static site (vanilla JS, no build step), same pattern as the other apps in this 
 
 - **KPI tiles** — latest month's total spend and per-utility usage, each with a
   year-over-year delta and a 12-month sparkline.
-- **Monthly spend** — stacked columns (water / gas / electricity) per month.
+- **Monthly spend** — stacked columns (water / gas / electricity) per month, with an
+  editable monthly target line (defaults to the trailing-12-month average, saved in
+  the browser via `localStorage`) and an over/under count for past and projected months.
 - **Usage per utility** — monthly columns for cubic feet, kWh, and Dth.
 - **Year over year** — usage by calendar month with the current year highlighted
   against prior years.
