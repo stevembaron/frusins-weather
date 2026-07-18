@@ -2,20 +2,20 @@
 
 ## Act now
 
-- **Rossignol Rallybird Soul Pro + XP10 Bindings, 160cm (family) — $269.97** ([Evo](https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026)): watch-term brand, 40% off $449.95, in stock, flat since May 18 (2 months) — a confirmed floor, not a fake discount.
-- **Armada ARV 88 Skis 2025, 166cm (you) — $274.99** ([Evo](https://www.evo.com/products/253305-armada-arv-88-skis-2025)): exact fit, 54% off $599.95, in stock, flat since May 19 (2 months) confirming the floor.
-- **Atomic Maven 93 C Skis - Women's, 172cm (you) — $360.99** ([Evo](https://www.evo.com/products/254131-atomic-maven-93-c-skis-women-s-2025)): exact fit, in stock, 48% off $699.95 — brand-new listing (first seen July 10), no price history yet but worth grabbing before it moves.
+- **Armada ARV 88 Skis 2025, 166cm (you) — $274.99** ([Evo](https://www.evo.com/products/253305-armada-arv-88-skis-2025)): exact fit, 54% off $599.95, in stock, flat since May 19 (~2 months) confirming the floor, best price across 2 stores. Second (last) mention.
+- **Rossignol Rallybird Soul Pro + XP10 Bindings 2026, 160cm (family) — $269.97** ([Evo](https://www.evo.com/products/255545-rossignol-rallybird-soul-pro-skis-xp-10-bindings-2026)): watch-term brand, in stock, 40% off $449.95, flat since May 18 (~2 months). Second (last) mention.
+- **Line Skis Honey Badger 2026, 166cm (you) — $269.97** ([Evo](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)): exact fit, in stock, sitting at its tracked 90-day low ($269.97–$314.96), 40% off $449.95 — the cheapest it's been.
 
 ## Worth watching
 
-- **Black Diamond Helio Carbon 104, 160/166/172cm (family & you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): triple fit, 58% off $949.95, flat 2 months — Gear Room doesn't report stock, confirm before buying.
-- **Season Nexus Skis 2026 (used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): 60% off $749.95, in stock, flat 2 months.
-- **2026 Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-ripstick-102-black-edition-a858b)): watch-term brand, exact fit, 52% off, flat since June 19 — Lone Pine doesn't report stock, confirm before buying.
-- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, in stock, top of its own range ($399.99–$424.99) — buy if it cycles down.
-- **Stio Divide Half Zip, size S — $42.67** ([Geartrade](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)): watch-term brand, 52% off $88.90, flat 2 months, comfortably under budget. Second (last) mention.
+- **2024 Dynastar Menace 80, 168cm (you) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, exact fit, 65% off $430, flat since May 22 (~8 weeks) — Lone Pine doesn't report stock, confirm before buying.
+- **K2 Mindbender 115 C Alliance + Marker Squire 11 Demo Bindings 2020 (used), 172cm (you) — $309.97** ([Evo](https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used)): exact fit, in stock, 64% off $849.95, bindings included.
+- **Black Diamond Helio Carbon 104, 160/166/172cm (family & you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): triple fit, 58% off $949.95, flat 2 months — Gear Room doesn't report stock, confirm before buying. Second (last) mention.
+- **2026 Elan Women's Ripstick 100, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, 52% off $799.99, flat since June 19 (~4 weeks) — Lone Pine doesn't report stock, confirm before buying.
+- **Stio Full-Zip Shacket, size M — $79.17** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, 58% off $188.50, flat since June 27 (~3 weeks), comfortably under budget.
 
 ## Notes
 
-- Dropping after the two-mention cap, all unchanged: Dynastar M-Pro 99 W ($119.99), Salomon Stance 88 ($249.99), Nordica Santa Ana 104 Free ($359.99), Black Diamond Impulse TI 104 ($424.95), K2 Mindbender 99Ti Demo ($449.99), Elan Ripstick 102 Mens Demo ($474.95), and Stio Eddy Shirt LS ($48.92).
+- Dropping after the two-mention cap: Stio Divide Half Zip ($42.67, Geartrade).
 - Zag skis stay muted per preferences and are excluded throughout.
-- CampSaver backcountry skis failed to load today (anti-bot block) — no data from that source.
+- CampSaver backcountry skis failed to load again today (anti-bot block) — no data from that source.
