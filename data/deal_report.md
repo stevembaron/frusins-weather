@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-07-20T19:55:17+00:00
+Generated: 2026-07-21T12:02:25+00:00
 Deals found: 272
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -60,7 +60,7 @@ Deals found: 272
 10. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
    $314.99 was $899.00 (65.0% off) - Evo skis price ascending
    Price trend: Same as prior day
-   Sizes: 168 cm
+   Sizes: 178 cm
    Stock: In stock
 
 11. [K2 Mindbender 115 C Alliance Skis + Marker Squire 11 Demo Bindings 2020 - Used](https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used)
