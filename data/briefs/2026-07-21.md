@@ -2,20 +2,17 @@
 
 ## Act now
 
-- **Stio Full-Zip Shacket, size M — $76.00** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, dropped $3.17 today to a new 90-day low ($76.00–$85.50), 60% off $190 — Geartrade doesn't report stock, confirm before buying.
-- **Line Skis Honey Badger 2026, 155cm (family) — $269.97** ([Evo](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)): in stock, back at its tracked 90-day low ($269.97–$314.96), 40% off $449.95 — now shown in the family size (155cm) instead of your 166cm from before.
-- **Stio Pinedale Joggers, size S — $66.25** ([Geartrade](https://geartrade.com/products/stio-pinedale-joggers-mens-1687998)): watch-term brand, at its 90-day low ($66.25–$71.55), 58% off $157.74, comfortably under the $100 cap — Geartrade doesn't report stock, confirm before buying.
+- **Stio Full-Zip Shacket, size M — $76.00** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, down $3.17 today to a new 90-day low ($76.00–$85.50), 60% off $190 — Geartrade doesn't report stock, confirm before buying.
+- **Salomon Stance 88 Womens Skis, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): exact fit, 64% off $699.95, flat since May 18 (~2 months, so a settled price rather than a fresh drop) — a genuinely deep discount that's gone unflagged so far; ERIK'S doesn't report stock, confirm before buying.
 
 ## Worth watching
 
-- **Nordica Santa Ana 104 Free Skis, 172cm (you) — $359.99** ([Evo](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)): watch-term brand, exact fit, in stock, 58% off $849.99 — but flat since May 18 with no tracked range, so not a confirmed floor, just a fair price if you don't want to wait.
-- **Elan Ripstick 94 Womens Demo 2026, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, in stock, top of its range ($374.99–$399.99) — buy if it cycles down to $374.99. Second (last) mention.
-- **Head Kore 87 Ti Womens Demo 2026, 156cm (family) — $374.99** ([Utah Skis](https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026)): in stock, top of its own range ($349.99–$374.99) — buy if it drops to $349.99.
-- **Stio Ashton Chambray Shirt, size S — $37.31** ([Geartrade](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)): watch-term brand, 71% off $128.66, flat since May 19 (~9 weeks), well under the $100 cap. Second (last) mention.
-- **Stio Skycrest Insulated Snap Shirt, size M — $99.50** ([Geartrade](https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089)): watch-term brand, 50% off $199, just under the $100 cap. Second (last) mention.
+- **Nordica Santa Ana 104 Free Skis, 172cm (you) — $359.99** ([Evo](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)): watch-term brand, exact fit, in stock, 58% off — still flat since May 18 with no tracked range, so not a confirmed floor. Second (last) mention.
+- **Head Kore 87 Ti Womens Demo 2026, 156cm (family) — $374.99** ([Utah Skis](https://utahskis.com/products/head-kore-87-ti-womens-demo-skis-2026)): in stock, sitting at the top of its own range ($349.99–$374.99) — buy if it cycles down to $349.99.
+- **2025 Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, 44% off $700, flat since May 22 — a fair but not exceptional discount; Lone Pine doesn't report stock, confirm before buying.
+- **Rossignol Sender Free 92 + Xpress 11 Bindings 2026, 156cm (family) — $349.98** ([Evo](https://www.evo.com/products/262705-rossignol-sender-free-92-skis-xpress-11-bindings-2026)): in stock, 50% off $699.95, flat since May 18 — solid price with bindings included, watching for it to move or for a size closer to your own to show up.
 
 ## Notes
 
-- Peak Skis Peak 98 by Dav (yesterday's exact-fit pick, 168cm/$314.99) now only lists 178cm — no longer fits; worth rechecking if 168cm returns.
-- Dropping after the two-mention cap, all unchanged: Dynastar M-Pro 99 W ($119.99), Völkl RTM 81 + bindings ($269.97), Line Honey Badger/Lone Pine ($229.99), Line Pandora 99 ($329.99), Elan Ripstick 96 Demo ($424.99), Rossignol Rallybird Soul 92 Xp11 Demo ($424.99).
-- Zag stays muted per preferences. CampSaver failed again today (anti-bot block), third day running.
+- CampSaver backcountry skis failed to load today (anti-bot block); its listings are missing from this brief.
+- Retiring after repeated mentions with no change: Stio Pinedale Joggers ($66.25), Stio Ashton Chambray Shirt ($37.31), Stio Skycrest Insulated Snap Shirt ($99.50), and the Elan Ripstick 94 Demo (154cm, $399.99) — all still available at the same prices if you want to revisit.
