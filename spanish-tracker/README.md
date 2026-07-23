@@ -1,40 +1,42 @@
 # Spanish 2 Progress Tracker
 
 A single-page calculator for tracking a student's progress through BYU Independent
-Study **Spanish 2** (two courses, 15 modules each) and seeing whether Molly is on pace
-to finish by a deadline.
+Study **Spanish 2** and seeing whether Molly is on pace to finish by a deadline.
 
 The two courses:
 
-- **Part 1 — SPAN 2A** ([SPAN-051](https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291))
-- **Part 2 — SPAN 2B** ([SPAN-043](https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394))
+- **Part 1 — SPAN 2A** ([SPAN-051](https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291)) — tracked by **module** (15 modules).
+- **Part 2 — SPAN 2B** ([SPAN-043](https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394)) — tracked by **lesson** (16 modules → 47 lessons), since that's where the real remaining work is.
 
 ## What it does
 
-- **Check off modules** with three states — not started → in progress → done — so a
-  half-finished module counts as half.
-- **Live snapshot**: modules done, modules left, days to the goal date, and the pace
-  (modules/week) Molly needs to keep.
+- **Check items off** with three states — not started → in progress → done — so a
+  half-finished item counts as half. Part 2 lessons show badges for their graded work,
+  with **100-point Speaking/Writing Tests, the Final Speaking Test, and the proctored
+  Final Exam flagged (⚑)** so the high-stakes pieces can't be missed.
+- **Live snapshot**: items done, items left, days to the goal date, and the pace Molly
+  needs to keep.
 - **This week's plan**: turns the required pace into a concrete to-do list — the next action
-  ("Next up: Module 6 — Travel Plans"), a weekly target with progress, and the exact modules
+  ("Next up: Module 3 · Lesson 2"), a weekly target with progress, and the exact lessons
   to tackle (checkable right from the plan).
-- **On track? (real pace)**: as she checks modules off, it logs the date and projects her
+- **On track? (real pace)**: as she checks items off, it logs the date and projects her
   finish from her *actual* pace, compares it to the goal, and flags a stall if nothing's been
   completed in a week.
 - **Headline banner** that turns green / amber / red based on how demanding that pace is.
-- **What-if calculator**: enter how many modules per week Molly can realistically do and it
+- **What-if calculator**: enter how many items per week Molly can realistically do and it
   projects her finish date, then tells you whether she beats the goal (and what pace she'd
   need if not).
-- **Big goal countdown** front-and-center (days until the finish-by date), a **day-streak
-  counter** that rewards steady work, and a **confetti burst** when she checks off a Unit
-  Review.
+- **Big goal countdown** front-and-center, a **day-streak counter** that rewards steady
+  work, and a **confetti burst** when she completes a flagged milestone (a Speaking/Writing
+  Test or the Final Exam).
 - **Withdrawal-deadline countdown** so the drop decision doesn't sneak up.
 - **Saves automatically** in the browser via `localStorage`. **Export / import** JSON to
   sync between a phone and a laptop.
 
 ## Defaults (edit anytime)
 
-- Seeded to Molly's real position: Part 1 Modules 1–5 done, Module 6 in progress.
+- Seeded to Molly's real position: **Part 1 complete**; **Part 2 through Module 3, Lesson 1
+  done, Module 3 Lesson 2 in progress**.
 - Goal date: **Aug 14, 2026** · Withdrawal deadline: **Jul 29, 2026**.
 
 ## Usage

@@ -189,6 +189,33 @@
       .status-btn.s-done .dot { background: var(--green); border-color: var(--green); }
       .status-btn:hover { border-color: var(--red); }
 
+      /* Nested modules → lessons (Part 2) */
+      .mod-group { border: 1px solid var(--line); border-radius: 11px; margin-top: 12px; overflow: hidden; }
+      .mod-group.mod-done { opacity: 0.72; }
+      .mod-head {
+        display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        background: #f7f8fa; padding: 9px 13px; font-weight: 700; font-size: 0.95rem;
+      }
+      .mod-group.mod-done .mod-head { background: var(--green-soft); }
+      .mod-count { font-size: 0.8rem; color: var(--muted); font-weight: 600; flex-shrink: 0; }
+      .lessons { list-style: none; margin: 0; padding: 0 13px; }
+      .lesson {
+        display: flex; align-items: center; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line);
+      }
+      .lesson:last-child { border-bottom: 0; }
+      .lesson .name { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+      .lesson.is-done .name { color: var(--muted); }
+
+      /* Assessment badges */
+      .badges { display: inline-flex; flex-wrap: wrap; gap: 5px; }
+      .badge {
+        font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 999px;
+        white-space: nowrap; border: 1px solid transparent;
+      }
+      .badge.b-minor { background: #f1f2f4; color: #7b8290; }
+      .badge.b-graded { background: var(--amber-soft); color: var(--amber); border-color: #f0d49a; }
+      .badge.b-major { background: var(--rose-soft); color: var(--red-dark); border-color: #f0b8bf; font-weight: 700; }
+
       /* Footer / settings */
       .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
       .tools button {
@@ -213,7 +240,7 @@
     <main>
       <header class="page-head">
         <h1><span class="flag">🇪🇸</span>Molly's Spanish 2 Progress Tracker</h1>
-        <p class="sub">BYU Independent Study · two courses, 30 modules · summer 2026</p>
+        <p class="sub">BYU Independent Study · Part 1 (15 modules) + Part 2 (47 lessons) · summer 2026</p>
       </header>
 
       <!-- HERO: COUNTDOWN + STREAK -->
@@ -296,7 +323,7 @@
       <section class="card" aria-labelledby="whatifHeading">
         <h2 id="whatifHeading">What-if calculator <span class="hint">— how fast does Molly need to go?</span></h2>
         <div class="whatif-row">
-          <label for="paceInput">Modules per week:</label>
+          <label for="paceInput">Items per week:</label>
           <input type="number" id="paceInput" min="0.5" max="14" step="0.5" />
           <div class="presets" id="presets"></div>
         </div>
@@ -325,8 +352,8 @@
       </section>
 
       <footer>
-        Tap a module's status button to cycle: not started → in progress → done.
-        Built for tracking BYU Independent Study Spanish 2.
+        Tap an item's status button to cycle: not started → in progress → done.
+        Part 1 counts by module; Part 2 counts by lesson. Built for tracking BYU Independent Study Spanish 2.
       </footer>
     </main>
 
@@ -338,6 +365,7 @@
           name: "Part 1 · SPAN 2A",
           code: "SPAN-051",
           url: "https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291",
+          flat: true,
           modules: [
             "1st Year Spanish, Part 1 Review",
             "1st Year Spanish, Part 2 Review",
@@ -361,22 +389,68 @@
           name: "Part 2 · SPAN 2B",
           code: "SPAN-043",
           url: "https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394",
-          modules: [
-            "Review",
-            "Biography",
-            "Celebrities",
-            "Unit 1 Review",
-            "Novels",
-            "Media",
-            "Unit 2 Review",
-            "Body",
-            "Healthcare",
-            "Health",
-            "Unit 3 Review",
-            "Childhood",
-            "Telling Stories",
-            "Unit 4 Review",
-            "SPAN 2B Review",
+          // Nested: each module has 3 lessons (Module 16 has 2). Assessments are graded
+          // items; tier "major" = 100-pt test / proctored final (flagged + confetti),
+          // "graded" = module quiz / project / discussion / assignment, "minor" = 5-pt práctica.
+          groups: [
+            { name: "Module 1 — Part 1 Review", lessons: [
+              { label: "Lesson 1" }, { label: "Lesson 2" }, { label: "Lesson 3" } ] },
+            { name: "Module 2 — Biography", lessons: [
+              { label: "Lesson 1" }, { label: "Lesson 2" }, { label: "Lesson 3" } ] },
+            { name: "Module 3 — Celebrities", lessons: [
+              { label: "Lesson 1" },
+              { label: "Lesson 2", a: [["Práctica quiz—Present Progressive", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Discussion—El mejor futbolista", 25, "graded"], ["Quiz—Module 3", 22, "graded"]] } ] },
+            { name: "Module 4 — Unit 1 Review", lessons: [
+              { label: "Lesson 1", a: [["Project—Celebrity Passion, Pt 1", 15, "graded"]] },
+              { label: "Lesson 2", a: [["Vocabulary Quiz—Unit 1", 18, "graded"], ["Reading Practice—Unit 1", 5, "minor"], ["Project—Celebrity Passion, Pt 2", 15, "graded"]] },
+              { label: "Lesson 3", a: [["Prepare for Speaking Test", 5, "minor"], ["Speaking Test—Unit 1", 100, "major"]] } ] },
+            { name: "Module 5 — Novels", lessons: [
+              { label: "Lesson 1" },
+              { label: "Lesson 2", a: [["Práctica quiz—Tipos de Películas", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Pronunciación quiz", 5, "minor"], ["Discussion—Vamos al cine", 20, "graded"], ["Quiz—Module 5", 18, "graded"]] } ] },
+            { name: "Module 6 — Media", lessons: [
+              { label: "Lesson 1" },
+              { label: "Lesson 2", a: [["Práctica quiz—Un canal de YouTube", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Pronunciación—Casual Conversation", 5, "minor"], ["Celebrity Interview", 25, "graded"]] } ] },
+            { name: "Module 7 — Unit 2 Review", lessons: [
+              { label: "Lesson 1" },
+              { label: "Lesson 2", a: [["Vocabulary Quiz—Unit 2", 12, "graded"]] },
+              { label: "Lesson 3", a: [["Project—Mi canal de YouTube", 15, "graded"], ["Prepare for Speaking Test—Unit 2", 5, "minor"], ["Speaking Test—Unit 2", 100, "major"]] } ] },
+            { name: "Module 8 — Body", lessons: [
+              { label: "Lesson 1", a: [["Práctica quiz—Direct Object Pronouns", 5, "minor"]] },
+              { label: "Lesson 2", a: [["Warm-Up quiz—Head, Shoulders…", 5, "minor"], ["Práctica quiz—El cuerpo", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Pronunciación—La visita al doctor", 5, "minor"], ["Guess Who", 5, "minor"], ["Quiz—Module 8", 22, "graded"]] } ] },
+            { name: "Module 9 — Health Care", lessons: [
+              { label: "Lesson 1", a: [["Práctica quiz—Pronouns", 5, "minor"]] },
+              { label: "Lesson 2", a: [["Práctica quiz—Los síntomas", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Remedies Around the World", 5, "minor"], ["Quiz—Module 9", 21, "graded"]] } ] },
+            { name: "Module 10 — Health", lessons: [
+              { label: "Lesson 1", a: [["Práctica quiz—Gustar", 5, "minor"]] },
+              { label: "Lesson 2", a: [["Práctica quiz—La salud", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Pronunciación—Ear Training", 5, "minor"], ["Top Ten Tips", 25, "graded"], ["Quiz—Module 10", 20, "graded"]] } ] },
+            { name: "Module 11 — Unit 3 Review", lessons: [
+              { label: "Lesson 1", a: [["Project—Bingo!", 15, "graded"]] },
+              { label: "Lesson 2", a: [["Vocabulary Quiz—Unit 3", 12, "graded"], ["Project—Reading Practice", 15, "graded"]] },
+              { label: "Lesson 3", a: [["Speaking Test—Unit 3", 100, "major"]] } ] },
+            { name: "Module 12 — Childhood", lessons: [
+              { label: "Lesson 1", a: [["Práctica quiz—Imperfect Tense", 5, "minor"]] },
+              { label: "Lesson 2" },
+              { label: "Lesson 3", a: [["Reflecting on the Past", 5, "minor"], ["Quiz—Module 12", 21, "graded"]] } ] },
+            { name: "Module 13 — Telling Stories", lessons: [
+              { label: "Lesson 1", a: [["Práctica quiz—Imperfect vs Preterit", 5, "minor"]] },
+              { label: "Lesson 2", a: [["Práctica quiz—Cuentos", 5, "minor"]] },
+              { label: "Lesson 3", a: [["Pronunciación—Lee conmigo", 5, "minor"], ["Storytelling Festival", 25, "graded"], ["Quiz—Module 13", 21, "graded"]] } ] },
+            { name: "Module 14 — Unit 4 Review", lessons: [
+              { label: "Lesson 1", a: [["Reading Practice—Unit 4", 5, "minor"], ["Project—The Reporter, Pt 1", 15, "graded"]] },
+              { label: "Lesson 2", a: [["Vocabulary Quiz—Unit 4", 12, "graded"], ["Project—The Reporter, Pt 2", 15, "graded"]] },
+              { label: "Lesson 3", a: [["Writing Test—Unit 4", 100, "major"]] } ] },
+            { name: "Module 15 — Part 2 Review", lessons: [
+              { label: "Lesson 1" }, { label: "Lesson 2" },
+              { label: "Lesson 3", a: [["Final Speaking Test", 100, "major"]] } ] },
+            { name: "Module 16 — Final Exam", lessons: [
+              { label: "Lesson 1 (Prep)" },
+              { label: "Lesson 2 (Exam)", a: [["Unproctored Practice Exam", 14.5, "graded"], ["Proctoring Acknowledgement Quiz", 5, "minor"], ["Proctored Final Exam", null, "major"]] } ] },
           ],
         },
       ];
@@ -386,21 +460,72 @@
       const STATUS_LABEL = { none: "Not started", prog: "In progress", done: "Done" };
       const WEIGHT = { none: 0, prog: 0.5, done: 1 };
 
+      // ---------- Normalized items ----------
+      // Flattens a course into checkable items. Part 1 (flat) counts modules; Part 2
+      // counts lessons. Each item: { key, label, groupName, title, code, assess, milestone }.
+      function courseItems(course) {
+        const out = [];
+        if (course.flat) {
+          course.modules.forEach((name, i) => {
+            out.push({
+              key: course.id + "-" + i,
+              label: name,
+              groupName: null,
+              title: name,
+              code: course.code,
+              assess: [],
+              milestone: isMilestone(name),
+            });
+          });
+        } else {
+          course.groups.forEach((g, gi) => {
+            g.lessons.forEach((les, li) => {
+              const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
+              out.push({
+                key: course.id + "-" + gi + "-" + li,
+                label: les.label,
+                groupName: g.name,
+                title: g.name + " · " + les.label,
+                code: course.code,
+                assess,
+                milestone: assess.some((x) => x.tier === "major"),
+              });
+            });
+          });
+        }
+        return out;
+      }
+      function allItems() {
+        return COURSES.reduce((acc, c) => acc.concat(courseItems(c)), []);
+      }
+      function findItem(key) {
+        return allItems().find((it) => it.key === key) || null;
+      }
+      function validKeys() {
+        const s = new Set();
+        allItems().forEach((it) => s.add(it.key));
+        return s;
+      }
+
       // ---------- Default state (reflects Molly's current progress) ----------
       function defaultState() {
         const status = {};
-        COURSES.forEach((c) => c.modules.forEach((_, i) => (status[c.id + "-" + i] = "none")));
-        // Part 1: Modules 1-5 done, Module 6 in progress (Molly's on Module 6, lesson 2)
-        for (let i = 0; i < 5; i++) status["p1-" + i] = "done";
-        status["p1-5"] = "prog";
+        allItems().forEach((it) => (status[it.key] = "none"));
+        // Part 1 (SPAN 2A) is fully complete.
+        courseItems(COURSES[0]).forEach((it) => (status[it.key] = "done"));
+        // Part 2: Modules 1–2 done, Module 3 Lesson 1 done, Module 3 Lesson 2 in progress.
+        ["p2-0-0", "p2-0-1", "p2-0-2", "p2-1-0", "p2-1-1", "p2-1-2", "p2-2-0"].forEach(
+          (k) => (status[k] = "done")
+        );
+        status["p2-2-1"] = "prog";
         return {
           status,
           goal: "both",
           targetDate: "2026-08-14",
           withdrawDate: "2026-07-29",
-          pace: 3,
-          activeDates: {}, // { "YYYY-MM-DD": true } — days Molly moved a module forward
-          doneDates: {}, // { "p1-2": "YYYY-MM-DD" } — when each module was marked done
+          pace: 6,
+          activeDates: {}, // { "YYYY-MM-DD": true } — days Molly moved an item forward
+          doneDates: {}, // { "p2-2-0": "YYYY-MM-DD" } — when each item was marked done
         };
       }
 
@@ -412,14 +537,24 @@
           if (!raw) return defaultState();
           const saved = JSON.parse(raw);
           const base = defaultState();
+          const valid = validKeys();
+          // Keep only saved statuses for keys that still exist (drops old flat Part 2 keys).
+          const status = base.status;
+          Object.keys(saved.status || {}).forEach((k) => {
+            if (valid.has(k)) status[k] = saved.status[k];
+          });
+          const doneDates = {};
+          Object.keys(saved.doneDates || {}).forEach((k) => {
+            if (valid.has(k)) doneDates[k] = saved.doneDates[k];
+          });
           return {
-            status: Object.assign(base.status, saved.status || {}),
+            status,
             goal: saved.goal || base.goal,
             targetDate: saved.targetDate || base.targetDate,
             withdrawDate: saved.withdrawDate || base.withdrawDate,
             pace: saved.pace != null ? saved.pace : base.pace,
             activeDates: saved.activeDates || {},
-            doneDates: saved.doneDates || {},
+            doneDates,
           };
         } catch (e) {
           return defaultState();
@@ -556,14 +691,13 @@
           daysSinceLast: dayDiff(last, today()),
         };
       }
-      // The list of not-done modules in scope order, and this week's target/progress.
+      // The list of not-done items in scope order, and this week's target/progress.
       function weekPlan(scope, t, daysLeft) {
         const list = [];
         scope.forEach((c) =>
-          c.modules.forEach((name, i) => {
-            const key = c.id + "-" + i;
-            const s = state.status[key] || "none";
-            if (s !== "done") list.push({ key, name, course: c, status: s, idx: i });
+          courseItems(c).forEach((it) => {
+            const s = state.status[it.key] || "none";
+            if (s !== "done") list.push(Object.assign({ status: s }, it));
           })
         );
         let weeklyTarget;
@@ -583,9 +717,9 @@
       function tally(courses) {
         let total = 0, done = 0, prog = 0, weighted = 0;
         courses.forEach((c) => {
-          c.modules.forEach((_, i) => {
+          courseItems(c).forEach((it) => {
             total++;
-            const s = state.status[c.id + "-" + i] || "none";
+            const s = state.status[it.key] || "none";
             if (s === "done") done++;
             if (s === "prog") prog++;
             weighted += WEIGHT[s];
@@ -627,8 +761,8 @@
 
         // Stat cards
         const stats = [
-          { num: t.done + (t.prog ? " + " + t.prog + "½" : ""), lbl: "Modules done", accent: false },
-          { num: round1(t.remaining), lbl: "Modules left", accent: true },
+          { num: t.done + (t.prog ? " + " + t.prog + "½" : ""), lbl: "Items done", accent: false },
+          { num: round1(t.remaining), lbl: "Items left", accent: true },
           { num: daysLeft != null ? Math.max(daysLeft, 0) : "—", lbl: "Days to goal", accent: false },
           {
             num: t.remaining <= 0 ? "0" : perWeekNeeded ? round1(perWeekNeeded) : "—",
@@ -706,7 +840,22 @@
       }
 
       function planStatusBtn(item) {
-        return `<button class="status-btn s-${item.status}" data-key="${item.key}" aria-label="${item.name}: ${STATUS_LABEL[item.status]}. Click to change."><span class="dot"></span>${STATUS_LABEL[item.status]}</button>`;
+        return `<button class="status-btn s-${item.status}" data-key="${item.key}" aria-label="${item.title}: ${STATUS_LABEL[item.status]}. Click to change."><span class="dot"></span>${STATUS_LABEL[item.status]}</button>`;
+      }
+      // Small badges for a lesson's graded items.
+      function badges(assess) {
+        if (!assess || !assess.length) return "";
+        return (
+          '<span class="badges">' +
+          assess
+            .map((x) => {
+              const pts = x.p != null ? " " + x.p + "pt" : "";
+              const label = x.tier === "major" ? "⚑ " + x.t + pts : x.t + pts;
+              return `<span class="badge b-${x.tier}" title="${x.t}${pts}">${label}</span>`;
+            })
+            .join("") +
+          "</span>"
+        );
       }
 
       function renderWeekPlan(scope, t, daysLeft) {
@@ -731,8 +880,7 @@
         // Next action
         if (p.nextUp) {
           nextEl.className = "next-up";
-          nextEl.innerHTML =
-            `<span class="tag">Next up</span><strong>${p.nextUp.course.code} · Module ${p.nextUp.idx + 1}</strong> — ${p.nextUp.name}`;
+          nextEl.innerHTML = `<span class="tag">Next up</span><strong>${p.nextUp.code} · ${p.nextUp.title}</strong>${badges(p.nextUp.assess)}`;
         } else {
           nextEl.className = "next-up done-state";
           nextEl.innerHTML = "Nothing left — great work!";
@@ -743,7 +891,7 @@
         const pct = p.weeklyTarget ? Math.min(100, (p.doneThisWeek / p.weeklyTarget) * 100) : 0;
         progEl.className = "week-progress" + (onTarget ? " on-target" : "");
         progEl.innerHTML =
-          `<strong>Goal this week: ${p.weeklyTarget} module${p.weeklyTarget === 1 ? "" : "s"}</strong> · done ${p.doneThisWeek} of ${p.weeklyTarget}` +
+          `<strong>Goal this week: ${p.weeklyTarget} item${p.weeklyTarget === 1 ? "" : "s"}</strong> · done ${p.doneThisWeek} of ${p.weeklyTarget}` +
           `<div class="wbar"><div style="width:${pct}%"></div></div>`;
 
         // To-do list
@@ -753,7 +901,7 @@
           listEl.innerHTML = p.planned
             .map(
               (m) =>
-                `<li><span class="p-course">${m.course.code.replace("SPAN-", "")}</span><span class="p-name">Module ${m.idx + 1} — ${m.name}</span>${planStatusBtn(m)}</li>`
+                `<li><span class="p-course">${m.code.replace("SPAN-", "")}</span><span class="p-name">${m.title}${badges(m.assess)}</span>${planStatusBtn(m)}</li>`
             )
             .join("");
         }
@@ -793,7 +941,7 @@
           }
         }
         el.className = "projection " + cls;
-        el.innerHTML = `Molly has completed <strong>${rp.completions} module${rp.completions === 1 ? "" : "s"}</strong> since ${fmtShort(
+        el.innerHTML = `Molly has completed <strong>${rp.completions} item${rp.completions === 1 ? "" : "s"}</strong> since ${fmtShort(
           rp.first
         )} — about <strong>${round1(perWeek)}/week</strong>. At that rate she'd finish the remaining <strong>${round1(
           t.remaining
@@ -804,7 +952,7 @@
         const el = document.getElementById("banner");
         if (t.remaining <= 0) {
           el.className = "banner good";
-          el.innerHTML = "🎉 <strong>All done!</strong> Every module in this goal is complete. ¡Felicidades!";
+          el.innerHTML = "🎉 <strong>All done!</strong> Every item in this goal is complete. ¡Felicidades!";
           return;
         }
         if (daysLeft == null) {
@@ -814,22 +962,22 @@
         }
         if (daysLeft <= 0) {
           el.className = "banner bad";
-          el.innerHTML = `⚠️ The goal date has passed with <strong>${round1(t.remaining)} modules</strong> still to go.`;
+          el.innerHTML = `⚠️ The goal date has passed with <strong>${round1(t.remaining)} items</strong> still to go.`;
           return;
         }
         const perWeek = round1(perWeekNeeded);
         const everyN = perDayNeeded ? Math.max(1, Math.round(1 / perDayNeeded)) : null;
         let cls = "good";
-        if (perWeekNeeded > 5) cls = "bad";
-        else if (perWeekNeeded > 3) cls = "warn";
+        if (perWeekNeeded > 10) cls = "bad";
+        else if (perWeekNeeded > 6) cls = "warn";
         el.className = "banner " + cls;
         const cadence =
           everyN && everyN <= 7
-            ? ` — about <strong>one module every ${everyN === 1 ? "day" : everyN + " days"}</strong>`
+            ? ` — about <strong>one every ${everyN === 1 ? "day" : everyN + " days"}</strong>`
             : "";
         el.innerHTML = `To finish by <strong>${fmtShort(parseDate(state.targetDate))}</strong>, Molly needs to complete <strong>${round1(
           t.remaining
-        )} modules</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
+        )} items</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
       }
 
       function renderProjection(t, now, target, withdraw) {
@@ -871,7 +1019,11 @@
         el.className = "projection " + cls;
         el.innerHTML = `At <strong>${pace}/week</strong>, Molly would finish the remaining <strong>${round1(
           t.remaining
-        )} modules</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
+        )} items</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
+      }
+
+      function statusBtnHtml(key, s, label) {
+        return `<button class="status-btn s-${s}" data-key="${key}" aria-label="${label}: ${STATUS_LABEL[s]}. Click to change."><span class="dot"></span>${STATUS_LABEL[s]}</button>`;
       }
 
       function renderCourse(course) {
@@ -879,27 +1031,52 @@
         const tc = tally([course]);
         const pctDone = (tc.done / tc.total) * 100;
         const pctProg = (tc.prog / tc.total) * 100;
-        const rows = course.modules
-          .map((name, i) => {
-            const key = course.id + "-" + i;
-            const s = state.status[key] || "none";
-            return `<li class="module ${s === "done" ? "is-done" : ""}">
-              <span class="idx">${i + 1}</span>
-              <span class="name">${name}</span>
-              <button class="status-btn s-${s}" data-key="${key}" aria-label="${name}: ${STATUS_LABEL[s]}. Click to change.">
-                <span class="dot"></span>${STATUS_LABEL[s]}
-              </button>
-            </li>`;
-          })
-          .join("");
+        const unit = course.flat ? "modules" : "lessons";
+        let body;
+        if (course.flat) {
+          const rows = courseItems(course)
+            .map((it, i) => {
+              const s = state.status[it.key] || "none";
+              return `<li class="module ${s === "done" ? "is-done" : ""}">
+                <span class="idx">${i + 1}</span>
+                <span class="name">${it.label}</span>
+                ${statusBtnHtml(it.key, s, it.label)}
+              </li>`;
+            })
+            .join("");
+          body = `<ul class="modules">${rows}</ul>`;
+        } else {
+          body = course.groups
+            .map((g, gi) => {
+              const states = g.lessons.map((_, li) => state.status[course.id + "-" + gi + "-" + li] || "none");
+              const done = states.filter((x) => x === "done").length;
+              const modDone = done === states.length;
+              const lessons = g.lessons
+                .map((les, li) => {
+                  const key = course.id + "-" + gi + "-" + li;
+                  const s = state.status[key] || "none";
+                  const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
+                  return `<li class="lesson ${s === "done" ? "is-done" : ""}">
+                    <span class="name">${les.label}${badges(assess)}</span>
+                    ${statusBtnHtml(key, s, g.name + " " + les.label)}
+                  </li>`;
+                })
+                .join("");
+              return `<div class="mod-group ${modDone ? "mod-done" : ""}">
+                <div class="mod-head"><span class="mod-name">${g.name}</span><span class="mod-count">${done}/${states.length}</span></div>
+                <ul class="lessons">${lessons}</ul>
+              </div>`;
+            })
+            .join("");
+        }
         el.innerHTML = `
           <div class="course-head">
             <h2>${course.name}</h2>
             <a href="${course.url}" target="_blank" rel="noopener">Open ${course.code} ↗</a>
           </div>
-          <div class="course-count">${tc.done} of ${tc.total} modules done${tc.prog ? " · " + tc.prog + " in progress" : ""}</div>
+          <div class="course-count">${tc.done} of ${tc.total} ${unit} done${tc.prog ? " · " + tc.prog + " in progress" : ""}</div>
           <div class="mini-bar"><div class="done" style="width:${pctDone}%"></div><div class="prog" style="width:${pctProg}%"></div></div>
-          <ul class="modules">${rows}</ul>`;
+          ${body}`;
       }
 
       // ---------- Events ----------
@@ -920,12 +1097,11 @@
         if (next === "done") state.doneDates[key] = isoOf(today());
         else if (cur === "done") delete state.doneDates[key];
 
-        // Celebrate finishing a Unit Review or course review.
+        // Celebrate finishing a milestone (Part 1 review module, or a Part 2 lesson
+        // containing a 100-pt test / final exam).
         if (next === "done") {
-          const [cid, idx] = key.split("-");
-          const course = COURSES.find((c) => c.id === cid);
-          const name = course && course.modules[Number(idx)];
-          if (name && isMilestone(name)) celebrate();
+          const it = findItem(key);
+          if (it && it.milestone) celebrate();
         }
         render();
       });
@@ -950,7 +1126,7 @@
       });
 
       // Pace presets
-      const PRESETS = [2, 3, 4, 5];
+      const PRESETS = [4, 6, 8, 10];
       function renderPresets() {
         document.getElementById("presets").innerHTML = PRESETS.map(
           (p) => `<button data-pace="${p}">${p}/wk</button>`
@@ -995,7 +1171,7 @@
         reader.readAsText(file);
       });
       document.getElementById("resetBtn").addEventListener("click", () => {
-        if (confirm("Reset everything back to the starting point (Part 1 through Module 6 in progress)?")) {
+        if (confirm("Reset everything back to the starting point (Part 1 done; Part 2 through Module 3, Lesson 2)?")) {
           state = defaultState();
           render();
           renderPresetsActive();
