@@ -101,7 +101,7 @@
       .card h2 .hint { font-weight: 400; font-size: 0.85rem; color: var(--muted); }
 
       /* Dates row */
-      .dates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .dates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
       .field { display: flex; flex-direction: column; gap: 5px; }
       .field label { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
       .field input, .field select {
@@ -240,7 +240,7 @@
     <main>
       <header class="page-head">
         <h1><span class="flag">🇪🇸</span>Molly's Spanish 2 Progress Tracker</h1>
-        <p class="sub">BYU Independent Study · Part 1 (15 modules) + Part 2 (47 lessons) · summer 2026</p>
+        <p class="sub">BYU Independent Study · Second-Year Spanish, Part 2 (SPAN 2B) · 47 lessons · summer 2026</p>
       </header>
 
       <!-- HERO: COUNTDOWN + STREAK -->
@@ -259,15 +259,6 @@
       <section class="card" aria-labelledby="datesHeading">
         <h2 id="datesHeading">Key dates &amp; goal</h2>
         <div class="dates">
-          <div class="field">
-            <label for="goalSelect">What needs to be done?</label>
-            <select id="goalSelect">
-              <option value="both">Both courses (Part 1 + Part 2)</option>
-              <option value="p1">Part 1 only (SPAN 2A)</option>
-              <option value="p2">Part 2 only (SPAN 2B)</option>
-            </select>
-            <span class="note">Pace below is calculated for this scope.</span>
-          </div>
           <div class="field">
             <label for="targetDate">Finish-by date (goal)</label>
             <input type="date" id="targetDate" />
@@ -330,9 +321,7 @@
         <p class="projection" id="projection"></p>
       </section>
 
-      <!-- COURSE 1 -->
-      <section class="card" id="course-p1"></section>
-      <!-- COURSE 2 -->
+      <!-- COURSE -->
       <section class="card" id="course-p2"></section>
 
       <!-- TOOLS -->
@@ -352,41 +341,18 @@
       </section>
 
       <footer>
-        Tap an item's status button to cycle: not started → in progress → done.
-        Part 1 counts by module; Part 2 counts by lesson. Built for tracking BYU Independent Study Spanish 2.
+        Tap a lesson's status button to cycle: not started → in progress → done.
+        Built for tracking BYU Independent Study Second-Year Spanish, Part 2.
       </footer>
     </main>
 
     <script>
       // ---------- Course data ----------
+      // Part 1 (SPAN 2A) is complete and no longer tracked here — this page tracks Part 2 only.
       const COURSES = [
         {
-          id: "p1",
-          name: "Part 1 · SPAN 2A",
-          code: "SPAN-051",
-          url: "https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291",
-          flat: true,
-          modules: [
-            "1st Year Spanish, Part 1 Review",
-            "1st Year Spanish, Part 2 Review",
-            "Past Events",
-            "Past Events 2",
-            "Unit 1 Review",
-            "Travel Plans",
-            "Transportation",
-            "Unit 2 Review",
-            "Plan a Vacation",
-            "Going On Vacation",
-            "Unit 3 Review",
-            "Plan a Holiday",
-            "Participate in a Holiday",
-            "Unit 4 Review",
-            "Course Review",
-          ],
-        },
-        {
           id: "p2",
-          name: "Part 2 · SPAN 2B",
+          name: "Second-Year Spanish, Part 2 · SPAN 2B",
           code: "SPAN-043",
           url: "https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394",
           // Nested: each module has 3 lessons (Module 16 has 2). Assessments are graded
@@ -461,8 +427,8 @@
       const WEIGHT = { none: 0, prog: 0.5, done: 1 };
 
       // ---------- Normalized items ----------
-      // Flattens a course into checkable items. Part 1 (flat) counts modules; Part 2
-      // counts lessons. Each item: { key, label, groupName, title, code, assess, milestone }.
+      // Flattens a course into checkable items. A "flat" course counts modules; a nested
+      // course counts lessons. Each item: { key, label, groupName, title, code, assess, milestone }.
       function courseItems(course) {
         const out = [];
         if (course.flat) {
@@ -511,8 +477,6 @@
       function defaultState() {
         const status = {};
         allItems().forEach((it) => (status[it.key] = "none"));
-        // Part 1 (SPAN 2A) is fully complete.
-        courseItems(COURSES[0]).forEach((it) => (status[it.key] = "done"));
         // Part 2: Modules 1–2 done, Module 3 Lesson 1 done, Module 3 Lesson 2 in progress.
         ["p2-0-0", "p2-0-1", "p2-0-2", "p2-1-0", "p2-1-1", "p2-1-2", "p2-2-0"].forEach(
           (k) => (status[k] = "done")
@@ -520,7 +484,6 @@
         status["p2-2-1"] = "prog";
         return {
           status,
-          goal: "both",
           targetDate: "2026-08-14",
           withdrawDate: "2026-07-29",
           pace: 6,
@@ -549,7 +512,6 @@
           });
           return {
             status,
-            goal: saved.goal || base.goal,
             targetDate: saved.targetDate || base.targetDate,
             withdrawDate: saved.withdrawDate || base.withdrawDate,
             pace: saved.pace != null ? saved.pace : base.pace,
@@ -662,8 +624,6 @@
 
       // ---------- Scope ----------
       function coursesInScope() {
-        if (state.goal === "p1") return COURSES.filter((c) => c.id === "p1");
-        if (state.goal === "p2") return COURSES.filter((c) => c.id === "p2");
         return COURSES;
       }
 
@@ -738,8 +698,7 @@
         const daysLeft = target ? dayDiff(now, target) : null;
         const weeksLeft = daysLeft != null ? daysLeft / 7 : null;
 
-        // Sync date/goal inputs
-        document.getElementById("goalSelect").value = state.goal;
+        // Sync date inputs
         document.getElementById("targetDate").value = state.targetDate;
         document.getElementById("withdrawDate").value = state.withdrawDate;
         document.getElementById("paceInput").value = state.pace;
@@ -780,8 +739,7 @@
         document.getElementById("barDone").style.width = pctDone + "%";
         document.getElementById("barProg").style.width = pctProg + "%";
         document.getElementById("progPct").textContent = Math.round(((t.weighted) / t.total) * 100) + "% complete";
-        document.getElementById("progLabel").textContent =
-          "Overall progress (" + (state.goal === "both" ? "both courses" : state.goal === "p1" ? "Part 1" : "Part 2") + ")";
+        document.getElementById("progLabel").textContent = "Overall progress (Part 2)";
 
         // Banner
         renderBanner(t, daysLeft, perWeekNeeded, perDayNeeded);
@@ -1097,8 +1055,7 @@
         if (next === "done") state.doneDates[key] = isoOf(today());
         else if (cur === "done") delete state.doneDates[key];
 
-        // Celebrate finishing a milestone (Part 1 review module, or a Part 2 lesson
-        // containing a 100-pt test / final exam).
+        // Celebrate finishing a milestone (a lesson containing a 100-pt test / final exam).
         if (next === "done") {
           const it = findItem(key);
           if (it && it.milestone) celebrate();
@@ -1106,10 +1063,6 @@
         render();
       });
 
-      document.getElementById("goalSelect").addEventListener("change", (e) => {
-        state.goal = e.target.value;
-        render();
-      });
       document.getElementById("targetDate").addEventListener("change", (e) => {
         state.targetDate = e.target.value;
         render();
@@ -1171,7 +1124,7 @@
         reader.readAsText(file);
       });
       document.getElementById("resetBtn").addEventListener("click", () => {
-        if (confirm("Reset everything back to the starting point (Part 1 done; Part 2 through Module 3, Lesson 2)?")) {
+        if (confirm("Reset everything back to the starting point (Part 2 through Module 3, Lesson 2)?")) {
           state = defaultState();
           render();
           renderPresetsActive();
