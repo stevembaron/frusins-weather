@@ -1,12 +1,11 @@
 # Spanish 2 Progress Tracker
 
-A single-page calculator for tracking a student's progress through BYU Independent
-Study **Spanish 2** and seeing whether Molly is on pace to finish by a deadline.
+A single-page calculator for tracking Molly's progress through the remaining BYU
+Independent Study Spanish course and seeing whether she's on pace to finish by a deadline.
 
-The two courses:
+- **Second-Year Spanish, Part 2 — SPAN 2B** ([SPAN-043](https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394)) — tracked by **lesson** (16 modules → 47 lessons).
 
-- **Part 1 — SPAN 2A** ([SPAN-051](https://is.byu.edu/catalog/course/SPAN-051/lbg:10000291)) — tracked by **module** (15 modules).
-- **Part 2 — SPAN 2B** ([SPAN-043](https://is.byu.edu/catalog/course/SPAN-043/lbg:10000394)) — tracked by **lesson** (16 modules → 47 lessons), since that's where the real remaining work is.
+Part 1 (SPAN 2A) is complete and no longer tracked here.
 
 ## What it does
 
@@ -35,8 +34,8 @@ The two courses:
 
 ## Defaults (edit anytime)
 
-- Seeded to Molly's real position: **Part 1 complete**; **Part 2 through Module 3, Lesson 1
-  done, Module 3 Lesson 2 in progress**.
+- Seeded to Molly's real position: **Part 2 through Module 3, Lesson 1 done, Module 3
+  Lesson 2 in progress**.
 - Goal date: **Aug 14, 2026** · Withdrawal deadline: **Jul 29, 2026**.
 
 ## Usage
