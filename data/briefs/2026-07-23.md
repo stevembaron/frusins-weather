@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Black Diamond Helio Carbon 104 — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): triple fit (160cm family, 166cm/172cm you), 58% off $949.95, flat for 2+ months confirming a real floor — second mention. Gear Room doesn't report stock, confirm before buying.
-- **2024 Dynastar Menace 80 — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, dual fit (158cm family, 168cm you), 65% off $430, flat since May 22 (~2 months) — a genuinely deep, settled price. Lone Pine doesn't report stock, confirm before buying.
-- **K2 Mindbender 115 C Alliance + Marker Squire 11 bindings (used) — $309.97** ([Evo](https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used)): exact fit (172cm you), in stock, 64% off $849.95 with bindings included, flat since May 18 — a settled, real price.
+- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** ([Evo](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)): watch-term brand, 83% off $699.95, in stock, flat since May 18 (~2 months) — a genuinely bottomed-out price, not hype.
+- **K2 Mindbender 115C Alliance + Marker Squire 11 bindings (used), 172cm (you) — $309.97** ([Evo](https://www.evo.com/products/258669-k2-mindbender-115-c-alliance-skis-marker-squire-11-demo-bindings-2020-used)): exact fit, in stock, 64% off $849.95 with bindings included, flat since May 18 — second mention, still a settled real price.
+- **Stio Hagen Trail Shirt, size S — $30.86** ([Geartrade](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)): watch-term brand, 76% off $128.58, flat since May 19 — Geartrade doesn't report stock, confirm before buying.
 
 ## Worth watching
 
-- **Scott Pure Free 90 Ti - Women's — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): triple fit (154cm/160cm family, 168cm you), 60% off $750, flat since May 19 — Gear Room doesn't report stock, confirm before buying.
-- **2026 Elan Ripstick 102 Black Edition — $479.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-ripstick-102-black-edition-a858b)): watch-term brand, exact fit (168cm you), 52% off $999.99, but close to the $500 cap with no tracked range — buy only if it drops further. Second mention.
-- **Elan Ripstick 88 Womens Demo 2026 — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-88-womens-demo-skis-2026)): watch-term brand, family fit (154cm), in stock, sitting at the top of its range ($399.99–$424.99) — buy if it cycles down to $399.99.
-- **2024 Atomic Bent 85 + M10 GW Bindings — $264.99** ([Evo](https://www.evo.com/products/238243-atomic-bent-85-skis-m10-gw-bindings-2024)): newly tracked today, family fit (160cm), in stock, 52% off $549.95 with bindings included — no price history yet to confirm a floor.
-- **Nordica Unleashed 90 Tree Skis 2024 — $225.00** ([Evo](https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024)): family fit (160cm), in stock, 50% off $449.99 — solid but not urgent.
+- **Black Diamond Helio Carbon 104, 160/166/172cm (family + you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): still 58% off and flat for 2+ months, but this is its third appearance — last call before it's retired; Gear Room doesn't report stock.
+- **Volkl RTM 81 + iPT bindings (used), 156cm (family) — $269.97** ([Evo](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)): in stock, 70% off $899, flat since June 9 — a strong alternative if the Act now picks don't fit.
+- **Stio Pinedale Joggers, size S — $63.60** ([Geartrade](https://geartrade.com/products/stio-pinedale-joggers-mens-1687998)): dropped to a new 90-day low (was $66.25), 60% off — worth another look after being retired at the old price.
+- **Nordica Santa Ana 92 Demo, sizes 150/155 (155 = family) — $399.99 at Utah Skis** ([listing](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, in stock, but $60 cheaper at Evo ($339.99) — buy there instead; Utah's copy sits at the top of its own range ($374.99–$399.99).
+- **Line Honey Badger 2026, 172cm (you) — $229.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-honey-badger-15f5a)): 49% off $449.99, exact fit — Lone Pine doesn't report stock, confirm before buying.
 
 ## Notes
 
-- CampSaver backcountry skis failed to load again today (anti-bot block), third straight day missing from the brief.
-- Peak Skis Peak 98 by Dav (previously flagged at 168cm you) now only lists 178cm — the size that fit has sold out.
-- Retiring after repeated mentions with no change: Salomon Stance 88 ($249.99), Stio Full-Zip Shacket ($76.00, three straight days at its low), Dynastar M-Pro 99 W ($119.99), and Nordica Santa Ana 104 Free ($359.99).
+- CampSaver backcountry skis blocked again today (anti-bot page), fourth straight day missing from the brief.
+- Retiring after repeated mentions with no change: Elan Ripstick 102 Black Edition ($479.99).
