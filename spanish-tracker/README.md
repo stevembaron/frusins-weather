@@ -31,8 +31,8 @@ Part 1 (SPAN 2A) is complete and no longer tracked here.
 
 ## Defaults (edit anytime)
 
-- Seeded to Molly's real position: **Part 2 through Module 3, Lesson 1 done, Module 3
-  Lesson 2 in progress**.
+- Seeded to Molly's real position: **Modules 1-3 complete; working in Module 4
+  (Unit 1 Review)**.
 - Goal date: **Aug 14, 2026** · Withdrawal deadline: **Jul 29, 2026**.
 
 ## Usage

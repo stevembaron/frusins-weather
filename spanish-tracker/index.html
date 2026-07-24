@@ -420,11 +420,11 @@
       function defaultState() {
         const status = {};
         allItems().forEach((it) => (status[it.key] = "none"));
-        // Part 2: Modules 1–2 done, Module 3 Lesson 1 done, Module 3 Lesson 2 in progress.
-        ["p2-0-0", "p2-0-1", "p2-0-2", "p2-1-0", "p2-1-1", "p2-1-2", "p2-2-0"].forEach(
-          (k) => (status[k] = "done")
+        // Modules 1–3 complete; she's now working in Module 4 (Unit 1 Review).
+        [0, 1, 2].forEach((gi) =>
+          COURSES[0].groups[gi].lessons.forEach((_, li) => (status["p2-" + gi + "-" + li] = "done"))
         );
-        status["p2-2-1"] = "prog";
+        status["p2-3-0"] = "prog";
         return {
           status,
           targetDate: "2026-08-14",
@@ -965,7 +965,7 @@
         reader.readAsText(file);
       });
       document.getElementById("resetBtn").addEventListener("click", () => {
-        if (confirm("Reset everything back to the starting point (Part 2 through Module 3, Lesson 2)?")) {
+        if (confirm("Reset everything back to the starting point (Modules 1–3 done, starting Module 4)?")) {
           state = defaultState();
           render();
           renderPresetsActive();
