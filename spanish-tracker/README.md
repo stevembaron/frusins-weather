@@ -9,20 +9,17 @@ Part 1 (SPAN 2A) is complete and no longer tracked here.
 
 ## What it does
 
-- **Check items off** with three states — not started → in progress → done — so a
-  half-finished item counts as half. Part 2 lessons show badges for their graded work,
+- **Check lessons off** with three states — not started → in progress → done — so a
+  half-finished lesson counts as half. Each lesson shows badges for its graded work,
   with **100-point Speaking/Writing Tests, the Final Speaking Test, and the proctored
   Final Exam flagged (⚑)** so the high-stakes pieces can't be missed.
-- **Live snapshot**: items done, items left, days to the goal date, and the pace Molly
+- **Live snapshot**: lessons done, lessons left, days to the goal date, and the pace Molly
   needs to keep.
-- **This week's plan**: turns the required pace into a concrete to-do list — the next action
-  ("Next up: Module 3 · Lesson 2"), a weekly target with progress, and the exact lessons
-  to tackle (checkable right from the plan).
-- **On track? (real pace)**: as she checks items off, it logs the date and projects her
+- **On track? (real pace)**: as she checks lessons off, it logs the date and projects her
   finish from her *actual* pace, compares it to the goal, and flags a stall if nothing's been
   completed in a week.
 - **Headline banner** that turns green / amber / red based on how demanding that pace is.
-- **What-if calculator**: enter how many items per week Molly can realistically do and it
+- **What-if calculator**: enter how many lessons per week Molly can realistically do and it
   projects her finish date, then tells you whether she beats the goal (and what pace she'd
   need if not).
 - **Big goal countdown** front-and-center, a **day-streak counter** that rewards steady

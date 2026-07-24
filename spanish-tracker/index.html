@@ -143,15 +143,6 @@
       .mini-bar .done { background: var(--green); }
       .mini-bar .prog { background: var(--gold); }
 
-      .modules { list-style: none; margin: 0; padding: 0; }
-      .module {
-        display: flex; align-items: center; gap: 12px; padding: 9px 4px;
-        border-bottom: 1px solid var(--line);
-      }
-      .module:last-child { border-bottom: 0; }
-      .module .idx { color: var(--muted); font-size: 0.82rem; width: 22px; flex-shrink: 0; text-align: right; }
-      .module .name { flex: 1; }
-      .module.is-done .name { color: var(--muted); }
       .status-btn {
         font: inherit; cursor: pointer; border: 1px solid var(--line); background: #fff;
         border-radius: 999px; padding: 6px 13px 6px 11px; min-width: 132px; text-align: left;
@@ -208,7 +199,8 @@
         .dates { grid-template-columns: 1fr; }
         .stats { grid-template-columns: repeat(2, 1fr); }
         .status-btn { min-width: 124px; }
-        .module .name { font-size: 0.95rem; }
+        .lesson .name { font-size: 0.95rem; }
+        .mod-head { font-size: 0.9rem; }
       }
     </style>
   </head>
@@ -279,8 +271,8 @@
       <section class="card" aria-labelledby="whatifHeading">
         <h2 id="whatifHeading">What-if calculator <span class="hint">— how fast does Molly need to go?</span></h2>
         <div class="whatif-row">
-          <label for="paceInput">Items per week:</label>
-          <input type="number" id="paceInput" min="0.5" max="14" step="0.5" />
+          <label for="paceInput">Lessons per week:</label>
+          <input type="number" id="paceInput" min="0.5" max="30" step="0.5" />
           <div class="presets" id="presets"></div>
         </div>
         <p class="projection" id="projection"></p>
@@ -324,7 +316,7 @@
           // items; tier "major" = 100-pt test / proctored final (flagged + confetti),
           // "graded" = module quiz / project / discussion / assignment, "minor" = 5-pt práctica.
           groups: [
-            { name: "Module 1 — Part 1 Review", lessons: [
+            { name: "Module 1 — Second-Year Spanish, Part 1 Review", lessons: [
               { label: "Lesson 1" }, { label: "Lesson 2" }, { label: "Lesson 3" } ] },
             { name: "Module 2 — Biography", lessons: [
               { label: "Lesson 1" }, { label: "Lesson 2" }, { label: "Lesson 3" } ] },
@@ -376,7 +368,7 @@
               { label: "Lesson 1", a: [["Reading Practice—Unit 4", 5, "minor"], ["Project—The Reporter, Pt 1", 15, "graded"]] },
               { label: "Lesson 2", a: [["Vocabulary Quiz—Unit 4", 12, "graded"], ["Project—The Reporter, Pt 2", 15, "graded"]] },
               { label: "Lesson 3", a: [["Writing Test—Unit 4", 100, "major"]] } ] },
-            { name: "Module 15 — Part 2 Review", lessons: [
+            { name: "Module 15 — Second-Year Spanish, Part 2 Review", lessons: [
               { label: "Lesson 1" }, { label: "Lesson 2" },
               { label: "Lesson 3", a: [["Final Speaking Test", 100, "major"]] } ] },
             { name: "Module 16 — Final Exam", lessons: [
@@ -396,34 +388,20 @@
       // course counts lessons. Each item: { key, label, groupName, title, code, assess, milestone }.
       function courseItems(course) {
         const out = [];
-        if (course.flat) {
-          course.modules.forEach((name, i) => {
+        course.groups.forEach((g, gi) => {
+          g.lessons.forEach((les, li) => {
+            const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
             out.push({
-              key: course.id + "-" + i,
-              label: name,
-              groupName: null,
-              title: name,
+              key: course.id + "-" + gi + "-" + li,
+              label: les.label,
+              groupName: g.name,
+              title: g.name + " · " + les.label,
               code: course.code,
-              assess: [],
-              milestone: isMilestone(name),
+              assess,
+              milestone: assess.some((x) => x.tier === "major"),
             });
           });
-        } else {
-          course.groups.forEach((g, gi) => {
-            g.lessons.forEach((les, li) => {
-              const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
-              out.push({
-                key: course.id + "-" + gi + "-" + li,
-                label: les.label,
-                groupName: g.name,
-                title: g.name + " · " + les.label,
-                code: course.code,
-                assess,
-                milestone: assess.some((x) => x.tier === "major"),
-              });
-            });
-          });
-        }
+        });
         return out;
       }
       function allItems() {
@@ -458,31 +436,37 @@
       }
 
       // ---------- State load/save ----------
+      // Merges saved/imported data onto a fresh default, dropping any keys that no longer
+      // exist in the course (e.g. the old Part 1 / flat-structure keys). Used by both
+      // localStorage load and file import so a stale backup can't corrupt the stats.
+      function sanitize(saved) {
+        const base = defaultState();
+        if (!saved || typeof saved !== "object") return base;
+        const valid = validKeys();
+        const status = base.status;
+        Object.keys(saved.status || {}).forEach((k) => {
+          if (valid.has(k) && STATUSES.indexOf(saved.status[k]) !== -1) status[k] = saved.status[k];
+        });
+        const doneDates = {};
+        Object.keys(saved.doneDates || {}).forEach((k) => {
+          // Only keep dates for keys that exist AND are actually marked done.
+          if (valid.has(k) && status[k] === "done") doneDates[k] = saved.doneDates[k];
+        });
+        return {
+          status,
+          targetDate: saved.targetDate || base.targetDate,
+          withdrawDate: saved.withdrawDate || base.withdrawDate,
+          pace: Number(saved.pace) > 0 ? Number(saved.pace) : base.pace,
+          activeDates: saved.activeDates && typeof saved.activeDates === "object" ? saved.activeDates : {},
+          doneDates,
+        };
+      }
       let state = loadState();
       function loadState() {
         try {
           const raw = localStorage.getItem(STORAGE_KEY);
           if (!raw) return defaultState();
-          const saved = JSON.parse(raw);
-          const base = defaultState();
-          const valid = validKeys();
-          // Keep only saved statuses for keys that still exist (drops old flat Part 2 keys).
-          const status = base.status;
-          Object.keys(saved.status || {}).forEach((k) => {
-            if (valid.has(k)) status[k] = saved.status[k];
-          });
-          const doneDates = {};
-          Object.keys(saved.doneDates || {}).forEach((k) => {
-            if (valid.has(k)) doneDates[k] = saved.doneDates[k];
-          });
-          return {
-            status,
-            targetDate: saved.targetDate || base.targetDate,
-            withdrawDate: saved.withdrawDate || base.withdrawDate,
-            pace: saved.pace != null ? saved.pace : base.pace,
-            activeDates: saved.activeDates || {},
-            doneDates,
-          };
+          return sanitize(JSON.parse(raw));
         } catch (e) {
           return defaultState();
         }
@@ -514,10 +498,6 @@
       }
       function fmtShort(d) {
         return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
-      }
-      function plural(n, word) {
-        const r = Math.round(n * 10) / 10;
-        return r + " " + word + (r === 1 ? "" : "s");
       }
       function isoOf(date) {
         return (
@@ -567,9 +547,6 @@
       }
 
       // ---------- Milestones & confetti ----------
-      function isMilestone(name) {
-        return /unit \d+ review/i.test(name) || /course review/i.test(name) || /2b review/i.test(name);
-      }
       function celebrate() {
         if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const colors = ["#b22234", "#f0a500", "#2e8b57", "#3a7bd5", "#d4515f", "#ffd166"];
@@ -656,8 +633,8 @@
 
         // Stat cards
         const stats = [
-          { num: t.done + (t.prog ? " + " + t.prog + "½" : ""), lbl: "Items done", accent: false },
-          { num: round1(t.remaining), lbl: "Items left", accent: true },
+          { num: round1(t.weighted) + " / " + t.total, lbl: "Lessons done", accent: false },
+          { num: round1(t.remaining), lbl: "Lessons left", accent: true },
           { num: daysLeft != null ? Math.max(daysLeft, 0) : "—", lbl: "Days to goal", accent: false },
           {
             num: t.remaining <= 0 ? "0" : perWeekNeeded ? round1(perWeekNeeded) : "—",
@@ -780,7 +757,7 @@
           }
         }
         el.className = "projection " + cls;
-        el.innerHTML = `Molly has completed <strong>${rp.completions} item${rp.completions === 1 ? "" : "s"}</strong> since ${fmtShort(
+        el.innerHTML = `Molly has completed <strong>${rp.completions} lesson${rp.completions === 1 ? "" : "s"}</strong> since ${fmtShort(
           rp.first
         )} — about <strong>${round1(perWeek)}/week</strong>. At that rate she'd finish the remaining <strong>${round1(
           t.remaining
@@ -791,7 +768,7 @@
         const el = document.getElementById("banner");
         if (t.remaining <= 0) {
           el.className = "banner good";
-          el.innerHTML = "🎉 <strong>All done!</strong> Every item in this goal is complete. ¡Felicidades!";
+          el.innerHTML = "🎉 <strong>All done!</strong> Every lesson in this goal is complete. ¡Felicidades!";
           return;
         }
         if (daysLeft == null) {
@@ -801,7 +778,7 @@
         }
         if (daysLeft <= 0) {
           el.className = "banner bad";
-          el.innerHTML = `⚠️ The goal date has passed with <strong>${round1(t.remaining)} items</strong> still to go.`;
+          el.innerHTML = `⚠️ The goal date has passed with <strong>${round1(t.remaining)} lessons</strong> still to go.`;
           return;
         }
         const perWeek = round1(perWeekNeeded);
@@ -816,7 +793,7 @@
             : "";
         el.innerHTML = `To finish by <strong>${fmtShort(parseDate(state.targetDate))}</strong>, Molly needs to complete <strong>${round1(
           t.remaining
-        )} items</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
+        )} lessons</strong> in <strong>${daysLeft} days</strong> — that's <strong>${perWeek} per week</strong>${cadence}.`;
       }
 
       function renderProjection(t, now, target, withdraw) {
@@ -829,7 +806,7 @@
         }
         if (pace <= 0) {
           el.className = "projection";
-          el.textContent = "Enter how many modules Molly can realistically do each week.";
+          el.textContent = "Enter how many lessons Molly can realistically do each week.";
           return;
         }
         const weeksNeeded = t.remaining / pace;
@@ -858,7 +835,7 @@
         el.className = "projection " + cls;
         el.innerHTML = `At <strong>${pace}/week</strong>, Molly would finish the remaining <strong>${round1(
           t.remaining
-        )} items</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
+        )} lessons</strong> around <strong>${fmtDate(finish)}</strong>.${verdict}${withdrawNote}`;
       }
 
       function statusBtnHtml(key, s, label) {
@@ -870,50 +847,34 @@
         const tc = tally([course]);
         const pctDone = (tc.done / tc.total) * 100;
         const pctProg = (tc.prog / tc.total) * 100;
-        const unit = course.flat ? "modules" : "lessons";
-        let body;
-        if (course.flat) {
-          const rows = courseItems(course)
-            .map((it, i) => {
-              const s = state.status[it.key] || "none";
-              return `<li class="module ${s === "done" ? "is-done" : ""}">
-                <span class="idx">${i + 1}</span>
-                <span class="name">${it.label}</span>
-                ${statusBtnHtml(it.key, s, it.label)}
-              </li>`;
-            })
-            .join("");
-          body = `<ul class="modules">${rows}</ul>`;
-        } else {
-          body = course.groups
-            .map((g, gi) => {
-              const states = g.lessons.map((_, li) => state.status[course.id + "-" + gi + "-" + li] || "none");
-              const done = states.filter((x) => x === "done").length;
-              const modDone = done === states.length;
-              const lessons = g.lessons
-                .map((les, li) => {
-                  const key = course.id + "-" + gi + "-" + li;
-                  const s = state.status[key] || "none";
-                  const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
-                  return `<li class="lesson ${s === "done" ? "is-done" : ""}">
-                    <span class="name">${les.label}${badges(assess)}</span>
-                    ${statusBtnHtml(key, s, g.name + " " + les.label)}
-                  </li>`;
-                })
-                .join("");
-              return `<div class="mod-group ${modDone ? "mod-done" : ""}">
-                <div class="mod-head"><span class="mod-name">${g.name}</span><span class="mod-count">${done}/${states.length}</span></div>
-                <ul class="lessons">${lessons}</ul>
-              </div>`;
-            })
-            .join("");
-        }
+        const body = course.groups
+          .map((g, gi) => {
+            const states = g.lessons.map((_, li) => state.status[course.id + "-" + gi + "-" + li] || "none");
+            const done = states.filter((x) => x === "done").length;
+            const modDone = done === states.length;
+            const lessons = g.lessons
+              .map((les, li) => {
+                const key = course.id + "-" + gi + "-" + li;
+                const s = state.status[key] || "none";
+                const assess = (les.a || []).map(([t, p, tier]) => ({ t, p, tier }));
+                return `<li class="lesson ${s === "done" ? "is-done" : ""}">
+                  <span class="name">${les.label}${badges(assess)}</span>
+                  ${statusBtnHtml(key, s, g.name + " " + les.label)}
+                </li>`;
+              })
+              .join("");
+            return `<div class="mod-group ${modDone ? "mod-done" : ""}">
+              <div class="mod-head"><span class="mod-name">${g.name}</span><span class="mod-count">${done}/${states.length}</span></div>
+              <ul class="lessons">${lessons}</ul>
+            </div>`;
+          })
+          .join("");
         el.innerHTML = `
           <div class="course-head">
             <h2>${course.name}</h2>
             <a href="${course.url}" target="_blank" rel="noopener">Open ${course.code} ↗</a>
           </div>
-          <div class="course-count">${tc.done} of ${tc.total} ${unit} done${tc.prog ? " · " + tc.prog + " in progress" : ""}</div>
+          <div class="course-count">${tc.done} of ${tc.total} lessons done${tc.prog ? " · " + tc.prog + " in progress" : ""}</div>
           <div class="mini-bar"><div class="done" style="width:${pctDone}%"></div><div class="prog" style="width:${pctProg}%"></div></div>
           ${body}`;
       }
@@ -994,8 +955,7 @@
         const reader = new FileReader();
         reader.onload = () => {
           try {
-            const data = JSON.parse(reader.result);
-            state = Object.assign(defaultState(), data);
+            state = sanitize(JSON.parse(reader.result));
             render();
             renderPresetsActive();
           } catch (err) {
