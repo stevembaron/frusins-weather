@@ -2,19 +2,19 @@
 
 ## Act now
 
-- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, exact family fit, 44% off $700, flat since May 22 (~9 weeks) — a settled real price, not hype; second mention. Lone Pine doesn't report stock, confirm before buying.
-- **Atomic Bent 85 Skis + M10 GW Bindings 2024, 160cm (family) — $264.99** ([Evo](https://www.evo.com/products/238243-atomic-bent-85-skis-m10-gw-bindings-2024)): new to the feed (first seen 3 days ago), in stock, 52% off $549.95 with bindings included — real value, not an inflated-MSRP discount.
-- **Stio Eddy Shirt SS, size M — $51.57** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, just dropped $1.98 to a new 90-day low ($51.57–$53.55) — a genuine fresh move, not stale.
+- **Atomic Bent 85 Skis + M10 GW Bindings 2024, 160cm (family) — $264.99** ([Evo](https://www.evo.com/products/238243-atomic-bent-85-skis-m10-gw-bindings-2024)): in stock, 52% off $549.95 with bindings included — real value, not an inflated-MSRP discount; second mention.
+- **Stio Eddy Shirt SS, size M — $51.57** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, holding at its fresh 90-day low ($51.57–$53.55) after a recent $1.98 drop — second mention.
 
 ## Worth watching
 
-- **Season Nexus Skis (used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): in stock, 60% off $749.95, flat since May 18 — solid backup if the Act now picks sell out.
-- **Rossignol Rallybird Soul 92 Demo, 156cm (family)/166cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)): watch-term brand, in stock, dual fit, but sitting at the top of its own 90-day range ($399.99–$424.99) — buy if it cycles back down.
-- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, exact fit, in stock, also at the top of its range ($399.99–$424.99) — wait for a dip.
-- **K2 Mindbender 90C W Demo, 154/160cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/k2-mindbender-90c-w-quick-clik-womens-demo-skis-2026)): in stock, dual family fit, top of its range ($374.99–$399.99) — buy if it drops toward $375.
-- **Stio Full-Zip Shacket, size M — $76.00** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): at its 90-day low ($76.00–$85.50), 60% off — second mention, still worth grabbing.
+- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, flat since May 22 (~9 weeks) — third mention, a settled price that isn't moving; last call here before we stop tracking it, buy now if you want it. Lone Pine doesn't report stock.
+- **Nordica Santa Ana 92 Womens Demo, 155cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, in stock, but $60 cheaper at Evo ($339.99, per the feed's cross-store note) — buy there instead; second mention.
+- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, exact fit, in stock, still at the top of its range ($399.99–$424.99) — buy if it dips toward $400; second mention.
+- **Elan Ripstick 94 Demo, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, in stock, unchanged at the top of its range — buy below $380; second mention.
+- **K2 Mindbender 90C W Demo, 154/160cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/k2-mindbender-90c-w-quick-clik-womens-demo-skis-2026)): in stock, dual family fit, top of its range ($374.99–$399.99) — buy near $375; second mention.
 
 ## Notes
 
-- CampSaver backcountry skis blocked again today (anti-bot page) — eighth straight day missing from the brief.
-- Retiring after repeated unchanged mentions: Nordica Santa Ana 104 Free, 172cm ($359.99) and Stio Ashton Chambray Shirt, size S ($37.31) — both still listed if worth a fresh look later.
+- Today's scrape is identical to the last archived brief (also dated July 26) — no real price movement since; today's picks are a continuation, not new news.
+- CampSaver backcountry skis blocked again (anti-bot page) — ninth straight day missing.
+- Retiring after repeated unchanged mentions: Season Nexus Skis ($299.98), Rossignol Rallybird Soul 92 Demo ($424.99), and Stio Full-Zip Shacket ($76.00) — all still listed if worth a fresh look later.
