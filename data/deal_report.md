@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-07-25T19:33:21+00:00
+Generated: 2026-07-26T11:39:20+00:00
 Deals found: 271
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -59,7 +59,7 @@ Deals found: 271
 
 10. [Rossignol Experience 80 CA Skis + XP 11 Bindings 2025 - Used](https://www.evo.com/products/255539-rossignol-experience-80-ca-skis-xp-11-bindings-2025-used)
    $239.99 was $649.95 (63.1% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 174 cm
    Stock: In stock
 
