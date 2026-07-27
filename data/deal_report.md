@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-07-27T13:23:09+00:00
-Deals found: 271
+Generated: 2026-07-27T19:53:47+00:00
+Deals found: 272
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -147,10 +147,10 @@ Deals found: 271
    Sizes: 172cm
 
 
-25. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
-   $199.97 was $449.99 (55.6% off) - Evo skis price ascending
-   Price trend: Same as prior day
-   Sizes: 152 cm
+25. [Elan Playmaker 111 Demo Skis 2026](https://utahskis.com/products/elan-playmaker-111-demo-skis-2026)
+   $399.99 was $999.99 (60.0% off) - Utah Skis demo skis sale
+   Price trend: Down $25.00 (5.9%) since prior day
+   Sizes: 180
    Stock: In stock
 
 
