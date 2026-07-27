@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-26T19:32:46+00:00",
+  "generated_at": "2026-07-27T13:22:21+00:00",
   "deal_count": 9,
   "sources_checked": 1,
   "price_history_count": 384,
-  "price_change_count": 1,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Stio Hagen Trail Shirt - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "S"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 66.0,
       "savings": 286.85,
       "score": 118.04,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "M"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 60.0,
       "savings": 114.0,
       "score": 106.98,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "M"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 60.0,
       "savings": 95.4,
       "score": 102.58,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "S"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "S"
       ],
@@ -158,17 +158,17 @@
       "discount_percent": 57.0,
       "savings": 68.36,
       "score": 93.06,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1785050991&width=460",
       "is_cached": false,
-      "previous_price": 53.55,
-      "price_change": -1.98,
-      "price_change_percent": -3.7,
-      "price_trend": "down",
+      "previous_price": 51.57,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
       "lowest_price": 51.57,
       "highest_price": 53.55
@@ -182,7 +182,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "M"
       ],
@@ -206,7 +206,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-07-26T19:32:44+00:00",
+      "found_at": "2026-07-27T13:22:19+00:00",
       "sizes": [
         "S"
       ],
