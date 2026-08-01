@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-07-31T19:50:30+00:00
+Generated: 2026-08-01T11:36:42+00:00
 Deals found: 275
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -41,7 +41,7 @@ Deals found: 275
 
 7. [Faction Prodigy 2 Skis + Strive 11 Demo Bindings 2024 - Used](https://www.evo.com/products/275608-faction-prodigy-2-skis-strive-11-demo-bindings-2024-used)
    $260.40 was $744.00 (65.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 165 cm
    Stock: In stock
 
@@ -143,7 +143,7 @@ Deals found: 275
 
 24. [K2 Mindbender 108Ti Skis + Marker Griffon 13 TCX Demo Bindings 2024 - Used](https://www.evo.com/products/274364-k2-mindbender-108ti-skis-marker-griffon-13-tcx-demo-bindings-2024-used)
    $395.98 was $989.94 (60.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 179 cm
    Stock: In stock
 
