@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-01T19:31:24+00:00",
+  "generated_at": "2026-08-02T11:36:05+00:00",
   "deal_count": 9,
   "sources_checked": 1,
   "price_history_count": 389,
-  "price_change_count": 0,
+  "price_change_count": 1,
   "deals": [
     {
       "title": "Stio Hagen Trail Shirt - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "S"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 67.0,
       "savings": 287.92,
       "score": 119.16,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "M"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 62.0,
       "savings": 118.83,
       "score": 110.25,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "M"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 62.0,
       "savings": 99.44,
       "score": 105.64,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "S"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "S"
       ],
@@ -153,24 +153,24 @@
       "title": "Stio Eddy Shirt SS - Men's",
       "url": "https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 51.57,
-      "original_price": 119.93,
-      "discount_percent": 57.0,
-      "savings": 68.36,
-      "score": 93.06,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "current_price": 49.58,
+      "original_price": 118.05,
+      "discount_percent": 58.0,
+      "savings": 68.47,
+      "score": 94.13,
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1785305720&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1785655642&width=460",
       "is_cached": false,
       "previous_price": 51.57,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -1.99,
+      "price_change_percent": -3.9,
+      "price_trend": "down",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
-      "lowest_price": 51.57,
+      "lowest_price": 49.58,
       "highest_price": 53.55
     },
     {
@@ -182,7 +182,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "M"
       ],
@@ -206,7 +206,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-08-01T19:31:22+00:00",
+      "found_at": "2026-08-02T11:36:03+00:00",
       "sizes": [
         "S"
       ],
