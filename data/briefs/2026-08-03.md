@@ -2,17 +2,17 @@
 
 ## Act now
 
-- Nothing clears the bar today — no new lows, no fresh listings, and the strongest repeat candidates have already had their two mentions.
+- **Nordica Santa Ana 104 Free, 172cm (you) — $359.99** ([Evo](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)): watch-term brand, exact fit, in stock, 58% off $849.99 and flat since May 18 (~11 weeks) — a settled price, not a flash sale. First time surfacing.
 
 ## Worth watching
 
-- **Scott Pure Free 90 Ti Women's, 154/160cm (family) & 168cm (you) — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): triple-fit, 60% off, flat since May 19 (~11 weeks) — third mention, buy if still wanted; this retailer doesn't report stock or track history further.
-- **Elan Ripstick 100 W, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, 52% off — second day at this price, still no tracked history to confirm it's settled.
-- **Stio Eddy Shirt SS, size M — $49.58** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, holding at yesterday's fresh 90-day low ($49.58–$53.55) — buy if still wanted, unlikely to drop further in this tight a range.
-- **Rossignol Rallybird Soul 92 Xp11 Demo, 156/166cm — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)): watch-term brand, hits your size, but still parked at the *top* of its 90-day range ($399.99–$424.99) — wait for it to settle back near $399.99.
-- **Fischer Pulse Pro + RS9 bindings, 155/160cm (family) & 170cm (you) — $269.99** ([ERIK'S](https://www.eriksbikeshop.com/products/fischer-pulse-pro-skis-with-rs-9-bindings-2026-pr5a25873)): broad fit across both size groups, bindings included, but sitting at the top of its range ($225.00–$269.99) — buy if it drops back toward $225.
+- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, 44% off, flat since May 22 (~10 weeks) — buy if still wanted; no tracked history to confirm it won't go lower.
+- **Fischer Pulse Pro + RS9 bindings, 155/160cm (family) & 170cm (you) — $269.99** ([ERIK'S](https://www.eriksbikeshop.com/products/fischer-pulse-pro-skis-with-rs-9-bindings-2026-pr5a25873)): broad dual-group fit, bindings included, but still parked at the top of its 90-day range ($225.00–$269.99) — buy if it drops back toward $225.
+- **2024 Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, 65% off $430, flat since May 22 (~10 weeks) — cheapest Dynastar on the board; buy if still wanted.
+- **Stio Ashton Chambray Shirt, size S — $37.31** ([Geartrade](https://geartrade.com/products/stio-ashton-chambray-shirt-mens-1608918)): watch-term brand, 71% off, flat since May 19 (~11 weeks) — buy if still wanted, unlikely to drop further.
+- **Stio Hagen Trail Shirt, size S — $30.86** ([Geartrade](https://geartrade.com/products/stio-hagen-trail-shirt-mens-1034850)): watch-term brand, 76% off, flat ~11 weeks — cheapest clothing item on the board, no reason to wait if you want it.
 
 ## Notes
 
-- Retiring after repeated mentions with no fresh trigger: Dynastar M-Pro 99 W ($119.99), Line Honey Badger ($229.99), Stio Full-Zip Shacket ($72.83), Black Diamond Helio Carbon 104 ($399.00).
+- Retiring after two mentions with no fresh trigger: Elan Ripstick 100 W 168cm ($379.99), Rossignol Rallybird Soul 92 Xp11 Demo ($424.99, still stuck at the top of its range), Stio Eddy Shirt SS ($49.58, holding at its 90-day low but already pitched twice).
 - CampSaver and J Skis Secret Stash both blocked again today (403 Forbidden) — no data from either source.
