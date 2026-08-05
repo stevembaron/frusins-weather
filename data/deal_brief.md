@@ -2,19 +2,20 @@
 
 ## Act now
 
-- **Völkl RTM 81 + iPT WR XL 12 TCX bindings (used), 156cm (family) — $269.97** ([Evo](https://www.evo.com/products/259138-volkl-rtm-81-skis-ipt-wr-xl-12-tcx-gw-bindings-2018-used)): 70% off $899, in stock, skis and bindings together under $270 — still a strong value. Second day.
-- **Stio Pinedale Joggers, size S — $58.30** ([Geartrade](https://geartrade.com/products/stio-pinedale-joggers-mens-1687998)): watch-term brand, dropped $2.65 today to a fresh 90-day low ($58.30–$71.55) — real movement, not a stale discount.
-- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off $699.95, flat since May 18 (~11 weeks) — settled discount, exact fit. Second day.
+- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** ([Evo](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)): watch-term brand, 83% off $699.95, in stock, cheapest ski on the whole board — exact family fit, first time surfacing.
+- **Nordica Santa Ana 92 W Demo, 155cm (family) — $339.99 at Evo**, listed $399.99 at [Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026): watch-term brand, in stock, exact family fit — go to Evo, $60 cheaper for the same ski.
+- **Black Diamond Helio Carbon 104, 160cm (family) & 166/172cm (you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): 58% off $949.95, flat since May 18 (~11 weeks) — settled price that hits both size groups at once. Second appearance.
 
 ## Worth watching
 
-- **2026 Elan Ripstick 100 W, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, now flat for ~7 weeks — long enough to confirm this is a real settled price, not inflated MSRP.
-- **Stio Full-Zip Shacket, size M — $69.67** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, holding at its 90-day low ($69.67–$85.50) — still the move if wanted, no reason to wait further.
-- **2024 Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, 65% off, flat ~10 weeks, cheapest Dynastar on the board — buy if still wanted.
-- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, exact fit, but parked at the top of its range ($399.99–$424.99) — buy if it drops toward $400.
-- **Völkl Secret 102 W, 170cm (you) — $289.99** ([Evo](https://www.evo.com/products/227101-volkl-secret-102-skis-women-s-2023)): 64% off, exact fit, but only two days of tracking so far — wait for more history before treating this as a confirmed low.
+- **Stio Pinedale Joggers, S — $58.30** ([Geartrade](https://geartrade.com/products/stio-pinedale-joggers-mens-1687998)): holding at yesterday's fresh 90-day low, no further movement today — buy if still wanted.
+- **2026 Elan Ripstick 100 W, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, flat ~7 weeks — a settled price, not urgent.
+- **Elan Ripstick 94 W Demo, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, family fit, but parked at the top of its range ($374.99–$399.99) — buy if it drops toward $375.
+- **K2 Mindbender 99Ti Demo, 166/172cm (you) — $449.99** ([Utah Skis](https://utahskis.com/products/k2-mindbender-99ti-mens-demo-skis-2026)): dual-fit within your sizes, in stock, but top of its range ($424.99–$449.99) — buy if it drops toward $425.
+- **Atomic Backland 85 W, 157cm (family) — $349.97** ([Evo](https://www.evo.com/products/289329-atomic-backland-85-w-skis-women-s-2025)): 42% off, in stock, only ~1 week tracked — too early to confirm this is a real low, watching for history.
 
 ## Notes
 
-- Retiring after repeated mentions with no fresh trigger: Rossignol Rallybird Soul 92 Xp11 Demo ($424.99, still stuck at the top of its range), Fischer Pulse Pro + RS9 ($269.99, same top-of-range situation), Stio Hagen Trail Shirt ($30.86) and Stio Ashton Chambray Shirt ($37.31), both flat ~11 weeks.
-- CampSaver and J Skis Secret Stash blocked again today (403 Forbidden) — no data from either source for a third straight day.
+- Retiring after two strong mentions with no fresh trigger: Völkl RTM 81 + bindings ($269.97, flat since June) and Salomon Stance 88 W ($249.99, flat since May) — both still fairly priced if wanted, just nothing new to justify a third pitch.
+- Also retiring for the same reason: Dynastar Menace 80 ($150.00) and Stio Full-Zip Shacket ($69.67), both already flagged twice with unchanged prices.
+- CampSaver and J Skis Secret Stash still blocked (403 Forbidden) — no data from either source today.
