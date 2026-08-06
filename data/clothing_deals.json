@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-05T19:52:19+00:00",
-  "deal_count": 9,
+  "generated_at": "2026-08-06T12:20:50+00:00",
+  "deal_count": 11,
   "sources_checked": 1,
-  "price_history_count": 412,
-  "price_change_count": 1,
+  "price_history_count": 415,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Stio Environ Pant - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 68.0,
       "savings": 288.68,
       "score": 120.28,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "M"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 76.0,
       "savings": 97.72,
       "score": 119.81,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "S"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 71.0,
       "savings": 91.35,
       "score": 113.09,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "S"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 63.0,
       "savings": 118.63,
       "score": 111.26,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "M"
       ],
@@ -102,6 +102,54 @@
       "highest_price": 85.5
     },
     {
+      "title": "Stio Figment Bib Pant - Men's",
+      "url": "https://geartrade.com/products/stio-figment-bib-pant-mens-1706284",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 199.6,
+      "original_price": 499.0,
+      "discount_percent": 60.0,
+      "savings": 299.4,
+      "score": 111.01,
+      "found_at": "2026-08-06T12:20:48+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/9483cf4d-a83f-4f3e-962d-208a722aaf62.webp?v=1786009748&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-08-06T12:20:50+00:00",
+      "lowest_price": 199.6,
+      "highest_price": 199.6
+    },
+    {
+      "title": "Stio Figment Jacket - Men's",
+      "url": "https://geartrade.com/products/stio-figment-jacket-mens-1706265",
+      "source": "Geartrade Stio men's clothing",
+      "current_price": 211.6,
+      "original_price": 529.0,
+      "discount_percent": 60.0,
+      "savings": 317.4,
+      "score": 110.77,
+      "found_at": "2026-08-06T12:20:48+00:00",
+      "sizes": [
+        "M"
+      ],
+      "stock_status": null,
+      "image_url": "https://geartrade.com/cdn/shop/files/2491fbc3-101b-455d-a7bb-75cce303d757.webp?v=1786009594&width=460",
+      "is_cached": false,
+      "previous_price": null,
+      "price_change": null,
+      "price_change_percent": null,
+      "price_trend": "new",
+      "first_seen_at": "2026-08-06T12:20:50+00:00",
+      "lowest_price": 211.6,
+      "highest_price": 211.6
+    },
+    {
       "title": "Stio Pinedale Joggers - Men's",
       "url": "https://geartrade.com/products/stio-pinedale-joggers-mens-1687998",
       "source": "Geartrade Stio men's clothing",
@@ -110,17 +158,17 @@
       "discount_percent": 63.0,
       "savings": 99.27,
       "score": 106.65,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "S"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/70f17501-ea5a-4607-9349-1cccde0a95ea.webp?v=1785937625&width=460",
       "is_cached": false,
-      "previous_price": 60.95,
-      "price_change": -2.65,
-      "price_change_percent": -4.3,
-      "price_trend": "down",
+      "previous_price": 58.3,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
       "lowest_price": 58.3,
       "highest_price": 71.55
@@ -134,7 +182,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "S"
       ],
@@ -158,7 +206,7 @@
       "discount_percent": 58.0,
       "savings": 68.47,
       "score": 94.13,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "M"
       ],
@@ -182,7 +230,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "M"
       ],
@@ -206,7 +254,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-08-05T19:52:17+00:00",
+      "found_at": "2026-08-06T12:20:48+00:00",
       "sizes": [
         "S"
       ],
