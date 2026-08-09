@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Stio Eddy Shirt SS, M — $47.60** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, dropped $1.98 today to a fresh 90-day low, 60% off — real new-low news, not a repeat.
-- **Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): exact fit, 57% off, price has now held 3 straight days — trust confirmed, upgrading from watching.
-- **Nordica Unleashed 90 Tree, 160cm (family) — $225.00** ([Evo](https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024)): 50% off, in stock, flat ~12 weeks — settled clearance price. Second mention.
+- **Black Diamond Helio Carbon 104, 160cm (family) & 166/172cm (you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): 58% off $949.95, dual-fit across both size groups, flat at this price ~12 weeks — a settled clearance price, not an inflated teaser.
+- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off $699.95, exact fit, flat ~12 weeks — cheaper than the Stance 94 recently flagged, best price-to-fit today.
+- **Stio Eddy Shirt SS, M — $47.60** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, dropped $1.98 today to a fresh 90-day low, 60% off — real new-low news.
 
 ## Worth watching
 
-- **Rossignol Sender Soul 92 Demo, 156cm (family) & 166cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)): dual-fit, in stock, parked at top of range ($399.99–$424.99) — buy if it drops toward $400.
+- **Rossignol Sender Soul 92 Demo, 156cm (family) & 166cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)): dual-fit, in stock, top of range ($399.99–$424.99) — buy if it drops toward $400.
 - **K2 Mindbender 99Ti Demo, 166/172cm (you) — $449.99** ([Utah Skis](https://utahskis.com/products/k2-mindbender-99ti-mens-demo-skis-2026)): dual-fit within your sizes, in stock, top of range ($424.99–$449.99) — buy if it drops toward $425.
 - **Elan Ripstick 94 W Demo, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, in stock, top of range ($374.99–$399.99) — buy if it drops toward $375.
 - **Armada Arv 100 Demo, 172cm (you) — $399.99** ([Utah Skis](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)): exact fit, in stock, top of range ($374.99–$399.99) — buy if it drops toward $375.
-- **Stio Full-Zip Shacket, M — $69.67** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, 63% off, still at the bottom of its 90-day range ($69.67–$85.50) — buy if still wanted. Second mention.
+- **Nordica Santa Ana 92 W Demo, 155cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, but the same ski is $339.99 at Evo — check Evo first; Utah Skis price sits at top of range, buy there if it drops toward $375.
 
 ## Notes
 
-- Retiring Rossignol Rallybird Soul 92 Xp11 Demo ($424.99) after three Worth-watching mentions with no price movement — still fair if wanted.
-- Retiring Elan Ripstick 96 Demo ($424.99) and Line Pandora 99 ($329.99) after two mentions each with no fresh trigger — both still fairly priced if wanted.
+- Retiring Stio Full-Zip Shacket ($69.67) after two Worth-watching mentions with no fresh trigger — still a fair price at the bottom of its range if wanted.
 - CampSaver and J Skis Secret Stash both still blocked (403 Forbidden) — no data from either source today.
