@@ -2,19 +2,20 @@
 
 ## Act now
 
-- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off $699.95, exact fit, flat ~12 weeks — second day flagged, still the best price-to-fit on the board.
-- **Black Diamond Helio Carbon 104, 160cm (family) & 166/172cm (you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): 58% off $949.95, dual-fit across both size groups, flat ~12 weeks — second day flagged, a settled clearance price.
-- **Stio Eddy Shirt SS, M — $47.60** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, holding at yesterday's fresh 90-day low, 60% off — second day at this price, still worth grabbing.
+- **Scott Pure Free 90 Ti W, 154/160cm (family) & 168cm (you) — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): 60% off $750, dual-fit across both size groups, flat since May 19 — a genuine clearance price, not an inflated teaser.
+- **Line Pandora 99, 156cm (family) & 170cm (you) — $329.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-pandora-99-b52a2)): 49% off $649.99, dual-fit, flat since May 22 — settled price, second time flagged (first was Aug 8).
+- **Nordica Unleashed 90 Tree, 160cm (family) — $225.00** ([Evo](https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024)): 50% off $449.99, in stock, flat since May 18 — a real clearance low, second time flagged (first was Aug 8).
 
 ## Worth watching
 
-- **Nordica Santa Ana 92 W Demo, 155cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, but the same ski is $339.99 at Evo — buy there instead; at Utah Skis it's parked at the top of its range, only worth it if it drops toward $375.
-- **2026 Elan Women's Ripstick 100, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, 52% off, flat ~7 weeks — already looks settled; buy if still wanted.
-- **Armada Arv 100 Demo, 172cm (you) — $399.99** ([Utah Skis](https://utahskis.com/products/armada-arv-100-mens-demo-skis-2026)): exact fit, in stock, top of range ($374.99–$399.99) — buy if it drops toward $375.
-- **Elan Ripstick 94 W Demo, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, in stock, top of range ($374.99–$399.99) — buy if it drops toward $375.
+- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, top of its range ($399.99–$424.99) — buy if it drops toward $400.
+- **K2 Mindbender 99Ti Demo, 166/172cm (you) — $449.99** ([Utah Skis](https://utahskis.com/products/k2-mindbender-99ti-mens-demo-skis-2026)): dual-fit within your sizes, top of range ($424.99–$449.99) — buy if it drops toward $425.
+- **Rossignol Sender Soul 92 Demo, 156cm (family) & 166cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-sender-soul-92-xp11-mens-demo-skis-2026)): dual-fit, top of range ($399.99–$424.99) — buy if it drops toward $400.
+- **2026 Elan Women's Ripstick 100, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, 52% off, flat since June — already looks settled; buy if still wanted.
 - **Stio Skycrest Insulated Snap Shirt, M — $99.50** ([Geartrade](https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089)): watch-term brand, 50% off, just under the $100 cap — buy if still wanted, or wait for a dip below $90.
 
 ## Notes
 
-- Retiring Rossignol Rallybird Soul 92 Xp11 Demo ($424.99) after three days pitched with no price movement — still fine if wanted, not re-pitching further.
+- Retiring Salomon Stance 88 W ($249.99) and Black Diamond Helio Carbon 104 ($399.00) after two Act-now pitches each with no price movement — both still fair buys if wanted, not re-pitching further.
+- Retiring Stio Eddy Shirt SS ($47.60) after two Act-now mentions at its 90-day low with no fresh movement — still a good price if wanted.
 - CampSaver and J Skis Secret Stash both still blocked (403 Forbidden) — no data from either source today.
