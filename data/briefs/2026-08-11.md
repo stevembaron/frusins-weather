@@ -2,20 +2,19 @@
 
 ## Act now
 
-- **Stio Full-Zip Shacket, M — $66.50** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): dropped $3.17 today to a fresh 90-day low ($66.50–$85.50), 65% off — genuine new-low news, not a stale re-list.
-- **Scott Pure Free 90 Ti W, 154/160cm (family) & 168cm (you) — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): 60% off $750, dual-fit across both size groups, flat since May 19 — a settled clearance price, second time flagged (first was Aug 10).
-- **Line Honey Badger, 172cm (you) — $229.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-honey-badger-15f5a)): 49% off $449.99, exact fit, flat since May 22 (~11 weeks) — a genuine floor price, second time flagged (first was Aug 8).
+- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** ([Evo](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)): 83% off $699.95, in stock, flat since May 18 (~12 weeks) — a genuine clearance floor, not an inflated teaser; watch-term brand.
+- **Nordica Santa Ana 104 Free W, 172cm (you) — $359.99** ([Evo](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)): 58% off $849.99, in stock, flat since May 18 (~12 weeks) — watch-term brand, exact fit, settled clearance price.
+- **Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): 65% off $430, flat since May 22 (~11 weeks) — watch-term brand, matured clearance price.
 
 ## Worth watching
 
-- **Nordica Unleashed 90 Tree, 160cm (family) — $225.00** ([Evo](https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024)): 50% off, flat ~12 weeks — demoting from Act now after two pitches with no movement; grab it if still wanted, unlikely to go lower.
-- **Rossignol Rallybird Soul 92 Xp11 Demo, 156cm (family) & 166cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)): watch-term brand, dual-fit, parked at the top of its range ($399.99–$424.99) — buy if it drops toward $400.
-- **Elan Ripstick 94 W Demo, 154cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-94-womens-demo-skis-2026)): watch-term brand, top of range ($374.99–$399.99) — buy if it drops toward $375.
-- **Nordica Santa Ana 92 W Demo, 155cm (family) — $399.99 at Utah Skis, $339.99 at Evo**: watch-term brand, $60 cheaper at Evo — check there first; only worth buying at Utah if it drops toward $375.
-- **Stio Skycrest Insulated Snap Shirt, M — $99.50** ([Geartrade](https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089)): watch-term brand, 50% off, just under the $100 cap — buy if still wanted, or wait for a dip below $90.
+- **Elan Ripstick 100 W, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, flat since June 19 — settled price, buy if still wanted (second time flagged, first was Aug 10).
+- **Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-ripstick-102-black-edition-a858b)): watch-term brand, exact fit, right at the $500 cap, flat since June 19 — buy if it drops toward $450.
+- **Völkl Secret 102 W, 170cm (you) — $289.99** ([Evo](https://www.evo.com/products/227101-volkl-secret-102-skis-women-s-2023)): 64% off $799.99, in stock, only a week into tracking — good price now, or wait to see if it settles lower.
+- **Black Diamond Impulse TI 104 W, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): 50% off $849.95, flat since May 18 (~12 weeks) — settled clearance price, exact fit.
+- **Stio Full-Zip Shacket, M — $66.50** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, sitting at its 90-day low ($66.50–$85.50) — still worth grabbing (second time flagged).
 
 ## Notes
 
-- Retiring Line Pandora 99 ($329.99) and Rossignol Sender Soul 92 Demo ($424.99) after two prior pitches each with no price movement — both still fair buys if wanted.
-- Retiring Elan Ripstick 96 Demo ($424.99) after an Act-now (Aug 8) and a Worth-watching (Aug 10) mention with no movement — still fine at $424.99 if you want it.
-- CampSaver and J Skis Secret Stash both still blocked (403 Forbidden) — no data from either source today.
+- Retiring Rossignol Rallybird Soul 92 Demo ($424.99), Stio Skycrest Insulated Snap Shirt ($99.50), Elan Ripstick 94 W Demo ($399.99), Nordica Santa Ana 92 W Demo ($399.99, $339.99 at Evo), K2 Mindbender 99Ti Demo ($449.99), and Nordica Unleashed 90 Tree ($225.00) after two-plus pitches each with no price movement — all still fair buys if you want them.
+- J Skis Secret Stash still blocked (403 Forbidden) — no data from that source today.
