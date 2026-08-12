@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-11T19:17:36+00:00
-Deals found: 255
+Generated: 2026-08-12T11:12:02+00:00
+Deals found: 272
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -156,4 +156,5 @@ Deals found: 255
 
 ## Source Errors
 
+- CampSaver backcountry skis: HTTP Error 403: Forbidden; reader fallback failed: HTTP Error 403: Forbidden
 - J Skis Secret Stash: HTTP Error 403: Forbidden; reader fallback failed: HTTP Error 403: Forbidden
