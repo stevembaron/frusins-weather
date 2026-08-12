@@ -2,19 +2,17 @@
 
 ## Act now
 
-- **Dynastar M-Pro 99 W, 154cm (family) — $119.99** ([Evo](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)): 83% off $699.95, in stock, unchanged since first flagged Aug 11 — a settled clearance floor, watch-term brand.
-- **Nordica Santa Ana 104 Free W, 172cm (you) — $359.99** ([Evo](https://www.evo.com/products/242004-nordica-santa-ana-104-free-skis-women-s-2024)): 58% off $849.99, in stock, watch-term brand, exact fit — second day at this price in the brief.
-- **Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): 65% off $430, watch-term brand, matured clearance price — second day flagged.
+Nothing clears the bar today — the usual suspects (Dynastar M-Pro, Santa Ana 104, Dynastar Menace 80) have already had their two pitches with no price movement; see Notes.
 
 ## Worth watching
 
-- **Scott Pure Free 90 Ti W, 154/160cm (family) & 168cm (you) — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): 60% off $750, dual-fit across both size groups, flat ~12 weeks — settled price, buy if still wanted.
-- **Völkl Secret 102 W, 170cm (you) — $289.99** ([Evo](https://www.evo.com/products/227101-volkl-secret-102-skis-women-s-2023)): 64% off $799.99, in stock, over a week into tracking with no further drop — buy now or wait to see if it settles lower.
-- **Black Diamond Impulse TI 104 W, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): 50% off $849.95, exact fit, flat ~12 weeks — buy if still wanted.
-- **Stio Eddy Shirt LS, S — $48.92** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)): watch-term brand, 62% off, steady price for weeks — cheap and stable, buy if still wanted.
-- **Stio Divide Half Zip, S — $42.67** ([Geartrade](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)): watch-term brand, 52% off, steady price for weeks — buy if still wanted.
+- **Elan Ripstick 102 Black Edition, 168cm (you) — $479.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-ripstick-102-black-edition-a858b)): watch-term brand, exact fit, right at the $500 cap, flat since June 19 — buy if it drops toward $450 (second time flagged).
+- **Elan Ripstick 96 Demo, 168cm (you) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-96-demo-skis-2026)): watch-term brand, exact fit, sitting at the top of its 90-day range ($399.99–$424.99) — buy if it drops toward $400 (second time flagged).
+- **Elan Ripstick 88 Womens Demo, 154cm (family) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-88-womens-demo-skis-2026)): watch-term brand, family fit, top of its range ($399.99–$424.99) — buy if it drops toward $400.
+- **Stio Eddy Shirt LS, S — $48.92** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)): watch-term brand, 62% off, steady price for weeks — cheap and stable, buy if still wanted (second time flagged).
+- **Stio Divide Half Zip, S — $42.67** ([Geartrade](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)): watch-term brand, 52% off, steady price for weeks — buy if still wanted (second time flagged).
 
 ## Notes
 
-- Retiring Elan Ripstick 100 W ($379.99) and Stio Full-Zip Shacket ($66.50) after repeated flags with no price movement — still fair buys if wanted, not re-pitching further.
-- CampSaver and J Skis Secret Stash both still blocked (403 Forbidden) — no data from either source today.
+- Retiring Dynastar M-Pro 99 W ($119.99), Nordica Santa Ana 104 Free W ($359.99), Dynastar Menace 80 ($150.00), Völkl Secret 102 W ($289.99), Black Diamond Impulse TI 104 W ($424.95), and Scott Pure Free 90 Ti W ($299.99) after two-plus pitches each with no price movement — all still fair buys if wanted, not re-pitching further.
+- J Skis Secret Stash still blocked (403 Forbidden) — no data from that source today; CampSaver came back online.
