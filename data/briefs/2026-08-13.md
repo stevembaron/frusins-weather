@@ -2,21 +2,19 @@
 
 ## Act now
 
-- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): 44% off $700, flat since May 22 (~12 weeks) — a settled clearance floor, not an inflated teaser; watch-term brand, exact family fit.
-- **Line Honey Badger, 155cm (family) — $269.97** ([Evo](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)): in stock, sitting at its 90-day low ($269.97–$314.96) and trending down — real timing signal, exact family fit.
-- **Line Honey Badger, 172cm (you) — $229.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-honey-badger-15f5a)): 49% off $449.99, flat since May 22 — matured price, exact fit, cheapest of the two Honey Badger sizes tracked today.
+- **Nordica Santa Ana 92 W Demo, 155cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, exact family fit, in stock — but $60 cheaper at Evo ($339.99), which undercuts even Utah's own 90-day low ($374.99); buy at Evo.
+- **Line Honey Badger, 155cm (family) — $269.97** ([Evo](https://www.evo.com/products/266186-line-skis-honey-badger-skis-2026)): in stock, sitting at its 90-day low ($269.97–$314.96) — real timing signal, exact family fit (second time flagged).
+- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): 44% off $700, flat since May 22 (~12 weeks) — a settled clearance floor, watch-term brand, exact family fit (second time flagged).
 
 ## Worth watching
 
-- **Line Pandora 106, 155cm (family) — $349.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-pandora-106-b92ac)): 50% off $699.99, flat since May 22 — settled price, buy if still wanted.
-- **Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): 57% off $749.95, only a week into tracking (first seen Aug 7) — good price now, or wait to see if it settles lower.
-- **Atomic Maven 86 W+R M10 Demo, 159cm (family) — $349.99** ([Utah Skis](https://utahskis.com/products/atomic-maven-86-w-r-m10-gw-womens-demo-skis-2026)): sitting near the top of its 90-day range ($324.99–$349.99) — buy if it drops back toward $325.
-- **Season Nexus Skis (Used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): 60% off $749.95, flat since May 18 — fair price if the used condition works for you.
-- **Faction Prodigy 2, 171cm (you) — $378.00** ([The Gear Room](https://thegearroom.com/products/faction-prodigy-2)): 44% off $679 — fair absolute price, but every Faction model at this store is uniformly 44% off today, so treat it as storewide pricing, not special news.
+- **Stio Eddy Shirt SS, M — $47.60** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, exact size fit, sitting at its 90-day low ($47.60–$53.55) — cheap and stable, good buy.
+- **Line Honey Badger, 172cm (you) — $229.99** ([Lone Pine](https://lonepinegearx.com/products/2026-line-honey-badger-15f5a)): 49% off $449.99, flat since May 22 — matured clearance price, exact fit (second time flagged).
+- **Elan Ripstick 88 W Demo, 154cm (family) — $424.99** ([Utah Skis](https://utahskis.com/products/elan-ripstick-88-womens-demo-skis-2026)): watch-term brand, exact fit, back in stock after briefly disappearing — buy if it drops toward $400 (second time flagged).
+- **Black Diamond Helio Carbon 104, 160/166/172cm (fits both) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): 58% off $949.95, flat since May 18 — settled price, buy if still wanted.
+- **Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): 57% off $749.95, still early in tracking (first seen Aug 7) — good price now, or wait to see if it settles lower (second time flagged).
 
 ## Notes
 
-- Retiring Elan Ripstick 102 Black Edition, 168cm ($479.99, Lone Pine) after two prior pitches with no price movement — still a fair buy at the $500 cap if you want it.
-- Elan Ripstick 96 Demo and Ripstick 88 Demo (both Utah Skis), flagged in recent briefs, are no longer listed today.
+- Elan Ripstick 96 Demo, 168cm, $424.99 (Utah Skis) reappeared today after being reported gone yesterday — already pitched twice before, not re-pitching further; still fair if wanted.
 - CampSaver and J Skis Secret Stash both blocked again today (403 Forbidden) — no data from either source.
-- No new clothing deals today; the Stio items already flagged (Full-Zip Shacket, Eddy Shirt SS, Skycrest, Eddy Shirt LS, Divide Half Zip) are unchanged and past their pitch limit — still fair buys if wanted.
