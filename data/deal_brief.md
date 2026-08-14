@@ -2,18 +2,18 @@
 
 ## Act now
 
-- **Nordica Santa Ana 92 W Demo, 155cm (family) — $399.99** ([Utah Skis](https://utahskis.com/products/nordica-santa-ana-92-womens-demo-skis-2026)): watch-term brand, exact family fit, in stock — but still $60 cheaper at Evo ($339.99), which undercuts even Utah's own 90-day low ($374.99); buy at Evo (second time flagged).
+Nothing clears the bar today — no fresh 90-day lows, and the previous pick (Nordica Santa Ana 92 W Demo) has already had two pitches with no price movement; see Notes.
 
 ## Worth watching
 
-- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off $699.95, flat since May 18 (~12 weeks) — settled clearance price, exact fit, but no stock status listed; confirm availability before buying.
-- **Black Diamond Helio Carbon 104, 160/166/172cm (fits both) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): 58% off $949.95, flat since May 18 — settled price, buy if still wanted (second time flagged).
-- **Elan Ripstick 102 Mens Demo, 168cm (you) — $474.95** ([Utah Skis](https://utahskis.com/products/elan-ripstick-102-mens-demo-skis-2026)): watch-term brand, exact fit, but sitting at the top of its range ($449.95–$474.95) since May — buy if it drops toward $450.
-- **Atomic Backland 85 W, 157cm (family) — $349.97** ([Evo](https://www.evo.com/products/289329-atomic-backland-85-w-skis-women-s-2025)): 42% off $599.99, in stock, only two weeks into tracking — good price now, or wait to see if it settles lower.
-- **Stio Eddy Shirt SS, M — $47.60** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, exact fit, still at its 90-day low ($47.60–$53.55) — cheap and stable (second time flagged).
+- **Stio Skycrest Insulated Snap Shirt, M — $99.50** ([Geartrade](https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089)): watch-term brand, exact fit, 50% off and just under the $100 cap — new pick, buy if still wanted.
+- **Elan Ripstick 102 Mens Demo, 168cm (you) — $474.95** ([Utah Skis](https://utahskis.com/products/elan-ripstick-102-mens-demo-skis-2026)): watch-term brand, exact fit, but sitting at the top of its range ($449.95–$474.95) since May — buy if it drops toward $450 (second time flagged).
+- **Rossignol Rallybird Soul 92 Xp11 Demo, 156/166cm (fits you and family) — $424.99** ([Utah Skis](https://utahskis.com/products/rossignol-rallybird-soul-92-xp11-womens-demo-skis-2026)): watch-term brand, fits both size groups, but at the top of its range ($399.99–$424.99) — buy if it drops toward $400.
+- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off, flat since May 18 (~13 weeks) — settled clearance price, exact fit, still no stock status listed (second time flagged).
+- **Atomic Backland 85 W, 157cm (family) — $349.97** ([Evo](https://www.evo.com/products/289329-atomic-backland-85-w-skis-women-s-2025)): 42% off, in stock, exact fit (second time flagged).
 
 ## Notes
 
-- Retiring Line Honey Badger 172cm ($229.99), Rossignol Rallybird 94 Open 156cm ($389.97), and Salomon Stance 94 168cm ($319.99) after two-plus pitches each with no price movement — all still fair buys if wanted, not re-pitching further.
-- Several other previously-retired items (Dynastar M-Pro 99 W, Menace 80, Santa Ana 104 Free W, Ripstick 94/96/100 Demos, Stio Shacket/LS Shirt/Divide Half Zip) remain listed unchanged — no new signal.
+- Retiring Nordica Santa Ana 92 W Demo (Utah $399.99, cheaper at Evo for $339.99), Black Diamond Helio Carbon 104 ($399.00), Line Honey Badger 155cm ($269.97), and Stio Eddy Shirt SS M ($47.60) after two-plus pitches each with no price movement — all still fair buys if wanted.
+- The Gear Room's Faction lineup (Prodigy, Dancer, Studio, La Machine) is uniformly priced at ~44% off across every model — reads like a standing list price, not a real-time deal; not treating any as news.
 - CampSaver and J Skis Secret Stash both blocked again today (403 Forbidden) — no data from either source.
