@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-15T18:45:34+00:00",
+  "generated_at": "2026-08-16T10:43:11+00:00",
   "deal_count": 7,
   "sources_checked": 1,
   "price_history_count": 421,
-  "price_change_count": 0,
+  "price_change_count": 1,
   "deals": [
     {
       "title": "Stio Environ Pant - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 70.0,
       "savings": 303.08,
       "score": 122.4,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "M"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 65.0,
       "savings": 123.5,
       "score": 114.55,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "M"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 60.0,
       "savings": 317.4,
       "score": 110.77,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "M"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "S"
       ],
@@ -105,24 +105,24 @@
       "title": "Stio Eddy Shirt SS - Men's",
       "url": "https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 47.6,
-      "original_price": 119.0,
-      "discount_percent": 60.0,
-      "savings": 71.4,
-      "score": 96.9,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "current_price": 45.62,
+      "original_price": 120.05,
+      "discount_percent": 62.0,
+      "savings": 74.43,
+      "score": 99.7,
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1786260150&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1786864882&width=460",
       "is_cached": false,
       "previous_price": 47.6,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -1.98,
+      "price_change_percent": -4.2,
+      "price_trend": "down",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
-      "lowest_price": 47.6,
+      "lowest_price": 45.62,
       "highest_price": 53.55
     },
     {
@@ -134,7 +134,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "M"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-08-15T18:45:32+00:00",
+      "found_at": "2026-08-16T10:43:09+00:00",
       "sizes": [
         "S"
       ],
