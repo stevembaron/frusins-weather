@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-08-17T10:50:11+00:00
+Generated: 2026-08-17T18:55:23+00:00
 Deals found: 271
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -111,47 +111,47 @@ Deals found: 271
    Sizes: 158cm
 
 
-19. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
+19. [Rossignol Sender 94 Ti Skis 2024](https://www.evo.com/products/216288-rossignol-sender-94-ti-skis-2024)
+   $279.99 was $699.95 (60.0% off) - Evo skis price ascending
+   Price trend: Newly tracked
+   Sizes: 164 cm
+   Stock: In stock
+
+20. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
    $299.99 was $750.00 (60.0% off) - The Gear Room skis price ascending
    Price trend: Same as prior day
    Sizes: 154cm, 160cm, 168cm
 
 
-20. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
+21. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
    $299.98 was $749.95 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 158 cm
    Stock: In stock
 
-21. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
+22. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
    $339.99 was $849.99 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 179 cm
    Stock: In stock
 
-22. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
+23. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
    $380.00 was $948.95 (60.0% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 172cm
 
 
-23. [K2 Mindbender 108Ti Skis + Marker Griffon 13 TCX Demo Bindings 2024 - Used](https://www.evo.com/products/274364-k2-mindbender-108ti-skis-marker-griffon-13-tcx-demo-bindings-2024-used)
+24. [K2 Mindbender 108Ti Skis + Marker Griffon 13 TCX Demo Bindings 2024 - Used](https://www.evo.com/products/274364-k2-mindbender-108ti-skis-marker-griffon-13-tcx-demo-bindings-2024-used)
    $395.98 was $989.94 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 179 cm
    Stock: In stock
 
-24. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
+25. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
    $199.97 was $449.99 (55.6% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 152 cm
    Stock: In stock
-
-25. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
-   $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 164cm
-
 
 
 ## Source Errors
