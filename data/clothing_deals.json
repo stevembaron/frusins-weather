@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-17T18:55:11+00:00",
+  "generated_at": "2026-08-18T10:49:06+00:00",
   "deal_count": 7,
   "sources_checked": 1,
-  "price_history_count": 423,
-  "price_change_count": 0,
+  "price_history_count": 424,
+  "price_change_count": 1,
   "deals": [
     {
       "title": "Stio Environ Pant - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 70.0,
       "savings": 303.08,
       "score": 122.4,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "M"
       ],
@@ -33,24 +33,24 @@
       "title": "Stio Full-Zip Shacket - Men's",
       "url": "https://geartrade.com/products/stio-full-zip-shacket-mens-1685510",
       "source": "Geartrade Stio men's clothing",
-      "current_price": 66.5,
-      "original_price": 190.0,
-      "discount_percent": 65.0,
-      "savings": 123.5,
-      "score": 114.55,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "current_price": 63.33,
+      "original_price": 191.91,
+      "discount_percent": 67.0,
+      "savings": 128.58,
+      "score": 117.88,
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
-      "image_url": "https://geartrade.com/cdn/shop/files/f8854326-13e1-4091-9f71-3e4f7ee70f78.webp?v=1786441481&width=460",
+      "image_url": "https://geartrade.com/cdn/shop/files/f8854326-13e1-4091-9f71-3e4f7ee70f78.webp?v=1787045510&width=460",
       "is_cached": false,
       "previous_price": 66.5,
-      "price_change": 0.0,
-      "price_change_percent": 0.0,
-      "price_trend": "flat",
+      "price_change": -3.17,
+      "price_change_percent": -4.8,
+      "price_trend": "down",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
-      "lowest_price": 66.5,
+      "lowest_price": 63.33,
       "highest_price": 85.5
     },
     {
@@ -62,7 +62,7 @@
       "discount_percent": 60.0,
       "savings": 317.4,
       "score": 110.77,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "M"
       ],
@@ -86,7 +86,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "S"
       ],
@@ -110,7 +110,7 @@
       "discount_percent": 62.0,
       "savings": 74.43,
       "score": 99.7,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "M"
       ],
@@ -158,7 +158,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-08-17T18:55:09+00:00",
+      "found_at": "2026-08-18T10:49:04+00:00",
       "sizes": [
         "S"
       ],

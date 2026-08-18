@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-17T18:55:23+00:00
-Deals found: 271
+Generated: 2026-08-18T10:49:19+00:00
+Deals found: 270
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -39,10 +39,10 @@ Deals found: 271
    Sizes: 170cm
 
 
-7. [Salomon Stance 88 Women’s Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
+7. [Salomon Stance 88 Women’s Skis - 168cm](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
    $249.99 was $699.95 (64.3% off) - ERIK'S downhill skis price ascending
    Price trend: Same as prior day
-   Sizes: 168cm, 174cm
+   Sizes: 168cm
 
 
 8. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
@@ -113,7 +113,7 @@ Deals found: 271
 
 19. [Rossignol Sender 94 Ti Skis 2024](https://www.evo.com/products/216288-rossignol-sender-94-ti-skis-2024)
    $279.99 was $699.95 (60.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 164 cm
    Stock: In stock
 
