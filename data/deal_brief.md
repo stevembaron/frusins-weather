@@ -2,17 +2,17 @@
 
 ## Act now
 
-- **Stio Full-Zip Shacket, M — $63.33** ([Geartrade](https://geartrade.com/products/stio-full-zip-shacket-mens-1685510)): watch-term brand, exact fit, second day at its 90-day low (range $63.33–$85.50), 67% off, well under the $100 cap — still a small, easy buy.
+- **Völkl Peregrine 80 Skis + Lowride 12 TCX Bindings (Used), 172cm (you) — $339.99** ([Evo](https://www.evo.com/products/254906-volkl-peregrine-80-skis-lowride-12-tcx-bindings-2025-used)): brand new to tracking today, in stock, exact fit, 66% off $999.99 with bindings included — no price history yet, but a genuinely strong package price worth grabbing before it moves.
 
 ## Worth watching
 
-- **Salomon Stance 88 W, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): cheapest ski in today's data, exact fit, 64% off, settled at this price ~13 weeks — real floor, buy if wanted.
-- **Black Diamond Impulse TI 104, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): exact fit, 50% off, flat since mid-May — real floor, no urgency, second mention.
-- **2026 Elan Ripstick 100 W, 168cm (you) — $379.99** ([Lone Pine](https://lonepinegearx.com/products/2026-elan-womens-ripstick-100-b12d8)): watch-term brand, exact fit, 52% off, flat since June 19 — buy if wanted, or wait for it to ease toward $350.
-- **Stio Skycrest Insulated Snap Shirt, M — $99.50** ([Geartrade](https://geartrade.com/products/stio-skycrest-insulated-snap-shirt-mens-1694089)): watch-term brand, exact fit, 50% off, right at your $100 cap — buy only if you want it at full budget, otherwise wait for a drop.
-- **Stio Eddy Shirt LS, S — $48.92** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)): watch-term brand, exact fit, 62% off, stable near its floor for weeks — cheap, safe buy any time, new pick.
+- **Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, exact family fit, 65% off, flat since May 22 — real floor, buy if wanted, new pick.
+- **Scott Pure Free 90 Ti W, 154/160/168cm (fits you & family) — $299.99** ([The Gear Room](https://thegearroom.com/products/scott-pure-free-90-2025-womens)): 60% off, steady for three months, rare dual-fit across both size groups — solid buy if wanted, new pick.
+- **2025 Volkl Women's Secret 88, 170cm (you) — $389.99** ([Lone Pine](https://lonepinegearx.com/products/2025-volkl-womens-secret-88-f0bd9)): 48% off, flat since early June — real floor, no urgency, new pick.
+- **Season Nexus Skis 2026 (Used), 158cm (family) — $299.98** ([Evo](https://www.evo.com/products/257155-season-nexus-skis-2026-used)): 60% off, in stock, flat since mid-May — fair buy if wanted, new pick.
+- **Stio Eddy Shirt LS, S — $48.92** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ls-shirt-mens-1629203)): watch-term brand, exact fit, 62% off, stable near its floor — cheap, safe buy any time, second mention.
 
 ## Notes
 
-- Retiring Black Diamond Helio Carbon 104 (160/166/172cm, fits both groups, $399.00) after three-plus flat mentions with no price movement — still a fair buy if wanted.
+- Retiring after two unchanged mentions each (still fair buys if wanted): Salomon Stance 88 W ($249.99, your fit), Black Diamond Impulse TI 104 ($424.95, your fit), 2026 Elan Ripstick 100 W ($379.99, your fit), Stio Skycrest Insulated Snap Shirt ($99.50, at cap), and Stio Full-Zip Shacket ($63.33, at its low).
 - CampSaver and J Skis Secret Stash both blocked again today (403 Forbidden) — no data from either source.
