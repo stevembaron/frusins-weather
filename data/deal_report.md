@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-21T10:50:33+00:00
-Deals found: 269
+Generated: 2026-08-21T18:53:44+00:00
+Deals found: 268
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -21,41 +21,41 @@ Deals found: 269
    Sizes: 158cm
 
 
-4. [Black Crows Serpo Skis 2025](https://www.evo.com/products/253568-black-crows-serpo-skis-2025)
+4. [Völkl Peregrine 80 Skis + Lowride 12 TCX Bindings 2025 - Used](https://www.evo.com/products/254906-volkl-peregrine-80-skis-lowride-12-tcx-bindings-2025-used)
+   $329.99 was $999.99 (67.0% off) - Evo skis price ascending
+   Price trend: Down $10.00 (2.9%) since prior day
+   Sizes: 162 cm
+   Stock: In stock
+
+5. [Black Crows Serpo Skis 2025](https://www.evo.com/products/253568-black-crows-serpo-skis-2025)
    $329.99 was $999.00 (67.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 152 cm
    Stock: In stock
 
-5. [2025 Zag Women's Harfang 86 *Floor Model* - 162cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-floor-model-08736)
+6. [2025 Zag Women's Harfang 86 *Floor Model* - 162cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-harfang-86-floor-model-08736)
    $269.95 was $780.00 (65.4% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 162cm
 
 
-6. [2024 Zag UBAC 89 - 171cm / Blue/White / New](https://lonepinegearx.com/products/2024-zag-ubac-89-f2ddc)
+7. [2024 Zag UBAC 89 - 171cm / Blue/White / New](https://lonepinegearx.com/products/2024-zag-ubac-89-f2ddc)
    $280.00 was $806.67 (65.3% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 171cm
 
 
-7. [2025 Zag Women's Slap 104 - 170cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57)
+8. [2025 Zag Women's Slap 104 - 170cm / Blue/Orange / New](https://lonepinegearx.com/products/2025-zag-womens-slap-104-bdd57)
    $299.95 was $870.00 (65.5% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 170cm
 
 
-8. [Salomon Stance 88 Women’s Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
+9. [Salomon Stance 88 Women’s Skis](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)
    $249.99 was $699.95 (64.3% off) - ERIK'S downhill skis price ascending
    Price trend: Same as prior day
    Sizes: 168cm, 174cm
 
-
-9. [Völkl Peregrine 80 Skis + Lowride 12 TCX Bindings 2025 - Used](https://www.evo.com/products/254906-volkl-peregrine-80-skis-lowride-12-tcx-bindings-2025-used)
-   $339.99 was $999.99 (66.0% off) - Evo skis price ascending
-   Price trend: Same as prior day
-   Sizes: 172 cm
-   Stock: In stock
 
 10. [Peak Skis Peak 98 By Dav Skis 2025](https://www.evo.com/products/275505-peak-skis-peak-98-by-dav-skis-2025)
    $314.99 was $899.00 (65.0% off) - Evo skis price ascending
