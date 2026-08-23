@@ -2,7 +2,7 @@
 
 ## Act now
 
-- **Line Pandora 92 2026, 168cm (you) — $359.97** ([Evo](https://www.evo.com/products/266168-line-skis-pandora-92-skis-2026)): second day back at the 90-day low ($359.97–$419.96), in stock, exact fit — same real floor as yesterday, buy while it holds.
+- **Line Pandora 92 2026, 168cm (you) — $359.97** ([Evo](https://www.evo.com/products/266168-line-skis-pandora-92-skis-2026)): second day at the 90-day low ($359.97–$419.96), in stock, exact fit — same real floor as yesterday, buy while it holds.
 - **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, family fit, 44% off $700, flat three months — second mention, still a genuine floor.
 - **Black Diamond Impulse TI 104, 172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): exact fit, 50% off $849.95, flat three months — second mention, real floor holding.
 
@@ -17,4 +17,4 @@
 ## Notes
 
 - CampSaver and J Skis Secret Stash blocked again today (403 Forbidden) — no data from either.
-- Newly retiring after repeated flat mentions (still fine buys, just no longer news): Salomon Stance 94 $319.99, Volkl Secret 88 $389.99, Scott Pure Free 90 Ti W $299.99, Season Nexus $299.98, Line Chronic 94 (ERIK'S) $359.97, Rossignol Rallybird Soul 92 Demo $424.99, Elan Ripstick 102 Black Edition $479.99 (watch-term, still under the $500 cap).
+- Retiring after repeated flat mentions (still fine buys, just no longer news): Line Chronic 94 (ERIK'S) $359.97, Rossignol Rallybird Soul 92 Xp11 Demo $424.99, Elan Ripstick 102 Black Edition $479.99 (watch-term, still under the $500 cap).
