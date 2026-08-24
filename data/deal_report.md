@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-23T18:46:27+00:00
-Deals found: 268
+Generated: 2026-08-24T10:55:54+00:00
+Deals found: 267
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -111,46 +111,46 @@ Deals found: 268
    Sizes: 158cm
 
 
-19. [Scott Pure Free 90 Ti - Women's](https://thegearroom.com/products/scott-pure-free-90-2025-womens)
-   $299.99 was $750.00 (60.0% off) - The Gear Room skis price ascending
-   Price trend: Same as prior day
-   Sizes: 154cm, 160cm, 168cm
-
-
-20. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
+19. [Season Nexus Skis 2026 - Used](https://www.evo.com/products/257155-season-nexus-skis-2026-used)
    $299.98 was $749.95 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 158 cm
    Stock: In stock
 
-21. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
+20. [Nordica Santa Ana 102 Skis - Women's 2025](https://www.evo.com/products/253127-nordica-santa-ana-102-skis-women-s-2025)
    $339.99 was $849.99 (60.0% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 179 cm
    Stock: In stock
 
-22. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
+21. [2024 Zag Ardet 85 - 172cm / Black/Orange / New](https://lonepinegearx.com/products/2024-zag-ardet-85-e4665)
    $380.00 was $948.95 (60.0% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 172cm
 
 
-23. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
+22. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
    $199.97 was $449.99 (55.6% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 152 cm
    Stock: In stock
 
-24. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+23. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
    $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 164cm
 
 
-25. [2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+24. [2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
    $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 170cm
+
+
+25. [Scott Pure Free 90 Ti - Unisex](https://thegearroom.com/products/scott-pure-90-2025-unisex)
+   $299.99 was $700.00 (57.1% off) - The Gear Room skis price ascending
+   Price trend: Same as prior day
+   Sizes: 177cm, 184cm
 
 
 

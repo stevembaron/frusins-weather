@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-23T18:46:15+00:00",
+  "generated_at": "2026-08-24T10:55:42+00:00",
   "deal_count": 6,
   "sources_checked": 1,
   "price_history_count": 431,
-  "price_change_count": 1,
+  "price_change_count": 0,
   "deals": [
     {
       "title": "Stio Full-Zip Shacket - Men's",
@@ -14,7 +14,7 @@
       "discount_percent": 67.0,
       "savings": 128.58,
       "score": 117.88,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "M"
       ],
@@ -38,7 +38,7 @@
       "discount_percent": 60.0,
       "savings": 317.4,
       "score": 110.77,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "M"
       ],
@@ -62,7 +62,7 @@
       "discount_percent": 62.0,
       "savings": 79.82,
       "score": 100.98,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "S"
       ],
@@ -86,17 +86,17 @@
       "discount_percent": 63.0,
       "savings": 74.29,
       "score": 100.7,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "M"
       ],
       "stock_status": null,
       "image_url": "https://geartrade.com/cdn/shop/files/ab6a6c80-82d9-4c1a-91c1-509646342624.webp?v=1787469636&width=460",
       "is_cached": false,
-      "previous_price": 45.62,
-      "price_change": -1.99,
-      "price_change_percent": -4.4,
-      "price_trend": "down",
+      "previous_price": 43.63,
+      "price_change": 0.0,
+      "price_change_percent": 0.0,
+      "price_trend": "flat",
       "first_seen_at": "2026-06-27T11:47:36+00:00",
       "lowest_price": 43.63,
       "highest_price": 53.55
@@ -110,7 +110,7 @@
       "discount_percent": 50.0,
       "savings": 99.5,
       "score": 92.89,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "M"
       ],
@@ -134,7 +134,7 @@
       "discount_percent": 52.0,
       "savings": 46.23,
       "score": 82.7,
-      "found_at": "2026-08-23T18:46:13+00:00",
+      "found_at": "2026-08-24T10:55:40+00:00",
       "sizes": [
         "S"
       ],
