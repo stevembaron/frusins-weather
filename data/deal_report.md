@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-25T10:52:29+00:00
-Deals found: 266
+Generated: 2026-08-25T18:55:28+00:00
+Deals found: 267
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -129,28 +129,28 @@ Deals found: 266
    Sizes: 172cm
 
 
-22. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
+22. [Völkl Secret 96 Skis + Strive 11 Demo Ski Bindings 2025 - Used](https://www.evo.com/products/292801-volkl-secret-96-skis-strive-11-demo-ski-bindings-2025-used)
+   $429.99 was $1089.94 (60.5% off) - Evo skis price ascending
+   Price trend: Newly tracked
+   Sizes: 163 cm
+   Stock: In stock
+
+23. [Nordica Unleashed 90 Skis 2025](https://www.evo.com/products/253222-nordica-unleashed-90-skis-2025)
    $199.97 was $449.99 (55.6% off) - Evo skis price ascending
    Price trend: Same as prior day
    Sizes: 152 cm
    Stock: In stock
 
-23. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+24. [2025 Zag UBAC 102 - 164cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
    $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 164cm
 
 
-24. [2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
+25. [2025 Zag UBAC 102 - 170cm / Blue/Purple/White / New](https://lonepinegearx.com/products/2025-zag-ubac-102-c86c3)
    $345.00 was $824.05 (58.1% off) - Lone Pine new flat skis
    Price trend: Same as prior day
    Sizes: 170cm
-
-
-25. [2025 Salomon Stance 94 - 168cm / Sweet Lavender/Denim / New](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)
-   $319.99 was $749.95 (57.3% off) - Lone Pine new flat skis
-   Price trend: Same as prior day
-   Sizes: 168cm
 
 
 
