@@ -1,7 +1,7 @@
 # Ski Gear Deals
 
-Generated: 2026-08-24T18:57:27+00:00
-Deals found: 267
+Generated: 2026-08-25T10:52:29+00:00
+Deals found: 266
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
    $119.99 was $699.95 (82.9% off) - Evo skis price ascending
@@ -147,10 +147,10 @@ Deals found: 267
    Sizes: 170cm
 
 
-25. [Scott Pure Free 90 Ti - Unisex](https://thegearroom.com/products/scott-pure-90-2025-unisex)
-   $299.99 was $700.00 (57.1% off) - The Gear Room skis price ascending
+25. [2025 Salomon Stance 94 - 168cm / Sweet Lavender/Denim / New](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)
+   $319.99 was $749.95 (57.3% off) - Lone Pine new flat skis
    Price trend: Same as prior day
-   Sizes: 177cm, 184cm
+   Sizes: 168cm
 
 
 
