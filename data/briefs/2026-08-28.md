@@ -2,18 +2,19 @@
 
 ## Act now
 
-- **2026 Majesty Havoc 110 Ti, 171cm (you) — $449.89** ([Lone Pine](https://lonepinegearx.com/products/2026-majesty-havoc-110-ti-1b5ea)): 55% off $995, exact fit, unmoved since first tracked four days ago — no watch-term brand, but only $50 under your $500 cap and stable enough now to trust. Second mention.
+Nothing clears the bar today — no confirmed new lows or in-stock watch-term deals; today's freshest listings are an unverified batch (see Notes).
 
 ## Worth watching
 
-- **Salomon Stance 88, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): 64% off $699.95, exact fit, but flat since May with no price-history data to confirm a floor — buy if wanted, don't expect it to drop further.
-- **Black Diamond Impulse TI 104, ~172cm (you) — $424.95** ([The Gear Room](https://thegearroom.com/products/black-diamond-impulse-ti-104-ski-womens)): 50% off, size comes only from the title (no structured size field — treat with caution), flat 3+ months. Solid value if the fit checks out.
-- **2025 Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): 57% off, exact fit, flat since Aug 7 — buy if wanted, second mention.
-- **Atomic Maven 93 C 2025, 172cm (you) — $360.99** ([Evo](https://www.evo.com/products/254131-atomic-maven-93-c-skis-women-s-2025)): in stock, 48% off, exact fit, flat for weeks — buy if it drops further or if wanted now.
-- **Stio Divide Half Zip, S — $42.67** ([Geartrade](https://geartrade.com/products/stio-divide-half-zip-mens-1660860)): watch-term brand, exact size, 52% off, well under the $100 cap — buy if wanted, second mention.
+- **K2 Mindbender 96 C + Griffon 13 Demo, 166cm (you) — $303.99** ([Evo](https://www.evo.com/products/292752-k2-mindbender-96-c-skis-griffon-13-demo-ski-bindings-2025-used)): exact fit, in stock, 68% off $949.90 — one of nine same-day demo listings at a similar 60–68% off (see Notes), no confirmed floor yet.
+- **2024 Dynastar Menace 80, 158cm (family) — $150.00** ([Lone Pine](https://lonepinegearx.com/products/2024-dynastar-menace-80-95383)): watch-term brand, exact fit, 65% off $430, well under cap. No stock/trend data, but a genuinely low price for a closeout. New pick.
+- **Black Diamond Helio Carbon 104, 160/166/172cm (family & you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): rare triple-size fit across both your and family sizes, 58% off, flat 3+ months — solid value, no urgency.
+- **2025 Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): watch-term brand, 44% off, flat since May — pricier for a family ski, buy if wanted.
+- **Line Tom Wallisch Pro, 157cm (family)/171cm (you) — $329.97** ([ERIK'S](https://www.eriksbikeshop.com/products/line-tom-wallisch-pro-skis-2026-pr5a25734)): dual-fit, 40% off, flat since late May — versatile, no rush.
 
 ## Notes
 
 - CampSaver and J Skis Secret Stash blocked again today (403 Forbidden) — no data from either.
-- Several ERIK'S listings with price history (Salomon S/MAX N°6/N°10 XT, Lib Tech Libstick 88/98 Women's, Volkl Peregrine XT) are sitting at the *top* of their 90-day range right now, not the bottom — a worse time to buy despite the "40% off" tags.
-- Retiring after repeated flat mentions (still fine buys, just no longer news): Stio Full-Zip Shacket $60.17 (M), Nordica Santa Ana 104 Free $359.99 (172cm, you), 2026 Atomic Bent 90 $384.99 (157/166cm, dual fit), Nordica Unleashed 90 Tree $225.00 (160cm, family), Stio Eddy Shirt LS $48.92 (S), Stio Skycrest Insulated Snap Shirt $99.50 (M). Also retiring: Elan Ripstick 102 Black Edition $479.99 (168cm, you) — worth one last look, still just $20 under your $500 cap.
+- Nine new-today "demo ski + bindings" listings appeared at Evo simultaneously, all clustered at 60–68% off MSRP — looks like standard demo-clearance pricing, not a real one-day drop; treat individually with skepticism.
+- Elan Element Sport, Fischer Pulse Pro, Volkl Peregrine XT, and Lib Tech Libstick 88/98 Women's are still sitting at the *top* of their 90-day range despite "40% off" tags.
+- Retiring after repeated mentions (still fine buys): 2026 Majesty Havoc 110 Ti $449.89 (171cm, you); Stio Divide Half Zip $42.67 (S).
