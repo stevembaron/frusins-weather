@@ -1,6 +1,6 @@
 # Ski Gear Deals
 
-Generated: 2026-09-01T21:00:13+00:00
+Generated: 2026-09-02T14:32:30+00:00
 Deals found: 242
 
 1. [Dynastar M-Pro 99 W Skis - Women's 2022](https://www.evo.com/products/185155-dynastar-m-pro-99-w-skis-women-s-2022)
@@ -29,7 +29,7 @@ Deals found: 242
 
 5. [Season Nexus Skis + Marker Griffon 13 Demo Ski Bindings 2025 - Used](https://www.evo.com/products/292768-season-nexus-skis-griffon-13-demo-ski-bindings-2025-used)
    $303.99 was $949.90 (68.0% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 167 cm
    Stock: In stock
 
@@ -96,12 +96,12 @@ Deals found: 242
 16. [Völkl M7 Mantra Skis + Griffon 13 Demo Ski Bindings 2025 - Used](https://www.evo.com/products/292742-volkl-m7-mantra-skis-griffon-13-demo-ski-bindings-2025-used)
    $389.99 was $1149.94 (66.1% off) - Evo skis price ascending
    Price trend: Same as prior day
-   Sizes: 177 cm
+   Sizes: 170 cm
    Stock: In stock
 
 17. [Season Pass Skis + Marker Griffon 13 Demo Ski Bindings 2025 - Used](https://www.evo.com/products/292770-season-pass-skis-griffon-13-demo-ski-bindings-2025-used)
    $389.99 was $1149.90 (66.1% off) - Evo skis price ascending
-   Price trend: Newly tracked
+   Price trend: Same as prior day
    Sizes: 165 cm
    Stock: In stock
 
