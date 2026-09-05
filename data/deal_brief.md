@@ -2,20 +2,17 @@
 
 ## Act now
 
-Nothing clears the bar today — the one item that had a confirmed price floor (K2 Reckoner 110 W) is now on its third mention and gets demoted below, and no new listing combines exact fit, a verified low, and real urgency.
+Nothing clears the bar today — no listing combines exact fit, a confirmed 90-day low, and real urgency; the market's flat.
 
 ## Worth watching
 
-- **K2 Reckoner 110 W + Griffon demo, 156cm (family) — $359.99** ([Evo](https://www.evo.com/products/292796-k2-reckoner-110-w-skis-griffon-13-demo-ski-bindings-2025-used)): still sitting at its confirmed 90-day low, in stock — but this is the third mention after two days in Act now, so it's the last call; buy the family pair now or let it go.
-- **Salomon Stance 88 Women's, 168cm (you) — $249.99** ([ERIK'S](https://www.eriksbikeshop.com/products/salomon-stance-88-womens-skis-2025-pr5a20595)): second mention, 64% off — still well beyond ERIK's usual 40% storewide baseline, exact fit; no trend history yet to confirm a floor.
-- **K2 Mindbender 96 C 2026, 166cm (you) — $419.97** ([Evo](https://www.evo.com/products/264770-k2-mindbender-96-c-skis-2026)): second mention, plain non-demo listing, exact fit, in stock — flat since May; buy only if you want it now, no trend data.
-- **Völkl M7 Mantra + Griffon demo, 170cm (you) — $389.99** ([Evo](https://www.evo.com/products/292742-volkl-m7-mantra-skis-griffon-13-demo-ski-bindings-2025-used)): second formal mention, exact fit, in stock — same standard demo-cluster discount Evo runs constantly, not fresh news.
-- **2026 Atomic Bent 90, 157cm (family) / 166cm (you) — $384.99** ([157cm](https://lonepinegearx.com/products/2026-atomic-bent-90-04d29) / [166cm](https://lonepinegearx.com/products/2026-atomic-bent-90-f3c76)): new pick, rare dual-fit across both size sets, 43% off, flat since May — no urgency, but good headroom under cap.
+- **2026 Atomic Bent 90, 157cm (family) / 166cm (you) — $384.99** ([157cm](https://lonepinegearx.com/products/2026-atomic-bent-90-04d29) / [166cm](https://lonepinegearx.com/products/2026-atomic-bent-90-f3c76)): second mention, rare dual-fit across both size sets, 43% off, flat since May — no urgency, but good headroom under cap.
+- **K2 Mindbender 96 C + Griffon 13 demo, 172cm (you) — $303.99** ([Evo](https://www.evo.com/products/292752-k2-mindbender-96-c-skis-griffon-13-demo-ski-bindings-2025-used)): new pick, exact fit, in stock, cheapest of Evo's demo-bundle cluster — standard demo pricing (inflated "was"), not fresh news, but real value at under a third of your cap.
+- **K2 Reckoner 102 W + Griffon 13 demo, 170cm (you) — $359.99** ([Evo](https://www.evo.com/products/292795-k2-reckoner-102-w-skis-griffon-13-demo-ski-bindings-2025-used)): new pick, exact fit, in stock — a sibling size in this line has ranged as low as $309.99, so this isn't the floor; buy if it drops under $330.
+- **Atomic Backland 85 W, 157cm (family) — $349.97** ([Evo](https://www.evo.com/products/289329-atomic-backland-85-w-skis-women-s-2025)): new pick, exact family fit, in stock, 42% off — no trend history yet, no rush.
 
 ## Notes
 
 - CampSaver and J Skis Secret Stash blocked again today (403 Forbidden) — no data from either.
-- Retiring, no news: Season Nexus 2026 Used ($299.98, 158cm) — flat since May, no confirmed floor, still a fine buy if you want it.
-- Long-retired, still unchanged, no need to keep repeating: Dynastar M-Pro 99 W ($119.99), Elan Ripstick 102 Black Edition ($479.99), Line Pandora 99 ($329.99), Line Chronic 94 ($359.97), Rossignol Rallybird 94 Open ($389.97), Atomic Maven 93 C ($360.99), Salomon Stance 94 ($319.99).
-- Most ERIK's/Evo 2026-lineup listings sitting at exactly 40% off (Fischer Curv GT, Line Pandora 85 w/QuikClik, etc.) look like standing sale prices, not real news — skipped. Fischer Pulse Pro, Salomon S/Max 6XT & N°6 XT, Volkl Peregrine XT, and Volkl Shine 76 remain at the top of their own 90-day ranges despite ~40% framing — still not real deals.
-- No new clothing: the recurring Stio picks are unchanged and already fully retired. Stio Figment Jacket hit a new 90-day low ($204.25, down $7.35) but remains roughly double your $100 clothing cap — still skip.
+- Retiring after repeated mentions, all unchanged, still fine buys if you want them: K2 Reckoner 110 W ($359.99, 156cm family, at its 90-day low but last call was yesterday), Salomon Stance 88 Women's ($249.99, 168cm), K2 Mindbender 96 C 2026 ($419.97, 166cm), Völkl M7 Mantra + Griffon demo ($389.99, 170cm).
+- No new clothing: the recurring Stio picks (Shacket $57, Eddy SS $41.65, Eddy LS $48.92, Skycrest $99.50, Divide Half Zip $42.67) remain unchanged and fully retired; Figment Jacket ($204.25, down $7.35) still over your $100 cap.
