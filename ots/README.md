@@ -7,7 +7,7 @@ rotating channel. No build step, no dependencies.
 
 Open `index.html` directly, or serve the directory:
 
-    python3 -m http.server 8000 --directory onthesnow-tv
+    python3 -m http.server 8000 --directory ots
 
 Then http://localhost:8000/.
 
@@ -17,7 +17,7 @@ This repo already publishes to GitHub Pages: `.github/workflows/deploy-pages.yml
 uploads the repository root on every push to `main`. So merging this directory
 to `main` puts the prototype at
 
-    https://stevembaron.github.io/projects/onthesnow-tv/
+    https://stevembaron.github.io/projects/ots/
 
 with no further setup. All asset paths are relative, so it works from that
 subdirectory as-is.
