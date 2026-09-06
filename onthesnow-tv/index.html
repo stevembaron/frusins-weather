@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Ski Cams &ndash; OnTheSnow</title>
+<style>
+  :root {
+    --blue: #0079C1;
+    --cyan: #13B5EA;
+    --ink: #1B2733;
+    --grey: #667585;
+    --line: #E1E7ED;
+    --bg: #FFFFFF;
+    --tint: #F4F7FA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.55 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  header.site { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; z-index: 20; }
+  .bar { display: flex; align-items: center; gap: 32px; height: 68px; }
+  .bar img { height: 30px; }
+  nav.main { display: flex; gap: 26px; font-size: 15px; }
+  nav.main a:hover { color: var(--blue); }
+  .region { margin-left: auto; display: flex; align-items: center; gap: 7px; font-size: 14px; color: var(--grey); }
+  .flag { width: 20px; height: 14px; background: linear-gradient(#B22234 0 33%, #fff 33% 66%, #3C3B6E 66%); border-radius: 2px; }
+
+  .crumb { font-size: 13px; color: var(--grey); padding: 14px 0 2px; }
+  .crumb a:hover { color: var(--blue); }
+  h1 { font-size: 34px; line-height: 1.15; margin: 6px 0 16px; letter-spacing: -0.01em; }
+
+  nav.tabs { display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--line); }
+  nav.tabs a { padding: 11px 15px; font-size: 15px; color: var(--grey); white-space: nowrap; border-bottom: 3px solid transparent; }
+  nav.tabs a:hover { color: var(--ink); }
+  nav.tabs a.on { color: var(--blue); border-bottom-color: var(--blue); font-weight: 600; }
+
+  .channel { margin: 26px 0 8px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .channel video { width: 100%; display: block; background: #101418; }
+  .chanbar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: var(--tint); border-top: 1px solid var(--line); flex-wrap: wrap; }
+  .poc { font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #fff; background: #8C1E1E; padding: 4px 9px; border-radius: 4px; }
+  .chanmark { font-size: 15px; font-weight: 700; color: var(--blue); }
+  .now { font-size: 14px; color: var(--ink); }
+  .now b { font-weight: 600; }
+  .next { font-size: 14px; color: var(--grey); margin-left: auto; }
+  .watch { font-size: 14px; padding: 8px 14px; border-radius: 6px; background: var(--blue); color: #fff; font-weight: 600; }
+  .watch:hover { background: #0069a8; }
+
+  .lede { max-width: 68ch; color: var(--grey); font-size: 15px; margin: 20px 0 26px; }
+  h2 { font-size: 22px; margin: 34px 0 4px; }
+  .sub { color: var(--grey); font-size: 14px; margin: 0 0 18px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 20px 18px; }
+  .cam .shot { position: relative; border-radius: 8px; overflow: hidden; background: var(--tint); aspect-ratio: 16/9; }
+  .cam img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cam:hover img { opacity: .92; }
+  .badge { position: absolute; left: 8px; bottom: 8px; background: rgba(11,20,30,.78); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px; }
+  .badge.live { display: flex; align-items: center; gap: 5px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #E24B4A; }
+  .camtext { padding: 9px 2px 0; display: flex; flex-direction: column; }
+  .camname { font-size: 15px; font-weight: 600; }
+  .camloc { font-size: 13px; color: var(--grey); }
+
+  .gpt { margin: 40px 0 10px; padding: 20px; background: var(--tint); border-radius: 10px; }
+  .gpt h3 { margin: 0 0 12px; font-size: 16px; }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip { font-size: 14px; padding: 9px 14px; border: 1px solid var(--line); background: #fff; border-radius: 20px; color: var(--grey); }
+  .chip:hover { border-color: var(--blue); color: var(--blue); }
+
+  footer.site { margin-top: 54px; border-top: 1px solid var(--line); background: var(--tint); padding: 28px 0 40px; }
+  .fnav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--grey); }
+  .units { margin-top: 16px; font-size: 14px; color: var(--grey); display: flex; align-items: center; gap: 8px; }
+  .units span.opt { padding: 4px 10px; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  .units span.opt.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .copy { margin-top: 20px; font-size: 12px; color: #93A0AC; }
+
+  @media (max-width: 720px) {
+    nav.main, .region { display: none; }
+    h1 { font-size: 26px; }
+    .next { margin-left: 0; width: 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a href="#"><img src="assets/onthesnow-logo.png" alt="OnTheSnow"></a>
+    <nav class="main">
+      <a href="#">Snow Reports</a><a href="#">Trip Planning</a><a href="#">Stories</a><a href="#">SkiGPT</a>
+    </nav>
+    <div class="region"><span class="flag"></span>US</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="crumb"><a href="#">Home</a> &rsaquo; Live Cams</div>
+  <h1>Live ski cams</h1>
+
+  <nav class="tabs">
+    <a href="#">Snow Reports</a>
+    <a href="#">Weather</a>
+    <a class="on" href="#">Cams</a>
+    <a href="#">Trail Maps</a>
+    <a href="#">Snow Planner</a>
+    <a href="#">Lift Tickets</a>
+  </nav>
+
+  <section class="channel">
+    <video id="ch" src="assets/channel.mp4" poster="assets/poster.jpg" autoplay muted loop playsinline controls></video>
+    <div class="chanbar">
+      <span class="chanmark">OnTheSnow TV</span><span class="poc">Concept &ndash; not a live feed</span>
+      <span class="now">Now showing <b id="nowcam">Keystone</b></span>
+      <span class="next">Up next: <span id="nextcam">Heavenly</span></span>
+      <a class="watch" href="#">Watch full screen</a>
+    </div>
+  </section>
+
+  <p class="lede">One continuous channel cutting between live cameras at resorts across the country.
+  Leave it running for current conditions on the mountain, or pick a single camera below to watch on its own.</p>
+
+  <h2>All cameras</h2>
+  <p class="sub">7 cameras reporting</p>
+
+  <div class="grid">
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_Keystone.jpg" alt="Keystone Summit camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Keystone &ndash; Summit</span>
+          <span class="camloc">Colorado</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_Heavenly.jpg" alt="Heavenly Lakeview camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Heavenly &ndash; Lakeview</span>
+          <span class="camloc">California / Nevada</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_Stowe.jpg" alt="Stowe Mountain Spruce Peak camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Stowe Mountain &ndash; Spruce Peak</span>
+          <span class="camloc">Vermont</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_Northstar.jpg" alt="Northstar California Summit camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Northstar California &ndash; Summit</span>
+          <span class="camloc">California</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_CrestedButte.jpg" alt="Crested Butte Base Area camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Crested Butte &ndash; Base Area</span>
+          <span class="camloc">Colorado</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_AppalachianSki.jpg" alt="Appalachian Ski Mountain Main Slope camera">
+          <span class="badge">2 hours ago</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Appalachian Ski Mountain &ndash; Main Slope</span>
+          <span class="camloc">North Carolina</span>
+        </div>
+      </a>
+      <a class="cam" href="#">
+        <div class="shot">
+          <img src="assets/thumb_GranitePeak.jpg" alt="Granite Peak Summit Express camera">
+          <span class="badge live"><span class="dot"></span>Live</span>
+        </div>
+        <div class="camtext">
+          <span class="camname">Granite Peak &ndash; Summit Express</span>
+          <span class="camloc">Wisconsin</span>
+        </div>
+      </a>
+  </div>
+
+  <section class="gpt">
+    <h3>Ask SkiGPT</h3>
+    <div class="chips">
+      <a class="chip" href="#">Where is it snowing right now?</a>
+      <a class="chip" href="#">Which mountains look least crowded?</a>
+      <a class="chip" href="#">Where should I ski this weekend?</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fnav">
+      <a href="#">Contact OnTheSnow</a><a href="#">Advertise</a><a href="#">Sign up for our newsletter</a>
+      <a href="#">Privacy policy</a><a href="#">Terms and conditions</a><a href="#">Sitemap</a>
+    </div>
+    <div class="units">Units: <span class="opt">Metric</span><span class="opt on">Imperial</span></div>
+    <div class="copy">Copyright &copy; 1995&ndash;2026 Mountain News LLC. All rights reserved. Experience concept only. Not a live feed, and not a demonstration of ingest, uptime or delivery. Webcam frames captured September 2026; conditions values are placeholder.</div>
+  </div>
+</footer>
+
+<script>
+  var names = ["Keystone", "Heavenly", "Stowe Mountain", "Northstar California", "Crested Butte", "Appalachian Ski Mountain", "Granite Peak"];
+  var v = document.getElementById('ch');
+  var nowEl = document.getElementById('nowcam'), nextEl = document.getElementById('nextcam');
+  function sync() {
+    if (!v.duration) return;
+    var seg = v.duration / names.length;
+    var i = Math.min(names.length - 1, Math.floor(v.currentTime / seg));
+    nowEl.textContent = names[i];
+    nextEl.textContent = names[(i + 1) % names.length];
+  }
+  v.addEventListener('timeupdate', sync);
+  v.addEventListener('loadedmetadata', sync);
+</script>
+</body>
+</html>
