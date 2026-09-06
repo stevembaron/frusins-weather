@@ -2,19 +2,20 @@
 
 ## Act now
 
-- **Stio Eddy Shirt SS, Men's M — $39.67** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, dropped $1.98 overnight to a fresh 90-day low (below the $41.65 it had held for weeks), exact M fit, well under your $100 cap — it's actively falling, grab it now.
+- **Stio Eddy Shirt SS, Men's M — $39.67** ([Geartrade](https://geartrade.com/products/stio-eddy-shirt-ss-mens-1696242)): watch-term brand, dropped $1.98 to a fresh 90-day low after weeks flat at $41.65, exact M fit, well under the $100 cap — still falling, worth grabbing now.
 
 ## Worth watching
 
-- **K2 Mindbender 96 C + Griffon 13 demo, 172cm (you) — $303.99** ([Evo](https://www.evo.com/products/292752-k2-mindbender-96-c-skis-griffon-13-demo-ski-bindings-2025-used)): third day at this price, exact fit, in stock, cheapest of Evo's demo-bundle cluster — standard demo pricing, not fresh news, but real value at under a third of cap.
-- **K2 Reckoner 102 W + Griffon 13 demo — $359.99** ([Evo](https://www.evo.com/products/292795-k2-reckoner-102-w-skis-griffon-13-demo-ski-bindings-2025-used)): your 170cm has sold out since yesterday; only 156cm (family) is left now — still fine for the family size, buy if it drops under $330 like a sibling size once did.
-- **Atomic Backland 85 W, 157cm (family) — $349.97** ([Evo](https://www.evo.com/products/289329-atomic-backland-85-w-skis-women-s-2025)): second day, in stock, 42% off — no trend history yet, no rush.
-- **Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): new pick, exact fit, 57% off — flat with no price history yet, no urgency.
-- **K2 Mindbender 96 C W 2026, 154cm (family) — $419.97** ([Evo](https://www.evo.com/products/264776-k2-mindbender-96-c-w-skis-women-s-2026)): new pick, plain non-demo listing, in stock, 40% off, exact family fit — flat since May, buy only if you want it now.
+- **Rossignol Rallybird 94 Open, 156cm (family) — $389.97** ([Lone Pine](https://lonepinegearx.com/products/2025-rossignol-rallybird-94-open-34522)): new pick, watch-term brand, exact family fit, 44% off — flat since May with no trend data to confirm a floor; buy if it drops toward $300.
+- **Black Diamond Helio Carbon 104, 160/166/172cm (family + you) — $399.00** ([The Gear Room](https://thegearroom.com/products/black-diamond-helio-carbon-104-skis)): new pick, rare dual-fit across both size sets, 58% off — flat since May with no trend history, no rush.
+- **2025 Salomon Stance 94, 168cm (you) — $319.99** ([Lone Pine](https://lonepinegearx.com/products/2025-salomon-stance-94-f7d1b)): second day, exact fit, 57% off — still flat with no price history, no urgency.
+- **K2 Mindbender 96 C 2026 (166cm, you) / C W 2026 (154cm, family) — $419.97** ([166cm](https://www.evo.com/products/264770-k2-mindbender-96-c-skis-2026) / [154cm](https://www.evo.com/products/264776-k2-mindbender-96-c-w-skis-women-s-2026)): dual-fit, in stock, 40% off — flat since May; buy only if you want it now.
+- **Nordica Unleashed 90 Tree Skis 2024, 160cm (family) — $225.00** ([Evo](https://www.evo.com/products/242000-nordica-unleashed-90-tree-skis-2024)): new pick, exact family fit, in stock, 50% off, far under cap — flat, no urgency.
 
 ## Notes
 
 - CampSaver and J Skis Secret Stash blocked again today (403 Forbidden) — no data from either.
-- Retiring after two mentions, unchanged: Atomic Bent 90 dual-fit, 157cm (family) / 166cm (you) — $384.99 — still a fine buy if you want it.
-- Fischer Pulse Pro and the Volkl Peregrine XT / Shine 76 pair are sitting at the *top* of their own 90-day ranges despite ~40% off framing — not real deals, skipped again.
-- Recurring Stio picks remain unchanged and fully retired: Shacket $57, Eddy LS $48.92, Skycrest $99.50, Divide Half Zip $42.67; Figment Jacket ($204.25) still over your $100 cap.
+- Retiring, unchanged: K2 Mindbender 96 C + Griffon demo, 172cm ($303.99) and K2 Reckoner 102 W + Griffon demo, now 156cm-only ($359.99, worth revisiting under $330) — still fine buys if you want them.
+- Atomic Backland 85 W's 157cm sold out; only 165cm remains in stock, which fits neither size list — dropped.
+- Stio recurring picks remain retired, unchanged: Shacket $57, Eddy LS $48.92, Skycrest $99.50, Divide Half Zip $42.67; Figment Jacket ($204.25) still over the $100 cap.
+- Fischer Pulse Pro and the Volkl Peregrine XT/Shine 76 pair remain at the top of their own 90-day ranges despite ~40% off framing — not real deals, skipped again.
