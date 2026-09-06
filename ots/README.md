@@ -5,7 +5,17 @@ rotating channel. No build step, no dependencies.
 
 ## Viewing it
 
-Open `index.html` directly, or serve the directory:
+The current build is published as a private Claude artifact, which is how this
+gets reviewed:
+
+    https://claude.ai/code/artifact/e49d5611-6775-492f-a310-04afb5117982
+
+That page is self-contained — the channel video and camera stills are embedded
+in it — and it is a snapshot, so it does not track edits made here. It is
+private to the owner's account and shares by invitation from the page's share
+menu, rather than by public URL.
+
+To work on the page itself, open `index.html` directly or serve the directory:
 
     python3 -m http.server 8000 --directory ots
 
@@ -13,17 +23,11 @@ Then http://localhost:8000/.
 
 ## Publishing
 
-This repo already publishes to GitHub Pages: `.github/workflows/deploy-pages.yml`
-uploads the repository root on every push to `main`. So merging this directory
-to `main` puts the prototype at
-
-    https://stevembaron.github.io/projects/ots/
-
-with no further setup. All asset paths are relative, so it works from that
-subdirectory as-is.
-
-**stevembaron/projects is a public repo.** See the visibility note below before
-merging to `main`.
+Deliberately not published to the web. This directory lives on a branch and
+should stay off `main`: `.github/workflows/deploy-pages.yml` uploads the whole
+repository root to GitHub Pages on every push to `main`, and
+**stevembaron/projects is a public repo**, so merging it would put the brand
+assets at a crawlable URL. See the last note below.
 
 ## Contents
 
